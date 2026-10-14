@@ -29,6 +29,9 @@ class PackageTests(unittest.TestCase):
                 self.assertIn('omni-learning-anything/references/commands.md', z.namelist())
                 self.assertFalse(any(b'PRIVATE_SENTINEL' in z.read(n) for n in z.namelist()))
             self.assertIn(hashlib.sha256(archive.read_bytes()).hexdigest(), (root / 'dist/SHA256SUMS').read_text())
+            shutil.copyfile(ROOT / 'tools/validate_v2.py', root / 'tools/validate_v2.py')
+            checked = subprocess.run([sys.executable, str(root / 'tools/validate_v2.py'), '--archive', str(archive)], capture_output=True, text=True)
+            self.assertEqual(checked.returncode, 0, checked.stderr)
 
 
 if __name__ == '__main__': unittest.main()

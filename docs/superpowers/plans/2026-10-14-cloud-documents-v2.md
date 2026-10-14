@@ -24,56 +24,57 @@
 
 Files: create `scripts/omni_document.py`, `tests/test_documents.py`; modify `omni_pdf.py`, requirements.
 
-- [ ] RED: tests generate Markdown/DOCX with PDF imports prohibited, preserve Chinese text/image/links, reject malformed input/time/key/paths, and protect reviewed archives.
-- [ ] Run `python -m unittest discover -s tests -p test_documents.py -v`; expected missing document module/behavior failures.
-- [ ] GREEN: move shared validation/preparation into `omni_document`; add independent Markdown/DOCX generation and local HTML preview. PDF delegates shared validation while keeping existing public functions.
-- [ ] Check `Document(root / manifest['artifacts']['docx'])` and source hyperlink/image relationships; rerun focused and legacy tests, then commit.
+- [x] RED: tests generate Markdown/DOCX with PDF imports prohibited, preserve Chinese text/image/links, reject malformed input/time/key/paths, and protect reviewed archives.
+- [x] Run `python -m unittest discover -s tests -p test_documents.py -v`; expected missing document module/behavior failures.
+- [x] GREEN: move shared validation/preparation into `omni_document`; add independent Markdown/DOCX generation and local HTML preview. PDF delegates shared validation while keeping existing public functions.
+- [x] Check `Document(root / manifest['artifacts']['docx'])` and source hyperlink/image relationships; rerun focused and legacy tests, then commit.
 
 ## Task 2: Destination config, receipts and course progress
 
 Files: create `scripts/omni_delivery.py`, `tests/test_delivery.py`; modify `omni_core.py`, CLI.
 
-- [ ] RED: destination selection/preflight reports only relevant missing fields; reject secrets and unsafe paths; pending/import/ambiguous receipts cannot advance; verified delivery can advance and repeat safely; legacy course remains readable.
-- [ ] Run focused delivery tests; expected absent module/receipt gate failures.
-- [ ] GREEN: validate explicit destination config, choose default export formats, persist separate receipts under project lock, bind receipts to reviewed manifests, add status/reconciliation commands and generic artifact results.
-- [ ] CLI interfaces: `render --format markdown|docx|pdf`, `delivery-check`, `publish --key`, `delivery-status --key`, `receipt-record --key --receipt FILE`. Host receipts require actual document ID/URL and readback evidence.
-- [ ] Rerun delivery/core/documents tests and commit.
+- [x] RED: destination selection/preflight reports only relevant missing fields; reject secrets and unsafe paths; pending/import/ambiguous receipts cannot advance; verified delivery can advance and repeat safely; legacy course remains readable.
+- [x] Run focused delivery tests; expected absent module/receipt gate failures.
+- [x] GREEN: validate explicit destination config, choose default export formats, persist separate receipts under project lock, bind receipts to reviewed manifests, add status/reconciliation commands and generic artifact results.
+- [x] CLI interfaces: `render --format markdown|docx|pdf`, `delivery-check`, `publish --key`, `delivery-status --key`, `receipt-record --key --receipt FILE`. Host receipts require actual document ID/URL and readback evidence.
+- [x] Rerun delivery/core/documents tests and commit.
 
 ## Task 3: Official platform adapters
 
 Files: create `scripts/omni_http.py`, `scripts/omni_providers.py`, `tests/test_providers.py`; add provider references.
 
-- [ ] Read current official Notion Markdown/file-upload, Feishu imports, Tencent file import and DingTalk dws docs; record URLs and retrieval date.
-- [ ] RED: use a recording fake transport with official response fixtures; assert correct auth/payloads, media upload, task recovery, target validation, readback checks, business errors, unsupported converted=false, timeout ambiguity and no second create.
-- [ ] GREEN: implement Notion page/file uploads; Feishu DOCX import; Tencent DOCX pre-import/upload/async import/poll; DingTalk `dws doc import`/info/read via subprocess without shell; Obsidian copied Markdown/assets with collision-safe idempotent writes.
-- [ ] Require success identifiers plus readback/contents checks before returning verified. Resume saved asynchronous tasks; unknown create outcomes require reconciliation.
-- [ ] Run provider and delivery tests, then commit.
+- [x] Read current official Notion Markdown/file-upload, Feishu imports, Tencent file import and DingTalk dws docs; record URLs and retrieval date.
+- [x] RED: use a recording fake transport with official response fixtures; assert correct auth/payloads, media upload, task recovery, target validation, readback checks, business errors, unsupported converted=false, timeout ambiguity and no second create.
+- [x] GREEN: implement Notion page/file uploads; Feishu DOCX import; Tencent DOCX pre-import/upload/async import/poll; DingTalk `dws doc import`/info/read via subprocess without shell; Obsidian copied Markdown/assets with collision-safe idempotent writes.
+- [x] Require success identifiers plus readback/contents checks before returning verified. Resume saved asynchronous tasks; unknown create outcomes require reconciliation.
+- [x] Run provider and delivery tests, then commit.
 
 ## Task 4: Skill workflow and compatibility docs
 
 Files: SKILL.md, agents/openai.yaml, references/{delivery,providers/*,commands,setup,content,platforms}.md, README, CHANGELOG, .gitignore, packaging.
 
-- [ ] Update progressive intake, confirmed preferences, plan approval and mode-specific review. Explain connectors/API/CLI/UI/import and scheduling limits without claiming fallback files are delivered cloud pages.
-- [ ] Add private credential examples using env names, never secret values; ignore local credentials, allowlist installable bundle files.
-- [ ] Document unchanged historical course operation and explicit new-course migration for changed delivery settings.
-- [ ] Version metadata and UI wording to 2.0.0; keep runtime dependencies format-specific.
+- [x] Update progressive intake, confirmed preferences, plan approval and mode-specific review. Explain connectors/API/CLI/UI/import and scheduling limits without claiming fallback files are delivered cloud pages.
+- [x] Add private credential examples using env names, never secret values; ignore local credentials, allowlist installable bundle files.
+- [x] Document unchanged historical course operation and explicit new-course migration for changed delivery settings.
+- [x] Version metadata and UI wording to 2.0.0; keep runtime dependencies format-specific.
 
 ## Task 5: End-to-end validation and local accounts
 
 Files: `tests/test_cli.py`, `tools/validate_v2.py`, `docs/release-validation-v2.0.0.md`, isolated `tmp/v2-qa/` artifacts.
 
-- [ ] RED: subprocess CLI workflow tests verify plan render/review/approve, lesson publish and delayed advancement, wrong receipt bindings, interruption and retry behavior.
-- [ ] GREEN: complete CLI changes; run entire suite and real PDF compile recovery checks.
-- [ ] Create multilingual plan/lesson QA exports; render DOCX with bundled LibreOffice and inspect every page; inspect HTML/Markdown plus real Obsidian client display.
-- [ ] Use user-specified account destinations when available; create named QA documents, return verification evidence and record exact limits when credentials/login or tools are missing.
-- [ ] Verify original archived samples read-only; do not change historical checked_at dates.
+- [x] RED: subprocess CLI workflow tests verify plan render/review/approve, lesson publish and delayed advancement, wrong receipt bindings, interruption and retry behavior.
+- [x] GREEN: complete CLI changes; run entire suite and real PDF compile recovery checks.
+- [x] Create multilingual plan/lesson QA exports; render DOCX with bundled LibreOffice and inspect every page; inspect Markdown content/assets and real Vault filesystem readback. Native Obsidian display remains blocked by Mac lock.
+- [x] Use the actual current Vault for named Obsidian QA files; record cloud account/tool limitations accurately.
+- [ ] Resume native Obsidian display and actual cloud-account creation/readback after Mac unlock and authorized destinations are supplied.
+- [x] Verify original archived samples read-only; do not change historical checked_at dates.
 
 ## Task 6: Review and v2 package
 
-- [ ] Run complete tests, skill validation, compileall and whitespace checks.
-- [ ] Request one independent code-review subagent against base e82f3e8, spec, plan and current branch; fix important findings with regression tests.
-- [ ] Package `omni-learning-anything-skill-v2.0.0.zip`, verify SHA256 and isolated extraction/import/CLI execution with all required resources and no credentials/course files.
-- [ ] Commit tested changes; deliver local branch, package and truthful platform validation results. Publish a GitHub Release only on explicit subsequent instruction.
+- [x] Run complete tests, skill validation, compileall and whitespace checks.
+- [x] Request one independent code-review subagent against base e82f3e8, spec, plan and current branch; fix important findings with regression tests.
+- [x] Package `omni-learning-anything-skill-v2.0.0.zip`, verify SHA256 and isolated extraction/import/CLI execution with all required resources and no credentials/course files.
+- [x] Commit tested changes; deliver local branch, package and truthful platform validation results. Publish a GitHub Release only on explicit subsequent instruction.
 
 ## Review focus
 

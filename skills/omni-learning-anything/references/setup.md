@@ -39,3 +39,7 @@ For TinyTeX/TeX Live, install missing packages with its `tlmgr`: `xelatex fontsp
 The template detects FangSong / 仿宋 / FandolFang-Regular, then FandolSong-Regular; Times New Roman then TeX Gyre Termes. FandolFang is an open FangSong family supplied by TeX Live. No proprietary font is redistributed. The generated manifest records actual PDF font names; verify that report and the rendered text.
 
 Run `doctor`, then compile the first actual plan. A binary's presence alone does not prove required packages/fonts work. Every page is rendered with pypdfium2; image review remains an agent responsibility.
+
+## macOS bundled preview font discovery
+
+If a bundled LibreOffice preview drops Chinese despite intact DOCX text, verify font discovery before changing the document. Use a temporary process-local `FONTCONFIG_FILE` that exposes existing read-only host font directories and a writable task cache; do not modify global settings, runtime binaries or redistribute fonts. The authoring code selects an available CJK family when Fontconfig is present, or declares a platform CJK family for the destination viewer. Rendering inspection is still required. This local preview issue was reproduced and resolved during v2 QA; upstream context: https://github.com/openai/codex/issues/32968 .

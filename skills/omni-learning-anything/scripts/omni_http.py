@@ -51,7 +51,7 @@ def business(response, field):
 
 def segment(value):
     from urllib.parse import quote
-    if not isinstance(value, str) or not value or any(ch in value for ch in ('/', '\\', '?', '#', '\n', '\r')):
+    if not isinstance(value, str) or not value or len(value)>512 or any(ch.isspace() for ch in value) or any(ch in value for ch in ('/', '\\', '?', '#')):
         raise ValueError('Use a document/folder ID rather than a URL in API configuration.')
     return quote(value, safe='')
 

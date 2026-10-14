@@ -139,6 +139,32 @@ root=Path(sys.argv[1]); d.render(root,root/'plan.json','plan',['markdown'])
                 d.render(self.root, self.root / 'plan.json', 'plan', ['markdown', 'docx'])
         self.assertFalse((self.root / 'manifests/plan.json').exists())
 
+    def test_docx_rejects_latin_substitution_for_requested_cjk_font(self):
+        d = self.documents()
+        self.assertTrue(hasattr(d, 'cjk_font'), 'DOCX needs a detected CJK font fallback')
+        matches = {'FangSong': 'Verdana', 'FangSong_GB2312': 'FangSong_GB2312', 'STSong': 'STSong'}
+        self.assertEqual(d.cjk_font(lambda name: matches.get(name, 'Verdana')), 'FangSong_GB2312')
+
+    def test_docx_can_declare_cjk_font_without_host_font_installation(self):
+        d = self.documents()
+        self.assertIn(d.cjk_font(lambda name: 'Verdana'), ('STSong', 'SimSun', 'Noto Serif CJK SC'))
+
+    def test_docx_title_has_no_inherited_horizontal_rule(self):
+        d = self.documents()
+        m = d.render(self.root, self.root / 'plan.json', 'plan', ['docx'])
+        from docx import Document
+        document = Document(self.root / m['artifacts']['docx'])
+        self.assertFalse(document.styles['Title'].element.xpath('.//w:pBdr'))
+
+    def test_optional_pdf_copy_keeps_cloud_image_and_input_metadata(self):
+        d = self.documents()
+        import omni_pdf
+        if not omni_pdf.executable('xelatex'): self.skipTest('XeLaTeX required')
+        m = d.render(self.root, self.root / 'plan.json', 'plan', ['pdf', 'docx', 'markdown'])
+        self.assertEqual(set(m['artifacts']), {'pdf', 'docx', 'markdown'})
+        self.assertEqual(m.get('input'), 'plan.json')
+        self.assertTrue(m['report'].get('figure'), 'Cloud copies need the figure path even with PDF')
+
 
 if __name__ == '__main__':
     unittest.main()

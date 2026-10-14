@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0 — 2026-10-14
+## 2.0.0 — 2026-10-15
 
 - Add explicit multi-round destination intake and reusable authorization references for files and cloud documents.
 - Export Markdown and embedded-image DOCX independently of PDF libraries/XeLaTeX; retain PDF and combined PDF/DOCX output.

@@ -2,6 +2,8 @@
 import html
 import re
 import shutil
+import subprocess
+import sys
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 import omni_core as c
@@ -82,9 +84,29 @@ def markdown_text(data, plan, config, date, key, image_ref):
     return '\n\n'.join(lines) + '\n'
 
 
+def cjk_font(match=None):
+    candidates = ('FangSong', 'FangSong_GB2312', 'STSong', 'Songti SC', 'Noto Serif CJK SC', 'Source Han Sans CN', 'SimSun', 'Arial Unicode MS')
+    if match is None:
+        binary = shutil.which('fc-match')
+        if binary:
+            def match(name):
+                result = subprocess.run([binary, '-f', '%{family}', name], capture_output=True, text=True, timeout=5)
+                return result.stdout if result.returncode == 0 else ''
+        else:
+            # Fontconfig is optional. Use platform-native CJK families when unavailable.
+            return 'STSong' if sys.platform == 'darwin' else ('SimSun' if sys.platform == 'win32' else 'Noto Serif CJK SC')
+    for name in candidates:
+        families = [s.strip().casefold() for s in match(name).split(',')]
+        if name.casefold() in families:
+            return name
+    # DOCX stores Unicode/font declarations; cloud viewers may have fonts the authoring
+    # host lacks. Rendering remains a separate inspection requirement.
+    return 'STSong' if sys.platform == 'darwin' else ('SimSun' if sys.platform == 'win32' else 'Noto Serif CJK SC')
+
+
 def write_docx(path, data, plan, config, image, date, key):
     from docx import Document
-    from docx.shared import Inches, Pt, RGBColor
+    from docx.shared import Inches, Pt
     from docx.oxml import OxmlElement
     from docx.oxml.ns import qn
     from docx.opc.constants import RELATIONSHIP_TYPE as RT
@@ -92,13 +114,20 @@ def write_docx(path, data, plan, config, image, date, key):
     document = Document()
     document.core_properties.author = 'Omni Learning Anything'
     document.core_properties.title = data['title']
+    east_asian_font = cjk_font()
+    for style in document.styles:
+        for border in style.element.xpath('.//w:pBdr'):
+            border.getparent().remove(border)
     section = document.sections[0]
     section.top_margin = section.bottom_margin = Inches(0.8)
     section.left_margin = section.right_margin = Inches(0.85)
     for name in ('Normal', 'Title', 'Heading 1', 'Heading 2'):
         style = document.styles[name]
         style.font.name = 'Times New Roman'; style.font.size = Pt(11 if name == 'Normal' else 16)
-        style.element.get_or_add_rPr().rFonts.set(qn('w:eastAsia'), 'FangSong')
+        fonts = style.element.get_or_add_rPr().rFonts
+        fonts.set(qn('w:eastAsia'), east_asian_font)
+        for attr in ('asciiTheme', 'hAnsiTheme', 'eastAsiaTheme', 'cstheme'):
+            fonts.attrib.pop(qn('w:' + attr), None)
     document.styles['Normal'].paragraph_format.space_after = Pt(7)
     document.add_heading(data['title'], 0)
     document.add_paragraph(subtitle(data, plan, config, date, key))

@@ -4,6 +4,7 @@ import hashlib
 import io
 import os
 from zipfile import ZipFile
+from xml.etree import ElementTree
 from omni_http import HTTP, business, segment, document_data, check_text, check_links, verified
 from omni_delivery import verify_url
 
@@ -31,7 +32,8 @@ def check_docx(contents, data):
     if not document.inline_shapes:
         raise ValueError('Exported Tencent document is missing its figure.')
     with ZipFile(io.BytesIO(contents)) as z:
-        check_links(z.read('word/_rels/document.xml.rels').decode(), data)
+        relationships=ElementTree.fromstring(z.read('word/_rels/document.xml.rels'))
+        check_links('\n'.join(r.get('Target','') for r in relationships), data)
 
 
 def publish(root, manifest, target, receipt, checkpoint, client=None, cos_upload=None):
@@ -52,7 +54,8 @@ def publish(root, manifest, target, receipt, checkpoint, client=None, cos_upload
         result = business(client.json('POST', BASE + '/async-import', headers=headers,
              data={'fileMD5': md5, 'fileName': path.name, 'COSFileKey': info['COSFileKey'],
                    'parent': target['destination']['folder_id']}), 'ret')
-        checkpoint(task_id=result['progressQueryID'], status='pending')
+        task_id=result.get('progressQueryID'); segment(task_id)
+        checkpoint(task_id=task_id, status='pending')
     if not receipt.get('remote_id'):
         result = business(client.json('GET', BASE + '/import-progress', headers=headers,
                          params={'progressQueryID': receipt['task_id']}), 'ret')

@@ -231,5 +231,61 @@ class ProviderTests(unittest.TestCase):
         r = p.publish(self.root, self.manifest, target, self.receipt, self.checkpoint, runner=runner)
         self.assertEqual(r['status'], 'verified')
 
+    def test_notion_compact_parent_uuid_matches_canonical_response(self):
+        p = self.module('omni_notion'); http = self.notion_http(); original = http.handler
+        compact = '0123456789abcdef0123456789abcdef'
+        canonical = '01234567-89ab-cdef-0123-456789abcdef'
+        def handler(method, url, kwargs):
+            if url.endswith('/pages/page-qa'):
+                return {'id': 'page-qa', 'parent': {'page_id': canonical},
+                        'properties': {'title': {'title': [{'plain_text': self.plan['title']}]}}}
+            return original(method, url, kwargs)
+        http.handler = handler
+        self.receipt.update(remote_id='page-qa', url='https://www.notion.so/page-qa', upload_id='upload-qa', status='pending')
+        target = {'platform': 'notion', 'mode': 'api', 'destination': {'parent_page_id': compact}, 'credential_env': {'token': 'QA_TOKEN'}}
+        with patch.dict(os.environ, {'QA_TOKEN': 'private'}):
+            self.assertEqual(p.publish(self.root, self.manifest, target, self.receipt, self.checkpoint, client=http)['status'], 'verified')
+
+    def test_tencent_verifies_xml_escaped_query_urls(self):
+        p = self.module('omni_tencent'); data = dict(self.plan)
+        data['sources'] = [dict(s) for s in self.plan['sources']]
+        data['sources'][0]['url'] = 'https://example.com/search?q=learning&lang=zh'
+        path = Path(self.tmp.name) / 'query-links.docx'
+        doc.write_docx(path, data, data, c.read(self.root / 'config.json'),
+                       self.root / self.manifest['report']['figure'], c.today(self.root), 'plan')
+        p.check_docx(path.read_bytes(), data)
+
+    def test_null_create_identifiers_never_enable_second_create(self):
+        for platform, module, id_field, suffix in [('feishu', 'omni_feishu', 'ticket', '/import_tasks'),
+                                                  ('tencent', 'omni_tencent', 'progressQueryID', '/async-import'),
+                                                  ('notion', 'omni_notion', 'id', '/pages')]:
+            for bad_id in (None, '', ' '):
+                with self.subTest(platform=platform, bad_id=bad_id):
+                    p = self.module(module)
+                    if platform == 'feishu':
+                        target = {'platform': platform, 'mode': 'api', 'destination': {'folder_token': 'folder-qa'}, 'credential_env': {'token': 'QA_TOKEN'}}
+                        http = self.feishu_http()
+                    elif platform == 'tencent':
+                        target = {'platform': platform, 'mode': 'api', 'destination': {'folder_id': 'folder-qa'}, 'credential_env': {'token': 'QA_TOKEN', 'client_id': 'QA_CLIENT', 'open_id': 'QA_OPEN'}}
+                        http = self.tencent_http()
+                    else:
+                        target = {'platform': platform, 'mode': 'api', 'destination': {'parent_page_id': 'parent-qa'}, 'credential_env': {'token': 'QA_TOKEN'}}
+                        http = self.notion_http()
+                    original = http.handler
+                    def handler(method, url, kwargs):
+                        if method == 'POST' and url.endswith(suffix):
+                            if platform == 'notion': return {'id': bad_id, 'url': 'https://www.notion.so/page-qa'}
+                            return {'code' if platform == 'feishu' else 'ret': 0, 'data': {id_field: bad_id}}
+                        return original(method, url, kwargs)
+                    http.handler = handler
+                    root = Path(self.tmp.name) / (platform + '-' + str(bad_id).replace(' ', 'space')); root.mkdir()
+                    course(root, target); doc.render(root, root / 'plan.json', 'plan', ['markdown', 'docx']); doc.review(root, 'plan', 'Inspected')
+                    def adapter(root, manifest, target, receipt, checkpoint):
+                        return p.publish(root, manifest, target, receipt, checkpoint, client=http)
+                    with patch.dict(os.environ, {'QA_TOKEN': 'private', 'QA_CLIENT': 'client', 'QA_OPEN': 'open'}):
+                        with self.assertRaises(RuntimeError): delivery.publish(root, 'plan', adapter=adapter)
+                        with self.assertRaises(ValueError): delivery.publish(root, 'plan', adapter=adapter)
+                    self.assertEqual(len([call for call in http.calls if call[0] == 'POST' and call[1].endswith(suffix)]), 1)
+
 
 if __name__ == '__main__': unittest.main()

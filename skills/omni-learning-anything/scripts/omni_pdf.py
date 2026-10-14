@@ -120,7 +120,8 @@ def render(root,input_path,key,export_formats=()):
             from omni_document import write_docx
             docx_path=root/'sources'/(stem+'.docx'); write_docx(docx_path,data,plan,c.read(root/'config.json'),image_path,c.today(root),key)
             files.append(docx_path); artifacts['docx']=str(docx_path.relative_to(root))
-        manifest={'artifact':str(pdf.relative_to(root)),'artifacts':artifacts,'key':key,'pdf':str(pdf.relative_to(root)),'created_at':c.today(root),'files':{str(p.relative_to(root)):c.digest(p) for p in files},'previews':preview_paths,'reviewed_at':None,'report':report,'layout_warnings':len(re.findall('Overfull',log))}
+        report['figure']=str(image_path.relative_to(root))
+        manifest={'input':str(input_path.relative_to(root)),'artifact':str(pdf.relative_to(root)),'artifacts':artifacts,'key':key,'pdf':str(pdf.relative_to(root)),'created_at':c.today(root),'files':{str(p.relative_to(root)):c.digest(p) for p in files},'previews':preview_paths,'reviewed_at':None,'report':report,'layout_warnings':len(re.findall('Overfull',log))}
         c.save(root/'manifests'/(key+'.json'),manifest)
         return manifest
 

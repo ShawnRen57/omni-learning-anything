@@ -2,10 +2,18 @@
 import mimetypes
 import os
 import re
+import uuid
 from omni_http import HTTP, segment, document_data, check_text, check_links, verified
 from omni_delivery import verify_url
 
 BASE = 'https://api.notion.com/v1'
+
+
+def canonical_id(value):
+    try:
+        return str(uuid.UUID(value))
+    except (ValueError, AttributeError, TypeError):
+        return value
 
 
 def blocks(client, page_id, headers):
@@ -33,7 +41,7 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
         if not receipt.get('upload_id'):
             upload = client.json('POST', BASE + '/file_uploads', headers=headers,
                                  json={'filename': image.name, 'content_type': mimetypes.guess_type(image.name)[0], 'mode': 'single_part'})
-            checkpoint(upload_id=upload['id'])
+            segment(upload.get('id')); checkpoint(upload_id=upload['id'])
         if not receipt.get('upload_complete'):
             with image.open('rb') as f:
                 uploaded = client.json('POST', BASE + '/file_uploads/' + segment(receipt['upload_id']) + '/send',
@@ -47,7 +55,7 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
         checkpoint(status='creating')
         page = client.json('POST', BASE + '/pages', headers=headers,
                            json={'parent': {'page_id': parent}, 'markdown': markdown})
-        verify_url('notion', page['url'])
+        segment(page.get('id')); verify_url('notion', page['url'])
         checkpoint(remote_id=page['id'], url=page['url'], status='pending')
     page_id = receipt['remote_id']; existing = blocks(client, page_id, headers)
     images = [b for b in existing if b.get('type') == 'image']
@@ -63,7 +71,7 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
         images = [b for b in blocks(client, page_id, headers) if b.get('type') == 'image']
     if not images: raise ValueError('Notion image readback failed.')
     page = client.json('GET', BASE + '/pages/' + segment(page_id), headers=headers)
-    if page.get('parent', {}).get('page_id') != parent:
+    if canonical_id(page.get('parent', {}).get('page_id')) != canonical_id(parent):
         raise ValueError('Notion page is outside the configured parent.')
     title = ''.join(x.get('plain_text', x.get('text', {}).get('content', '')) for x in page.get('properties', {}).get('title', {}).get('title', []))
     if title != data['title']: raise ValueError('Notion page title readback differs.')

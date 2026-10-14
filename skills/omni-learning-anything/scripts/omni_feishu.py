@@ -25,12 +25,14 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
                 response = client.json('POST', BASE + '/drive/v1/medias/upload_all', headers=headers,
                     data={'file_name': path.name, 'parent_type': 'ccm_import_open', 'parent_node': '', 'size': str(path.stat().st_size)},
                     files={'file': (path.name, f, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')})
-            checkpoint(upload_token=business(response, 'code')['file_token'])
+            upload_token=business(response, 'code').get('file_token'); segment(upload_token)
+            checkpoint(upload_token=upload_token)
         checkpoint(status='creating')
         response = client.json('POST', BASE + '/drive/v1/import_tasks', headers=headers,
             json={'file_extension': 'docx', 'file_token': receipt['upload_token'], 'type': 'docx',
                   'file_name': data['title'], 'point': {'mount_type': 1, 'mount_key': target['destination']['folder_token']}})
-        checkpoint(task_id=business(response, 'code')['ticket'], status='pending')
+        ticket=business(response, 'code').get('ticket'); segment(ticket)
+        checkpoint(task_id=ticket, status='pending')
     if not receipt.get('remote_id'):
         response = client.json('GET', BASE + '/drive/v1/import_tasks/' + segment(receipt['task_id']), headers=headers)
         result = business(response, 'code')['result']

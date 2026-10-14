@@ -195,6 +195,10 @@ def publish(root, key, adapter=None):
             receipt = dict(binding(root, key, manifest, target), status='prepared',
                            platform=target['platform'], mode=target['mode'])
         def checkpoint(**changes):
+            candidate=dict(receipt,**changes)
+            if candidate.get('status')=='pending' and target['mode'] in ('api','cli'):
+                from omni_http import segment
+                segment(candidate.get('remote_id') or candidate.get('task_id'))
             receipt.update(changes); c.save(path, receipt)
         formats = manifest.get('artifacts', {'pdf': manifest.get('pdf')})
         needed = default_formats(config)[0]
