@@ -23,24 +23,7 @@ def executable(name):
     return None
 
 
-def validate_document(data,root):
-    sources=data.get('sources',[])
-    if len({s.get('url') for s in sources})<5: raise ValueError('At least five distinct expansion links required.')
-    ids=[s.get('id') for s in sources]
-    if len(set(ids))!=len(ids) or any(not re.fullmatch(r'S\d+',str(x)) for x in ids): raise ValueError('Source IDs must be unique S-numbers.')
-    for s in sources:
-        u=urlsplit(s.get('url',''))
-        if u.scheme not in ('http','https') or not u.netloc or any(ch in s['url'] for ch in '\\{}\n\r'): raise ValueError('Invalid source URL.')
-        if not all(s.get(k) for k in ('title','publisher','note','checked_at','published_at')): raise ValueError('Incomplete source metadata.')
-        if s['checked_at']!=c.today(root): raise ValueError('Recheck sources on the actual generation date.')
-    if not data.get('sections') or not all(s.get('title') and s.get('body') for s in data['sections']): raise ValueError('Sections need title and body.')
-    text='\n'.join(s['body'] for s in data['sections'])
-    if not set(re.findall(r'\[(S\d+)\]',text)).issubset(ids): raise ValueError('Unknown inline source.')
-    if not re.search(r'\[S\d+\]',text): raise ValueError('Include inline evidence for key claims.')
-    f=data.get('figure',{}); p=(root/f.get('path','')).resolve()
-    if not p.is_relative_to(root.resolve()) or not p.is_file() or p.suffix.lower() not in ('.png','.jpg','.jpeg','.pdf'): raise ValueError('Figure must be a local supported file inside project.')
-    if not f.get('caption') or not f.get('credit'): raise ValueError('Figure caption and credit required.')
-    if not data.get('title'): raise ValueError('Document title required.')
+from omni_document import validate_document
 
 
 PREAMBLE=r'''\documentclass[11pt]{article}
@@ -62,7 +45,9 @@ PREAMBLE=r'''\documentclass[11pt]{article}
 '''
 
 
-def render(root,input_path,key):
+def render(root,input_path,key,export_formats=()):
+    from omni_document import validate_key
+    validate_key(key)
     root=Path(root).resolve(); input_path=Path(input_path).resolve()
     if not input_path.is_relative_to(root): raise ValueError('Input must be inside project.')
     with c.lock(root):
@@ -130,7 +115,12 @@ def render(root,input_path,key):
             target=root/'previews'/f'{key}-{n+1:02d}.png'; doc[n].render(scale=1.25).to_pil().save(target); preview_paths.append(str(target.relative_to(root)))
         doc.close()
         files=[input_path,root/'plan.json',root/'config.json',pdf,texfile,mdfile,image_path,*[root/p for p in preview_paths]]
-        manifest={'key':key,'pdf':str(pdf.relative_to(root)),'created_at':c.today(root),'files':{str(p.relative_to(root)):c.digest(p) for p in files},'previews':preview_paths,'reviewed_at':None,'report':report,'layout_warnings':len(re.findall('Overfull',log))}
+        artifacts={'pdf':str(pdf.relative_to(root)),'markdown':str(mdfile.relative_to(root))}
+        if 'docx' in export_formats:
+            from omni_document import write_docx
+            docx_path=root/'sources'/(stem+'.docx'); write_docx(docx_path,data,plan,c.read(root/'config.json'),image_path,c.today(root),key)
+            files.append(docx_path); artifacts['docx']=str(docx_path.relative_to(root))
+        manifest={'artifact':str(pdf.relative_to(root)),'artifacts':artifacts,'key':key,'pdf':str(pdf.relative_to(root)),'created_at':c.today(root),'files':{str(p.relative_to(root)):c.digest(p) for p in files},'previews':preview_paths,'reviewed_at':None,'report':report,'layout_warnings':len(re.findall('Overfull',log))}
         c.save(root/'manifests'/(key+'.json'),manifest)
         return manifest
 
@@ -154,11 +144,5 @@ def inspect_pdf(pdf,sources):
 
 
 def review(root,key,note):
-    if not re.fullmatch(r'plan|Day[0-9]{2,}',key): raise ValueError('Invalid document key.')
-    with c.lock(root):
-        state=c.read(root/'state.json')
-        if key!='plan' and str(int(key[3:])) in state['lessons']:
-            raise ValueError('Delivered review is immutable; retain the original archive.')
-        path=root/'manifests'/(key+'.json'); m=c.read(path); c.manifest_ok(root,m)
-        if not note.strip(): raise ValueError('Record what was visually checked.')
-        m.update(reviewed_at=c.today(root),review_note=note); c.save(path,m)
+    from omni_document import review as document_review
+    return document_review(root,key,note)
