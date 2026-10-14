@@ -1,4 +1,4 @@
-# 西方建筑史 / Omni Learning Assistant sample
+# 西方建筑史 / Omni Learning Anything sample
 
 用户启动句：我想学习西方建筑史，旅行时能看懂建筑。
 

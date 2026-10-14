@@ -1,4 +1,4 @@
-# 音乐通识 / Omni Learning Assistant sample
+# 音乐通识 / Omni Learning Anything sample
 
 用户启动句：我想学习音乐，提升欣赏不同作品的能力。
 

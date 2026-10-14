@@ -1,9 +1,9 @@
-# Omni Learning Assistant implementation plan
+# Omni Learning Anything implementation plan
 
 > Execution: implement and verify in this session, following the user-approved eight-part scope. The user approved execution on 2026-10-08; do not add another design approval gate.
 
 Goal: portable Agent Skills package, source-grounded learning PDFs, persistent course progress, six four-document examples, bilingual documentation and GitHub release.
-Architecture: agent-owned research and teaching; Python-owned rendering and state; host-owned scheduling and notification. Keep the distributable skill self-contained under skills/omni-learning-assistant.
+Architecture: agent-owned research and teaching; Python-owned rendering and state; host-owned scheduling and notification. Keep the distributable skill self-contained under skills/omni-learning-anything.
 Stack: Python 3.10+, XeLaTeX, pypdf, pypdfium2, Pillow. No cloud API credentials required by the package itself.
 
 ## Scope and acceptance
@@ -27,9 +27,9 @@ Stack: Python 3.10+, XeLaTeX, pypdf, pypdfium2, Pillow. No cloud API credentials
 Unsafe TeX/paths; stale approved plan; duplicate concurrent runs; delivering unreviewed or changed PDF; schedule capability overstated.
 
 ## Decisions
-The skill identifier is omni-learning-assistant.
+The skill identifier is omni-learning-anything.
 Sample runs simulate plan approval and consecutive delivery in an isolated sample mode; they do not prove real timed delivery or learner mastery.
 
 ## Publication
-- [x] Public repository created under ShawnRen57/omni-learning-assistant.
+- [x] Public repository created under ShawnRen57/omni-learning-anything.
 - [x] Upload all deliverables and verify remote files. All 279 Git blob hashes matched on 2026-10-09.

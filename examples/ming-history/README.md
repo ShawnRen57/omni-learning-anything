@@ -1,4 +1,4 @@
-# 明朝历史 / Omni Learning Assistant sample
+# 明朝历史 / Omni Learning Anything sample
 
 用户启动句：我想系统学习明朝历史，理解重要制度和事件。
 

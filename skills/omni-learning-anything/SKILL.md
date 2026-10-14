@@ -1,13 +1,13 @@
 ---
-name: omni-learning-assistant
-description: Build a personalized, source-grounded learning course on any topic, with a PDF plan approved by the learner before daily scheduled PDF lessons. Use for systematic study, learning plans, or continuing an Omni Learning Assistant course; not for a one-off factual answer.
+name: omni-learning-anything
+description: Build a personalized, source-grounded learning course on any topic, with a PDF plan approved by the learner before daily scheduled PDF lessons. Use for systematic study, learning plans, or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   runtime: "Python 3.10+, XeLaTeX; host web search, files, commands and PDF viewing. Scheduling and images depend on host."
 ---
 
-# Omni Learning Assistant
+# Omni Learning Anything
 
 Turn “I want to learn X” into a coherent course. The agent researches and teaches; bundled scripts render PDFs and track delivery; the host schedules and notifies. Do not assume that installing a skill grants any missing host capability.
 

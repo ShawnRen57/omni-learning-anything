@@ -1,15 +1,15 @@
-# Omni Learning Assistant
+# Omni Learning Anything
 
 **把「我想学……」变成一条每天可以走下去的学习路径。**  
 **Turn “I want to learn…” into a source-grounded daily learning path.**
 
-[下载发布版 / Releases](https://github.com/ShawnRen57/omni-learning-assistant/releases) · [中文](#中文使用指南) · [English](#english-guide) · [生成样例 / Examples](#学习样例与截图--see-the-results) · [验证记录 / Validation](docs/validation.md) · [v1.0.0 中英验收 / Bilingual acceptance](validation/release-v1.0.0/README.md) · [DSH 社区展示 / Community showcase](https://github.com/deepseek-ai/deepseek-harness/discussions/9207)
+[下载发布版 / Releases](https://github.com/ShawnRen57/omni-learning-anything/releases) · [中文](#中文使用指南) · [English](#english-guide) · [生成样例 / Examples](#学习样例与截图--see-the-results) · [验证记录 / Validation](docs/validation.md) · [v1.0.0 中英验收 / Bilingual acceptance](validation/release-v1.0.0/README.md) · [DSH 社区展示 / Community showcase](https://github.com/deepseek-ai/deepseek-harness/discussions/9207)
 
-Omni Learning Assistant 将你的 Agent 变成一位围绕目标组织课程的学习助手。告诉它你想学什么，它会了解你的基础、目标和可投入的时间，先交付一份 **PDF 学习计划**，等你确认后，再按计划制作每天的 **图文学习材料**。
+Omni Learning Anything 将你的 Agent 变成一位围绕目标组织课程的学习助手。告诉它你想学什么，它会了解你的基础、目标和可投入的时间，先交付一份 **PDF 学习计划**，等你确认后，再按计划制作每天的 **图文学习材料**。
 
 遵循 [Agent Skills 标准](https://agentskills.io/specification)，可安装到 Codex、WorkBuddy、DeepSeek Harness、OpenClaw、豆包工作界面等支持技能的 Agent 中。
 
-Omni Learning Assistant turns your agent into a learning assistant that builds a course around your goals. Start with a topic; it clarifies your background and available time, delivers a **PDF plan for approval**, then creates **illustrated daily lessons** along that plan. It follows the [Agent Skills standard](https://agentskills.io/specification) and uses your agent's tools for research, document creation and scheduling.
+Omni Learning Anything turns your agent into a learning assistant that builds a course around your goals. Start with a topic; it clarifies your background and available time, delivers a **PDF plan for approval**, then creates **illustrated daily lessons** along that plan. It follows the [Agent Skills standard](https://agentskills.io/specification) and uses your agent's tools for research, document creation and scheduling.
 
 ### 用熟悉的语言学习 / Learn in your preferred language
 
@@ -129,34 +129,34 @@ These are isolated acceptance samples with simulated learners, approvals and rec
 把下面的消息发送到 Agent 对话框，由 Agent 按当前客户端的原生技能方式安装：
 
 ```text
-请安装 omni-learning-assistant：
-https://github.com/ShawnRen57/omni-learning-assistant
+请安装 omni-learning-anything：
+https://github.com/ShawnRen57/omni-learning-anything
 请优先下载 Releases 最新的轻量 Skill ZIP，完整安装并保留 scripts、references、agents。
 安装后确认技能可发现，并告诉我如何开始使用。
 ```
 
-客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-assistant-skill-v1.0.0.zip)，按下方步骤完成。
+客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v1.0.1.zip)，按下方步骤完成。
 
 #### b. 手动安装（按平台）
 
-上传时选择 ZIP；目录安装时解压并复制整个 `omni-learning-assistant/` 文件夹。
+上传时选择 ZIP；目录安装时解压并复制整个 `omni-learning-anything/` 文件夹。
 
 | Agent | 手动操作 | 官方依据 |
 |---|---|---|
-| Codex | 放入 `~/.agents/skills/omni-learning-assistant/`，或项目 `.agents/skills/`；确认加载后用 `$omni-learning-assistant` 调用 | [Skills 文档](https://learn.chatgpt.com/docs/build-skills) |
+| Codex | 放入 `~/.agents/skills/omni-learning-anything/`，或项目 `.agents/skills/`；确认加载后用 `$omni-learning-anything` 调用 | [Skills 文档](https://learn.chatgpt.com/docs/build-skills) |
 | WorkBuddy | **专家 · 技能 · 连接器 → 技能 → 添加技能 → 上传技能**，选择 ZIP，导入后启用 | [技能说明](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market) |
-| DeepSeek Harness | 放入 `~/.dsh/skills/omni-learning-assistant/`，或项目 `.dsh/skills/`；在技能目录确认加载 | [文件系统 Skill provider](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/skill/skill-filesystem/README.md) |
-| OpenClaw | 解压后执行 `openclaw skills install /path/to/omni-learning-assistant --global`，再用 `openclaw skills list` 查看 | [Skills CLI](https://docs.openclaw.ai/cli/skills) |
+| DeepSeek Harness | 放入 `~/.dsh/skills/omni-learning-anything/`，或项目 `.dsh/skills/`；在技能目录确认加载 | [文件系统 Skill provider](https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/skill/skill-filesystem/README.md) |
+| OpenClaw | 解压后执行 `openclaw skills install /path/to/omni-learning-anything --global`，再用 `openclaw skills list` 查看 | [Skills CLI](https://docs.openclaw.ai/cli/skills) |
 | 豆包工作界面 | **插件 · 技能 · 伙伴 → 技能 → 添加 → 上传技能**；选 **选择文件**上传 ZIP，或 **选择文件夹**导入完整目录 | 官方桌面端 2.31.4 上传界面核对，2026-10-09 |
 
-DSH 的“插件 → 添加插件”用于 DSH 插件组合包；本项目采用上表的原生 Skill 目录安装。豆包步骤适用于提供上述技能入口的工作界面。更多操作细节和依据见 [安装说明](skills/omni-learning-assistant/references/install.md)。
+DSH 的“插件 → 添加插件”用于 DSH 插件组合包；本项目采用上表的原生 Skill 目录安装。豆包步骤适用于提供上述技能入口的工作界面。更多操作细节和依据见 [安装说明](skills/omni-learning-anything/references/install.md)。
 
-Agent 会检查学习材料所需的工具与 Python 3.10+、XeLaTeX 环境，按 [环境说明](skills/omni-learning-assistant/references/setup.md)处理缺失依赖。
+Agent 会检查学习材料所需的工具与 Python 3.10+、XeLaTeX 环境，按 [环境说明](skills/omni-learning-anything/references/setup.md)处理缺失依赖。
 
 ### 2. 只说你想学什么
 
 ```text
-用 omni-learning-assistant 带我学习西方建筑史，目标是旅行时能看懂建筑。
+用 omni-learning-anything 带我学习西方建筑史，目标是旅行时能看懂建筑。
 ```
 
 Agent 会集中追问：学习目标和已有基础、学习多少天、每天几分钟、每日执行时间与时区、是否包括周末、文档语言及保存位置。你已经提供的信息不会重复询问。
@@ -164,7 +164,7 @@ Agent 会集中追问：学习目标和已有基础、学习多少天、每天�
 也可以一次说完整：
 
 ```text
-用 omni-learning-assistant 学习 Agent 产品设计。我是产品经理，有产品经验但 AI 基础有限。
+用 omni-learning-anything 学习 Agent 产品设计。我是产品经理，有产品经验但 AI 基础有限。
 目标是能独立定义 Agent 产品并准备面试。学习 30 天，每天 15 分钟，
 每天 10:00，Asia/Shanghai，含周末，中文，保存到我指定的课程文件夹。
 先给我 PDF 计划，等我确认后创建每日任务；确认后立即开始 Day01。
@@ -185,7 +185,7 @@ Agent 会集中追问：学习目标和已有基础、学习多少天、每天�
 继续、暂停和调整示例：
 
 ```text
-继续这个 Omni Learning Assistant 课程，先检查上次交付到了哪一天。
+继续这个 Omni Learning Anything 课程，先检查上次交付到了哪一天。
 暂停这个课程，同时暂停对应的定时任务。
 我想调整学习目标，请保留旧档案，为我生成新的计划供确认。
 ```
@@ -201,38 +201,38 @@ Agent 会集中追问：学习目标和已有基础、学习多少天、每天�
 Send this message in your agent's conversation:
 
 ```text
-Install omni-learning-assistant from:
-https://github.com/ShawnRen57/omni-learning-assistant
+Install omni-learning-anything from:
+https://github.com/ShawnRen57/omni-learning-anything
 Prefer the latest lightweight Skill ZIP in Releases. Use this client's native
 skill installation mechanism, keep all bundled resources, then verify discovery.
 ```
 
-If the client requires an upload, download the [Skill ZIP](dist/omni-learning-assistant-skill-v1.0.0.zip) and follow the steps below.
+If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v1.0.1.zip) and follow the steps below.
 
 #### b. Manual installation by agent
 
 | Agent | Steps |
 |---|---|
-| Codex | Copy the extracted folder into user/project `.agents/skills/`; invoke `$omni-learning-assistant`. |
+| Codex | Copy the extracted folder into user/project `.agents/skills/`; invoke `$omni-learning-anything`. |
 | WorkBuddy | Experts / Skills / Connectors → Skills → Add skill → Upload skill; select the ZIP and enable it. |
 | DeepSeek Harness | Copy the complete bundle into user `~/.dsh/skills/` or project `.dsh/skills/`; verify discovery. |
-| OpenClaw | Run `openclaw skills install /path/to/omni-learning-assistant --global`, then `openclaw skills list`. |
+| OpenClaw | Run `openclaw skills install /path/to/omni-learning-anything --global`, then `openclaw skills list`. |
 | Doubao work mode | Plugins / Skills / Partners → Skills → Add → Upload skill; select the ZIP or folder. |
 
-The [installation guide](skills/omni-learning-assistant/references/install.md) links to the official sources. Doubao's upload steps were checked in its official macOS desktop client. DSH's Add plugin dialog handles plugin bundles; use filesystem skill installation for this package.
+The [installation guide](skills/omni-learning-anything/references/install.md) links to the official sources. Doubao's upload steps were checked in its official macOS desktop client. DSH's Add plugin dialog handles plugin bundles; use filesystem skill installation for this package.
 
-The agent checks research, execution, image and PDF tools plus Python/XeLaTeX dependencies. See [runtime setup](skills/omni-learning-assistant/references/setup.md).
+The agent checks research, execution, image and PDF tools plus Python/XeLaTeX dependencies. See [runtime setup](skills/omni-learning-anything/references/setup.md).
 
 ### Start with a topic
 
 ```text
-Use $omni-learning-assistant to teach me Western architectural history so I can understand buildings when traveling.
+Use $omni-learning-anything to teach me Western architectural history so I can understand buildings when traveling.
 ```
 
 The agent asks for missing goals, prior knowledge, course length, daily study time, execution time/timezone, weekdays, language and output folder. For a complete request:
 
 ```text
-Use $omni-learning-assistant to help me learn Agent product design. I am a product manager
+Use $omni-learning-anything to help me learn Agent product design. I am a product manager
 with limited AI background. Plan 30 days at 15 minutes per day, at 10:00
 Asia/Shanghai including weekends. Use English and save to my course folder.
 Send the PDF plan first. Wait for my approval before scheduling daily lessons.
@@ -244,7 +244,7 @@ Approve the plan or request revisions. The agent then creates and verifies a nat
 Each lesson includes focused explanation, an illustrative image, a short exercise and answer guidance, a recap, and at least five useful expansion links. Optional reading is outside the core time budget. PDFs use XeLaTeX with detected font fallbacks. Progress advances after delivery, failed work resumes at the same lesson, and completion stops the host schedule.
 
 ```text
-Continue my Omni Learning Assistant course from the earliest undelivered day.
+Continue my Omni Learning Anything course from the earliest undelivered day.
 Pause this course and its host schedule.
 Preserve the old course and propose a revised plan for my new goal.
 ```
@@ -252,7 +252,7 @@ Preserve the old course and propose a revised plan for my new goal.
 ## Repository & development
 
 ```text
-skills/omni-learning-assistant/     Installable, self-contained skill
+skills/omni-learning-anything/     Installable, self-contained skill
 examples/            Six curricula, 24 PDFs, JSON, TeX, Markdown, previews and manifests
 docs/                Research, screenshots, validation and design decisions
 tests/               State and real XeLaTeX integration checks
@@ -262,9 +262,9 @@ dist/                Lightweight installable ZIP
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install -r skills/omni-learning-assistant/scripts/requirements.txt
+.venv/bin/python -m pip install -r skills/omni-learning-anything/scripts/requirements.txt
 .venv/bin/python -m unittest discover -s tests -v
-.venv/bin/python skills/omni-learning-assistant/scripts/omni_learning.py --project examples/technology doctor
+.venv/bin/python skills/omni-learning-anything/scripts/omni_learning.py --project examples/technology doctor
 ```
 
 Tests include a real XeLaTeX compile when the binary is available. Sample source files are historical authored outputs, not a script that performs web research. Create a new course for new runs; do not relabel old source checks as fresh research or reset the sample state to use it as a learner record.

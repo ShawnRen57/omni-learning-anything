@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Omni Learning Assistant deterministic helpers. Run --help for commands."""
+"""Omni Learning Anything deterministic helpers. Run --help for commands."""
 import sys
 if sys.version_info < (3, 10):
     raise SystemExit("Python 3.10+ required; current interpreter is " + sys.version.split()[0] + ". Select a supported Python interpreter and retry.")

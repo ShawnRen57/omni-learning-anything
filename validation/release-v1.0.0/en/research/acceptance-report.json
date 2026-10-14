@@ -1,6 +1,6 @@
 {
   "acceptance_mode": "isolated sample; no simulated approval or accelerated lessons performed",
-  "installed_skill": "<local-user>/.codex/skills/omni-learning-assistant",
+  "installed_skill": "<local-user>/.codex/skills/omni-learning-anything",
   "interpreter": "<local-repository>/tmp/first-use-venv/bin/python",
   "compiler": "<local-user>/Library/TinyTeX/bin/universal-darwin/xelatex",
   "commands_completed": [

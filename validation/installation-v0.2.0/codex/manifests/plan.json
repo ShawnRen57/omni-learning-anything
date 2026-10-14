@@ -3,13 +3,13 @@
   "pdf": "pdf/安装验收_学习计划.pdf",
   "created_at": "2026-10-09",
   "files": {
-    "plan.json": "bc0ffc6f5e0ca5718b1cfd94882472112b362dca4915cfae6a8aedc6a060ec8d",
+    "plan.json": "05a5f04333951944b1da1c35894e48dbba4bee3dab143fca69ca0808751e2639",
     "config.json": "1967e63ec688623963d48134e0b0531e492dd902ad855f21c2e2e7950086d9c8",
-    "pdf/安装验收_学习计划.pdf": "b914a0bce815fe8550749aabc9f7c7b49fea136ccbea9c3c9fe6a2e02ed06492",
-    "sources/安装验收_学习计划.tex": "7fe9508a7e27f969667a5fd64a2be4371120a206887ecc269c94770f8f20b332",
-    "sources/安装验收_学习计划.md": "91677476be1cc78286f0a01100e55f52b28b71f37b1668ff1a915385cb1b3a78",
+    "pdf/安装验收_学习计划.pdf": "856f1f6fd6328604e070b6d6fadca56ea1a45e7f89696bb74fecca30e5d41907",
+    "sources/安装验收_学习计划.tex": "17b21c5d3566b6b2ee34a1eb48c21d1284bbef936e04e18429d099e109d2ea54",
+    "sources/安装验收_学习计划.md": "bbafeca6b577f83850ee69c0ab44320f8d5dff3c896ca8e5967d825806dbfd13",
     "assets/figure-f85f0dfd67a3.png": "f85f0dfd67a3a900b01f40da286a9b0beae8e60d51e511ec452f1b4a64d58a71",
-    "previews/plan-01.png": "ff90d765f93444b92a4e72c4cae04106f00dab6812b2975f69186d3f4778888f"
+    "previews/plan-01.png": "4bd09d301bf0208036af7151f1f6a8bc0e24fe4baab63ed4a77acbeda863007a"
   },
   "previews": [
     "previews/plan-01.png"
@@ -25,5 +25,5 @@
     ]
   },
   "layout_warnings": 0,
-  "review_note": "实际检查 previews/plan-01.png 全部1页：中英文、标题正文、原有合成插图、图注、5条参考链接与页码显示正常，无裁切、重叠或空白页。PDF内5个Link注释目标与input-plan.json完全一致，未联网验证占位URL。FandolFang-Regular及Times New Roman常规/粗体均已嵌入。完整编译日志Overfull/Underfull/Missing character及LaTeX/Package Warning均为0；有1项fontspec CJK script支持Info提示，预览正常；missfont.log记录FangSong探测，实际回退为FandolFang。PDFium中文提取正常，pypdf中文提取存在兼容性限制，详见pdf-check.json。仅合成安装与首次渲染验收，保持awaiting_approval，未approve、未调度、未生成日课。"
+  "review_note": "实际检查 previews/plan-01.png 全部1页：中英文、标题正文、原有合成插图、图注、5条参考链接与页码显示正常，无裁切、重叠或空白页。PDF内5个Link注释目标与input-plan.json完全一致，未联网验证占位URL。FandolFang-Regular及Times New Roman常规/粗体均已嵌入。完整编译日志Overfull/Underfull/Missing character及LaTeX/Package Warning均为0；有1项fontspec CJK script支持Info提示，预览正常；missfont.log记录FangSong探测，实际回退为FandolFang。PDFium中文提取正常，pypdf中文提取存在兼容性限制，详见pdf-check.json。仅合成安装与首次渲染验收，保持awaiting_approval，未approve、未调度、未生成日课。 2026-10-14统一名称后再次目视检查整页，未见裁切、缺字、重叠；学习内容和原始日期未改。"
 }

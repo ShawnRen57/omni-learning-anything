@@ -6,11 +6,13 @@
 - 29 项测试覆盖审批、变更后的审批失效、连续天数、交付门禁、重复执行、失败复用、暂停完成、并发锁、路径与 TeX 安全、真实 XeLaTeX 输出。
 - PDF 检查包含全部页面预览、嵌入字体、图示、至少五个链接和版式警告。PDFium 用于中文提取，pypdf 用于字体与链接对象检查。
 - [首次安装验收](installation-validation.md)：Codex CLI 与 DSH Desktop 从公开包加载资源并生成测试 PDF；使用干净 Python 环境，保留原始测试输入与输出。
-- 元数据验证与独立 ZIP 解压检查确认包自包含。安装方法依据见 [install.md](../skills/omni-learning-assistant/references/install.md)。
+- 元数据验证与独立 ZIP 解压检查确认包自包含。安装方法依据见 [install.md](../skills/omni-learning-anything/references/install.md)。
 
 样例计划批准与交付为明确标注的模拟操作。来源真实性、教学质量及页面目视检查由执行 Agent 核对；脚本不会自动判断事实正确或学习者是否掌握。
 
 [v1.0.0 发布验收](release-validation-v1.0.0.md)记录新增双语样例、原生安装、恢复行为与测试边界；[六份最终 PDF 索引](../validation/release-v1.0.0/README.md)。
+
+[v1.0.1 名称统一验收](rename-validation-v1.0.1.md)。
 
 ## Reproduce
 

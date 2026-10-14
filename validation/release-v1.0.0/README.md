@@ -16,11 +16,11 @@ Six final PDFs / 20 pages: Chinese plan + Days 1–3, English plan + Day 1. Simu
 ## 短提示词 / Short prompts
 
 ```text
-请用 omni-learning-assistant 带我学习天文学，旅行时想看懂夜空。
+请用 omni-learning-anything 带我学习天文学，旅行时想看懂夜空。
 ```
 
 ```text
-Use omni-learning-assistant to help me learn astronomy so I can understand the night sky when traveling.
+Use omni-learning-anything to help me learn astronomy so I can understand the night sky when traveling.
 ```
 
 模拟学员随后补充：零基础、主要在中国旅行、肉眼与已有手机星图、3天、每天15分钟、10:00 Asia/Shanghai、含周末、确认后开始Day01。语言分别为中文和英文；QA 明确使用 sample_mode，不注册任务。

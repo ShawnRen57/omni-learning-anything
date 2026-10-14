@@ -1,6 +1,0 @@
-interface:
-  display_name: "Omni Learning Assistant"
-  short_description: "Create an approved learning plan and daily PDF lessons"
-  default_prompt: "Use $omni-learning-assistant to help me start a learning course on a topic I choose."
-policy:
-  allow_implicit_invocation: true

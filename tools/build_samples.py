@@ -2,7 +2,7 @@
 import importlib, json, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'skills/omni-learning-assistant/scripts'))
+sys.path.insert(0,str(ROOT/'skills/omni-learning-anything/scripts'))
 import omni_core as c
 from content.catalog import DATE,SOURCES,META,CAPTIONS
 from content.objectives import OBJECTIVES

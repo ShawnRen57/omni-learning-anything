@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-10-09",
-  "skill_path": "<local-user>/.codex/skills/omni-learning-assistant",
+  "skill_path": "<local-user>/.codex/skills/omni-learning-anything",
   "python": "<local-repository>/tmp/first-use-venv/bin/python",
   "xelatex": "<local-user>/Library/TinyTeX/bin/universal-darwin/xelatex",
   "mode": "isolated_acceptance",

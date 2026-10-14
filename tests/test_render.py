@@ -1,7 +1,7 @@
 """Real XeLaTeX integration. Uses synthetic metadata, not live-source claims."""
 import sys,tempfile,unittest
 from pathlib import Path
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'skills/omni-learning-assistant/scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'skills/omni-learning-anything/scripts'))
 import omni_core as c,omni_pdf as p
 from PIL import Image
 from pypdf import PdfReader

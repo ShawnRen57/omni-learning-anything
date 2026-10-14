@@ -2,10 +2,10 @@
 
 实际结果：doctor、init、render --key plan、review 均成功；PDF 1 页已实际预览。验收范围仅为合成数据安装和首次渲染，不代表学习内容或实时调度验收。
 
-- 技能名称：omni-learning-assistant，版本 0.2.0。
-- 加载入口：/Users/renxiaohan1/.codex/skills/omni-learning-assistant/SKILL.md
+- 技能名称：omni-learning-anything，版本 0.2.0。
+- 加载入口：/Users/renxiaohan1/.codex/skills/omni-learning-anything/SKILL.md
 - 已读取安装资源：references/setup.md、references/platforms.md（应用 Codex 部分）、references/content.md、references/commands.md。
-- 执行入口：/Users/renxiaohan1/.codex/skills/omni-learning-assistant/scripts/omni_learning.py
+- 执行入口：/Users/renxiaohan1/.codex/skills/omni-learning-anything/scripts/omni_learning.py
 - 辅助检查所读取的包内模块：scripts/omni_pdf.py；未读取开发仓库技能源码。
 - Python：<verification-workspace>/tmp/first-use-venv/bin/python（3.12.14），使用其已有依赖，未修改虚拟环境或安装目录。
 - XeLaTeX：/Users/renxiaohan1/Library/TinyTeX/bin/universal-darwin/xelatex。

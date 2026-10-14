@@ -5,8 +5,8 @@
 把下面的指令发送到 Agent 对话框：
 
 ```text
-请安装 omni-learning-assistant：
-https://github.com/ShawnRen57/omni-learning-assistant
+请安装 omni-learning-anything：
+https://github.com/ShawnRen57/omni-learning-anything
 请优先下载 Releases 最新的轻量 Skill ZIP，按当前 Agent 的原生技能安装方式安装，
 保留 SKILL.md、scripts、references、agents。安装后确认技能可发现，并告诉我如何开始使用。
 ```
@@ -15,13 +15,13 @@ The agent should obtain the latest skill ZIP, use its host's native skill instal
 
 ## B. 手动安装 / Manual installation
 
-先从 [Releases](https://github.com/ShawnRen57/omni-learning-assistant/releases/latest) 下载 Skill ZIP。解压后的顶层目录为 `omni-learning-assistant/`。需要文件夹安装时，复制整个文件夹；需要上传时，选择原 ZIP。以下按 2026-10-09 官方文档或官方客户端界面核对。
+先从 [Releases](https://github.com/ShawnRen57/omni-learning-anything/releases/latest) 下载 Skill ZIP。解压后的顶层目录为 `omni-learning-anything/`。需要文件夹安装时，复制整个文件夹；需要上传时，选择原 ZIP。以下按 2026-10-09 官方文档或官方客户端界面核对。
 
 ### Codex
 
-将解压后的文件夹放入 `~/.agents/skills/omni-learning-assistant/`，或项目的 `.agents/skills/omni-learning-assistant/`。确认该目录中直接存在 SKILL.md。Codex 会检测新技能；未出现时重启。使用 `$omni-learning-assistant` 调用。
+将解压后的文件夹放入 `~/.agents/skills/omni-learning-anything/`，或项目的 `.agents/skills/omni-learning-anything/`。确认该目录中直接存在 SKILL.md。Codex 会检测新技能；未出现时重启。使用 `$omni-learning-anything` 调用。
 
-Copy the extracted folder into the user or project `.agents/skills` directory. Verify discovery and invoke `$omni-learning-assistant`.
+Copy the extracted folder into the user or project `.agents/skills` directory. Verify discovery and invoke `$omni-learning-anything`.
 
 依据：[官方 Skills 文档](https://learn.chatgpt.com/docs/build-skills)，其中也支持通过 `$skill-installer` 从 GitHub 安装。
 
@@ -35,7 +35,7 @@ Open **Experts / Skills / Connectors → Skills → Add skill → Upload skill**
 
 ### DeepSeek Harness
 
-解压 ZIP，把整个文件夹复制到 `~/.dsh/skills/omni-learning-assistant/`，或项目 `.dsh/skills/omni-learning-assistant/`。自定义 DSH_HOME 时使用其 `skills/` 子目录。确认技能目录出现 `omni-learning-assistant`。
+解压 ZIP，把整个文件夹复制到 `~/.dsh/skills/omni-learning-anything/`，或项目 `.dsh/skills/omni-learning-anything/`。自定义 DSH_HOME 时使用其 `skills/` 子目录。确认技能目录出现 `omni-learning-anything`。
 
 Copy the bundle into the configured user/project DSH skill root. The filesystem provider discovers a folder with SKILL.md one level below that root.
 
@@ -48,11 +48,11 @@ Copy the bundle into the configured user/project DSH skill root. The filesystem 
 解压后，在终端运行（替换文件夹路径）：
 
 ```sh
-openclaw skills install /path/to/omni-learning-assistant --global
+openclaw skills install /path/to/omni-learning-anything --global
 openclaw skills list
 ```
 
-也可把完整文件夹放到 `~/.openclaw/skills/omni-learning-assistant/`；仅当前工作区使用时放到工作区 `skills/` 中。
+也可把完整文件夹放到 `~/.openclaw/skills/omni-learning-anything/`；仅当前工作区使用时放到工作区 `skills/` 中。
 
 Install the local extracted folder with the native `openclaw skills install` command, then check the inventory. Use `--global` for all local agents.
 
@@ -68,4 +68,4 @@ Open **Plugins / Skills / Partners → Skills → Add → Upload skill**; choose
 
 ## 安装后 / After installation
 
-用一句学习主题开始，例如“用 omni-learning-assistant 带我学习西方建筑史”。Agent 检查生成文档所需的环境并收集学习偏好；Python/XeLaTeX 设置见 `setup.md`。安装 Skill 与开始学习是两个步骤，计划确认前不创建每日任务。
+用一句学习主题开始，例如“用 omni-learning-anything 带我学习西方建筑史”。Agent 检查生成文档所需的环境并收集学习偏好；Python/XeLaTeX 设置见 `setup.md`。安装 Skill 与开始学习是两个步骤，计划确认前不创建每日任务。

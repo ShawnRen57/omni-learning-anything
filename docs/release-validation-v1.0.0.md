@@ -36,7 +36,7 @@ Skill 元数据校验通过。原有六组样例的 24 份 PDF、55 页再次通
 | 豆包桌面工作界面 2.31.4 | 官方客户端上传 ZIP，技能页选用进入本地电脑模式；在对话中执行已安装脚本 doctor 与依赖导入 |
 | OpenClaw 2026.9.9 | 隔离状态目录内用原生 CLI 安装技能目录；info/list 显示 eligible、modelVisible、userInvocable；执行安装后的 doctor。未在隔离环境配置模型对话 |
 
-这些是按平台分别执行的安装、发现和资源执行检查，没有将全部平台表述为完整学习课程验收。WorkBuddy 和豆包的操作依据为官方文档与官方产品界面；安装方式见 [install.md](../skills/omni-learning-assistant/references/install.md)。OpenClaw 本地文件夹安装依据 [官方 CLI 文档](https://docs.openclaw.ai/cli/skills)。测试没有更改用户现有定时任务或 OpenClaw 网关。
+这些是按平台分别执行的安装、发现和资源执行检查，没有将全部平台表述为完整学习课程验收。WorkBuddy 和豆包的操作依据为官方文档与官方产品界面；安装方式见 [install.md](../skills/omni-learning-anything/references/install.md)。OpenClaw 本地文件夹安装依据 [官方 CLI 文档](https://docs.openclaw.ai/cli/skills)。测试没有更改用户现有定时任务或 OpenClaw 网关。
 
 环境：Python 3.12.14、XeLaTeX / TeX Live 2026；Pillow 12.3.0、pypdf 6.19.0、pypdfium2 5.14.0、tzdata 2026.5。当前环境没有仿宋时使用 FandolFang；安装包不附字体。公开记录隐藏本机个人路径，原始宿主日志和未交付修订稿保留于本地；归档中的已批准输入与最终材料哈希未改。
 
@@ -51,4 +51,4 @@ python3 tools/package_skill.py
 
 使用 Python 3.10+，依赖按 setup.md 安装。第三条只检查已保存的验收产物，不会把历史检索标为新检索，也不会更新审批、交付或目视检查记录。最终发布包仅包含完整 Skill 运行资源；课程和测试数据留在仓库，不进入 ZIP。
 
-最终包核对：`omni-learning-assistant-skill-v1.0.0.zip`，23,607 bytes，12个运行资源文件；SHA256 `e9064bba37a4bcfa068b33fb639eb3478039baa787c6ccc74cfbd8e3fa632d46`。独立解压后执行 doctor、init、render，生成4页英文计划且仍为 awaiting_approval；Markdown英文标签通过核对。五个已安装的验收目录与最终包逐文件一致。
+历史 v1.0.0 包核对（名称与目录按当前名称展示）：当时的 Skill ZIP，23,607 bytes，12个运行资源文件；SHA256 `e9064bba37a4bcfa068b33fb639eb3478039baa787c6ccc74cfbd8e3fa632d46`。独立解压后执行 doctor、init、render，生成4页英文计划且仍为 awaiting_approval；Markdown英文标签通过核对。五个已安装的验收目录与最终包逐文件一致。

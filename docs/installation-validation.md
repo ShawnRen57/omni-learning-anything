@@ -1,21 +1,23 @@
 # v0.2.0 安装与首次使用验收 / Installation and first-use validation
 
-Date: 2026-10-09 · macOS · Skill: `omni-learning-assistant`.
+Date: 2026-10-09 · macOS · Skill: `omni-learning-anything`.
+
+历史验收记录的技能名与目录按当前名称展示；安装当前包请使用 [最新版本](https://github.com/ShawnRen57/omni-learning-anything/releases/latest)。当时发布包的大小与校验和仅用于历史记录。
 
 **结果：Codex 与 DeepSeek Harness 均通过本次安装、原生加载与首次 PDF 生成检查。** 本次仅执行 v1.0.0 规划中的第一项，检验了安装资源与首次 PDF 输出。
 
 ## 安装来源与一致性
 
-使用公开 [v0.2.0 release](https://github.com/ShawnRen57/omni-learning-assistant/releases/tag/v0.2.0) 中的 `omni-learning-assistant-skill-v0.2.0.zip`，21,620 bytes。
+使用公开 [v0.2.0 release](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v0.2.0) 中的 当时的 Skill ZIP，21,620 bytes。
 
 SHA256: `634a4e5f5c4cecb9d8650971ceb41097803ce38eba2190283ba04af103c320b6`。
 
-匿名下载与本地发布包字节一致。ZIP 顶层为 `omni-learning-assistant/`；两个安装目录的全部 11 个运行文件均与公开 ZIP 一致。测试期间两个 Agent 读取的是安装目录中的技能资源，未使用开发仓库的 Skill 源码。
+匿名下载与本地发布包字节一致。ZIP 顶层为 `omni-learning-anything/`；两个安装目录的全部 11 个运行文件均与公开 ZIP 一致。测试期间两个 Agent 读取的是安装目录中的技能资源，未使用开发仓库的 Skill 源码。
 
 | 客户端 | 实测版本 | 安装目录 | 原生首次使用 |
 |---|---|---|---|
-| Codex CLI | 0.162.0-alpha.2 | `~/.codex/skills/omni-learning-assistant/` | 显式调用 `$omni-learning-assistant`，读取安装资源并执行辅助脚本 |
-| DeepSeek Harness Desktop | 0.2.0-rc.2 | `~/.dsh/skills/omni-learning-assistant/` | 通过原生 Skill 工具加载，由模型在桌面客户端执行辅助脚本 |
+| Codex CLI | 0.162.0-alpha.2 | `~/.codex/skills/omni-learning-anything/` | 显式调用 `$omni-learning-anything`，读取安装资源并执行辅助脚本 |
+| DeepSeek Harness Desktop | 0.2.0-rc.2 | `~/.dsh/skills/omni-learning-anything/` | 通过原生 Skill 工具加载，由模型在桌面客户端执行辅助脚本 |
 
 Codex 的 GitHub 安装器整仓库下载等待较长，本次停止该下载并按 README 的轻量 ZIP 方式安装。**未将 GitHub 安装器或 Skills CLI 安装路径记为通过。** 默认 Codex 用户技能目录已安装新名称技能，后续新轮次可加载；不意味着所有 Codex 版本使用同一目录。
 
@@ -50,10 +52,10 @@ Codex 的 GitHub 安装器整仓库下载等待较长，本次停止该下载并
 
 优先下载约 22 KB 的独立 Skill ZIP，完整复制到宿主的技能目录，保留 scripts、references 和 agents。先检查 Python 版本，按 setup.md 建立环境；课程目录须可写且宿主可访问。若目录枚举卡住，先核对客户端访问权限及实际文件路径，勿直接重置课程进度。
 
-安装目录与课程数据保持分开；调用 `$omni-learning-assistant` 开始学习。
+安装目录与课程数据保持分开；调用 `$omni-learning-anything` 开始学习。
 
 ## English summary and limits
 
-Both Codex CLI and DSH Desktop loaded the freshly installed `omni-learning-assistant` bundle and produced a reviewed one-page XeLaTeX PDF using synthetic fixtures. Installed files match the public release ZIP; a clean Python environment was populated from the bundled requirements. Python <3.10 is now explicitly rejected.
+Both Codex CLI and DSH Desktop loaded the freshly installed `omni-learning-anything` bundle and produced a reviewed one-page XeLaTeX PDF using synthetic fixtures. Installed files match the public release ZIP; a clean Python environment was populated from the bundled requirements. Python <3.10 is now explicitly rejected.
 
 The tested installation route is the lightweight release ZIP, not a completed GitHub skill-installer / Skills CLI run. Existing TeX/fonts were reused. This check covers native skill loading, installed resources, helper execution, PDF output and the approval boundary. The Skill test scope is installation, workflow, course state and document output. Host scheduler reliability is outside this scope.

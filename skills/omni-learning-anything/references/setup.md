@@ -8,8 +8,8 @@ Use an isolated Python environment where possible:
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install -r /path/to/omni-learning-assistant/scripts/requirements.txt
-.venv/bin/python /path/to/omni-learning-assistant/scripts/omni_learning.py doctor
+.venv/bin/python -m pip install -r /path/to/omni-learning-anything/scripts/requirements.txt
+.venv/bin/python /path/to/omni-learning-anything/scripts/omni_learning.py doctor
 ```
 
 Windows: `py -3 -m venv .venv`, then `.venv\Scripts\python.exe -m pip install -r PATH\scripts\requirements.txt`. Use a Python command appropriate to the host. Offline package install cannot be promised.

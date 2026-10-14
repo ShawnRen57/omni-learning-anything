@@ -18,7 +18,7 @@ Web search followed by opening key pages. Official documentation for platform be
 - [Agent Skills specification](https://agentskills.io/specification): standard `SKILL.md` package, references, scripts.
 - Codex bundled skill-creator and skill-installer documentation, inspected locally. Native scheduler tool capability inspected in current Codex environment.
 - [WorkBuddy Skills](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market) and [Automations](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Automation-Guide): documentation evidence only.
-- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): the official filesystem Skill provider and plugin-manager documentation define distinct installation formats. See the [installation guide](../skills/omni-learning-assistant/references/install.md) for current platform procedures.
+- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness): the official filesystem Skill provider and plugin-manager documentation define distinct installation formats. See the [installation guide](../skills/omni-learning-anything/references/install.md) for current platform procedures.
 - [OpenClaw skills](https://docs.openclaw.ai/tools/skills) and [cron](https://docs.openclaw.ai/cron): documentation evidence only.
 - Doubao official macOS desktop 2.31.4: inspected Plugins / Skills / Partners → Add → Upload skill and the SKILL.md/YAML requirements in the actual product on 2026-10-09.
 

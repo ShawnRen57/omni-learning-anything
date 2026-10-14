@@ -14,6 +14,6 @@ Sources: [DSH Schedule](https://github.com/deepseek-ai/deepseek-harness/blob/mas
 
 ## Native task instruction
 
-“Use omni-learning-assistant at INSTALLED_SKILL_PATH to continue COURSE_ABSOLUTE_PATH. Read config, approved plan, state and recent lessons; run next. Respect pause/completion/daily limit. Reuse pending artifacts. For a new lesson, research actual sources, author within the time budget, include an explanatory figure and >=5 expansion links, compile and inspect the PDF, then deliver. Record delivery only after confirmation. Remain quiet on repeats. When complete, stop the recorded task and verify.”
+“Use omni-learning-anything at INSTALLED_SKILL_PATH to continue COURSE_ABSOLUTE_PATH. Read config, approved plan, state and recent lessons; run next. Respect pause/completion/daily limit. Reuse pending artifacts. For a new lesson, research actual sources, author within the time budget, include an explanatory figure and >=5 expansion links, compile and inspect the PDF, then deliver. Record delivery only after confirmation. Remain quiet on repeats. When complete, stop the recorded task and verify.”
 
 Check the host receipt separately from the Skill's document and delivery state. A reminder receipt alone does not establish PDF completion. Runtime handoff guidance is part of normal usage; the host scheduler itself is outside this Skill's test scope.

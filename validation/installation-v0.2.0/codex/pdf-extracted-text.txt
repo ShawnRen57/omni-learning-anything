@@ -1,5 +1,5 @@
 OMNI LEARNING / 学习手册 Source-grounded learning
-Omni Learning Assistant 安装验收 / codex
+Omni Learning Anything 安装验收 / codex
 2026-10-09 | 学习计划 / 1 天
 验收范围 / Test scope
 这是合成安装测试，检查发布包的资源读取、Python 与 XeLaTeX 执行和 PDF 输出。不是联网研究

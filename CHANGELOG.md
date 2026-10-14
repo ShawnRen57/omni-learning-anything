@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 — 2026-10-14
+
+- Use omni-learning-anything throughout Skill metadata, discovery, lock naming, installation paths, repository links and packaging.
+- Align the bilingual overview and examples with Omni Learning Anything; keep the existing learning workflow and content.
+
 ## 1.0.0 — 2026-10-09
 
 - Preserve pause/completion on repeated approval; validate supplied settings and lesson time components.
@@ -11,7 +16,7 @@
 
 ## 0.2.1 — 2026-10-09
 
-- Unify the skill, modules, lock, examples and documentation under omni-learning-assistant.
+- Unify the skill, modules, lock, examples and documentation under omni-learning-anything.
 - Provide chat-based quick installation and official-source manual steps for Codex, WorkBuddy, DSH, OpenClaw and Doubao work mode.
 - Keep test scope focused on Skill workflow, PDF output and course state; remove multi-day host-scheduler testing from the release plan.
 

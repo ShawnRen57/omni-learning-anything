@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'skills/omni-learning-assistant/scripts'))
+sys.path.insert(0, str(ROOT / 'skills/omni-learning-anything/scripts'))
 import omni_core as core
 import omni_pdf as pdf
 import pypdfium2 as pdfium

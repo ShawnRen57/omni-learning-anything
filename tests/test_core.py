@@ -1,6 +1,6 @@
 import sys, tempfile, unittest, json
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'skills/omni-learning-assistant/scripts'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'skills/omni-learning-anything/scripts'))
 import omni_core as c
 
 class CoreTests(unittest.TestCase):

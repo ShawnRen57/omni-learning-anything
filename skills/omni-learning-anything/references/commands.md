@@ -1,6 +1,6 @@
 # Data and command contract
 
-Use a dedicated writable course folder. Resolve the installed script path from this skill's directory; never copy a developer's absolute path. Commands below use `python /path/to/omni-learning-assistant/scripts/omni_learning.py --project /path/to/course` as `OMNI` for readability (not a shell alias).
+Use a dedicated writable course folder. Resolve the installed script path from this skill's directory; never copy a developer's absolute path. Commands below use `python /path/to/omni-learning-anything/scripts/omni_learning.py --project /path/to/course` as `OMNI` for readability (not a shell alias).
 
 ## Files
 
@@ -30,6 +30,6 @@ Do not use `sample_mode` to bypass a real user's confirmation or daily limits. R
 
 ## Recovery
 
-A project lock prevents simultaneous mutations. If a crashed process leaves `.omni-learning-assistant.lock`, verify that no Omni Learning Assistant process is running, then remove only that empty lock directory. Never delete state to "fix" duplicate delivery.
+A project lock prevents simultaneous mutations. If a crashed process leaves `.omni-learning-anything.lock`, verify that no Omni Learning Anything process is running, then remove only that empty lock directory. Never delete state to "fix" duplicate delivery.
 
 A failed render leaves no accepted manifest. Correct input and retry that same day. To revise an unshipped existing manifest, move its current PDF/source/manifest into a dated revision subfolder first; then rerender. Delivered artifacts and their review manifests are immutable and checked before continuation or repeated delivery recording. Keep later errata in a separate file. If a source or file hash changed, investigate before accepting it.
