@@ -5,11 +5,11 @@
 
 [下载发布版 / Releases](https://github.com/ShawnRen57/omni-learning-anything/releases) · [中文](#中文使用指南) · [English](#english-guide) · [生成样例 / Examples](#学习样例与截图--see-the-results) · [验证记录 / Validation](docs/validation.md) · [v1.0.0 中英验收 / Bilingual acceptance](validation/release-v1.0.0/README.md) · [DSH 社区展示 / Community showcase](https://github.com/deepseek-ai/deepseek-harness/discussions/9207)
 
-Omni Learning Anything 将你的 Agent 变成一位围绕目标组织课程的学习助手。告诉它你想学什么，它会了解你的基础、目标和可投入的时间，先交付一份 **PDF 学习计划**，等你确认后，再按计划制作每天的 **图文学习材料**。
+Omni Learning Anything 将你的 Agent 变成一位围绕目标组织课程的学习助手。告诉它你想学什么，它会了解你的基础、目标和可投入的时间，先交付一份 **你选定格式的学习计划**，等你确认后，再按计划制作每天的 **图文学习材料**。
 
 遵循 [Agent Skills 标准](https://agentskills.io/specification)，可安装到 Codex、WorkBuddy、DeepSeek Harness、OpenClaw、豆包工作界面等支持技能的 Agent 中。
 
-Omni Learning Anything turns your agent into a learning assistant that builds a course around your goals. Start with a topic; it clarifies your background and available time, delivers a **PDF plan for approval**, then creates **illustrated daily lessons** along that plan. It follows the [Agent Skills standard](https://agentskills.io/specification) and uses your agent's tools for research, document creation and scheduling.
+Omni Learning Anything turns your agent into a learning assistant that builds a course around your goals. Start with a topic; it clarifies your background and available time, delivers a **plan for approval in your chosen document format**, then creates **illustrated daily lessons** along that plan. It follows the [Agent Skills standard](https://agentskills.io/specification) and uses your agent's tools for research, document creation and scheduling.
 
 ### 用熟悉的语言学习 / Learn in your preferred language
 
@@ -23,6 +23,28 @@ Create learning plans and materials in **Chinese or English**, independently of 
 - **适合每天学一点**：按约定的时间聚焦一个主题，配上例子、练习和自检，选读另计。 / **A manageable daily lesson**: focused explanations, examples, practice and self-checks within your time budget.
 - **知道知识从哪里来**：每次生成都会联网检索，关键内容附来源，每份材料提供至少五个带说明的扩展链接。 / **Traceable knowledge**: fresh research, linked evidence and at least five useful expansion links per document.
 - **留下完整的学习档案**：PDF 便于阅读与保存，可编辑源文件便于回顾；续学时检查进度，失败后接着同一课完成。 / **A course you can keep**: readable PDFs, editable sources and progress that resumes from the same lesson after a failure.
+
+## v2.0.0：文件与云文档 / Files and cloud documents
+
+开始时选择输出平台；已有授权连接器优先复用。没有明确选择或缺少位置/授权信息时，Agent 会分轮确认。密钥值保留在本机私有环境，不需要粘贴到对话或写入课程配置。
+
+| 平台 | 实现路径 | 必要信息 |
+|---|---|---|
+| PDF / Markdown / DOCX | 独立本地生成；PDF 可作为副本 | 课程目录；仅 PDF 需要 XeLaTeX |
+| Notion | 可写连接器或官方 Markdown + 图片上传 API；也可验证 UI 导入 | 已授权课程父页面；API 模式使用令牌环境变量引用 |
+| Obsidian | 写入本地 Vault，复制图片，保护原有笔记 | Vault 路径和课程子目录；无需 API key |
+| 飞书 | 可写连接器或官方 DOCX 异步导入；也可验证 UI 导入 | 课程文件夹与应用/用户授权 |
+| 腾讯文档 | 可写连接器或官方 COS 上传/异步导入 API；也可验证 UI 导入 | Client ID、Open ID、Token 的环境引用与文件夹 |
+| 钉钉 | 可写连接器或官方授权 `dws` CLI；也可验证 UI 导入 | 课程文件夹/知识库与有效授权 |
+| 其他支持 DOCX/Markdown 的平台 | 宿主可写连接器或通用导入文件 | 平台实际支持的导入/写入工具 |
+
+本地生成、审核、异步上传与验证交付分别记录。**仅主要目标验证成功才推进课程**；导入包准备完成不等于云文档已生成。中断后复用已保存的任务/文档；结果不明时先核对，避免重复创建。Obsidian 的跨设备同步由现有同步软件负责。网页导入能否无人值守依赖宿主工具和登录状态。
+
+版本兼容：旧课程继续使用原 PDF 流程；变更已批准的目标位置时保留旧档案并创建明确的新课程版本。原历史 PDF 样例及来源日期没有重新标注为 v2 新生成结果。
+
+English: choose a destination at intake. Writable host connections are reused; official API/CLI adapters support the five named platforms. Missing authorization/location gets focused follow-up questions. Secrets stay in private environment variables. Markdown/DOCX/cloud delivery does not require TeX. Progress waits for a verified primary destination, and uncertain writes are reconciled rather than blindly recreated. Generic import compatibility is not a native API or live-account claim for every document app.
+
+[接入与恢复说明](skills/omni-learning-anything/references/delivery.md) · [v2 验收记录](docs/release-validation-v2.0.0.md)
 
 ## 你想学什么？ / What would you like to learn?
 
@@ -135,7 +157,7 @@ https://github.com/ShawnRen57/omni-learning-anything
 安装后确认技能可发现，并告诉我如何开始使用。
 ```
 
-客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v1.0.1.zip)，按下方步骤完成。
+客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v2.0.0.zip)，按下方步骤完成。
 
 #### b. 手动安装（按平台）
 
@@ -151,7 +173,7 @@ https://github.com/ShawnRen57/omni-learning-anything
 
 DSH 的“插件 → 添加插件”用于 DSH 插件组合包；本项目采用上表的原生 Skill 目录安装。豆包步骤适用于提供上述技能入口的工作界面。更多操作细节和依据见 [安装说明](skills/omni-learning-anything/references/install.md)。
 
-Agent 会检查学习材料所需的工具与 Python 3.10+、XeLaTeX 环境，按 [环境说明](skills/omni-learning-anything/references/setup.md)处理缺失依赖。
+Agent 会检查学习材料所需的工具与 Python 3.10+ 及所选格式依赖（仅 PDF 需要 XeLaTeX），按 [环境说明](skills/omni-learning-anything/references/setup.md)处理缺失依赖。
 
 ### 2. 只说你想学什么
 
@@ -159,7 +181,7 @@ Agent 会检查学习材料所需的工具与 Python 3.10+、XeLaTeX 环境，�
 用 omni-learning-anything 带我学习西方建筑史，目标是旅行时能看懂建筑。
 ```
 
-Agent 会集中追问：学习目标和已有基础、学习多少天、每天几分钟、每日执行时间与时区、是否包括周末、文档语言及保存位置。你已经提供的信息不会重复询问。
+Agent 会集中追问：学习目标和已有基础、学习多少天、每天几分钟、每日执行时间与时区、是否包括周末、文档语言、目标文档平台及保存位置；连接器、授权或凭据引用缺失时会继续分轮确认。你已经提供的信息不会重复询问。
 
 也可以一次说完整：
 
@@ -174,7 +196,7 @@ Agent 会集中追问：学习目标和已有基础、学习多少天、每天�
 
 ### 3. 确认计划，再开始课程
 
-你先收到包含每日主题、学习目标和节奏的 PDF，随后可回复：
+你先收到选定平台中包含每日主题、学习目标和节奏的计划文档，随后可回复：
 
 ```text
 确认这份计划，按上述时间开始，每日材料保存到这个课程目录。
@@ -190,7 +212,7 @@ Agent 会集中追问：学习目标和已有基础、学习多少天、每天�
 我想调整学习目标，请保留旧档案，为我生成新的计划供确认。
 ```
 
-内容生成、检查、交付分别记录；失败不跳课，重复执行优先复用已有文档。通知与本地文件写入并非原子操作，遇到不确定状态会核对交付记录。收到 PDF 不会被记为已经掌握知识。
+内容生成、检查、交付分别记录；失败不跳课，重复执行优先复用已有文档。通知与本地文件写入并非原子操作，遇到不确定状态会核对交付记录。收到材料不会被记为已经掌握知识。
 
 ## English guide
 
@@ -207,7 +229,7 @@ Prefer the latest lightweight Skill ZIP in Releases. Use this client's native
 skill installation mechanism, keep all bundled resources, then verify discovery.
 ```
 
-If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v1.0.1.zip) and follow the steps below.
+If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v2.0.0.zip) and follow the steps below.
 
 #### b. Manual installation by agent
 
@@ -221,7 +243,7 @@ If the client requires an upload, download the [Skill ZIP](dist/omni-learning-an
 
 The [installation guide](skills/omni-learning-anything/references/install.md) links to the official sources. Doubao's upload steps were checked in its official macOS desktop client. DSH's Add plugin dialog handles plugin bundles; use filesystem skill installation for this package.
 
-The agent checks research, execution, image and PDF tools plus Python/XeLaTeX dependencies. See [runtime setup](skills/omni-learning-anything/references/setup.md).
+The agent checks research, execution, image and selected document tools. Python is required; XeLaTeX is needed only for PDF. See [runtime setup](skills/omni-learning-anything/references/setup.md).
 
 ### Start with a topic
 
@@ -229,7 +251,7 @@ The agent checks research, execution, image and PDF tools plus Python/XeLaTeX de
 Use $omni-learning-anything to teach me Western architectural history so I can understand buildings when traveling.
 ```
 
-The agent asks for missing goals, prior knowledge, course length, daily study time, execution time/timezone, weekdays, language and output folder. For a complete request:
+The agent asks for missing goals, prior knowledge, course length, daily study time, execution time/timezone, weekdays, language, document platform and output folder. Additional short rounds collect only the chosen platform’s missing authorization or environment-variable references. For a complete request:
 
 ```text
 Use $omni-learning-anything to help me learn Agent product design. I am a product manager
@@ -241,7 +263,7 @@ Start Day01 immediately after approval.
 
 Approve the plan or request revisions. The agent then creates and verifies a native host task when supported. Generation starts at the scheduled time; delivery follows research and checks. Without a suitable scheduler, continuation remains manual.
 
-Each lesson includes focused explanation, an illustrative image, a short exercise and answer guidance, a recap, and at least five useful expansion links. Optional reading is outside the core time budget. PDFs use XeLaTeX with detected font fallbacks. Progress advances after delivery, failed work resumes at the same lesson, and completion stops the host schedule.
+Each lesson includes focused explanation, an illustrative image, a short exercise and answer guidance, a recap, and at least five useful expansion links. Optional reading is outside the core time budget. PDF output uses XeLaTeX; Markdown, DOCX and cloud routes run independently of TeX. Progress advances after delivery, failed work resumes at the same lesson, and completion stops the host schedule.
 
 ```text
 Continue my Omni Learning Anything course from the earliest undelivered day.

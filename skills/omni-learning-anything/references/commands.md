@@ -1,35 +1,40 @@
 # Data and command contract
 
-Use a dedicated writable course folder. Resolve the installed script path from this skill's directory; never copy a developer's absolute path. Commands below use `python /path/to/omni-learning-anything/scripts/omni_learning.py --project /path/to/course` as `OMNI` for readability (not a shell alias).
+Resolve the script from the installed skill's directory. In examples `OMNI` means `python /installed/omni-learning-anything/scripts/omni_learning.py --project /absolute/course`, not a shell alias. Never copy this repository author's absolute paths into another installation.
 
 ## Files
 
-`config.json`: topic, goal, baseline, daily_minutes (positive integer), timezone (IANA), time (HH:MM, 00:00–23:59), weekdays (nonempty list using `MO`, `TU`, `WE`, `TH`, `FR`, `SA`, `SU`), language (`zh` or `en`), immediate_day01 (bool), sample_mode (false in real courses). Keep learner data in the course folder, not in the installed package.
+Keep learner data in a dedicated writable course archive, not in the installed bundle.
 
-`plan.json`: topic, title, days (ordered objects: day integer, topic, objective), sections (ordered title/body strings), sources, figure. The PDF must visibly include the full curriculum and schedule; put these into sections, not only the days array.
+`config.json`: existing topic/goal/baseline, positive `daily_minutes`, IANA `timezone`, valid `time` HH:MM, nonempty weekday codes MO–SU, `language` zh/en, booleans `immediate_day01` and `sample_mode`; new courses also have explicit `delivery` from [delivery.md](delivery.md).
 
-`data/Day01.json`: day integer, title exactly matching approved day topic, reading_minutes, practice_minutes, sections, sources, figure.
+`plan.json`: topic, title, ordered consecutive `days` from 1 (topic/objective), sections (title/plain-text body), sources and figure. Include all daily topics and schedule visibly in sections, not only in the days array.
 
-Source: `{"id":"S1","title":"Specific page","url":"https://…","publisher":"Institution","published_at":"2026-01-01 or 未标注","checked_at":"YYYY-MM-DD","note":"What to read and why"}`. Minimum five distinct URLs, actually opened. Key facts use [S1] in section body. Section bodies are plain text, blank lines for paragraphs, no Markdown headings/LaTeX.
+`data/DayNN.json`: approved day/title, positive integer reading_minutes, nonnegative integer practice_minutes within the course budget, sections, sources and figure.
 
-Figure: `{"path":"assets/teaching.png","caption":"What the reader should notice","credit":"Source and reuse rights, or AI-generated teaching illustration; not evidence"}`. Relative path inside course. PNG/JPEG preferred. Keep generated image prompt in course sources or run report.
+Source: `{"id":"S1","title":"Specific page","url":"https://…","publisher":"Institution","published_at":"YYYY-MM-DD or 未标注","checked_at":"YYYY-MM-DD","note":"What to read and why"}`. At least five distinct URLs actually opened on the configured timezone's generation date. Use [S1] in body text. Section bodies are plain text with paragraph breaks, no executable LaTeX or prescribed Markdown structure.
 
-## Lifecycle
+Figure: `{"path":"assets/teaching.png","caption":"What to notice","credit":"Source/reuse rights or disclosed AI teaching illustration"}`. Local project PNG/JPEG for all formats; PDF figures work only in PDF output. Retain source license or generated-image prompt provenance.
 
-1. Write intake files in a temporary staging directory, keeping original inputs. `OMNI init --config /staging/config.json --plan /staging/plan.json` creates canonical files without overwriting existing projects. Copy teaching image under course/assets.
-2. `OMNI render --input /course/plan.json --key plan` creates PDF, Markdown, LaTeX, previews, manifest and font/link report. Inspect every page.
-3. `OMNI review --key plan --note "Observed all pages: ..."` records the inspection. It is an agent attestation, not automatic visual verification.
-4. Send the plan to the learner. Only after explicit approval: `OMNI approve`. Repeating approval preserves the current status; use `resume` to resume a paused course. Completed courses remain complete.
-5. Create/verify a live schedule in the host, then `OMNI schedule-record --host codex --job-id ACTUAL_RETURNED_ID`. This command does not itself create a host task.
-6. `OMNI next` selects earliest undelivered lesson, or returns existing material / paused / already_delivered_today / complete. Read its action, not just its day.
-7. Research, write JSON, then `OMNI render --input /course/data/Day01.json --key Day01`. Inspect previews, then `OMNI review --key Day01 --note "..."`.
-8. Deliver the PDF. Once delivery is confirmed: `OMNI delivered --day 1`. If delivery fails, rerun `next` to get the same artifact. Reconcile uncertain delivery with host history.
-9. `OMNI pause` / `OMNI resume` modify local state. Also update the host schedule. On complete, pause/remove host schedule and report course completion; do not generate Day N+1.
+## Commands and lifecycle
 
-Do not use `sample_mode` to bypass a real user's confirmation or daily limits. Rendered plans and their settings are hash-bound. To revise a rendered plan/settings, create a new course version and obtain approval; preserve the old project. Changing the curriculum after delivery requires a new course version. Source dates are checked against the configured timezone's actual generation date; historical examples must not have their dates relabeled as newly verified without new research.
+1. Write intake in private staging; `OMNI init --config /staging/config.json --plan /staging/plan.json`. Existing projects are never overwritten. Copy the teaching image under course/assets.
+2. `OMNI delivery-check` shows only the selected target's missing config/env information. It does not make network calls or certify account access.
+3. `OMNI render --input /course/plan.json --key plan` uses the destination default. Repeated `--format markdown --format docx` selects extra formats; `--format pdf --format docx` produces a combined hash-bound set. Markdown-only routes never load PDF libraries.
+4. Inspect the entire rendered output; `OMNI review --key plan --note "Actual text/image/link/layout observations"` is an agent attestation, not automatic visual inspection.
+5. `OMNI publish --key plan`: direct adapters publish/read back, local modes verify files, host/import modes prepare a bound receipt. Use actual host tools and `receipt-record` for the latter. Show the verified plan/link and schedule summary, then obtain explicit learner approval.
+6. `OMNI approve`; create/verify the actual host schedule and `OMNI schedule-record --host HOST --job-id ACTUAL_ID`. Sample projects cannot schedule. These scripts never create host tasks themselves.
+7. `OMNI next` selects the earliest undelivered lesson or paused/complete/daily-limit state. Read the action. For generation author JSON, `render --input /course/data/Day01.json --key Day01`, inspect, and `review`.
+8. `OMNI publish --key Day01`; inspect `delivery-status --key Day01`. Resume pending tasks; uncertain writes need inspection and `reconcile`, not new creation. Host/UI imports need `receipt-record --key Day01 --receipt /private/actual-receipt.json` after readback.
+9. Send the verified document/file with lesson summary. `OMNI delivered --day 1` is accepted only after primary receipt verification in new courses. Legacy PDF courses retain host confirmation; reconcile turn-end final delivery on the next run. The command records course delivery, not learner mastery.
+10. `OMNI pause` / `resume`; update and verify the host job too. On completion stop/pause the job, preserve the archive and do not generate Day N+1.
 
-## Recovery
+`python /installed/.../omni_learning.py --version` prints the packaged skill version. `doctor` reports local runtime and selected output requirements; it does not claim web/image/scheduler/cloud tools exist.
 
-A project lock prevents simultaneous mutations. If a crashed process leaves `.omni-learning-anything.lock`, verify that no Omni Learning Anything process is running, then remove only that empty lock directory. Never delete state to "fix" duplicate delivery.
+## Integrity and recovery
 
-A failed render leaves no accepted manifest. Correct input and retry that same day. To revise an unshipped existing manifest, move its current PDF/source/manifest into a dated revision subfolder first; then rerender. Delivered artifacts and their review manifests are immutable and checked before continuation or repeated delivery recording. Keep later errata in a separate file. If a source or file hash changed, investigate before accepting it.
+Config and plan are hash-bound. Old sample source dates and hashes remain untouched. A changed approved destination/course requires a new version and approval. Delivered review/manifest/receipt files remain immutable. Before changing an unshipped artifact, preserve the old version and remote receipt, explain the reason, and use a new explicit course version rather than silently orphaning published pages.
+
+A project lock prevents concurrent mutations. If `.omni-learning-anything.lock` remains after a crash, first verify the process stopped, then remove only that empty directory. Do not delete receipts/state to bypass uncertainty or daily limits.
+
+Failed export leaves no accepted new manifest. Correct input and retry the same day. API tasks/pages and Vault content are reused according to [receipt recovery](delivery.md#recovery). Notification and storage are separate; check host history on unclear notification outcomes.

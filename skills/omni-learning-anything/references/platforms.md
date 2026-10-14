@@ -1,6 +1,6 @@
 # Host adaptation / 平台适配
 
-安装时读 [install.md](install.md)：包含通用对话安装和五个平台的手动操作。生成 PDF 的依赖见 [setup.md](setup.md)。宿主提供联网、执行、图片与交付工具；Skill 负责学习流程、材料和课程状态。
+安装时读 [install.md](install.md)：包含通用对话安装和五个平台的手动操作。所选文档格式的依赖见 [setup.md](setup.md)。宿主提供联网、执行、图片与交付工具；Skill 负责学习流程、材料和课程状态。
 
 ## Approved-plan scheduling handoff
 
@@ -14,6 +14,6 @@ Sources: [DSH Schedule](https://github.com/deepseek-ai/deepseek-harness/blob/mas
 
 ## Native task instruction
 
-“Use omni-learning-anything at INSTALLED_SKILL_PATH to continue COURSE_ABSOLUTE_PATH. Read config, approved plan, state and recent lessons; run next. Respect pause/completion/daily limit. Reuse pending artifacts. For a new lesson, research actual sources, author within the time budget, include an explanatory figure and >=5 expansion links, compile and inspect the PDF, then deliver. Record delivery only after confirmation. Remain quiet on repeats. When complete, stop the recorded task and verify.”
+“Use omni-learning-anything at INSTALLED_SKILL_PATH to continue COURSE_ABSOLUTE_PATH. Read config, approved plan, state and recent lessons; run next. Respect pause/completion/daily limit. Reuse pending artifacts. For a new lesson, research actual sources, author within the time budget, include an explanatory figure and >=5 expansion links, render and inspect the configured format; publish/read back the configured destination and its saved task/document. Run delivered only after a verified primary receipt and actual host delivery. Uncertain writes require reconciliation, never blind creation. Remain quiet on repeats. When complete, stop the recorded task and verify.”
 
-Check the host receipt separately from the Skill's document and delivery state. A reminder receipt alone does not establish PDF completion. Runtime handoff guidance is part of normal usage; the host scheduler itself is outside this Skill's test scope.
+Check the host receipt separately from the Skill's document and delivery state. A reminder receipt alone does not establish document delivery. Runtime handoff guidance is part of normal usage; the host scheduler itself is outside this Skill's test scope.

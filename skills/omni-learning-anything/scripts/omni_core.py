@@ -57,6 +57,9 @@ def validate_config(config):
     for key in ('sample_mode','immediate_day01'):
         if key in config and type(config[key]) is not bool:
             raise ValueError(key+' must be a boolean.')
+    if 'delivery' in config:
+        from omni_delivery import validate_delivery
+        validate_delivery(config['delivery'])
 
 
 def initialize(root,config,plan):
@@ -93,6 +96,10 @@ def check_deliveries(root,state):
         if not path.is_file() or digest(path)!=record['manifest_hash']:
             raise ValueError('Delivered document manifest changed: Day'+f'{int(day):02d}')
         reviewed(root,f'Day{int(day):02d}')
+        if record.get('receipt_hash'):
+            receipt_path=root/'receipts'/f'Day{int(day):02d}.json'
+            if not receipt_path.is_file() or digest(receipt_path)!=record['receipt_hash']:
+                raise ValueError('Delivered receipt changed: Day'+f'{int(day):02d}')
 
 
 def approve(root):
@@ -117,7 +124,10 @@ def next_action(root):
     key=f"Day{day['day']:02d}"
     if (root/'manifests'/f'{key}.json').exists():
         m=read(root/'manifests'/f'{key}.json'); manifest_ok(root,m)
-        return {'action':'deliver_existing' if m.get('reviewed_at') else 'review_existing','day':day['day'],'topic':day['topic'],'pdf':m['pdf']}
+        result={'action':'deliver_existing' if m.get('reviewed_at') else 'review_existing','day':day['day'],'topic':day['topic']}
+        if m.get('pdf'): result['pdf']=m['pdf']
+        else: result.update(artifact=m['artifact'],artifacts=m.get('artifacts',{}))
+        return result
     return {'action':'generate','day':day['day'],'topic':day['topic']}
 
 
@@ -126,11 +136,18 @@ def deliver(root,day):
         state=read(root/'state.json'); check_approval(root,state)
         check_deliveries(root,state)
         if str(day) in state['lessons']:
-            m=reviewed(root,f'Day{day:02d}'); return {'action':'already_recorded','pdf':m['pdf']}
+            m=reviewed(root,f'Day{day:02d}'); return dict(action='already_recorded',**({'pdf':m['pdf']} if m.get('pdf') else {'artifact':m['artifact']}))
         action=next_action(root)
         if action.get('day')!=day or action['action']!='deliver_existing': raise ValueError('Only the next reviewed lesson may be marked delivered.')
         m=reviewed(root,f'Day{day:02d}')
-        state['lessons'][str(day)]={'delivered_at':today(root),'pdf':m['pdf'],'manifest_hash':digest(root/'manifests'/f'Day{day:02d}.json')}
+        record={'delivered_at':today(root),'manifest_hash':digest(root/'manifests'/f'Day{day:02d}.json')}
+        if m.get('pdf'): record['pdf']=m['pdf']
+        else: record['artifact']=m['artifact']
+        if read(root/'config.json').get('delivery'):
+            from omni_delivery import require_verified
+            receipt=require_verified(root,f'Day{day:02d}')
+            record.update(receipt_hash=digest(root/'receipts'/f'Day{day:02d}.json'),delivery_id=receipt['delivery_id'])
+        state['lessons'][str(day)]=record
         if len(state['lessons'])==len(read(root/'plan.json')['days']): state['status']='complete'
         save(root/'state.json',state)
         return {'status':state['status'],'stop_host_schedule':state['status']=='complete'}

@@ -1,18 +1,29 @@
 # Runtime setup
 
-Requires Python 3.10+, XeLaTeX and a host that can search/read webpages, write/run local files and inspect PDF previews. The skill itself does not include an LLM, web-search subscription, image model or scheduler. No specific API key is required by this package; the host may charge for its tools.
+All routes require Python 3.10+ and a host that researches sources, runs/files, inspects the chosen document and handles learner dialogue. The skill does not include an LLM, web-search subscription, image model, scheduler or cloud authorization. New courses select their output explicitly.
 
-Check `python3 --version` first; macOS may resolve `python3` to Python 3.9. Select an installed Python 3.10+ interpreter (for example `python3.12`) before creating the environment. The CLI rejects an older interpreter with a clear message.
+Check the interpreter version first: macOS may resolve `python3` to an older system version. Use an installed supported interpreter and an isolated environment.
 
-Use an isolated Python environment where possible:
+## Install only the selected route's dependencies
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install -r /path/to/omni-learning-anything/scripts/requirements.txt
-.venv/bin/python /path/to/omni-learning-anything/scripts/omni_learning.py doctor
+# Markdown / DOCX / cloud / Obsidian (no PDF packages or TeX):
+.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-documents.txt
+# PDF, or repository development including PDF regression tests:
+.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements.txt
+# Tencent API route additionally needs the official COS SDK:
+.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent.txt
+.venv/bin/python /installed/omni-learning-anything/scripts/omni_learning.py --project /course doctor
 ```
 
-Windows: `py -3 -m venv .venv`, then `.venv\Scripts\python.exe -m pip install -r PATH\scripts\requirements.txt`. Use a Python command appropriate to the host. Offline package install cannot be promised.
+Windows: use `py -3 -m venv .venv` and `.venv\Scripts\python.exe`. Select current host commands; offline installation is not promised. Standard-library Markdown/Vault export can run without DOCX/HTTP/PDF libraries; images must already be valid local PNG/JPEG. DOCX lazily imports python-docx/Pillow; API routes lazily import requests, and Tencent imports the COS SDK only when an actual upload is needed.
+
+DOCX: render using an available approved viewer/converter and inspect all pages. Bundled generation embeds Chinese text, images, source links and image descriptions; the viewer's font availability affects rendering. Prefer FangSong/Times New Roman when available; do not install proprietary fonts or promise identical cloud fonts.
+
+Markdown: use the generated local HTML preview plus the source/asset links. Obsidian: inspect the real Vault note and figure. Cloud: inspect the populated native document and verify learner access. Missing viewers/access require a truthful limitation; a successful API request is not visual inspection.
+
+Secrets stay outside installed/course/repository files. API scripts consume only named environment variables, never raw JSON secrets or authentication headers returned to chat. For DingTalk use authorized official `dws`; host/UI routes require actual document tools and may not work unattended.
 
 ## XeLaTeX
 

@@ -10,7 +10,13 @@ version=re.search(r'^  version: "([0-9]+\.[0-9]+\.[0-9]+)"$',(skill/'SKILL.md').
 archive=out/f'omni-learning-anything-skill-v{version}.zip'
 with ZipFile(archive,'w',ZIP_DEFLATED) as z:
  for p in sorted((ROOT/'skills/omni-learning-anything').rglob('*')):
-  if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc' and p.name!='.DS_Store':
+  relative=p.relative_to(skill)
+  allowed=(str(relative) in ('SKILL.md','LICENSE','agents/openai.yaml') or
+           (relative.parts[0]=='references' and p.suffix=='.md') or
+           (relative.parts[0]=='scripts' and len(relative.parts)==2 and
+            ((p.name.startswith('omni_') and p.suffix=='.py') or
+             (p.name.startswith('requirements') and p.suffix=='.txt'))))
+  if p.is_file() and not p.is_symlink() and allowed and not any(x.startswith('.') or '.local.' in x for x in relative.parts):
    z.write(p,Path('omni-learning-anything')/p.relative_to(ROOT/'skills/omni-learning-anything'))
 (out/'SHA256SUMS').write_text(hashlib.sha256(archive.read_bytes()).hexdigest()+'  '+archive.name+'\n')
 print(archive.name,archive.stat().st_size)

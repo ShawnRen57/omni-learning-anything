@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.0.0 — 2026-10-14
+
+- Add explicit multi-round destination intake and reusable authorization references for files and cloud documents.
+- Export Markdown and embedded-image DOCX independently of PDF libraries/XeLaTeX; retain PDF and combined PDF/DOCX output.
+- Add Notion, local Obsidian Vault, Feishu, Tencent Docs and official DingTalk dws adapters, plus verified host/UI import workflows.
+- Persist asynchronous tasks and separate hash-bound receipts; require verified primary delivery before course advancement, and reconcile uncertain creates without blind retries.
+- Preserve legacy course configs, review hashes and historical samples; protect Vault notes from collisions and symlink escapes.
+- Add selected-format dependency guides and runtime CLI version reporting; allowlist packaged resources to exclude private configuration and course data.
+- See release-validation-v2.0.0.md for the exact automated and live-account validation scope.
+
 ## 1.0.1 — 2026-10-14
 
 - Use omni-learning-anything throughout Skill metadata, discovery, lock naming, installation paths, repository links and packaging.

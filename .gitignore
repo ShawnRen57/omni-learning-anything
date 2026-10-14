@@ -8,3 +8,7 @@ __pycache__/
 *.toc
 tmp/
 .superpowers/
+.env
+.env.*
+*.local.json
+credentials/
