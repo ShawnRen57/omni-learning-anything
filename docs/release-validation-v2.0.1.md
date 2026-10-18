@@ -56,4 +56,10 @@ python -m compileall -q skills/omni-learning-anything/scripts tools/validate_v2.
 git diff --check
 ```
 
-The release ZIP is `dist/omni-learning-anything-skill-v2.0.1.zip`; `dist/SHA256SUMS` records its checksum. Publication must verify the remote commit/tag and download the release assets for byte/digest comparison. This report does not turn unfinished account routes into passes.
+The release ZIP is `dist/omni-learning-anything-skill-v2.0.1.zip`; `dist/SHA256SUMS` records its checksum. Publication verification is complete; details follow. This report does not turn unfinished account routes into passes.
+
+## Publication verification
+
+The [v2.0.1 GitHub Release](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.0.1) is published (not draft/prerelease). The annotated tag resolves to `d4aed0120932d0c8125fe75795e19fa1fc1eff7e`; remote main was verified at that commit before this publication-record update. The original v2.0.0 tag still resolves to `d2966dd2ec7a4a0d2a2948a42771a8c8c41ba367`.
+
+Downloaded both release assets and compared them byte for byte with the local release files. The 58,017-byte ZIP SHA256 is `7f604983c4cd3a844cd345dddcefdbed367fa2a324eab1d2caefaa7067d8797b`, matching the GitHub asset digest and downloaded checksum file. The downloaded ZIP also passed isolated extraction/runtime/version/doctor/provider-resource/SHA256 validation. Original v2.0.0 ZIP bytes remain unchanged.
