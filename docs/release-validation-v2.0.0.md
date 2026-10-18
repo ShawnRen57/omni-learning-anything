@@ -1,6 +1,12 @@
 # v2.0.0 implementation and validation
 
-Development started 2026-10-14 and validation continued 2026-10-15 (Asia/Shanghai). Base: `e82f3e8`; local branch: `feat/cloud-documents-v2`. The skill metadata and CLI report **2.0.0**. This record separates working implementation/local validation from uncompleted cloud-account acceptance; no GitHub Release has been published.
+Development started 2026-10-14 and validation continued 2026-10-15 (Asia/Shanghai). Base: `e82f3e8`; development branch: `feat/cloud-documents-v2`. The skill metadata and CLI report **2.0.0**. This record separates working implementation/local validation from uncompleted cloud-account acceptance. The original validation preceded publication.
+
+## Publication update — 2026-10-18
+
+The user authorized publication. Code was fast-forwarded to `main`; annotated tag `v2.0.0` resolves to `d2966dd2ec7a4a0d2a2948a42771a8c8c41ba367`. The [v2.0.0 GitHub Release](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.0.0) is published with the skill ZIP and `SHA256SUMS`. Both assets were downloaded from the release and matched the local files byte for byte. ZIP SHA256: `4de70072c0193d756707fe72b017a2d48e0d9ebc997b297e3981f87acb99c3a9`.
+
+Before publication, all 77 automated tests passed again, as did the isolated ZIP validation. Publication does not change the real-account acceptance limits described below.
 
 ## Implemented
 
@@ -68,4 +74,4 @@ The user authorized local/account testing. App/UI access initially recovered, th
 
 `dist/omni-learning-anything-skill-v2.0.0.zip` is a lightweight self-contained skill bundle; `dist/SHA256SUMS` records its current digest. Isolation checks extract the ZIP, compile scripts, run packaged `--version`/`doctor` and verify provider references. Packaging excludes private config, hidden files, credential JSON, test/course artifacts and symlinks. The ZIP test intentionally planted private sentinel files and confirmed their absence.
 
-Code and bundle remain on the local development branch for review. The user can resume real cloud-account acceptance after unlocking and selecting authorized QA locations, without repeating completed development. Publishing/merging is a separate explicit action. Remaining runtime limits include permission/credential expiry, remote Markdown normalization, viewer fonts, provider API/CLI changes and interactive import availability; failures retain the same lesson and existing remote identifiers.
+Code and bundle were retained on the local development branch at the original validation handoff; the later authorized publication is recorded above. The user can resume real cloud-account acceptance after unlocking and selecting authorized QA locations, without repeating completed development. Remaining runtime limits include permission/credential expiry, remote Markdown normalization, viewer fonts, provider API/CLI changes and interactive import availability; failures retain the same lesson and existing remote identifiers.
