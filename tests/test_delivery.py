@@ -75,6 +75,27 @@ class DeliveryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'verified'):
             c.deliver(self.root, 1)
 
+    def test_notion_word_import_default_embeds_figure_and_selects_docx(self):
+        d = self.delivery()
+        target = {'platform': 'notion', 'mode': 'import', 'destination': {'name': 'Private QA'}}
+        course(self.root, target)
+        formats = d.default_formats(c.read(self.root / 'config.json'))
+        doc.render(self.root, self.root / 'plan.json', 'plan', formats)
+        doc.review(self.root, 'plan', 'Inspected')
+        r = d.publish(self.root, 'plan')
+        self.assertEqual(r['artifact'], 'sources/plan.docx')
+        from zipfile import ZipFile
+        with ZipFile(self.root / r['artifact']) as z:
+            self.assertTrue(any(n.startswith('word/media/') for n in z.namelist()))
+        self.assertEqual(d.default_formats({'delivery': dict(target, mode='api')}), ['markdown'])
+
+    def test_existing_notion_markdown_import_can_still_resume(self):
+        d = self.delivery()
+        course(self.root, {'platform': 'notion', 'mode': 'import', 'destination': {'name': 'Private QA'}})
+        doc.render(self.root, self.root / 'plan.json', 'plan', ['markdown'])
+        doc.review(self.root, 'plan', 'Inspected')
+        self.assertEqual(d.publish(self.root, 'plan')['artifact'], 'sources/plan.md')
+
     def test_receipt_binding_rejects_wrong_target_and_manifest(self):
         d = self.delivery(); self.ready({'platform': 'notion', 'mode': 'host', 'destination': {'parent_page_id': 'qa'}})
         r = d.publish(self.root, 'Day01')

@@ -15,3 +15,5 @@ If the Vault is unavailable on an unattended host, retain the local course artif
 Official sources checked 2026-10-14:
 - https://obsidian.md/help/import/markdown
 - https://help.obsidian.md/Extending+Obsidian/Obsidian+URI
+
+Native acceptance on 2026-10-18: reopened the previously delivered QA plan and Day01 in the actual Vault; inspected full reading views, bilingual text/practice, local diagram/credit and five rendered hyperlink fixtures per note. This supplements filesystem/readback/idempotency checks; it does not establish cross-device sync or validate the synthetic `example.com` fixtures as research sources.

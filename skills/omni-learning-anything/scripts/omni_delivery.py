@@ -87,6 +87,8 @@ def default_formats(config):
     platform = target['platform']
     if platform in ('pdf', 'markdown', 'docx'):
         return [platform]
+    if platform == 'notion' and target.get('mode') == 'import':
+        return ['docx', 'markdown']
     return ['markdown'] if platform in ('obsidian', 'notion') else ['docx', 'markdown']
 
 
@@ -202,6 +204,9 @@ def publish(root, key, adapter=None):
             receipt.update(changes); c.save(path, receipt)
         formats = manifest.get('artifacts', {'pdf': manifest.get('pdf')})
         needed = default_formats(config)[0]
+        # Keep previously reviewed Markdown-only Notion imports resumable.
+        if target['platform'] == 'notion' and target['mode'] == 'import' and not formats.get(needed) and formats.get('markdown'):
+            needed = 'markdown'
         if not formats.get(needed):
             raise ValueError('Required destination export missing: ' + needed)
         artifact = root / formats[needed]

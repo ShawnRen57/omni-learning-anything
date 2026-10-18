@@ -24,7 +24,7 @@ Create learning plans and materials in **Chinese or English**, independently of 
 - **知道知识从哪里来**：每次生成都会联网检索，关键内容附来源，每份材料提供至少五个带说明的扩展链接。 / **Traceable knowledge**: fresh research, linked evidence and at least five useful expansion links per document.
 - **留下完整的学习档案**：PDF 便于阅读与保存，可编辑源文件便于回顾；续学时检查进度，失败后接着同一课完成。 / **A course you can keep**: readable PDFs, editable sources and progress that resumes from the same lesson after a failure.
 
-## v2.0.0：文件与云文档 / Files and cloud documents
+## v2.0.1：文件与云文档 / Files and cloud documents
 
 开始时选择输出平台；已有授权连接器优先复用。没有明确选择或缺少位置/授权信息时，Agent 会分轮确认。密钥值保留在本机私有环境，不需要粘贴到对话或写入课程配置。
 
@@ -40,11 +40,15 @@ Create learning plans and materials in **Chinese or English**, independently of 
 
 本地生成、审核、异步上传与验证交付分别记录。**仅主要目标验证成功才推进课程**；导入包准备完成不等于云文档已生成。中断后复用已保存的任务/文档；结果不明时先核对，避免重复创建。Obsidian 的跨设备同步由现有同步软件负责。网页导入能否无人值守依赖宿主工具和登录状态。
 
+本次真实账号验收：Notion 的计划和 Day01 已完成私人页面 Word 导入、全文/图片/五个链接检查、重新打开和重复发布验证；Obsidian 已补充原生客户端阅读检查，跨设备同步未验收。飞书上传失败、腾讯文档界面入口超时，钉钉已完成官方 CLI 登录和私人目录创建但 OSS 上传失败；按用户要求暂停这些未完成路径。API 合约测试与真实账号成功分别记录。
+
+English: account acceptance passed for Notion Word UI imports (plan and Day01) and Obsidian native reading. Notion API remains contract-tested; Obsidian cross-device sync is unverified. Feishu/Tencent Docs and DingTalk document import acceptance remain incomplete. See the detailed acceptance report.
+
 版本兼容：旧课程继续使用原 PDF 流程；变更已批准的目标位置时保留旧档案并创建明确的新课程版本。原历史 PDF 样例及来源日期没有重新标注为 v2 新生成结果。
 
 English: choose a destination at intake. Writable host connections are reused; official API/CLI adapters support the five named platforms. Missing authorization/location gets focused follow-up questions. Secrets stay in private environment variables. Markdown/DOCX/cloud delivery does not require TeX. Progress waits for a verified primary destination, and uncertain writes are reconciled rather than blindly recreated. Generic import compatibility is not a native API or live-account claim for every document app.
 
-[接入与恢复说明](skills/omni-learning-anything/references/delivery.md) · [v2 验收记录](docs/release-validation-v2.0.0.md)
+[接入与恢复说明](skills/omni-learning-anything/references/delivery.md) · [v2.0.1 真实账号验收](docs/release-validation-v2.0.1.md) · [v2.0.0 实现验证](docs/release-validation-v2.0.0.md)
 
 ## 你想学什么？ / What would you like to learn?
 
@@ -157,7 +161,7 @@ https://github.com/ShawnRen57/omni-learning-anything
 安装后确认技能可发现，并告诉我如何开始使用。
 ```
 
-客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v2.0.0.zip)，按下方步骤完成。
+客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v2.0.1.zip)，按下方步骤完成。
 
 #### b. 手动安装（按平台）
 
@@ -229,7 +233,7 @@ Prefer the latest lightweight Skill ZIP in Releases. Use this client's native
 skill installation mechanism, keep all bundled resources, then verify discovery.
 ```
 
-If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v2.0.0.zip) and follow the steps below.
+If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v2.0.1.zip) and follow the steps below.
 
 #### b. Manual installation by agent
 

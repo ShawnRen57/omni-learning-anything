@@ -3,7 +3,7 @@ name: omni-learning-anything
 description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.0.1"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery uses authorized host tools, official APIs/CLI or verified import."
 ---
 

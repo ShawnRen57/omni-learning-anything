@@ -8,7 +8,9 @@ Grant only the needed insert/read capabilities to the chosen parent. Keep the to
 
 If Markdown API rejects a lesson size/format, preserve the existing pending page and use authorized host/block tools to complete it; do not create another page blindly. Uploaded unattached files expire after one hour: if a pending upload expires, reconcile the known page or start a explicitly confirmed new course version; never conceal missing media. Free account upload limits may be lower than the API's 20 MB maximum.
 
-For UI import, export Markdown with its referenced image or use embedded DOCX; inspect the actual imported figure/links. Record a host receipt only after actual import/readback. Login/UI availability cannot guarantee unattended daily delivery.
+For UI import, `mode: import` now defaults to embedded DOCX plus Markdown; `publish` points to the DOCX. Existing reviewed Markdown-only imports remain resumable and require their referenced image. In the Word importer, explicitly select the confirmed course parent. The importer may use the filename as the page title and omit the Word title: inspect and rename the actual page to the intended plan/lesson title. Reopen it from the parent and inspect the full text, rendered figure/caption and all five exact source URLs before recording a receipt. An import-complete dialog alone does not verify content. Reuse the same page on repeat publish. Login/UI availability cannot guarantee unattended daily delivery.
+
+Real-account acceptance on 2026-10-18: plan and Day01 Word imports, bilingual content, image/credit, five URL destinations per page, parent placement, reopen and verified-receipt reuse passed. This does not validate the direct API route.
 
 Official sources checked 2026-10-14:
 - https://developers.notion.com/guides/data-apis/working-with-markdown-content

@@ -8,12 +8,15 @@ from omni_delivery import verify_url
 
 def run(args):
     try:
-        result = subprocess.run(args, capture_output=True, text=True, timeout=60)
+        # Initial import includes the CLI's five-minute conversion poll, plus upload.
+        initial_import = args[1:3] == ['doc', 'import'] and '--file' in args
+        result = subprocess.run(args, capture_output=True, text=True, timeout=600 if initial_import else 60)
         if result.returncode:
             raise RuntimeError('dws command failed.')
         value = json.loads(result.stdout)
         if not isinstance(value, dict): raise ValueError('dws did not return a JSON object.')
-        if value.get('success') is False or value.get('ok') is False:
+        pending_import = initial_import and value.get('timed_out') is True and value.get('status') == 'processing' and value.get('taskId')
+        if (value.get('success') is False and not pending_import) or value.get('ok') is False:
             raise ValueError('dws operation was rejected.')
         return value
     except Exception:
@@ -26,15 +29,17 @@ def unwrap(value):
 
 def publish(root, manifest, target, receipt, checkpoint, runner=None):
     runner = runner or run; data = document_data(root, manifest)
-    if not receipt.get('remote_id'):
+    if not receipt.get('remote_id') or receipt.get('placement_verified') is False:
+        dest = target['destination']
+        location = ['--folder', dest['folder_id']] if dest.get('folder_id') else ['--workspace', dest['workspace_id']]
         if receipt.get('task_id'):
-            response = runner(['dws', 'doc', 'import', 'get', '--task-id', receipt['task_id'], '--format', 'json'])
+            response = runner(['dws', 'doc', 'import', 'get', '--task-id', receipt['task_id'], '--format', 'json'] + location)
         else:
+            if receipt.get('remote_id'):
+                raise ValueError('DingTalk destination is unverified; reconcile the existing document before retrying.')
             args = ['dws', 'doc', 'import', '--file', str(root / manifest['artifacts']['docx']),
                     '--name', data['title'], '--format', 'json']
-            dest = target['destination']
-            if dest.get('folder_id'): args.extend(['--folder', dest['folder_id']])
-            else: args.extend(['--workspace', dest['workspace_id']])
+            args.extend(location)
             checkpoint(status='creating'); response = runner(args)
         result = unwrap(response)
         if result.get('converted') is False or result.get('fallback') == 'upload':
@@ -46,7 +51,9 @@ def publish(root, manifest, target, receipt, checkpoint, runner=None):
             raise ValueError('dws returned no document or task identifier.')
         url = result.get('documentUrl') or 'https://alidocs.dingtalk.com/i/nodes/' + result['nodeId']
         verify_url('dingtalk', url)
-        checkpoint(remote_id=result['nodeId'], url=url, status='pending')
+        checkpoint(remote_id=result['nodeId'], url=url, status='pending', placement_verified=result.get('verified'))
+        if result.get('verified') is False:
+            raise ValueError('DingTalk destination readback was not verified; preserve the existing task/document.')
     info = unwrap(runner(['dws', 'doc', 'info', '--node', receipt['remote_id'], '--format', 'json']))
     content_type = info.get('contentType') or info.get('documentType') or info.get('extension')
     if content_type not in ('ALIDOC', 'adoc', 'doc'):

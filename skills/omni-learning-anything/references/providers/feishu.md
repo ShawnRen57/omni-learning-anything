@@ -6,7 +6,9 @@ API flow: upload embedded-image DOCX to `/drive/v1/medias/upload_all` with `pare
 
 Ask for the minimum documented scopes for media upload, document import/read and the selected folder; verify actual API permissions rather than inferring them from app publication. App credentials stay only in the named environment. Tokens are not persisted. Folder/doc tokens in the receipt are object identifiers, not account credentials.
 
-UI fallback: import the embedded DOCX through the user's confirmed folder and choose conversion into a Feishu document, not a file attachment. Open the result, inspect all content and record the actual document URL/ID. Manual import is not an unattended automation claim.
+UI fallback: import the embedded DOCX through the user's confirmed folder and choose conversion into a Feishu document, not a file attachment. Open the result, inspect all content and record the actual document URL/ID. Manual import is not an unattended automation claim. If upload stalls or fails, inspect the existing transfer task and destination before retrying; a file picker selection or upload queue entry is not a cloud document. Preserve the existing course and diagnose the actual failure before creating another upload.
+
+Real-account attempt on 2026-10-18: the personal QA folder was created, but Word-to-online-document upload failed at 0B; retrying the same task once also failed, leaving the folder empty. This route remains unaccepted; the local DOCX was visually checked separately.
 
 Official sources checked 2026-10-14:
 - https://open.feishu.cn/document/server-docs/docs/drive-v1/import_task/import-user-guide

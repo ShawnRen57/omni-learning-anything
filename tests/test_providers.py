@@ -1,6 +1,8 @@
 """Official API contracts, real Vault writes and uncertain-write recovery."""
 import importlib.util
 import os
+import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -230,6 +232,50 @@ class ProviderTests(unittest.TestCase):
             raise AssertionError(args)
         r = p.publish(self.root, self.manifest, target, self.receipt, self.checkpoint, runner=runner)
         self.assertEqual(r['status'], 'verified')
+
+    def test_dingtalk_resume_keeps_original_folder_or_workspace(self):
+        p = self.module('omni_dingtalk')
+        for field, flag in [('folder_id', '--folder'), ('workspace_id', '--workspace')]:
+            self.receipt = {'task_id': 'task-qa', 'status': 'pending'}
+            calls = []
+            def runner(args):
+                calls.append(args)
+                return {'taskId': 'task-qa', 'status': 'processing'}
+            target = {'destination': {field: 'target-qa'}}
+            self.assertEqual(p.publish(self.root, self.manifest, target, self.receipt, self.checkpoint, runner=runner)['status'], 'pending')
+            self.assertIn(flag, calls[0])
+            self.assertEqual(calls[0][calls[0].index(flag) + 1], 'target-qa')
+            self.assertNotIn('--file', calls[0])
+
+    def test_dingtalk_unverified_placement_cannot_become_delivered(self):
+        p = self.module('omni_dingtalk'); calls = []
+        target = {'destination': {'folder_id': 'qa'}}
+        def runner(args):
+            calls.append(args)
+            if 'import' in args:
+                return {'taskId': 'task-qa', 'nodeId': 'doc-qa', 'verified': False,
+                        'documentUrl': 'https://alidocs.dingtalk.com/i/nodes/doc-qa'}
+            if 'info' in args: return {'contentType': 'ALIDOC'}
+            return {'markdown': self.markdown().replace('../assets/', 'https://cdn.example/')}
+        for _ in range(2):
+            with self.assertRaises(ValueError):
+                p.publish(self.root, self.manifest, target, self.receipt, self.checkpoint, runner=runner)
+        self.assertEqual(self.receipt['remote_id'], 'doc-qa')
+        self.assertEqual(self.receipt['task_id'], 'task-qa')
+        self.assertEqual(sum('--file' in args for args in calls), 1)
+        self.assertFalse(any('read' in args for args in calls))
+
+    def test_dingtalk_poll_timeout_preserves_recoverable_task(self):
+        p = self.module('omni_dingtalk')
+        response = {'success': False, 'timed_out': True, 'taskId': 'task-qa', 'status': 'processing'}
+        def subprocess_result(args, **kwargs):
+            if kwargs['timeout'] < 330:
+                raise subprocess.TimeoutExpired(args, kwargs['timeout'])
+            return subprocess.CompletedProcess(args, 0, json.dumps(response), '')
+        with patch.object(p.subprocess, 'run', side_effect=subprocess_result):
+            r = p.publish(self.root, self.manifest, {'destination': {'folder_id': 'qa'}}, self.receipt, self.checkpoint)
+        self.assertEqual(r['status'], 'pending')
+        self.assertEqual(self.receipt['task_id'], 'task-qa')
 
     def test_notion_compact_parent_uuid_matches_canonical_response(self):
         p = self.module('omni_notion'); http = self.notion_http(); original = http.handler
