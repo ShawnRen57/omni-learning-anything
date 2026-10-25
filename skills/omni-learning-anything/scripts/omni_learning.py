@@ -19,6 +19,9 @@ def main():
     parser.add_argument('--version',action='version',version='omni-learning-anything '+version)
     parser.add_argument('--project',type=Path,default=Path.cwd())
     sub=parser.add_subparsers(dest='command',required=True)
+    p=sub.add_parser('connect'); p.add_argument('--platform',choices=['notion','feishu','obsidian']); p.add_argument('--location'); p.add_argument('--connection'); p.add_argument('--save-as'); p.add_argument('--cli-profile'); p.add_argument('--workspace-id'); p.add_argument('--subdir',default='Omni Learning')
+    p=sub.add_parser('connection-show'); p.add_argument('--name',required=True)
+    sub.add_parser('connection-list')
     sub.add_parser('doctor')
     p=sub.add_parser('init'); p.add_argument('--config',type=Path,required=True); p.add_argument('--plan',type=Path,required=True)
     p=sub.add_parser('render'); p.add_argument('--input',type=Path,required=True); p.add_argument('--key',required=True); p.add_argument('--format',dest='formats',action='append',choices=['pdf','markdown','docx'])
@@ -33,7 +36,16 @@ def main():
     p=sub.add_parser('reconcile'); p.add_argument('--key',required=True); p.add_argument('--remote-id'); p.add_argument('--url'); p.add_argument('--task-id')
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
     try:
-        if args.command=='doctor':
+        if args.command=='connect':
+            from omni_connections import connect
+            result=connect(args.platform,args.location,connection=args.connection,save_as=args.save_as,cli_profile=args.cli_profile,workspace_id=args.workspace_id,subdir=args.subdir)
+        elif args.command=='connection-list':
+            from omni_connections import list_connections
+            result={'connections':list_connections()}
+        elif args.command=='connection-show':
+            from omni_connections import load
+            result={'delivery':load(args.name)}
+        elif args.command=='doctor':
             writable=False
             if root.is_dir():
                 try:
