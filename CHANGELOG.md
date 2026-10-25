@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.2.0 — 2026-10-25
+
+- Generate single-file offline HTML with embedded illustrations, responsive reading layout and clickable further-reading links; combine HTML and PDF when wanted.
+- Create plans and lessons in English, Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Russian and Arabic, with script-aware fonts and Arabic RTL.
+- Connect DingTalk through its official CLI and Tencent Docs through official OAuth/MCP, with account/location checks and reusable named connections. Both completed plan + Day01 real-account acceptance.
+- Rebuild the README around learner benefits, a version guide, chat-first setup and sample gallery. English is the default; nine translations are available.
+- Recognize Tencent Word hyperlink fields, handle DingTalk Markdown escaping and preserve pending imports/documents during readback recovery.
+
+
 ## 2.1.0 — 2026-10-25
 
 - Default new cloud courses to official API delivery; retain explicitly accepted browser import and local Obsidian Vault routes.
