@@ -8,7 +8,7 @@ Updated 2026-10-25. This release adds official-API-first onboarding and named co
 - Official CLI transports: 8/8 focused tests; connection onboarding: 9/9; provider contracts: 25/25; delivery lifecycle: 16/16 (included in the full total).
 - Official tools inspected and used: Notion `ntn 0.23.25`, Feishu `lark-cli 1.0.98`. Installed from official distributions in a dedicated task cache; Feishu release checksum verified. No global defaults changed, tokens exported or private credential stores read.
 - Fresh whole-branch review completed. Feishu brand/user verification, selected-profile recovery and malformed connection fields were reproduced and fixed with failing-then-passing regressions. No deferred review findings remain.
-- ZIP extraction/runtime/Skill metadata/checksum and whitespace checks are repeated for the final package before publication. No private profiles, test documents, device codes or account identifiers are included.
+- ZIP extraction/runtime/Skill metadata/checksum and whitespace checks passed for the final package. No private profiles, test documents, device codes or account identifiers are included.
 
 ## Real-account acceptance
 
@@ -50,4 +50,11 @@ A successful `connect` is read-only and does not prove write permission; the act
 
 ## Publication
 
-Final package validation and downloaded-asset SHA256 will be recorded after publication. No live learning schedule or cross-device synchronization was tested.
+Published [v2.1.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.1.0), annotated tag at `2788191eb1ba19b64aac85da3a43c97f13516172`. Both assets were downloaded again from GitHub and compared byte-for-byte with local release files. All 33 downloaded runtime entries match checked-in sources; isolated extracted CLI/version/doctor/connect and provider resources passed. The locally integrated result also passed all105 tests.
+
+- ZIP: `omni-learning-anything-skill-v2.1.0.zip`, **71,896 bytes**.
+- SHA256: `50fad2f266800d5fa97609677773059ee7d1d6208b356cff4fb51c6fd212a01e`.
+- Downloaded `SHA256SUMS` also matched exactly.
+- Prior v2.0.1 ZIP remains `7f604983c4cd3a844cd345dddcefdbed367fa2a324eab1d2caefaa7067d8797b`; prior tags were unchanged.
+
+No live learning schedule or cross-device synchronization was tested.
