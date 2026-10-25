@@ -42,7 +42,7 @@ Notion、飞书和 Obsidian 新增 `connect` 连接检查与命名连接复用�
 
 本地生成、审核、上传任务与验证交付分别记录。**只有主要目标验证成功才推进课程**；只读连接检查不证明写入权限，文件准备或 API 创建响应也不等于内容验收完成。中断复用既有任务/文档，写入结果不明时先核对。浏览器导入须明确接受，单独标注验收方式；Obsidian 跨设备同步及无人值守运行需另行验证。旧课程继续使用原配置；已批准课程变更保存位置时需保留旧档案并创建新版本。
 
-真实账号历史：Notion 的 2026-10-18 结果为 Word **浏览器导入**；Obsidian 为 **本地 Vault 写入及原生阅读检查**；飞书的 2026-10-25 结果为 Word **浏览器导入**。这些结果不证明新的官方 API 路线已通过账号验收。新增 CLI/API 连接与文档验收进度见 [v2.1.0 验证记录](docs/release-validation-v2.1.0.md)。腾讯文档和钉钉的文档写入真实验收仍未通过，不与合约测试混称。
+真实账号历史：Notion 的 2026-10-18 结果为 Word **浏览器导入**；Obsidian 为 **本地 Vault 写入及原生阅读检查**；飞书的 2026-10-25 结果为 Word **浏览器导入**。这些结果不证明新的官方 API 路线已通过账号验收。2026-10-25 已补齐 **Notion 官方 `ntn` API、飞书官方 `lark-cli` 用户 API** 的计划和 Day01 写入、真实图文/链接检查、固定目录与重复发布验收。完整证据见 [v2.1.0 验证记录](docs/release-validation-v2.1.0.md)。腾讯文档和钉钉的文档写入真实验收仍未通过，不与合约测试混称。
 
 English: cloud documents default to official APIs, using an authorized writable API connector or official CLI. The learner provides a destination link and completes official grants; the agent handles setup, identifiers, connection checks and publication. Named connections for Notion/Feishu/Obsidian keep metadata only; approved courses retain fixed snapshots. Two or three short connection exchanges is a target, subject to platform/organization prerequisites. Obsidian intentionally writes local Vault files. Browser import is an explicitly accepted fallback and never counts as API account acceptance. See the [onboarding guide](skills/omni-learning-anything/references/onboarding.md) and [exact validation scope](docs/release-validation-v2.1.0.md).
 

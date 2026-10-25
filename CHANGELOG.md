@@ -6,7 +6,9 @@
 - Add official Notion `ntn` and Feishu `lark-cli` API transports with fixed user identity, reviewed file uploads, task checkpoints and destination/content readback.
 - Add guided `connect`, metadata-only named connections and course snapshots; reuse official credential storage and authorization.
 - Include focused first-connection dialogue, official login/app guidance, scope corrections and scheduling prerequisites in the self-contained Skill.
-- Separate historical UI/local account results from new API validation; see release-validation-v2.1.0.md for the current evidence and pending grants.
+- Complete real-account official API acceptance for Notion and Feishu plan + Day01, including image/link/content/location inspection, saved connection and receipt reuse.
+- Fix live API contract differences: official Notion app URLs and escaped Markdown; Feishu import-media type metadata, processing states and encoded actual hyperlink targets; clear prior errors after successful recovery.
+- Preserve separately dated UI/local results and pending Tencent/DingTalk acceptance; see release-validation-v2.1.0.md for exact scope.
 
 ## 2.0.0 — 2026-10-15
 

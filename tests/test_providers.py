@@ -333,5 +333,71 @@ class ProviderTests(unittest.TestCase):
                         with self.assertRaises(ValueError): delivery.publish(root, 'plan', adapter=adapter)
                     self.assertEqual(len([call for call in http.calls if call[0] == 'POST' and call[1].endswith(suffix)]), 1)
 
+    def test_notion_escaped_markdown_readback_reuses_existing_page(self):
+        p=self.module('omni_notion');http=self.notion_http();original=http.handler
+        def handler(method,url,kwargs):
+            response=original(method,url,kwargs)
+            if url.endswith('/markdown'):response['markdown']=response['markdown'].replace('[S1]',r'\[S1\]').replace('|',r'\|')
+            return response
+        http.handler=handler
+        target={'platform':'notion','mode':'api','destination':{'parent_page_id':'parent-qa'},'credential_env':{'token':'QA_TOKEN'}}
+        with patch.dict(os.environ,{'QA_TOKEN':'private'}):
+            result=p.publish(self.root,self.manifest,target,self.receipt,self.checkpoint,client=http)
+            self.receipt.update(result)
+            again=p.publish(self.root,self.manifest,target,self.receipt,self.checkpoint,client=http)
+        self.assertEqual(result['status'],'verified');self.assertEqual(again['remote_id'],'page-qa')
+        self.assertEqual(len([c for c in http.calls if c[0]=='POST' and c[1].endswith('/pages')]),1)
+
+    def test_feishu_import_upload_declares_native_document_type(self):
+        p=self.module('omni_feishu');http=self.feishu_http(pending=True);original=http.handler
+        def handler(method,url,kwargs):
+            if url.endswith('/upload_all'):
+                self.assertEqual(json.loads(kwargs['data'].get('extra','{}')),{'obj_type':'docx','file_extension':'docx'})
+            return original(method,url,kwargs)
+        http.handler=handler
+        target={'platform':'feishu','mode':'api','destination':{'folder_token':'folder-qa'},'credential_env':{'token':'QA_TOKEN'}}
+        with patch.dict(os.environ,{'QA_TOKEN':'private'}):
+            result=p.publish(self.root,self.manifest,target,self.receipt,self.checkpoint,client=http)
+        self.assertEqual(result['status'],'pending');self.assertEqual(self.receipt['task_id'],'task-qa')
+
+    def test_feishu_processing_and_unmaterialized_success_remain_pending(self):
+        p=self.module('omni_feishu')
+        target={'platform':'feishu','mode':'api','destination':{'folder_token':'folder-qa'},'credential_env':{'token':'QA_TOKEN'}}
+        for status in (1,2,0):
+            with self.subTest(status=status):
+                http=self.feishu_http(pending=True);original=http.handler
+                def handler(method,url,kwargs):
+                    if '/import_tasks/' in url:return {'code':0,'data':{'result':{'job_status':status}}}
+                    return original(method,url,kwargs)
+                http.handler=handler;receipt={'task_id':'saved-ticket','status':'pending'}
+                with patch.dict(os.environ,{'QA_TOKEN':'private'}):
+                    result=p.publish(self.root,self.manifest,target,receipt,lambda **kw:receipt.update(kw),client=http)
+                self.assertEqual(result['status'],'pending');self.assertEqual(receipt['task_id'],'saved-ticket')
+                self.assertFalse(any(c[0]=='POST' for c in http.calls))
+
+    def test_feishu_verifies_encoded_hrefs_and_rejects_plain_text_only_urls(self):
+        from urllib.parse import quote
+        p=self.module('omni_feishu')
+        target={'platform':'feishu','mode':'api','destination':{'folder_token':'folder-qa'},'credential_env':{'token':'QA_TOKEN'}}
+        for real_links in (True,False):
+            with self.subTest(real_links=real_links):
+                http=self.feishu_http();original=http.handler
+                def handler(method,url,kwargs):
+                    response=original(method,url,kwargs)
+                    if url.endswith('/blocks'):
+                        for item in response['data']['items']:
+                            for element in item.get('text',{}).get('elements',[]):
+                                link=element['text_run']['text_element_style']['link']
+                                link['url']=quote(link['url'],safe='') if real_links else 'https://wrong.example/'
+                                if real_links:
+                                    for source in self.plan['sources']:element['text_run']['content']=element['text_run']['content'].replace(source['url'],'')
+                    return response
+                http.handler=handler;receipt={}
+                with patch.dict(os.environ,{'QA_TOKEN':'private'}):
+                    call=lambda:p.publish(self.root,self.manifest,target,receipt,lambda **kw:receipt.update(kw),client=http)
+                    if real_links:self.assertEqual(call()['status'],'verified')
+                    else:
+                        with self.assertRaises(ValueError):call()
+
 
 if __name__ == '__main__': unittest.main()

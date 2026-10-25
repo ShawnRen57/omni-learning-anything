@@ -18,7 +18,7 @@ MODES = {
 DESTINATIONS = {'parent_page_id', 'vault_path', 'subdir', 'folder_token', 'folder_id',
                 'workspace_id', 'name'}
 CREDENTIALS = {'token', 'app_id', 'app_secret', 'client_id', 'open_id'}
-HOSTS = {'notion': ('notion.so', 'notion.site'), 'feishu': ('feishu.cn', 'larksuite.com'),
+HOSTS = {'notion': ('notion.so', 'notion.site', 'app.notion.com'), 'feishu': ('feishu.cn', 'larksuite.com'),
          'tencent': ('docs.qq.com',), 'dingtalk': ('dingtalk.com',)}
 
 
@@ -240,6 +240,7 @@ def publish(root, key, adapter=None):
                 evidence = result.get('evidence', {})
                 if not all(evidence.get(k) is True for k in ('content_checked', 'image_checked', 'links_checked')):
                     raise ValueError('Provider did not verify content, image and links.')
+            if result.get('status') == 'verified': receipt.pop('error', None)
             checkpoint(**result)
         except Exception:
             # Never persist raw provider exceptions: they can contain tokens/headers.

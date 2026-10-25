@@ -1,10 +1,21 @@
 """Import an embedded-image DOCX into Feishu and resume saved import tickets."""
 import json
 import os
+from urllib.parse import unquote
 from omni_http import HTTP, business, segment, document_data, check_text, check_links, verified
 from omni_delivery import verify_url
 
 BASE = 'https://open.feishu.cn/open-apis'
+
+
+def document_links(value):
+    if isinstance(value, dict):
+        link = value.get('link')
+        if isinstance(link, dict) and isinstance(link.get('url'), str):
+            yield unquote(link['url'])
+        for child in value.values(): yield from document_links(child)
+    elif isinstance(value, list):
+        for child in value: yield from document_links(child)
 
 
 def publish(root, manifest, target, receipt, checkpoint, client=None):
@@ -29,7 +40,8 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
         if not receipt.get('upload_token'):
             with path.open('rb') as f:
                 response = client.json('POST', BASE + '/drive/v1/medias/upload_all', headers=headers,
-                    data={'file_name': path.name, 'parent_type': 'ccm_import_open', 'parent_node': '', 'size': str(path.stat().st_size)},
+                    data={'file_name': path.name, 'parent_type': 'ccm_import_open', 'parent_node': '', 'size': str(path.stat().st_size),
+                          'extra': json.dumps({'obj_type': 'docx', 'file_extension': 'docx'})},
                     files={'file': (path.name, f, 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')})
             upload_token=business(response, 'code').get('file_token'); segment(upload_token)
             checkpoint(upload_token=upload_token)
@@ -42,7 +54,7 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
     if not receipt.get('remote_id'):
         response = client.json('GET', BASE + '/drive/v1/import_tasks/' + segment(receipt['task_id']), headers=headers)
         result = business(response, 'code')['result']
-        if result.get('job_status') == 1:
+        if result.get('job_status') in (1, 2) or (result.get('job_status') == 0 and not result.get('token')):
             return {'status': 'pending'}
         if result.get('job_status') != 0:
             return {'status': 'failed', 'error': 'Feishu import failed; inspect the saved task before retrying.'}
@@ -66,7 +78,8 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
         raise ValueError('Feishu block pagination limit exceeded.')
     if not any(item.get('block_type') == 27 and item.get('image', {}).get('token') for item in items):
         raise ValueError('Imported Feishu document has no image block.')
-    check_links(json.dumps(items, ensure_ascii=False), data)
+    # Feishu stores percent-encoded hrefs; verify actual link targets exactly.
+    check_links(list(document_links(items)), data)
     if target.get('mode') == 'cli':
         page_token = None
         for _ in range(100):

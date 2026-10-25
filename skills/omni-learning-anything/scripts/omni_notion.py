@@ -84,5 +84,7 @@ def publish(root, manifest, target, receipt, checkpoint, client=None):
     response = client.json('GET', BASE + '/pages/' + segment(page_id) + '/markdown', headers=headers)
     if response.get('truncated') or response.get('unknown_block_ids'):
         raise ValueError('Notion returned incomplete page content.')
-    text = response.get('markdown', ''); check_text(text, data, include_title=False); check_links(text, data)
+    # Notion escapes literal Markdown punctuation in its canonical readback.
+    text = re.sub(r'\\([\\`*_{}\[\]()#+.!<>|~-])', r'\1', response.get('markdown', ''))
+    check_text(text, data, include_title=False); check_links(text, data)
     return verified(page_id, receipt['url'])

@@ -14,6 +14,10 @@
 
 [v1.0.1 名称统一验收](rename-validation-v1.0.1.md)。
 
+## v2.1.0 — 2026-10-25
+
+[官方 API 与首次连接验收](release-validation-v2.1.0.md)：105 项测试通过；Notion 官方 `ntn` 与飞书官方 `lark-cli` 的计划和 Day01 在真实账号完成 API 写入、图文与五个链接、目录及回执复用检查。Obsidian 保留本地 Vault 例外；腾讯文档、钉钉文档写入与无人值守调度仍未通过真实验收。
+
 ## Reproduce
 
 ```sh

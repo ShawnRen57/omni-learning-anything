@@ -154,6 +154,23 @@ class DeliveryTests(unittest.TestCase):
         with patch.dict(os.environ, {'QA_TOKEN': 'private'}), self.assertRaises(RuntimeError):
             d.publish(self.root, 'Day01', adapter=broken_adapter)
 
+    def test_official_notion_api_app_url_is_accepted(self):
+        d=self.delivery()
+        d.verify_url('notion','https://app.notion.com/p/QA-0123456789abcdef0123456789abcdef')
+        for value in ['https://app.notion.com.evil.example/p/id','https://evilnotion.com/p/id','https://secret@app.notion.com/p/id','https://app.notion.com/p/id?access_token=secret']:
+            with self.assertRaises(ValueError):d.verify_url('notion',value)
+
+    def test_successful_recovery_clears_prior_error(self):
+        d=self.delivery()
+        self.ready({'platform':'notion','mode':'api','destination':{'parent_page_id':'qa'},'credential_env':{'token':'QA_TOKEN'}})
+        def fail(*args):raise RuntimeError('private provider failure')
+        success={'status':'verified','remote_id':'qa-page','url':'https://www.notion.so/qa','evidence':{'content_checked':True,'image_checked':True,'links_checked':True}}
+        with patch.dict(os.environ,{'QA_TOKEN':'private'}):
+            with self.assertRaises(RuntimeError):d.publish(self.root,'Day01',adapter=fail)
+            self.assertIn('error',d.status(self.root,'Day01'))
+            result=d.publish(self.root,'Day01',adapter=lambda *args:success)
+        self.assertEqual(result['status'],'verified');self.assertNotIn('error',result)
+
 
 if __name__ == '__main__':
     unittest.main()
