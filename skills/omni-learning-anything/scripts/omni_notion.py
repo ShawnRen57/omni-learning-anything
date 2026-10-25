@@ -30,8 +30,14 @@ def blocks(client, page_id, headers):
 
 
 def publish(root, manifest, target, receipt, checkpoint, client=None):
-    client = client or HTTP(); token = os.environ[target['credential_env']['token']]
-    headers = {'Authorization': 'Bearer ' + token, 'Notion-Version': '2026-03-11'}
+    if client is None and target.get('mode') == 'cli':
+        from omni_official_cli import NotionCLI
+        client = NotionCLI(target)
+    client = client or HTTP()
+    if hasattr(client, 'check_identity'): client.check_identity()
+    headers = {'Notion-Version': '2026-03-11'}
+    if target.get('mode') != 'cli':
+        headers['Authorization'] = 'Bearer ' + os.environ[target['credential_env']['token']]
     data = document_data(root, manifest); parent = target['destination']['parent_page_id']; segment(parent)
     if not receipt.get('remote_id'):
         client.json('GET', BASE + '/pages/' + segment(parent), headers=headers)

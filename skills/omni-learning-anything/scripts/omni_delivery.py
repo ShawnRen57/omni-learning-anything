@@ -11,8 +11,8 @@ from omni_document import validate_key
 
 MODES = {
     'pdf': ('local', 'host'), 'markdown': ('local', 'host'), 'docx': ('local', 'host'),
-    'obsidian': ('local',), 'notion': ('api', 'host', 'import'),
-    'feishu': ('api', 'host', 'import'), 'tencent': ('api', 'host', 'import'),
+    'obsidian': ('local',), 'notion': ('api', 'cli', 'host', 'import'),
+    'feishu': ('api', 'cli', 'host', 'import'), 'tencent': ('api', 'host', 'import'),
     'dingtalk': ('cli', 'host', 'import'), 'generic': ('host', 'import'),
 }
 DESTINATIONS = {'parent_page_id', 'vault_path', 'subdir', 'folder_token', 'folder_id',
@@ -27,11 +27,15 @@ def fingerprint(value):
 
 
 def validate_delivery(target):
-    if not isinstance(target, dict) or set(target) - {'platform', 'mode', 'destination', 'credential_env'}:
+    if not isinstance(target, dict) or set(target) - {'platform', 'mode', 'destination', 'credential_env', 'account_id', 'cli_profile'}:
         raise ValueError('Delivery accepts only platform, mode, destination and credential_env; keep secrets outside config.')
     platform = target.get('platform'); mode = target.get('mode')
     if platform not in MODES or mode not in MODES[platform]:
         raise ValueError('Unsupported delivery platform/mode; choose a documented route.')
+    for key in ('account_id', 'cli_profile'):
+        value = target.get(key)
+        if value is not None and (not isinstance(value, str) or not re.fullmatch(r'[A-Za-z0-9_.:@-]{1,128}', value)):
+            raise ValueError('Invalid non-secret connection identity/profile.')
     destination = target.get('destination', {}); credentials = target.get('credential_env', {})
     if not isinstance(destination, dict) or set(destination) - DESTINATIONS:
         raise ValueError('Unsupported destination field; do not put credentials in destination.')
@@ -74,8 +78,10 @@ def preflight(target, environ=None):
     if platform == 'obsidian' and dest.get('vault_path'):
         if not Path(dest['vault_path']).expanduser().is_dir():
             missing.append('existing writable Obsidian Vault')
-    if mode == 'cli' and not shutil.which('dws'):
-        missing.append('installed and authorized dws CLI')
+    if mode == 'cli':
+        binary = {'notion': 'ntn', 'feishu': 'lark-cli', 'dingtalk': 'dws'}[platform]
+        if not shutil.which(binary): missing.append('installed and authorized ' + binary + ' CLI')
+        if platform in ('notion', 'feishu') and not target.get('account_id'): missing.append('account_id (run connect)')
     return {'ready': not missing, 'platform': platform, 'mode': mode, 'missing': missing,
             'note': 'Host/import routes need actual host tools and content readback before recording delivery.' if mode in ('host', 'import') else 'Configuration check only; publish validates remote permissions and content.'}
 
