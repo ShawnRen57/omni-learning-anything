@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0 — 2026-10-25
+
+- Default new cloud courses to official API delivery; retain explicitly accepted browser import and local Obsidian Vault routes.
+- Add official Notion `ntn` and Feishu `lark-cli` API transports with fixed user identity, reviewed file uploads, task checkpoints and destination/content readback.
+- Add guided `connect`, metadata-only named connections and course snapshots; reuse official credential storage and authorization.
+- Include focused first-connection dialogue, official login/app guidance, scope corrections and scheduling prerequisites in the self-contained Skill.
+- Separate historical UI/local account results from new API validation; see release-validation-v2.1.0.md for the current evidence and pending grants.
+
 ## 2.0.0 — 2026-10-15
 
 - Add explicit multi-round destination intake and reusable authorization references for files and cloud documents.

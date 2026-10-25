@@ -18,6 +18,7 @@ Figure: `{"path":"assets/teaching.png","caption":"What to notice","credit":"Sour
 
 ## Commands and lifecycle
 
+0. Follow [onboarding](onboarding.md): `connect --platform notion|feishu|obsidian --location CONFIRMED_LOCATION [--save-as NAME]`, or `connect --connection NAME` to recheck saved metadata. `connection-list`/`connection-show --name NAME` never print secrets. Copy successful `delivery` into new intake config; `connect` never mutates an existing course.
 1. Write intake in private staging; `OMNI init --config /staging/config.json --plan /staging/plan.json`. Existing projects are never overwritten. Copy the teaching image under course/assets.
 2. `OMNI delivery-check` shows only the selected target's missing config/env information. It does not make network calls or certify account access.
 3. `OMNI render --input /course/plan.json --key plan` uses the destination default. Repeated `--format markdown --format docx` selects extra formats; `--format pdf --format docx` produces a combined hash-bound set. Markdown-only routes never load PDF libraries.

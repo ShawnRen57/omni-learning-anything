@@ -1,6 +1,6 @@
 # 腾讯文档 / Tencent Docs
 
-This is docs.qq.com, not Enterprise WeChat docs. Prefer a writable host connector. API mode needs `destination.folder_id` and private environment references `client_id`, `open_id`, `token`; every API call sends the official `Client-Id`, `Open-Id`, `Access-Token` headers. A personal website login is not these credentials. The application and OAuth grant must expose the required scopes.
+This is docs.qq.com, not Enterprise WeChat docs. Prefer an already authorized writable official API connector; otherwise use the official API route below. See [onboarding](../onboarding.md); the agent handles setup/IDs/private references, the learner completes official grants. API mode needs `destination.folder_id` and private environment references `client_id`, `open_id`, `token`; every API call sends the official `Client-Id`, `Open-Id`, `Access-Token` headers. A personal website login is not these credentials. The application and OAuth grant must expose the required scopes.
 
 Install `scripts/requirements-tencent.txt` only for this API route. The adapter uses Tencent's official `cos-python-sdk-v5` for temporary COS uploads; secrets are Base64-decoded per the official pre-import contract and remain in memory.
 

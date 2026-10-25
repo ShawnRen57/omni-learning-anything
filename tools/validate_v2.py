@@ -9,7 +9,7 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--archive', type=Path, default=ROOT/'dist/omni-learning-anything-skill-v2.0.1.zip')
+parser.add_argument('--archive', type=Path, default=ROOT/'dist/omni-learning-anything-skill-v2.1.0.zip')
 args = parser.parse_args()
 archive = args.archive.resolve()
 with tempfile.TemporaryDirectory(prefix='omni-v2-install-') as temp:
@@ -25,13 +25,17 @@ with tempfile.TemporaryDirectory(prefix='omni-v2-install-') as temp:
     skill = target/'omni-learning-anything'
     cli = skill/'scripts/omni_learning.py'
     p = subprocess.run([sys.executable,str(cli),'--version'],capture_output=True,text=True,check=True)
-    assert p.stdout.strip() == 'omni-learning-anything 2.0.1'
+    assert p.stdout.strip() == 'omni-learning-anything 2.1.0'
     for file in (skill/'scripts').glob('*.py'):
         compile(file.read_text(), str(file), 'exec')
-    for name in ('omni_notion.py','omni_feishu.py','omni_tencent.py','omni_dingtalk.py','omni_obsidian.py','omni_delivery.py'):
+    for name in ('omni_notion.py','omni_feishu.py','omni_tencent.py','omni_dingtalk.py','omni_obsidian.py','omni_delivery.py','omni_connections.py','omni_official_cli.py'):
         assert (skill/'scripts'/name).is_file(), name
     for name in ('notion','feishu','tencent','dingtalk','obsidian','generic'):
         assert (skill/'references/providers'/f'{name}.md').is_file(), name
+    assert (skill/'references/onboarding.md').is_file()
+    result = subprocess.run([sys.executable,str(cli),'connect','--platform','notion'],check=True,capture_output=True,text=True)
+    import json
+    assert json.loads(result.stdout)['stage'] == 'location'
     subprocess.run([sys.executable,str(cli),'--project',str(target),'doctor'],check=True,capture_output=True)
     checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
     assert checksum in (archive.parent/'SHA256SUMS').read_text()

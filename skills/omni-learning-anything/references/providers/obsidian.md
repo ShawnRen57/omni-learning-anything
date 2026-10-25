@@ -1,6 +1,6 @@
 # Obsidian
 
-Obsidian is local-first Markdown. Ask for an existing Vault directory and a dedicated relative course subdirectory, not an API token/account. Example:
+Obsidian is the explicit local-first exception to cloud API delivery. Use [guided connection](../onboarding.md) to validate/save the existing Vault path; the learner does not need an API account. The official Obsidian CLI can assist opening/reading notes when the installed app supports it; there is no bundled official cloud-write API. Ask for an existing Vault directory and a dedicated relative course subdirectory, not an API token/account. Example:
 
 ```json
 {"platform":"obsidian","mode":"local","destination":{"vault_path":"/confirmed/vault","subdir":"Omni Learning/History"}}

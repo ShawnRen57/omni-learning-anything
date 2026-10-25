@@ -24,33 +24,29 @@ Create learning plans and materials in **Chinese or English**, independently of 
 - **知道知识从哪里来**：每次生成都会联网检索，关键内容附来源，每份材料提供至少五个带说明的扩展链接。 / **Traceable knowledge**: fresh research, linked evidence and at least five useful expansion links per document.
 - **留下完整的学习档案**：PDF 便于阅读与保存，可编辑源文件便于回顾；续学时检查进度，失败后接着同一课完成。 / **A course you can keep**: readable PDFs, editable sources and progress that resumes from the same lesson after a failure.
 
-## v2.0.1：文件与云文档 / Files and cloud documents
+## v2.1.0：官方 API 与简化连接 / Official APIs and guided connection
 
-开始时选择输出平台；已有授权连接器优先复用。没有明确选择或缺少位置/授权信息时，Agent 会分轮确认。密钥值保留在本机私有环境，不需要粘贴到对话或写入课程配置。
+云文档默认通过官方 API 写入，可复用已有可写 API 连接器，或使用官方 CLI 完成授权和调用。用户选择保存平台、提供课程父页面/文件夹链接，并在官方页面登录授权；Agent 负责安装检查、解析位置、确认账号、配置及发布。通常以两三轮连接对话为目标，组织管理员审批或权限问题可能需要更多步骤。**浏览器已登录不等于 API 已授权。**
 
-| 平台 | 实现路径 | 必要信息 |
+| 平台 | 默认写入路径 | 用户提供/确认 |
 |---|---|---|
-| PDF / Markdown / DOCX | 独立本地生成；PDF 可作为副本 | 课程目录；仅 PDF 需要 XeLaTeX |
-| Notion | 可写连接器或官方 Markdown + 图片上传 API；也可验证 UI 导入 | 已授权课程父页面；API 模式使用令牌环境变量引用 |
-| Obsidian | 写入本地 Vault，复制图片，保护原有笔记 | Vault 路径和课程子目录；无需 API key |
-| 飞书 | 可写连接器或官方 DOCX 异步导入；也可验证 UI 导入 | 课程文件夹与应用/用户授权 |
-| 腾讯文档 | 可写连接器或官方 COS 上传/异步导入 API；也可验证 UI 导入 | Client ID、Open ID、Token 的环境引用与文件夹 |
-| 钉钉 | 可写连接器或官方授权 `dws` CLI；也可验证 UI 导入 | 课程文件夹/知识库与有效授权 |
-| 其他支持 DOCX/Markdown 的平台 | 宿主可写连接器或通用导入文件 | 平台实际支持的导入/写入工具 |
+| PDF / Markdown / DOCX | 本地文件；PDF 可选副本 | 课程目录；仅 PDF 需要 XeLaTeX |
+| Notion | 官方 `ntn` 调用页面/Markdown/图片 API，或已授权 API 连接器 | 课程父页面链接，按需完成官方工作区登录 |
+| Obsidian | 本地 Vault Markdown + 图片（明确保留的例外） | Vault 路径和课程子目录；无需 API key |
+| 飞书 | 官方 `lark-cli` 以用户身份调用上传、导入和读取 API | 课程文件夹链接，按需完成应用配置与用户授权 |
+| 腾讯文档 | 官方 COS 上传/异步导入 API，或已授权 API 连接器 | 官方应用/OAuth 授权与文件夹；由 Agent 指导私有凭据配置 |
+| 钉钉 | 官方 `dws` CLI 调用文档服务，或已授权 API 连接器 | 课程位置与官方登录；组织须允许当前成员使用 CLI |
+| 其他支持 DOCX/Markdown 的平台 | 明确接受的可写连接器或导入路线 | 实际支持的写入方式与位置 |
 
-本地生成、审核、异步上传与验证交付分别记录。**仅主要目标验证成功才推进课程**；导入包准备完成不等于云文档已生成。中断后复用已保存的任务/文档；结果不明时先核对，避免重复创建。Obsidian 的跨设备同步由现有同步软件负责。网页导入能否无人值守依赖宿主工具和登录状态。
+Notion、飞书和 Obsidian 新增 `connect` 连接检查与命名连接复用。连接记录只含账号/位置等元数据，凭据交由官方工具或私有凭据环境管理；课程保留固定快照，不随连接修改而改写保存位置。用户无需手写 JSON、查找对象 ID 或把密钥贴到聊天中。具体授权步骤和错误引导属于安装包内的 [首次连接指南](skills/omni-learning-anything/references/onboarding.md)。
 
-2026-10-25 补充验收：**飞书浏览器 Word 导入已通过**，涵盖计划与 Day01 的在线转换、标题写入、图文/链接、保存重开和回执复用；API 直连及无人值守调度仍未实测。详见[飞书验收记录](docs/feishu-acceptance-2026-10-25.md)。
+本地生成、审核、上传任务与验证交付分别记录。**只有主要目标验证成功才推进课程**；只读连接检查不证明写入权限，文件准备或 API 创建响应也不等于内容验收完成。中断复用既有任务/文档，写入结果不明时先核对。浏览器导入须明确接受，单独标注验收方式；Obsidian 跨设备同步及无人值守运行需另行验证。旧课程继续使用原配置；已批准课程变更保存位置时需保留旧档案并创建新版本。
 
-2026-10-18 发布时的验收范围：Notion 的计划和 Day01 已完成私人页面 Word 导入、全文/图片/五个链接检查、重新打开和重复发布验证；Obsidian 已补充原生客户端阅读检查，跨设备同步未验收。飞书上传失败、腾讯文档界面入口超时，钉钉已完成官方 CLI 登录和私人目录创建但 OSS 上传失败；按用户要求暂停这些未完成路径。API 合约测试与真实账号成功分别记录。
+真实账号历史：Notion 的 2026-10-18 结果为 Word **浏览器导入**；Obsidian 为 **本地 Vault 写入及原生阅读检查**；飞书的 2026-10-25 结果为 Word **浏览器导入**。这些结果不证明新的官方 API 路线已通过账号验收。新增 CLI/API 连接与文档验收进度见 [v2.1.0 验证记录](docs/release-validation-v2.1.0.md)。腾讯文档和钉钉的文档写入真实验收仍未通过，不与合约测试混称。
 
-English: on 2026-10-25, Feishu browser Word import acceptance passed for the plan and Day01, including title edits, text/image/link checks, cloud save/reopen and receipt reuse. Direct API access and unattended scheduling remain untested. At v2.0.1 publication (2026-10-18), account acceptance passed for Notion Word UI imports (plan and Day01) and Obsidian native reading. Notion API remains contract-tested; Obsidian cross-device sync is unverified. Feishu/Tencent Docs and DingTalk document import acceptance was incomplete at that publication date. See the dated acceptance reports.
+English: cloud documents default to official APIs, using an authorized writable API connector or official CLI. The learner provides a destination link and completes official grants; the agent handles setup, identifiers, connection checks and publication. Named connections for Notion/Feishu/Obsidian keep metadata only; approved courses retain fixed snapshots. Two or three short connection exchanges is a target, subject to platform/organization prerequisites. Obsidian intentionally writes local Vault files. Browser import is an explicitly accepted fallback and never counts as API account acceptance. See the [onboarding guide](skills/omni-learning-anything/references/onboarding.md) and [exact validation scope](docs/release-validation-v2.1.0.md).
 
-版本兼容：旧课程继续使用原 PDF 流程；变更已批准的目标位置时保留旧档案并创建明确的新课程版本。原历史 PDF 样例及来源日期没有重新标注为 v2 新生成结果。
-
-English: choose a destination at intake. Writable host connections are reused; official API/CLI adapters support the five named platforms. Missing authorization/location gets focused follow-up questions. Secrets stay in private environment variables. Markdown/DOCX/cloud delivery does not require TeX. Progress waits for a verified primary destination, and uncertain writes are reconciled rather than blindly recreated. Generic import compatibility is not a native API or live-account claim for every document app.
-
-[接入与恢复说明](skills/omni-learning-anything/references/delivery.md) · [v2.0.1 真实账号验收](docs/release-validation-v2.0.1.md) · [v2.0.0 实现验证](docs/release-validation-v2.0.0.md)
+[接入与恢复说明](skills/omni-learning-anything/references/delivery.md) · [飞书 UI 验收](docs/feishu-acceptance-2026-10-25.md) · [v2.0.1 真实账号记录](docs/release-validation-v2.0.1.md) · [v2.0.0 实现验证](docs/release-validation-v2.0.0.md)
 
 ## 你想学什么？ / What would you like to learn?
 
@@ -163,7 +159,7 @@ https://github.com/ShawnRen57/omni-learning-anything
 安装后确认技能可发现，并告诉我如何开始使用。
 ```
 
-客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v2.0.1.zip)，按下方步骤完成。
+客户端要求手动上传时，下载 [Skill ZIP](dist/omni-learning-anything-skill-v2.1.0.zip)，按下方步骤完成。
 
 #### b. 手动安装（按平台）
 
@@ -187,7 +183,7 @@ Agent 会检查学习材料所需的工具与 Python 3.10+ 及所选格式依赖
 用 omni-learning-anything 带我学习西方建筑史，目标是旅行时能看懂建筑。
 ```
 
-Agent 会集中追问：学习目标和已有基础、学习多少天、每天几分钟、每日执行时间与时区、是否包括周末、文档语言、目标文档平台及保存位置；连接器、授权或凭据引用缺失时会继续分轮确认。你已经提供的信息不会重复询问。
+Agent 会补齐学习目标、基础、天数、每天时长、执行时间/时区、周末、语言和保存位置。云文档通常只需你提供父页面/文件夹链接并按需完成官方登录，Agent 处理其余配置。若需要申请 API 应用或管理员权限，会给出对应平台的具体操作指引；已经确认的信息和可用授权会复用。
 
 也可以一次说完整：
 
@@ -235,7 +231,7 @@ Prefer the latest lightweight Skill ZIP in Releases. Use this client's native
 skill installation mechanism, keep all bundled resources, then verify discovery.
 ```
 
-If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v2.0.1.zip) and follow the steps below.
+If the client requires an upload, download the [Skill ZIP](dist/omni-learning-anything-skill-v2.1.0.zip) and follow the steps below.
 
 #### b. Manual installation by agent
 
@@ -257,7 +253,7 @@ The agent checks research, execution, image and selected document tools. Python 
 Use $omni-learning-anything to teach me Western architectural history so I can understand buildings when traveling.
 ```
 
-The agent asks for missing goals, prior knowledge, course length, daily study time, execution time/timezone, weekdays, language, document platform and output folder. Additional short rounds collect only the chosen platform’s missing authorization or environment-variable references. For a complete request:
+The agent asks for missing goals, prior knowledge, course length, daily study time, execution time/timezone, weekdays, language, document platform and output folder. For cloud delivery, provide the course parent/folder link and complete official login only when needed; the agent handles setup and reuses adequate authorization. Platform-specific app/admin prerequisites get concrete guidance. For a complete request:
 
 ```text
 Use $omni-learning-anything to help me learn Agent product design. I am a product manager

@@ -1,6 +1,6 @@
 # Destinations, intake and verified delivery
 
-New courses explicitly choose a destination. Reuse known preferences and inspect actual host tools first; do not ask for API credentials when a writable connector is already authorized. Legacy configs without `delivery` remain PDF courses.
+New courses explicitly choose a destination. Reuse known preferences and inspect actual authorized API tools first; do not ask for new credentials when an adequate writable API connector is already authorized. Read [guided onboarding](onboarding.md) for the default conversation and connection commands. Legacy configs without `delivery` remain PDF courses.
 
 ## Intake examples
 
@@ -8,7 +8,7 @@ Missing platform: “学习计划和每日材料希望放到哪里：PDF、本�
 
 Platform selected, missing location: “你已选择飞书。请提供课程文件夹链接；已有可写连接器会直接复用，否则再配置应用授权。”
 
-Missing credential reference: “当前没有可写 Notion 连接器。请在本机私有环境中设置令牌，并告诉我环境变量名，以及授权给该连接的课程父页面。不要把令牌发到聊天。”
+Missing authorization: “我会发起 Notion 官方登录。请在官方页面核对验证码和工作区并完成授权；随后由我检查课程父页面并创建计划。”
 
 Actual access failure: explain the missing permission/expired credential, preserve pending material, and offer the smallest correction or an accepted import/local route. Do not treat a long unanswered question as approval to change platforms. Confirmed choices persist for the course; there is no monthly re-confirmation rule.
 
@@ -20,28 +20,28 @@ Actual access failure: explain the missing permission/expired credential, preser
 {
   "delivery": {
     "platform": "notion",
-    "mode": "api",
-    "destination": {"parent_page_id": "COURSE_PARENT_PAGE_ID"},
-    "credential_env": {"token": "OMNI_NOTION_TOKEN"}
+    "mode": "cli",
+    "account_id": "VERIFIED_OFFICIAL_CLI_ID",
+    "destination": {"parent_page_id": "CONFIRMED_COURSE_PARENT_PAGE_ID"}
   }
 }
 ```
 
-Environment references are variable names, not secrets. A private env-file can live outside the repository/course; use the host's approved credential loader to populate the subprocess environment. The CLI deliberately does not evaluate/source arbitrary env files. Do not echo environment contents. Automatic OAuth creation, scope expansion or account changes remain subject to the host's permission rules.
+For Notion/Feishu new connections, use the exact `delivery` returned by `connect`; the official CLI manages credentials. Optional `cli_profile` (Feishu) or `destination.workspace_id` (Notion) fixes the selected configuration. Existing `mode: api` remains supported with `credential_env` variable names, not secrets. A private env-file can live outside the repository/course; use the host's approved credential loader to populate the subprocess environment. The CLI deliberately does not evaluate/source arbitrary env files. Do not echo environment contents. Automatic OAuth creation, scope expansion or account changes remain subject to the host's permission rules.
 
 | Platform | Modes | Confirmed destination | Default export |
 | --- | --- | --- | --- |
 | pdf / markdown / docx | local or host | Local course folder; host recipient if relevant | Matching format |
 | obsidian | local | Existing `vault_path`, safe relative `subdir` | Markdown + copied image |
-| notion | api, host, import | Course `parent_page_id` | Markdown + image upload |
-| feishu | api, host, import | Course `folder_token` | DOCX + Markdown |
+| notion | cli (default), api, host, import | Course `parent_page_id` | Markdown + image upload |
+| feishu | cli (default), api, host, import | Course `folder_token` | DOCX + Markdown |
 | tencent | api, host, import | Course `folder_id` | DOCX + Markdown |
 | dingtalk | cli, host, import | Course `folder_id` or `workspace_id` | DOCX + Markdown |
 | generic | host, import | Actual host-confirmed document location | DOCX + Markdown |
 
 Use API identifiers in API configs; extract them from a supplied URL only after inspecting the platform's documented URL form and access. IDs are not authentication tokens. A cloud course parent/folder is selected or created during intake with authorized host tools; the publisher creates plan/daily documents inside it. Never choose a shared/team space merely because it is visible.
 
-`delivery-check` performs local config/environment validation only. `ready: true` is not remote authorization proof. Only `publish` plus provider readback can verify API/CLI delivery; connector/UI modes use actual tool evidence.
+`connect` performs read-only remote identity/location checks for Notion/Feishu; it does not test write permission. `delivery-check` performs local config/environment validation only. `ready: true` is not remote authorization proof. Only `publish` plus provider readback can verify API/CLI delivery; connector/UI modes use actual tool evidence.
 
 ## Provider guides
 

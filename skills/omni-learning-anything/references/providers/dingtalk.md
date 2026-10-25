@@ -1,6 +1,6 @@
 # 钉钉 / DingTalk
 
-Prefer available writable host tools. Otherwise the supported direct route is the official DingTalk Workspace CLI `dws`; the skill does not invent an undocumented REST interface or request arbitrary app keys. Confirm existing authorized login and a course `folder_id` or `workspace_id`.
+Prefer an already authorized writable official API connector. See [onboarding](../onboarding.md) for focused setup dialogue. Otherwise the supported direct route is the official DingTalk Workspace CLI `dws`; the skill does not invent an undocumented REST interface or request arbitrary app keys. Confirm existing authorized login and a course `folder_id` or `workspace_id`.
 
 Install/login through official documented channels when needed. Enterprise/admin authorization may be required; do not claim a personal desktop login grants CLI scopes. OAuth success can still be rejected by the organization CLI data-access check. Have the administrator enable and save CLI access for the current member in the same organization, then log in again; `dws doctor --json` can distinguish auth and network failures. Do not repeatedly reissue device codes before the actual setting changes. Do not materialize tokens in the course or scheduler prompt.
 

@@ -49,7 +49,7 @@ def load(name,base=None):
     info=path.stat()
     if os.name=='posix' and (info.st_uid!=os.getuid() or stat.S_IMODE(info.st_mode)&0o077):raise ValueError('Connection profile must be owned by this user with owner-only permissions.')
     value=json.loads(path.read_text())
-    if set(value)!={'version','delivery'} or value['version']!=1:raise ValueError('Invalid connection profile.')
+    if not isinstance(value,dict) or set(value)!={'version','delivery'} or value['version']!=1:raise ValueError('Invalid connection profile.')
     validate_delivery(value['delivery'])
     return value['delivery']
 

@@ -1,6 +1,10 @@
 # Notion
 
-Prefer a writable host Notion connector; inspect its creation, media and readback schemas. Search-only connectors cannot deliver documents. Without one use `platform: notion`, `mode: api`, `destination.parent_page_id`, `credential_env.token`. The parent must be a confirmed course page shared with the integration. Extract a page ID from a supplied URL; preserve UUID hyphens consistently.
+Default new connection: official `ntn` CLI API transport, or an already authorized writable official API connector with create/media/readback support. See [onboarding](../onboarding.md). The learner supplies the confirmed course parent-page link; the agent extracts its ID and runs `connect --platform notion --location LINK`. It returns read-only readiness or a specific setup step.
+
+If needed, the agent installs official `ntn`, checks current help, initiates `ntn login --no-browser`, and forwards the generated official URL and verification code. The learner opens it, checks matching code/account/workspace and approves. After confirmation the agent runs `ntn login poll`, then repeats `connect`. CLI login requires full workspace membership; guests/restricted members must resolve their role or use an explicitly supported authorized API alternative. Tokens stay in the official CLI's OS keychain. Do not call token-export commands or silently turn off keychain storage. Existing `NOTION_API_TOKEN` overrides keychain authorization, so check the resulting identity; never print its value. For multiple workspaces use the confirmed `--workspace-id` instead of switching defaults.
+
+The returned delivery uses `platform: notion`, `mode: cli`, verified `account_id` and `destination.parent_page_id`; optional `destination.workspace_id`. The adapter checks the same identity before any write. Existing `mode: api` with `credential_env.token` stays supported for privately configured tokens; share the confirmed parent with that integration and grant only necessary read/insert capabilities. A browser session alone supplies neither route's API grant.
 
 The bundled adapter pins `Notion-Version: 2026-03-11`, uploads a PNG/JPEG (<=20 MB) through `/v1/file_uploads` and `/send`, creates a Markdown page through `/v1/pages`, and attaches a file-upload image block. It removes local image paths before cloud creation. It reads page parent/title, all root image blocks and Markdown sections/source links before verifying. A page returned from create is not by itself verified.
 
@@ -12,7 +16,11 @@ For UI import, `mode: import` now defaults to embedded DOCX plus Markdown; `publ
 
 Real-account acceptance on 2026-10-18: plan and Day01 Word imports, bilingual content, image/credit, five URL destinations per page, parent placement, reopen and verified-receipt reuse passed. This does not validate the direct API route.
 
-Official sources checked 2026-10-14:
+Official sources (CLI authorization/installation checked 2026-10-25; content API references checked 2026-10-14):
+- https://developers.notion.com/cli/get-started/installation
+- https://developers.notion.com/cli/get-started/authentication
+- https://developers.notion.com/cli/guides/api-requests
+- https://developers.notion.com/cli/guides/file-uploads
 - https://developers.notion.com/guides/data-apis/working-with-markdown-content
 - https://developers.notion.com/guides/data-apis/uploading-small-files
 - https://developers.notion.com/reference/patch-block-children

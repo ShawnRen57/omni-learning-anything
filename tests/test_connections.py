@@ -78,3 +78,12 @@ class ConnectionTests(unittest.TestCase):
             r=p.connect('notion','https://notion.so/0123456789abcdef0123456789abcdef',client=Client(),save_as='course',profile_dir=base)
             self.assertFalse(r['ready']);self.assertEqual(r['stage'],'destination')
             self.assertNotIn('SECRET',str(r));self.assertFalse(base.exists())
+
+    def test_corrupt_profile_is_skipped_without_breaking_other_connections(self):
+        p=self.module()
+        target={'platform':'feishu','mode':'cli','account_id':'user','destination':{'folder_token':'qa'}}
+        with tempfile.TemporaryDirectory() as tmp:
+            p.save('valid',target,tmp)
+            for name,value in [('list',[]),('null',None),('delivery',{'version':1,'delivery':None})]:
+                path=Path(tmp)/(name+'.json');path.write_text(json.dumps(value));path.chmod(0o600)
+            self.assertEqual([item['name'] for item in p.list_connections(tmp)],['valid'])

@@ -25,6 +25,14 @@ Markdown: use the generated local HTML preview plus the source/asset links. Obsi
 
 Secrets stay outside installed/course/repository files. API scripts consume only named environment variables, never raw JSON secrets or authentication headers returned to chat. For DingTalk use authorized official `dws`; host/UI routes require actual document tools and may not work unattended.
 
+## Official cloud tools
+
+For new Notion/Feishu courses, follow [onboarding](onboarding.md). The agent checks existing writable official API tools and installs only the selected official CLI when needed. Inspect current official runtime requirements/help first, use an isolated install when appropriate, and report the executable path/version. Do not automatically change global host defaults.
+
+Notion: [official installation](https://developers.notion.com/cli/get-started/installation), npm package `ntn` (inspected 0.23.25; Node 22+/npm 10+). Feishu: [official larksuite/cli](https://github.com/larksuite/cli), `npx @larksuite/cli@latest install` or the matching official release (inspected 1.0.98). Check package origin/platform; verify published checksums for downloaded binaries. Ensure the actual scheduled host sees the same binary/profile/credential context.
+
+Upstream CLIs own authentication and secure storage. Never export a token for the adapter, inspect private CLI stores, disable keychain storage silently, or install a community credential plugin as a replacement. A missing keychain is a concrete setup blocker or requires an explicitly configured private API credential alternative. The helper does not embed a hosted OAuth service. Tencent and DingTalk retain their selected provider's official API/CLI prerequisites.
+
 ## XeLaTeX
 
 First check PATH, then existing TinyTeX installations. The renderer recognizes PATH, macOS `~/Library/TinyTeX/bin/*`, Linux `~/.TinyTeX/bin/*` and `/Library/TeX/texbin`. Other locations may be added to PATH. It never uses an HTML/reportlab fallback under the label "LaTeX PDF".
