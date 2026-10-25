@@ -6,7 +6,7 @@ Resolve the script from the installed skill's directory. In examples `OMNI` mean
 
 Keep learner data in a dedicated writable course archive, not in the installed bundle.
 
-`config.json`: existing topic/goal/baseline, positive `daily_minutes`, IANA `timezone`, valid `time` HH:MM, nonempty weekday codes MO–SU, `language` zh/en, booleans `immediate_day01` and `sample_mode`; new courses also have explicit `delivery` from [delivery.md](delivery.md).
+`config.json`: existing topic/goal/baseline, positive `daily_minutes`, IANA `timezone`, valid `time` HH:MM, nonempty weekday codes MO–SU, `language` en/zh/ja/ko/es/fr/de/pt/ru/ar, booleans `immediate_day01` and `sample_mode`; new courses also have explicit `delivery` from [delivery.md](delivery.md).
 
 `plan.json`: topic, title, ordered consecutive `days` from 1 (topic/objective), sections (title/plain-text body), sources and figure. Include all daily topics and schedule visibly in sections, not only in the days array.
 
@@ -21,7 +21,7 @@ Figure: `{"path":"assets/teaching.png","caption":"What to notice","credit":"Sour
 0. Follow [onboarding](onboarding.md): `connect --platform notion|feishu|obsidian --location CONFIRMED_LOCATION [--save-as NAME]`, or `connect --connection NAME` to recheck saved metadata. `connection-list`/`connection-show --name NAME` never print secrets. Copy successful `delivery` into new intake config; `connect` never mutates an existing course.
 1. Write intake in private staging; `OMNI init --config /staging/config.json --plan /staging/plan.json`. Existing projects are never overwritten. Copy the teaching image under course/assets.
 2. `OMNI delivery-check` shows only the selected target's missing config/env information. It does not make network calls or certify account access.
-3. `OMNI render --input /course/plan.json --key plan` uses the destination default. Repeated `--format markdown --format docx` selects extra formats; `--format pdf --format docx` produces a combined hash-bound set. Markdown-only routes never load PDF libraries.
+3. `OMNI render --input /course/plan.json --key plan` uses the destination default. Repeated `--format markdown --format docx` selects extra formats; `--format pdf --format html` produces a combined hash-bound set. Markdown-only routes never load PDF libraries.
 4. Inspect the entire rendered output; `OMNI review --key plan --note "Actual text/image/link/layout observations"` is an agent attestation, not automatic visual inspection.
 5. `OMNI publish --key plan`: direct adapters publish/read back, local modes verify files, host/import modes prepare a bound receipt. Use actual host tools and `receipt-record` for the latter. Show the verified plan/link and schedule summary, then obtain explicit learner approval.
 6. `OMNI approve`; create/verify the actual host schedule and `OMNI schedule-record --host HOST --job-id ACTUAL_ID`. Sample projects cannot schedule. These scripts never create host tasks themselves.
@@ -39,3 +39,5 @@ Config and plan are hash-bound. Old sample source dates and hashes remain untouc
 A project lock prevents concurrent mutations. If `.omni-learning-anything.lock` remains after a crash, first verify the process stopped, then remove only that empty directory. Do not delete receipts/state to bypass uncertainty or daily limits.
 
 Failed export leaves no accepted new manifest. Correct input and retry the same day. API tasks/pages and Vault content are reused according to [receipt recovery](delivery.md#recovery). Notification and storage are separate; check host history on unclear notification outcomes.
+
+HTML: select `delivery: {"platform":"html","mode":"local"}` for a standalone offline file, or add `--format html` to a combined set. `tencent-auth login --name NAME` runs official OAuth with PKCE/local callback; `status` reports no secrets. `connect` supports all five named platforms plus Obsidian; Tencent takes `--auth-profile`, DingTalk pins `--cli-profile` as organization:user. See the selected [onboarding](onboarding.md) route.

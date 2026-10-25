@@ -3,6 +3,7 @@ import base64
 import hashlib
 import io
 import os
+import re
 from zipfile import ZipFile
 from xml.etree import ElementTree
 from omni_http import HTTP, business, segment, document_data, check_text, check_links, verified
@@ -33,10 +34,29 @@ def check_docx(contents, data):
         raise ValueError('Exported Tencent document is missing its figure.')
     with ZipFile(io.BytesIO(contents)) as z:
         relationships=ElementTree.fromstring(z.read('word/_rels/document.xml.rels'))
-        check_links('\n'.join(r.get('Target','') for r in relationships), data)
+        urls={r.get('Target','') for r in relationships if r.get('Type','').endswith('/hyperlink')}
+        tree=ElementTree.fromstring(z.read('word/document.xml'));w='{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+        stack=[];instructions=[]
+        for node in tree.iter():
+            if node.tag==w+'fldSimple':instructions.append(node.get(w+'instr',''))
+            if node.tag==w+'fldChar':
+                kind=node.get(w+'fldCharType')
+                if kind=='begin':stack.append({'instruction':'','separate':False})
+                elif kind=='separate' and stack:stack[-1]['separate']=True
+                elif kind=='end' and stack:
+                    field=stack.pop()
+                    if field['separate']:instructions.append(field['instruction'])
+            elif node.tag==w+'instrText' and stack:stack[-1]['instruction']+=node.text or ''
+        for instruction in instructions:
+            match=re.match(r'^\s*HYPERLINK\s+(?:"([^"\r\n]+)"|(https?://[^\s]+))',instruction,re.I)
+            if match:urls.add(match.group(1) or match.group(2))
+        if not {s['url'] for s in data['sources']}.issubset(urls):raise ValueError('Exported Tencent document is missing semantic source links.')
 
 
 def publish(root, manifest, target, receipt, checkpoint, client=None, cos_upload=None):
+    if target.get('mode')=='mcp':
+        from omni_tencent_mcp import publish as mcp_publish
+        return mcp_publish(root,manifest,target,receipt,checkpoint,client=client)
     client = client or HTTP(); cos_upload = cos_upload or upload_cos
     refs = target['credential_env']
     headers = {'Client-Id': os.environ[refs['client_id']], 'Open-Id': os.environ[refs['open_id']],

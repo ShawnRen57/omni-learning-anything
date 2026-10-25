@@ -22,7 +22,7 @@ class PackageTests(unittest.TestCase):
                 path = skill / relative; path.parent.mkdir(exist_ok=True); path.write_text('PRIVATE_SENTINEL')
             p = subprocess.run([sys.executable, str(root / 'tools/package_skill.py')], capture_output=True, text=True)
             self.assertEqual(p.returncode, 0, p.stderr)
-            archive = root / 'dist/omni-learning-anything-skill-v2.1.0.zip'
+            archive = root / 'dist/omni-learning-anything-skill-v2.2.0.zip'
             self.assertTrue(archive.exists())
             with ZipFile(archive) as z:
                 self.assertIn('omni-learning-anything/scripts/omni_delivery.py', z.namelist())

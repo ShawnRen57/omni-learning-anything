@@ -5,6 +5,7 @@ import re
 import shutil
 import shlex
 import stat
+import sys
 from pathlib import Path
 from urllib.parse import parse_qs,urlsplit
 from omni_delivery import validate_delivery
@@ -32,6 +33,16 @@ def location(platform,value):
         found=re.fullmatch(r'/drive/folder/([a-zA-Z0-9]+)/?',u.path)
         if not (host=='feishu.cn' or host.endswith('.feishu.cn')) or not found:raise ValueError('Select a Feishu course folder link, not a document or Wiki link.')
         return {'folder_token':found.group(1)}
+    if platform=='tencent':
+        if host!='docs.qq.com':raise ValueError('Select an official Tencent Docs folder or home link.')
+        if u.path.rstrip('/') in ('/desktop','/desktop/mydoc'):return {'folder_id':'/'}
+        found=re.fullmatch(r'/desktop/mydoc/folder/([A-Za-z0-9_-]+)/?',u.path)
+        if not found:raise ValueError('Select a Tencent personal folder link or confirm the home root.')
+        return {'folder_id':found.group(1)}
+    if platform=='dingtalk':
+        found=re.fullmatch(r'/i/nodes/([A-Za-z0-9_-]+)/?',u.path)
+        if host!='alidocs.dingtalk.com' or not found:raise ValueError('Select an official DingTalk document folder link.')
+        return {'folder_id':found.group(1)}
     raise ValueError('Guided connect currently supports Notion, Feishu and Obsidian.')
 
 
@@ -90,25 +101,46 @@ def blocked(platform,stage,action,command=None,scopes=()):
     return result
 
 
-def connect(platform=None,value=None,*,client=None,save_as=None,profile_dir=None,connection=None,cli_profile=None,workspace_id=None,subdir='Omni Learning'):
+def connect(platform=None,value=None,*,client=None,save_as=None,profile_dir=None,connection=None,cli_profile=None,workspace_id=None,auth_profile=None,subdir='Omni Learning'):
     if connection:
-        if any(x is not None for x in (platform,value,cli_profile,workspace_id)):raise ValueError('Reuse the saved connection without overriding its account/destination; create a new named connection for changes.')
+        if any(x is not None for x in (platform,value,cli_profile,workspace_id,auth_profile)):raise ValueError('Reuse the saved connection without overriding its account/destination; create a new named connection for changes.')
         target=load(connection,profile_dir);platform=target['platform']
     else:
-        if platform not in ('notion','feishu','obsidian'):raise ValueError('Choose Notion, Feishu or Obsidian.')
+        if platform not in ('notion','feishu','obsidian','dingtalk','tencent'):raise ValueError('Choose Notion, Feishu, DingTalk, Tencent Docs or Obsidian.')
         if not value:return blocked(platform,'location','Ask only for the course parent-page/folder link, or the local Vault path.')
         dest=location(platform,value)
         if platform=='obsidian':dest['subdir']=subdir
         if platform=='notion' and workspace_id:dest['workspace_id']=workspace_id
-        target={'platform':platform,'mode':'local' if platform=='obsidian' else 'cli','destination':dest}
+        target={'platform':platform,'mode':'local' if platform=='obsidian' else ('mcp' if platform=='tencent' else 'cli'),'destination':dest}
+        if auth_profile:
+            if platform!='tencent':raise ValueError('OAuth authorization profiles apply only to Tencent Docs.')
+            target['auth_profile']=auth_profile
         if cli_profile:
-            if platform!='feishu':raise ValueError('CLI profiles apply only to Feishu.')
+            if platform not in ('feishu','dingtalk'):raise ValueError('CLI profiles apply to Feishu or DingTalk.')
             target['cli_profile']=cli_profile
     validate_delivery(target)
     if platform=='obsidian':
         path=Path(target['destination']['vault_path'])
         if not path.is_dir() or not os.access(path,os.W_OK):return blocked(platform,'destination','Make the confirmed Vault directory available and writable.')
         identity=None
+    elif platform=='tencent':
+        from omni_tencent_mcp import Client
+        if not target.get('auth_profile'):
+            return blocked(platform,'authorization','Agent starts official Tencent OAuth login and shows the exact link; learner reviews the account and document permissions.',[sys.executable,str(Path(__file__).with_name('omni_learning.py')),'tencent-auth','login','--name','personal-tencent'])
+        client=client or Client(target)
+        try:
+            identity=client.check_identity();target['account_id']=identity['id'];client.check_destination(target['destination'])
+        except (ValueError,RuntimeError):return blocked(platform,'authorization','Check the selected OAuth profile and exact account/permission error; keep this destination. Reauthorize only if needed.',['omni_learning.py','tencent-auth','login','--name',target['auth_profile']])
+    elif platform=='dingtalk':
+        from omni_dingtalk import DingTalkCLI
+        if not shutil.which('dws'):return blocked(platform,'install','Agent installs the official dws CLI after verifying the release checksum.','https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases')
+        client=client or DingTalkCLI(target)
+        try:
+            identity=client.check_identity();target['account_id']=identity['id']
+            target['cli_profile']=target.get('cli_profile') or identity['id']
+            if isinstance(client,DingTalkCLI):client.target=target
+            client.check_destination(target['destination'])
+        except (ValueError,RuntimeError):return blocked(platform,'authorization','Check current dws auth status/doctor; complete official login or the exact organization CLI permission if required. Preserve the selected organization and folder.',['dws','auth','login'])
     else:
         binary={'notion':'ntn','feishu':'lark-cli'}[platform]
         if not shutil.which(binary):return blocked(platform,'install','Agent installs ' + binary + ' from its official distribution, then checks existing authorization.',INSTALL[platform])

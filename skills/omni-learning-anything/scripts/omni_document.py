@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 import omni_core as c
+from omni_locale import language, subtitle, CJK_FONTS, ARABIC_FONTS
 
 
 def validate_document(data,root):
@@ -64,28 +65,22 @@ def prepare(root, input_path, key):
     return data, plan, config
 
 
-def subtitle(data, plan, config, date, key):
-    if key == 'plan':
-        label = f"Learning plan / {len(plan['days'])} days" if config.get('language') == 'en' else f"学习计划 / {len(plan['days'])} 天"
-    else:
-        label = f"{key}/{len(plan['days'])} | Read {data['reading_minutes']} min + practice {data['practice_minutes']} min" if config.get('language') == 'en' else f"{key}/{len(plan['days'])} | 阅读 {data['reading_minutes']} 分钟 + 练习 {data['practice_minutes']} 分钟"
-    return f'{date} | {label}'
-
-
 def markdown_text(data, plan, config, date, key, image_ref):
+    labels=language(config.get('language','zh'))
     lines = ['# ' + data['title'], subtitle(data, plan, config, date, key)]
     for i, section in enumerate(data['sections']):
         lines.extend(['## ' + section['title'], section['body']])
         if i == min(1, len(data['sections']) - 1):
             lines.extend([f"![{data['figure']['caption']}]({image_ref})", data['figure']['credit']])
-    lines.append('## Further reading (optional)' if config.get('language') == 'en' else '## 扩展学习（选读）')
+    lines.append('## '+labels['further'])
     for source in data['sources']:
-        lines.append(f"- [{source['id']}] [{source['title']}]({source['url']}): {source['note']}; {source['publisher']} | Published: {source['published_at']} | Checked: {source['checked_at']}")
+        lines.append(f"- [{source['id']}] [{source['title']}]({source['url']}): {source['note']}; {source['publisher']} | {labels['published']}: {source['published_at']} | {labels['checked']}: {source['checked_at']}")
     return '\n\n'.join(lines) + '\n'
 
 
-def cjk_font(match=None):
-    candidates = ('FangSong', 'FangSong_GB2312', 'STSong', 'Songti SC', 'Noto Serif CJK SC', 'Source Han Sans CN', 'SimSun', 'Arial Unicode MS')
+def cjk_font(match=None, language='zh'):
+    candidates = CJK_FONTS.get(language,CJK_FONTS['zh'])
+    fallback = ('Hiragino Mincho ProN' if sys.platform=='darwin' else 'Noto Serif CJK JP') if language=='ja' else (('Apple SD Gothic Neo' if sys.platform=='darwin' else 'Noto Serif CJK KR') if language=='ko' else ('STSong' if sys.platform=='darwin' else ('SimSun' if sys.platform=='win32' else 'Noto Serif CJK SC')))
     if match is None:
         binary = shutil.which('fc-match')
         if binary:
@@ -94,14 +89,14 @@ def cjk_font(match=None):
                 return result.stdout if result.returncode == 0 else ''
         else:
             # Fontconfig is optional. Use platform-native CJK families when unavailable.
-            return 'STSong' if sys.platform == 'darwin' else ('SimSun' if sys.platform == 'win32' else 'Noto Serif CJK SC')
+            return fallback
     for name in candidates:
         families = [s.strip().casefold() for s in match(name).split(',')]
         if name.casefold() in families:
             return name
     # DOCX stores Unicode/font declarations; cloud viewers may have fonts the authoring
     # host lacks. Rendering remains a separate inspection requirement.
-    return 'STSong' if sys.platform == 'darwin' else ('SimSun' if sys.platform == 'win32' else 'Noto Serif CJK SC')
+    return fallback
 
 
 def write_docx(path, data, plan, config, image, date, key):
@@ -111,10 +106,12 @@ def write_docx(path, data, plan, config, image, date, key):
     from docx.oxml.ns import qn
     from docx.opc.constants import RELATIONSHIP_TYPE as RT
     from PIL import Image
+    labels=language(config.get('language','zh'))
     document = Document()
     document.core_properties.author = 'Omni Learning Anything'
     document.core_properties.title = data['title']
-    east_asian_font = cjk_font()
+    east_asian_font = cjk_font(language=labels['code'])
+    complex_font = 'Geeza Pro' if sys.platform=='darwin' else 'Noto Naskh Arabic'
     for style in document.styles:
         for border in style.element.xpath('.//w:pBdr'):
             border.getparent().remove(border)
@@ -126,6 +123,8 @@ def write_docx(path, data, plan, config, image, date, key):
         style.font.name = 'Times New Roman'; style.font.size = Pt(11 if name == 'Normal' else 16)
         fonts = style.element.get_or_add_rPr().rFonts
         fonts.set(qn('w:eastAsia'), east_asian_font)
+        if labels['dir']=='rtl':fonts.set(qn('w:cs'),complex_font)
+        lang=OxmlElement('w:lang');lang.set(qn('w:val'),labels['code']);lang.set(qn('w:bidi'),labels['code']);style.element.get_or_add_rPr().append(lang)
         for attr in ('asciiTheme', 'hAnsiTheme', 'eastAsiaTheme', 'cstheme'):
             fonts.attrib.pop(qn('w:' + attr), None)
     document.styles['Normal'].paragraph_format.space_after = Pt(7)
@@ -143,7 +142,7 @@ def write_docx(path, data, plan, config, image, date, key):
             shape._inline.docPr.set('descr', data['figure']['caption'])
             document.add_paragraph(data['figure']['caption'])
             document.add_paragraph(data['figure']['credit'])
-    document.add_heading('Further reading (optional)' if config.get('language') == 'en' else '扩展学习（选读）', 1)
+    document.add_heading(labels['further'], 1)
     for source in data['sources']:
         p = document.add_paragraph(f"[{source['id']}] ")
         link = OxmlElement('w:hyperlink')
@@ -152,15 +151,36 @@ def write_docx(path, data, plan, config, image, date, key):
         color = OxmlElement('w:color'); color.set(qn('w:val'), '227E82'); properties.append(color)
         run.append(properties); text = OxmlElement('w:t'); text.text = source['title']; run.append(text)
         link.append(run); p._p.append(link)
-        p.add_run(f": {source['note']}; {source['publisher']} | Published: {source['published_at']} | Checked: {source['checked_at']}")
+        p.add_run(f": {source['note']}; {source['publisher']} | {labels['published']}: {source['published_at']} | {labels['checked']}: {source['checked_at']}")
+    if labels['dir']=='rtl':
+        from copy import deepcopy
+        arabic=r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]'
+        for paragraph in document.paragraphs:
+            properties=paragraph._p.get_or_add_pPr()
+            bidi=OxmlElement('w:bidi');bidi.set(qn('w:val'),'1');properties.append(bidi)
+            # Logical start stays at the right edge in RTL-aware Word/LO viewers.
+            jc=properties.find(qn('w:jc'))
+            if jc is None:jc=OxmlElement('w:jc');properties.append(jc)
+            jc.set(qn('w:val'),'start')
+        for run in list(document.element.xpath('.//w:r')):
+            nodes=run.findall(qn('w:t'))
+            if len(nodes)!=1:continue
+            text=nodes[0].text or '';parent=run.getparent();index=parent.index(run)
+            parts=re.split('('+arabic+'+(?:[ \t]+'+arabic+'+)*)',text)
+            for part in parts:
+                if not part:continue
+                new=deepcopy(run);new.find(qn('w:t')).text=re.sub(r'\b[0-9]{4}-[0-9]{2}-[0-9]{2}\b',lambda m:'\u200e'+m.group()+'\u200e',part);new.find(qn('w:t')).set('{http://www.w3.org/XML/1998/namespace}space','preserve')
+                rtl=OxmlElement('w:rtl');rtl.set(qn('w:val'),'1' if re.search(arabic,part) else '0');new.get_or_add_rPr().append(rtl)
+                parent.insert(index,new);index+=1
+            parent.remove(run)
     document.save(path)
 
 
 def render(root, input_path, key, formats=None):
     root = Path(root).resolve(); input_path = Path(input_path).resolve()
     formats = list(dict.fromkeys(formats or ['markdown']))
-    if not formats or any(f not in ('pdf', 'markdown', 'docx') for f in formats):
-        raise ValueError('Choose pdf, markdown or docx formats.')
+    if not formats or any(f not in ('pdf', 'markdown', 'docx', 'html') for f in formats):
+        raise ValueError('Choose pdf, markdown, docx or html formats.')
     validate_key(key)
     if 'pdf' in formats:
         import omni_pdf
@@ -187,11 +207,14 @@ def render(root, input_path, key, formats=None):
             write_docx(path, data, plan, config, image, c.today(root), key)
             artifacts['docx'] = str(path.relative_to(root)); outputs.append(path)
         preview = root / 'previews' / (key + '.html')
-        body = ''.join(f'<h2>{html.escape(s["title"])}</h2><p>{html.escape(s["body"]).replace(chr(10), "<br>")}</p>' for s in data['sections'])
-        links = ''.join(f'<li>[{html.escape(s["id"])}] <a href="{html.escape(s["url"], quote=True)}">{html.escape(s["title"])}</a>: {html.escape(s["note"])}; {html.escape(s["publisher"])} | {html.escape(s["published_at"])} | {html.escape(s["checked_at"])}</li>' for s in data['sources'])
-        preview.write_text('<!doctype html><html lang="' + config.get('language', 'zh') + '"><meta charset="utf-8"><style>body{max-width:780px;margin:40px auto;padding:24px;font:18px/1.7 serif;color:#173747}img{max-width:100%;max-height:350px}a{color:#227e82}</style><h1>' + html.escape(data['title']) + '</h1><p>' + html.escape(subtitle(data, plan, config, c.today(root), key)) + '</p>' + body + '<figure><img src="../assets/' + quote(image.name) + '" alt="' + html.escape(data['figure']['caption'], quote=True) + '"><figcaption>' + html.escape(data['figure']['caption']) + ' — ' + html.escape(data['figure']['credit']) + '</figcaption></figure><h2>Further reading / 扩展学习（选读）</h2><ul>' + links + '</ul></html>', encoding='utf-8')
+        from omni_html import serialize
+        html_text=serialize(data,plan,config,image,c.today(root),key)
+        preview.write_text(html_text,encoding='utf-8')
+        if 'html' in formats:
+            path=root/'sources'/(key+'.html');path.write_text(html_text,encoding='utf-8')
+            artifacts['html']=str(path.relative_to(root));outputs.append(path)
         outputs.extend([preview, input_path, root / 'plan.json', root / 'config.json'])
-        manifest = {'key': key, 'artifact': artifacts.get('docx', artifacts['markdown']),
+        manifest = {'key': key, 'artifact': artifacts[formats[0]],
                     'artifacts': artifacts, 'input': str(input_path.relative_to(root)),
                     'created_at': c.today(root), 'files': {str(p.relative_to(root)): c.digest(p) for p in outputs},
                     'previews': [str(preview.relative_to(root))], 'reviewed_at': None,

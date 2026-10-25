@@ -10,9 +10,9 @@ import omni_core as c
 from omni_document import validate_key
 
 MODES = {
-    'pdf': ('local', 'host'), 'markdown': ('local', 'host'), 'docx': ('local', 'host'),
+    'html': ('local', 'host'), 'pdf': ('local', 'host'), 'markdown': ('local', 'host'), 'docx': ('local', 'host'),
     'obsidian': ('local',), 'notion': ('api', 'cli', 'host', 'import'),
-    'feishu': ('api', 'cli', 'host', 'import'), 'tencent': ('api', 'host', 'import'),
+    'feishu': ('api', 'cli', 'host', 'import'), 'tencent': ('api', 'mcp', 'host', 'import'),
     'dingtalk': ('cli', 'host', 'import'), 'generic': ('host', 'import'),
 }
 DESTINATIONS = {'parent_page_id', 'vault_path', 'subdir', 'folder_token', 'folder_id',
@@ -27,12 +27,12 @@ def fingerprint(value):
 
 
 def validate_delivery(target):
-    if not isinstance(target, dict) or set(target) - {'platform', 'mode', 'destination', 'credential_env', 'account_id', 'cli_profile'}:
+    if not isinstance(target, dict) or set(target) - {'platform', 'mode', 'destination', 'credential_env', 'account_id', 'cli_profile', 'auth_profile'}:
         raise ValueError('Delivery accepts only platform, mode, destination and credential_env; keep secrets outside config.')
     platform = target.get('platform'); mode = target.get('mode')
     if not isinstance(platform,str) or not isinstance(mode,str) or platform not in MODES or mode not in MODES[platform]:
         raise ValueError('Unsupported delivery platform/mode; choose a documented route.')
-    for key in ('account_id', 'cli_profile'):
+    for key in ('account_id', 'cli_profile', 'auth_profile'):
         value = target.get(key)
         if value is not None and (not isinstance(value, str) or not re.fullmatch(r'[A-Za-z0-9_.:@-]{1,128}', value)):
             raise ValueError('Invalid non-secret connection identity/profile.')
@@ -65,6 +65,9 @@ def preflight(target, environ=None):
         missing.extend('destination.' + k for k in required[platform] if not dest.get(k))
     if platform == 'dingtalk' and mode != 'import' and not (dest.get('folder_id') or dest.get('workspace_id')):
         missing.append('destination.folder_id or destination.workspace_id')
+    if mode=='mcp':
+        for k in ('account_id','auth_profile'):
+            if not target.get(k):missing.append(k+' (run connect)')
     if mode == 'api':
         roles = {'notion': ('token',), 'tencent': ('client_id', 'open_id', 'token')}
         needed = roles.get(platform, ())
@@ -91,8 +94,9 @@ def default_formats(config):
     if not target:
         return ['pdf']
     platform = target['platform']
-    if platform in ('pdf', 'markdown', 'docx'):
+    if platform in ('pdf', 'markdown', 'docx', 'html'):
         return [platform]
+    if platform=='tencent' and target.get('mode')=='mcp':return ['docx','markdown']
     if platform == 'notion' and target.get('mode') == 'import':
         return ['docx', 'markdown']
     return ['markdown'] if platform in ('obsidian', 'notion') else ['docx', 'markdown']
@@ -204,7 +208,7 @@ def publish(root, key, adapter=None):
                            platform=target['platform'], mode=target['mode'])
         def checkpoint(**changes):
             candidate=dict(receipt,**changes)
-            if candidate.get('status')=='pending' and target['mode'] in ('api','cli'):
+            if candidate.get('status')=='pending' and target['mode'] in ('api','cli','mcp'):
                 from omni_http import segment
                 segment(candidate.get('remote_id') or candidate.get('task_id'))
             receipt.update(changes); c.save(path, receipt)
@@ -223,7 +227,7 @@ def publish(root, key, adapter=None):
         ready = preflight(target)
         if not ready['ready']:
             raise ValueError('Missing delivery information: ' + ', '.join(ready['missing']))
-        if target['platform'] in ('pdf', 'markdown', 'docx'):
+        if target['platform'] in ('pdf', 'markdown', 'docx', 'html'):
             checkpoint(status='verified', artifact=str(artifact.relative_to(root)),
                        content_hash=c.digest(artifact), verified_at=c.today(root))
             return receipt
@@ -257,7 +261,7 @@ def reconcile(root, key, remote_id=None, url=None, task_id=None):
         path = receipt_path(root, key)
         receipt = c.read(path); check_binding(root, key, receipt)
         target = c.read(root / 'config.json')['delivery']
-        if target['mode'] not in ('api', 'cli') or receipt['status'] == 'verified':
+        if target['mode'] not in ('api', 'cli', 'mcp') or receipt['status'] == 'verified':
             raise ValueError('Reconcile only an unfinished API/CLI delivery.')
         if bool(remote_id) == bool(task_id):
             raise ValueError('Supply exactly one observed document ID or import task ID.')

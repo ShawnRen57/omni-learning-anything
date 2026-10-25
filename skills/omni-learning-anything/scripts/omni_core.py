@@ -52,8 +52,9 @@ def validate_config(config):
         days=config['weekdays']
         if not isinstance(days,list) or not days or any(d not in ('MO','TU','WE','TH','FR','SA','SU') for d in days):
             raise ValueError('weekdays must be a nonempty list of MO, TU, WE, TH, FR, SA, SU.')
-    if 'language' in config and config['language'] not in ('zh','en'):
-        raise ValueError('language must be zh or en.')
+    if 'language' in config:
+        from omni_locale import language
+        language(config['language'])
     for key in ('sample_mode','immediate_day01'):
         if key in config and type(config[key]) is not bool:
             raise ValueError(key+' must be a boolean.')

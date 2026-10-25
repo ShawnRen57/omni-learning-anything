@@ -4,7 +4,7 @@ New courses explicitly choose a destination. Reuse known preferences and inspect
 
 ## Intake examples
 
-Missing platform: “学习计划和每日材料希望放到哪里：PDF、本地 Markdown/Word，还是 Notion、Obsidian、飞书、腾讯文档或钉钉？”
+Missing platform: “学习计划和每日材料希望放到哪里：PDF、离线 HTML、本地 Markdown/Word，还是 Notion、Obsidian、飞书、腾讯文档或钉钉？”
 
 Platform selected, missing location: “你已选择飞书。请提供课程文件夹链接；已有可写连接器会直接复用，否则再配置应用授权。”
 
@@ -27,21 +27,21 @@ Actual access failure: explain the missing permission/expired credential, preser
 }
 ```
 
-For Notion/Feishu new connections, use the exact `delivery` returned by `connect`; the official CLI manages credentials. Optional `cli_profile` (Feishu) or `destination.workspace_id` (Notion) fixes the selected configuration. Existing `mode: api` remains supported with `credential_env` variable names, not secrets. A private env-file can live outside the repository/course; use the host's approved credential loader to populate the subprocess environment. The CLI deliberately does not evaluate/source arbitrary env files. Do not echo environment contents. Automatic OAuth creation, scope expansion or account changes remain subject to the host's permission rules.
+For new cloud connections, use the exact `delivery` returned by `connect`; the official CLI manages credentials. Optional `cli_profile` (Feishu/DingTalk) or `destination.workspace_id` (Notion) fixes the selected configuration. Existing `mode: api` remains supported with `credential_env` variable names, not secrets. A private env-file can live outside the repository/course; use the host's approved credential loader to populate the subprocess environment. The CLI deliberately does not evaluate/source arbitrary env files. Do not echo environment contents. Automatic OAuth creation, scope expansion or account changes remain subject to the host's permission rules.
 
 | Platform | Modes | Confirmed destination | Default export |
 | --- | --- | --- | --- |
-| pdf / markdown / docx | local or host | Local course folder; host recipient if relevant | Matching format |
+| pdf / html / markdown / docx | local or host | Local course folder; host recipient if relevant | Matching format |
 | obsidian | local | Existing `vault_path`, safe relative `subdir` | Markdown + copied image |
 | notion | cli (default), api, host, import | Course `parent_page_id` | Markdown + image upload |
 | feishu | cli (default), api, host, import | Course `folder_token` | DOCX + Markdown |
-| tencent | api, host, import | Course `folder_id` | DOCX + Markdown |
+| tencent | mcp (default), api, host, import | Course `folder_id` | DOCX + Markdown |
 | dingtalk | cli, host, import | Course `folder_id` or `workspace_id` | DOCX + Markdown |
 | generic | host, import | Actual host-confirmed document location | DOCX + Markdown |
 
 Use API identifiers in API configs; extract them from a supplied URL only after inspecting the platform's documented URL form and access. IDs are not authentication tokens. A cloud course parent/folder is selected or created during intake with authorized host tools; the publisher creates plan/daily documents inside it. Never choose a shared/team space merely because it is visible.
 
-`connect` performs read-only remote identity/location checks for Notion/Feishu; it does not test write permission. `delivery-check` performs local config/environment validation only. `ready: true` is not remote authorization proof. Only `publish` plus provider readback can verify API/CLI delivery; connector/UI modes use actual tool evidence.
+`connect` performs read-only remote identity/location checks for Notion/Feishu/DingTalk/Tencent; it does not test write permission. `delivery-check` performs local config/environment validation only. `ready: true` is not remote authorization proof. Only `publish` plus provider readback can verify API/CLI delivery; connector/UI modes use actual tool evidence.
 
 ## Provider guides
 
@@ -88,3 +88,5 @@ Run `receipt-record --key KEY --receipt /private/staging/receipt.json`. This is 
 - Vault collisions/user edits: never overwrite. Preserve the existing note, choose a confirmed new course subdirectory and start a new approved version.
 
 A paused course can inspect delivery state but cannot publish an undelivered daily lesson. Completion stops the host schedule; API timeouts never skip a day. Remote edits made later by the learner are outside the local archive's immutability contract.
+
+Tencent `mode: mcp` stores a non-secret `auth_profile` and verified `account_id`; OS keyring stores OAuth credentials. The explicit home root is `destination.folder_id: "/"`. HTML is a standalone image-embedded local artifact, with the same manifest/receipt requirements. Legacy generic host/import configurations remain readable for existing courses; they are not advertised as native support for unspecified platforms.

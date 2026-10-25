@@ -7,11 +7,19 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from pypdf import PdfReader
 import omni_core as c
+from omni_locale import language, subtitle as localized_subtitle, CJK_FONTS, ARABIC_FONTS
 
 
 def esc(text):
     table={'\\':r'\textbackslash{}','{':r'\{','}':r'\}','%':r'\%','$':r'\$','&':r'\&','#':r'\#','_':r'\_','~':r'\textasciitilde{}','^':r'\textasciicircum{}'}
     return ''.join(table.get(ch,ch) for ch in str(text))
+
+
+def visible_text(text,code):
+    if code!='ar':return esc(text)
+    # Keep Arabic shaping/direction while isolating Latin identifiers and citations.
+    parts=re.split(r'([\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+(?:[ \t]+[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+)*)',str(text))
+    return ''.join(esc(part) if re.search(r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]',part) else r'\textenglish{'+esc(part)+'}' for part in parts if part)
 
 
 def executable(name):
@@ -43,6 +51,29 @@ PREAMBLE=r'''\documentclass[11pt]{article}
 \newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
 '''
+
+
+def font_chain(command, candidates, options=''):
+    result=chr(92)+command+options+'{'+candidates[-1]+'}'
+    for name in reversed(candidates[:-1]):
+        result=r'\IfFontExistsTF{'+name+'}{'+chr(92)+command+options+'{'+name+'}}{'+result+'}'
+    return result
+
+
+def language_preamble(code):
+    labels=language(code)
+    result=PREAMBLE.replace('学习手册',esc(labels['guide'])).replace('Source-grounded learning',esc(labels['grounded']))
+    extra=''
+    if code in ('ja','ko'):
+        extra+=font_chain('setCJKmainfont',CJK_FONTS[code], '[AutoFakeBold=2]')+'\n'
+        extra+=r'\xeCJKsetup{AutoFallBack=true}\setCJKfallbackfamilyfont{\CJKrmdefault}{FandolSong-Regular.otf}'+'\n'
+        if code=='ko':extra+=r'\xeCJKsetup{CJKspace=true}'+'\n'
+    if code=='ar':
+        result=result.replace('OMNI LEARNING / ',r'\textenglish{OMNI LEARNING / }').replace(r'\thepage',r'\textenglish{\thepage}')
+        # bidi must load after hyperref/fancyhdr/graphicx; polyglossia selects RTL.
+        extra+=r'\usepackage{polyglossia}\setdefaultlanguage{arabic}\setotherlanguage{english}'+'\n'
+        extra+=font_chain(r'newfontfamily\arabicfont',ARABIC_FONTS,'[Script=Arabic]')+'\n'
+    return result.replace(r'\begin{document}',extra+r'\begin{document}')
 
 
 def render(root,input_path,key,export_formats=()):
@@ -78,24 +109,22 @@ def render(root,input_path,key,export_formats=()):
         figure=(root/data['figure']['path']).resolve()
         img='figure-'+c.digest(figure)[:12]+figure.suffix.lower(); image_path=root/'assets'/img
         if figure!=image_path: shutil.copyfile(figure,image_path)
-        english=c.read(root/'config.json').get('language','zh').lower().startswith('en')
-        subtitle=f"{c.today(root)} | "+('学习计划 / '+str(len(plan['days']))+' 天' if key=='plan' else f"{key}/{len(plan['days'])} | 阅读 {data['reading_minutes']} 分钟 + 练习 {data['practice_minutes']} 分钟")
-        if english:
-            subtitle=f"{c.today(root)} | "+(f"Learning plan / {len(plan['days'])} days" if key=='plan' else f"{key}/{len(plan['days'])} | Read {data['reading_minutes']} min + practice {data['practice_minutes']} min")
-        preamble=PREAMBLE.replace('学习手册','Learning guide') if english else PREAMBLE
-        tex=[preamble,r'{\LARGE\bfseries\color{ink} '+esc(data['title'])+r'}\par',esc(subtitle)+r'\par\vspace{6pt}']
+        config=c.read(root/'config.json'); labels=language(config.get('language','zh'))
+        e=lambda value:visible_text(value,labels['code'])
+        subtitle=localized_subtitle(data,plan,config,c.today(root),key)
+        tex=[language_preamble(labels['code']),r'{\LARGE\bfseries\color{ink} '+e(data['title'])+r'}\par',e(subtitle)+r'\par\vspace{6pt}']
         md=['# '+data['title'],subtitle]
         for i,s in enumerate(data['sections']):
-            tex.extend([r'\Needspace{5\baselineskip}\section*{'+esc(s['title'])+'}',esc(s['body'])]); md.extend(['## '+s['title'],s['body']])
+            tex.extend([r'\Needspace{5\baselineskip}\section*{'+e(s['title'])+'}',e(s['body'])]); md.extend(['## '+s['title'],s['body']])
             if i==min(1,len(data['sections'])-1):
-                tex.extend([r'\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/'+img+r'}\par',r'{\small '+esc(data['figure']['caption'])+r'}\par',r'{\footnotesize '+esc(data['figure']['credit'])+r'}\end{center}'])
+                tex.extend([r'\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/'+img+r'}\par',r'{\small '+e(data['figure']['caption'])+r'}\par',r'{\footnotesize '+e(data['figure']['credit'])+r'}\end{center}'])
                 md.extend(['!['+data['figure']['caption']+'](../assets/'+img+')',data['figure']['credit']])
-        tex.append(r'\Needspace{6\baselineskip}\section*{Further reading}\small Optional; outside the daily core time budget.\begin{enumerate}[leftmargin=1.6em]' if english else r'\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]')
-        md.append('## Further reading (optional)' if english else '## 扩展学习（选读）')
+        tex.append(r'\Needspace{6\baselineskip}\section*{'+e(labels['further'])+r'}\small '+e(labels['optional'])+r'\begin{enumerate}[leftmargin=1.6em]')
+        md.append('## '+labels['further'])
         for s in data['sources']:
-            published=' | Published: ' if english else ' | 发布：'
-            checked=' | Checked: ' if english else ' | 核验：'
-            tex.append(r'\item ['+esc(s['id'])+r'] \href{'+esc(s['url'])+'}{'+esc(s['title'])+'} — '+esc(s['note'])+r'\par '+esc(s['publisher']+published+s['published_at']+checked+s['checked_at']))
+            published=' | '+labels['published']+': '
+            checked=' | '+labels['checked']+': '
+            tex.append(r'\item ['+e(s['id'])+r'] \href{'+esc(s['url'])+'}{'+e(s['title'])+'} — '+e(s['note'])+r'\par '+e(s['publisher']+published+s['published_at']+checked+s['checked_at']))
             md.append(f"- [{s['id']}] [{s['title']}]({s['url']}): {s['note']}; {s['publisher']}{published}{s['published_at']}{checked}{s['checked_at']}")
         tex.extend([r'\end{enumerate}',r'\end{document}'])
         texfile=root/'sources'/(stem+'.tex'); texfile.write_text('\n\n'.join(tex),encoding='utf-8')
@@ -120,6 +149,10 @@ def render(root,input_path,key,export_formats=()):
             from omni_document import write_docx
             docx_path=root/'sources'/(stem+'.docx'); write_docx(docx_path,data,plan,c.read(root/'config.json'),image_path,c.today(root),key)
             files.append(docx_path); artifacts['docx']=str(docx_path.relative_to(root))
+        if 'html' in export_formats:
+            from omni_html import serialize
+            path=root/'sources'/(stem+'.html');path.write_text(serialize(data,plan,config,image_path,c.today(root),key),encoding='utf-8')
+            files.append(path);artifacts['html']=str(path.relative_to(root))
         report['figure']=str(image_path.relative_to(root))
         manifest={'input':str(input_path.relative_to(root)),'artifact':str(pdf.relative_to(root)),'artifacts':artifacts,'key':key,'pdf':str(pdf.relative_to(root)),'created_at':c.today(root),'files':{str(p.relative_to(root)):c.digest(p) for p in files},'previews':preview_paths,'reviewed_at':None,'report':report,'layout_warnings':len(re.findall('Overfull',log))}
         c.save(root/'manifests'/(key+'.json'),manifest)

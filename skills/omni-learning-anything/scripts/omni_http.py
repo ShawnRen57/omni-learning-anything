@@ -57,7 +57,7 @@ def segment(value):
 
 
 def normalize(text):
-    return re.sub(r'\s+', '', text.replace('<br>', '\n'))
+    return re.sub(r'[\s\u200e\u200f\u202a-\u202e\u2066-\u2069]+', '', text.replace('<br>', '\n'))
 
 
 def check_text(text, data, include_title=True):

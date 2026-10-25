@@ -8,12 +8,14 @@ Check the interpreter version first: macOS may resolve `python3` to an older sys
 
 ```sh
 python3 -m venv .venv
-# Markdown / DOCX / cloud / Obsidian (no PDF packages or TeX):
+# HTML / Markdown / DOCX / cloud / Obsidian (no PDF packages or TeX):
 .venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-documents.txt
 # PDF, or repository development including PDF regression tests:
 .venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements.txt
-# Tencent API route additionally needs the official COS SDK:
+# Tencent legacy application API route additionally needs the official COS SDK:
 .venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent.txt
+# Tencent official OAuth/MCP default route:
+.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent-mcp.txt
 .venv/bin/python /installed/omni-learning-anything/scripts/omni_learning.py --project /course doctor
 ```
 
@@ -51,3 +53,9 @@ Run `doctor`, then compile the first actual plan. A binary's presence alone does
 ## macOS bundled preview font discovery
 
 If a bundled LibreOffice preview drops Chinese despite intact DOCX text, verify font discovery before changing the document. Use a temporary process-local `FONTCONFIG_FILE` that exposes existing read-only host font directories and a writable task cache; do not modify global settings, runtime binaries or redistribute fonts. The authoring code selects an available CJK family when Fontconfig is present, or declares a platform CJK family for the destination viewer. Rendering inspection is still required. This local preview issue was reproduced and resolved during v2 QA; upstream context: https://github.com/openai/codex/issues/32968 .
+
+## Ten-language output and offline HTML
+
+Course language codes: en, zh, ja, ko, es, fr, de, pt, ru, ar. Author actual teaching content in that language before rendering. HTML/Markdown need only the Python standard library; HTML embeds its PNG/JPEG and inline styles in one file, with no external font or JavaScript dependency. Outbound sources still need Internet.
+
+Japanese PDF tries Hiragino Mincho ProN/Noto Serif CJK JP/Yu Mincho/MS Mincho; Korean tries Apple SD Gothic Neo/Noto Serif CJK KR/Malgun Gothic/Batang. Arabic additionally needs TeX `polyglossia` and `bidi`, with Amiri/Noto Naskh Arabic/Geeza Pro/Arial Unicode MS, and uses RTL with Latin citations isolated. Ensure at least one appropriate font is installed through an official/free distribution; missing fonts/glyphs stop publication. CJK fallback uses the distribution’s Fandol font for mixed Chinese references. DOCX declares appropriate script fonts and RTL properties; inspect actual pages because viewer font substitution differs.

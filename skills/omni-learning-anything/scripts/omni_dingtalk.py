@@ -1,5 +1,6 @@
 """Use the official authenticated dws CLI; never pass credentials through a shell."""
 import json
+import html
 import re
 import subprocess
 from omni_http import document_data, check_text, check_links, verified
@@ -27,8 +28,33 @@ def unwrap(value):
     return value['data'] if isinstance(value.get('data'), dict) else value
 
 
+def profile_args(target):
+    profile=target.get('cli_profile') or target.get('account_id')
+    return ['--profile',profile] if profile else []
+
+
+def check_identity(target,runner=None):
+    value=unwrap((runner or run)(['dws','auth','status','--format','json']+profile_args(target)))
+    if value.get('authenticated') is not True or not value.get('corp_id') or not value.get('user_id'):raise ValueError('Complete official dws authorization for the selected organization.')
+    identity=value['corp_id']+':'+value['user_id']
+    if target.get('account_id') and identity!=target['account_id']:raise ValueError('DingTalk account/organization changed; preserve the approved course.')
+    return {'id':identity,'name':value.get('user_name','')}
+
+
+class DingTalkCLI:
+    def __init__(self,target,runner=None):self.target=target;self.runner=runner or run
+    def check_identity(self):return check_identity(self.target,self.runner)
+    def check_destination(self,dest):
+        args=['--folder',dest['folder_id']] if dest.get('folder_id') else ['--workspace',dest['workspace_id']]
+        response=unwrap(self.runner(['dws','doc','list','--limit','1','--format','json']+args+profile_args(self.target)))
+        if response.get('success') is False:raise ValueError('DingTalk destination is unavailable.')
+
+
 def publish(root, manifest, target, receipt, checkpoint, runner=None):
-    runner = runner or run; data = document_data(root, manifest)
+    base_runner=runner or run
+    if target.get('account_id'):check_identity(target,base_runner)
+    runner=lambda args:base_runner(args+profile_args(target))
+    data = document_data(root, manifest)
     if not receipt.get('remote_id') or receipt.get('placement_verified') is False:
         dest = target['destination']
         location = ['--folder', dest['folder_id']] if dest.get('folder_id') else ['--workspace', dest['workspace_id']]
@@ -61,7 +87,11 @@ def publish(root, manifest, target, receipt, checkpoint, runner=None):
     response = unwrap(runner(['dws', 'doc', 'read', '--node', receipt['remote_id'], '--content-format', 'markdown', '--format', 'json']))
     text = response.get('markdown') or response.get('content') or ''
     if not isinstance(text, str): raise ValueError('DingTalk readback did not return Markdown.')
-    check_text(text, data); check_links(text, data)
-    if not re.search(r'!\[[^\]]*\]\(https://[^\s)]+\)', text):
+    plain=re.sub(r'\\([\\`*_{}\[\]()#+.!<>|~-])',r'\1',text)
+    plain=html.unescape(re.sub(r'<[^>]+>','',plain))
+    check_text(plain, data)
+    hrefs={html.unescape(v) for v in re.findall(r'\]\((https://[^\s)]+)(?:\s+"[^"]*")?\)',text)}
+    if not {s['url'] for s in data['sources']}.issubset(hrefs):raise ValueError('DingTalk readback is missing semantic source links.')
+    if not re.search(r'!\[[^\]]*\]\(https://[^\s)]+(?:\s+"[^"]*")?\)', text):
         raise ValueError('DingTalk readback is missing a remote figure.')
     return verified(receipt['remote_id'], receipt['url'])

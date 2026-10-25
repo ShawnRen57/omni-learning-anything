@@ -1,9 +1,9 @@
 ---
 name: omni-learning-anything
-description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
+description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, HTML, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -21,13 +21,15 @@ For an existing course, read `config.json`, `plan.json`, `state.json`, pending `
 
 Reuse information already supplied. Collect missing topic/scope, goal, baseline, days, daily minutes, local execution time and IANA timezone, weekdays/weekends, language, course archive folder and whether Day01 starts immediately after approval. Propose 30 days and 10–15 minutes/day when unspecified; proposals are not confirmed settings. Generation starts at the scheduled time; delivery follows research and checks.
 
-Confirm where the learner wants the plan and daily materials. Offer PDF, Markdown, DOCX, Notion, Obsidian, 飞书/Feishu, 腾讯文档/Tencent Docs and 钉钉/DingTalk. If a platform is explicit, keep it; if absent, ask instead of silently selecting PDF. PDF copies are optional. Obsidian writes local Vault files; its existing sync service controls cloud synchronization.
+Course languages: English (`en`), 简体中文 (`zh`), 日本語 (`ja`), 한국어 (`ko`), Español (`es`), Français (`fr`), Deutsch (`de`), Português (`pt`), Русский (`ru`), العربية (`ar`). Author the full plan, teaching text, exercises, captions and source notes in the agreed course language, independently of README, topic or source language. Preserve source titles when translation would misidentify them. Scripts localize interface labels, not authored teaching content. Use script-appropriate fonts and Arabic RTL; inspect actual output and guide missing font setup.
+
+Confirm where the learner wants the plan and daily materials. Offer PDF, HTML, Markdown, DOCX, Notion, Obsidian, 飞书/Feishu, 腾讯文档/Tencent Docs and 钉钉/DingTalk. If a platform is explicit, keep it; if absent, ask instead of silently selecting PDF. PDF copies are optional. Obsidian writes local Vault files; its existing sync service controls cloud synchronization.
 
 Read [onboarding](references/onboarding.md), then **only the selected provider** under [delivery](references/delivery.md#provider-guides). Aim for two or three short connection exchanges when the platform permits: location; official authorization if missing; only a specific access correction if needed. This is a usability target, not a promise that bypasses organization approval. Reuse confirmed settings and authorization; never re-ask on every lesson or a monthly timer.
 
-Cloud delivery defaults to **official APIs**, either through an already authorized writable connector that uses those APIs or the official CLI/API adapter. Confirm actual create/media/readback capabilities. For new Notion/Feishu courses prefer `connect` with official `ntn`/`lark-cli`; the agent installs/checks the selected tool, extracts the supplied link's ID, initiates official authorization, checks identity and destination, and copies the returned `delivery` into intake config. The learner provides a parent-page/folder link and completes official login/grants, rather than editing JSON or running commands. Obsidian is the agreed exception: local Vault Markdown; no invented cloud API or mandatory community plugin.
+Cloud delivery defaults to **official APIs**, either through an already authorized writable connector that uses those APIs or the official CLI/API adapter. Confirm actual create/media/readback capabilities. For new cloud courses prefer `connect`: official `ntn` for Notion, `lark-cli` for Feishu, `dws` for DingTalk, and the official OAuth/MCP API for Tencent Docs; the agent installs/checks the selected tool, extracts the supplied link's ID, initiates official authorization, checks identity and destination, and copies the returned `delivery` into intake config. The learner provides a parent-page/folder link and completes official login/grants, rather than editing JSON or running commands. Obsidian is the agreed exception: local Vault Markdown; no invented cloud API or mandatory community plugin.
 
-The official CLI owns login, renewal and secure credential storage. Never export its token or read private credential files. Saved connections contain metadata only. Existing private API credentials remain supported: store environment-variable names in `credential_env`, never values. Keep secrets out of chat, course/skill files, logs, receipts and scheduler prompts. A browser login is not API authorization.
+Official CLIs own their login, renewal and secure credential storage. Tencent OAuth uses the bundled PKCE client with a local callback and OS keyring; read its selected provider guide before login. Never export its token or read private credential files. Saved connections contain metadata only. Existing private API credentials remain supported: store environment-variable names in `credential_env`, never values. Keep secrets out of chat, course/skill files, logs, receipts and scheduler prompts. A browser login is not API authorization.
 
 `connect` is a read-only account/destination check; `delivery-check` is local validation. Neither proves write permission or completed delivery. Complete `publish`, readback and visual inspection of the actual plan before claiming success. Fixed account/destination metadata is copied into the course; saved profile changes never retarget an approved course. Recheck access after expiry or an actual error, without silently changing accounts.
 
@@ -51,7 +53,7 @@ For `generate`, read the approved topic and recent two lessons; research/open so
 
 Use the host's image model for AI illustrations; retain prompt provenance and label teaching reconstructions. Exact artworks/buildings favor traceable reusable source images with permissions and credit. Code-drawn QA figures must not be called AI-generated evidence.
 
-Save JSON and `render`; inspect the chosen format's complete output and record `review`. Markdown/Vault assets must resolve; DOCX embeds figures and hyperlinks; cloud adapters upload/embed figures rather than publishing local file paths. Inspect the actual cloud rendering when possible; automated readback is not a substitute for visual review.
+Save JSON and `render`; inspect the chosen format's complete output and record `review`. Single-file HTML must embed reviewed PNG/JPEG data, use no external styling/scripts/fonts, and remain readable alone offline (outbound source links still need Internet). Markdown/Vault assets must resolve; DOCX embeds figures and hyperlinks; cloud adapters upload/embed figures rather than publishing local file paths. Inspect the actual cloud rendering when possible; automated readback is not a substitute for visual review.
 
 Run `publish`. `pending` resumes the saved asynchronous task on the next run. `needs_reconciliation`/`creating` without a known remote ID means a write may already have happened: search/read the destination first, then use `reconcile` with the observed document/task identifier. Do not blindly create again. `prepared` host output and `awaiting_import` are unfinished cloud delivery. Read [recovery](references/delivery.md#recovery) for exact commands.
 
