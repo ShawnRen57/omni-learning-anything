@@ -40,9 +40,11 @@ Create learning plans and materials in **Chinese or English**, independently of 
 
 本地生成、审核、异步上传与验证交付分别记录。**仅主要目标验证成功才推进课程**；导入包准备完成不等于云文档已生成。中断后复用已保存的任务/文档；结果不明时先核对，避免重复创建。Obsidian 的跨设备同步由现有同步软件负责。网页导入能否无人值守依赖宿主工具和登录状态。
 
-本次真实账号验收：Notion 的计划和 Day01 已完成私人页面 Word 导入、全文/图片/五个链接检查、重新打开和重复发布验证；Obsidian 已补充原生客户端阅读检查，跨设备同步未验收。飞书上传失败、腾讯文档界面入口超时，钉钉已完成官方 CLI 登录和私人目录创建但 OSS 上传失败；按用户要求暂停这些未完成路径。API 合约测试与真实账号成功分别记录。
+2026-10-25 补充验收：**飞书浏览器 Word 导入已通过**，涵盖计划与 Day01 的在线转换、标题写入、图文/链接、保存重开和回执复用；API 直连及无人值守调度仍未实测。详见[飞书验收记录](docs/feishu-acceptance-2026-10-25.md)。
 
-English: account acceptance passed for Notion Word UI imports (plan and Day01) and Obsidian native reading. Notion API remains contract-tested; Obsidian cross-device sync is unverified. Feishu/Tencent Docs and DingTalk document import acceptance remain incomplete. See the detailed acceptance report.
+2026-10-18 发布时的验收范围：Notion 的计划和 Day01 已完成私人页面 Word 导入、全文/图片/五个链接检查、重新打开和重复发布验证；Obsidian 已补充原生客户端阅读检查，跨设备同步未验收。飞书上传失败、腾讯文档界面入口超时，钉钉已完成官方 CLI 登录和私人目录创建但 OSS 上传失败；按用户要求暂停这些未完成路径。API 合约测试与真实账号成功分别记录。
+
+English: on 2026-10-25, Feishu browser Word import acceptance passed for the plan and Day01, including title edits, text/image/link checks, cloud save/reopen and receipt reuse. Direct API access and unattended scheduling remain untested. At v2.0.1 publication (2026-10-18), account acceptance passed for Notion Word UI imports (plan and Day01) and Obsidian native reading. Notion API remains contract-tested; Obsidian cross-device sync is unverified. Feishu/Tencent Docs and DingTalk document import acceptance was incomplete at that publication date. See the dated acceptance reports.
 
 版本兼容：旧课程继续使用原 PDF 流程；变更已批准的目标位置时保留旧档案并创建明确的新课程版本。原历史 PDF 样例及来源日期没有重新标注为 v2 新生成结果。
 
