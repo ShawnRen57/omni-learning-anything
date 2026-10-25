@@ -50,17 +50,35 @@ class TransportTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);(root/'sources').mkdir();file=root/'sources/plan.docx';file.write_bytes(b'fixture')
             def runner(args,**kw):
-                calls.append((args,kw));return {'ok':True,'identity':'user','data':{'file_token':'upload'}}
+                calls.append((args,kw))
+                if 'status' in args:return {'brand':'feishu','verified':True,'identities':{'user':{'openId':'user','available':True,'verified':True}}}
+                return {'ok':True,'identity':'user','data':{'file_token':'upload'}}
             cli=p.FeishuCLI({'cli_profile':'course'},root=root,runner=runner)
             with file.open('rb') as f:
                 r=cli.json('POST','https://open.feishu.cn/open-apis/drive/v1/medias/upload_all',data={'size':'7'},files={'file':('plan.docx',f,'mime')})
             self.assertEqual(r['data']['file_token'],'upload')
-            args,kw=calls[0]
+            args,kw=calls[-1]
             self.assertEqual(args[args.index('--as')+1],'user')
             self.assertIn('file=sources/plan.docx',args)
             self.assertEqual(kw['cwd'],root.resolve())
-            bot=p.FeishuCLI({},runner=lambda *a,**kw:{'ok':True,'identity':'bot','data':{}})
+            bot=p.FeishuCLI({},runner=lambda args,**kw: {'brand':'feishu','verified':True,'identities':{'user':{'openId':'user','available':True,'verified':True}}} if 'status' in args else {'ok':True,'identity':'bot','data':{}})
             with self.assertRaises(ValueError):bot.json('GET','https://open.feishu.cn/open-apis/docx/v1/documents/doc/raw_content')
+
+    def test_feishu_rejects_wrong_brand_and_unverified_user_before_api(self):
+        p=self.module()
+        good={'brand':'feishu','identity':'user','verified':True,'identities':{'user':{'openId':'user','userName':'QA','available':True,'verified':True}}}
+        cases=[dict(good,brand='lark'),dict(good,brand=None),dict(good,identity='bot',identities={'user':{'openId':'user','available':False,'verified':False}}),dict(good,identities={'user':{'openId':'user','available':True}})]
+        for status in cases:
+            with self.subTest(status=status):
+                calls=[]
+                def runner(args,**kw):
+                    calls.append(args)
+                    return status if 'status' in args else {'ok':True,'identity':'user','data':{'content':'would be wrong region'}}
+                cli=p.FeishuCLI({},runner=runner)
+                with self.assertRaises(p.CLIError):cli.json('GET','https://open.feishu.cn/open-apis/docx/v1/documents/doc/raw_content')
+                self.assertTrue(all('status' in args for args in calls))
+        cli=p.FeishuCLI({'account_id':'user'},runner=lambda *a,**kw:good)
+        self.assertEqual(cli.check_identity(),{'id':'user','name':'QA'})
 
     def test_changed_account_stops_before_any_document_write(self):
         p=self.module();calls=[]

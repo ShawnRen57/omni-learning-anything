@@ -30,7 +30,7 @@ def validate_delivery(target):
     if not isinstance(target, dict) or set(target) - {'platform', 'mode', 'destination', 'credential_env', 'account_id', 'cli_profile'}:
         raise ValueError('Delivery accepts only platform, mode, destination and credential_env; keep secrets outside config.')
     platform = target.get('platform'); mode = target.get('mode')
-    if platform not in MODES or mode not in MODES[platform]:
+    if not isinstance(platform,str) or not isinstance(mode,str) or platform not in MODES or mode not in MODES[platform]:
         raise ValueError('Unsupported delivery platform/mode; choose a documented route.')
     for key in ('account_id', 'cli_profile'):
         value = target.get(key)

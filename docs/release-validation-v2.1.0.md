@@ -5,10 +5,10 @@ Updated 2026-10-25. This report distinguishes implementation/contract verificati
 ## Current evidence
 
 - Official tools inspected: Notion `ntn 0.23.25`, Feishu `lark-cli 1.0.98`. Official distribution sources and Feishu release checksum verified; installed in a dedicated task cache without changing global defaults.
-- Official CLI transport tests: 7/7, including stdin JSON, reviewed file upload, sanitized failures, user identity, account mismatch before write, async ticket reuse and folder readback rejection.
-- Connection tests: 7/7, including selected official destination URLs, actionable missing tool/auth states, read-only identity/target checks before saving, metadata profile permissions/no replacement, course snapshot independence, and malformed-profile isolation. Tests observed failing before implementation/fix and then passing.
-- Full suite: **96/96 passed**, including the malformed-profile regression and real XeLaTeX integration when available.
-- Candidate ZIP: isolated extraction, all Python syntax, CLI version/doctor/connect invocation, provider/onboarding resources and SHA256 passed. Official Skill validator passed. `git diff --check` passed. Final review and publication remain pending account acceptance.
+- Official CLI transport tests: 8/8, including stdin JSON, reviewed file upload, sanitized failures, user identity, account mismatch before write, async ticket reuse and folder readback rejection.
+- Connection tests: 9/9, including selected official destination URLs, actionable missing tool/auth states, read-only identity/target checks before saving, metadata profile permissions/no replacement, course snapshot independence, and malformed-profile isolation. Tests observed failing before implementation/fix and then passing.
+- Full suite after review fixes: **99/99 passed**, including the malformed-profile regression and real XeLaTeX integration when available.
+- Candidate ZIP: isolated extraction, all Python syntax, CLI version/doctor/connect invocation, provider/onboarding resources and SHA256 passed. Official Skill validator passed. `git diff --check` passed. Fresh whole-branch review completed; its three findings have focused passing regressions (brand/verified user, named profile recovery, malformed profile fields). Final full-suite/package recheck passed, including isolated extraction/runtime, Skill validation, checksum and whitespace checks. Publication remains pending actual account API acceptance.
 
 ## Real accounts
 

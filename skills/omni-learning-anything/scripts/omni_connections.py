@@ -3,6 +3,7 @@ import json
 import os
 import re
 import shutil
+import shlex
 import stat
 from pathlib import Path
 from urllib.parse import parse_qs,urlsplit
@@ -81,7 +82,10 @@ def list_connections(base=None):
 
 def blocked(platform,stage,action,command=None,scopes=()):
     result={'ready':False,'platform':platform,'stage':stage,'next_action':action,'guide':GUIDE}
-    if command:result['agent_command']=command
+    if command:
+        if isinstance(command,list):
+            result['agent_argv']=command;result['agent_command']=shlex.join(command)
+        else:result['agent_command']=command
     if scopes:result['missing_scopes']=list(scopes)
     return result
 
@@ -113,8 +117,17 @@ def connect(platform=None,value=None,*,client=None,save_as=None,profile_dir=None
             identity=client.check_identity()
             target['account_id']=identity['id']
         except (CLIError,ValueError,RuntimeError) as error:
+            if isinstance(error,CLIError) and error.kind=='region':
+                return blocked(platform,'configuration','Selected CLI profile is not Feishu. Choose a confirmed Feishu application profile; do not overwrite the existing Lark profile or change an approved course account/location.')
             config=platform=='feishu' and isinstance(error,CLIError) and error.kind=='config'
-            command='ntn login --no-browser' if platform=='notion' else ('lark-cli config init --new --brand feishu --lang zh' if config else 'lark-cli auth login --domain docs --domain drive --no-wait --json')
+            if platform=='notion':command=['ntn','login','--no-browser']
+            elif config:
+                command=['lark-cli','config','init','--new','--brand','feishu','--lang','zh']
+                if target.get('cli_profile'):command+=['--name',target['cli_profile']]
+            else:
+                command=['lark-cli']
+                if target.get('cli_profile'):command+=['--profile',target['cli_profile']]
+                command+=['auth','login','--domain','docs','--domain','drive','--no-wait','--json']
             return blocked(platform,'authorization','Agent initiates official authorization; user reviews the account and requested document permissions. Do not paste passwords or tokens into chat.',command,getattr(error,'scopes',()))
         try:
             if platform=='notion':

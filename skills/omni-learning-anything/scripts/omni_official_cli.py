@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 
 class CLIError(RuntimeError):
     def __init__(self, kind='operation', scopes=()):
-        self.kind=kind if kind in ('authorization','authentication','config','network','validation','operation') else 'operation'
+        self.kind=kind if kind in ('authorization','authentication','config','network','validation','region','operation') else 'operation'
         self.scopes=[s for s in scopes if isinstance(s,str) and re.fullmatch(r'[a-zA-Z0-9_.:-]{1,140}',s)]
         super().__init__('Official CLI '+self.kind+' failed; check connection guidance and reconcile any existing write.')
 
@@ -69,7 +69,7 @@ class NotionCLI:
 
 class FeishuCLI:
     def __init__(self,target,root=None,runner=None):
-        self.target=target;self.root=Path(root or Path.cwd()).resolve();self.runner=runner or run
+        self.target=target;self.root=Path(root or Path.cwd()).resolve();self.runner=runner or run;self.identity_checked=False
 
     def call(self,args,**kw):
         argv=['lark-cli']
@@ -78,16 +78,20 @@ class FeishuCLI:
         return self.runner(argv+args,env=env,cwd=self.root,**kw)
 
     def check_identity(self):
+        self.identity_checked=False
         raw=self.call(['auth','status','--json','--verify'])
         data=raw.get('data',raw);user=data.get('identities',{}).get('user',{})
         ident=user.get('openId')
-        if data.get('verified') is not True or not isinstance(ident,str) or not ident:
+        if data.get('brand')!='feishu':raise CLIError('region')
+        if user.get('available') is not True or user.get('verified') is not True or not isinstance(ident,str) or not ident:
             raise CLIError('authentication')
         if self.target.get('account_id') and ident!=self.target['account_id']:raise ValueError('Feishu account changed; reconnect the confirmed account.')
+        self.identity_checked=True
         return {'id':ident,'name':user.get('userName','')}
 
     def json(self,method,url,**kw):
         path=api_path(url,'open.feishu.cn','/open-apis/')
+        if not self.identity_checked:self.check_identity()
         params=kw.get('params',{});body=kw.get('json',kw.get('data'))
         args=['api',method,path,'--as','user','--json'];stdin=None
         # Folder listing has a typed resource; docx/import APIs lack typed commands.

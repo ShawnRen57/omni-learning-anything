@@ -84,6 +84,34 @@ class ConnectionTests(unittest.TestCase):
         target={'platform':'feishu','mode':'cli','account_id':'user','destination':{'folder_token':'qa'}}
         with tempfile.TemporaryDirectory() as tmp:
             p.save('valid',target,tmp)
-            for name,value in [('list',[]),('null',None),('delivery',{'version':1,'delivery':None})]:
+            for name,value in [('list',[]),('null',None),('delivery',{'version':1,'delivery':None}),('platform',{'version':1,'delivery':{'platform':[],'mode':'cli'}}),('mode',{'version':1,'delivery':{'platform':'feishu','mode':{}}})]:
                 path=Path(tmp)/(name+'.json');path.write_text(json.dumps(value));path.chmod(0o600)
             self.assertEqual([item['name'] for item in p.list_connections(tmp)],['valid'])
+
+    def test_named_feishu_authorization_keeps_selected_profile(self):
+        p=self.module()
+        from omni_official_cli import CLIError
+        class Client:
+            def check_identity(self):raise CLIError('authentication')
+        target={'platform':'feishu','mode':'cli','account_id':'user','cli_profile':'course-account','destination':{'folder_token':'qa'}}
+        with tempfile.TemporaryDirectory() as tmp,patch.object(p.shutil,'which',return_value='/cli'):
+            p.save('saved',target,tmp)
+            for options in [dict(platform='feishu',value='https://my.feishu.cn/drive/folder/qa',cli_profile='course-account'),dict(connection='saved',profile_dir=tmp)]:
+                result=p.connect(client=Client(),**options)
+                self.assertEqual(result['agent_argv'][:3],['lark-cli','--profile','course-account'])
+                self.assertIn('auth login',result['agent_command'])
+        class ConfigClient:
+            def check_identity(self):raise CLIError('config')
+        with patch.object(p.shutil,'which',return_value='/cli'):
+            result=p.connect('feishu','https://my.feishu.cn/drive/folder/qa',client=ConfigClient(),cli_profile='new-app')
+        argv=result['agent_argv'];self.assertEqual(argv[argv.index('--name')+1],'new-app')
+
+    def test_wrong_feishu_region_does_not_trigger_login_or_overwrite(self):
+        p=self.module()
+        from omni_official_cli import CLIError
+        class Client:
+            def check_identity(self):raise CLIError('region')
+        with patch.object(p.shutil,'which',return_value='/cli'):
+            result=p.connect('feishu','https://my.feishu.cn/drive/folder/qa',client=Client(),cli_profile='existing-lark')
+        self.assertFalse(result['ready']);self.assertEqual(result['stage'],'configuration')
+        self.assertIn('Feishu',result['next_action']);self.assertNotIn('agent_command',result)
