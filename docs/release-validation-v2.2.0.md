@@ -63,4 +63,4 @@ The downloaded ZIP and `SHA256SUMS` each match their local release files byte-fo
 7165a5df79c5de7025f792b14edd1bf836661882dd59022f81c1fc22de0149c1
 ```
 
-GitHub's published default README rendering was retrieved and confirmed to be English with the near-top version guide and ten-language navigation. English/Chinese/Arabic GitHub-compatible previews were also inspected locally. No remote release-upload verification remains pending.
+GitHub's published default README rendering was retrieved and confirmed to be English with the near-top version guide and ten-language navigation. English and Arabic GitHub-compatible previews were visually inspected locally; all ten READMEs' local navigation targets were checked. No remote release-upload verification remains pending.
