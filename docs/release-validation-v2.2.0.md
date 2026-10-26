@@ -52,3 +52,15 @@ Implementation decisions and review boundaries, in decision order:
 6. Universal operating-system/viewer font substitution is not claimed. Other hosts may need appropriate fonts and actual output inspection.
 7. Legacy generic host/import compatibility remains for existing courses, without a new native-support claim for unspecified platforms. A new platform still needs explicit capability verification.
 8. Release integrity is gated on downloading the published assets and comparing exact bytes/SHA256. Until that step is recorded, a local archive is only a candidate.
+
+## Published asset verification
+
+Published on **2026-10-26**: [v2.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.2.0), non-draft and non-prerelease. The immutable tag points to `494a221`; subsequent documentation commits record the completed publication without changing that tag.
+
+The downloaded ZIP and `SHA256SUMS` each match their local release files byte-for-byte. The downloaded ZIP is **89,593 bytes**, contains 38 source-matching runtime/resource files, and passes isolated extraction/runtime/CLI/provider/checksum validation. Its SHA256, also reported by GitHub, is:
+
+```text
+7165a5df79c5de7025f792b14edd1bf836661882dd59022f81c1fc22de0149c1
+```
+
+GitHub's published default README rendering was retrieved and confirmed to be English with the near-top version guide and ten-language navigation. English/Chinese/Arabic GitHub-compatible previews were also inspected locally. No remote release-upload verification remains pending.
