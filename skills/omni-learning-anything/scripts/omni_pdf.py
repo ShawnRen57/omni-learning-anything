@@ -18,8 +18,9 @@ def esc(text):
 def visible_text(text,code):
     if code!='ar':return esc(text)
     # Keep Arabic shaping/direction while isolating Latin identifiers and citations.
-    parts=re.split(r'([\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+(?:[ \t]+[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+)*)',str(text))
-    return ''.join(esc(part) if re.search(r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]',part) else r'\textenglish{'+esc(part)+'}' for part in parts if part)
+    # Paragraph breaks must stay outside the non-paragraph \textenglish command.
+    parts=re.split(r'((?:\r?\n[ \t]*){2,}|[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+(?:[ \t]+[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+)*)',str(text))
+    return ''.join(esc(part) if part.isspace() or re.search(r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]',part) else r'\textenglish{'+esc(part)+'}' for part in parts if part)
 
 
 def executable(name):

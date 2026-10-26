@@ -33,3 +33,39 @@ class DingTalkConnectionTests(unittest.TestCase):
     self.assertNotIn('import',args)
     return {'contentType':'ALIDOC'} if 'info' in args else {'markdown':text}
    self.assertEqual(publish(root,m,{'destination':{'folder_id':'qa'}},receipt,lambda **x:receipt.update(x),runner)['status'],'verified')
+
+ def test_readback_accepts_http_and_markdown_destination_syntax_without_import(self):
+  import tempfile
+  from test_documents import course
+  import omni_document as d
+  from omni_dingtalk import publish
+  cases=[('http://example.com/reference',None),('https://example.com/Architecture_(history)',None),('https://example.com/a_(b_(c))',None),('https://example.com/Architecture_(history)',r'https://example.com/Architecture_\(history\) "Title"'),('https://example.com/Architecture_(history)',"<https://example.com/Architecture_(history)> 'Title'")]
+  for url,destination in cases:
+   with self.subTest(url=url,destination=destination),tempfile.TemporaryDirectory() as tmp:
+    root=Path(tmp);plan=course(root);plan['sources'][0]['url']=url
+    import omni_core as core
+    core.save(root/'plan.json',plan);m=d.render(root,root/'plan.json','plan',['docx'])
+    text=(root/m['artifacts']['markdown']).read_text().replace('../assets/','https://official.example/')
+    if destination:text=text.replace(']('+url+')',']('+destination+')')
+    receipt={'remote_id':'existing','url':'https://alidocs.dingtalk.com/i/nodes/existing'}
+    def runner(args):
+     self.assertNotIn('import',args)
+     return {'contentType':'ALIDOC'} if 'info' in args else {'markdown':text}
+    self.assertEqual(publish(root,m,{'destination':{'folder_id':'qa'}},receipt,lambda **x:receipt.update(x),runner)['status'],'verified')
+
+ def test_readback_rejects_plain_urls_wrong_targets_and_images_as_sources(self):
+  import tempfile
+  from test_documents import course
+  import omni_document as d
+  from omni_dingtalk import publish
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);plan=course(root);m=d.render(root,root/'plan.json','plan',['docx'])
+   original=(root/m['artifacts']['markdown']).read_text().replace('../assets/','https://official.example/')
+   link='[参考 1](https://example.com/1)'
+   for replacement in ('参考 1 https://example.com/1','[参考 1](https://example.com/wrong) https://example.com/1','!'+link):
+    with self.subTest(replacement=replacement):
+     text=original.replace(link,replacement);receipt={'remote_id':'existing','url':'https://alidocs.dingtalk.com/i/nodes/existing'}
+     def runner(args):
+      self.assertNotIn('import',args)
+      return {'contentType':'ALIDOC'} if 'info' in args else {'markdown':text}
+     with self.assertRaisesRegex(ValueError,'semantic source links'):publish(root,m,{'destination':{'folder_id':'qa'}},receipt,lambda **x:receipt.update(x),runner)

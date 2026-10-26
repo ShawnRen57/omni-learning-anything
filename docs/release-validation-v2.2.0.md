@@ -1,6 +1,6 @@
 # v2.2.0 validation
 
-Validation date: 2026-10-25. This report separates released features from local rendering, contract tests and real-account acceptance. Private account IDs, authorization material, signed download URLs and course receipts are excluded from the repository/package.
+Real-account/rendering validation: 2026-10-25; release verification: 2026-10-26. This report separates released features from local rendering, contract tests and real-account acceptance. Private account IDs, authorization material, signed download URLs and course receipts are excluded from the repository/package.
 
 ## Real accounts
 
@@ -35,3 +35,20 @@ The root README is English, with nine translated READMEs and consistent ten-lang
 Final suite, skill validation, package SHA256, independent review and downloaded-release verification are recorded below when performed. A local package alone is not proof of GitHub publication.
 
 Candidate verification: **131/131 tests passed** (including real XeLaTeX integration); Skill Creator validation and extracted ZIP runtime/CLI/provider/SHA256 checks passed. Ten real DOCX fixtures each rendered to one page and were inspected. A separate native Arabic prose fixture was inspected in PDF, DOCX and a 390-pixel HTML viewport; ISO dates remain LTR within RTL text.
+
+## Final review and regressions
+
+One fresh whole-branch review of `cb94ff8..e53a3b1` found no Critical issues and two Important issues. Both were reproduced as failing regressions, then fixed in one pass: Arabic PDF paragraph boundaries remain outside inline direction commands, and DingTalk readback parses HTTP(S) destinations with balanced/escaped parentheses and optional titles. Wrong targets, plain URLs and image-only source destinations are rejected. The new Arabic multi-paragraph PDF was visually inspected; the current DingTalk reader also reverified the two existing real documents without imports or receipt changes.
+
+The final complete suite passed **134/134 tests** in 60.961 seconds. Skill Creator and isolated ZIP extraction/runtime/CLI/provider/checksum validation passed again. All 38 ZIP entries match their source files. No Minor findings were deferred. The prior v2.1.0 archive remains byte-identical.
+
+Implementation decisions and review boundaries, in decision order:
+
+1. Official metadata initially suggested Tencent device authorization plus MCP, conditional on live capability. Actual public-client rejection superseded that tentative selection; metadata alone never counted as account acceptance. The cost would otherwise have been a login path that new users cannot complete.
+2. Tencent therefore uses the proven official PKCE loopback flow with read/write scope and OS keyring storage. It needs the grant completed on the same computer; it does not supply a hosted or remote authorization service.
+3. The independent reviewer performed no live account actions. Account/native-page conclusions rely on the implementer's recorded real-account inspection and receipts; native viewing was not repeated by a second person.
+4. Unattended keyring access, host scheduling and cross-device synchronization remain host-specific acceptance work. A foreground pass does not promise those behaviors.
+5. Cloud QA uses synthetic transport/layout fixtures. It does not measure fresh research, teaching quality or mastery; the Skill's normal sourcing and learner review steps remain required.
+6. Universal operating-system/viewer font substitution is not claimed. Other hosts may need appropriate fonts and actual output inspection.
+7. Legacy generic host/import compatibility remains for existing courses, without a new native-support claim for unspecified platforms. A new platform still needs explicit capability verification.
+8. Release integrity is gated on downloading the published assets and comparing exact bytes/SHA256. Until that step is recorded, a local archive is only a candidate.

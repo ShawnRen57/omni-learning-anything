@@ -2,7 +2,9 @@
 import json
 import html
 import re
+import string
 import subprocess
+from urllib.parse import urlsplit
 from omni_http import document_data, check_text, check_links, verified
 from omni_delivery import verify_url
 
@@ -50,6 +52,52 @@ class DingTalkCLI:
         if response.get('success') is False:raise ValueError('DingTalk destination is unavailable.')
 
 
+def markdown_links(text):
+    """Read dws inline link/image destinations without truncating URL parentheses."""
+    escapes=re.compile(r'\\(['+re.escape(string.punctuation)+r'])')
+    title=re.compile(r'''\s+(?:"(?:\\.|[^"\\\n])*"|'(?:\\.|[^'\\\n])*'|\((?:\\.|[^)\\\n])*\))\s*\)''')
+    offset=0
+    while match:=re.search(r'(?<!\\)(!?)\[',text[offset:]):
+        image=bool(match[1]);i=offset+match.end();offset=i;depth=1
+        while i<len(text) and depth:
+            if text[i]=='\\':i+=2;continue
+            if text[i]=='[':depth+=1
+            elif text[i]==']':depth-=1
+            i+=1
+        if depth or i>=len(text) or text[i]!='(':continue
+        i+=1
+        while i<len(text) and text[i] in ' \t\r\n':i+=1
+        start=i
+        if i<len(text) and text[i]=='<':
+            angle=re.match(r'<((?:\\.|[^<>\\\s])*)>',text[i:])
+            if not angle:continue
+            raw=angle[1];i+=angle.end()
+        else:
+            depth=0
+            while i<len(text):
+                ch=text[i]
+                if ch=='\\':i+=2;continue
+                if ch=='(':depth+=1
+                elif ch==')':
+                    if not depth:break
+                    depth-=1
+                elif ch.isspace():break
+                i+=1
+            if depth:continue
+            raw=text[start:i]
+        end=i
+        if i<len(text) and text[i]==')':end=i+1
+        else:
+            tail=title.match(text,i)
+            if tail:end=tail.end()
+            else:
+                closing=re.match(r'\s+\)',text[i:])
+                if not closing:continue
+                end=i+closing.end()
+        url=html.unescape(escapes.sub(r'\1',raw));offset=end
+        if urlsplit(url).scheme in ('http','https'):yield image,url
+
+
 def publish(root, manifest, target, receipt, checkpoint, runner=None):
     base_runner=runner or run
     if target.get('account_id'):check_identity(target,base_runner)
@@ -90,8 +138,9 @@ def publish(root, manifest, target, receipt, checkpoint, runner=None):
     plain=re.sub(r'\\([\\`*_{}\[\]()#+.!<>|~-])',r'\1',text)
     plain=html.unescape(re.sub(r'<[^>]+>','',plain))
     check_text(plain, data)
-    hrefs={html.unescape(v) for v in re.findall(r'\]\((https://[^\s)]+)(?:\s+"[^"]*")?\)',text)}
+    links=list(markdown_links(text))
+    hrefs={url for image,url in links if not image}
     if not {s['url'] for s in data['sources']}.issubset(hrefs):raise ValueError('DingTalk readback is missing semantic source links.')
-    if not re.search(r'!\[[^\]]*\]\(https://[^\s)]+(?:\s+"[^"]*")?\)', text):
+    if not any(image and urlsplit(url).scheme=='https' for image,url in links):
         raise ValueError('DingTalk readback is missing a remote figure.')
     return verified(receipt['remote_id'], receipt['url'])

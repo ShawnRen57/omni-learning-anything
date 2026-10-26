@@ -85,3 +85,18 @@ class LanguageTests(unittest.TestCase):
    with ZipFile(root/m['artifacts']['docx']) as z:tree=ET.fromstring(z.read('word/document.xml'))
    text=''.join(t.text or '' for t in tree.iter() if t.tag.endswith('}t'))
    self.assertIn('\u200e'+core.today(root)+'\u200e',text)
+
+ def test_arabic_pdf_preserves_multiple_paragraphs_and_mixed_scripts(self):
+  import omni_pdf as pdf
+  if not pdf.executable('xelatex'):self.skipTest('XeLaTeX required')
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);plan=course(root);config=core.read(root/'config.json');config['language']='ar';core.save(root/'config.json',config)
+   plan['title']='خطة التعلم';plan['sections'][0]={'title':'هدف التعلم','body':'فقرة أولى [S1].\n\nفقرة ثانية مع Latin text.\n \nLATIN_PARAGRAPH [S2].\r\n\r\nفقرة أخيرة.'}
+   core.save(root/'plan.json',plan)
+   m=pdf.render(root,root/'plan.json','plan')
+   self.assertEqual(m['report']['links'],5);core.manifest_ok(root,m)
+   self.assertIn(plan['sections'][0]['body'],next((root/'sources').glob('*.md')).read_bytes().decode())
+   import pypdfium2 as pdfium
+   doc=pdfium.PdfDocument(root/m['pdf'])
+   text=''.join(doc[i].get_textpage().get_text_range() for i in range(len(doc)));doc.close()
+   self.assertIn('LATIN_PARAGRAPH',text)

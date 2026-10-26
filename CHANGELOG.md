@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.2.0 — 2026-10-25
+## v2.2.0 — 2026-10-26
 
 - Generate single-file offline HTML with embedded illustrations, responsive reading layout and clickable further-reading links; combine HTML and PDF when wanted.
 - Create plans and lessons in English, Chinese, Japanese, Korean, Spanish, French, German, Portuguese, Russian and Arabic, with script-aware fonts and Arabic RTL.

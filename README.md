@@ -19,7 +19,7 @@ Tell your agent what you want to learn. Omni builds a plan around your goal, exp
 <a id="versions"></a>
 ## Version guide
 
-| | |
+| Version | What you can do |
 | --- | --- |
 | **v1** | Your personal PDF course: approve a learning plan, then receive illustrated lessons with exercises and further reading. |
 | **v2** | Keep your course where you study: choose local files, Notion, Obsidian, Feishu, DingTalk or Tencent Docs. The agent guides connection and remembers your chosen location. |
