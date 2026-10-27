@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Omni Learning Anything](../../docs/assets/omni-banner.svg)
+<img src="../../docs/assets/omni-logo.png" alt="Omni Learning Anything logo" width="144" height="144">
 
 # Omni Learning Anything
 
