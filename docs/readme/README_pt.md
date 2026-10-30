@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="../../docs/assets/omni-wordmark.png" alt="Omni Learning Anything brush wordmark" width="520">
+<img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
 
 # Omni Learning Anything
 
