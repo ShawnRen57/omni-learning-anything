@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="../../docs/assets/omni-wordmark.png" alt="Omni Learning Anything brush wordmark" width="640">
+<img src="../../docs/assets/omni-wordmark.png" alt="Omni Learning Anything brush wordmark" width="520">
 
 # Omni Learning Anything
 

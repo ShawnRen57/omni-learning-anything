@@ -2,7 +2,7 @@
 
 Approved for publication on 2026-10-30. Created with the built-in imagegen tool from the user-selected horizontal brush-script concept. The PNG is copied byte-for-byte from the approved preview, preserving its white background and full composition.
 
-Omni uses deep jade teal, Learning uses ink blue, and Anything uses warm ochre. Page-like strokes are integrated into the O. All ten README headers display the wordmark at 640 pixels wide with its intrinsic aspect ratio.
+Omni uses deep jade teal, Learning uses ink blue, and Anything uses warm ochre. Page-like strokes are integrated into the O. All ten README headers display the wordmark at 520 pixels wide with its intrinsic aspect ratio.
 
 ## Generation prompt
 
