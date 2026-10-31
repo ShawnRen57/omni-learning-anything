@@ -32,4 +32,9 @@ Final whole-suite result: **171/171 tests passed in 61.722 seconds**. Skill Crea
 
 The six earlier release ZIPs remain byte-identical. Ten README badges/navigation/local targets were checked. Private learning records are excluded from packaging. README defaults to English with nine translated alternatives.
 
-Package: `omni-learning-anything-skill-v2.3.0.zip`, 124,428 bytes. SHA256: `c1553b6716fcacdf6b319888eb7a707b67d4f44a837e8c4a0aeaa26f70ee75dc`. Remote publication is verified separately below once completed.
+Package: `omni-learning-anything-skill-v2.3.0.zip`, 124,428 bytes. SHA256: `c1553b6716fcacdf6b319888eb7a707b67d4f44a837e8c4a0aeaa26f70ee75dc`. Remote publication was independently verified as recorded below.
+
+
+## GitHub publication
+
+Published 2026-10-31: [v2.3.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.3.0), latest stable release. The default branch and annotated tag resolved to `b6a2472b33542319768495f50e2401cb5ec76744` at publication. GitHub README and Skill metadata show v2.3.0. Both release assets were downloaded and compared byte-for-byte with the local ZIP and SHA256SUMS; both match. This publication record is a documentation-only follow-up; the tested tag and package remain unchanged.
