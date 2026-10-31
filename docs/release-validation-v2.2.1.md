@@ -1,6 +1,6 @@
 # v2.2.1 validation
 
-Date: 2026-10-31. Scope: local v2.2.1 release candidate, guided interpretation of vague study requests, selected-route readiness, private onboarding observations and first-use recovery instructions. This record distinguishes automated checks, model-based behavioral observations and real account access. It does not certify new remote publication or unattended learning delivery.
+Date: 2026-10-31. Scope: v2.2.1 guided interpretation of vague study requests, selected-route readiness, private onboarding observations and first-use recovery instructions. This record distinguishes automated checks, model-based behavioral observations and real account access. Remote publication is recorded below; unattended learning delivery remains outside this account check.
 
 ## Runtime and compatibility
 
@@ -47,3 +47,10 @@ SHA256: `11e2f694c6e22c40866678b10980724370b023d2b52eb80337091a7f113b9326`.
 No real new-course activation cohort, expired-login account experiment, fresh four-platform write/readback/visual cycle or live background job was run in this upgrade. There is no new learner-approved non-sample course/schedule on which to establish those results. Foreground reconnects and synthetic host evidence do not establish unattended keychain access. The helper reports attestations and unknowns explicitly; it never schedules or approves a course. Validate the actual chosen host/job after real course approval, and record each future cloud delivery through normal publication/readback/inspection.
 
 No claim is made that vague-goal generation measurably improves learning, or that a seven-day retention target is already met. Those remain real-user evaluation work from the roadmap.
+
+
+## GitHub publication
+
+Published on 2026-10-31: [v2.2.1 Release](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.2.1), marked as the latest stable release. The default branch was fast-forwarded and the annotated tag resolves to `626b4a097c1b0d8152f2f2006d20171bef06b0e1`. Publication preflight reran all **149 tests**, passing in **63.990 seconds**, and verified the packaged runtime/checksum.
+
+Both release assets (`omni-learning-anything-skill-v2.2.1.zip` and `SHA256SUMS`) were downloaded from GitHub and compared byte-for-byte with the local artifacts. The ZIP SHA256 is `11e2f694c6e22c40866678b10980724370b023d2b52eb80337091a7f113b9326`. GitHub's API also confirmed the default README download/badge and Skill metadata show v2.2.1. The tag and ZIP remain attached to the tested implementation; this publication record is a subsequent documentation update.
