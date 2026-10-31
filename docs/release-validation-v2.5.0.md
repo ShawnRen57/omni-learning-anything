@@ -27,3 +27,7 @@ After the runtime fixes, the whole suite passed 220 tests in 73.020 seconds. Two
 The upstream flat catalog fields and marketplace manifest were preserved and versioned together. Skill Creator's strict validator rejects those six existing catalog extension keys; its core contract passed on a normalized temporary copy, and the catalog shapes/version consistency were checked separately. This is not a claim that the strict validator accepts the unmodified catalog-extended file.
 
 Final package: `omni-learning-anything-skill-v2.5.0.zip`, 158288 bytes; SHA256 `605f5bf34bc58941998a836bd4538478fb31dd541a364cbd8147399701713e82`. All 61 entries match source. The extracted final workflow again passed and all 8 older ZIPs remain unchanged.
+
+## GitHub publication
+
+Published 2026-10-31: [v2.5.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.5.0), latest stable Release. Main and annotated tag resolved to `5c22327505b405dbfcf3f834f2161d49a5e6e99a` at publication. GitHub API confirmed the two assets, README version and both nested/flat Skill versions. Both release assets were downloaded from GitHub and compared byte-for-byte with local ZIP and SHA256SUMS; both match. This publication record is a documentation-only follow-up; the tested source tag and package remain unchanged.
