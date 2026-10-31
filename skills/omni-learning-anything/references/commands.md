@@ -8,6 +8,8 @@ Keep learner data in a dedicated writable course archive, not in the installed b
 
 `config.json`: existing topic/goal/baseline, positive `daily_minutes`, IANA `timezone`, valid `time` HH:MM, nonempty weekday codes MO–SU, `language` en/zh/ja/ko/es/fr/de/pt/ru/ar, booleans `immediate_day01` and `sample_mode`; new courses also have explicit `delivery` from [delivery.md](delivery.md).
 
+Optional `learning_brief`: original study request, interpretation, outcomes, included/excluded scope, prerequisites, ordered topic/outcome sequence, proposed/confirmed assumptions and open questions. See [intent](intent.md) for the exact schema. It is included in the config's existing approval hash; old configs need no migration.
+
 `plan.json`: topic, title, ordered consecutive `days` from 1 (topic/objective), sections (title/plain-text body), sources and figure. Include all daily topics and schedule visibly in sections, not only in the days array.
 
 `data/DayNN.json`: approved day/title, positive integer reading_minutes, nonnegative integer practice_minutes within the course budget, sections, sources and figure.
@@ -31,6 +33,8 @@ Figure: `{"path":"assets/teaching.png","caption":"What to notice","credit":"Sour
 10. `OMNI pause` / `resume`; update and verify the host job too. On completion stop/pause the job, preserve the archive and do not generate Day N+1.
 
 `python /installed/.../omni_learning.py --version` prints the packaged skill version. `doctor` reports local runtime and selected output requirements; it does not claim web/image/scheduler/cloud tools exist.
+
+`brief-check --input /private/brief.json` validates a standalone learning brief; no semantic/consent claim. `doctor --config /private/staging/config.json` checks a selected route before `init`. Optional `--host HOST --host-report FILE` and `--background` assess fresh course/config/context-bound host attestations; background evidence also binds the approved active course and registered host/job. Absent evidence stays unknown. `onboarding-record --event EVENT --id STABLE_ID [--stage STAGE] [--user-actions COUNT] [--usage FILE]` records fixed, private observations; `onboarding-status` summarizes only those observations. Exact events, schemas and evidence limits: [readiness](readiness.md). These helpers never approve plans, schedule jobs or write remote documents.
 
 ## Integrity and recovery
 

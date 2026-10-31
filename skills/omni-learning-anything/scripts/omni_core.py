@@ -44,6 +44,9 @@ def validate_plan(plan):
 
 def validate_config(config):
     ZoneInfo(config['timezone'])
+    if 'learning_brief' in config:
+        from omni_intake import validate_brief
+        validate_brief(config['learning_brief'])
     if 'daily_minutes' in config and (type(config['daily_minutes']) is not int or config['daily_minutes']<1):
         raise ValueError('daily_minutes must be a positive integer.')
     if 'time' in config and not re.fullmatch(r'(?:[01]\d|2[0-3]):[0-5]\d',str(config['time'])):

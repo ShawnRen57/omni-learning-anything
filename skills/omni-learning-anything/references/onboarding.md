@@ -4,11 +4,15 @@ The agent does the setup work; the learner chooses the destination and reviews o
 
 ## Normal conversation
 
+Understand the study request before asking setup questions: use [intent](intent.md) for broad/ambiguous goals, reuse already supplied information and combine routine missing settings. Check only the selected route with [readiness](readiness.md); no token, ID extraction or diagnostic editing is assigned to the learner.
+
 1. Reuse the course brief. If the destination is missing, ask once: “计划和每日材料希望保存到哪里？” Once selected, ask only for that platform's course parent-page/folder link, or Obsidian Vault path and course subdirectory. Explain how to create/copy a link if requested. Do not collect credentials for every supported platform.
 2. Inspect the existing writable API connector/official CLI and identity. Reuse adequate authorization. Otherwise the agent installs/checks the official tool, initiates login and shows the official URL, code and permission explanation (plus Feishu QR). The learner signs in, chooses the correct account/workspace/organization and grants access on that official page. Do not request passwords or token values in chat.
 3. Agent completes polling, verifies identity and the selected location, optionally saves a named metadata connection, and creates the actual course plan. Ask a further question only for a concrete missing permission, invalid location or organizational restriction. Report the verified plan link; plan approval is still required before daily scheduling.
 
 Two or three short connection exchanges is the normal target, not a guaranteed upper bound. App/administrator approvals, missing workspace membership or a locked keychain may require additional action. Explain the next specific action instead of repeatedly issuing login codes. Nothing changes platform/account merely because the user has not replied.
+
+Show an authorization link's actual validity period when returned by the official tool. An expired code restarts only that authorization step; reuse completed app setup, profile and confirmed destination. After polling finishes, inspect official status/doctor before issuing another code. Distinguish expiry, missing organization/member permission, scope mismatch, network failure and locked keychain. Follow the exact selected provider's correction; never ask for blanket permissions or change organizations to make a check pass. Do not infer successful authorization from the learner's confirmation alone.
 
 Example: user “保存到飞书，这个课程文件夹：<link>。” Agent “我会检查现有授权；如需授权，请在官方页面选择你自己的组织并核对文档权限。” User completes it. Agent runs connection checks, publishes and checks the plan, then returns the link for approval. Users do not need to find object IDs, write config files or paste API keys into the conversation.
 

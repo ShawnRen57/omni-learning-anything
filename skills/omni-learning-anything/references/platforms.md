@@ -8,6 +8,8 @@ After approval, use the current host's native automation tools. Verify the saved
 
 For Codex, use the automation tool available in the current client. For WorkBuddy, use its native Automation feature. For OpenClaw and Doubao work mode, inspect the actual native scheduling interface. If no scheduler is available, offer manual continuation.
 
+Use the [readiness](readiness.md) report to distinguish foreground observations from a real scheduled-context check. After approval and job verification, test the actual background execution host, binary/profile, course path, credentials and pinned account/location. Keep unavailable/untested capabilities explicit; a synthetic host report or interactive keychain success never establishes unattended operation. No live jobs for sample projects. Preserve pending artifacts and never republish merely to test credentials.
+
 DSH's Host Schedule provides create/list/update/delete in supported presets. Use a daily local-time rule with an explicit zone rather than a fixed 86400-second interval. The Host must run for execution. Native pause is unavailable in the documented upstream: pause course state immediately; do not report a host pause that did not occur. Deletion also removes host delivery history, so preserve relevant records and explain the impact before an authorized deletion.
 
 Sources: [DSH Schedule](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/schedule.md), [WorkBuddy Automation](https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Automation-Guide), [OpenClaw cron](https://docs.openclaw.ai/cron).

@@ -6,8 +6,6 @@ if sys.version_info < (3, 10):
 
 import argparse
 import json
-import tempfile
-import shutil
 import re
 from pathlib import Path
 import omni_core as c
@@ -23,7 +21,10 @@ def main():
     p=sub.add_parser('connection-show'); p.add_argument('--name',required=True)
     sub.add_parser('connection-list')
     p=sub.add_parser('tencent-auth');p.add_argument('action',choices=['login','start','poll','status']);p.add_argument('--name',required=True)
-    sub.add_parser('doctor')
+    p=sub.add_parser('doctor'); p.add_argument('--config',type=Path); p.add_argument('--host'); p.add_argument('--host-report',type=Path); p.add_argument('--background',action='store_true')
+    p=sub.add_parser('brief-check'); p.add_argument('--input',type=Path,required=True)
+    p=sub.add_parser('onboarding-record'); p.add_argument('--event',required=True); p.add_argument('--id',dest='event_id',required=True); p.add_argument('--stage'); p.add_argument('--user-actions',type=int); p.add_argument('--usage',type=Path)
+    sub.add_parser('onboarding-status')
     p=sub.add_parser('init'); p.add_argument('--config',type=Path,required=True); p.add_argument('--plan',type=Path,required=True)
     p=sub.add_parser('render'); p.add_argument('--input',type=Path,required=True); p.add_argument('--key',required=True); p.add_argument('--format',dest='formats',action='append',choices=['pdf','markdown','docx','html'])
     p=sub.add_parser('review'); p.add_argument('--key',required=True); p.add_argument('--note',required=True)
@@ -50,15 +51,17 @@ def main():
             from omni_connections import load
             result={'delivery':load(args.name)}
         elif args.command=='doctor':
-            writable=False
-            if root.is_dir():
-                try:
-                    with tempfile.TemporaryFile(dir=root): writable=True
-                except OSError: pass
-            result={'python':sys.version.split()[0],'xelatex':shutil.which('xelatex'),'output_writable':writable,'note':'XeLaTeX is required only for PDF. Search, images, scheduler and host document tools require capability checks.'}
-            if (root/'config.json').exists():
-                from omni_delivery import preflight,default_formats
-                config=c.read(root/'config.json'); result.update(formats=default_formats(config),delivery=preflight(config.get('delivery')))
+            from omni_readiness import diagnose
+            result=diagnose(root,c.read(args.host_report) if args.host_report else None,background=args.background,config_path=args.config,host=args.host)
+        elif args.command=='brief-check':
+            from omni_intake import validate_brief
+            result=validate_brief(c.read(args.input))
+        elif args.command=='onboarding-record':
+            from omni_onboarding import record
+            result=record(root,args.event,args.event_id,stage=args.stage,user_actions=args.user_actions,usage=c.read(args.usage) if args.usage else None)
+        elif args.command=='onboarding-status':
+            from omni_onboarding import status
+            result=status(root)
         elif args.command=='init': c.initialize(root,c.read(args.config),c.read(args.plan))
         elif args.command=='render':
             from omni_document import render
@@ -87,6 +90,11 @@ def main():
         elif args.command=='reconcile':
             from omni_delivery import reconcile
             result=reconcile(root,args.key,args.remote_id,args.url,args.task_id)
+    except ModuleNotFoundError as e:
+        packages={'requests':'requests','keyring':'keyring','docx':'python-docx','PIL':'Pillow','pypdf':'pypdf','pypdfium2':'pypdfium2','qcloud_cos':'cos-python-sdk-v5'}
+        package=packages.get((e.name or '').split('.')[0])
+        if not package: raise
+        parser.exit(1,json.dumps({'ok':False,'stage':'dependencies','dependency':package,'error':'Install '+package+' in this interpreter using the selected route requirements; run doctor and see references/setup.md.'})+'\n')
     except (ValueError,RuntimeError,OSError,KeyError) as e:
         parser.exit(1,json.dumps({'ok':False,'error':str(e)},ensure_ascii=False)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))

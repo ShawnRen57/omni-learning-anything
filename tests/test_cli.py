@@ -23,7 +23,7 @@ class CLITests(unittest.TestCase):
     def test_cli_reports_skill_version(self):
         p = subprocess.run([sys.executable, str(CLI), '--version'], capture_output=True, text=True)
         self.assertEqual(p.returncode, 0, p.stderr)
-        self.assertIn('2.2.0', p.stdout)
+        self.assertIn('2.2.1', p.stdout)
 
     def test_markdown_course_only_advances_after_publish(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -63,6 +63,22 @@ sys.meta_path.insert(0,RejectPDF());sys.path.insert(0,sys.argv[1]);sys.argv=[sys
             p = subprocess.run([sys.executable, '-c', code, str(CLI.parent), str(CLI), str(root)], capture_output=True, text=True)
             self.assertEqual(p.returncode, 0, p.stderr)
             self.assertEqual(json.loads(p.stdout)['formats'], ['docx'])
+
+    def test_missing_optional_dependency_returns_actionable_json(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); course(root, {'platform': 'docx', 'mode': 'local'})
+            code = '''import sys,runpy
+class RejectDOCX:
+ def find_spec(self,fullname,path=None,target=None):
+  if fullname=='docx':raise ModuleNotFoundError("missing test dependency",name='docx')
+sys.meta_path.insert(0,RejectDOCX());sys.path.insert(0,sys.argv[1]);sys.argv=[sys.argv[2],'--project',sys.argv[3],'render','--input',sys.argv[4],'--key','plan'];runpy.run_path(sys.argv[0],run_name='__main__')
+'''
+            p = subprocess.run([sys.executable, '-c', code, str(CLI.parent), str(CLI), str(root), str(root/'plan.json')], capture_output=True, text=True)
+            self.assertNotEqual(p.returncode, 0)
+            self.assertTrue(p.stderr.startswith('{'), p.stderr[-200:])
+            error = json.loads(p.stderr)
+            self.assertEqual(error['stage'], 'dependencies')
+            self.assertEqual(error['dependency'], 'python-docx')
 
 
 if __name__ == '__main__': unittest.main()

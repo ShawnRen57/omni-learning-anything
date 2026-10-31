@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.2.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.2.1-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.2.0.zip)**
+**[Skill ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.2.1.zip)**
 
 </div>
 
@@ -23,6 +23,9 @@
 | **v1** | 나만의 PDF 과정. 계획을 승인한 뒤 그림, 연습, 추가 읽기 자료가 포함된 수업을 받습니다. |
 | **v2** | 로컬 파일, Notion, Obsidian, Feishu, DingTalk, Tencent Docs 중 저장할 곳을 선택합니다. Agent 가 연결을 안내하고 선택한 위치를 기억합니다. |
 | **v2.2.0** | 오프라인 단일 HTML 파일, 10개 언어의 과정, DingTalk 와 Tencent Docs 공식 인증 안내가 추가되었습니다. |
+| **v2.2.1** | 막연한 관심만 있어도 시작할 수 있습니다. 에이전트가 학습 방향과 선수 지식을 정리하고 체계적인 과정을 제안하며 실행 환경을 확인합니다. |
+
+“경제학을 조금 배우고 싶어요”라고만 말해도 됩니다. Omni는 학습 방향과 순서를 제안하고 가정을 표시하며, 과정에 영향을 주는 정보만 질문합니다. 목표가 명확하면 바로 계획을 세웁니다.
 
 ## 내 목표에 맞게 학습하기
 
@@ -85,7 +88,7 @@ omni-learning-anything 으로 여행을 위한 건축사를 배우고 싶어요.
 
 ## 설치와 안내
 
-[Agent 에 설치하기](../../skills/omni-learning-anything/references/install.md) · [형식과 글꼴 설정](../../skills/omni-learning-anything/references/setup.md) · [문서 연결](../../skills/omni-learning-anything/references/onboarding.md) · [릴리스 검증](../../docs/release-validation-v2.2.0.md)
+[Agent 에 설치하기](../../skills/omni-learning-anything/references/install.md) · [형식과 글꼴 설정](../../skills/omni-learning-anything/references/setup.md) · [문서 연결](../../skills/omni-learning-anything/references/onboarding.md) · [릴리스 검증](../../docs/release-validation-v2.2.1.md)
 
 이 Agent Skill 은 Agent 의 검색, 문서, 예약 도구를 사용합니다. PDF 만 XeLaTeX 이 필요합니다. 클라우드 문서는 공식 API/CLI 로 쓰고 Obsidian 은 로컬 Vault 에 씁니다. 기기 간 동기화와 무인 실행은 호스트와 계정 조건에 따릅니다.
 

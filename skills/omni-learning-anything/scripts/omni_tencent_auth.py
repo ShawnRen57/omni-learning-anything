@@ -41,7 +41,7 @@ class KeyringStore:
             module=type(backend).__module__
             if module not in ('keyring.backends.macOS','keyring.backends.Windows','keyring.backends.SecretService','keyring.backends.libsecret'):raise RuntimeError('Select an OS credential store; plaintext keyring backends are not supported.')
             self.keyring=keyring
-        except ImportError:raise RuntimeError('Install requirements-tencent.txt in the selected Python environment for OS keyring authorization.') from None
+        except ImportError:raise RuntimeError('Install requirements-tencent-mcp.txt in the selected Python environment for OS keyring authorization.') from None
     def get(self,name):
         name_ok(name);value=self.keyring.get_password(SERVICE,name)
         return json.loads(value) if value else None

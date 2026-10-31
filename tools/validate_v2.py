@@ -1,6 +1,7 @@
 """Validate the generated v2 skill ZIP in an isolated extraction; no external writes."""
 import argparse
 import hashlib
+import re
 import subprocess
 import sys
 import tempfile
@@ -9,7 +10,8 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--archive', type=Path, default=ROOT/'dist/omni-learning-anything-skill-v2.2.0.zip')
+current_version = re.search(r'^  version: "([0-9]+\.[0-9]+\.[0-9]+)"$', (ROOT/'skills/omni-learning-anything/SKILL.md').read_text(), re.M).group(1)
+parser.add_argument('--archive', type=Path, default=ROOT/f'dist/omni-learning-anything-skill-v{current_version}.zip')
 args = parser.parse_args()
 archive = args.archive.resolve()
 with tempfile.TemporaryDirectory(prefix='omni-v2-install-') as temp:
@@ -25,7 +27,8 @@ with tempfile.TemporaryDirectory(prefix='omni-v2-install-') as temp:
     skill = target/'omni-learning-anything'
     cli = skill/'scripts/omni_learning.py'
     p = subprocess.run([sys.executable,str(cli),'--version'],capture_output=True,text=True,check=True)
-    assert p.stdout.strip() == 'omni-learning-anything 2.2.0'
+    version = re.search(r'^  version: "([0-9]+\.[0-9]+\.[0-9]+)"$', (skill/'SKILL.md').read_text(), re.M).group(1)
+    assert p.stdout.strip() == 'omni-learning-anything '+version
     for file in (skill/'scripts').glob('*.py'):
         compile(file.read_text(), str(file), 'exec')
     for name in ('omni_notion.py','omni_feishu.py','omni_tencent.py','omni_dingtalk.py','omni_obsidian.py','omni_delivery.py','omni_connections.py','omni_official_cli.py','omni_html.py','omni_locale.py','omni_tencent_auth.py','omni_tencent_mcp.py'):

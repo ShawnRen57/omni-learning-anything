@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.2.1 — 2026-10-31
+
+- Turn vague learning ideas into a proposed scope, observable outcomes, prerequisite order and a coherent course; preserve explicit goals and use focused clarification instead of a mandatory questionnaire.
+- Keep an optional structured learning brief in the hash-bound course config; concise specific requests proceed directly to planning.
+- Extend doctor with selected-route dependency checks and fresh, course-scoped foreground/background host attestations; unknown capabilities never imply unattended access.
+- Record private, restart-safe onboarding milestones, observed user actions and optional metered usage; authorization waiting is separate and total cost remains unknown.
+- Refine expired-login and exact-blocker recovery guidance; update all ten README variants and the self-contained Skill package.
+
 ## v2.2.0 — 2026-10-26
 
 - Generate single-file offline HTML with embedded illustrations, responsive reading layout and clickable further-reading links; combine HTML and PDF when wanted.

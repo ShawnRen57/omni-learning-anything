@@ -1,6 +1,8 @@
 # Teaching and evidence contract
 
 ## Curriculum
+For vague/broad requests first use [intent.md](intent.md). Preserve explicit user intent, label assumptions, distinguish necessary prerequisites from enrichment, and map the ordered modules/days to observable outcomes. A plan should make its interpretation and boundaries visible. Concise but specific goals do not require expanding into an entire field. Check relevance, prerequisite order, examples and coherence rather than rewarding length or a large topic count.
+
 Ask what the learner should be able to explain, distinguish or do. Divide the total duration into prerequisite-ordered phases. Every day gets a topic and a concrete output. Include retrieval practice and synthesis (e.g. every fifth day); review frequency is a design choice, not a claim of universal scientific optimality. A short course establishes a framework, not expertise in an entire field.
 
 Choose the subject's natural forms of evidence and practice:
