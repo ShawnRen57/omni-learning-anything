@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.5.0 — 2026-10-31
+
+- Return to a small source-grounded review queue that shares the approved daily time budget with new learning; balanced, new-first and review-only choices defer excess work without backlog pressure.
+- Reuse one frozen lightweight question in a separate attempt, preserving normal quiz continuation and the complete feedback history. No review timers, quiz reminders or automatic weekly jobs.
+- Inspect actual answer/feedback evidence, separate self-reports from derived judgments, exclude/re-include review items and request an honest on-demand recap. Delivery and silence never imply mastery.
+- Export current undisputed observed questions as private UTF-8 Anki CSV with sources and stable version IDs; no two-way synchronization.
+- Review immutable future-course proposals, then explicitly accept a separate course archive awaiting normal plan rendering and approval. Preserve old plans, learning history and schedules.
+
 ## v2.4.0 — 2026-10-31
 
 - Build courses from selected personal materials, pin exact editions/ranges and retain original page/chapter/slide/timestamp evidence for teaching and checks.

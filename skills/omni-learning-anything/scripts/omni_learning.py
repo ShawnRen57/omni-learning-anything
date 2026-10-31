@@ -40,9 +40,14 @@ def main():
     configure(sub)
     from omni_material_cli import configure as configure_materials
     configure_materials(sub)
+    from omni_study_cli import configure as configure_study
+    configure_study(sub)
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
     try:
-        if args.command=='materials':
+        if args.command=='study':
+            from omni_study_cli import execute as execute_study
+            result=execute_study(root,args)
+        elif args.command=='materials':
             from omni_material_cli import execute as execute_materials
             result=execute_materials(root,args)
         elif args.command=='quiz':

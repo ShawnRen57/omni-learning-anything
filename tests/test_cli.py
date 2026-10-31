@@ -23,7 +23,7 @@ class CLITests(unittest.TestCase):
     def test_cli_reports_skill_version(self):
         p = subprocess.run([sys.executable, str(CLI), '--version'], capture_output=True, text=True)
         self.assertEqual(p.returncode, 0, p.stderr)
-        self.assertIn('2.4.0', p.stdout)
+        self.assertIn('2.5.0', p.stdout)
 
     def test_markdown_course_only_advances_after_publish(self):
         with tempfile.TemporaryDirectory() as tmp:

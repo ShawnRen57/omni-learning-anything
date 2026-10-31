@@ -87,7 +87,17 @@ def load_attempt(root, attempt_id):
     require(attempt_id in records['attempts'], 'Unknown attempt; inspect quiz status.')
     attempt = records['attempts'][attempt_id]; value = quiz(root, attempt['key'], attempt['revision'])
     require(attempt['quiz_hash'] == value['hash'], 'Attempt belongs to a different frozen quiz.')
-    return records, attempt, value['definition']
+    return records, attempt, attempt_definition(attempt, value['definition'])
+
+
+def attempt_definition(attempt, definition):
+    """Review attempts reuse a frozen question without changing the full quiz."""
+    if attempt.get('purpose') != 'review': return definition
+    ids = attempt.get('question_ids')
+    require(isinstance(ids, list) and len(ids) == 1 and ids[0] in {x['id'] for x in definition['questions']}, 'Review must bind exactly one frozen question.')
+    value = copy.deepcopy(definition)
+    value['questions'] = [x for x in value['questions'] if x['id'] in ids]
+    return value
 
 
 def paused(attempt):
@@ -113,7 +123,7 @@ def start(root, key, request_id, consent, *, revision=None, new_attempt=False, e
     root = Path(root).resolve(); identifier(request_id); require(text(consent), 'Start requires the actual learner request, not silence or a delivery event.')
     with c.lock(root):
         records = store.records(root)
-        previous = [a for a in records['attempts'].values() if a['key'] == key]
+        previous = [a for a in records['attempts'].values() if a['key'] == key and a.get('purpose') != 'review']
         request = {'consent': consent, 'revision': revision, 'new_attempt': new_attempt, 'extra_time': extra_time}
         for a in previous:
             if request_id in a.get('requests', {}):
@@ -285,6 +295,6 @@ def status(root):
         records = store.records(root); attempts = []
         for a in records['attempts'].values():
             value = c.read(store.path(root, 'quizzes', f"{a['key']}.v{a['revision']}.json"))
-            attempts.append({'attempt_id': a['id'], 'key': a['key'], 'revision': a['revision'], 'summary': summary(a, value['definition']), 'paused': paused(a)})
+            attempts.append({'attempt_id': a['id'], 'key': a['key'], 'revision': a['revision'], 'purpose': a.get('purpose', 'quiz'), 'summary': summary(a, attempt_definition(a, value['definition'])), 'paused': paused(a)})
         return {'attempts': attempts, 'prepared': [{'key': c.read(p)['definition']['key'], 'revision': c.read(p)['definition']['revision']} for p in store.quizzes(root)],
                 'note': 'Assessment observations only; delivery is separate, silence is unknown, no mastery percentage is inferred.'}

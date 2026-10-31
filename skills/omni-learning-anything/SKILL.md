@@ -3,13 +3,13 @@ name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
 summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 2.4.0
+version: 2.5.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
 description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, HTML, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
-  version: "2.4.0"
+  version: "2.5.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -86,6 +86,10 @@ Read [assessment](references/assessment.md) when preparing or conducting a check
 Default to selections, a few sentences or a short exchange. No long writing, real code authoring, device operation, experiments or projects unless the learner explicitly requested practice-dependent training. Reading a supplied code snippet is light; writing/running one is not. Record that request for an exception; never infer it from a programming topic alone.
 
 Use the bundled quiz commands to freeze lesson-bound revisions, persist raw answers before grading, give evidence-based feedback and retain hint/solution/skip/pause/correction history. Keep answers and rubrics out of public questions until submission or an explicit solution request. Unknown judgments remain needs_review. Check completion is not mastery and must never advance delivery, populate mastery percentages or alter schedules. Export/delete assessment records only on request.
+
+## Review and learning recaps
+
+When the learner actively returns, asks for review/recap or wants to adjust pace, read [study](references/study.md). Offer small evidence-based reviews within the same daily time budget, using isolated one-question attempts and the existing light answer/feedback controls. Distinguish independent/assisted, unknown/pending and disputed judgments; show the actual evidence and let users correct grades, add separate self-reports or exclude items. Never infer mastery from delivery or silence. Review/weekly recaps are on demand, with no new timers, reminders or proactive quiz conversations. Anki is explicit one-way CSV export. Present concrete future changes and obtain acceptance before creating a separate pending course version; preserve history and perform normal rendering/approval before switching delivery.
 
 ## QA examples
 

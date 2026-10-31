@@ -53,3 +53,7 @@ HTML: select `delivery: {"platform":"html","mode":"local"}` for a standalone off
 ## Own materials
 
 Optional hash-bound config `materials={policy,selections}` uses strict/supplemented/open source policy and actual helper-returned selections. Import can precede initialization; never retarget approved courses. `materials import/list/inspect/select/search/cite` operate private versioned snapshots; see [materials](materials.md) and [schema](materials-schema.md). Local citations may omit URL and must show an actual original locator. The legacy five-web-link contract is unchanged when material mode is absent.
+
+## Review and future course revisions
+
+`study plan/profile/evidence/report/annotate/settings/start/anki/propose/proposal/apply/forget` support learner-started review, inspectable evidence, private self-reports, one-way Anki CSV and confirmed separate future courses. `study start` returns an isolated attempt ID; use existing `quiz` answer/feedback controls with it. `review --key` remains document visual-review recording. Exact semantics, budgets, proposal schema and deletion boundaries: [study](study.md). No new scheduled tasks or automatic course changes.

@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.4.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.4.0.zip)**
+**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
 
 </div>
 
@@ -27,6 +27,7 @@ Tell your agent what you want to learn. Omni builds a plan around your goal, exp
 | **v2.2.1** | Start with a rough idea: the agent helps clarify your direction, organize prerequisites and propose a structured course. Setup checks explain what your current host can actually do. |
 | **v2.3.0** | Check your understanding when you are ready: answer a few short questions, get grounded feedback, and pause or continue in your agent. No quiz reminders or timed tasks. |
 | **v2.4.0** | Learn from your own books, papers and course files: select pages or chapters, trace explanations and checks to original locations, and choose whether external supplements are allowed. |
+| **v2.5.0** | Return with a small review that fits your daily time, see what your answers actually show, correct learning judgments, adjust future lessons with approval, and export review cards to Anki. |
 
 You can start with “I want to learn a little economics.” Omni suggests useful directions and a coherent path, labels assumptions and asks only questions that change the course. If your goal is already specific, it proceeds directly to planning.
 
@@ -83,6 +84,12 @@ Pause this course and its schedule.
 Preserve my old course and propose a revised plan for my new goal.
 ```
 
+## Continue at your own pace
+
+When you return, ask “What should I review today?” Omni offers a few questions grounded in your earlier answers, within the time you already set. You can prioritize a new lesson, only review, ask for a hint or stop. Nothing creates a new quiz reminder.
+
+Ask “What have my answers shown this week?” to see a recap with sources. You can inspect or correct a judgment, say that you already know something, or exclude it from review. Want a different pace? Review the proposed future changes before starting a new course version; your old plan and history stay available. You can also request Anki cards as a one-way CSV export.
+
 <a id="examples"></a>
 ## Explore example courses
 
@@ -98,7 +105,7 @@ Browse complete plans and daily PDFs for technology, economics, music, Agent pro
 
 ## Installation and guides
 
-[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.4.0.md)
+[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.5.0.md)
 
 An Agent Skill, powered by your agent’s research, document and scheduling tools. PDF needs XeLaTeX; other output formats do not. Cloud writing uses official APIs/CLIs; Obsidian writes local Vault files. Cross-device sync and unattended scheduling depend on your host and account.
 

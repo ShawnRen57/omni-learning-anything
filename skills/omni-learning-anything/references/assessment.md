@@ -39,3 +39,7 @@ Question syntax and exact commands: [assessment-schema.md](assessment-schema.md)
 ## Original material evidence
 
 For material-mode courses, verify the lesson's selected material references before preparing/resuming checks. Ground answers and feedback in the selected version/range, expose the source's original page/chapter/slide/timestamp note, and respect strict/supplemented/open policy. Do not treat a retrieval hit as semantic proof, grade from failed pages or silently use another edition. No full-book quotation or new cloud read scope is implied.
+
+## Returning to learning
+
+For optional evidence-based review and on-demand recaps, read [study](study.md). A review attempt uses one frozen question and the same response controls. It stays separate from an incomplete original quiz. Never turn completion or delivery into mastery, silently add review time or schedule quiz reminders.
