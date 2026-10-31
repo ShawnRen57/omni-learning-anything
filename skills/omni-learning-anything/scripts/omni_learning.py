@@ -36,9 +36,14 @@ def main():
         p=sub.add_parser(command); p.add_argument('--key',required=True)
     p=sub.add_parser('receipt-record'); p.add_argument('--key',required=True); p.add_argument('--receipt',type=Path,required=True)
     p=sub.add_parser('reconcile'); p.add_argument('--key',required=True); p.add_argument('--remote-id'); p.add_argument('--url'); p.add_argument('--task-id')
+    from omni_quiz_cli import configure
+    configure(sub)
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
     try:
-        if args.command=='tencent-auth':
+        if args.command=='quiz':
+            from omni_quiz_cli import execute
+            result=execute(root,args)
+        elif args.command=='tencent-auth':
             from omni_tencent_auth import Auth,login
             result=login(args.name) if args.action=='login' else getattr(Auth(),args.action)(args.name)
         elif args.command=='connect':

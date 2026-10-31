@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.2.1-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.2.1.zip)**
+**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
 
 </div>
 
@@ -25,6 +25,7 @@ Tell your agent what you want to learn. Omni builds a plan around your goal, exp
 | **v2** | Keep your course where you study: choose local files, Notion, Obsidian, Feishu, DingTalk or Tencent Docs. The agent guides connection and remembers your chosen location. |
 | **v2.2.0** | Read offline HTML in your browser, learn in 10 languages, and connect DingTalk or Tencent Docs through guided official authorization. |
 | **v2.2.1** | Start with a rough idea: the agent helps clarify your direction, organize prerequisites and propose a structured course. Setup checks explain what your current host can actually do. |
+| **v2.3.0** | Check your understanding when you are ready: answer a few short questions, get grounded feedback, and pause or continue in your agent. No quiz reminders or timed tasks. |
 
 You can start with “I want to learn a little economics.” Omni suggests useful directions and a coherent path, labels assumptions and asks only questions that change the course. If your goal is already specific, it proceeds directly to planning.
 
@@ -96,7 +97,7 @@ Browse complete plans and daily PDFs for technology, economics, music, Agent pro
 
 ## Installation and guides
 
-[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.2.1.md)
+[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.3.0.md)
 
 An Agent Skill, powered by your agent’s research, document and scheduling tools. PDF needs XeLaTeX; other output formats do not. Cloud writing uses official APIs/CLIs; Obsidian writes local Vault files. Cross-device sync and unattended scheduling depend on your host and account.
 

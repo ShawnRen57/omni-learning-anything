@@ -19,6 +19,8 @@ Include learner brief and boundaries; outcomes; schedule and workload; visual ov
 ## Daily document
 Suggested structure: navigation/goal; recall and motivating question; 2–3 concepts; worked example with assumptions; short practice with self-check; recap and next step. Adapt headings to subject. Word count is a diagnostic, not the objective. For 10–15 minutes, budget approximately 7–10 minutes reading/figure study plus 2–5 minutes practice. Time real reading during QA if possible, otherwise disclose estimate.
 
+Short checks: reserve their time inside the practice allowance and use [assessment](assessment.md). Default to choice, brief explanation or short discussion; avoid long writing, actual programming/operations, experiments and projects unless the learner explicitly requested such practical training. A programming subject alone is insufficient. Keep private short-test answers separate from visible worked examples/self-check solutions. Add a localized invitation to return to the agent and request a check, without scheduling a later quiz or reminder.
+
 ## Research
 Actually search the web and open sources for every plan/lesson. Favor original institutions, research papers, museum collections, scholarly editions, official stats and named expert authors. Topic diversity matters more than brand quotas. Latest is required for unstable claims; original older material may be best for established knowledge. Open the extension links too; five links to one irrelevant homepage do not qualify. Use specific pages with recommended section/activity. Mark paywalls or access limits. If content cannot be read, it cannot support a verified factual claim.
 

@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.2.1-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Descarregar Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.2.1.zip)**
+**[Descarregar Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
 
 </div>
 
@@ -24,6 +24,7 @@ Diga ao seu agente qual é o objetivo, a sua experiência e o tempo disponível.
 | **v2** | Guardar o curso em ficheiros locais, Notion, Obsidian, Feishu, DingTalk ou Tencent Docs. O agente orienta a ligação e recorda o destino escolhido. |
 | **v2.2.0** | Ler HTML offline, criar cursos em 10 idiomas e autorizar DingTalk ou Tencent Docs com orientação do agente. |
 | **v2.2.1** | Comece com uma ideia geral: o agente esclarece a direção, organiza os pré-requisitos, propõe um curso estruturado e verifica os recursos disponíveis no ambiente. |
+| **v2.3.0** | Confira o que aprendeu quando quiser, com perguntas curtas e feedback fundamentado. Peça dicas, pule e retome. Sem lembretes ou tarefas agendadas de questionários. |
 
 Você pode dizer apenas “Quero aprender um pouco de economia”. Omni sugere caminhos e uma sequência coerente, explicita suposições e pergunta apenas o que muda o curso. Se o objetivo já for claro, passa ao planejamento.
 
@@ -88,7 +89,7 @@ Consulte planos e PDFs diários de tecnologia, economia, música, design de prod
 
 ## Instalação e guias
 
-[Instalar no agente](../../skills/omni-learning-anything/references/install.md) · [Formatos e fontes](../../skills/omni-learning-anything/references/setup.md) · [Ligar documentos](../../skills/omni-learning-anything/references/onboarding.md) · [Validação da versão](../../docs/release-validation-v2.2.1.md)
+[Instalar no agente](../../skills/omni-learning-anything/references/install.md) · [Formatos e fontes](../../skills/omni-learning-anything/references/setup.md) · [Ligar documentos](../../skills/omni-learning-anything/references/onboarding.md) · [Validação da versão](../../docs/release-validation-v2.3.0.md)
 
 Esta Agent Skill utiliza as ferramentas de pesquisa, documentos e agendamento do seu agente. Apenas PDF precisa de XeLaTeX. A nuvem usa APIs/CLIs oficiais; Obsidian escreve no Vault local. A sincronização e a execução autónoma dependem do sistema anfitrião e da conta.
 

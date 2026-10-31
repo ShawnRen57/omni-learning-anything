@@ -53,4 +53,4 @@ Keep the relevant original study wording (exclude passwords, tokens, unrelated c
 
 `OMNI brief-check --input /private/brief.json` checks the brief itself before copying it into config. It returns `needs_confirmation` when proposals/questions remain. This is not a consent detector or automatic assessment of semantic quality. Mark an assumption `confirmed` only if supported by the user's actual statements/approval, never merely because the validator accepts it. `init` also checks a supplied `learning_brief`; existing configs without it remain valid. Existing approval hashes protect the complete config, including this record.
 
-Do not add structured quiz scoring, a mastery percentage or automatic adaptive replanning in this version. Exercises/self-check remain teaching content; actual learner feedback and course changes retain the existing boundaries.
+For optional learner-started feedback use [assessment](assessment.md). Keep default responses light and preserve explicit practical-training requirements. Do not infer mastery percentages, add quiz reminders or automatically replan an approved curriculum.

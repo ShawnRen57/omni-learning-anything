@@ -19,3 +19,7 @@ Sources: [DSH Schedule](https://github.com/deepseek-ai/deepseek-harness/blob/mas
 “Use omni-learning-anything at INSTALLED_SKILL_PATH to continue COURSE_ABSOLUTE_PATH. Read config, approved plan, state and recent lessons; run next. Respect pause/completion/daily limit. Reuse pending artifacts. For a new lesson, research actual sources, author within the time budget, include an explanatory figure and >=5 expansion links, render and inspect the configured format; publish/read back the configured destination and its saved task/document. Run delivered only after a verified primary receipt and actual host delivery. Uncertain writes require reconciliation, never blind creation. Remain quiet on repeats. When complete, stop the recorded task and verify.”
 
 Check the host receipt separately from the Skill's document and delivery state. A reminder receipt alone does not establish document delivery. Runtime handoff guidance is part of normal usage; the host scheduler itself is outside this Skill's test scope.
+
+## Short-check boundary
+
+Daily lesson jobs may prepare a frozen short check and include an invitation with the material, then finish normally. Never start an interactive check, wait for responses, create a quiz reminder/task or schedule another conversation. Checks run only on the learner's actual request; preserve existing lesson schedules separately. See [assessment](assessment.md).

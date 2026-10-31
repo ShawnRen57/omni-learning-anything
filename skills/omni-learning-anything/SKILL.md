@@ -3,7 +3,7 @@ name: omni-learning-anything
 description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, HTML, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
-  version: "2.2.1"
+  version: "2.3.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -66,6 +66,14 @@ Send the verified primary document link/file with day/topic/benefit/estimated ti
 If an optional PDF copy is requested, export it in the same reviewed artifact set. Track additional manual cloud copies separately; primary success controls course progress and an optional copy failure must be reported. Reuse successful copies, never conceal a missing copy.
 
 At completion stop/pause and verify the recorded host job. `pause`/`resume` also require corresponding host job changes. Track learner answers separately; delivery and silence do not prove learning.
+
+## Learner-started short checks
+
+Read [assessment](references/assessment.md) when preparing or conducting a check. Prepare 1–3 source-grounded questions alongside the lesson, reserve practice time, and offer an entry after verified delivery. Start only when the learner asks. Use suitable host-native choice/text cards when available, otherwise ordinary chat; never treat preselection or silence as an answer. Do not create quiz timers, reminders or later quiz conversations.
+
+Default to selections, a few sentences or a short exchange. No long writing, real code authoring, device operation, experiments or projects unless the learner explicitly requested practice-dependent training. Reading a supplied code snippet is light; writing/running one is not. Record that request for an exception; never infer it from a programming topic alone.
+
+Use the bundled quiz commands to freeze lesson-bound revisions, persist raw answers before grading, give evidence-based feedback and retain hint/solution/skip/pause/correction history. Keep answers and rubrics out of public questions until submission or an explicit solution request. Unknown judgments remain needs_review. Check completion is not mastery and must never advance delivery, populate mastery percentages or alter schedules. Export/delete assessment records only on request.
 
 ## QA examples
 

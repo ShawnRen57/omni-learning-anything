@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.2.1-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Скачать Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.2.1.zip)**
+**[Скачать Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
 
 </div>
 
@@ -24,6 +24,7 @@
 | **v2** | Хранить курс в локальных файлах, Notion, Obsidian, Feishu, DingTalk или Tencent Docs. Агент поможет подключиться и запомнит выбранное место. |
 | **v2.2.0** | Читать HTML без интернета, создавать курсы на 10 языках и подключать DingTalk или Tencent Docs через официальную авторизацию с подсказками агента. |
 | **v2.2.1** | Начните с общей идеи: агент поможет уточнить направление, выстроить необходимые основы, предложит последовательный курс и проверит возможности среды. |
+| **v2.3.0** | Проверяйте понимание, когда будете готовы: короткие вопросы, обоснованная обратная связь, подсказки, пропуск и продолжение. Без напоминаний и запланированных заданий для тестов. |
 
 Достаточно сказать: «Хочу немного изучить экономику». Omni предложит направления и последовательность, обозначит предположения и уточнит только то, что меняет курс. Если цель уже ясна, он сразу перейдёт к планированию.
 
@@ -88,7 +89,7 @@
 
 ## Установка и руководства
 
-[Установить в агент](../../skills/omni-learning-anything/references/install.md) · [Форматы и шрифты](../../skills/omni-learning-anything/references/setup.md) · [Подключить документы](../../skills/omni-learning-anything/references/onboarding.md) · [Проверка выпуска](../../docs/release-validation-v2.2.1.md)
+[Установить в агент](../../skills/omni-learning-anything/references/install.md) · [Форматы и шрифты](../../skills/omni-learning-anything/references/setup.md) · [Подключить документы](../../skills/omni-learning-anything/references/onboarding.md) · [Проверка выпуска](../../docs/release-validation-v2.3.0.md)
 
 Это Agent Skill, использующий инструменты поиска, документов и расписаний вашего агента. XeLaTeX нужен только для PDF. Облачные документы записываются через официальные API/CLI; Obsidian — в локальный Vault. Синхронизация устройств и работа без присмотра зависят от хоста и аккаунта.
 

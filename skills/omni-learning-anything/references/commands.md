@@ -45,3 +45,7 @@ A project lock prevents concurrent mutations. If `.omni-learning-anything.lock` 
 Failed export leaves no accepted new manifest. Correct input and retry the same day. API tasks/pages and Vault content are reused according to [receipt recovery](delivery.md#recovery). Notification and storage are separate; check host history on unclear notification outcomes.
 
 HTML: select `delivery: {"platform":"html","mode":"local"}` for a standalone offline file, or add `--format html` to a combined set. `tencent-auth login --name NAME` runs official OAuth with PKCE/local callback; `status` reports no secrets. `connect` supports all five named platforms plus Obsidian; Tencent takes `--auth-profile`, DingTalk pins `--cli-profile` as organization:user. See the selected [onboarding](onboarding.md) route.
+
+## Learner-started assessment
+
+`quiz prepare/start/next/answer/hint/reveal/skip/pause/feedback/correct/status/export/forget` operate private, lesson-bound checks without modifying approval/delivery/schedule records. Exact schemas and commands: [assessment-schema](assessment-schema.md); behavior and lightweight/practical boundaries: [assessment](assessment.md). Quizzes are optional and learner-started, with no quiz timers or reminders.

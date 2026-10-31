@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.3.0 — 2026-10-31
+
+- Start optional short checks after reading: 1–3 choices, brief answers or short conversations, with source-grounded feedback. No quiz reminders or scheduled quiz tasks.
+- Keep default interactions light; long writing, real coding, operations, experiments and projects require an explicit practical-training request.
+- Preserve raw answers before open-response grading, normalize choice labels through stable IDs, and retain hint/solution/skip/pause/revision/correction history.
+- Bind immutable question revisions to reviewed lessons and approved courses; keep assessment separate from delivery and mastery claims.
+- Export private JSON/CSV records and explicitly remove assessment data without changing course receipts or schedules. Native cards are used conditionally where suitable host tools exist; chat remains supported.
+
 ## v2.2.1 — 2026-10-31
 
 - Turn vague learning ideas into a proposed scope, observable outcomes, prerequisite order and a coherent course; preserve explicit goals and use focused clarification instead of a mandatory questionnaire.
