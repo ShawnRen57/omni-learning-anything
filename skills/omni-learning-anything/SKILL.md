@@ -1,5 +1,11 @@
 ---
 name: omni-learning-anything
+slug: omni-learning-anything
+displayName: Omni Learning Anything
+summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
+version: 2.4.0
+tags: [education, learning, study-plan, latex, pdf]
+homepage: https://github.com/ShawnRen57/omni-learning-anything
 description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, HTML, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
