@@ -64,12 +64,13 @@ def check_text(text, data, include_title=True):
     normalized = normalize(text)
     required = ([data['title']] if include_title else []) + [s['title'] for s in data['sections']]
     required += [s['body'] for s in data['sections']] + [data['figure']['caption'], data['figure']['credit']]
+    required += [value for source in data.get('sources',[]) if source.get('material_ref') for value in (source['title'],source['note'])]
     if any(normalize(value) not in normalized for value in required):
         raise ValueError('Remote document readback is incomplete; keep the current lesson pending.')
 
 
 def check_links(text, data):
-    if any(source['url'] not in text for source in data['sources']):
+    if any(source['url'] not in text for source in data['sources'] if source.get('url')):
         raise ValueError('Remote document is missing source links.')
 
 

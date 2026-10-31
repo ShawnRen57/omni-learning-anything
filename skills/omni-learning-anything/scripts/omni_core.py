@@ -44,6 +44,9 @@ def validate_plan(plan):
 
 def validate_config(config):
     ZoneInfo(config['timezone'])
+    if 'materials' in config:
+        from omni_materials import validate_config as validate_material_config
+        validate_material_config(config['materials'])
     if 'learning_brief' in config:
         from omni_intake import validate_brief
         validate_brief(config['learning_brief'])
@@ -69,6 +72,9 @@ def validate_config(config):
 def initialize(root,config,plan):
     root=Path(root); root.mkdir(parents=True,exist_ok=True)
     validate_plan(plan); validate_config(config)
+    if config.get('materials'):
+        from omni_materials import verify_selection
+        for selection in config['materials']['selections']: verify_selection(root,selection)
     with lock(root):
         if any((root/p).exists() for p in ('config.json','plan.json','state.json')):
             raise ValueError('Project already initialized; existing files were not changed.')
@@ -77,6 +83,10 @@ def initialize(root,config,plan):
 
 
 def check_approval(root,state):
+    config=read(root/'config.json')
+    if config.get('materials'):
+        from omni_materials import verify_selection
+        for selection in config['materials']['selections']:verify_selection(root,selection)
     if state.get('approved_plan')!=digest(root/'plan.json'): raise ValueError('Current plan has not been approved. Render, inspect, then obtain user approval.')
     if state.get('approved_config')!=digest(root/'config.json'): raise ValueError('Course settings changed; review and approve the updated course settings.')
 

@@ -6,11 +6,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.4.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[تنزيل Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
+**[تنزيل Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.4.0.zip)**
 
 </div>
 
@@ -27,6 +27,7 @@
 | **v2.2.0** | قراءة HTML دون اتصال، وإنشاء دورات بعشر لغات، وربط DingTalk وTencent Docs من خلال التفويض الرسمي بإرشاد الوكيل. |
 | **v2.2.1** | ابدأ بفكرة عامة: يساعدك الوكيل على تحديد الاتجاه وترتيب المعارف التمهيدية واقتراح مسار منظم، ويتحقق من إمكانات بيئتك. |
 | **v2.3.0** | اختبر فهمك عندما تكون مستعدًا بأسئلة قصيرة وملاحظات مدعومة بالمصادر، مع التلميح والتخطي والاستئناف. لا تُنشأ تذكيرات أو مهام مجدولة للاختبارات. |
+| **v2.4.0** | تعلّم من كتبك وأبحاثك ومواد دوراتك: حدد الصفحات أو الفصول، وراجع مواضع النص الأصلي، واختر السماح بالمصادر الخارجية أو الاقتصار على موادك. |
 
 يمكنك أن تقول فقط: «أريد أن أتعلم قليلًا من الاقتصاد». يقترح Omni اتجاهات وتسلسلًا مترابطًا، ويوضح افتراضاته ويسأل فقط عما يغيّر المسار. إذا كان هدفك واضحًا، ينتقل مباشرة إلى التخطيط.
 
@@ -95,7 +96,7 @@
 
 ## التثبيت والأدلة
 
-[التثبيت في وكيلك](../../skills/omni-learning-anything/references/install.md) · [إعداد الصيغ والخطوط](../../skills/omni-learning-anything/references/setup.md) · [ربط المستندات](../../skills/omni-learning-anything/references/onboarding.md) · [التحقق من الإصدار](../../docs/release-validation-v2.3.0.md)
+[التثبيت في وكيلك](../../skills/omni-learning-anything/references/install.md) · [إعداد الصيغ والخطوط](../../skills/omni-learning-anything/references/setup.md) · [ربط المستندات](../../skills/omni-learning-anything/references/onboarding.md) · [التحقق من الإصدار](../../docs/release-validation-v2.4.0.md)
 
 هذه Agent Skill تستخدم أدوات البحث والمستندات والجدولة في وكيلك. يحتاج PDF فقط إلى XeLaTeX. تستخدم المستندات السحابية واجهات API/CLI الرسمية، بينما يكتب Obsidian في Vault المحلي. تعتمد المزامنة والعمل دون إشراف على المضيف والحساب.
 

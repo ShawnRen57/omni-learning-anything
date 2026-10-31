@@ -1,4 +1,5 @@
 """Portable XeLaTeX rendering and artifact verification; no generated TeX execution."""
+from omni_locale import source_labels
 import os
 import re
 import shutil
@@ -32,7 +33,7 @@ def executable(name):
     return None
 
 
-from omni_document import validate_document
+from omni_document import validate_document, material_markdown
 
 
 PREAMBLE=r'''\documentclass[11pt]{article}
@@ -110,7 +111,7 @@ def render(root,input_path,key,export_formats=()):
         figure=(root/data['figure']['path']).resolve()
         img='figure-'+c.digest(figure)[:12]+figure.suffix.lower(); image_path=root/'assets'/img
         if figure!=image_path: shutil.copyfile(figure,image_path)
-        config=c.read(root/'config.json'); labels=language(config.get('language','zh'))
+        config=c.read(root/'config.json'); labels=source_labels(config)
         e=lambda value:visible_text(value,labels['code'])
         subtitle=localized_subtitle(data,plan,config,c.today(root),key)
         tex=[language_preamble(labels['code']),r'{\LARGE\bfseries\color{ink} '+e(data['title'])+r'}\par',e(subtitle)+r'\par\vspace{6pt}']
@@ -125,8 +126,12 @@ def render(root,input_path,key,export_formats=()):
         for s in data['sources']:
             published=' | '+labels['published']+': '
             checked=' | '+labels['checked']+': '
-            tex.append(r'\item ['+e(s['id'])+r'] \href{'+esc(s['url'])+'}{'+e(s['title'])+'} — '+e(s['note'])+r'\par '+e(s['publisher']+published+s['published_at']+checked+s['checked_at']))
-            md.append(f"- [{s['id']}] [{s['title']}]({s['url']}): {s['note']}; {s['publisher']}{published}{s['published_at']}{checked}{s['checked_at']}")
+            label=(r'\href{'+esc(s['url'])+'}{'+e(s['title'])+'}') if s.get('url') else e(s['title'])
+            tex.append(r'\item ['+e(s['id'])+r'] '+label+' — '+e(s['note'])+r'\par '+e(s['publisher']+published+s['published_at']+checked+s['checked_at']))
+            md_title=material_markdown(s['title']) if s.get('material_ref') else s['title']
+            md_note=material_markdown(s['note']) if s.get('material_ref') else s['note']
+            md_label=f"[{md_title}]({s['url']})" if s.get('url') else md_title
+            md.append(f"- [{s['id']}] {md_label}: {md_note}; {s['publisher']}{published}{s['published_at']}{checked}{s['checked_at']}")
         tex.extend([r'\end{enumerate}',r'\end{document}'])
         texfile=root/'sources'/(stem+'.tex'); texfile.write_text('\n\n'.join(tex),encoding='utf-8')
         mdfile=texfile.with_suffix('.md'); mdfile.write_text('\n\n'.join(md)+'\n',encoding='utf-8')
@@ -174,7 +179,7 @@ def inspect_pdf(pdf,sources):
             descriptors += [d.get_object().get('/FontDescriptor') for d in font.get('/DescendantFonts',[])]
             for descriptor in descriptors:
                 if descriptor is not None and not any(k in descriptor.get_object() for k in ('/FontFile','/FontFile2','/FontFile3')): raise ValueError('Font not embedded.')
-    if not {s['url'] for s in sources}.issubset(urls): raise ValueError('Missing PDF links.')
+    if not {s['url'] for s in sources if s.get('url')}.issubset(urls): raise ValueError('Missing PDF links.')
     return {'pages':len(reader.pages),'links':len(urls),'fonts':sorted(fonts)}
 
 

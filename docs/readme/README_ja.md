@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.4.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill ZIP をダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
+**[Skill ZIP をダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.4.0.zip)**
 
 </div>
 
@@ -25,6 +25,7 @@
 | **v2.2.0** | オフラインで読める単一 HTML ファイル、10 言語のコース、DingTalk と Tencent Docs の公式認証案内を追加しました。 |
 | **v2.2.1** | 漠然とした関心から始められます。エージェントが方向性と前提知識を整理し、体系的なコースを提案して利用環境を確認します。 |
 | **v2.3.0** | 学習後、好きな時に短い確認問題を開始。選択や短い回答で根拠のあるフィードバックを受け、ヒント・スキップ・再開も可能。確認テストの通知や予約タスクは作成しません。 |
+| **v2.4.0** | 自分の書籍・論文・講座資料から学べます。ページや章を指定し、説明と確認問題の出典をたどり、外部情報を補うか選べます。 |
 
 「経済学を少し学びたい」だけでも始められます。学習の方向と順序を提案し、仮定を明示して、コースを左右する点だけ質問します。目標が明確なら、そのまま計画に進みます。
 
@@ -91,7 +92,7 @@ omni-learning-anything で旅行のための建築史を学びたいです。
 
 ## インストールとガイド
 
-[Agent へのインストール](../../skills/omni-learning-anything/references/install.md) · [形式とフォントの設定](../../skills/omni-learning-anything/references/setup.md) · [文書の接続](../../skills/omni-learning-anything/references/onboarding.md) · [リリース検証](../../docs/release-validation-v2.3.0.md)
+[Agent へのインストール](../../skills/omni-learning-anything/references/install.md) · [形式とフォントの設定](../../skills/omni-learning-anything/references/setup.md) · [文書の接続](../../skills/omni-learning-anything/references/onboarding.md) · [リリース検証](../../docs/release-validation-v2.4.0.md)
 
 これは Agent の調査・文書・スケジュール機能を使う Agent Skill です。XeLaTeX が必要なのは PDF のみです。クラウド文書は公式 API/CLI を使用し、Obsidian はローカル Vault に書き込みます。端末間の同期と無人実行はホストとアカウントの条件に依存します。
 

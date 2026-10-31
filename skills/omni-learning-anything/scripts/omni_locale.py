@@ -33,3 +33,11 @@ def subtitle(data,plan,config,date,key):
  labels=language(config.get('language','zh'))
  template=labels['plan'] if key=='plan' else labels['day']
  return date+' | '+template.format(days=len(plan['days']),key=key,reading=data.get('reading_minutes'),practice=data.get('practice_minutes'))
+
+
+def source_labels(config):
+    labels=dict(language(config.get('language','zh')))
+    if config.get('materials'):
+        labels['further']={'en':'Sources and original locations','zh':'资料来源与原文位置','ja':'資料と原文の位置','ko':'자료 출처와 원문 위치','es':'Fuentes y ubicaciones originales','fr':'Sources et passages originaux','de':'Quellen und Originalstellen','pt':'Fontes e trechos originais','ru':'Источники и исходные фрагменты','ar':'المصادر ومواضع النص الأصلي'}[labels['code']]
+        labels['optional']=''
+    return labels

@@ -35,3 +35,7 @@ On a dispute, inspect the frozen question, sources and original answer; append a
 Use explicit JSON/CSV export only at the learner's request; it contains personal answers and potentially answer keys. JSON preserves complete versions and raw events; CSV is an event table with formula-like cells escaped. No data is sent to cloud or other users. Explicit confirmed `quiz forget` removes assessment attempts (or all assessment data), preserving course/config/plan/receipts. Previously exported copies remain. These actions can recover/remove records even if historical course bindings no longer validate.
 
 Question syntax and exact commands: [assessment-schema.md](assessment-schema.md). Schema checks enforce declared contracts, not semantic accuracy or genuine user consent. Review prompt relevance, actual effort and source support using the host's judgment.
+
+## Original material evidence
+
+For material-mode courses, verify the lesson's selected material references before preparing/resuming checks. Ground answers and feedback in the selected version/range, expose the source's original page/chapter/slide/timestamp note, and respect strict/supplemented/open policy. Do not treat a retrieval hit as semantic proof, grade from failed pages or silently use another edition. No full-book quotation or new cloud read scope is implied.

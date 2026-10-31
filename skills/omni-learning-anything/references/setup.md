@@ -61,3 +61,9 @@ If a bundled LibreOffice preview drops Chinese despite intact DOCX text, verify 
 Course language codes: en, zh, ja, ko, es, fr, de, pt, ru, ar. Author actual teaching content in that language before rendering. HTML/Markdown need only the Python standard library; HTML embeds its PNG/JPEG and inline styles in one file, with no external font or JavaScript dependency. Outbound sources still need Internet.
 
 Japanese PDF tries Hiragino Mincho ProN/Noto Serif CJK JP/Yu Mincho/MS Mincho; Korean tries Apple SD Gothic Neo/Noto Serif CJK KR/Malgun Gothic/Batang. Arabic additionally needs TeX `polyglossia` and `bidi`, with Amiri/Noto Naskh Arabic/Geeza Pro/Arial Unicode MS, and uses RTL with Latin citations isolated. Ensure at least one appropriate font is installed through an official/free distribution; missing fonts/glyphs stop publication. CJK fallback uses the distribution’s Fandol font for mixed Chinese references. DOCX declares appropriate script fonts and RTL properties; inspect actual pages because viewer font substitution differs.
+
+## Input-material dependencies
+
+See [materials](materials.md) for supported formats and limits. TXT/Markdown/HTML/DOCX/EPUB/PPTX/SRT/VTT readers use the Python standard library. Text PDF imports lazily require pypdf; they do not require XeLaTeX or PDF rendering libraries. DOC/RTF uses an existing trusted textutil/antiword converter; absence is a conversion requirement, not success. Do not install OCR/GPU/vector databases for ordinary text inputs. Host tools obtain webpage snapshots; no background web fetch or audio/video transcription is bundled.
+
+For text-PDF input alone, install `scripts/requirements-materials-pdf.txt` in the selected interpreter. This does not require XeLaTeX, pypdfium2 or output-PDF setup. Previously imported snapshots can be read without re-running the parser.

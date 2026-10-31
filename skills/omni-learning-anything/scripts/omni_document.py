@@ -1,4 +1,5 @@
 """Shared content contract and standalone Markdown/DOCX export. PDF imports are lazy."""
+from omni_locale import source_labels
 import html
 import re
 import shutil
@@ -12,12 +13,23 @@ from omni_locale import language, subtitle, CJK_FONTS, ARABIC_FONTS
 
 def validate_document(data,root):
     sources=data.get('sources',[])
-    if len({s.get('url') for s in sources})<5: raise ValueError('At least five distinct expansion links required.')
+    config=c.read(root/'config.json'); material_config=config.get('materials')
+    if material_config:
+        from omni_materials import validate_config as validate_material_config,validate_source
+        validate_material_config(material_config)
+        if not sources: raise ValueError('At least one actual evidence source is required.')
+        bound=[s for s in sources if 'material_ref' in s]
+        if material_config['policy']=='strict' and len(bound)!=len(sources):raise ValueError('Strict material mode cannot introduce unbound external sources.')
+        if material_config['policy']=='supplemented' and not bound:raise ValueError('Material-first mode requires selected-material evidence.')
+        for source in bound:validate_source(root,source,config)
+    elif any('material_ref' in s for s in sources):raise ValueError('Material references require explicit configured material mode.')
+    elif len({s.get('url') for s in sources if s.get('url')})<5: raise ValueError('At least five distinct expansion links required.')
     ids=[s.get('id') for s in sources]
     if len(set(ids))!=len(ids) or any(not re.fullmatch(r'S\d+',str(x)) for x in ids): raise ValueError('Source IDs must be unique S-numbers.')
     for s in sources:
         u=urlsplit(s.get('url',''))
-        if u.scheme not in ('http','https') or not u.netloc or any(ch in s['url'] for ch in '\\{}\n\r'): raise ValueError('Invalid source URL.')
+        if material_config and not s.get('url') and s.get('material_ref'):pass
+        elif u.scheme not in ('http','https') or not u.netloc or any(ch in s['url'] for ch in '\\{}\n\r'): raise ValueError('Invalid source URL.')
         if not all(s.get(k) for k in ('title','publisher','note','checked_at','published_at')): raise ValueError('Incomplete source metadata.')
         if s['checked_at']!=c.today(root): raise ValueError('Recheck sources on the actual generation date.')
     if not data.get('sections') or not all(s.get('title') and s.get('body') for s in data['sections']): raise ValueError('Sections need title and body.')
@@ -65,8 +77,13 @@ def prepare(root, input_path, key):
     return data, plan, config
 
 
+def material_markdown(value):
+    # A literal user excerpt must not introduce active HTML, images or Markdown syntax.
+    return re.sub(r'([\\`*_{}\[\]()#+.!|>])', r'\\\1', html.escape(value, quote=False))
+
+
 def markdown_text(data, plan, config, date, key, image_ref):
-    labels=language(config.get('language','zh'))
+    labels=source_labels(config)
     lines = ['# ' + data['title'], subtitle(data, plan, config, date, key)]
     for i, section in enumerate(data['sections']):
         lines.extend(['## ' + section['title'], section['body']])
@@ -74,7 +91,10 @@ def markdown_text(data, plan, config, date, key, image_ref):
             lines.extend([f"![{data['figure']['caption']}]({image_ref})", data['figure']['credit']])
     lines.append('## '+labels['further'])
     for source in data['sources']:
-        lines.append(f"- [{source['id']}] [{source['title']}]({source['url']}): {source['note']}; {source['publisher']} | {labels['published']}: {source['published_at']} | {labels['checked']}: {source['checked_at']}")
+        title=material_markdown(source['title']) if source.get('material_ref') else source['title']
+        note=material_markdown(source['note']) if source.get('material_ref') else source['note']
+        label=f"[{title}]({source['url']})" if source.get('url') else title
+        lines.append(f"- [{source['id']}] {label}: {note}; {source['publisher']} | {labels['published']}: {source['published_at']} | {labels['checked']}: {source['checked_at']}")
     return '\n\n'.join(lines) + '\n'
 
 
@@ -106,7 +126,7 @@ def write_docx(path, data, plan, config, image, date, key):
     from docx.oxml.ns import qn
     from docx.opc.constants import RELATIONSHIP_TYPE as RT
     from PIL import Image
-    labels=language(config.get('language','zh'))
+    labels=source_labels(config)
     document = Document()
     document.core_properties.author = 'Omni Learning Anything'
     document.core_properties.title = data['title']
@@ -145,6 +165,9 @@ def write_docx(path, data, plan, config, image, date, key):
     document.add_heading(labels['further'], 1)
     for source in data['sources']:
         p = document.add_paragraph(f"[{source['id']}] ")
+        if not source.get('url'):
+            p.add_run(source['title']+f": {source['note']}; {source['publisher']} | {labels['published']}: {source['published_at']} | {labels['checked']}: {source['checked_at']}")
+            continue
         link = OxmlElement('w:hyperlink')
         link.set(qn('r:id'), p.part.relate_to(source['url'], RT.HYPERLINK, is_external=True))
         run = OxmlElement('w:r'); properties = OxmlElement('w:rPr')

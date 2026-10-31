@@ -140,7 +140,7 @@ def publish(root, manifest, target, receipt, checkpoint, runner=None):
     check_text(plain, data)
     links=list(markdown_links(text))
     hrefs={url for image,url in links if not image}
-    if not {s['url'] for s in data['sources']}.issubset(hrefs):raise ValueError('DingTalk readback is missing semantic source links.')
+    if not {s['url'] for s in data['sources'] if s.get('url')}.issubset(hrefs):raise ValueError('DingTalk readback is missing semantic source links.')
     if not any(image and urlsplit(url).scheme=='https' for image,url in links):
         raise ValueError('DingTalk readback is missing a remote figure.')
     return verified(receipt['remote_id'], receipt['url'])

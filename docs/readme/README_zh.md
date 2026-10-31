@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.4.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
+**[下载 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.4.0.zip)**
 
 </div>
 
@@ -26,6 +26,7 @@
 | **v2.2.0** | 新增可在浏览器离线阅读的 HTML；课程可使用 10 种语言；钉钉和腾讯文档也可以由 Agent 引导完成官方授权。 |
 | **v2.2.1** | 只说一个大致想法也能开始：Agent 帮你理清方向、补齐前置知识与学习结构，并检查当前环境的可用能力。 |
 | **v2.3.0** | 学完后主动开始短测：选一选、简短回答或聊一聊，获得有依据的反馈；可提示、跳过和续答，不创建短测提醒或定时任务。 |
+| **v2.4.0** | 用自己的书籍、论文和课程资料学习：指定页码或章节，解释和短测可追溯原文，并选择是否允许补充外部知识。 |
 
 例如只说“我想学点经济学”也可以。Omni 会提出适合的学习方向和有先后关系的路径，标明需要确认的假设，只追问会改变课程的关键信息；目标已经明确时，直接进入规划。
 
@@ -97,7 +98,7 @@
 
 ## 安装与使用指南
 
-[安装到你的 Agent](../../skills/omni-learning-anything/references/install.md) · [文件格式与字体配置](../../skills/omni-learning-anything/references/setup.md) · [连接云文档](../../skills/omni-learning-anything/references/onboarding.md) · [版本验证记录](../../docs/release-validation-v2.3.0.md)
+[安装到你的 Agent](../../skills/omni-learning-anything/references/install.md) · [文件格式与字体配置](../../skills/omni-learning-anything/references/setup.md) · [连接云文档](../../skills/omni-learning-anything/references/onboarding.md) · [版本验证记录](../../docs/release-validation-v2.4.0.md)
 
 这是一个 Agent Skill，使用你当前 Agent 的检索、文档和定时工具。仅 PDF 需要 XeLaTeX。云文档通过官方 API/CLI 写入，Obsidian 写入本地 Vault；跨设备同步和无人值守执行取决于客户端与账号条件。
 

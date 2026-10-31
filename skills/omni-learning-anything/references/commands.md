@@ -49,3 +49,7 @@ HTML: select `delivery: {"platform":"html","mode":"local"}` for a standalone off
 ## Learner-started assessment
 
 `quiz prepare/start/next/answer/hint/reveal/skip/pause/feedback/correct/status/export/forget` operate private, lesson-bound checks without modifying approval/delivery/schedule records. Exact schemas and commands: [assessment-schema](assessment-schema.md); behavior and lightweight/practical boundaries: [assessment](assessment.md). Quizzes are optional and learner-started, with no quiz timers or reminders.
+
+## Own materials
+
+Optional hash-bound config `materials={policy,selections}` uses strict/supplemented/open source policy and actual helper-returned selections. Import can precede initialization; never retarget approved courses. `materials import/list/inspect/select/search/cite` operate private versioned snapshots; see [materials](materials.md) and [schema](materials-schema.md). Local citations may omit URL and must show an actual original locator. The legacy five-web-link contract is unchanged when material mode is absent.

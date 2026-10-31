@@ -19,6 +19,11 @@ def snapshot(root, key):
     source = manifest.get('input', f'data/{key}.json'); path = (root/source).resolve()
     require(path.is_relative_to(root) and source in manifest['files'], 'Lesson input must be hash-bound inside this course.')
     lesson = c.read(path)
+    config=c.read(root/'config.json')
+    if config.get('materials'):
+        from omni_materials import validate_source
+        for source in lesson['sources']:
+            if source.get('material_ref'):validate_source(root,source,config)
     require(lesson.get('day') == int(key[3:]), 'Lesson day does not match this check.')
     binding = {k: c.digest(p) for k, p in {'config': root/'config.json', 'plan': root/'plan.json',
                'manifest': root/'manifests'/f'{key}.json', 'lesson': path}.items()}

@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.4.0 — 2026-10-31
+
+- Build courses from selected personal materials, pin exact editions/ranges and retain original page/chapter/slide/timestamp evidence for teaching and checks.
+- Read text PDF, TXT, Markdown, HTML snapshots, DOCX, EPUB, PPTX and SRT/VTT; use installed trusted conversion for legacy DOC/RTF. Surface unavailable/scanned/encrypted/unsupported input instead of inventing extraction.
+- Choose strict, material-first with supplements, or open exploration. Private material references render plainly without invented URLs; legacy web-course source requirements remain intact.
+- Add bounded scoped retrieval, quote validation, immutable snapshots, failed-attempt recovery and integrity checks without a vector database or bundled LLM.
+- Preserve lightweight learner-started checks, existing course approvals/receipts and no-quiz-reminder behavior.
+
 ## v2.3.0 — 2026-10-31
 
 - Start optional short checks after reading: 1–3 choices, brief answers or short conversations, with source-grounded feedback. No quiz reminders or scheduled quiz tasks.

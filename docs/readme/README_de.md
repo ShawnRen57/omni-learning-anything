@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.3.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.4.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill ZIP herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.3.0.zip)**
+**[Skill ZIP herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.4.0.zip)**
 
 </div>
 
@@ -25,6 +25,7 @@ Nenne deinem Agenten dein Ziel, deine Vorkenntnisse und deine verfügbare Zeit. 
 | **v2.2.0** | Lies HTML offline, lerne in 10 Sprachen und verbinde DingTalk oder Tencent Docs mit angeleiteter offizieller Anmeldung. |
 | **v2.2.1** | Starte mit einer groben Idee: Der Agent klärt die Richtung, ordnet Vorkenntnisse, schlägt einen strukturierten Kurs vor und prüft die Möglichkeiten deiner Umgebung. |
 | **v2.3.0** | Prüfe dein Verständnis, wenn du bereit bist: kurze Fragen, begründetes Feedback, Hinweise, Überspringen und Fortsetzen. Keine Quiz-Erinnerungen oder geplanten Quiz-Aufgaben. |
+| **v2.4.0** | Lerne mit eigenen Büchern, Artikeln und Kursunterlagen: wähle Seiten oder Kapitel, prüfe die Originalstellen und entscheide über externe Ergänzungen. |
 
 „Ich möchte etwas Wirtschaft lernen“ reicht zum Einstieg. Omni schlägt Lernrichtungen und eine schlüssige Reihenfolge vor, kennzeichnet Annahmen und fragt nur nach Angaben, die den Kurs verändern. Bei einem klaren Ziel beginnt direkt die Planung.
 
@@ -89,7 +90,7 @@ Entdecke Pläne und tägliche PDFs zu Technologie, Wirtschaft, Musik, Agent-Prod
 
 ## Installation und Anleitungen
 
-[Im Agenten installieren](../../skills/omni-learning-anything/references/install.md) · [Formate und Schriftarten](../../skills/omni-learning-anything/references/setup.md) · [Dokumente verbinden](../../skills/omni-learning-anything/references/onboarding.md) · [Release-Prüfung](../../docs/release-validation-v2.3.0.md)
+[Im Agenten installieren](../../skills/omni-learning-anything/references/install.md) · [Formate und Schriftarten](../../skills/omni-learning-anything/references/setup.md) · [Dokumente verbinden](../../skills/omni-learning-anything/references/onboarding.md) · [Release-Prüfung](../../docs/release-validation-v2.4.0.md)
 
 Dieser Agent Skill nutzt die Recherche-, Dokument- und Zeitplanwerkzeuge deines Agenten. Nur PDF benötigt XeLaTeX. Cloud-Dokumente verwenden offizielle APIs/CLIs; Obsidian schreibt in den lokalen Vault. Gerätesynchronisierung und unbeaufsichtigte Ausführung hängen von Host und Konto ab.
 

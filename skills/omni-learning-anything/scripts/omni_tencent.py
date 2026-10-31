@@ -50,7 +50,7 @@ def check_docx(contents, data):
         for instruction in instructions:
             match=re.match(r'^\s*HYPERLINK\s+(?:"([^"\r\n]+)"|(https?://[^\s]+))',instruction,re.I)
             if match:urls.add(match.group(1) or match.group(2))
-        if not {s['url'] for s in data['sources']}.issubset(urls):raise ValueError('Exported Tencent document is missing semantic source links.')
+        if not {s['url'] for s in data['sources'] if s.get('url')}.issubset(urls):raise ValueError('Exported Tencent document is missing semantic source links.')
 
 
 def publish(root, manifest, target, receipt, checkpoint, client=None, cos_upload=None):
