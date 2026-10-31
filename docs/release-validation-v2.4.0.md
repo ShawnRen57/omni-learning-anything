@@ -22,4 +22,9 @@ Skill Creator validation and isolated ZIP/runtime/provider/checksum validation p
 
 The workflow uses synthetic QA material and explicitly simulated approval in sample_mode, not a source-researched real learner course or a teaching-quality result. No live schedules were created. All seven earlier ZIPs remain byte-identical. Ten README/current-version local targets and Skill links were verified.
 
-Package: `omni-learning-anything-skill-v2.4.0.zip`, 142,975 bytes. SHA256: `241636b7b8dfd5cbb299dea4d0e7f9d3e698d604516d3e5d150f0182cd1abb2f`. Remote publication is recorded separately after verification. No blanket promise is made for all ebooks, encodings, scanned documents or protected/unavailable content.
+Package: `omni-learning-anything-skill-v2.4.0.zip`, 142,975 bytes. SHA256: `241636b7b8dfd5cbb299dea4d0e7f9d3e698d604516d3e5d150f0182cd1abb2f`. Remote publication was independently verified as recorded below. No blanket promise is made for all ebooks, encodings, scanned documents or protected/unavailable content.
+
+
+## GitHub publication
+
+Published 2026-10-31: [v2.4.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.4.0), latest stable Release. Default main and annotated tag resolved to `0b0d740d9ad870cfc3d305c9e548c03a6e7ebcce` at publication. Remote README and Skill metadata show v2.4.0. Both release assets were downloaded from GitHub and compared byte-for-byte with the local package and SHA256SUMS; both match. This record is a documentation-only follow-up; tested source tag and package stay unchanged.
