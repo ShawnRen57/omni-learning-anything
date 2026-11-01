@@ -30,3 +30,9 @@ Final full suite: **242/242 tests passed in 66.103 seconds**. All 64 Skill ZIP e
 Core Skill Creator validation passed on a normalized temporary copy. The six pre-existing catalog extension fields are retained and separately validated with matching versions; the strict core validator does not accept those extension keys directly. Claude plugin/marketplace validation and runtime component inventory pass; the optional plugin-directory icon advisory is not marketplace submission approval. All nine previous ZIPs are retained byte-identically.
 
 Package: `omni-learning-anything-skill-v2.6.0.zip`, 168747 bytes, SHA256 `e481ab58ac72fb1594797f08b9a9d584330449a07c7bc2ed8ccaba9a15a80eb7`. Final archive entries match source after documentation updates.
+
+## GitHub publication and actual remote upgrade
+
+Published 2026-11-01: [v2.6.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.6.0), latest stable Release. Main and annotated tag resolved to `319415748fa4b02f1f85f5d0f89ccda59c239df6` at publication. GitHub API confirmed the release assets and consistent README, nested/flat Skill, plugin and marketplace versions. Both ZIP and SHA256SUMS were downloaded from GitHub and matched local files byte-for-byte.
+
+After pushing the tested source, the existing real GitHub community-CLI installation was upgraded from v2.5.0 to v2.6.0. Its completeness check passed, and all 16 external synthetic learner/connection files stayed byte-identical. The original remote Claude marketplace was refreshed, its cached plugin upgraded to v2.6.0, and native component inventory again listed exactly one Skill. This validates actual remote upgrade, beyond the earlier local-source/no-op checks. No actual user's global Skill, private account store, course or schedule was replaced. This publication record is a documentation-only follow-up; tested tag/package bytes stay unchanged.
