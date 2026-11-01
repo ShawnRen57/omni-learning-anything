@@ -36,4 +36,8 @@ Package: `omni-learning-anything-skill-v3.0.0.zip`, **191056 bytes**, **68 files
 
 Core Skill Creator validation passed on a normalized temporary frontmatter copy; public registry extension fields remain in the source. Official Claude Code plugin/marketplace validation passed, with its existing optional square-icon directory advisory. All ten README first-image/language links and the sample gallery's local targets passed checks. All 12 HTML files have correct language/direction attributes and an embedded PNG, with no external scripts, style links, imports or private local paths. Prior release archives and unrelated untracked research remain preserved.
 
-Actual remote release verification is recorded below after publication. Registry versions are separate from GitHub: the earlier SkillHub listing remains 2.6.0, and ClawHub's previously observed platform write-capacity failure is not called a v3.0.0 publication.
+Registry versions are separate from GitHub: the earlier SkillHub listing remains 2.6.0, and ClawHub's previously observed platform write-capacity failure is not called a v3.0.0 publication.
+
+## Verified GitHub release
+
+Published [v3.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v3.0.0) on **2026-11-02 at 00:12:58 Asia/Shanghai**, as the latest stable release (not draft or prerelease). Main and the annotated tag resolved to tested source commit `9d00cedfc424d7b3fbc4582f911980759c01d178` at publication. Both release assets were downloaded from GitHub: the ZIP and SHA256SUMS were byte-identical to local files, and all 68 extracted runtime files matched source. The downloaded CLI worked under Python `-S`, reported 3.0.0, and listed 12 courses. Thirteen remote README/Skill/plugin/marketplace files matched local content at the tag. This publication record is a documentation-only follow-up; the tested tag and archive bytes remain unchanged.
