@@ -1,0 +1,142 @@
+{
+  "timezone": "Asia/Shanghai",
+  "language": "zh",
+  "daily_minutes": 10,
+  "sample_mode": true,
+  "course_pathway": {
+    "schema": 1,
+    "course": {
+      "id": "harvard-positive-psychology",
+      "title": "Positive Psychology",
+      "institution": "Harvard University",
+      "code": "PSY 1504",
+      "edition": "Spring 2006",
+      "instructors": [
+        "Tal Ben-Shahar"
+      ],
+      "aliases": [
+        "积极心理学",
+        "哈佛幸福课",
+        "幸福课",
+        "Tal Ben Shahar",
+        "塔尔本沙哈尔"
+      ],
+      "domain": "psychology",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望研究幸福与成长的成人学习者；适用性为目录编辑判断。",
+      "pace": {
+        "description": "原课周二、周四11:30–13:00；含讨论、每周多数时候1–3页回应、期中、项目、期末。目录分组不是原课课次。"
+      },
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "PSYCHOLOGY 1504 syllabus",
+          "url": "https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf",
+          "locator": "pp.1–2: Tentative Schedule; Grading",
+          "checked_at": "2026-11-01",
+          "kind": "university_archive"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "课程起点与积极心理学",
+          "locator": "p.1; February 2, 7, 9",
+          "source_id": "O1",
+          "focus": "导论、学科需要、基本前提第一部分。"
+        },
+        {
+          "id": "u02",
+          "title": "基本前提与信念",
+          "locator": "p.1; February 14, 16, 21",
+          "source_id": "O1",
+          "focus": "继续前提；考察信念与自我实现预言。"
+        },
+        {
+          "id": "u03",
+          "title": "注意焦点与改变",
+          "locator": "p.1; February 23, 28; March 2, 7",
+          "source_id": "O1",
+          "focus": "从注意选择转向改变的可能性。"
+        },
+        {
+          "id": "u04",
+          "title": "身体与健康",
+          "locator": "p.1; March 9",
+          "source_id": "O1",
+          "focus": "联系睡眠等身体因素与课程主题。"
+        },
+        {
+          "id": "u05",
+          "title": "目标设定",
+          "locator": "p.1; March 14, 16",
+          "source_id": "O1",
+          "focus": "连接目标与行动方向。"
+        },
+        {
+          "id": "u06",
+          "title": "期中与复盘",
+          "locator": "p.1; March 21, 23; spring break follows",
+          "source_id": "O1",
+          "focus": "保留期中和复习问答位置。"
+        },
+        {
+          "id": "u07",
+          "title": "完美主义",
+          "locator": "pp.1–2; April 4, 6",
+          "source_id": "O1",
+          "focus": "考察完美主义及其影响。"
+        },
+        {
+          "id": "u08",
+          "title": "正念与幽默",
+          "locator": "p.2; April 11, 13",
+          "source_id": "O1",
+          "focus": "依次研究觉察与幽默。"
+        },
+        {
+          "id": "u09",
+          "title": "关系",
+          "locator": "p.2; April 18, 20",
+          "source_id": "O1",
+          "focus": "讨论友谊与亲密关系。"
+        },
+        {
+          "id": "u10",
+          "title": "自尊",
+          "locator": "p.2; April 25, 27",
+          "source_id": "O1",
+          "focus": "研究自我评价。"
+        },
+        {
+          "id": "u11",
+          "title": "美好生活",
+          "locator": "p.2; May 2",
+          "source_id": "O1",
+          "focus": "重新联结课程的幸福问题。"
+        },
+        {
+          "id": "u12",
+          "title": "下一步",
+          "locator": "p.2; May 4",
+          "source_id": "O1",
+          "focus": "整理后续实践方向。"
+        }
+      ]
+    },
+    "sha256": "c66044b0dccdc7d6b8e1cb814e6786495e492e68dbe16c3e4cef60d729e95c6c",
+    "unit_ids": [
+      "u01",
+      "u02",
+      "u03"
+    ],
+    "pace": "adapted",
+    "practice": "light"
+  },
+  "delivery": {
+    "platform": "html",
+    "mode": "local"
+  }
+}

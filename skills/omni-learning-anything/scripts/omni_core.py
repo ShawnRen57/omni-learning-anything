@@ -44,6 +44,9 @@ def validate_plan(plan):
 
 def validate_config(config):
     ZoneInfo(config['timezone'])
+    if 'course_pathway' in config:
+        from omni_courses import validate_binding
+        validate_binding(config['course_pathway'])
     if 'materials' in config:
         from omni_materials import validate_config as validate_material_config
         validate_material_config(config['materials'])
@@ -77,6 +80,8 @@ def initialize(root,config,plan):
             raise ValueError('Keep course archives outside the installed Skill folder so updates preserve learner data.')
     root.mkdir(parents=True,exist_ok=True)
     validate_plan(plan); validate_config(config)
+    from omni_courses import validate_course_plan
+    validate_course_plan(config,plan)
     if config.get('materials'):
         from omni_materials import verify_selection
         for selection in config['materials']['selections']: verify_selection(root,selection)
@@ -89,6 +94,8 @@ def initialize(root,config,plan):
 
 def check_approval(root,state):
     config=read(root/'config.json')
+    from omni_courses import validate_course_plan
+    validate_course_plan(config,read(root/'plan.json'))
     if config.get('materials'):
         from omni_materials import verify_selection
         for selection in config['materials']['selections']:verify_selection(root,selection)
@@ -124,6 +131,8 @@ def check_deliveries(root,state):
 def approve(root):
     with lock(root):
         reviewed(root,'plan'); state=read(root/'state.json')
+        from omni_courses import validate_course_plan
+        validate_course_plan(read(root/'config.json'),read(root/'plan.json'))
         if state.get('approved_plan')==digest(root/'plan.json') and state.get('approved_config')==digest(root/'config.json'):
             return  # Repeated approval cannot resume a paused or completed course.
         if state['lessons'] and state.get('approved_plan')!=digest(root/'plan.json'):

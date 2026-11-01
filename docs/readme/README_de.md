@@ -1,3 +1,5 @@
+<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="Echte Universitätskursbeispiele in sechs Sprachen" width="100%"></a>
+
 <div align="center">
 
 <img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,112 +17,145 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill ZIP herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
+**[Skill-ZIP v3.0.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
 
-[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Tencent SkillHub](https://skillhub.cn/skills/user_4c4c4339/omni-learning-anything) · [Installationshinweise](../distribution-channels.md)
+[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installationswege](../../docs/distribution-channels.md)
 
 </div>
 
-**Aus „Ich möchte lernen…“ wird ein Lernweg für jeden Tag.**
+**Wähle einen Universitätskurs oder bring eigene Bücher und Fachartikel mit. Lerne in deinem Tempo, mit kurzen Verständnisfragen, hilfreichen Rückmeldungen und Wiederholungen – in lokalen Dateien oder Cloud-Dokumenten.**
 
-Nenne deinem Agenten dein Ziel, deine Vorkenntnisse und deine verfügbare Zeit. Omni erstellt einen Plan und tägliche Lektionen mit Abbildungen, Quellen, Übungen und Selbstkontrollen.
+Aus „Ich möchte lernen …“ wird ein Plan, dem du folgen kannst. Beginne mit einem von 12 Lernpfaden auf Basis öffentlicher Universitätsquellen, einem eigenen Ziel oder deinen Unterlagen. Bestätige den Plan, bevor die Lektionen beginnen.
 
-## Versionsübersicht
+Beginne mit **„Ich möchte Harvards Positive Psychologie lernen.“** Der Agent findet den ursprünglichen Kurs, nutzt bereits genannte Angaben und fragt nur nach Details, die für den Lernplan wichtig sind.
 
-| Version | Deine Möglichkeiten |
-| --- | --- |
-| **v1** | Dein eigener PDF-Kurs: Bestätige den Plan und erhalte bebilderte Lektionen mit Übungen und weiterführender Literatur. |
-| **v2** | Speichere deinen Kurs als lokale Dateien oder in Notion, Obsidian, Feishu, DingTalk und Tencent Docs. Der Agent begleitet die Verbindung und merkt sich den gewählten Ort. |
-| **v2.2.0** | Lies HTML offline, lerne in 10 Sprachen und verbinde DingTalk oder Tencent Docs mit angeleiteter offizieller Anmeldung. |
-| **v2.2.1** | Starte mit einer groben Idee: Der Agent klärt die Richtung, ordnet Vorkenntnisse, schlägt einen strukturierten Kurs vor und prüft die Möglichkeiten deiner Umgebung. |
-| **v2.3.0** | Prüfe dein Verständnis, wenn du bereit bist: kurze Fragen, begründetes Feedback, Hinweise, Überspringen und Fortsetzen. Keine Quiz-Erinnerungen oder geplanten Quiz-Aufgaben. |
-| **v2.4.0** | Lerne mit eigenen Büchern, Artikeln und Kursunterlagen: wähle Seiten oder Kapitel, prüfe die Originalstellen und entscheide über externe Ergänzungen. |
-| **v2.5.0** | Beim Weiterlernen passt eine kleine Wiederholung in deine tägliche Zeit. Sieh, was deine Antworten zeigen, korrigiere Einschätzungen, bestätige Änderungen künftiger Lektionen und exportiere Anki-Karten. |
-| **v2.6.0** | Installiere per Chat, mit einem Befehl oder über deinen Agenten. Prüfe nur die nötige Umgebung und aktualisiere unter Erhalt deiner Kurse und Verbindungen. |
+## Neu in v3.0.0
 
-„Ich möchte etwas Wirtschaft lernen“ reicht zum Einstieg. Omni schlägt Lernrichtungen und eine schlüssige Reihenfolge vor, kennzeichnet Annahmen und fragt nur nach Angaben, die den Kurs verändern. Bei einem klaren Ziel beginnt direkt die Planung.
+- **12 universitäre Lernpfade:** Nutze Kursquellen von Harvard, Yale, MIT und Stanford, ohne selbst einen Lehrplan entwerfen zu müssen.
+- **Ein machbares Tempo:** Die ursprüngliche Reihenfolge und Quellenzuordnung bleiben erhalten; die Lerneinheiten passen sich deinem Zeitbudget an.
+- **Echte mehrsprachige Beispiele:** Sieh dir Pläne und erste Lektionen aus sechs Sprachen und Fachgebieten als PDF und HTML an.
+- **Ein leichter Einstieg:** Nach der Installation oder beim ersten Aufruf kann der Host-Agent im aktuellen Chat Kurse vorstellen, wenn dein Thema noch offen ist. Der Skill kann selbst keinen neuen Chat öffnen.
 
-## Lernen für deine Ziele
+<a id="university-courses"></a>
+## Einen integrierten Universitätskurs wählen
 
-- Plane einen Lernweg für Reisen, Arbeit, Vorstellungsgespräche oder persönliche Interessen.
-- Bestimme ein tägliches Zeitbudget für Erklärungen, Abbildungen, Übungen und Lösungshinweise.
-- Prüfe Belege im Text und mindestens fünf erläuterte Literatur-Links je Dokument.
-- Bestätige zuerst den Plan und setze nach einer Unterbrechung bei der ersten noch nicht gelieferten Lektion fort.
+Bitte um **„Zeig mir die integrierten Kurse“**. Wähle Kurs, Sprache und Zeitbudget; der Agent schlägt einen Plan mit Quellenzuordnung vor. Es handelt sich um unabhängige Lernpfade auf Basis öffentlicher Kursquellen. Vollständige Vorlesungsinhalte sind nicht enthalten; eine Anerkennung durch Universitäten oder Zertifikate sind damit nicht verbunden.
 
-## Kurssprachen
+| Universität | Kurs und Originaltitel | Quellenausgabe |
+| --- | --- | --- |
+| Harvard | [Positive Psychologie / Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) | PSY 1504 · Frühjahr 2006 · Tal Ben-Shahar |
+| Harvard | [Einführung in die Informatik / CS50x: Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) | CS50x · 2026 · David Malan |
+| Harvard | [Gerechtigkeit / Justice](https://sandel.scholars.harvard.edu/justice) | öffentliche Reihe mit 24 Vorlesungen · Michael Sandel |
+| Yale | [Einführung in die Psychologie / Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) | PSYC 110 · Frühjahr 2007 · Paul Bloom |
+| Yale | [Finanzmärkte / Financial Markets](https://oyc.yale.edu/economics/econ-252) | ECON 252 · Frühjahr 2011 · Robert Shiller |
+| Yale | [Spieltheorie / Game Theory](https://oyc.yale.edu/economics/econ-159) | ECON 159 · Herbst 2007 · Ben Polak |
+| Yale | [Der Tod / Death](https://oyc.yale.edu/death/phil-176) | PHIL 176 · Frühjahr 2007 · Shelly Kagan |
+| Yale | [Musik hören / Listening to Music](https://oyc.yale.edu/music/musi-112) | MUSI 112 · Herbst 2008 · Craig Wright |
+| MIT | [Einführung in Informatik und Programmierung mit Python / Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) | 6.0001 · Herbst 2016 |
+| MIT | [Lineare Algebra / Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | 18.06 · Frühjahr 2010 · Gilbert Strang |
+| MIT | [Klassische Mechanik / Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | 8.01SC · Herbst 2016 |
+| Stanford | [Maschinelles Lernen / Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) | CS229 · Herbst 2018 |
+
+Zehn Minuten reichen für einen kleinen Lernschritt, nicht für eine ganze Originalvorlesung oder den gesamten Kurs. Der ursprüngliche Arbeitsaufwand bleibt sichtbar; längere Texte, Aufgaben und Projekte benötigen zusätzliche Zeit. Quellen und Verfügbarkeit können sich ändern.
+
+## Mit eigenen Unterlagen lernen
+
+Nutze PDF, TXT, Markdown, HTML, DOCX, EPUB, PPTX, SRT oder VTT. Wähle Kapitel, Seiten oder Zeitmarken und entscheide, ob externe Ergänzungen erlaubt sind. Erklärungen und Fragen verweisen auf die ausgewählten Originalstellen. Ältere DOC- und RTF-Dateien müssen zuerst mit vertrauenswürdigen Werkzeugen konvertiert werden.
+
+Auch „Ich möchte etwas über Wirtschaft lernen“ genügt. Der Agent schlägt Richtungen vor, nennt Annahmen und fragt nur nach Dingen, die den Plan beeinflussen. Bei einem konkreten Ziel geht es direkt zur Planung.
+
+<a id="choose-your-learning-language"></a>
+## Lernsprache wählen
 
 **English · 简体中文 · 日本語 · 한국어 · Español · Français · Deutsch · Português · Русский · العربية**
 
-Pläne und Lektionen lassen sich in diesen Sprachen erstellen. Kurssprache, Thema, Quellen und README-Sprache sind unabhängig. Arabisch wird von rechts nach links gesetzt.
+Pläne und Lektionen unterstützen die genannten zehn Sprachen, unabhängig von der Quellensprache oder dieser Seite. Arabische Dokumente verwenden eine Schreibrichtung von rechts nach links.
 
-## Speicherort auswählen
+## Speicherort für den Kurs wählen
 
-| Ziel | Angaben für den Agenten |
+| Speicherort | Vorgehen |
 | --- | --- |
-| PDF · HTML · DOCX · Markdown | Kursordner und Format. HTML enthält das Bild in einer einzigen Offline-Datei; externe Links benötigen Internet. |
-| Notion | Link zur übergeordneten Seite und gewünschter Arbeitsbereich. |
-| Obsidian | Bestehender lokaler Vault und Unterordner. Kein API-Schlüssel nötig. |
-| Feishu | Kursordner-Link; bei Bedarf offizielle App einrichten und Benutzerzugriff erlauben. |
-| DingTalk | Dokumentordner und Organisation. Ein Administrator muss gegebenenfalls den CLI-Zugriff aktivieren. |
-| Tencent Docs | Stammordner der Startseite oder persönlicher Ordner; auf der offiziellen Seite anmelden und Berechtigungen prüfen. |
+| PDF · HTML · DOCX · Markdown | Wähle Ordner und PDF, HTML, DOCX oder Markdown. HTML enthält die Illustration in einer Offline-Datei; externe Links benötigen Internet. |
+| Notion | Verbinde eine übergeordnete Seite über die offizielle `ntn`-CLI. |
+| Obsidian | Wähle einen vorhandenen lokalen Vault und Kursordner; es wird keine Obsidian-API verwendet. |
+| Feishu / 飞书 | Verbinde einen Dokumentordner über die offizielle `lark`-CLI und Nutzerfreigabe. |
+| DingTalk / 钉钉 | Verbinde einen Ordner über die offizielle `dws`-CLI; eventuell ist eine Organisationsfreigabe nötig. |
+| Tencent Docs / 腾讯文档 | Wähle Stammverzeichnis oder Ordner und durchlaufe die offizielle OAuth/MCP-Autorisierung. |
 
-Der Agent prüft vorhandene Zugriffe, fragt nur nach fehlenden Angaben und erklärt die Schritte. Du musst keine Objekt-IDs suchen oder Konfigurationsdateien schreiben. Teile keine Passwörter oder Tokens im Chat. Organisatorische Freigaben können weitere Schritte erfordern.
+Nenne den gewünschten Speicherort. Der Agent prüft bestehende Zugriffe, führt durch fehlende Einrichtungsschritte und nutzt deine benannte Verbindung erneut. Passwörter und Tokens gehören nicht in den Chat.
 
-## Wähle deine Installation
+<a id="quick-start"></a>
+## Installieren und starten
 
-Bitte deinen Agenten, die neueste Version zu installieren, bestehende Kurse und Verbindungen zu erhalten und die Erkennung und Nutzung im Client zu prüfen.
-
-Mit Node.js: Führe diesen Befehl aus und wähle deinen Agenten. Ohne `-g` gilt die Installation nur für das Projekt.
+Bitte den Agenten, die neueste Version zu installieren und zu prüfen, ob dieser Client den Skill findet. Bestehende Kurse und Verbindungen bleiben beim Update erhalten. Mit Node.js ausführbar:
 
 ```sh
 npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
 ```
 
-In Claude Code:
+Verwende in Claude Code den Plugin-Installer:
 
 ```text
 /plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
 ```
 
-Ohne Node.js kannst du die Skill-ZIP oben herunterladen und im Client importieren oder deinen Agenten um die Installation bitten. [Installation, erster Start und sichere Updates](../../skills/omni-learning-anything/references/install.md)
+Ohne Node.js kannst du die ZIP oben im Client hochladen oder den Agenten um Hilfe bitten. `skills.sh` ist verfügbar; der SkillHub-Eintrag steht derzeit auf v2.6.0. Verfügbare Versionen stehen in der Kanalübersicht.
 
-## Im Chat beginnen
-
-```text
-Installiere das Skill ZIP der neuesten Release von https://github.com/ShawnRen57/omni-learning-anything.
-Behalte den vollständigen Ordner und prüfe, ob der Agent den Skill findet.
-```
+## Den ersten Kurs ausprobieren
 
 ```text
-Hilf mir mit omni-learning-anything, Architekturgeschichte für Reisen zu lernen.
-Ich bin Anfänger. Plane 30 Tage mit je 15 Minuten auf Deutsch.
-Speichere den Kurs als Offline-HTML in meinem Kursordner. Zeige zuerst den Plan.
+Zeig mir die integrierten Kurse. Nutze Harvard CS50x 2026 als Quelle.
+Ich bin Anfänger. Unterrichte mich auf Deutsch, 20 Minuten täglich.
+Behalte die Reihenfolge bei und zeige den ursprünglichen Arbeitsaufwand.
+Speichere als Offline-HTML und zeige mir zuerst den Plan.
 ```
 
-Prüfe und bestätige den Plan. Unterstützt dein Agent geplante Aufgaben, vereinbart ihr Uhrzeit und Zeitzone. Andernfalls bittest du bei Bedarf um Fortsetzung. Zur vereinbarten Zeit beginnt die Erstellung; Recherche und Prüfung gehen der Lieferung voraus.
+Oder: „Bearbeite mit mir die ersten zwei Kapitel meines EPUB in 15-Minuten-Einheiten“ oder „Erkläre mir Finanzinstitutionen anhand von Yale Financial Markets 2011“.
 
-```text
-Setze bei der ersten noch nicht gelieferten Lektion fort.
-Pausiere diesen Kurs und seinen Zeitplan.
-Bewahre den bisherigen Kurs auf und schlage einen Plan für mein neues Ziel vor.
-```
+Prüfe und bestätige den Plan und fordere die erste Lektion an. Zum Fortsetzen: „Mach bei der frühesten noch nicht gelieferten Lektion weiter.“ Pausen sind möglich. Zeitpläne erfordern einen geeigneten Host und vereinbarte Uhrzeit samt Zeitzone. Dann beginnt die Erstellung; die Lieferung folgt nach Recherche und Prüfung.
 
-## Beispielkurse ansehen
+## Verständnisfragen, Rückmeldungen und Wiederholung
 
-Entdecke Pläne und tägliche PDFs zu Technologie, Wirtschaft, Musik, Agent-Produktdesign, Architektur und Ming-Geschichte. Die Archive behalten die ursprünglichen Prüfdaten ihrer Quellen.
+Fordere bei Bedarf 1–3 kurze Fragen als Karten oder Text an. Du erhältst quellenbasierte Rückmeldungen und Hinweise; längere Tests gibt es auf Wunsch. Die Lernaufzeichnung wird im Hintergrund aktualisiert und unterbricht den Lesefluss nicht.
 
-| Technology | Economics | Music |
-| :---: | :---: | :---: |
-| [![Technology](../../docs/screenshots/technology.png)](../../examples/technology/) | [![Economics](../../docs/screenshots/economics.png)](../../examples/economics/) | [![Music](../../docs/screenshots/music.png)](../../examples/music/) |
+„Was sollte ich heute wiederholen?“ ergibt eine kurze Wiederholung im vorhandenen Zeitbudget. „Was zeigen meine Antworten diese Woche?“ liefert einen belegten Rückblick. Korrigiere Einschätzungen, überspringe Themen oder bevorzuge eine neue Lektion. Es entstehen keine zusätzlichen automatischen Tests oder Timer.
 
-| Agent products | Architecture | Ming history |
-| :---: | :---: | :---: |
-| [![Agent products](../../docs/screenshots/agent-product.png)](../../examples/agent-product/) | [![Architecture](../../docs/screenshots/architecture.png)](../../examples/architecture/) | [![Ming history](../../docs/screenshots/ming-history.png)](../../examples/ming-history/) |
+Änderungen künftiger Lektionen bestätigst du vor einer neuen Kursversion; alter Plan und Verlauf bleiben zugänglich. Anki-Karten lassen sich optional als CSV in eine Richtung exportieren, ohne automatische Synchronisierung.
 
-## Installation und Anleitungen
+<a id="examples"></a>
+## Echte Beispiele in sechs Sprachen
 
-[Im Agenten installieren](../../skills/omni-learning-anything/references/install.md) · [Formate und Schriftarten](../../skills/omni-learning-anything/references/setup.md) · [Dokumente verbinden](../../skills/omni-learning-anything/references/onboarding.md) · [Release-Prüfung](../../docs/release-validation-v2.6.0.md)
+Das Bild oben verlinkt sechs echte Beispielsätze. Jeder enthält einen Teilplan für sechs Tage und einen eigenständig lesbaren Day-01-Lernleitfaden als PDF und HTML. Sie zeigen Form und Vorgehen, keine vollständigen Universitätskurse oder offiziellen Lehrtexte.
 
-Dieser Agent Skill nutzt die Recherche-, Dokument- und Zeitplanwerkzeuge deines Agenten. Nur PDF benötigt XeLaTeX. Cloud-Dokumente verwenden offizielle APIs/CLIs; Obsidian schreibt in den lokalen Vault. Gerätesynchronisierung und unbeaufsichtigte Ausführung hängen von Host und Konto ab.
+| Sprache | Beispielthema |
+| --- | --- |
+| Chinesisch · 简体中文 | Harvard: Positive Psychologie |
+| Englisch · English | Harvard CS50 |
+| Japanisch · 日本語 | MIT: Lineare Algebra |
+| Französisch · Français | Yale: Musik hören |
+| Spanisch · Español | Yale: Finanzmärkte |
+| Arabisch · العربية | Yale: Der Tod |
 
-[MIT](../../LICENSE) · [Changelog](../../CHANGELOG.md)
+[Katalog und Beispieldateien öffnen](../../examples/university/README.md)
+
+Die bisherigen PDF-Beispiele bleiben verfügbar:
+
+[Technologie](../../examples/technology/) · [Wirtschaft](../../examples/economics/) · [Musik](../../examples/music/) · [Agentenprodukte](../../examples/agent-product/) · [Architektur](../../examples/architecture/) · [Ming-Geschichte](../../examples/ming-history/)
+
+<a id="versions"></a>
+## Versionsübersicht
+
+| Version | Nutzen beim Lernen |
+| --- | --- |
+| **v3.0.0** | Universitären Lernpfad wählen, Quellenausgabe prüfen und echte mehrsprachige Dokumente ansehen. |
+| **v2.3–v2.6** | Kurze Verständnisfragen, eigene Quellen, gezielte Wiederholung und einfachere Installation. |
+| **v2** | Zehn Sprachen, vier lokale Formate und angebundene Dokumentdienste. |
+| **v1** | Persönlichen Plan bestätigen und illustrierte PDFs mit Übungen und Lesetipps erhalten. |
+
+## Anleitungen und Voraussetzungen
+
+[Installation und Updates](../../skills/omni-learning-anything/references/install.md) · [Formate und Schriften](../../skills/omni-learning-anything/references/setup.md) · [Dokumente verbinden](../../skills/omni-learning-anything/references/onboarding.md) · [Kanalstatus](../../docs/distribution-channels.md) · [Validierung von v3.0.0](../../docs/release-validation-v3.0.0.md)
+
+Dieser Agent Skill nutzt die Recherche-, Dokument- und Zeitplanwerkzeuge des Hosts. Nur PDF erfordert XeLaTeX. Cloudzugriff, geräteübergreifende Synchronisierung und unbeaufsichtigte Lieferung hängen von Host, Konto und Freigaben ab. Die Fähigkeiten des aktuellen Clients werden geprüft; allgemeine Plattformunterstützung wird nicht vorausgesetzt.
+
+[MIT](../../LICENSE) · [Changelog](../../CHANGELOG.md) · [Attribution](../../ATTRIBUTION.md)

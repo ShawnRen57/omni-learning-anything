@@ -1,0 +1,1419 @@
+{
+  "schema": 1,
+  "checked_at": "2026-11-01",
+  "courses": [
+    {
+      "id": "harvard-positive-psychology",
+      "title": "Positive Psychology",
+      "institution": "Harvard University",
+      "code": "PSY 1504",
+      "edition": "Spring 2006",
+      "instructors": [
+        "Tal Ben-Shahar"
+      ],
+      "aliases": [
+        "积极心理学",
+        "哈佛幸福课",
+        "幸福课",
+        "Tal Ben Shahar",
+        "塔尔本沙哈尔"
+      ],
+      "domain": "psychology",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望研究幸福与成长的成人学习者；适用性为目录编辑判断。",
+      "pace": {
+        "description": "原课周二、周四11:30–13:00；含讨论、每周多数时候1–3页回应、期中、项目、期末。目录分组不是原课课次。"
+      },
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "PSYCHOLOGY 1504 syllabus",
+          "url": "https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf",
+          "locator": "pp.1–2: Tentative Schedule; Grading",
+          "checked_at": "2026-11-01",
+          "kind": "university_archive"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "课程起点与积极心理学",
+          "locator": "p.1; February 2, 7, 9",
+          "source_id": "O1",
+          "focus": "导论、学科需要、基本前提第一部分。"
+        },
+        {
+          "id": "u02",
+          "title": "基本前提与信念",
+          "locator": "p.1; February 14, 16, 21",
+          "source_id": "O1",
+          "focus": "继续前提；考察信念与自我实现预言。"
+        },
+        {
+          "id": "u03",
+          "title": "注意焦点与改变",
+          "locator": "p.1; February 23, 28; March 2, 7",
+          "source_id": "O1",
+          "focus": "从注意选择转向改变的可能性。"
+        },
+        {
+          "id": "u04",
+          "title": "身体与健康",
+          "locator": "p.1; March 9",
+          "source_id": "O1",
+          "focus": "联系睡眠等身体因素与课程主题。"
+        },
+        {
+          "id": "u05",
+          "title": "目标设定",
+          "locator": "p.1; March 14, 16",
+          "source_id": "O1",
+          "focus": "连接目标与行动方向。"
+        },
+        {
+          "id": "u06",
+          "title": "期中与复盘",
+          "locator": "p.1; March 21, 23; spring break follows",
+          "source_id": "O1",
+          "focus": "保留期中和复习问答位置。"
+        },
+        {
+          "id": "u07",
+          "title": "完美主义",
+          "locator": "pp.1–2; April 4, 6",
+          "source_id": "O1",
+          "focus": "考察完美主义及其影响。"
+        },
+        {
+          "id": "u08",
+          "title": "正念与幽默",
+          "locator": "p.2; April 11, 13",
+          "source_id": "O1",
+          "focus": "依次研究觉察与幽默。"
+        },
+        {
+          "id": "u09",
+          "title": "关系",
+          "locator": "p.2; April 18, 20",
+          "source_id": "O1",
+          "focus": "讨论友谊与亲密关系。"
+        },
+        {
+          "id": "u10",
+          "title": "自尊",
+          "locator": "p.2; April 25, 27",
+          "source_id": "O1",
+          "focus": "研究自我评价。"
+        },
+        {
+          "id": "u11",
+          "title": "美好生活",
+          "locator": "p.2; May 2",
+          "source_id": "O1",
+          "focus": "重新联结课程的幸福问题。"
+        },
+        {
+          "id": "u12",
+          "title": "下一步",
+          "locator": "p.2; May 4",
+          "source_id": "O1",
+          "focus": "整理后续实践方向。"
+        }
+      ]
+    },
+    {
+      "id": "harvard-cs50x",
+      "title": "CS50’s Introduction to Computer Science",
+      "institution": "Harvard University",
+      "code": "CS50x",
+      "edition": "2026 (year URL redirects to current syllabus)",
+      "instructors": [
+        "David J. Malan"
+      ],
+      "aliases": [
+        "CS50",
+        "CS50x",
+        "计算机科学导论",
+        "哈佛编程课",
+        "计算机入门"
+      ],
+      "domain": "computer-science",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "编程初学者及希望建立计算思维的学习者。",
+      "pace": {
+        "description": "原开放课允许自定进度；十份问题集与最终项目；Week0–10及AI补充。当前页面可更新。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "CS50x 2026 syllabus",
+          "url": "https://cs50.harvard.edu/x/2026/syllabus/",
+          "locator": "Syllabus; navigation Weeks 0–10; Artificial Intelligence; Expectations",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Scratch与计算思维",
+          "locator": "Week 0",
+          "source_id": "O1",
+          "focus": "以可视化编程进入问题求解。"
+        },
+        {
+          "id": "u02",
+          "title": "C与数组",
+          "locator": "Weeks 1–2",
+          "source_id": "O1",
+          "focus": "学习C及数组表示。"
+        },
+        {
+          "id": "u03",
+          "title": "算法与内存",
+          "locator": "Weeks 3–4",
+          "source_id": "O1",
+          "focus": "连接算法效率与内存管理。"
+        },
+        {
+          "id": "u04",
+          "title": "数据结构",
+          "locator": "Week 5",
+          "source_id": "O1",
+          "focus": "组织数据并比较结构。"
+        },
+        {
+          "id": "u05",
+          "title": "Python",
+          "locator": "Week 6",
+          "source_id": "O1",
+          "focus": "迁移到Python表达。"
+        },
+        {
+          "id": "u06",
+          "title": "SQL与人工智能补充",
+          "locator": "Week 7; Artificial Intelligence (supplement before Week 8)",
+          "source_id": "O1",
+          "focus": "处理关系数据，再读AI补充。"
+        },
+        {
+          "id": "u07",
+          "title": "网页基础",
+          "locator": "Week 8",
+          "source_id": "O1",
+          "focus": "结合HTML、CSS与JavaScript。"
+        },
+        {
+          "id": "u08",
+          "title": "Flask与最终项目",
+          "locator": "Weeks 9–10; Final Project",
+          "source_id": "O1",
+          "focus": "构建网络应用并完成自选软件。"
+        }
+      ]
+    },
+    {
+      "id": "harvard-justice",
+      "title": "Justice",
+      "institution": "Harvard University",
+      "code": "Justice (public lecture series)",
+      "edition": "Official 24-lecture sequence; term not stated on source",
+      "instructors": [
+        "Michael J. Sandel"
+      ],
+      "aliases": [
+        "公正",
+        "正义",
+        "哈佛公正课",
+        "迈克尔桑德尔",
+        "Sandel"
+      ],
+      "domain": "philosophy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望练习公共伦理论证的学习者；目录适配建议。",
+      "pace": {
+        "description": "官网24讲配成12个视频；本目录每单元对应一对。原学分课工时与考核未在此页核实。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Justice — Michael J. Sandel",
+          "url": "https://sandel.scholars.harvard.edu/justice",
+          "locator": "Lectures 1–24, paired video links and descriptions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "道德困境与功利主义",
+          "locator": "Lectures 1–2",
+          "source_id": "O1",
+          "focus": "区分行动后果与道德约束。"
+        },
+        {
+          "id": "u02",
+          "title": "价值与快乐",
+          "locator": "Lectures 3–4",
+          "source_id": "O1",
+          "focus": "比较价值衡量与快乐层次。"
+        },
+        {
+          "id": "u03",
+          "title": "自由与自我所有权",
+          "locator": "Lectures 5–6",
+          "source_id": "O1",
+          "focus": "检验自由至上主义。"
+        },
+        {
+          "id": "u04",
+          "title": "财产与同意",
+          "locator": "Lectures 7–8",
+          "source_id": "O1",
+          "focus": "考察洛克与政府权力。"
+        },
+        {
+          "id": "u05",
+          "title": "市场交换的界限",
+          "locator": "Lectures 9–10",
+          "source_id": "O1",
+          "focus": "讨论兵役与代孕。"
+        },
+        {
+          "id": "u06",
+          "title": "康德的道德基础",
+          "locator": "Lectures 11–12",
+          "source_id": "O1",
+          "focus": "分辨动机、义务与普遍化。"
+        },
+        {
+          "id": "u07",
+          "title": "谎言与契约",
+          "locator": "Lectures 13–14",
+          "source_id": "O1",
+          "focus": "由康德转向罗尔斯。"
+        },
+        {
+          "id": "u08",
+          "title": "分配与应得",
+          "locator": "Lectures 15–16",
+          "source_id": "O1",
+          "focus": "比较公平起点与报酬。"
+        },
+        {
+          "id": "u09",
+          "title": "招生与目的",
+          "locator": "Lectures 17–18",
+          "source_id": "O1",
+          "focus": "由平权政策进入亚里士多德。"
+        },
+        {
+          "id": "u10",
+          "title": "公民与自由",
+          "locator": "Lectures 19–20",
+          "source_id": "O1",
+          "focus": "考察德性与社会角色。"
+        },
+        {
+          "id": "u11",
+          "title": "共同体与忠诚",
+          "locator": "Lectures 21–22",
+          "source_id": "O1",
+          "focus": "讨论非自愿义务。"
+        },
+        {
+          "id": "u12",
+          "title": "婚姻与美好生活",
+          "locator": "Lectures 23–24",
+          "source_id": "O1",
+          "focus": "检验公共讨论中的善。"
+        }
+      ]
+    },
+    {
+      "id": "yale-introduction-psychology",
+      "title": "Introduction to Psychology",
+      "institution": "Yale University",
+      "code": "PSYC 110",
+      "edition": "Spring 2007",
+      "instructors": [
+        "Paul Bloom"
+      ],
+      "aliases": [
+        "心理学导论",
+        "心理学入门",
+        "耶鲁心理学",
+        "保罗布鲁姆"
+      ],
+      "domain": "psychology",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望建立心理学领域全景的初学者；先修未在页面列明。",
+      "pace": {
+        "description": "原课每周两次75分钟；阅读回应、书评、实验参与、期中和期末。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "PSYC 110 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/introduction-psychology/psyc-110",
+          "locator": "Course Structure; Syllabus; Sessions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "心理学与大脑",
+          "locator": "Lectures 1–2",
+          "source_id": "O1",
+          "focus": "进入心理学及神经基础。"
+        },
+        {
+          "id": "u02",
+          "title": "心理学理论与发展",
+          "locator": "Lectures 3–5",
+          "source_id": "O1",
+          "focus": "依次比较弗洛伊德、斯金纳与儿童发展。"
+        },
+        {
+          "id": "u03",
+          "title": "语言、视觉与记忆",
+          "locator": "Lectures 6–8",
+          "source_id": "O1",
+          "focus": "连接沟通、感知及记忆。"
+        },
+        {
+          "id": "u04",
+          "title": "爱、演化与情绪",
+          "locator": "Lectures 9–12; Exam 1 follows",
+          "source_id": "O1",
+          "focus": "研究情绪与推理；保留期中。"
+        },
+        {
+          "id": "u05",
+          "title": "知觉与个体差异",
+          "locator": "Guest Lecture 1; Lectures 13–14",
+          "source_id": "O1",
+          "focus": "知觉客座课后研究差异与性动机。"
+        },
+        {
+          "id": "u06",
+          "title": "食物与道德",
+          "locator": "Guest Lecture 2; Lecture 15",
+          "source_id": "O1",
+          "focus": "联系食物研究与道德心理。"
+        },
+        {
+          "id": "u07",
+          "title": "社会自我与睡眠",
+          "locator": "Lectures 16–17",
+          "source_id": "O1",
+          "focus": "考察自我、他人和睡眠。"
+        },
+        {
+          "id": "u08",
+          "title": "心理障碍与幸福",
+          "locator": "Lectures 18–20; Exam 2",
+          "source_id": "O1",
+          "focus": "了解障碍，再回到幸福；保留期末。"
+        }
+      ]
+    },
+    {
+      "id": "yale-financial-markets",
+      "title": "Financial Markets",
+      "institution": "Yale University",
+      "code": "ECON 252",
+      "edition": "Spring 2011",
+      "instructors": [
+        "Robert J. Shiller"
+      ],
+      "aliases": [
+        "金融市场",
+        "耶鲁金融市场",
+        "罗伯特席勒",
+        "Shiller"
+      ],
+      "domain": "finance",
+      "level": "introductory",
+      "prerequisites": [
+        "原课要求初等代数与微积分的基本能力。"
+      ],
+      "audience": "希望理解风险和金融机构的学习者；历史课程用于知识学习。",
+      "pace": {
+        "description": "原课每周两次75分钟；问题集、两次期中和期末。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "ECON 252 (2011) — Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252",
+          "locator": "Course Structure; Requirements; Sessions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "金融目的与风险",
+          "locator": "Lectures 1–3",
+          "source_id": "O1",
+          "focus": "从金融目的进入危机与创新。"
+        },
+        {
+          "id": "u02",
+          "title": "分散投资与保险",
+          "locator": "Lectures 4–6",
+          "source_id": "O1",
+          "focus": "组合、保险，随后Swensen客座课。"
+        },
+        {
+          "id": "u03",
+          "title": "市场效率与债务",
+          "locator": "Lecture 7; Exam 1; Lecture 8",
+          "source_id": "O1",
+          "focus": "在效率与债务之间保留期中。"
+        },
+        {
+          "id": "u04",
+          "title": "股票、房产与行为",
+          "locator": "Lectures 9–11",
+          "source_id": "O1",
+          "focus": "比较资产及心理因素。"
+        },
+        {
+          "id": "u05",
+          "title": "监管与银行",
+          "locator": "Lectures 12–14",
+          "source_id": "O1",
+          "focus": "危机治理、银行与Greenberg客座课。"
+        },
+        {
+          "id": "u06",
+          "title": "远期与期权",
+          "locator": "Lecture 15; Exam 2; Lectures 16–17",
+          "source_id": "O1",
+          "focus": "依次保留期中、Laura Cha客座课和期权。"
+        },
+        {
+          "id": "u07",
+          "title": "货币与中介",
+          "locator": "Lectures 18–21",
+          "source_id": "O1",
+          "focus": "连接政策、投行、资管及交易基础设施。"
+        },
+        {
+          "id": "u08",
+          "title": "公共金融与目的",
+          "locator": "Lectures 22–23; Exam 3",
+          "source_id": "O1",
+          "focus": "联系公共目标并保留期末。"
+        }
+      ]
+    },
+    {
+      "id": "yale-game-theory",
+      "title": "Game Theory",
+      "institution": "Yale University",
+      "code": "ECON 159",
+      "edition": "Fall 2007",
+      "instructors": [
+        "Ben Polak"
+      ],
+      "aliases": [
+        "博弈论",
+        "耶鲁博弈论",
+        "本波拉克"
+      ],
+      "domain": "economics",
+      "level": "undergraduate",
+      "prerequisites": [
+        "原课要求入门微观经济学。",
+        "使用单变量微积分、概率与期望；中级微观为建议。"
+      ],
+      "audience": "能使用基础数学分析策略互动的学习者。",
+      "pace": {
+        "description": "原课每周两次75分钟；问题集、期中与期末。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "ECON 159 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-159",
+          "locator": "Requirements; Course Structure; Sessions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "策略思维与最佳回应",
+          "locator": "Lectures 1–4",
+          "source_id": "O1",
+          "focus": "由换位思考进入迭代删除及最佳回应。"
+        },
+        {
+          "id": "u02",
+          "title": "纳什均衡",
+          "locator": "Lectures 5–8",
+          "source_id": "O1",
+          "focus": "比较不同互动中的均衡。"
+        },
+        {
+          "id": "u03",
+          "title": "混合策略",
+          "locator": "Lectures 9–10",
+          "source_id": "O1",
+          "focus": "理解随机化选择。"
+        },
+        {
+          "id": "u04",
+          "title": "演化稳定性与期中",
+          "locator": "Lectures 11–12; Exam 1",
+          "source_id": "O1",
+          "focus": "检验群体策略并复盘。"
+        },
+        {
+          "id": "u05",
+          "title": "序贯博弈与承诺",
+          "locator": "Lectures 13–15",
+          "source_id": "O1",
+          "focus": "使用逆向归纳评估可信威胁。"
+        },
+        {
+          "id": "u06",
+          "title": "声誉、谈判与信息集",
+          "locator": "Lectures 16–18",
+          "source_id": "O1",
+          "focus": "连接顺序选择和不完全信息。"
+        },
+        {
+          "id": "u07",
+          "title": "子博弈与重复互动",
+          "locator": "Lectures 19–22",
+          "source_id": "O1",
+          "focus": "比较投资、消耗与惩罚机制。"
+        },
+        {
+          "id": "u08",
+          "title": "非对称信息",
+          "locator": "Lectures 23–24; Exam 2",
+          "source_id": "O1",
+          "focus": "研究信号与拍卖；保留期末。"
+        }
+      ]
+    },
+    {
+      "id": "yale-death",
+      "title": "Death",
+      "institution": "Yale University",
+      "code": "PHIL 176",
+      "edition": "Spring 2007",
+      "instructors": [
+        "Shelly Kagan"
+      ],
+      "aliases": [
+        "死亡哲学",
+        "耶鲁死亡课",
+        "死亡",
+        "谢利卡根",
+        "Kagan"
+      ],
+      "domain": "philosophy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "愿意阅读并分析哲学论证的学习者；先修未在页面列明。",
+      "pace": {
+        "description": "原课每周两次50分钟；讨论与三篇五页论文；无期末考试。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "PHIL 176 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/death/phil-176",
+          "locator": "Course Structure; Requirements; Sessions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "死亡问题与人的本性",
+          "locator": "Lectures 1–2",
+          "source_id": "O1",
+          "focus": "区分二元论和物理主义。"
+        },
+        {
+          "id": "u02",
+          "title": "灵魂论证",
+          "locator": "Lectures 3–6",
+          "source_id": "O1",
+          "focus": "依序检验灵魂存在的理由。"
+        },
+        {
+          "id": "u03",
+          "title": "柏拉图与不朽",
+          "locator": "Lectures 7–9",
+          "source_id": "O1",
+          "focus": "评估灵魂不朽论证。"
+        },
+        {
+          "id": "u04",
+          "title": "个人同一性",
+          "locator": "Lectures 10–13",
+          "source_id": "O1",
+          "focus": "比较灵魂、身体与人格理论。"
+        },
+        {
+          "id": "u05",
+          "title": "死亡与相信死亡",
+          "locator": "Lectures 14–16",
+          "source_id": "O1",
+          "focus": "由同一性进入死亡及其坏处。"
+        },
+        {
+          "id": "u06",
+          "title": "剥夺与不朽",
+          "locator": "Lectures 17–19",
+          "source_id": "O1",
+          "focus": "比较剥夺解释和永生。"
+        },
+        {
+          "id": "u07",
+          "title": "生命价值与恐惧",
+          "locator": "Lectures 20–22",
+          "source_id": "O1",
+          "focus": "分析生命价值和死亡恐惧。"
+        },
+        {
+          "id": "u08",
+          "title": "如何生活与伦理论证",
+          "locator": "Lectures 23–26",
+          "source_id": "O1",
+          "focus": "讨论有限生命及自杀的哲学争论；不构成个人行动建议。"
+        }
+      ]
+    },
+    {
+      "id": "yale-listening-music",
+      "title": "Listening to Music",
+      "institution": "Yale University",
+      "code": "MUSI 112",
+      "edition": "Fall 2008",
+      "instructors": [
+        "Craig Wright"
+      ],
+      "aliases": [
+        "聆听音乐",
+        "音乐聆听",
+        "音乐欣赏",
+        "耶鲁音乐课",
+        "克雷格赖特"
+      ],
+      "domain": "music",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望练习主动聆听的音乐初学者。",
+      "pace": {
+        "description": "官方23讲及复习；Lecture1说明教材、听辨练习与测试安排。首页403，原每周工时未重核；不把分组当原课次数。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "MUSI 112 Lecture 1",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-1",
+          "locator": "Lecture 1: Overview; Lecture Chapters; transcript; HTML audio link uses courses/fall08/musi112/",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "MUSI 112 Lecture 2",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-2",
+          "locator": "Lecture 2: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "MUSI 112 Lecture 3",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-3",
+          "locator": "Lecture 3: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "MUSI 112 Lecture 4",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-4",
+          "locator": "Lecture 4: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "MUSI 112 Lecture 5",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-5",
+          "locator": "Lecture 5: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O6",
+          "title": "MUSI 112 Lecture 6",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-6",
+          "locator": "Lecture 6: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O7",
+          "title": "MUSI 112 Lecture 7",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-7",
+          "locator": "Lecture 7: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O8",
+          "title": "MUSI 112 Lecture 8",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-8",
+          "locator": "Lecture 8: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O9",
+          "title": "MUSI 112 Lecture 9",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-9",
+          "locator": "Lecture 9: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O10",
+          "title": "MUSI 112 Lecture 10",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-10",
+          "locator": "Lecture 10: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O11",
+          "title": "MUSI 112 Lecture 11",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-11",
+          "locator": "Lecture 11: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O12",
+          "title": "MUSI 112 Lecture 12",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-12",
+          "locator": "Lecture 12: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O13",
+          "title": "MUSI 112 Lecture 13",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-13",
+          "locator": "Lecture 13: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O14",
+          "title": "MUSI 112 Lecture 14",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-14",
+          "locator": "Lecture 14: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O15",
+          "title": "MUSI 112 Lecture 15",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-15",
+          "locator": "Lecture 15: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O16",
+          "title": "MUSI 112 Lecture 16",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-16",
+          "locator": "Lecture 16: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O17",
+          "title": "MUSI 112 Lecture 17",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-17",
+          "locator": "Lecture 17: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O18",
+          "title": "MUSI 112 Lecture 18",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-18",
+          "locator": "Lecture 18: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O19",
+          "title": "MUSI 112 Lecture 19",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-19",
+          "locator": "Lecture 19: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O20",
+          "title": "MUSI 112 Lecture 20",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-20",
+          "locator": "Lecture 20: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O21",
+          "title": "MUSI 112 Lecture 21",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-21",
+          "locator": "Lecture 21: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O22",
+          "title": "MUSI 112 Lecture 22",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-22",
+          "locator": "Lecture 22: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O23",
+          "title": "MUSI 112 Lecture 23",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-23",
+          "locator": "Lecture 23: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O24",
+          "title": "YaleCourses: 1. Introduction",
+          "url": "https://www.youtube.com/watch?v=5_yOVARO2Oc",
+          "locator": "Official YaleCourses distribution link; fetched page shell omits description",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "聆听入门与乐器",
+          "locator": "Lectures 1–2; sources O1–O2",
+          "source_id": "O1",
+          "focus": "以音高、节奏及乐器进入主动聆听。"
+        },
+        {
+          "id": "u02",
+          "title": "节奏与旋律",
+          "locator": "Lectures 3–6; sources O3–O6",
+          "source_id": "O3",
+          "focus": "由节拍、织体进入音阶与旋律。"
+        },
+        {
+          "id": "u03",
+          "title": "和声与低音",
+          "locator": "Lectures 7–8; sources O7–O8",
+          "source_id": "O7",
+          "focus": "听辨和弦与低音进行。"
+        },
+        {
+          "id": "u04",
+          "title": "奏鸣曲与变奏",
+          "locator": "Lectures 9–11; sources O9–O11",
+          "source_id": "O9",
+          "focus": "分析曲式及变化。"
+        },
+        {
+          "id": "u05",
+          "title": "音乐会与复调",
+          "locator": "Lectures 12–14; sources O12–O14",
+          "source_id": "O12",
+          "focus": "音乐会评论、赋格与固定低音。"
+        },
+        {
+          "id": "u06",
+          "title": "圣咏与巴洛克",
+          "locator": "Lectures 15–16; sources O15–O16",
+          "source_id": "O15",
+          "focus": "从中世纪声乐进入巴赫。"
+        },
+        {
+          "id": "u07",
+          "title": "莫扎特与钢琴",
+          "locator": "Lectures 17–18; sources O17–O18",
+          "source_id": "O17",
+          "focus": "连接歌剧与钢琴发展。"
+        },
+        {
+          "id": "u08",
+          "title": "浪漫歌剧与交响曲",
+          "locator": "Lectures 19–20; sources O19–O20",
+          "source_id": "O19",
+          "focus": "比较声乐及大型管弦乐。"
+        },
+        {
+          "id": "u09",
+          "title": "印象主义、现代与复习",
+          "locator": "Lectures 21–23; sources O21–O23",
+          "source_id": "O21",
+          "focus": "比较风格并练习历史辨识。"
+        }
+      ]
+    },
+    {
+      "id": "mit-python",
+      "title": "Introduction to Computer Science and Programming in Python",
+      "institution": "Massachusetts Institute of Technology",
+      "code": "6.0001",
+      "edition": "Fall 2016",
+      "instructors": [
+        "Ana Bell",
+        "Eric Grimson",
+        "John Guttag"
+      ],
+      "aliases": [
+        "Python入门",
+        "Python编程",
+        "MIT Python",
+        "计算机科学与Python编程导论"
+      ],
+      "domain": "computer-science",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "少量或无编程经验的学习者。",
+      "pace": {
+        "description": "原课半学期，每周两次1小时讲课及一次1小时习题课；六份编程作业、两次测验；原环境Python3.5。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "6.0001 lecture videos",
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/",
+          "locator": "Lectures 1–12; Course Info",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "6.0001 syllabus",
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/syllabus/",
+          "locator": "Course Meeting Times; Course Information; Problem Sets and Quizzes",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "计算与控制流",
+          "locator": "Lectures 1–2",
+          "source_id": "O1",
+          "focus": "理解计算、条件和循环。"
+        },
+        {
+          "id": "u02",
+          "title": "字符串与函数",
+          "locator": "Lectures 3–4",
+          "source_id": "O1",
+          "focus": "连接搜索近似与函数抽象。"
+        },
+        {
+          "id": "u03",
+          "title": "数据容器与递归",
+          "locator": "Lectures 5–6",
+          "source_id": "O1",
+          "focus": "研究可变性、递归和字典。"
+        },
+        {
+          "id": "u04",
+          "title": "测试与异常",
+          "locator": "Lecture 7",
+          "source_id": "O1",
+          "focus": "组织调试、断言及错误处理。"
+        },
+        {
+          "id": "u05",
+          "title": "对象与继承",
+          "locator": "Lectures 8–9",
+          "source_id": "O1",
+          "focus": "使用类表达结构。"
+        },
+        {
+          "id": "u06",
+          "title": "效率与算法",
+          "locator": "Lectures 10–12",
+          "source_id": "O1",
+          "focus": "分析效率并比较搜索和排序。"
+        }
+      ]
+    },
+    {
+      "id": "mit-linear-algebra",
+      "title": "Linear Algebra",
+      "institution": "Massachusetts Institute of Technology",
+      "code": "18.06",
+      "edition": "Spring 2010",
+      "instructors": [
+        "Gilbert Strang"
+      ],
+      "aliases": [
+        "线性代数",
+        "MIT线性代数",
+        "吉尔伯特斯特朗",
+        "Strang"
+      ],
+      "domain": "mathematics",
+      "level": "undergraduate",
+      "prerequisites": [
+        "原课列出的先修为多变量微积分18.02。"
+      ],
+      "audience": "希望理解矩阵运算及其结构的学习者。",
+      "pace": {
+        "description": "原课每周三次1小时讲课及一次1小时习题课；作业、三次课内考试与期末。按calendar的40个SES编号编排，非视频编号。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "18.06 calendar",
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/calendar/",
+          "locator": "SES # 1–40; Course Info",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "18.06 syllabus",
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/syllabus/",
+          "locator": "Meeting Times; Prerequisites; Homework; Exams",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "线性方程与消元",
+          "locator": "Calendar SES 1–5",
+          "source_id": "O1",
+          "focus": "几何、消元、逆与分解。"
+        },
+        {
+          "id": "u02",
+          "title": "子空间与解",
+          "locator": "Calendar SES 6–9",
+          "source_id": "O1",
+          "focus": "用子空间组织方程解。"
+        },
+        {
+          "id": "u03",
+          "title": "基与首轮检查",
+          "locator": "Calendar SES 10–12",
+          "source_id": "O1",
+          "focus": "基、维数与四子空间；保留Exam1。"
+        },
+        {
+          "id": "u04",
+          "title": "网络与正交投影",
+          "locator": "Calendar SES 13–17",
+          "source_id": "O1",
+          "focus": "图网络、最小二乘及QR。"
+        },
+        {
+          "id": "u05",
+          "title": "行列式",
+          "locator": "Calendar SES 18–20",
+          "source_id": "O1",
+          "focus": "计算并解释行列式。"
+        },
+        {
+          "id": "u06",
+          "title": "特征值与复习",
+          "locator": "Calendar SES 21–25",
+          "source_id": "O1",
+          "focus": "对角化、Markov矩阵；复习与Exam2。"
+        },
+        {
+          "id": "u07",
+          "title": "微分方程与正定性",
+          "locator": "Calendar SES 26–29",
+          "source_id": "O1",
+          "focus": "连接动力系统、对称矩阵及工程。"
+        },
+        {
+          "id": "u08",
+          "title": "相似与奇异值分解",
+          "locator": "Calendar SES 30–31",
+          "source_id": "O1",
+          "focus": "比较矩阵结构。"
+        },
+        {
+          "id": "u09",
+          "title": "傅里叶与换基",
+          "locator": "Calendar SES 32–34",
+          "source_id": "O1",
+          "focus": "连接FFT、线性变换与基选择。"
+        },
+        {
+          "id": "u10",
+          "title": "优化与最终检查",
+          "locator": "Calendar SES 35–40",
+          "source_id": "O1",
+          "focus": "线性规划、复习、Exam3、数值计算与期末。"
+        }
+      ]
+    },
+    {
+      "id": "mit-classical-mechanics",
+      "title": "Classical Mechanics",
+      "institution": "Massachusetts Institute of Technology",
+      "code": "8.01SC",
+      "edition": "Fall 2016",
+      "instructors": [
+        "Deepto Chakrabarty",
+        "Peter Dourmashkin",
+        "Michelle Tomasik",
+        "Anna Frebel",
+        "Vladan Vuletic"
+      ],
+      "aliases": [
+        "经典力学",
+        "大学物理",
+        "MIT力学",
+        "牛顿力学"
+      ],
+      "domain": "physics",
+      "level": "introductory",
+      "prerequisites": [
+        "原课无先修；单变量微积分18.01SC为并修。"
+      ],
+      "audience": "准备使用微积分学习力学的初学者。",
+      "pace": {
+        "description": "原课每周两次2小时讲课及一次1小时解题；开放材料按向量复习与12周排列。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "8.01SC course sequence",
+          "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+          "locator": "Review: Vectors; Weeks 1–12; Lessons 0–37; Course Info",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "8.01SC syllabus",
+          "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/syllabus/",
+          "locator": "Course Meeting Times; Prerequisites; Course Overview",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "向量与运动学",
+          "locator": "Review: Vectors, Lesson 0; Week 1, Lessons 1–3",
+          "source_id": "O1",
+          "focus": "描述位置、速度与加速度。"
+        },
+        {
+          "id": "u02",
+          "title": "牛顿定律",
+          "locator": "Week 2, Lessons 4–7; Deep Dive: Friction [DD 1.1]",
+          "source_id": "O1",
+          "focus": "分析力、引力、接触与弹簧。"
+        },
+        {
+          "id": "u03",
+          "title": "圆周与约束运动",
+          "locator": "Weeks 3–4, Lessons 8–14",
+          "source_id": "O1",
+          "focus": "圆周加速度、滑轮、绳与阻力。"
+        },
+        {
+          "id": "u04",
+          "title": "动量与质量流动",
+          "locator": "Weeks 5–6, Lessons 15–19",
+          "source_id": "O1",
+          "focus": "动量、质心、反冲和连续质量转移。"
+        },
+        {
+          "id": "u05",
+          "title": "功与能量",
+          "locator": "Weeks 7–8, Lessons 20–25",
+          "source_id": "O1",
+          "focus": "由功进入势能及守恒。"
+        },
+        {
+          "id": "u06",
+          "title": "碰撞",
+          "locator": "Week 9, Lessons 26–27; DD.2.1–DD.2.7",
+          "source_id": "O1",
+          "focus": "比较碰撞与质心参考系。"
+        },
+        {
+          "id": "u07",
+          "title": "刚体转动",
+          "locator": "Week 10, Lessons 28–31",
+          "source_id": "O1",
+          "focus": "使用惯量、力矩与转动动力学。"
+        },
+        {
+          "id": "u08",
+          "title": "角动量与滚动",
+          "locator": "Weeks 11–12, Lessons 32–37; DD.3.1–DD.3.3",
+          "source_id": "O1",
+          "focus": "角冲量、滚动及陀螺。"
+        }
+      ]
+    },
+    {
+      "id": "stanford-machine-learning",
+      "title": "Machine Learning",
+      "institution": "Stanford University",
+      "code": "CS229",
+      "edition": "Autumn 2018",
+      "instructors": [
+        "Andrew Ng"
+      ],
+      "aliases": [
+        "机器学习",
+        "斯坦福机器学习",
+        "吴恩达",
+        "Andrew Ng",
+        "CS 229"
+      ],
+      "domain": "machine-learning",
+      "level": "advanced-undergraduate",
+      "prerequisites": [
+        "目录学习准备建议：Python编程、概率、线性代数与微积分；不冒充2018招生规定。"
+      ],
+      "audience": "具有数学与编程基础、希望系统研究机器学习的学习者。",
+      "pace": {
+        "description": "原课周一、周三16:30–17:50；A0–A4、讨论课、居家期中与项目里程碑；本目录不恢复受限Piazza内容。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "CS229 Autumn 2018 schedule",
+          "url": "https://cs229.stanford.edu/syllabus-autumn2018.html",
+          "locator": "Lectures 1–20; A0–A4; Midterm; Project",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Stanford CS Autumn 2018–2019 course schedule",
+          "url": "https://legacy.cs.stanford.edu/courses/schedules/2018-2019.autumn.php",
+          "locator": "CS229 row (Ng); used for instructor identity only",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Stanford Online: CS229 Lecture 1 (Autumn 2018)",
+          "url": "https://www.youtube.com/watch?v=jGwO_UgTS7I",
+          "locator": "Title and description identify Andrew Ng and edition",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "学习任务与线性模型",
+          "locator": "Lectures 1–2; A0",
+          "source_id": "O1",
+          "focus": "建立监督学习及回归框架。"
+        },
+        {
+          "id": "u02",
+          "title": "分类与广义线性模型",
+          "locator": "Lectures 3–4; A1",
+          "source_id": "O1",
+          "focus": "按日程共享单元格覆盖加权回归、分类及GLM。"
+        },
+        {
+          "id": "u03",
+          "title": "生成模型与支持向量机",
+          "locator": "Lectures 5–7",
+          "source_id": "O1",
+          "focus": "从生成分类进入核方法。"
+        },
+        {
+          "id": "u04",
+          "title": "模型选择与集成",
+          "locator": "Lectures 8–9; A2",
+          "source_id": "O1",
+          "focus": "研究泛化、正则化与树集成。"
+        },
+        {
+          "id": "u05",
+          "title": "神经网络与项目实践",
+          "locator": "Lectures 10–12; A3",
+          "source_id": "O1",
+          "focus": "网络基础、训练及项目建议。"
+        },
+        {
+          "id": "u06",
+          "title": "聚类与潜变量",
+          "locator": "Lectures 13–14; Midterm November 7",
+          "source_id": "O1",
+          "focus": "混合模型、EM与因子分析；保留期中位置。"
+        },
+        {
+          "id": "u07",
+          "title": "降维与决策过程",
+          "locator": "Lectures 15–16; A4; Project milestone November 16",
+          "source_id": "O1",
+          "focus": "连接PCA、ICA及MDP。"
+        },
+        {
+          "id": "u08",
+          "title": "控制与强化学习",
+          "locator": "Lectures 17–20; Project December 10–13",
+          "source_id": "O1",
+          "focus": "迭代、Q学习、策略搜索与总结；保留项目收尾。"
+        }
+      ]
+    }
+  ]
+}

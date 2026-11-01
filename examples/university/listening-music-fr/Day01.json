@@ -1,0 +1,72 @@
+{
+  "day": 1,
+  "title": "Écouter activement : suivre une couche sonore",
+  "course_units": [
+    "u01"
+  ],
+  "reading_minutes": 7,
+  "practice_minutes": 3,
+  "sections": [
+    {
+      "title": "Un objectif précis pour aujourd'hui",
+      "body": "Nous entrons dans u01 de Listening to Music, le cours MUSI 112 de Yale, automne 2008. Dans son introduction, Craig Wright présente l'écoute comme une activité qui peut devenir plus active grâce à l'attention aux éléments musicaux. [S1] Aujourd'hui, choisissez une couche sonore et décrivez ce qu'elle fait. Sept minutes pour lire et regarder la figure, puis trois pour les questions suffisent.\nNotre exemple est une construction pédagogique originale. Il ne transcrit aucune œuvre et ne reprend pas une démonstration du professeur. Vous pouvez le suivre sans fichier audio ni connaissances de solfège."
+    },
+    {
+      "title": "Impression et observation peuvent coexister",
+      "body": "« Ce passage m'apaise » décrit votre expérience. « Des sons graves reviennent régulièrement pendant qu'une ligne aiguë monte » décrit des relations dans le passage. La seconde phrase ne prouve pas la première et ne la rend pas plus légitime : elles répondent à deux questions différentes. On peut conserver son plaisir tout en apprenant à préciser ce qui attire l'oreille.\nPour commencer, limitez volontairement votre attention. Une fois, suivez les attaques régulières. Une autre fois, suivez la ligne la plus aiguë. La difficulté n'est pas forcément un manque d'oreille ; plusieurs événements simultanés se disputent votre attention. Une consigne étroite rend la comparaison possible."
+    },
+    {
+      "title": "Exemple original : huit repères et trois entrées",
+      "body": "Imaginez huit frappes également espacées : 1, 2, 3, 4, 5, 6, 7, 8. Elles servent de repères temporels dans notre exemple. Au repère 1 commence aussi un son grave tenu jusqu'au repère 4. Au repère 5 commence un autre son grave, tenu jusqu'à la fin. Enfin, une petite ligne aiguë apparaît aux repères 3, 4 et 5 ; ses trois sons vont du plus bas au plus haut.\nPremière écoute imaginaire : comptez seulement les huit frappes. Deuxième passage : oubliez les frappes autant que possible et suivez le grave ; il change au repère 5. Troisième passage : suivez la ligne aiguë ; elle commence après le début et monte. Les mêmes événements permettent donc plusieurs descriptions utiles selon la couche choisie.\nOn ne peut pas en déduire que la musique accélère au repère 3. Davantage d'événements se superposent, mais nos frappes restent également espacées. On ne peut pas non plus identifier un violon à partir de la seule position aiguë d'un son. Nous n'avons décrit ni sa couleur ni sa production. Ces limites sont aussi instructives que les observations positives."
+    },
+    {
+      "title": "Ce que montre la figure",
+      "body": "La carte comporte trois bandes : frappes, grave et ligne aiguë. Les huit colonnes sont des repères successifs. Un trait long dans la bande grave représente un son tenu, tandis que trois points qui montent dans la bande aiguë indiquent l'ordre relatif des hauteurs. Il s'agit d'un dessin conceptuel, pas d'une partition jouable avec des notes exactes.\nLisez d'abord horizontalement une seule bande. Regardez ensuite verticalement le repère 5 : une frappe, un nouveau son grave et le dernier son aigu y coïncident. Cette coïncidence donne un emplacement précis à votre phrase. Elle ne démontre pas une émotion universelle chez les auditeurs.\nLa figure est originale et sans données mesurées. Ses espacements illustrent notre scénario, non une analyse acoustique. Aucun son n'est intégré à la page : la description, et éventuellement votre tapotement, sert de support à ce premier exercice."
+    },
+    {
+      "title": "Trois minutes de pratique légère",
+      "body": "1. Au repère 3, une ligne aiguë entre mais les frappes restent régulièrement espacées. Quelle conclusion est justifiée ? A. Le tempo a nécessairement doublé. B. Une couche s'ajoute sans changement prévu des repères. C. L'instrument est nécessairement un violon.\n2. Complétez oralement : « Le son grave change au repère… » Puis indiquez une chose que le dessin ne permet pas de savoir.\n3. Si vous écoutiez un passage réel deux fois, quelle couche choisiriez-vous pour la seconde écoute ? Une réponse et une raison très brèves suffisent ; aucun compte rendu long n'est attendu."
+    },
+    {
+      "title": "Réponses suggérées et indice",
+      "body": "Pour 1, choisissez B. L'ajout d'une couche et l'accélération sont deux descriptions différentes. Pour 2, le grave change au repère 5. Le dessin ne permet pas de connaître le timbre exact, le nom de l'instrument ou la réaction de tous les auditeurs. Pour 3, plusieurs choix conviennent : suivre le grave après avoir suivi les frappes permet par exemple d'observer une relation nouvelle.\nSi vous avez surtout retenu « cela monte », précisez quelle couche monte et à quel moment. Si vous n'arrivez pas encore à séparer les couches, reprenez seulement les deux premières bandes. Réduire le nombre d'éléments observés peut être une bonne stratégie d'apprentissage."
+    },
+    {
+      "title": "Demain et lecture facultative",
+      "body": "Demain, toujours dans u01, nous préciserons des mots pour parler d'œuvres, de genres et d'instruments. La leçon originale 2 traite notamment de ce vocabulaire. [S2] Aujourd'hui, une observation localisée suffit : vous n'avez pas à reconnaître une symphonie ni à analyser une œuvre entière.\nPour prolonger, ouvrez [S1] et choisissez un passage de la leçon originale pendant une séance distincte. L'idée d'écoute active vient du cadre original ; la carte à huit repères est notre outil d'explication. Cette première journée n'achève ni u01 ni le cours de Yale."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "MUSI 112 — Lecture 1 — Introduction",
+      "url": "https://oyc.yale.edu/music/musi-112/lecture-1",
+      "publisher": "Yale University · Open Yale Courses",
+      "note": "Page originale et transcription consultées ; cadre de l'écoute active. La page générale était inaccessible ; le scénario à huit repères est original au guide.",
+      "checked_at": "2026-11-01",
+      "published_at": "Automne 2008 (édition du cours)",
+      "course_ref": {
+        "course_id": "yale-listening-music",
+        "sha256": "b3c25a6c8ed30c404794b2aaebf048f465ec470e4d60b128ef71d6b51d716afb",
+        "source_id": "O1",
+        "unit_ids": [
+          "u01"
+        ]
+      }
+    },
+    {
+      "id": "S2",
+      "title": "MUSI 112 — Lecture 2 — Introduction to Instruments and Musical Genres",
+      "url": "https://oyc.yale.edu/music/musi-112/lecture-2",
+      "publisher": "Yale University · Open Yale Courses",
+      "note": "Page originale et transcription ; confirme le vocabulaire, les genres et les instruments du début de cours, sans reproduire les exemples musicaux.",
+      "checked_at": "2026-11-01",
+      "published_at": "Automne 2008 (édition du cours)"
+    }
+  ],
+  "figure": {
+    "caption": "Une carte inventée : huit frappes régulières, deux sons graves tenus et trois sons aigus ascendants.",
+    "credit": "Schéma pédagogique original du guide ; aucune partition ou donnée sonore de Yale n'est reproduite.",
+    "path": "assets/teaching.png"
+  }
+}

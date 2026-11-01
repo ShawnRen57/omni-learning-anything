@@ -1,0 +1,72 @@
+{
+  "day": 1,
+  "title": "Las finanzas como coordinación a través del tiempo",
+  "course_units": [
+    "u01"
+  ],
+  "reading_minutes": 7,
+  "practice_minutes": 3,
+  "sections": [
+    {
+      "title": "El objetivo de hoy",
+      "body": "Hoy usamos siete minutos de lectura y tres de preguntas para describir una función sencilla de las finanzas: conectar recursos presentes con actividades y compromisos futuros. Estamos en una subsección de u01 de Financial Markets, Yale, primavera de 2011. La primera clase presenta una perspectiva amplia que incluye asignación de recursos y gestión de riesgos. [S2] Nuestro taller imaginario es una explicación propia, no un ejemplo atribuido a Shiller.\nAl terminar, deberías poder separar « recibió recursos », « prometió un pago » y « consiguió el resultado esperado ». Son tres afirmaciones distintas."
+    },
+    {
+      "title": "Primero, las relaciones",
+      "body": "Imagina un taller ficticio que puede producir mesas, pero necesita materiales antes de entregarlas. Las personas que desean las mesas las recibirían dentro de un mes. El taller dispone de habilidades y tiempo, pero hoy carece de materiales suficientes. Tenemos una diferencia entre el momento de la necesidad y el momento del posible ingreso.\nUna relación financiera puede ayudar a cruzar esa diferencia. Eso no fabrica madera ni asegura compradores: organiza derechos, recursos y obligaciones entre participantes. Para entenderla conviene preguntar quién entrega qué, cuándo lo entrega y a cambio de qué. La palabra « financiar » por sí sola todavía deja abiertas esas preguntas."
+    },
+    {
+      "title": "Ejemplo original: materiales hoy, compromiso después",
+      "body": "Supón, solo para aprender, que los materiales cuestan 100 unidades y que el taller recibe esas 100 de un prestamista. Se acuerda devolver 105 al cabo de un mes. Los números no representan condiciones reales ni una recomendación. Al inicio, el prestamista entrega recursos y el taller adquiere una obligación; el cliente todavía no tiene la mesa.\nConsidera dos resultados inventados. En el primero, los clientes pagan 140 unidades y el taller puede atender el pago acordado de 105. La diferencia de 35 no puede llamarse automáticamente beneficio: hemos omitido trabajo, transporte y otros costes. En el segundo, las ventas ingresan 80. La promesa sigue siendo 105 según nuestro supuesto, pero los ingresos por sí solos no alcanzan. La forma de resolver ese incumplimiento no está especificada en el ejemplo.\nAsí, el mismo acuerdo puede facilitar la producción y dejar incertidumbre sobre el pago. No hace falta calcular una probabilidad para reconocer esa incertidumbre. Tampoco podemos concluir, a partir de dos escenarios escogidos, cuál será el resultado más frecuente. Las posibilidades ilustran una pregunta, no estiman un mercado."
+    },
+    {
+      "title": "Cómo leer el diagrama",
+      "body": "El dibujo distingue dos momentos. En « hoy », una flecha de 100 va del prestamista al taller. En « dentro de un mes », otra flecha indica el pago prometido de 105 en sentido inverso. Una rama aparte muestra ingresos posibles de 140 u 80 desde los clientes. La promesa debe llevar una etiqueta distinta del resultado posible para que no parezcan equivalentes.\nEl diagrama es conceptual y original. No muestra probabilidades, garantías ni un contrato jurídicamente completo. En particular, que una flecha aparezca dibujada no demuestra que el pago se realice. Lee la etiqueta antes de interpretar la línea.\nSi quisieras hacer el modelo más realista, tendrías que agregar costes, condiciones de pago y otras relaciones. Hoy no necesitamos resolverlas: señalar su ausencia es una parte válida de comprender el modelo. Una explicación pequeña resulta más útil cuando reconoce exactamente lo que deja fuera."
+    },
+    {
+      "title": "Tres minutos de preguntas",
+      "body": "1. ¿Qué afirmación está justificada por el ejemplo? A. Conseguir financiación elimina el riesgo de ventas. B. El acuerdo conecta recursos presentes con una obligación futura. C. Un ingreso de 140 garantiza un beneficio de 35.\n2. Si solo ingresan 80 y el pago prometido es 105, ¿qué diferencia queda sin cubrir por esos ingresos? Una operación mental basta.\n3. Nombra un dato omitido que impediría evaluar el taller como negocio real. No hace falta buscar precios ni escribir un informe. Puedes responder con dos o tres palabras y explicar qué parte del razonamiento cambiaría."
+    },
+    {
+      "title": "Respuestas sugeridas y un matiz",
+      "body": "La primera respuesta es B. El acuerdo modifica cuándo están disponibles los recursos, pero no garantiza las ventas. En la segunda, faltan 25 unidades respecto del pago prometido. Esto no demuestra por sí solo qué pérdida final sufrirá cada parte: pueden existir otros recursos o condiciones que el ejemplo no incluye. Para la tercera sirven, entre otros, el coste del trabajo o las condiciones de incumplimiento.\nSi elegiste C, detectaste una diferencia aritmética correcta, pero la nombraste demasiado pronto. Ingreso menos un único pago no equivale necesariamente a beneficio. Aprender a limitar la conclusión a los datos disponibles es una habilidad central del análisis."
+    },
+    {
+      "title": "Mañana y fuentes",
+      "body": "Mañana seguimos en u01 con riesgo, crisis e innovación. Conserva la pregunta « ¿qué cambia este acuerdo y qué permanece incierto? ». Puedes contestarla usando el mismo taller sin añadir cálculos complejos.\n[S1] identifica la edición y el programa. [S2] sostiene el encuadre amplio de la primera clase; no documenta las cifras de nuestro ejemplo. Consultar una clase completa es una ampliación fuera de estos diez minutos. Hoy has trabajado una distinción inicial, no completado las tres clases de u01 ni el curso de Yale."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Financial Markets (2011)",
+      "url": "https://oyc.yale.edu/economics/econ-252",
+      "publisher": "Yale University · Open Yale Courses",
+      "note": "Página original del curso: edición de primavera de 2011, programa y evaluaciones. La dirección econ-252-11 del índice no respondió; esta es la página verificada.",
+      "checked_at": "2026-11-01",
+      "published_at": "Primavera de 2011",
+      "course_ref": {
+        "course_id": "yale-financial-markets",
+        "sha256": "0f538e342b91b052a7ba034a9a61e9e933b517993446dd688fafbb7ac96bbada",
+        "source_id": "O1",
+        "unit_ids": [
+          "u01"
+        ]
+      }
+    },
+    {
+      "id": "S2",
+      "title": "ECON 252 (2011) — Lecture 1 — Introduction and What this Course Will Do for You and Your Purposes",
+      "url": "https://oyc.yale.edu/economics/econ-252-11/lecture-1",
+      "publisher": "Yale University · Open Yale Courses",
+      "note": "Página y transcripción originales; encuadre de recursos, tiempo y riesgo. El taller y todas sus cifras son ejemplos propios de la guía.",
+      "checked_at": "2026-11-01",
+      "published_at": "Primavera de 2011"
+    }
+  ],
+  "figure": {
+    "caption": "Ejemplo inventado: 100 unidades hoy, una promesa de 105 después e ingresos que pueden ser distintos.",
+    "credit": "Diagrama conceptual original de esta guía; no es una imagen de Yale ni contiene datos de mercado.",
+    "path": "assets/teaching.png"
+  }
+}

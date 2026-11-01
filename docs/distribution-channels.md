@@ -1,5 +1,7 @@
 # Distribution channels
 
+The latest GitHub release is [v3.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v3.0.0). The records below describe the separately published **2.6.0** registry artifacts; they do not imply the registries have already received 3.0.0. Repository-based skills.sh installs follow the repository source. Verify the version offered by the selected channel.
+
 Checked on 2026-11-01 for Skill **2.6.0**. The GitHub release remains the source of truth: [v2.6.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.6.0), source commit `319415748fa4b02f1f85f5d0f89ccda59c239df6`.
 
 | Channel | Verified status | Entry point |
@@ -34,7 +36,9 @@ Or download the ZIP from the [public detail page](https://skillhub.cn/skills/use
 
 The bundled `installation inspect` command is stricter than this registry's packaging: it flags registry-added `_meta.json` and renamed `LICENSE.txt`, then reports `Missing LICENSE`. This is an observed compatibility limitation, not a missing Python module or permission failure. Do not delete registry metadata, discard a license, adopt the registry install as a managed GitHub ZIP, or claim its managed-ZIP integrity is verified.
 
-For this acceptance, all 64 actual downloaded file contents were independently compared with the trusted release, accounting only for the documented license filename change. A separate temporary diagnostic copy, with the license filename normalized and registry metadata omitted, passed the bundled completeness inspection at 2.6.0; the actual registry installation was left unchanged. Native host discovery remains a separate check. Use SkillHub's original updater for this installation. A future maintenance release should teach the read-only inspector to recognize registry packaging while keeping ZIP adoption/update validation strict.
+For this acceptance, all 64 actual downloaded file contents were independently compared with the trusted release, accounting only for the documented license filename change. A separate temporary diagnostic copy, with the license filename normalized and registry metadata omitted, passed the bundled completeness inspection at 2.6.0; the actual registry installation was left unchanged. Native host discovery remains a separate check. Use SkillHub's original updater for this installation.
+
+**Fixed in the v3.0.0 checker:** read-only unmanaged inspection recognizes this bounded public metadata shape, a matching Skill version and the license filename alias. Running the new checker against the unchanged actual SkillHub 2.6.0 installation reports completeness while retaining `integrity_verified: false`, native discovery unknown and update through the original manager. The older 2.6.0 checker's warning remains an historical limitation of that artifact. ZIP adoption and managed updates continue to reject registry extras; no installed file is deleted or rewritten by inspection.
 
 ## Package provenance
 

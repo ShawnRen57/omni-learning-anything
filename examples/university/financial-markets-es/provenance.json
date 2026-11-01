@@ -1,0 +1,13 @@
+{
+  "release": "3.0.0",
+  "course_id": "yale-financial-markets",
+  "language": "es",
+  "checked_at": "2026-11-01",
+  "sample": "Independent six-day partial learning guide; only Day01 exported.",
+  "approval": "Simulated only for explicitly requested public examples; no real learner approval or job.",
+  "figure": "Original code-drawn conceptual teaching diagram; no measured data or original university slide.",
+  "figure_concept": "Spanish two-date conceptual cashflow: Hoy lender Prestamista gives100 to Taller; Dentro de un mes Taller promises105 back labelled Pago prometido. Separate Clientes arrow possible ingresos140 or80, explicit Posibilidades, no probabilities. Original minimalist time and resource diagram.",
+  "builder": "tools/build_university_samples.py",
+  "source_ledger": "docs/v300-sample-sources.md",
+  "live_schedule": false
+}

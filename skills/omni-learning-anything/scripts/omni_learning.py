@@ -45,9 +45,14 @@ def main():
     configure_study(sub)
     from omni_installation_cli import configure as configure_installation
     configure_installation(sub)
+    from omni_courses_cli import configure as configure_courses
+    configure_courses(sub)
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
     try:
-        if args.command=='installation':
+        if args.command=='courses':
+            from omni_courses_cli import execute as execute_courses
+            result=execute_courses(args)
+        elif args.command=='installation':
             from omni_installation_cli import execute as execute_installation
             result=execute_installation(args)
         elif args.command=='setup-check':

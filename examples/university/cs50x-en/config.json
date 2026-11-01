@@ -1,0 +1,114 @@
+{
+  "timezone": "Asia/Shanghai",
+  "language": "en",
+  "daily_minutes": 10,
+  "sample_mode": true,
+  "course_pathway": {
+    "schema": 1,
+    "course": {
+      "id": "harvard-cs50x",
+      "title": "CS50’s Introduction to Computer Science",
+      "institution": "Harvard University",
+      "code": "CS50x",
+      "edition": "2026 (year URL redirects to current syllabus)",
+      "instructors": [
+        "David J. Malan"
+      ],
+      "aliases": [
+        "CS50",
+        "CS50x",
+        "计算机科学导论",
+        "哈佛编程课",
+        "计算机入门"
+      ],
+      "domain": "computer-science",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "编程初学者及希望建立计算思维的学习者。",
+      "pace": {
+        "description": "原开放课允许自定进度；十份问题集与最终项目；Week0–10及AI补充。当前页面可更新。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "CS50x 2026 syllabus",
+          "url": "https://cs50.harvard.edu/x/2026/syllabus/",
+          "locator": "Syllabus; navigation Weeks 0–10; Artificial Intelligence; Expectations",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Scratch与计算思维",
+          "locator": "Week 0",
+          "source_id": "O1",
+          "focus": "以可视化编程进入问题求解。"
+        },
+        {
+          "id": "u02",
+          "title": "C与数组",
+          "locator": "Weeks 1–2",
+          "source_id": "O1",
+          "focus": "学习C及数组表示。"
+        },
+        {
+          "id": "u03",
+          "title": "算法与内存",
+          "locator": "Weeks 3–4",
+          "source_id": "O1",
+          "focus": "连接算法效率与内存管理。"
+        },
+        {
+          "id": "u04",
+          "title": "数据结构",
+          "locator": "Week 5",
+          "source_id": "O1",
+          "focus": "组织数据并比较结构。"
+        },
+        {
+          "id": "u05",
+          "title": "Python",
+          "locator": "Week 6",
+          "source_id": "O1",
+          "focus": "迁移到Python表达。"
+        },
+        {
+          "id": "u06",
+          "title": "SQL与人工智能补充",
+          "locator": "Week 7; Artificial Intelligence (supplement before Week 8)",
+          "source_id": "O1",
+          "focus": "处理关系数据，再读AI补充。"
+        },
+        {
+          "id": "u07",
+          "title": "网页基础",
+          "locator": "Week 8",
+          "source_id": "O1",
+          "focus": "结合HTML、CSS与JavaScript。"
+        },
+        {
+          "id": "u08",
+          "title": "Flask与最终项目",
+          "locator": "Weeks 9–10; Final Project",
+          "source_id": "O1",
+          "focus": "构建网络应用并完成自选软件。"
+        }
+      ]
+    },
+    "sha256": "1bf10b275d9f5833e49b738120158b8faff2a324a495d62770feff98f1598f2e",
+    "unit_ids": [
+      "u01",
+      "u02",
+      "u03"
+    ],
+    "pace": "adapted",
+    "practice": "light"
+  },
+  "delivery": {
+    "platform": "html",
+    "mode": "local"
+  }
+}

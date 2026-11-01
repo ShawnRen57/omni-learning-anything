@@ -1,0 +1,13 @@
+{
+  "release": "3.0.0",
+  "course_id": "mit-linear-algebra",
+  "language": "ja",
+  "checked_at": "2026-11-01",
+  "sample": "Independent six-day partial learning guide; only Day01 exported.",
+  "approval": "Simulated only for explicitly requested public examples; no real learner approval or job.",
+  "figure": "Original code-drawn conceptual teaching diagram; no measured data or original university slide.",
+  "figure_concept": "Two distinct mathematically accurate panels. Left xy axes lines x+y=3 and x+2y=4 intersection (2,1). Right vector component plane: arrow origin to (2,2) labelled 2(1,1), arrow (2,2) to (3,4) labelled (1,2), resulting arrow origin to (3,4). Japanese panel labels 行の見方 and 列の見方. Clear tick marks and no decorative data.",
+  "builder": "tools/build_university_samples.py",
+  "source_ledger": "docs/v300-sample-sources.md",
+  "live_schedule": false
+}

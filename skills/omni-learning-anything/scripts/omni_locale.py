@@ -37,7 +37,7 @@ def subtitle(data,plan,config,date,key):
 
 def source_labels(config):
     labels=dict(language(config.get('language','zh')))
-    if config.get('materials'):
+    if config.get('materials') or config.get('course_pathway'):
         labels['further']={'en':'Sources and original locations','zh':'资料来源与原文位置','ja':'資料と原文の位置','ko':'자료 출처와 원문 위치','es':'Fuentes y ubicaciones originales','fr':'Sources et passages originaux','de':'Quellen und Originalstellen','pt':'Fontes e trechos originais','ru':'Источники и исходные фрагменты','ar':'المصادر ومواضع النص الأصلي'}[labels['code']]
         labels['optional']=''
     return labels

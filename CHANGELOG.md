@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.0.0 — 2026-11-02
+
+- Start from 12 source-backed university course pathways across Harvard, Yale, MIT and Stanford. Match aliases conservatively, keep the source edition and original-session locators, and offer varied starting points when first-use goals are undecided.
+- Bind an immutable course pathway snapshot and selected scope to the approved course; validate day order and original-source references without retargeting existing courses when the catalog changes.
+- Show localized original-course scope and pacing in PDF, HTML, DOCX and Markdown. Personal-time guides and editorial session groups do not imply original workload, official teaching material, completion credit or university endorsement.
+- Keep personal materials, ten course languages, official document connections and learner-started light checks/review. No new reminder jobs or autonomous welcome chats.
+- Rebuild all ten READMEs and add six multilingual plan/Day01 pairs in PDF and offline HTML, with actual page renders assembled into the top gallery.
+- Recognize bounded registry metadata and license filename aliases during read-only native-install inspection; keep managed ZIP adoption/update boundaries strict.
+
 ## v2.6.0 — 2026-11-01
 
 - Install through chat, the community skills CLI, native Claude Code/Codex tooling or a complete release ZIP; keep instructions and versioned plugin metadata together.

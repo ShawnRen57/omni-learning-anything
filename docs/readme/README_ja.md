@@ -1,3 +1,5 @@
+<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="6言語の大学講義学習サンプル" width="100%"></a>
+
 <div align="center">
 
 <img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,114 +17,145 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill ZIP をダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
+**[v3.0.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
 
-[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Tencent SkillHub](https://skillhub.cn/skills/user_4c4c4339/omni-learning-anything) · [インストールの注意点](../distribution-channels.md)
+[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [導入経路](../../docs/distribution-channels.md)
 
 </div>
 
-**「学びたい」を、毎日続けられる学習コースに。**
+**大学の名講義から選ぶことも、自分の本や論文から始めることも。自分のペースで学び、短い確認問題・フィードバック・復習を通じて理解を深め、ローカルファイルやクラウド文書に保存できます。**
 
-目標、経験、使える時間を Agent に伝えると、Omni が学習計画を作り、図解、出典、練習、自己確認を含む毎日の教材で学習を支えます。
+「学びたい」を、続けられる学習計画へ。公開資料に基づく12の大学講義の学習パス、個人の目標、手元の教材から始められます。授業を始める前に計画を確認します。
 
-## バージョン案内
+**「ハーバードのポジティブ心理学を学びたい」** の一言から始められます。Agent は元の授業を特定し、すでに伝えた情報を使い、計画に必要な点だけを確認します。
 
-| バージョン | できること |
-| --- | --- |
-| **v1** | 自分専用の PDF コース。計画を確認してから、図解、練習、参考資料付きの教材を受け取れます。 |
-| **v2** | ローカルファイル、Notion、Obsidian、Feishu、DingTalk、Tencent Docs から保存先を選べます。Agent が接続を案内し、選んだ場所を再利用します。 |
-| **v2.2.0** | オフラインで読める単一 HTML ファイル、10 言語のコース、DingTalk と Tencent Docs の公式認証案内を追加しました。 |
-| **v2.2.1** | 漠然とした関心から始められます。エージェントが方向性と前提知識を整理し、体系的なコースを提案して利用環境を確認します。 |
-| **v2.3.0** | 学習後、好きな時に短い確認問題を開始。選択や短い回答で根拠のあるフィードバックを受け、ヒント・スキップ・再開も可能。確認テストの通知や予約タスクは作成しません。 |
-| **v2.4.0** | 自分の書籍・論文・講座資料から学べます。ページや章を指定し、説明と確認問題の出典をたどり、外部情報を補うか選べます。 |
-| **v2.5.0** | 学習を再開すると、毎日の時間内で少量の復習ができます。回答に基づく振り返りや判断の修正、承認後の今後の授業調整、Ankiカードの書き出しに対応。 |
-| **v2.6.0** | チャット、1つのコマンド、またはエージェント標準の方法で簡単にインストール。必要な環境だけを確認し、コースと接続を保って更新できます。 |
+## v3.0.0 の新機能
 
-「経済学を少し学びたい」だけでも始められます。学習の方向と順序を提案し、仮定を明示して、コースを左右する点だけ質問します。目標が明確なら、そのまま計画に進みます。
+- **12の大学講義の学習パス：** ハーバード、イェール、MIT、スタンフォードの公開資料を起点に、学習内容を選べます。
+- **無理なく続くペース：** 元の単元順と資料との対応を保ち、使える時間に合わせて学習を分割します。
+- **実際の多言語サンプル：** 6言語・6分野の計画と初日の学習ガイドを、PDFとHTMLで確認できます。
+- **最初の一歩を案内：** インストール後や初回利用時、テーマが未定ならホストのエージェントが現在のチャットでコースを案内できます。スキル自体は新しいチャットを開けません。
 
-## 自分に合った学び方
+<a id="university-courses"></a>
+## 内蔵の大学講義を選ぶ
 
-- 旅行、仕事、面接、趣味など、目的に合わせて学びます。
-- 1 日の学習時間を決め、説明、図、練習と回答のヒントを読み進めます。
-- 文中の引用と、各教材に最低 5 件ある説明付きの参考リンクから、根拠を確認できます。
-- 最初に計画を承認し、中断したら未配信の最初の授業から再開できます。
+**「内蔵コースを見せて」**と伝えてください。講義、学習言語、使える時間を選ぶと、資料と対応する計画が提案されます。公開講義の資料に基づく独立した学習パスであり、講義の全内容は同梱していません。大学の公認や修了証を意味するものではありません。
 
-## 学習言語
+| 大学 | 講義と原題 | 参照版 |
+| --- | --- | --- |
+| Harvard | [ポジティブ心理学 / Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) | PSY 1504 · 2006年春学期 · Tal Ben-Shahar |
+| Harvard | [コンピュータ科学入門 / CS50x: Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) | CS50x · 2026 · David Malan |
+| Harvard | [正義 / Justice](https://sandel.scholars.harvard.edu/justice) | 公開講義シリーズ・全24回 · Michael Sandel |
+| Yale | [心理学入門 / Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) | PSYC 110 · 2007年春学期 · Paul Bloom |
+| Yale | [金融市場 / Financial Markets](https://oyc.yale.edu/economics/econ-252) | ECON 252 · 2011年春学期 · Robert Shiller |
+| Yale | [ゲーム理論 / Game Theory](https://oyc.yale.edu/economics/econ-159) | ECON 159 · 2007年秋学期 · Ben Polak |
+| Yale | [死 / Death](https://oyc.yale.edu/death/phil-176) | PHIL 176 · 2007年春学期 · Shelly Kagan |
+| Yale | [音楽鑑賞 / Listening to Music](https://oyc.yale.edu/music/musi-112) | MUSI 112 · 2008年秋学期 · Craig Wright |
+| MIT | [コンピュータ科学とPythonプログラミング入門 / Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) | 6.0001 · 2016年秋学期 |
+| MIT | [線形代数 / Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | 18.06 · 2010年春学期 · Gilbert Strang |
+| MIT | [古典力学 / Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | 8.01SC · 2016年秋学期 |
+| Stanford | [機械学習 / Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) | CS229 · 2018年秋学期 |
+
+1日10分で進めるのは小さな学習単位です。元の講義1回分や全課程が10分で終わるわけではありません。元の学習量を明示し、長い読書・演習・プロジェクトには別途時間を見込みます。資料の内容や公開状況は変わることがあります。
+
+## 自分の教材で学ぶ
+
+PDF、TXT、Markdown、HTML、DOCX、EPUB、PPTX、SRT、VTTに対応。章・ページ・タイムスタンプを指定し、外部資料の補足を許可するかも選べます。説明や確認問題は元の箇所と対応づけます。旧形式のDOC・RTFは信頼できるツールで先に変換してください。
+
+「経済学を少し知りたい」のような漠然とした希望からも始められます。エージェントは方向性と前提を示し、計画に関わることだけを尋ねます。具体的な目標があればそのまま計画へ進みます。
+
+<a id="choose-your-learning-language"></a>
+## 学習言語を選ぶ
 
 **English · 简体中文 · 日本語 · 한국어 · Español · Français · Deutsch · Português · Русский · العربية**
 
-計画も毎日の教材も、上記の言語で作成できます。教材の言語は、テーマ、出典、README の言語とは別に選べます。アラビア語は右から左への組版に対応します。
+計画とレッスンは上記10言語に対応します。資料やこのページの言語とは別に選べます。アラビア語文書は右から左のレイアウトです。
 
-## 保存先を選ぶ
+## コースの保存先を選ぶ
 
-| 保存先 | Agent に伝える情報 |
+| 保存先 | 使い方 |
 | --- | --- |
-| PDF · HTML · DOCX · Markdown | コース用フォルダーと形式。HTML は画像を内蔵した単一ファイルで、外部の参考リンク以外はオフラインで読めます。 |
-| Notion | 親ページのリンクと使用するワークスペース。 |
-| Obsidian | 既存のローカル Vault とコースのサブフォルダー。API キーは不要です。 |
-| Feishu | コース用フォルダーのリンク。必要に応じて公式アプリの設定とユーザー認証を行います。 |
-| DingTalk | 文書フォルダーのリンクと組織。管理者による CLI アクセスの有効化が必要な場合があります。 |
-| Tencent Docs | ホームのルート、または個人フォルダーのリンク。公式ページでログインして権限を確認します。 |
+| PDF · HTML · DOCX · Markdown | フォルダとPDF・HTML・DOCX・Markdownを指定。HTMLは挿絵を1つのオフラインファイルに収めます。外部リンクには通信が必要です。 |
+| Notion | 公式 `ntn` CLIで親ページに接続。 |
+| Obsidian | 既存のローカルVaultと保存フォルダを指定。Obsidian APIは使いません。 |
+| Feishu / 飞书 | 公式 `lark` CLIとユーザー認証で文書フォルダに接続。 |
+| DingTalk / 钉钉 | 公式 `dws` CLIでフォルダに接続。組織の承認が必要な場合があります。 |
+| Tencent Docs / 腾讯文档 | ルートまたはフォルダを選び、公式OAuth/MCP認証を行います。 |
 
-Agent は既存の認証を確認し、不足情報だけを尋ね、設定手順を案内します。ID の調査や設定ファイルの手書きは不要です。パスワードや Token をチャットに貼り付けないでください。組織の承認には追加の手順が必要な場合があります。
+保存先を伝えると、既存の権限を確認し、必要な設定を案内して、名前を付けた接続を再利用します。パスワードやトークンをチャットに貼らないでください。
 
-## 自分に合うインストール方法
+<a id="quick-start"></a>
+## インストールして始める
 
-最新リリースをインストールし、既存のコースと接続を保持して、このクライアントで検出・利用できるか確認するようエージェントに依頼してください。
-
-Node.js があれば、次のコマンドでエージェントを選びます。プロジェクト限定なら `-g` を省略します。
+エージェントに最新版のインストールと、このクライアントからスキルを使えるかの確認を依頼します。更新時は既存のコースと接続を保持します。Node.jsがあれば次を実行します。
 
 ```sh
 npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
 ```
 
-Claude Code の場合：
+Claude Codeではプラグインインストーラーを使えます。
 
 ```text
 /plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
 ```
 
-Node.js がなくても、上の Skill ZIP をクライアントにアップロードするか、エージェントにインストールを依頼できます。 [インストール・初回利用・安全な更新](../../skills/omni-learning-anything/references/install.md)
+Node.jsがなくても、上のZIPをクライアントにアップロードするか、エージェントに導入を依頼できます。`skills.sh` は公開中、SkillHubの掲載版は現在v2.6.0です。各経路のバージョンは配布ガイドで確認してください。
 
-## チャットから始める
-
-Agent に次のように依頼します。
+## 最初のコースを試す
 
 ```text
-https://github.com/ShawnRen57/omni-learning-anything の最新 Release から Skill ZIP をインストールしてください。
-フォルダー全体を保持し、スキルを利用できることを確認してください。
+内蔵コースを見せて。MIT 線形代数 18.06、2010年春を使いたいです。
+初心者向けに、日本語で1日20分の計画を作ってください。
+元の単元順と学習量を明示してください。
+オフラインHTMLで保存し、まず計画を見せてください。
 ```
 
-```text
-omni-learning-anything で旅行のための建築史を学びたいです。
-初心者向けに 30 日、1 日 15 分、日本語で計画してください。
-教材はコース用フォルダーにオフライン HTML で保存してください。まず計画を見せてください。
-```
+「このEPUBの最初の2章を1回15分で学びたい」「イェールの金融市場2011年版で金融機関を理解したい」からも始められます。
 
-計画を確認して承認します。スケジュール対応の Agent では実行時刻とタイムゾーンも決められます。それ以外は準備ができたときに続きを依頼します。指定時刻に生成を開始し、調査と確認後に配信します。
+計画を承認したら最初のレッスンを依頼します。再開時は「最も早い未配信のレッスンから続けて」と伝えます。必要なら一時停止できます。予約実行はホストが対応し、時刻とタイムゾーンを合意した場合のみ利用できます。指定時刻に生成が始まり、調査・確認後に届きます。
 
-```text
-未配信の最初の授業から再開してください。
-このコースとスケジュールを一時停止してください。
-以前のコースを残して、新しい目標の計画を提案してください。
-```
+## 確認問題・フィードバック・復習
 
-## コースの実例
+理解を確かめたいときに、カードまたはテキストで1〜3問を依頼できます。資料に基づくフィードバックやヒントが返り、希望すれば長いテストも可能です。学習記録は裏側で更新し、読み進める流れを妨げません。
 
-科学技術、経済学、音楽、Agent 製品設計、建築史、明代史の計画と毎日の PDF をご覧ください。アーカイブには当初の出典確認日が残っています。
+「今日は何を復習すればいい？」で、既存の時間枠に収まる短い復習を提案します。「今週の回答から何が分かる？」で根拠付きの振り返りも可能です。判断の修正、項目の除外、新しいレッスンの優先を選べます。自動の追加テストやタイマーは作りません。
 
-| Technology | Economics | Music |
-| :---: | :---: | :---: |
-| [![Technology](../../docs/screenshots/technology.png)](../../examples/technology/) | [![Economics](../../docs/screenshots/economics.png)](../../examples/economics/) | [![Music](../../docs/screenshots/music.png)](../../examples/music/) |
+今後のレッスン変更は承認後に新しい版として開始します。元の計画と履歴は残ります。Anki用CSVの一方向エクスポートも任意で利用でき、自動同期は行いません。
 
-| Agent products | Architecture | Ming history |
-| :---: | :---: | :---: |
-| [![Agent products](../../docs/screenshots/agent-product.png)](../../examples/agent-product/) | [![Architecture](../../docs/screenshots/architecture.png)](../../examples/architecture/) | [![Ming history](../../docs/screenshots/ming-history.png)](../../examples/ming-history/) |
+<a id="examples"></a>
+## 6言語の実際のサンプル
 
-## インストールとガイド
+上の画像から、6つの実際のサンプル集を開けます。各セットに部分的な6日間の計画と、単独でも読めるDay 01の学習ガイドをPDF・HTMLで収録しています。大学の全課程や公式教材ではありません。
 
-[Agent へのインストール](../../skills/omni-learning-anything/references/install.md) · [形式とフォントの設定](../../skills/omni-learning-anything/references/setup.md) · [文書の接続](../../skills/omni-learning-anything/references/onboarding.md) · [リリース検証](../../docs/release-validation-v2.6.0.md)
+| 言語 | サンプルのテーマ |
+| --- | --- |
+| 中国語 · 简体中文 | ハーバード ポジティブ心理学 |
+| 英語 · English | ハーバード CS50 |
+| 日本語 | MIT 線形代数 |
+| フランス語 · Français | イェール 音楽鑑賞 |
+| スペイン語 · Español | イェール 金融市場 |
+| アラビア語 · العربية | イェール 死 |
 
-これは Agent の調査・文書・スケジュール機能を使う Agent Skill です。XeLaTeX が必要なのは PDF のみです。クラウド文書は公式 API/CLI を使用し、Obsidian はローカル Vault に書き込みます。端末間の同期と無人実行はホストとアカウントの条件に依存します。
+[大学講義カタログとサンプルを開く](../../examples/university/README.md)
 
-[MIT](../../LICENSE) · [Changelog](../../CHANGELOG.md)
+以前のPDFサンプルも引き続き閲覧できます。
+
+[テクノロジー](../../examples/technology/) · [経済学](../../examples/economics/) · [音楽](../../examples/music/) · [エージェント製品](../../examples/agent-product/) · [建築](../../examples/architecture/) · [明朝史](../../examples/ming-history/)
+
+<a id="versions"></a>
+## バージョンガイド
+
+| 版 | 学習へのメリット |
+| --- | --- |
+| **v3.0.0** | 大学講義のパスを選び、参照版と多言語文書の実例を確認。 |
+| **v2.3–v2.6** | 短い確認問題、手元の教材、必要な復習、簡単な導入と更新。 |
+| **v2** | 10言語・4形式と、接続した文書サービスへの保存。 |
+| **v1** | 個人の計画を承認し、挿絵・練習・参考資料付きPDFで学習。 |
+
+## ガイドと動作条件
+
+[導入と更新](../../skills/omni-learning-anything/references/install.md) · [形式とフォント](../../skills/omni-learning-anything/references/setup.md) · [文書サービスとの接続](../../skills/omni-learning-anything/references/onboarding.md) · [配布状況](../../docs/distribution-channels.md) · [v3.0.0 検証記録](../../docs/release-validation-v3.0.0.md)
+
+ホストの調査・文書作成・予約機能を使うAgent Skillです。PDFのみXeLaTeXが必要です。クラウドへのアクセス、端末間同期、無人配信はホスト・アカウント・権限に依存します。現在のクライアントを確認し、全環境での動作を前提にはしません。
+
+[MIT](../../LICENSE) · [Changelog](../../CHANGELOG.md) · [Attribution](../../ATTRIBUTION.md)

@@ -1,0 +1,305 @@
+{
+  "timezone": "Asia/Shanghai",
+  "language": "fr",
+  "daily_minutes": 10,
+  "sample_mode": true,
+  "course_pathway": {
+    "schema": 1,
+    "course": {
+      "id": "yale-listening-music",
+      "title": "Listening to Music",
+      "institution": "Yale University",
+      "code": "MUSI 112",
+      "edition": "Fall 2008",
+      "instructors": [
+        "Craig Wright"
+      ],
+      "aliases": [
+        "聆听音乐",
+        "音乐聆听",
+        "音乐欣赏",
+        "耶鲁音乐课",
+        "克雷格赖特"
+      ],
+      "domain": "music",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望练习主动聆听的音乐初学者。",
+      "pace": {
+        "description": "官方23讲及复习；Lecture1说明教材、听辨练习与测试安排。首页403，原每周工时未重核；不把分组当原课次数。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "MUSI 112 Lecture 1",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-1",
+          "locator": "Lecture 1: Overview; Lecture Chapters; transcript; HTML audio link uses courses/fall08/musi112/",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "MUSI 112 Lecture 2",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-2",
+          "locator": "Lecture 2: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "MUSI 112 Lecture 3",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-3",
+          "locator": "Lecture 3: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "MUSI 112 Lecture 4",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-4",
+          "locator": "Lecture 4: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "MUSI 112 Lecture 5",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-5",
+          "locator": "Lecture 5: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O6",
+          "title": "MUSI 112 Lecture 6",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-6",
+          "locator": "Lecture 6: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O7",
+          "title": "MUSI 112 Lecture 7",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-7",
+          "locator": "Lecture 7: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O8",
+          "title": "MUSI 112 Lecture 8",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-8",
+          "locator": "Lecture 8: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O9",
+          "title": "MUSI 112 Lecture 9",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-9",
+          "locator": "Lecture 9: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O10",
+          "title": "MUSI 112 Lecture 10",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-10",
+          "locator": "Lecture 10: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O11",
+          "title": "MUSI 112 Lecture 11",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-11",
+          "locator": "Lecture 11: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O12",
+          "title": "MUSI 112 Lecture 12",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-12",
+          "locator": "Lecture 12: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O13",
+          "title": "MUSI 112 Lecture 13",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-13",
+          "locator": "Lecture 13: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O14",
+          "title": "MUSI 112 Lecture 14",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-14",
+          "locator": "Lecture 14: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O15",
+          "title": "MUSI 112 Lecture 15",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-15",
+          "locator": "Lecture 15: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O16",
+          "title": "MUSI 112 Lecture 16",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-16",
+          "locator": "Lecture 16: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O17",
+          "title": "MUSI 112 Lecture 17",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-17",
+          "locator": "Lecture 17: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O18",
+          "title": "MUSI 112 Lecture 18",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-18",
+          "locator": "Lecture 18: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O19",
+          "title": "MUSI 112 Lecture 19",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-19",
+          "locator": "Lecture 19: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O20",
+          "title": "MUSI 112 Lecture 20",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-20",
+          "locator": "Lecture 20: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O21",
+          "title": "MUSI 112 Lecture 21",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-21",
+          "locator": "Lecture 21: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O22",
+          "title": "MUSI 112 Lecture 22",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-22",
+          "locator": "Lecture 22: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O23",
+          "title": "MUSI 112 Lecture 23",
+          "url": "https://oyc.yale.edu/music/musi-112/lecture-23",
+          "locator": "Lecture 23: Overview; Lecture Chapters; transcript",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O24",
+          "title": "YaleCourses: 1. Introduction",
+          "url": "https://www.youtube.com/watch?v=5_yOVARO2Oc",
+          "locator": "Official YaleCourses distribution link; fetched page shell omits description",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "聆听入门与乐器",
+          "locator": "Lectures 1–2; sources O1–O2",
+          "source_id": "O1",
+          "focus": "以音高、节奏及乐器进入主动聆听。"
+        },
+        {
+          "id": "u02",
+          "title": "节奏与旋律",
+          "locator": "Lectures 3–6; sources O3–O6",
+          "source_id": "O3",
+          "focus": "由节拍、织体进入音阶与旋律。"
+        },
+        {
+          "id": "u03",
+          "title": "和声与低音",
+          "locator": "Lectures 7–8; sources O7–O8",
+          "source_id": "O7",
+          "focus": "听辨和弦与低音进行。"
+        },
+        {
+          "id": "u04",
+          "title": "奏鸣曲与变奏",
+          "locator": "Lectures 9–11; sources O9–O11",
+          "source_id": "O9",
+          "focus": "分析曲式及变化。"
+        },
+        {
+          "id": "u05",
+          "title": "音乐会与复调",
+          "locator": "Lectures 12–14; sources O12–O14",
+          "source_id": "O12",
+          "focus": "音乐会评论、赋格与固定低音。"
+        },
+        {
+          "id": "u06",
+          "title": "圣咏与巴洛克",
+          "locator": "Lectures 15–16; sources O15–O16",
+          "source_id": "O15",
+          "focus": "从中世纪声乐进入巴赫。"
+        },
+        {
+          "id": "u07",
+          "title": "莫扎特与钢琴",
+          "locator": "Lectures 17–18; sources O17–O18",
+          "source_id": "O17",
+          "focus": "连接歌剧与钢琴发展。"
+        },
+        {
+          "id": "u08",
+          "title": "浪漫歌剧与交响曲",
+          "locator": "Lectures 19–20; sources O19–O20",
+          "source_id": "O19",
+          "focus": "比较声乐及大型管弦乐。"
+        },
+        {
+          "id": "u09",
+          "title": "印象主义、现代与复习",
+          "locator": "Lectures 21–23; sources O21–O23",
+          "source_id": "O21",
+          "focus": "比较风格并练习历史辨识。"
+        }
+      ]
+    },
+    "sha256": "b3c25a6c8ed30c404794b2aaebf048f465ec470e4d60b128ef71d6b51d716afb",
+    "unit_ids": [
+      "u01",
+      "u02",
+      "u03"
+    ],
+    "pace": "adapted",
+    "practice": "light"
+  },
+  "delivery": {
+    "platform": "html",
+    "mode": "local"
+  }
+}

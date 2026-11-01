@@ -1,0 +1,124 @@
+{
+  "topic": "CS50x: think clearly before you code",
+  "title": "CS50x: think clearly before you code",
+  "days": [
+    {
+      "day": 1,
+      "topic": "From a problem to an unambiguous procedure",
+      "course_units": [
+        "u01"
+      ],
+      "objective": "Identify inputs, outputs and a terminating procedure."
+    },
+    {
+      "day": 2,
+      "topic": "Decisions and repetition in Scratch",
+      "course_units": [
+        "u01"
+      ],
+      "objective": "Trace one condition and one loop without building a project."
+    },
+    {
+      "day": 3,
+      "topic": "From blocks to C and arrays",
+      "course_units": [
+        "u02"
+      ],
+      "objective": "Recognize variables and indexed collections in a short trace."
+    },
+    {
+      "day": 4,
+      "topic": "Checking a small array calculation",
+      "course_units": [
+        "u02"
+      ],
+      "objective": "Find an off-by-one mistake through a concrete example."
+    },
+    {
+      "day": 5,
+      "topic": "Comparing ways to search",
+      "course_units": [
+        "u03"
+      ],
+      "objective": "Explain how a search strategy depends on the input."
+    },
+    {
+      "day": 6,
+      "topic": "Memory and the limits of a model",
+      "course_units": [
+        "u03"
+      ],
+      "objective": "Distinguish a stored value from the place that stores it."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Edition and partial scope",
+      "body": "This guide selects the first three catalog groups for Harvard CS50x 2026: Week 0; Weeks 1–2; and Weeks 3–4. The requested 2026 official URLs redirected to the current CS50x pages when checked on 1 November 2026. We retain the requested edition label and disclose that behavior rather than treating the pages as a frozen archive. [S1][S2] Six brief days introduce selected ideas in those groups; they do not complete the groups or the course. The remaining weeks and final project sit outside this sample.\nThe official materials provide the course context. The parcel-sorting example, diagram and light questions here are original teaching material, not claims about what David Malan demonstrated in his lecture."
+    },
+    {
+      "title": "A ten-minute routine",
+      "body": "Reserve seven minutes for the day's explanation and diagram, then three minutes for a short trace or choice question. You can answer aloud. No IDE, account, API key, paid service or project submission is needed. If a trace takes longer, stop after finding the first uncertain step and begin there next time. A useful learning record can be a single sentence describing what changed in your understanding.\nWatching a full original lecture or doing an official problem set is optional work outside this ten-minute budget. The original course has a substantially larger workflow, including problem sets and a final project. [S1] A micro lesson is a starting point for that work, not a compressed claim of equivalent credit."
+    },
+    {
+      "title": "Days 1 and 2: Week 0",
+      "body": "Day 1, “From a problem to an unambiguous procedure,” takes one subsection of u01. You will distinguish the item a procedure receives, the decision it makes, and the result it returns. Day 2, “Decisions and repetition in Scratch,” stays in u01 and connects the same reasoning to blocks. The goal is to predict a small behavior before running it, including what happens when there are no items.\nKeep the examples tiny. Three parcels are enough to expose an unclear rule. Extra complexity can hide a misunderstanding behind mechanical work. Success means explaining why the procedure stops and giving one input on which a vague alternative fails."
+    },
+    {
+      "title": "Days 3–6: a route through two more groups",
+      "body": "Days 3 and 4 belong to u02, C and arrays. “From blocks to C and arrays” introduces how a value and a position can be tracked; “Checking a small array calculation” uses a short trace to locate an indexing error. Days 5 and 6 belong to u03, algorithms and memory. “Comparing ways to search” asks how the arrangement of input affects the strategy. “Memory and the limits of a model” introduces the distinction between a value and its storage location.\nThese titles name our selected learning tasks, not replacements for official week titles. Reading about a loop once is not the same as being able to write and debug a program. At the end of six days, decide which group deserves another pass before moving forward."
+    },
+    {
+      "title": "How to check understanding",
+      "body": "For each example, ask three things: What would count as the right answer? Which step makes progress? What could go wrong at the boundary? Try a normal case and an empty case before inventing a complicated one. If two readers execute your instructions differently, identify the ambiguous phrase and improve it. This is a more informative result than merely saying the instructions seem sensible.\nThe lesson diagram contains no benchmark data. Its arrows represent the order of an original toy procedure. Read those arrows as control flow, not as evidence that every computer program has exactly this structure. Later programs can keep running, accept new input, or make several outputs."
+    },
+    {
+      "title": "Sources and the next step",
+      "body": "Use [S2] to locate Lecture 0 topics and [S1] for the wider course and learning workflow. Both are official Harvard CS50 pages checked on 1 November 2026; their resolved URLs are recorded in the source notes. We paraphrase a small amount of their framing and teach with our own example. No professor quotations or lecture screenshots are reproduced.\nAfter Day 6, return to the original week that felt least secure and give it a separate study session. Completing this route means you have practiced asking precise questions about programs; certification and original assessments remain separate."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "CS50x 2026",
+      "url": "https://cs50.harvard.edu/x/2026/",
+      "publisher": "Harvard University · CS50",
+      "note": "Requested 2026 course URL redirects to https://cs50.harvard.edu/x/; official course context, week sequence and wider workflow, not a frozen archive.",
+      "checked_at": "2026-11-01",
+      "published_at": "2026 edition label; page undated"
+    },
+    {
+      "id": "S2",
+      "title": "Lecture 0 — CS50x 2026",
+      "url": "https://cs50.harvard.edu/x/2026/notes/0/",
+      "publisher": "Harvard University · CS50",
+      "note": "Requested 2026 notes redirect to https://cs50.harvard.edu/x/notes/0/; verified topic headings and introductory concepts. Parcel example is original to this guide.",
+      "checked_at": "2026-11-01",
+      "published_at": "2026 edition label; page undated"
+    },
+    {
+      "id": "S3",
+      "title": "CS50x 2026 syllabus",
+      "url": "https://cs50.harvard.edu/x/2026/syllabus/",
+      "publisher": "Harvard University",
+      "note": "Original-course location: Syllabus; navigation Weeks 0–10; Artificial Intelligence; Expectations",
+      "published_at": "2026 (year URL redirects to current syllabus)",
+      "checked_at": "2026-11-01",
+      "course_ref": {
+        "course_id": "harvard-cs50x",
+        "sha256": "1bf10b275d9f5833e49b738120158b8faff2a324a495d62770feff98f1598f2e",
+        "source_id": "O1",
+        "unit_ids": [
+          "u01",
+          "u02",
+          "u03"
+        ]
+      }
+    }
+  ],
+  "figure": {
+    "caption": "An original parcel-sorting loop: check the pile, test a label, choose a tray, and repeat.",
+    "credit": "Original teaching diagram for this guide; not a CS50 slide or measured system.",
+    "path": "assets/teaching.png"
+  }
+}

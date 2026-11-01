@@ -1,0 +1,137 @@
+{
+  "timezone": "Asia/Shanghai",
+  "language": "ja",
+  "daily_minutes": 10,
+  "sample_mode": true,
+  "course_pathway": {
+    "schema": 1,
+    "course": {
+      "id": "mit-linear-algebra",
+      "title": "Linear Algebra",
+      "institution": "Massachusetts Institute of Technology",
+      "code": "18.06",
+      "edition": "Spring 2010",
+      "instructors": [
+        "Gilbert Strang"
+      ],
+      "aliases": [
+        "线性代数",
+        "MIT线性代数",
+        "吉尔伯特斯特朗",
+        "Strang"
+      ],
+      "domain": "mathematics",
+      "level": "undergraduate",
+      "prerequisites": [
+        "原课列出的先修为多变量微积分18.02。"
+      ],
+      "audience": "希望理解矩阵运算及其结构的学习者。",
+      "pace": {
+        "description": "原课每周三次1小时讲课及一次1小时习题课；作业、三次课内考试与期末。按calendar的40个SES编号编排，非视频编号。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "18.06 calendar",
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/calendar/",
+          "locator": "SES # 1–40; Course Info",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "18.06 syllabus",
+          "url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/syllabus/",
+          "locator": "Meeting Times; Prerequisites; Homework; Exams",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "线性方程与消元",
+          "locator": "Calendar SES 1–5",
+          "source_id": "O1",
+          "focus": "几何、消元、逆与分解。"
+        },
+        {
+          "id": "u02",
+          "title": "子空间与解",
+          "locator": "Calendar SES 6–9",
+          "source_id": "O1",
+          "focus": "用子空间组织方程解。"
+        },
+        {
+          "id": "u03",
+          "title": "基与首轮检查",
+          "locator": "Calendar SES 10–12",
+          "source_id": "O1",
+          "focus": "基、维数与四子空间；保留Exam1。"
+        },
+        {
+          "id": "u04",
+          "title": "网络与正交投影",
+          "locator": "Calendar SES 13–17",
+          "source_id": "O1",
+          "focus": "图网络、最小二乘及QR。"
+        },
+        {
+          "id": "u05",
+          "title": "行列式",
+          "locator": "Calendar SES 18–20",
+          "source_id": "O1",
+          "focus": "计算并解释行列式。"
+        },
+        {
+          "id": "u06",
+          "title": "特征值与复习",
+          "locator": "Calendar SES 21–25",
+          "source_id": "O1",
+          "focus": "对角化、Markov矩阵；复习与Exam2。"
+        },
+        {
+          "id": "u07",
+          "title": "微分方程与正定性",
+          "locator": "Calendar SES 26–29",
+          "source_id": "O1",
+          "focus": "连接动力系统、对称矩阵及工程。"
+        },
+        {
+          "id": "u08",
+          "title": "相似与奇异值分解",
+          "locator": "Calendar SES 30–31",
+          "source_id": "O1",
+          "focus": "比较矩阵结构。"
+        },
+        {
+          "id": "u09",
+          "title": "傅里叶与换基",
+          "locator": "Calendar SES 32–34",
+          "source_id": "O1",
+          "focus": "连接FFT、线性变换与基选择。"
+        },
+        {
+          "id": "u10",
+          "title": "优化与最终检查",
+          "locator": "Calendar SES 35–40",
+          "source_id": "O1",
+          "focus": "线性规划、复习、Exam3、数值计算与期末。"
+        }
+      ]
+    },
+    "sha256": "32cd06faba9746c08a81981584cd022b06e39233197b0c9fe11905951cc57d2f",
+    "unit_ids": [
+      "u01",
+      "u02",
+      "u03"
+    ],
+    "pace": "adapted",
+    "practice": "light"
+  },
+  "delivery": {
+    "platform": "html",
+    "mode": "local"
+  }
+}

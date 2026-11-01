@@ -1,3 +1,5 @@
+<a href="examples/university/README.md"><img src="docs/assets/course-gallery-v3.png" alt="Six real university course samples in six languages" width="100%"></a>
+
 <div align="center">
 
 <img src="docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,126 +17,145 @@
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
+**[Download v3.0.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
 
-[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Tencent SkillHub](https://skillhub.cn/skills/user_4c4c4339/omni-learning-anything) · [Installation notes](docs/distribution-channels.md)
+[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installation channels](docs/distribution-channels.md)
 
 </div>
 
-**Turn “I want to learn…” into a course you can follow.**
+**Choose a university course—or bring your own books and papers. Learn at your pace, with light checks, useful feedback and review, in local files or cloud documents.**
 
-Tell your agent what you want to learn. Omni builds a plan around your goal, experience and available time, then helps you work through illustrated daily lessons with sources, practice and self-checks.
+Turn “I want to learn…” into a plan you can follow. Start with one of 12 source-backed university learning pathways, a personal goal, or your own materials. Review the plan before lessons begin.
 
-<a id="versions"></a>
-## Version guide
+Try **“I want to study Harvard Positive Psychology.”** The agent identifies the source course, reuses what you already told it, and asks only for details that affect your plan.
 
-| Version | What you can do |
-| --- | --- |
-| **v1** | Your personal PDF course: approve a learning plan, then receive illustrated lessons with exercises and further reading. |
-| **v2** | Keep your course where you study: choose local files, Notion, Obsidian, Feishu, DingTalk or Tencent Docs. The agent guides connection and remembers your chosen location. |
-| **v2.2.0** | Read offline HTML in your browser, learn in 10 languages, and connect DingTalk or Tencent Docs through guided official authorization. |
-| **v2.2.1** | Start with a rough idea: the agent helps clarify your direction, organize prerequisites and propose a structured course. Setup checks explain what your current host can actually do. |
-| **v2.3.0** | Check your understanding when you are ready: answer a few short questions, get grounded feedback, and pause or continue in your agent. No quiz reminders or timed tasks. |
-| **v2.4.0** | Learn from your own books, papers and course files: select pages or chapters, trace explanations and checks to original locations, and choose whether external supplements are allowed. |
-| **v2.5.0** | Return with a small review that fits your daily time, see what your answers actually show, correct learning judgments, adjust future lessons with approval, and export review cards to Anki. |
-| **v2.6.0** | Install more easily through chat, one command or your agent’s native installer. Check only the setup you need, then update while keeping your courses and connections. |
+## What is new in v3.0.0
 
-You can start with “I want to learn a little economics.” Omni suggests useful directions and a coherent path, labels assumptions and asks only questions that change the course. If your goal is already specific, it proceeds directly to planning.
+- **12 university pathways:** find a starting point in Harvard, Yale, MIT and Stanford course sources without designing a syllabus yourself.
+- **A pace you can sustain:** preserve the original unit order and source mapping while splitting study into sessions that fit your time.
+- **Real multilingual examples:** preview PDF and HTML plans and first lessons across six languages and six subjects.
+- **A gentler first step:** after installation or first use, your host agent can offer course choices in the current chat if you have not chosen a topic. The skill cannot open a new chat by itself.
 
-## What you can do
+<a id="university-courses"></a>
+## Choose a built-in university course
 
-- Learn for your own goal: a trip, a work project, an interview or a new interest.
-- Set a manageable daily pace with explanations, an illustration, practice and answer guidance.
-- Follow the evidence: inline citations and at least five explained further-reading links in every document.
-- Keep going after an interruption; review your plan before daily lessons begin.
+Ask **“show me built-in courses”**. Choose a course, your language and available time; the agent proposes a mapped plan for approval. These are independent learning pathways based on public course sources. Complete lecture content is not bundled; no university endorsement or certificate is implied.
 
+| University | Course and original title | Source edition |
+| --- | --- | --- |
+| Harvard | [Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) | PSY 1504 · Spring 2006 · Tal Ben-Shahar |
+| Harvard | [CS50x: Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) | CS50x · 2026 · David Malan |
+| Harvard | [Justice](https://sandel.scholars.harvard.edu/justice) | 24-lecture public series · Michael Sandel |
+| Yale | [Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) | PSYC 110 · Spring 2007 · Paul Bloom |
+| Yale | [Financial Markets](https://oyc.yale.edu/economics/econ-252) | ECON 252 · Spring 2011 · Robert Shiller |
+| Yale | [Game Theory](https://oyc.yale.edu/economics/econ-159) | ECON 159 · Fall 2007 · Ben Polak |
+| Yale | [Death](https://oyc.yale.edu/death/phil-176) | PHIL 176 · Spring 2007 · Shelly Kagan |
+| Yale | [Listening to Music](https://oyc.yale.edu/music/musi-112) | MUSI 112 · Fall 2008 · Craig Wright |
+| MIT | [Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) | 6.0001 · Fall 2016 |
+| MIT | [Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | 18.06 · Spring 2010 · Gilbert Strang |
+| MIT | [Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | 8.01SC · Fall 2016 |
+| Stanford | [Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) | CS229 · Autumn 2018 |
+
+A 10-minute session covers a small learning step, not an entire original lecture or course. Original workload remains visible; longer readings, exercises and projects need their own time. Course sources and availability may change.
+
+## Bring your own materials
+
+Use PDF, TXT, Markdown, HTML, DOCX, EPUB, PPTX, SRT or VTT. Choose chapters, pages or timestamps and whether outside supplements are allowed. Explanations and checks trace back to the selected source locations. Legacy DOC and RTF need trusted conversion first.
+
+A rough goal works too: “I want to learn a little economics.” The agent suggests useful directions, explains its assumptions and asks only questions that affect the plan. A specific goal goes straight to planning.
+
+<a id="choose-your-learning-language"></a>
 ## Choose your learning language
 
 **English · 简体中文 · 日本語 · 한국어 · Español · Français · Deutsch · Português · Русский · العربية**
 
-Plans and lessons can be authored in any of the languages below. Your topic, source language and README language can differ from your course language. Arabic output uses right-to-left layout.
+Plans and lessons support all ten languages listed above, independently of the source language or the language of this page. Arabic documents use right-to-left layout.
 
 ## Choose where to keep your course
 
-| Destination | What you tell the agent |
+| Destination | How it works |
 | --- | --- |
-| Local PDF · HTML · DOCX · Markdown | A course folder and preferred format. HTML includes its image in one offline file; source links open online. |
-| Notion | A parent-page link and the workspace you want to use. |
-| Obsidian | An existing local Vault and course subfolder; no API key is needed. |
-| Feishu / 飞书 | A course folder link; complete official app setup and user authorization if needed. |
-| DingTalk / 钉钉 | A document folder link and your organization; an administrator may need to enable CLI access. |
-| Tencent Docs / 腾讯文档 | Your home root or a personal folder link; sign in and review the official authorization page. |
+| PDF · HTML · DOCX · Markdown | Choose a folder and PDF, HTML, DOCX or Markdown. HTML keeps its illustration in one offline file; external source links need internet. |
+| Notion | Connect a parent page through the official `ntn` CLI. |
+| Obsidian | Choose an existing local Vault and course folder; no Obsidian API is used. |
+| Feishu / 飞书 | Connect a document folder through the official `lark` CLI and user authorization. |
+| DingTalk / 钉钉 | Connect a folder through the official `dws` CLI; organization approval may be required. |
+| Tencent Docs / 腾讯文档 | Choose a root or folder and complete official OAuth/MCP authorization. |
 
-Say where you want to save the course. The agent checks existing access, asks only for missing details, guides the platform steps and reuses your named connection. You do not need to find object IDs or write configuration files. Do not paste passwords or tokens into chat. Organization approvals can require additional steps.
+Tell the agent where to save your course. It checks existing access, guides missing setup and reuses your named connection. Do not paste passwords or tokens into chat.
 
 <a id="quick-start"></a>
-## Install in the way that suits you
+## Install and start
 
-Ask your agent to install the latest release, keep your existing courses and connections, and verify that this client can discover and use it.
-
-With Node.js installed, run the command below and choose your agent. Omit `-g` for a project install.
+Ask your agent to install the latest release and verify that this client can discover the skill. Keep existing courses and connections when updating. With Node.js, run:
 
 ```sh
 npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
 ```
 
-In Claude Code:
+In Claude Code, use the plugin installer:
 
 ```text
 /plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
 ```
 
-No Node.js? Download the Skill ZIP above and use your client’s skill upload, or ask your agent to install it. [Installation, first use and safe updates](skills/omni-learning-anything/references/install.md)
+Without Node.js, download the ZIP above and use your client’s skill upload or agent-assisted installation. `skills.sh` is live; the SkillHub listing is currently v2.6.0. Check the channel guide for version availability.
 
-## Start through chat
-
-Send this to your agent:
+## Try your first course
 
 ```text
-Install omni-learning-anything from https://github.com/ShawnRen57/omni-learning-anything.
-Use the latest Skill ZIP from Releases and keep the complete skill folder.
-Verify that this client can discover the skill, then tell me how to start.
+Show me built-in courses. Use Harvard CS50x 2026 as the source.
+I am a beginner. Teach me in English, 20 minutes a day.
+Preserve the original unit order and show the original workload.
+Save offline HTML in my course folder. Show me the plan first.
 ```
 
-Then describe what you want to learn:
+Or try: “Teach me the first two chapters of my EPUB in 15-minute sessions,” or “Use Yale Financial Markets 2011 to help me understand financial institutions.”
 
-```text
-Use omni-learning-anything to teach me architectural history for travel.
-I am a beginner. Plan 30 days, 15 minutes a day, in English.
-Save the course as offline HTML in my course folder. Show me the plan first.
-```
+Review and approve the plan, then ask for the first lesson. To resume, say “Continue from my earliest undelivered lesson.” Ask to pause when needed. Scheduling works only when your host supports it and you agree a time and timezone; generation begins at that time, with delivery after research and review.
 
-Review the plan, request changes, then approve it. If your agent supports scheduling, agree the time and timezone. Otherwise, ask it to continue when you are ready. A scheduled time starts generation; delivery follows research and review.
+## Checks, feedback and review
 
-```text
-Continue my Omni Learning Anything course from the earliest undelivered lesson.
-Pause this course and its schedule.
-Preserve my old course and propose a revised plan for my new goal.
-```
+When you want a check, request 1–3 short questions as cards or plain text. Get source-grounded feedback and hints; a longer quiz is available if you ask. Your responses inform a learning record in the background so the lesson stays easy to follow.
 
-## Continue at your own pace
+Ask “What should I review today?” for a small review within your existing time budget, or “What have my answers shown this week?” for an evidence-based recap. Correct a judgment, skip a topic, or choose a new lesson. Review creates no extra automatic quiz or timer.
 
-When you return, ask “What should I review today?” Omni offers a few questions grounded in your earlier answers, within the time you already set. You can prioritize a new lesson, only review, ask for a hint or stop. Nothing creates a new quiz reminder.
-
-Ask “What have my answers shown this week?” to see a recap with sources. You can inspect or correct a judgment, say that you already know something, or exclude it from review. Want a different pace? Review the proposed future changes before starting a new course version; your old plan and history stay available. You can also request Anki cards as a one-way CSV export.
+Approve changes to future lessons before a revised course version starts; the old plan and history remain available. Anki cards are an optional one-way CSV export, without automatic synchronization.
 
 <a id="examples"></a>
-## Explore example courses
+## Real examples in six languages
 
-Browse complete plans and daily PDFs for technology, economics, music, Agent product design, architecture and Ming history. The linked archives retain their original source-check dates; they are examples you can adapt.
+The gallery links to six real sample sets: a partial six-day plan and a standalone Day 01 learning guide in PDF and HTML for each. They show the format and study approach, not a complete university course or official course text.
 
-| Technology | Economics | Music |
-| :---: | :---: | :---: |
-| [![Technology](docs/screenshots/technology.png)](examples/technology/) | [![Economics](docs/screenshots/economics.png)](examples/economics/) | [![Music](docs/screenshots/music.png)](examples/music/) |
+| Language | Sample subject |
+| --- | --- |
+| Chinese · 简体中文 | Harvard Positive Psychology |
+| English | Harvard CS50 |
+| Japanese · 日本語 | MIT Linear Algebra |
+| French · Français | Yale Listening to Music |
+| Spanish · Español | Yale Financial Markets |
+| Arabic · العربية | Yale Death |
 
-| Agent products | Architecture | Ming history |
-| :---: | :---: | :---: |
-| [![Agent products](docs/screenshots/agent-product.png)](examples/agent-product/) | [![Architecture](docs/screenshots/architecture.png)](examples/architecture/) | [![Ming history](docs/screenshots/ming-history.png)](examples/ming-history/) |
+[Open the university catalog and sample files](examples/university/README.md)
 
-## Installation and guides
+Earlier PDF examples remain available:
 
-[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.6.0.md)
+[Technology](examples/technology/) · [Economics](examples/economics/) · [Music](examples/music/) · [Agent products](examples/agent-product/) · [Architecture](examples/architecture/) · [Ming history](examples/ming-history/)
 
-An Agent Skill, powered by your agent’s research, document and scheduling tools. PDF needs XeLaTeX; other output formats do not. Cloud writing uses official APIs/CLIs; Obsidian writes local Vault files. Cross-device sync and unattended scheduling depend on your host and account.
+<a id="versions"></a>
+## Version guide
+
+| Version | What it brings to your learning |
+| --- | --- |
+| **v3.0.0** | Choose a university pathway, see the source edition, and preview real multilingual learning documents. |
+| **v2.3–v2.6** | Ask for light checks, study your own sources, review what needs attention and install or update more easily. |
+| **v2** | Study in ten languages, choose four local formats, or keep your course in connected documents. |
+| **v1** | Approve a personal plan and receive illustrated PDF lessons with practice and further reading. |
+
+## Guides and requirements
+
+[Installation and updates](skills/omni-learning-anything/references/install.md) · [Formats and fonts](skills/omni-learning-anything/references/setup.md) · [Document connections](skills/omni-learning-anything/references/onboarding.md) · [Channel status](docs/distribution-channels.md) · [v3.0.0 release validation](docs/release-validation-v3.0.0.md)
+
+This Agent Skill uses the research, document and scheduling tools available in your host. PDF requires XeLaTeX; other output formats do not. Cloud access, cross-device sync and unattended delivery depend on your host, account and authorization. Support is checked for the current client; availability on every platform is not assumed.
 
 [MIT](LICENSE) · [Changelog](CHANGELOG.md) · [Attribution](ATTRIBUTION.md)

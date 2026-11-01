@@ -11,7 +11,7 @@ archive=out/f'omni-learning-anything-skill-v{version}.zip'
 with ZipFile(archive,'w',ZIP_DEFLATED) as z:
  for p in sorted((ROOT/'skills/omni-learning-anything').rglob('*')):
   relative=p.relative_to(skill)
-  allowed=(str(relative) in ('SKILL.md','LICENSE','agents/openai.yaml') or
+  allowed=(str(relative) in ('SKILL.md','LICENSE','agents/openai.yaml','references/course-catalog.json') or
            (relative.parts[0]=='references' and p.suffix=='.md') or
            (relative.parts[0]=='scripts' and len(relative.parts)==2 and
             ((p.name.startswith('omni_') and p.suffix=='.py') or

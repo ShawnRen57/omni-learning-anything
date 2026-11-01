@@ -1,3 +1,5 @@
+<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="六种语言的真实大学课程学习样例" width="100%"></a>
+
 <div align="center">
 
 <img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,126 +17,145 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
+**[下载 v3.0.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
 
-[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Tencent SkillHub](https://skillhub.cn/skills/user_4c4c4339/omni-learning-anything) · [安装说明](../distribution-channels.md)
+[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [安装渠道说明](../../docs/distribution-channels.md)
 
 </div>
 
-**把“我想学……”变成每天可以走下去的学习路径。**
+**选一门大学名课，或带上自己的书与论文。按你的节奏学习，用轻量自测、反馈与复习巩固理解，保存到本地或云文档。**
 
-告诉 Agent 你想学什么。Omni 会围绕你的目标、基础和可投入的时间安排课程，先给你学习计划，再带你阅读图文材料、练习、自检，并沿着来源继续探索。
+把“我想学……”变成走得下去的学习计划。你可以从 12 条有公开来源依据的大学课程学习路径开始，也可以提出自己的目标、上传个人材料。先确认计划，再开始每日学习。
 
-<a id="versions"></a>
-## 版本说明
+只说一句 **“我想学习哈佛积极心理学”** 也能开始。Agent 会识别原课程，复用你已提供的信息，只补问影响学习计划的必要细节。
 
-| 版本 | 你可以怎么用 |
-| --- | --- |
-| **v1** | 拥有自己的 PDF 课程：先确认学习计划，再逐日收到带插图、练习和扩展阅读的学习材料。 |
-| **v2** | 把课程放在你习惯学习的地方：本地文件、Notion、Obsidian、飞书、钉钉或腾讯文档。Agent 引导连接，并记住你选定的保存位置。 |
-| **v2.2.0** | 新增可在浏览器离线阅读的 HTML；课程可使用 10 种语言；钉钉和腾讯文档也可以由 Agent 引导完成官方授权。 |
-| **v2.2.1** | 只说一个大致想法也能开始：Agent 帮你理清方向、补齐前置知识与学习结构，并检查当前环境的可用能力。 |
-| **v2.3.0** | 学完后主动开始短测：选一选、简短回答或聊一聊，获得有依据的反馈；可提示、跳过和续答，不创建短测提醒或定时任务。 |
-| **v2.4.0** | 用自己的书籍、论文和课程资料学习：指定页码或章节，解释和短测可追溯原文，并选择是否允许补充外部知识。 |
-| **v2.5.0** | 回来学习时，按每天的时间安排少量复习；看清作答体现的进展、纠正学习判断，确认后调整后续课程，还可导出 Anki 卡片。 |
-| **v2.6.0** | 通过对话、一条命令或客户端原生入口更轻松地安装；只检查所需环境，更新时保留课程、学习记录和连接。 |
+## v3.0.0 带来了什么
 
-例如只说“我想学点经济学”也可以。Omni 会提出适合的学习方向和有先后关系的路径，标明需要确认的假设，只追问会改变课程的关键信息；目标已经明确时，直接进入规划。
+- **12 条大学课程路径：** 从哈佛、耶鲁、MIT 和斯坦福的公开课程来源出发，不必从零设计学习大纲。
+- **适合自己的节奏：** 保留原课程单元顺序与来源映射，再按你的可用时间拆分学习任务。
+- **真实多语言样例：** 预览六种语言、六个领域的 PDF 与 HTML 学习计划和首日学习指南。
+- **更容易迈出第一步：** 安装完成或首次使用时，如果你还没选题，宿主 Agent 可在当前聊天中介绍课程选项；技能不能自行新建聊天。
 
-## 你可以怎么学
+<a id="university-courses"></a>
+## 选择内置大学课程
 
-- 为旅行、工作项目、面试或个人兴趣，安排贴合目标的学习路线。
-- 按每天可投入的时间学习，结合概念解释、插图、练习和参考要点。
-- 知道知识从哪里来：文中附引用，每份文档至少有五个带说明的扩展阅读链接。
-- 中断后接着上次的进度继续；先看计划、确认后再开始每日学习。
+告诉 Agent：**“展示内置课程”**。选课程、学习语言与可用时间，Agent 会先提交带原课程映射的计划。这些是依据公开课程来源编排的独立学习路径，不打包完整授课内容，不代表大学背书，也不提供大学证书。
 
-## 选择你的学习语言
+| 大学 | 课程与原名 | 来源版本 |
+| --- | --- | --- |
+| Harvard | [积极心理学 / Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) | PSY 1504 · 2006年春季 · Tal Ben-Shahar |
+| Harvard | [计算机科学导论 / CS50x: Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) | CS50x · 2026 · David Malan |
+| Harvard | [公正 / Justice](https://sandel.scholars.harvard.edu/justice) | 24 讲公开系列 · Michael Sandel |
+| Yale | [心理学导论 / Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) | PSYC 110 · 2007年春季 · Paul Bloom |
+| Yale | [金融市场 / Financial Markets](https://oyc.yale.edu/economics/econ-252) | ECON 252 · 2011年春季 · Robert Shiller |
+| Yale | [博弈论 / Game Theory](https://oyc.yale.edu/economics/econ-159) | ECON 159 · 2007年秋季 · Ben Polak |
+| Yale | [死亡 / Death](https://oyc.yale.edu/death/phil-176) | PHIL 176 · 2007年春季 · Shelly Kagan |
+| Yale | [聆听音乐 / Listening to Music](https://oyc.yale.edu/music/musi-112) | MUSI 112 · 2008年秋季 · Craig Wright |
+| MIT | [计算机科学与 Python 编程导论 / Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) | 6.0001 · 2016年秋季 |
+| MIT | [线性代数 / Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | 18.06 · 2010年春季 · Gilbert Strang |
+| MIT | [经典力学 / Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | 8.01SC · 2016年秋季 |
+| Stanford | [机器学习 / Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) | CS229 · 2018年秋季 |
+
+每天 10 分钟意味着完成一个小学习步骤，并不等于学完原课程的一整讲或整门课。原始学习量会明确标示，长篇阅读、习题和项目需要另留时间；来源内容与可访问性也可能变化。
+
+## 用自己的材料学习
+
+支持 PDF、TXT、Markdown、HTML、DOCX、EPUB、PPTX、SRT 和 VTT。可指定章节、页码或时间戳，并决定是否允许外部补充。讲解与自测会追溯到选定的原文位置。旧版 DOC、RTF 需先通过可信工具转换。
+
+想法模糊也能开始，比如“我想懂一点经济学”。Agent 会提出可选方向，说明假设，只追问会影响课程的问题；目标清楚时则直接进入计划。
+
+<a id="choose-your-learning-language"></a>
+## 选择学习语言
 
 **English · 简体中文 · 日本語 · 한국어 · Español · Français · Deutsch · Português · Русский · العربية**
 
-学习计划与每日材料均可使用以下语言。主题、来源及 README 的语言不必与课程语言相同；阿拉伯语支持从右到左排版。
+学习计划与课程正文支持上述十种语言，可与原始材料或本页语言不同。阿拉伯语文档使用从右向左的排版。
 
 ## 选择课程保存位置
 
-| 保存到 | 告诉 Agent 什么 |
+| 保存位置 | 使用方式 |
 | --- | --- |
-| 本地 PDF · HTML · DOCX · Markdown | 课程目录和文件格式。HTML 把图片放在同一个文件里，可离线阅读；扩展链接需要联网打开。 |
-| Notion | 课程父页面链接，以及你想使用的工作区。 |
-| Obsidian | 已有的本地 Vault 和课程子目录，无需 API key。 |
-| Feishu / 飞书 | 课程文件夹链接；需要时按引导完成官方应用配置和用户授权。 |
-| DingTalk / 钉钉 | 文档文件夹链接和组织；管理员可能需要为你启用 CLI 访问。 |
-| Tencent Docs / 腾讯文档 | 首页根目录或个人文件夹链接；登录官方页面并核对授权。 |
+| PDF · HTML · DOCX · Markdown | 指定课程文件夹与 PDF、HTML、DOCX 或 Markdown 格式。HTML 把配图保存在同一个离线文件中，外部来源链接需联网。 |
+| Notion | 通过官方 `ntn` CLI 连接父页面。 |
+| Obsidian | 指定现有本地 Vault 与课程子目录，不调用 Obsidian API。 |
+| Feishu / 飞书 | 通过官方 `lark` CLI 和用户授权连接文档文件夹。 |
+| DingTalk / 钉钉 | 通过官方 `dws` CLI 连接文件夹，可能需要组织管理员批准。 |
+| Tencent Docs / 腾讯文档 | 指定根目录或文件夹，通过官方 OAuth/MCP 完成授权。 |
 
-你只需说清课程存在哪里。Agent 会检查已有授权，只询问缺少的信息，提供平台操作指引，并复用命名连接。无需查对象 ID、手写配置文件，也不要把密码或 Token 发到聊天里。组织审批等情况可能需要额外步骤。
+告诉 Agent 想存在哪里，它会检查已有访问权限、引导补齐配置，并复用已命名的连接。请不要在聊天中粘贴密码或令牌。
 
 <a id="quick-start"></a>
-## 选择适合你的安装方式
+## 安装与开始
 
-让 Agent 安装最新发布版，保留已有课程和连接，并确认当前客户端可以发现、启用和使用它。
-
-已安装 Node.js 时，运行下面的命令并选择你的 Agent；去掉 `-g` 则仅安装到当前项目。
+请 Agent 安装最新版本，并确认当前客户端能发现和使用技能。升级时保留已有课程与连接。已安装 Node.js 时可运行：
 
 ```sh
 npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
 ```
 
-在 Claude Code 中：
+在 Claude Code 中使用插件安装器：
 
 ```text
 /plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
 ```
 
-没有 Node.js？可下载上方 Skill ZIP，使用客户端上传技能，或让 Agent 帮你安装。 [安装、首次使用与安全更新](../../skills/omni-learning-anything/references/install.md)
+没有 Node.js，也可下载上方 ZIP，通过客户端技能上传或请 Agent 协助安装。`skills.sh` 已上线；SkillHub 当前上架版本为 v2.6.0。各渠道可用版本请查看渠道说明。
 
-## 从对话开始
-
-把这段话发送给你的 Agent：
+## 试着开始第一门课
 
 ```text
-请安装 omni-learning-anything：https://github.com/ShawnRen57/omni-learning-anything
-优先使用 Releases 最新的 Skill ZIP，完整保留技能文件夹。
-确认当前客户端能够发现该技能，并告诉我如何开始。
+展示内置课程。以哈佛 CS50x 2026 为来源。
+我是初学者，用中文教我，每天 20 分钟。
+保留原单元顺序，标明原始学习量。
+保存为课程文件夹中的离线 HTML，先让我确认计划。
 ```
 
-然后，说出你想学什么：
+也可以说：“用每天 15 分钟带我读这本 EPUB 的前两章”，或“用耶鲁《金融市场》2011 版帮我理解金融机构”。
 
-```text
-用 omni-learning-anything 带我学习旅行用的建筑史。
-我是初学者，学 30 天，每天 15 分钟，中文。
-保存为课程目录中的离线 HTML。先给我计划，等我确认。
-```
+确认计划后，请 Agent 开始第一课。回来时说“从最早未交付的一课继续”，需要时可暂停。只有宿主支持定时、且你确认时间与时区后才能安排自动执行；约定时间开始生成，完成检索与检查后交付。
 
-先审阅计划，需要时提出调整，再确认开始。如果 Agent 支持定时任务，可约定执行时间和时区；否则在准备好时让它继续。定时时间是开始生成的时间，检索与检查完成后才会交付。
+## 轻量自测、反馈与复习
 
-```text
-继续这个 Omni Learning Anything 课程，从最早未交付的一课开始。
-暂停这个课程和对应的定时任务。
-请保留旧课程，为我的新目标提出一版新计划。
-```
+想检查理解时，可要 1–3 道卡片或纯文字小题，获得基于来源的反馈与提示；想做长测验也可以主动提出。作答会在后台形成学习记录，不让记录流程打断阅读。
 
-## 按自己的节奏继续
+问“今天该复习什么”，可在已有时间预算内安排少量复习；问“这周的回答说明了什么”，可看到有依据的回顾。你能纠正判断、跳过主题，或优先学新课。复习不会额外创建自动测验或计时任务。
 
-回来时说“今天我该复习什么？”，Omni 会根据此前的作答，推荐每天时间内能完成的少量问题。你可以优先新课、只复习、要提示，或随时停下；不会为此创建短测提醒。
-
-说“根据我的作答，回顾一下这周的学习”，可以看到有依据、有来源的回顾。你也能核对或纠正判断，补充自己的感受，或把某项内容排除复习。想换个节奏时，先看后续调整方案，确认后再开始新版本课程；旧计划和学习历史保留。需要时还可导出 Anki 卡片，导出为单向 CSV，不同步 Anki 的作答记录。
+未来课程的调整先由你确认，再开启新版本；原计划与历史仍可查阅。还可按需单向导出 Anki CSV 卡片，不自动双向同步。
 
 <a id="examples"></a>
-## 看看课程长什么样
+## 六种语言的真实样例
 
-这里有科技、经济学、音乐、Agent 产品设计、西方建筑史和明朝历史的完整计划及每日 PDF。样例保留原始来源核验日期，你可以参考它们安排自己的课程。
+顶部拼图链接到六组真实样例，每组都有 PDF 与 HTML：一份局部六天学习计划，以及可独立阅读的 Day 01 学习指南。它们展示学习方式与文档效果，不是完整大学课程或官方教材。
 
-| Technology | Economics | Music |
-| :---: | :---: | :---: |
-| [![Technology](../../docs/screenshots/technology.png)](../../examples/technology/) | [![Economics](../../docs/screenshots/economics.png)](../../examples/economics/) | [![Music](../../docs/screenshots/music.png)](../../examples/music/) |
+| 语言 | 样例主题 |
+| --- | --- |
+| 中文 | 哈佛积极心理学 |
+| 英语 | 哈佛 CS50 |
+| 日语 | MIT 线性代数 |
+| 法语 | 耶鲁聆听音乐 |
+| 西班牙语 | 耶鲁金融市场 |
+| 阿拉伯语 | 耶鲁死亡 |
 
-| Agent products | Architecture | Ming history |
-| :---: | :---: | :---: |
-| [![Agent products](../../docs/screenshots/agent-product.png)](../../examples/agent-product/) | [![Architecture](../../docs/screenshots/architecture.png)](../../examples/architecture/) | [![Ming history](../../docs/screenshots/ming-history.png)](../../examples/ming-history/) |
+[打开大学课程目录与样例文件](../../examples/university/README.md)
 
-## 安装与使用指南
+早期 PDF 样例继续保留：
 
-[安装到你的 Agent](../../skills/omni-learning-anything/references/install.md) · [文件格式与字体配置](../../skills/omni-learning-anything/references/setup.md) · [连接云文档](../../skills/omni-learning-anything/references/onboarding.md) · [版本验证记录](../../docs/release-validation-v2.6.0.md)
+[科技](../../examples/technology/) · [经济学](../../examples/economics/) · [音乐](../../examples/music/) · [Agent 产品](../../examples/agent-product/) · [建筑史](../../examples/architecture/) · [明朝历史](../../examples/ming-history/)
 
-这是一个 Agent Skill，使用你当前 Agent 的检索、文档和定时工具。仅 PDF 需要 XeLaTeX。云文档通过官方 API/CLI 写入，Obsidian 写入本地 Vault；跨设备同步和无人值守执行取决于客户端与账号条件。
+<a id="versions"></a>
+## 版本指南
+
+| 版本 | 对学习的帮助 |
+| --- | --- |
+| **v3.0.0** | 直接选择大学课程路径，核对来源版本，预览真实多语言学习文档。 |
+| **v2.3–v2.6** | 按需轻量自测、使用个人材料、复习薄弱点，并更方便地安装与升级。 |
+| **v2** | 十种学习语言、四种本地格式，或把课程保存在连接的文档平台中。 |
+| **v1** | 先确认个人学习计划，再获取含配图、练习与延伸阅读的 PDF 课程。 |
+
+## 使用指南与运行条件
+
+[安装与升级](../../skills/omni-learning-anything/references/install.md) · [格式与字体](../../skills/omni-learning-anything/references/setup.md) · [连接文档平台](../../skills/omni-learning-anything/references/onboarding.md) · [分发渠道状态](../../docs/distribution-channels.md) · [v3.0.0 版本验证](../../docs/release-validation-v3.0.0.md)
+
+这是一个 Agent Skill，使用宿主提供的检索、文档与定时工具。仅 PDF 需要 XeLaTeX。云端访问、跨设备同步与无人值守交付取决于宿主、账号和授权条件；会检查当前客户端能力，不承诺所有平台通用。
 
 [MIT](../../LICENSE) · [Changelog](../../CHANGELOG.md) · [Attribution](../../ATTRIBUTION.md)

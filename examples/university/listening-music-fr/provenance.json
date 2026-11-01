@@ -1,0 +1,13 @@
+{
+  "release": "3.0.0",
+  "course_id": "yale-listening-music",
+  "language": "fr",
+  "checked_at": "2026-11-01",
+  "sample": "Independent six-day partial learning guide; only Day01 exported.",
+  "approval": "Simulated only for explicitly requested public examples; no real learner approval or job.",
+  "figure": "Original code-drawn conceptual teaching diagram; no measured data or original university slide.",
+  "figure_concept": "French labeled timeline with eight equal columns1–8 and three rows Frappes, Grave, Aigu. Frappes eight equal dots. Grave one horizontal segment columns1–4 and second5–8. Aigu rising three dots columns3,4,5. Minimal original conceptual listening map, not score or waveform.",
+  "builder": "tools/build_university_samples.py",
+  "source_ledger": "docs/v300-sample-sources.md",
+  "live_schedule": false
+}

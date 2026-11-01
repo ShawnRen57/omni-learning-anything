@@ -1,5 +1,6 @@
 """Installer boundaries, actual bundle structure and learner-data preservation."""
 import hashlib
+import json
 import shutil
 import tempfile
 import unittest
@@ -46,6 +47,30 @@ class InstallationTests(unittest.TestCase):
         self.install();(self.dest/'scripts/omni_quiz.py').unlink()
         result=self.engine().inspect(self.dest)
         self.assertFalse(result['complete']);self.assertFalse(result['integrity_verified'])
+
+    def test_registry_metadata_and_license_alias_only_affect_read_only_inspection(self):
+        self.install();s=self.engine();(self.dest/'.omni-install.json').unlink()
+        (self.dest/'LICENSE').rename(self.dest/'LICENSE.txt')
+        version=s.inspect(self.dest)['version']
+        metadata={'ownerId':'443532','publishedAt':1793520694104,'slug':'omni-learning-anything','version':version}
+        (self.dest/'_meta.json').write_text(json.dumps(metadata))
+        before={str(p.relative_to(self.dest)):p.read_bytes() for p in self.dest.rglob('*') if p.is_file()}
+        result=s.inspect(self.dest)
+        self.assertTrue(result['complete'],result['issues']);self.assertFalse(result['integrity_verified'])
+        self.assertFalse(result['managed_zip_install']);self.assertEqual(result['update_route'],'original_native_manager')
+        self.assertEqual(before,{str(p.relative_to(self.dest)):p.read_bytes() for p in self.dest.rglob('*') if p.is_file()})
+        sha=hashlib.sha256(self.archive.read_bytes()).hexdigest()
+        with self.assertRaises(ValueError):s.adopt(self.archive,self.dest,sha)
+        with self.assertRaises(ValueError):s.install(self.archive,self.dest,sha,update=True)
+        metadata['version']='0.0.0';(self.dest/'_meta.json').write_text(json.dumps(metadata))
+        self.assertFalse(s.inspect(self.dest)['complete'])
+
+    def test_registry_extras_do_not_relax_managed_zip_checks(self):
+        self.install();s=self.engine()
+        (self.dest/'_meta.json').write_text(json.dumps({'ownerId':'1','publishedAt':1,'slug':'omni-learning-anything','version':s.inspect(self.dest)['version']}))
+        self.assertFalse(s.inspect(self.dest)['complete']);self.assertFalse(s.inspect(self.dest)['integrity_verified'])
+        sha=self.make_zip(self.archive,lambda files:files.update({'_meta.json':b'{}'}))
+        with self.assertRaises(ValueError):s.archive_files(self.archive,sha)
 
     def test_checksum_and_unsafe_zip_fail_without_target(self):
         s=self.engine()

@@ -14,6 +14,8 @@ from omni_locale import language, subtitle, CJK_FONTS, ARABIC_FONTS
 def validate_document(data,root):
     sources=data.get('sources',[])
     config=c.read(root/'config.json'); material_config=config.get('materials')
+    from omni_courses import validate_sources
+    validate_sources(data,config,c.read(root/'plan.json'))
     if material_config:
         from omni_materials import validate_config as validate_material_config,validate_source
         validate_material_config(material_config)
@@ -23,7 +25,7 @@ def validate_document(data,root):
         if material_config['policy']=='supplemented' and not bound:raise ValueError('Material-first mode requires selected-material evidence.')
         for source in bound:validate_source(root,source,config)
     elif any('material_ref' in s for s in sources):raise ValueError('Material references require explicit configured material mode.')
-    elif len({s.get('url') for s in sources if s.get('url')})<5: raise ValueError('At least five distinct expansion links required.')
+    elif not config.get('course_pathway') and len({s.get('url') for s in sources if s.get('url')})<5: raise ValueError('At least five distinct expansion links required.')
     ids=[s.get('id') for s in sources]
     if len(set(ids))!=len(ids) or any(not re.fullmatch(r'S\d+',str(x)) for x in ids): raise ValueError('Source IDs must be unique S-numbers.')
     for s in sources:
@@ -54,6 +56,8 @@ def prepare(root, input_path, key):
     state = c.read(root / 'state.json'); plan = c.read(root / 'plan.json')
     c.validate_plan(plan)
     config = c.read(root / 'config.json'); data = c.read(input_path)
+    from omni_courses import validate_course_plan,with_context
+    validate_course_plan(config,plan)
     if key == 'plan':
         if input_path != root / 'plan.json':
             raise ValueError('Plan renderer must use canonical plan.json.')
@@ -74,7 +78,7 @@ def prepare(root, input_path, key):
         if reading + practice > config['daily_minutes']:
             raise ValueError('Lesson exceeds agreed time budget.')
     validate_document(data, root)
-    return data, plan, config
+    return with_context(data,config,plan), plan, config
 
 
 def material_markdown(value):

@@ -1,0 +1,114 @@
+{
+  "timezone": "Asia/Shanghai",
+  "language": "ar",
+  "daily_minutes": 10,
+  "sample_mode": true,
+  "course_pathway": {
+    "schema": 1,
+    "course": {
+      "id": "yale-death",
+      "title": "Death",
+      "institution": "Yale University",
+      "code": "PHIL 176",
+      "edition": "Spring 2007",
+      "instructors": [
+        "Shelly Kagan"
+      ],
+      "aliases": [
+        "死亡哲学",
+        "耶鲁死亡课",
+        "死亡",
+        "谢利卡根",
+        "Kagan"
+      ],
+      "domain": "philosophy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "愿意阅读并分析哲学论证的学习者；先修未在页面列明。",
+      "pace": {
+        "description": "原课每周两次50分钟；讨论与三篇五页论文；无期末考试。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "PHIL 176 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/death/phil-176",
+          "locator": "Course Structure; Requirements; Sessions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "死亡问题与人的本性",
+          "locator": "Lectures 1–2",
+          "source_id": "O1",
+          "focus": "区分二元论和物理主义。"
+        },
+        {
+          "id": "u02",
+          "title": "灵魂论证",
+          "locator": "Lectures 3–6",
+          "source_id": "O1",
+          "focus": "依序检验灵魂存在的理由。"
+        },
+        {
+          "id": "u03",
+          "title": "柏拉图与不朽",
+          "locator": "Lectures 7–9",
+          "source_id": "O1",
+          "focus": "评估灵魂不朽论证。"
+        },
+        {
+          "id": "u04",
+          "title": "个人同一性",
+          "locator": "Lectures 10–13",
+          "source_id": "O1",
+          "focus": "比较灵魂、身体与人格理论。"
+        },
+        {
+          "id": "u05",
+          "title": "死亡与相信死亡",
+          "locator": "Lectures 14–16",
+          "source_id": "O1",
+          "focus": "由同一性进入死亡及其坏处。"
+        },
+        {
+          "id": "u06",
+          "title": "剥夺与不朽",
+          "locator": "Lectures 17–19",
+          "source_id": "O1",
+          "focus": "比较剥夺解释和永生。"
+        },
+        {
+          "id": "u07",
+          "title": "生命价值与恐惧",
+          "locator": "Lectures 20–22",
+          "source_id": "O1",
+          "focus": "分析生命价值和死亡恐惧。"
+        },
+        {
+          "id": "u08",
+          "title": "如何生活与伦理论证",
+          "locator": "Lectures 23–26",
+          "source_id": "O1",
+          "focus": "讨论有限生命及自杀的哲学争论；不构成个人行动建议。"
+        }
+      ]
+    },
+    "sha256": "a2019cc574da07ea16c4d967fc54cd695f0baf754a3efc717c73fed9e324fef4",
+    "unit_ids": [
+      "u01",
+      "u02",
+      "u03"
+    ],
+    "pace": "adapted",
+    "practice": "light"
+  },
+  "delivery": {
+    "platform": "html",
+    "mode": "local"
+  }
+}

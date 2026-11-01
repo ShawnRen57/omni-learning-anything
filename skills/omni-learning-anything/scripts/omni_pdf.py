@@ -102,6 +102,9 @@ def render(root,input_path,key,export_formats=()):
             mins=reading+practice
             if not 1<=mins<=config['daily_minutes']: raise ValueError('Lesson exceeds agreed time budget.')
         validate_document(data,root)
+        from omni_courses import validate_course_plan,with_context
+        config=c.read(root/'config.json');validate_course_plan(config,plan)
+        data=with_context(data,config,plan)
         compiler=executable('xelatex')
         if not compiler: raise RuntimeError('XeLaTeX missing. Follow references/setup.md; no substitute PDF engine.')
         for d in ('pdf','sources','assets','manifests','previews'): (root/d).mkdir(exist_ok=True)

@@ -27,7 +27,7 @@ def digest(raw):return hashlib.sha256(raw).hexdigest()
 def allowed(name):
     parts=PurePosixPath(name).parts
     if not parts or any(x.startswith('.') or '.local.' in x for x in parts):return False
-    return name in ('SKILL.md','LICENSE','agents/openai.yaml') or (parts[0]=='references' and name.endswith('.md')) or (len(parts)==2 and parts[0]=='scripts' and ((parts[1].startswith('omni_') and name.endswith('.py')) or (parts[1].startswith('requirements') and name.endswith('.txt'))))
+    return name in ('SKILL.md','LICENSE','agents/openai.yaml','references/course-catalog.json') or (parts[0]=='references' and name.endswith('.md')) or (len(parts)==2 and parts[0]=='scripts' and ((parts[1].startswith('omni_') and name.endswith('.py')) or (parts[1].startswith('requirements') and name.endswith('.txt'))))
 
 
 def validate(files):
@@ -55,6 +55,18 @@ def validate(files):
                 modules=[a.name for a in node.names] if isinstance(node,ast.Import) else [node.module or ''] if isinstance(node,ast.ImportFrom) else []
                 for module in modules:
                     if module.startswith('omni_') and 'scripts/'+module+'.py' not in files:issues.append('Missing local module '+module)
+    if 'scripts/omni_courses.py' in files:
+        name='references/course-catalog.json'
+        if name not in files:issues.append('Missing '+name)
+        else:
+            try:
+                from omni_courses import validate_course
+                data=json.loads(files[name])
+                require(data.get('schema')==1 and isinstance(data.get('courses'),list) and data['courses'],'Invalid course catalog.')
+                for course in data['courses']:validate_course(course)
+                ids=[course['id'] for course in data['courses']]
+                require(len(ids)==len(set(ids)),'Duplicate course ID.')
+            except (ValueError,TypeError,KeyError,AttributeError):issues.append('Invalid '+name)
     return version,sorted(set(issues))
 
 
@@ -72,12 +84,27 @@ def tree_files(root):
 
 def inspect(path):
     root=Path(path).absolute();require(root.is_dir(), 'Choose the installed Skill folder containing SKILL.md.')
-    files,issues=tree_files(root);version,missing=validate(files);issues+=missing
+    files,issues=tree_files(root);version,_=validate(files)
     receipt=root/RECEIPT;managed=receipt.is_file() and not receipt.is_symlink();verified=False
+    normalized=[]
+    # Recognition is for read-only completeness, never authenticity or adoption.
+    meta=root/'_meta.json'
+    if not managed and meta.is_file() and not meta.is_symlink() and meta.stat().st_size<=8192:
+        try:
+            value=json.loads(meta.read_text())
+            recognized=isinstance(value,dict) and set(value)=={'ownerId','publishedAt','slug','version'} and value['slug']==NAME and value['version']==version and isinstance(value['ownerId'],str) and bool(value['ownerId']) and type(value['publishedAt']) is int and value['publishedAt']>0
+        except (ValueError,UnicodeError):recognized=False
+        if recognized:
+            issues.remove('Unmanaged file: _meta.json');normalized.append('_meta.json: registry metadata, not integrity proof')
+            alias=root/'LICENSE.txt'
+            if 'LICENSE' not in files and alias.is_file() and not alias.is_symlink() and alias.stat().st_size<=65536:
+                files['LICENSE']=alias.read_bytes();issues.remove('Unmanaged file: LICENSE.txt');normalized.append('LICENSE.txt: license filename alias')
+    version,missing=validate(files);issues+=missing
     if managed:
         value=json.loads(receipt.read_text());verified=value.get('schema')==1 and value.get('version')==version and value.get('files')=={n:digest(raw) for n,raw in files.items()} and not issues
     return {'path':str(root),'version':version,'complete':not issues,'issues':issues,'managed_zip_install':managed,
             'integrity_verified':verified,'native_discovery':'unknown',
+            'inspection_normalizations':normalized,
             'next_action':'Verify the selected host native inventory or actual skill invocation; file presence alone is not discovery.',
             'update_route':'managed_zip' if managed else 'original_native_manager'}
 

@@ -1,0 +1,115 @@
+{
+  "topic": "Mercados financieros: recursos, tiempo y riesgo",
+  "title": "Mercados financieros: recursos, tiempo y riesgo",
+  "days": [
+    {
+      "day": 1,
+      "topic": "Las finanzas como coordinación a través del tiempo",
+      "course_units": [
+        "u01"
+      ],
+      "objective": "Distinguir financiación, resultado y reparto del riesgo."
+    },
+    {
+      "day": 2,
+      "topic": "Riesgo, crisis e innovación",
+      "course_units": [
+        "u01"
+      ],
+      "objective": "Reconocer incertidumbre sin confundir una herramienta con una garantía."
+    },
+    {
+      "day": 3,
+      "topic": "Diversificación y sus límites",
+      "course_units": [
+        "u02"
+      ],
+      "objective": "Explicar por qué repartir exposiciones puede cambiar algunos riesgos."
+    },
+    {
+      "day": 4,
+      "topic": "Seguros e instituciones",
+      "course_units": [
+        "u02"
+      ],
+      "objective": "Distinguir la función de un seguro del contexto de una charla invitada."
+    },
+    {
+      "day": 5,
+      "topic": "Qué pregunta plantea la eficiencia del mercado",
+      "course_units": [
+        "u03"
+      ],
+      "objective": "Separar una hipótesis sobre precios de una promesa de beneficio."
+    },
+    {
+      "day": 6,
+      "topic": "Deuda y primera revisión del recorrido",
+      "course_units": [
+        "u03"
+      ],
+      "objective": "Describir una obligación de pago y ubicar el primer examen original."
+    }
+  ],
+  "sections": [
+    {
+      "title": "Edición y alcance parcial",
+      "body": "Este recorrido usa Financial Markets, ECON 252 de Robert J. Shiller en Yale, primavera de 2011. La página del curso identifica esa edición y sus sesiones. [S1] Elegimos solo los tres primeros grupos del catálogo: propósito, riesgo e innovación (clases 1–3); diversificación, seguros y una intervención invitada (4–6); eficiencia y deuda (7–8), con el primer examen situado entre esas últimas clases. Seis días constituyen una entrada parcial; no completan esos grupos ni el curso entero.\nLas explicaciones y el ejemplo de un taller son originales de esta guía. No son una cita del profesor ni un caso observado. Estudiamos funciones de las instituciones, sin formular decisiones de inversión personales ni presentar la edición de 2011 como descripción de la regulación actual.\n\nEl programa original exige familiaridad con álgebra elemental y cálculo, según el syllabus de Yale [S1]. El primer día de esta muestra solo usa una resta y el orden temporal de los pagos. Esta entrada accesible no elimina los requisitos del curso completo; si faltan bases para las siguientes unidades, acordaremos una preparación específica."
+    },
+    {
+      "title": "Cómo usar diez minutos",
+      "body": "Cada día dedica siete minutos a leer una explicación y mirar un diagrama, y tres a preguntas breves. Puedes contestar de palabra; no necesitas hoja de cálculo, cuenta financiera ni datos privados. Si una palabra resulta nueva, anota una definición tentativa y un ejemplo. Es mejor conservar una distinción clara que acumular términos que todavía se confunden.\nVer las clases completas y resolver los ejercicios originales requiere tiempo adicional. La página del curso incluye requisitos y evaluaciones que esta guía no sustituye. [S1] No intentamos convertir los minutos de lectura en equivalentes de créditos. Las fuentes se ofrecen para ampliar o comprobar, y su consulta extensa queda fuera del presupuesto diario."
+    },
+    {
+      "title": "Días 1 y 2: el primer grupo",
+      "body": "El día 1, « Las finanzas como coordinación a través del tiempo », toma una pequeña parte de u01. Identifica quién aporta recursos ahora, quién promete algo después y quién soporta un resultado incierto. El día 2, « Riesgo, crisis e innovación », permanece en u01 y pregunta qué cambia una herramienta y qué incertidumbre permanece.\nEl objetivo no es aprender a seleccionar productos. Basta con describir una relación entre participantes y distinguir una obligación de un resultado. En el primer ejemplo, recibir recursos para producir no demuestra que el proyecto vaya a vender; esa diferencia prepara la conversación sobre riesgo."
+    },
+    {
+      "title": "Días 3 a 6: dos grupos más",
+      "body": "Los días 3 y 4 corresponden a u02. « Diversificación y sus límites » examina un reparto sencillo de exposiciones; « Seguros e instituciones » separa una función institucional del contexto de una charla invitada. No usamos la presencia de un invitado en el programa como prueba de que sus opiniones sean recomendaciones actuales.\nLos días 5 y 6 corresponden a u03: « Qué pregunta plantea la eficiencia del mercado » y « Deuda y primera revisión del recorrido ». Ubicaremos el examen original sin reproducirlo como una prueba de tres minutos. Dos días por grupo indican selección y ritmo de la guía, no cobertura exhaustiva. Las clases posteriores sobre acciones, inmuebles, banca y otros temas exigen otro recorrido."
+    },
+    {
+      "title": "Una comprobación que no depende de memorizar",
+      "body": "Para cada situación, señala tres cosas: el recurso que se mueve, el momento en que se mueve y el compromiso asociado. Después pregunta qué podría ocurrir de forma distinta de la prevista. Si no puedes identificar quién asume una pérdida, falta una pieza del modelo. Si todos parecen obtener un resultado seguro, revisa qué supuesto has introducido sin explicarlo.\nLos números de la primera lección son inventados para hacer visibles las relaciones. No son tipos de interés, precios actuales ni rendimientos estimados. El diagrama tampoco representa una recomendación o una simulación de mercado. Puedes cambiar el tamaño del taller y comprobar qué relaciones se conservan; no necesitas aumentar la dificultad numérica."
+    },
+    {
+      "title": "Fuentes y continuación",
+      "body": "La página original del curso [S1] permite comprobar la edición, la estructura y el orden. La primera clase [S2] presenta las finanzas dentro de una visión amplia de organización de recursos y gestión del riesgo. Ambas se verificaron el 1 de noviembre de 2026. La segunda es contenido original de clase, no solo un índice, y se usa para situar la pregunta del día.\nAl terminar seis días, vuelve al grupo cuya distinción resulte menos clara y reserva una sesión larga para sus materiales originales. Haber seguido esta ruta significa haber practicado un vocabulario de análisis; no equivale a superar los exámenes de Yale ni a poder evaluar cualquier contrato real."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Financial Markets (2011)",
+      "url": "https://oyc.yale.edu/economics/econ-252",
+      "publisher": "Yale University · Open Yale Courses",
+      "note": "Página original del curso: edición de primavera de 2011, programa y evaluaciones. La dirección econ-252-11 del índice no respondió; esta es la página verificada.",
+      "checked_at": "2026-11-01",
+      "published_at": "Primavera de 2011",
+      "course_ref": {
+        "course_id": "yale-financial-markets",
+        "sha256": "0f538e342b91b052a7ba034a9a61e9e933b517993446dd688fafbb7ac96bbada",
+        "source_id": "O1",
+        "unit_ids": [
+          "u01",
+          "u02",
+          "u03"
+        ]
+      }
+    },
+    {
+      "id": "S2",
+      "title": "ECON 252 (2011) — Lecture 1 — Introduction and What this Course Will Do for You and Your Purposes",
+      "url": "https://oyc.yale.edu/economics/econ-252-11/lecture-1",
+      "publisher": "Yale University · Open Yale Courses",
+      "note": "Página y transcripción originales; encuadre de recursos, tiempo y riesgo. El taller y todas sus cifras son ejemplos propios de la guía.",
+      "checked_at": "2026-11-01",
+      "published_at": "Primavera de 2011"
+    }
+  ],
+  "figure": {
+    "caption": "Ejemplo inventado: 100 unidades hoy, una promesa de 105 después e ingresos que pueden ser distintos.",
+    "credit": "Diagrama conceptual original de esta guía; no es una imagen de Yale ni contiene datos de mercado.",
+    "path": "assets/teaching.png"
+  }
+}

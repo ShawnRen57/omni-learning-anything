@@ -1,0 +1,115 @@
+{
+  "timezone": "Asia/Shanghai",
+  "language": "es",
+  "daily_minutes": 10,
+  "sample_mode": true,
+  "course_pathway": {
+    "schema": 1,
+    "course": {
+      "id": "yale-financial-markets",
+      "title": "Financial Markets",
+      "institution": "Yale University",
+      "code": "ECON 252",
+      "edition": "Spring 2011",
+      "instructors": [
+        "Robert J. Shiller"
+      ],
+      "aliases": [
+        "金融市场",
+        "耶鲁金融市场",
+        "罗伯特席勒",
+        "Shiller"
+      ],
+      "domain": "finance",
+      "level": "introductory",
+      "prerequisites": [
+        "原课要求初等代数与微积分的基本能力。"
+      ],
+      "audience": "希望理解风险和金融机构的学习者；历史课程用于知识学习。",
+      "pace": {
+        "description": "原课每周两次75分钟；问题集、两次期中和期末。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "ECON 252 (2011) — Open Yale Courses",
+          "url": "https://oyc.yale.edu/economics/econ-252",
+          "locator": "Course Structure; Requirements; Sessions",
+          "checked_at": "2026-11-01",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "金融目的与风险",
+          "locator": "Lectures 1–3",
+          "source_id": "O1",
+          "focus": "从金融目的进入危机与创新。"
+        },
+        {
+          "id": "u02",
+          "title": "分散投资与保险",
+          "locator": "Lectures 4–6",
+          "source_id": "O1",
+          "focus": "组合、保险，随后Swensen客座课。"
+        },
+        {
+          "id": "u03",
+          "title": "市场效率与债务",
+          "locator": "Lecture 7; Exam 1; Lecture 8",
+          "source_id": "O1",
+          "focus": "在效率与债务之间保留期中。"
+        },
+        {
+          "id": "u04",
+          "title": "股票、房产与行为",
+          "locator": "Lectures 9–11",
+          "source_id": "O1",
+          "focus": "比较资产及心理因素。"
+        },
+        {
+          "id": "u05",
+          "title": "监管与银行",
+          "locator": "Lectures 12–14",
+          "source_id": "O1",
+          "focus": "危机治理、银行与Greenberg客座课。"
+        },
+        {
+          "id": "u06",
+          "title": "远期与期权",
+          "locator": "Lecture 15; Exam 2; Lectures 16–17",
+          "source_id": "O1",
+          "focus": "依次保留期中、Laura Cha客座课和期权。"
+        },
+        {
+          "id": "u07",
+          "title": "货币与中介",
+          "locator": "Lectures 18–21",
+          "source_id": "O1",
+          "focus": "连接政策、投行、资管及交易基础设施。"
+        },
+        {
+          "id": "u08",
+          "title": "公共金融与目的",
+          "locator": "Lectures 22–23; Exam 3",
+          "source_id": "O1",
+          "focus": "联系公共目标并保留期末。"
+        }
+      ]
+    },
+    "sha256": "0f538e342b91b052a7ba034a9a61e9e933b517993446dd688fafbb7ac96bbada",
+    "unit_ids": [
+      "u01",
+      "u02",
+      "u03"
+    ],
+    "pace": "adapted",
+    "practice": "light"
+  },
+  "delivery": {
+    "platform": "html",
+    "mode": "local"
+  }
+}
