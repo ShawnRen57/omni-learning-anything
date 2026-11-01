@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[Skill ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -27,6 +27,7 @@
 | **v2.3.0** | 학습 후 원할 때 짧은 확인 문제를 시작하세요. 선택이나 짧은 답변으로 근거 있는 피드백을 받고 힌트·건너뛰기·이어하기를 이용할 수 있습니다. 퀴즈 알림이나 예약 작업은 만들지 않습니다. |
 | **v2.4.0** | 자신의 책·논문·강의 자료로 학습하세요. 페이지나 장을 지정하고 설명과 확인 문제의 원문 위치를 확인하며 외부 보충 자료 허용 여부를 선택할 수 있습니다. |
 | **v2.5.0** | 다시 학습할 때 하루 시간 안에서 조금씩 복습하세요. 답변에 근거한 학습 기록을 확인하고 판단을 바로잡으며, 동의 후 이후 수업을 조정하고 Anki 카드로 내보낼 수 있습니다. |
+| **v2.6.0** | 대화, 명령 하나 또는 에이전트의 기본 설치 기능을 이용하세요. 필요한 환경만 확인하고 강좌와 연결을 보존하며 업데이트할 수 있습니다. |
 
 “경제학을 조금 배우고 싶어요”라고만 말해도 됩니다. Omni는 학습 방향과 순서를 제안하고 가정을 표시하며, 과정에 영향을 주는 정보만 질문합니다. 목표가 명확하면 바로 계획을 세웁니다.
 
@@ -55,6 +56,24 @@
 | Tencent Docs | 홈 루트 또는 개인 폴더 링크. 공식 페이지에서 로그인하고 권한을 확인합니다. |
 
 Agent 는 기존 인증을 확인하고 부족한 정보만 물어보며 설정을 안내합니다. 객체 ID 를 찾거나 설정 파일을 직접 쓸 필요가 없습니다. 비밀번호와 Token 을 대화에 붙여 넣지 마세요. 조직 승인에는 추가 단계가 필요할 수 있습니다.
+
+## 나에게 맞는 설치 방법
+
+에이전트에게 최신 릴리스를 설치하고 기존 강좌와 연결을 보존한 뒤, 현재 클라이언트에서 검색하고 사용할 수 있는지 확인해 달라고 요청하세요.
+
+Node.js가 있다면 아래 명령을 실행하고 에이전트를 선택하세요. 프로젝트에만 설치하려면 `-g`를 빼세요.
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+Claude Code에서:
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+Node.js가 없어도 위의 Skill ZIP을 클라이언트에 업로드하거나 에이전트에게 설치를 요청할 수 있습니다. [설치, 첫 사용 및 안전한 업데이트](../../skills/omni-learning-anything/references/install.md)
 
 ## 대화로 시작하기
 
@@ -91,7 +110,7 @@ omni-learning-anything 으로 여행을 위한 건축사를 배우고 싶어요.
 
 ## 설치와 안내
 
-[Agent 에 설치하기](../../skills/omni-learning-anything/references/install.md) · [형식과 글꼴 설정](../../skills/omni-learning-anything/references/setup.md) · [문서 연결](../../skills/omni-learning-anything/references/onboarding.md) · [릴리스 검증](../../docs/release-validation-v2.5.0.md)
+[Agent 에 설치하기](../../skills/omni-learning-anything/references/install.md) · [형식과 글꼴 설정](../../skills/omni-learning-anything/references/setup.md) · [문서 연결](../../skills/omni-learning-anything/references/onboarding.md) · [릴리스 검증](../../docs/release-validation-v2.6.0.md)
 
 이 Agent Skill 은 Agent 의 검색, 문서, 예약 도구를 사용합니다. PDF 만 XeLaTeX 이 필요합니다. 클라우드 문서는 공식 API/CLI 로 쓰고 Obsidian 은 로컬 Vault 에 씁니다. 기기 간 동기화와 무인 실행은 호스트와 계정 조건에 따릅니다.
 

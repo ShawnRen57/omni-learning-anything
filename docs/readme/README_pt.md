@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Descarregar Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[Descarregar Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -27,6 +27,7 @@ Diga ao seu agente qual é o objetivo, a sua experiência e o tempo disponível.
 | **v2.3.0** | Confira o que aprendeu quando quiser, com perguntas curtas e feedback fundamentado. Peça dicas, pule e retome. Sem lembretes ou tarefas agendadas de questionários. |
 | **v2.4.0** | Aprenda com seus livros, artigos e materiais de curso: selecione páginas ou capítulos, confira os trechos originais e escolha se permite fontes externas. |
 | **v2.5.0** | Ao voltar, faça uma pequena revisão dentro do seu tempo diário, veja o que suas respostas mostram, corrija avaliações, aprove mudanças nas próximas aulas e exporte cartões para o Anki. |
+| **v2.6.0** | Instale pelo chat, com um comando ou pelo seu agente. Verifique só o necessário e atualize preservando cursos e conexões. |
 
 Você pode dizer apenas “Quero aprender um pouco de economia”. Omni sugere caminhos e uma sequência coerente, explicita suposições e pergunta apenas o que muda o curso. Se o objetivo já for claro, passa ao planejamento.
 
@@ -55,6 +56,24 @@ Os planos e as aulas podem ser escritos nestes idiomas. O idioma do curso é ind
 | Tencent Docs | Raiz da página inicial ou pasta pessoal; inicie sessão e confira as permissões na página oficial. |
 
 O agente verifica os acessos existentes, pergunta apenas pelo que falta e explica os passos. Não precisa de procurar identificadores nem de escrever ficheiros de configuração. Não cole palavras-passe ou tokens na conversa. As aprovações da organização podem exigir passos adicionais.
+
+## Escolha como instalar
+
+Peça ao agente para instalar a versão mais recente, preservar cursos e conexões e confirmar que o cliente consegue encontrar e usar a habilidade.
+
+Com Node.js, execute o comando abaixo e escolha seu agente. Omita `-g` para instalar apenas no projeto.
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+No Claude Code:
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+Sem Node.js, baixe o Skill ZIP acima e importe no cliente, ou peça ao agente para instalar. [Instalação, primeiro uso e atualizações seguras](../../skills/omni-learning-anything/references/install.md)
 
 ## Começar pela conversa
 
@@ -91,7 +110,7 @@ Consulte planos e PDFs diários de tecnologia, economia, música, design de prod
 
 ## Instalação e guias
 
-[Instalar no agente](../../skills/omni-learning-anything/references/install.md) · [Formatos e fontes](../../skills/omni-learning-anything/references/setup.md) · [Ligar documentos](../../skills/omni-learning-anything/references/onboarding.md) · [Validação da versão](../../docs/release-validation-v2.5.0.md)
+[Instalar no agente](../../skills/omni-learning-anything/references/install.md) · [Formatos e fontes](../../skills/omni-learning-anything/references/setup.md) · [Ligar documentos](../../skills/omni-learning-anything/references/onboarding.md) · [Validação da versão](../../docs/release-validation-v2.6.0.md)
 
 Esta Agent Skill utiliza as ferramentas de pesquisa, documentos e agendamento do seu agente. Apenas PDF precisa de XeLaTeX. A nuvem usa APIs/CLIs oficiais; Obsidian escreve no Vault local. A sincronização e a execução autónoma dependem do sistema anfitrião e da conta.
 

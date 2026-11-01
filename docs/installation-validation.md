@@ -59,3 +59,7 @@ Codex 的 GitHub 安装器整仓库下载等待较长，本次停止该下载并
 Both Codex CLI and DSH Desktop loaded the freshly installed `omni-learning-anything` bundle and produced a reviewed one-page XeLaTeX PDF using synthetic fixtures. Installed files match the public release ZIP; a clean Python environment was populated from the bundled requirements. Python <3.10 is now explicitly rejected.
 
 The tested installation route is the lightweight release ZIP, not a completed GitHub skill-installer / Skills CLI run. Existing TeX/fonts were reused. This check covers native skill loading, installed resources, helper execution, PDF output and the approval boundary. The Skill test scope is installation, workflow, course state and document output. Host scheduler reliability is outside this scope.
+
+## v2.6.0 补充 — 2026-11-01
+
+上文保留为历史验收记录。本次已补做社区 skills CLI 的真实 GitHub 安装/更新、官方 Codex GitHub 安装器，以及 Codex 原生技能清单和 Claude Code 原生插件组件清单验收；详见 [v2.6.0 验证记录](release-validation-v2.6.0.md)。原有客户端上传界面的历史记录不代表本次重新验收了这些界面的所有最新版本。

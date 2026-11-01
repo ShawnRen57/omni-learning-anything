@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Télécharger le Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[Télécharger le Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -27,6 +27,7 @@ Indiquez à votre agent votre objectif, votre expérience et le temps disponible
 | **v2.3.0** | Vérifiez vos acquis quand vous le souhaitez avec des questions courtes et un retour étayé. Demandez un indice, passez ou reprenez. Aucun rappel ni tâche programmée de quiz. |
 | **v2.4.0** | Apprenez avec vos livres, articles et supports de cours : choisissez pages ou chapitres, retrouvez les passages cités et décidez si des sources externes sont autorisées. |
 | **v2.5.0** | À votre retour, révisez un peu dans votre temps quotidien, consultez les progrès étayés par vos réponses, corrigez les appréciations, approuvez les changements des prochaines leçons et exportez des cartes Anki. |
+| **v2.6.0** | Installez depuis le chat, avec une commande ou avec votre agent. Vérifiez uniquement le nécessaire et mettez à jour en conservant cours et connexions. |
 
 Vous pouvez simplement dire « Je voudrais découvrir l’économie ». Omni propose des orientations et une progression cohérente, signale ses hypothèses et ne demande que les précisions qui changent le cours. Si l’objectif est précis, il passe à la planification.
 
@@ -55,6 +56,24 @@ Les plans et les leçons peuvent être rédigés dans ces langues. La langue du 
 | Tencent Docs | Racine de l’accueil ou dossier personnel ; connexion et vérification des droits sur la page officielle. |
 
 L’agent vérifie les accès existants, demande seulement les informations manquantes et explique les démarches. Vous n’avez pas à rechercher des identifiants ni à écrire des fichiers de configuration. Ne collez pas de mots de passe ou de tokens dans la conversation. Les validations de votre organisation peuvent ajouter des étapes.
+
+## Choisissez votre installation
+
+Demandez à votre agent la dernière version, en conservant vos cours et connexions et en vérifiant que le client peut détecter et utiliser le skill.
+
+Avec Node.js, exécutez cette commande et choisissez votre agent. Omettez `-g` pour une installation dans le projet.
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+Dans Claude Code :
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+Sans Node.js, téléchargez le Skill ZIP ci-dessus et importez-le dans votre client, ou demandez à votre agent de l’installer. [Installation, premier usage et mises à jour sûres](../../skills/omni-learning-anything/references/install.md)
 
 ## Commencer dans la conversation
 
@@ -91,7 +110,7 @@ Consultez les plans et PDF quotidiens de technologie, économie, musique, concep
 
 ## Installation et guides
 
-[Installer dans votre agent](../../skills/omni-learning-anything/references/install.md) · [Formats et polices](../../skills/omni-learning-anything/references/setup.md) · [Connecter vos documents](../../skills/omni-learning-anything/references/onboarding.md) · [Validation de la version](../../docs/release-validation-v2.5.0.md)
+[Installer dans votre agent](../../skills/omni-learning-anything/references/install.md) · [Formats et polices](../../skills/omni-learning-anything/references/setup.md) · [Connecter vos documents](../../skills/omni-learning-anything/references/onboarding.md) · [Validation de la version](../../docs/release-validation-v2.6.0.md)
 
 Cette Agent Skill utilise les outils de recherche, de documents et de programmation de votre agent. Seul le PDF nécessite XeLaTeX. Les documents cloud utilisent les API/CLI officielles ; Obsidian écrit dans le Vault local. La synchronisation et l’exécution sans surveillance dépendent de l’hôte et du compte.
 

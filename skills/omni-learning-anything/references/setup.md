@@ -6,20 +6,23 @@ Check the interpreter version first: macOS may resolve `python3` to an older sys
 
 ## Install only the selected route's dependencies
 
+The agent first runs `omni_learning.py setup-check --platform SELECTED --mode SELECTED_MODE` with a supported interpreter. Its `pip_argv` installs only actual missing packages for that route; re-run the recipe in the chosen external environment. The broad requirements files below are convenience bundles, not mandatory for HTML/Markdown/Vault. Hosts without an OS IANA timezone database need tzdata even for these routes; the recipe detects this condition. Installation itself never grants native discovery or cloud authorization. Keep the environment outside the installed bundle and course approval files.
+
+
 ```sh
-python3 -m venv .venv
+python3 -m venv /outside-skill/omni-env
 # HTML / Markdown / DOCX / cloud / Obsidian (no PDF packages or TeX):
-.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-documents.txt
+/outside-skill/omni-env/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-documents.txt
 # PDF, or repository development including PDF regression tests:
-.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements.txt
+/outside-skill/omni-env/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements.txt
 # Tencent legacy application API route additionally needs the official COS SDK:
-.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent.txt
+/outside-skill/omni-env/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent.txt
 # Tencent official OAuth/MCP default route:
-.venv/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent-mcp.txt
-.venv/bin/python /installed/omni-learning-anything/scripts/omni_learning.py --project /course doctor
+/outside-skill/omni-env/bin/python -m pip install -r /installed/omni-learning-anything/scripts/requirements-tencent-mcp.txt
+/outside-skill/omni-env/bin/python /installed/omni-learning-anything/scripts/omni_learning.py --project /course doctor
 ```
 
-Windows: use `py -3 -m venv .venv` and `.venv\Scripts\python.exe`. Select current host commands; offline installation is not promised. Standard-library Markdown/Vault export can run without DOCX/HTTP/PDF libraries; images must already be valid local PNG/JPEG. DOCX lazily imports python-docx/Pillow; API routes lazily import requests, and Tencent imports the COS SDK only when an actual upload is needed.
+Windows: choose an external environment folder, for example `py -3 -m venv C:\OmniRuntime`, then use `C:\OmniRuntime\Scripts\python.exe`. Select current host commands; offline installation is not promised. Standard-library Markdown/Vault export can run without DOCX/HTTP/PDF libraries; images must already be valid local PNG/JPEG. DOCX lazily imports python-docx/Pillow; API routes lazily import requests, and Tencent imports the COS SDK only when an actual upload is needed.
 
 DOCX: render using an available approved viewer/converter and inspect all pages. Bundled generation embeds Chinese text, images, source links and image descriptions; the viewer's font availability affects rendering. Prefer FangSong/Times New Roman when available; do not install proprietary fonts or promise identical cloud fonts.
 

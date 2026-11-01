@@ -22,6 +22,7 @@ def main():
     sub.add_parser('connection-list')
     p=sub.add_parser('tencent-auth');p.add_argument('action',choices=['login','start','poll','status']);p.add_argument('--name',required=True)
     p=sub.add_parser('doctor'); p.add_argument('--config',type=Path); p.add_argument('--host'); p.add_argument('--host-report',type=Path); p.add_argument('--background',action='store_true')
+    p=sub.add_parser('setup-check'); p.add_argument('--platform',required=True); p.add_argument('--mode'); p.add_argument('--material-format')
     p=sub.add_parser('brief-check'); p.add_argument('--input',type=Path,required=True)
     p=sub.add_parser('onboarding-record'); p.add_argument('--event',required=True); p.add_argument('--id',dest='event_id',required=True); p.add_argument('--stage'); p.add_argument('--user-actions',type=int); p.add_argument('--usage',type=Path)
     sub.add_parser('onboarding-status')
@@ -42,9 +43,17 @@ def main():
     configure_materials(sub)
     from omni_study_cli import configure as configure_study
     configure_study(sub)
+    from omni_installation_cli import configure as configure_installation
+    configure_installation(sub)
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
     try:
-        if args.command=='study':
+        if args.command=='installation':
+            from omni_installation_cli import execute as execute_installation
+            result=execute_installation(args)
+        elif args.command=='setup-check':
+            from omni_setup import plan as setup_plan
+            result=setup_plan(args.platform,args.mode,material_format=args.material_format)
+        elif args.command=='study':
             from omni_study_cli import execute as execute_study
             result=execute_study(root,args)
         elif args.command=='materials':

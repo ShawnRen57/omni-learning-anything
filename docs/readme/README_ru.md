@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Скачать Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[Скачать Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -27,6 +27,7 @@
 | **v2.3.0** | Проверяйте понимание, когда будете готовы: короткие вопросы, обоснованная обратная связь, подсказки, пропуск и продолжение. Без напоминаний и запланированных заданий для тестов. |
 | **v2.4.0** | Учитесь по своим книгам, статьям и материалам курса: выбирайте страницы или главы, проверяйте исходные фрагменты и решайте, разрешать ли внешние дополнения. |
 | **v2.5.0** | Возвращайтесь к небольшому повторению в пределах дневного времени: смотрите выводы по своим ответам, исправляйте оценки, подтверждайте изменения будущих уроков и экспортируйте карточки в Anki. |
+| **v2.6.0** | Устанавливайте через чат, одной командой или средствами агента. Проверяйте только нужное окружение и обновляйте с сохранением курсов и подключений. |
 
 Достаточно сказать: «Хочу немного изучить экономику». Omni предложит направления и последовательность, обозначит предположения и уточнит только то, что меняет курс. Если цель уже ясна, он сразу перейдёт к планированию.
 
@@ -55,6 +56,24 @@
 | Tencent Docs | Корень главной страницы или личную папку; войдите и проверьте разрешения на официальной странице. |
 
 Агент проверит существующий доступ, спросит только недостающие сведения и объяснит действия. Не нужно искать идентификаторы объектов или писать конфигурационные файлы. Не отправляйте пароли и токены в чат. Согласования в организации могут потребовать дополнительных шагов.
+
+## Выберите способ установки
+
+Попросите агента установить последний релиз, сохранить курсы и подключения и проверить, что клиент обнаруживает и использует навык.
+
+Если установлен Node.js, выполните команду и выберите агента. Без `-g` установка действует только в проекте.
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+В Claude Code:
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+Без Node.js скачайте Skill ZIP выше и загрузите его в клиент либо попросите агента установить навык. [Установка, первое использование и безопасное обновление](../../skills/omni-learning-anything/references/install.md)
 
 ## Начните с разговора
 
@@ -91,7 +110,7 @@
 
 ## Установка и руководства
 
-[Установить в агент](../../skills/omni-learning-anything/references/install.md) · [Форматы и шрифты](../../skills/omni-learning-anything/references/setup.md) · [Подключить документы](../../skills/omni-learning-anything/references/onboarding.md) · [Проверка выпуска](../../docs/release-validation-v2.5.0.md)
+[Установить в агент](../../skills/omni-learning-anything/references/install.md) · [Форматы и шрифты](../../skills/omni-learning-anything/references/setup.md) · [Подключить документы](../../skills/omni-learning-anything/references/onboarding.md) · [Проверка выпуска](../../docs/release-validation-v2.6.0.md)
 
 Это Agent Skill, использующий инструменты поиска, документов и расписаний вашего агента. XeLaTeX нужен только для PDF. Облачные документы записываются через официальные API/CLI; Obsidian — в локальный Vault. Синхронизация устройств и работа без присмотра зависят от хоста и аккаунта.
 

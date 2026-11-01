@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[下载 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -28,6 +28,7 @@
 | **v2.3.0** | 学完后主动开始短测：选一选、简短回答或聊一聊，获得有依据的反馈；可提示、跳过和续答，不创建短测提醒或定时任务。 |
 | **v2.4.0** | 用自己的书籍、论文和课程资料学习：指定页码或章节，解释和短测可追溯原文，并选择是否允许补充外部知识。 |
 | **v2.5.0** | 回来学习时，按每天的时间安排少量复习；看清作答体现的进展、纠正学习判断，确认后调整后续课程，还可导出 Anki 卡片。 |
+| **v2.6.0** | 通过对话、一条命令或客户端原生入口更轻松地安装；只检查所需环境，更新时保留课程、学习记录和连接。 |
 
 例如只说“我想学点经济学”也可以。Omni 会提出适合的学习方向和有先后关系的路径，标明需要确认的假设，只追问会改变课程的关键信息；目标已经明确时，直接进入规划。
 
@@ -58,6 +59,24 @@
 你只需说清课程存在哪里。Agent 会检查已有授权，只询问缺少的信息，提供平台操作指引，并复用命名连接。无需查对象 ID、手写配置文件，也不要把密码或 Token 发到聊天里。组织审批等情况可能需要额外步骤。
 
 <a id="quick-start"></a>
+## 选择适合你的安装方式
+
+让 Agent 安装最新发布版，保留已有课程和连接，并确认当前客户端可以发现、启用和使用它。
+
+已安装 Node.js 时，运行下面的命令并选择你的 Agent；去掉 `-g` 则仅安装到当前项目。
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+在 Claude Code 中：
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+没有 Node.js？可下载上方 Skill ZIP，使用客户端上传技能，或让 Agent 帮你安装。 [安装、首次使用与安全更新](../../skills/omni-learning-anything/references/install.md)
+
 ## 从对话开始
 
 把这段话发送给你的 Agent：
@@ -105,7 +124,7 @@
 
 ## 安装与使用指南
 
-[安装到你的 Agent](../../skills/omni-learning-anything/references/install.md) · [文件格式与字体配置](../../skills/omni-learning-anything/references/setup.md) · [连接云文档](../../skills/omni-learning-anything/references/onboarding.md) · [版本验证记录](../../docs/release-validation-v2.5.0.md)
+[安装到你的 Agent](../../skills/omni-learning-anything/references/install.md) · [文件格式与字体配置](../../skills/omni-learning-anything/references/setup.md) · [连接云文档](../../skills/omni-learning-anything/references/onboarding.md) · [版本验证记录](../../docs/release-validation-v2.6.0.md)
 
 这是一个 Agent Skill，使用你当前 Agent 的检索、文档和定时工具。仅 PDF 需要 XeLaTeX。云文档通过官方 API/CLI 写入，Obsidian 写入本地 Vault；跨设备同步和无人值守执行取决于客户端与账号条件。
 

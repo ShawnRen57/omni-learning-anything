@@ -1,0 +1,10 @@
+{
+  "name": "omni-learning-anything",
+  "version": "2.6.0",
+  "description": "Turn a learning goal into a personalized, source-grounded course with illustrated daily lessons delivered to PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs or DingTalk.",
+  "homepage": "https://github.com/ShawnRen57/omni-learning-anything",
+  "license": "MIT",
+  "author": {
+    "name": "ShawnRen57"
+  }
+}

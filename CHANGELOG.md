@@ -1,5 +1,13 @@
 # Changelog
 
+## v2.6.0 — 2026-11-01
+
+- Install through chat, the community skills CLI, native Claude Code/Codex tooling or a complete release ZIP; keep instructions and versioned plugin metadata together.
+- Check bundled files and actual native inventory separately, including host-specific invocation names and enabled state.
+- Get selected-only setup recipes before course creation; HTML/Markdown/Vault need no optional Python packages, and only the chosen cloud route prompts for official access.
+- Keep courses, learning records, virtual environments and reusable connections outside installed Skill folders. Verified standalone ZIP updates retain a backup and refuse unknown or modified files; exact historical ZIP copies can be enrolled safely.
+- Preserve existing learning/assessment/schedule boundaries; no new timers, reminders or cloud access grants.
+
 ## v2.5.0 — 2026-10-31
 
 - Return to a small source-grounded review queue that shares the approved daily time budget with new learning; balanced, new-first and review-only choices defer excess work without backlog pressure.

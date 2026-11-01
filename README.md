@@ -4,11 +4,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[Download Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -28,6 +28,7 @@ Tell your agent what you want to learn. Omni builds a plan around your goal, exp
 | **v2.3.0** | Check your understanding when you are ready: answer a few short questions, get grounded feedback, and pause or continue in your agent. No quiz reminders or timed tasks. |
 | **v2.4.0** | Learn from your own books, papers and course files: select pages or chapters, trace explanations and checks to original locations, and choose whether external supplements are allowed. |
 | **v2.5.0** | Return with a small review that fits your daily time, see what your answers actually show, correct learning judgments, adjust future lessons with approval, and export review cards to Anki. |
+| **v2.6.0** | Install more easily through chat, one command or your agent’s native installer. Check only the setup you need, then update while keeping your courses and connections. |
 
 You can start with “I want to learn a little economics.” Omni suggests useful directions and a coherent path, labels assumptions and asks only questions that change the course. If your goal is already specific, it proceeds directly to planning.
 
@@ -58,6 +59,24 @@ Plans and lessons can be authored in any of the languages below. Your topic, sou
 Say where you want to save the course. The agent checks existing access, asks only for missing details, guides the platform steps and reuses your named connection. You do not need to find object IDs or write configuration files. Do not paste passwords or tokens into chat. Organization approvals can require additional steps.
 
 <a id="quick-start"></a>
+## Install in the way that suits you
+
+Ask your agent to install the latest release, keep your existing courses and connections, and verify that this client can discover and use it.
+
+With Node.js installed, run the command below and choose your agent. Omit `-g` for a project install.
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+In Claude Code:
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+No Node.js? Download the Skill ZIP above and use your client’s skill upload, or ask your agent to install it. [Installation, first use and safe updates](skills/omni-learning-anything/references/install.md)
+
 ## Start through chat
 
 Send this to your agent:
@@ -105,7 +124,7 @@ Browse complete plans and daily PDFs for technology, economics, music, Agent pro
 
 ## Installation and guides
 
-[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.5.0.md)
+[Install on your agent](skills/omni-learning-anything/references/install.md) · [Format and font setup](skills/omni-learning-anything/references/setup.md) · [Connect your documents](skills/omni-learning-anything/references/onboarding.md) · [Release validation](docs/release-validation-v2.6.0.md)
 
 An Agent Skill, powered by your agent’s research, document and scheduling tools. PDF needs XeLaTeX; other output formats do not. Cloud writing uses official APIs/CLIs; Obsidian writes local Vault files. Cross-device sync and unattended scheduling depend on your host and account.
 

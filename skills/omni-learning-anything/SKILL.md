@@ -3,13 +3,13 @@ name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
 summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 2.5.0
+version: 2.6.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
 description: Build a personalized, source-grounded learning course with an approved plan and daily illustrated lessons delivered to PDF, HTML, Markdown, DOCX, Notion, Obsidian, Feishu, Tencent Docs or DingTalk. Use for systematic study, learning plans or continuing an Omni Learning Anything course; not for a one-off factual answer.
 license: MIT
 metadata:
-  version: "2.5.0"
+  version: "2.6.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -19,7 +19,7 @@ Turn “I want to learn X” into a coherent course. The agent researches and te
 
 ## Install or continue
 
-For installation, read [install](references/install.md), keep the self-contained bundle and verify native discovery. Read [setup](references/setup.md) for the selected format's dependencies.
+For installation, read [install](references/install.md), keep the self-contained bundle, run `installation inspect` and verify the selected host native inventory/enabled state. Resolve the actual discovered command name; do not assume every host exposes the same name. Keep course archives and virtual environments outside the installed bundle; use its original manager for upgrades and preserve external course/connection data. Read [setup](references/setup.md) for the selected format's dependencies.
 
 For an existing course, read `config.json`, `plan.json`, `state.json`, pending `receipts/` and the recent two lessons. Legacy courses without `delivery` retain PDF mode and historical hashes. Never copy another learner's identity/progress, reset archives or silently migrate an approved destination. Changing a started course's settings requires a new course version with approval.
 
@@ -35,7 +35,7 @@ Confirm where the learner wants the plan and daily materials. Offer PDF, HTML, M
 
 Read [onboarding](references/onboarding.md), then **only the selected provider** under [delivery](references/delivery.md#provider-guides). Aim for two or three short connection exchanges when the platform permits: location; official authorization if missing; only a specific access correction if needed. This is a usability target, not a promise that bypasses organization approval. Reuse confirmed settings and authorization; never re-ask on every lesson or a monthly timer.
 
-Use [readiness](references/readiness.md) to check the selected route before expensive generation, keep host capabilities unknown until actually observed, and distinguish foreground from background evidence. Record first-use milestones privately when useful; unknown cost stays unknown. Do not turn diagnostic JSON or commands into learner homework.
+Run `setup-check --platform SELECTED_PLATFORM` (and the selected mode/input format when relevant) to obtain only the needed dependencies and official-tool steps; the agent handles setup in an external environment. Use [readiness](references/readiness.md) to check the selected route before expensive generation, keep host capabilities unknown until actually observed, and distinguish foreground from background evidence. Record first-use milestones privately when useful; unknown cost stays unknown. Do not turn diagnostic JSON or commands into learner homework.
 
 Cloud delivery defaults to **official APIs**, either through an already authorized writable connector that uses those APIs or the official CLI/API adapter. Confirm actual create/media/readback capabilities. For new cloud courses prefer `connect`: official `ntn` for Notion, `lark-cli` for Feishu, `dws` for DingTalk, and the official OAuth/MCP API for Tencent Docs; the agent installs/checks the selected tool, extracts the supplied link's ID, initiates official authorization, checks identity and destination, and copies the returned `delivery` into intake config. The learner provides a parent-page/folder link and completes official login/grants, rather than editing JSON or running commands. Obsidian is the agreed exception: local Vault Markdown; no invented cloud API or mandatory community plugin.
 

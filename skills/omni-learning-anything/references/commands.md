@@ -57,3 +57,7 @@ Optional hash-bound config `materials={policy,selections}` uses strict/supplemen
 ## Review and future course revisions
 
 `study plan/profile/evidence/report/annotate/settings/start/anki/propose/proposal/apply/forget` support learner-started review, inspectable evidence, private self-reports, one-way Anki CSV and confirmed separate future courses. `study start` returns an isolated attempt ID; use existing `quiz` answer/feedback controls with it. `review --key` remains document visual-review recording. Exact semantics, budgets, proposal schema and deletion boundaries: [study](study.md). No new scheduled tasks or automatic course changes.
+
+## Installation and first-use setup
+
+`installation inspect/install/update/adopt` validates complete bundles and supports verified managed standalone ZIP replacement; never target native manager caches/symlinks. `setup-check --platform ... --mode ... --material-format ...` provides a selected-only recipe without installing packages or logging in. Native discovery/authorization remain unknown until actually checked. Follow [install](install.md) for acceptance, legacy adoption, backup, external data and original-manager update rules.

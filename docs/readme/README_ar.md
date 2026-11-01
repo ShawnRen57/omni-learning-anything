@@ -6,11 +6,11 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.5.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
+[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](../../LICENSE)
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[تنزيل Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.5.0.zip)**
+**[تنزيل Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
 </div>
 
@@ -29,6 +29,7 @@
 | **v2.3.0** | اختبر فهمك عندما تكون مستعدًا بأسئلة قصيرة وملاحظات مدعومة بالمصادر، مع التلميح والتخطي والاستئناف. لا تُنشأ تذكيرات أو مهام مجدولة للاختبارات. |
 | **v2.4.0** | تعلّم من كتبك وأبحاثك ومواد دوراتك: حدد الصفحات أو الفصول، وراجع مواضع النص الأصلي، واختر السماح بالمصادر الخارجية أو الاقتصار على موادك. |
 | **v2.5.0** | عند العودة، راجع قليلاً ضمن وقتك اليومي، واطّلع على ما توضحه إجاباتك وصحّح التقييمات، ووافق على تعديل الدروس المقبلة، وصدّر بطاقات إلى Anki. |
+| **v2.6.0** | ثبّت عبر المحادثة أو أمر واحد أو أدوات وكيلك. افحص المتطلبات اللازمة فقط وحدّث مع الاحتفاظ بالدورات والاتصالات. |
 
 يمكنك أن تقول فقط: «أريد أن أتعلم قليلًا من الاقتصاد». يقترح Omni اتجاهات وتسلسلًا مترابطًا، ويوضح افتراضاته ويسأل فقط عما يغيّر المسار. إذا كان هدفك واضحًا، ينتقل مباشرة إلى التخطيط.
 
@@ -57,6 +58,24 @@
 | Tencent Docs | جذر الصفحة الرئيسية أو رابط مجلد شخصي؛ سجّل الدخول وراجع الأذونات على الصفحة الرسمية. |
 
 يتحقق الوكيل من الوصول المتاح ويسأل فقط عن المعلومات الناقصة ويشرح الخطوات. لا تحتاج إلى البحث عن معرّفات العناصر أو كتابة ملفات إعداد. لا ترسل كلمات المرور أو الرموز السرية في المحادثة. قد تتطلب موافقات المؤسسة خطوات إضافية.
+
+## اختر طريقة التثبيت
+
+اطلب من الوكيل تثبيت أحدث إصدار مع الاحتفاظ بالدورات والاتصالات والتأكد من أن العميل يستطيع اكتشاف المهارة واستخدامها.
+
+مع وجود Node.js، شغّل الأمر واختر وكيلك. احذف `-g` للتثبيت في المشروع فقط.
+
+```sh
+npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-anything -g
+```
+
+في Claude Code:
+
+```text
+/plugin install omni-learning-anything --marketplace ShawnRen57/omni-learning-anything
+```
+
+بدون Node.js، نزّل Skill ZIP أعلاه وارفعه إلى العميل، أو اطلب من الوكيل تثبيته. [التثبيت والاستخدام الأول والتحديث الآمن](../../skills/omni-learning-anything/references/install.md)
 
 ## ابدأ بالمحادثة
 
@@ -97,7 +116,7 @@
 
 ## التثبيت والأدلة
 
-[التثبيت في وكيلك](../../skills/omni-learning-anything/references/install.md) · [إعداد الصيغ والخطوط](../../skills/omni-learning-anything/references/setup.md) · [ربط المستندات](../../skills/omni-learning-anything/references/onboarding.md) · [التحقق من الإصدار](../../docs/release-validation-v2.5.0.md)
+[التثبيت في وكيلك](../../skills/omni-learning-anything/references/install.md) · [إعداد الصيغ والخطوط](../../skills/omni-learning-anything/references/setup.md) · [ربط المستندات](../../skills/omni-learning-anything/references/onboarding.md) · [التحقق من الإصدار](../../docs/release-validation-v2.6.0.md)
 
 هذه Agent Skill تستخدم أدوات البحث والمستندات والجدولة في وكيلك. يحتاج PDF فقط إلى XeLaTeX. تستخدم المستندات السحابية واجهات API/CLI الرسمية، بينما يكتب Obsidian في Vault المحلي. تعتمد المزامنة والعمل دون إشراف على المضيف والحساب.
 

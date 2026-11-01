@@ -70,7 +70,12 @@ def validate_config(config):
 
 
 def initialize(root,config,plan):
-    root=Path(root); root.mkdir(parents=True,exist_ok=True)
+    root=Path(root)
+    for parent in [root.resolve(), *root.resolve().parents]:
+        skill=parent/'SKILL.md'
+        if skill.is_file() and re.search(r'^name: omni-learning-anything\s*$',skill.read_text(encoding='utf-8'),re.M):
+            raise ValueError('Keep course archives outside the installed Skill folder so updates preserve learner data.')
+    root.mkdir(parents=True,exist_ok=True)
     validate_plan(plan); validate_config(config)
     if config.get('materials'):
         from omni_materials import verify_selection
