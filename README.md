@@ -4,7 +4,14 @@
 
 # Omni Learning Anything
 
-[![Release](https://img.shields.io/badge/version-2.6.0-237768)](https://github.com/ShawnRen57/omni-learning-anything/releases) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/ShawnRen57/omni-learning-anything?style=flat-square&color=237768&label=release)](https://github.com/ShawnRen57/omni-learning-anything/releases/latest)
+[![Agent Skill](https://img.shields.io/badge/Agent-Skill-7c3aed?style=flat-square)](skills/omni-learning-anything/SKILL.md)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](skills/omni-learning-anything/references/setup.md)
+[![Course languages](https://img.shields.io/badge/languages-10-0284c7?style=flat-square)](README.md#choose-your-learning-language)
+[![Output formats](https://img.shields.io/badge/formats-4-0f766e?style=flat-square)](skills/omni-learning-anything/references/setup.md)
+[![MIT License](https://img.shields.io/badge/license-MIT-2563eb?style=flat-square)](LICENSE)
+[![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
+[![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
