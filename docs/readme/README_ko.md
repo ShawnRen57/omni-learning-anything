@@ -17,6 +17,8 @@
 
 **[Skill ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
+[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything)
+
 </div>
 
 **“배우고 싶다”를 매일 이어 갈 수 있는 학습 과정으로.**

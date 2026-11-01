@@ -19,6 +19,8 @@
 
 **[تنزيل Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v2.6.0.zip)**
 
+[skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything)
+
 </div>
 
 **حوّل «أريد أن أتعلم…» إلى مسار تستطيع متابعته كل يوم.**
