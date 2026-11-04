@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Descargar ZIP de la habilidad v3.1.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
+**[Descargar ZIP de la habilidad v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canales de instalación](../../docs/distribution-channels.md)
 
@@ -34,15 +34,15 @@
 
 **Elige un curso universitario o trae tus libros y artículos. Aprende a tu ritmo, con preguntas breves, comentarios útiles y repaso, en archivos locales o documentos en la nube.**
 
-Convierte «quiero aprender…» en un plan que puedas seguir. Empieza con una de las 32 rutas de aprendizaje basadas en fuentes de universidades y organizaciones de IA, un objetivo propio o tus materiales. Revisa el plan antes de comenzar las lecciones.
+Convierte «quiero aprender…» en un plan que puedas seguir. Empieza con una de las 67 rutas de aprendizaje con fuentes, un objetivo propio o tus materiales. Revisa el plan antes de comenzar las lecciones.
 
 Prueba **«Quiero estudiar Psicología Positiva de Harvard»**. El agente identifica el curso, reutiliza lo que ya le has contado y solo pregunta lo necesario para preparar el plan.
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 páginas de lecciones reales en seis idiomas" width="100%"></a>
 
-## Novedades de v3.1.0
+## Novedades de v3.2.0
 
-- **20 rutas nuevas.** Explora la arquitectura china, la ópera Kunqu, la poesía, la historia del arte, la economía y el clima, o estudia IA con cursos de universidades, OpenAI Academy, Anthropic y Hugging Face.
+- **33 cursos más y dos referencias abiertas.** Explora arte, ciencias e IA, o lee por capítulos las referencias de Tsinghua y Smarthistory.
 - **Un ritmo sostenible:** conserva el orden de las unidades originales y su correspondencia con las fuentes, dividiendo el estudio según tu tiempo.
 - **Ejemplos multilingües reales:** consulta planes y primeras lecciones de seis idiomas y seis áreas, en PDF y HTML.
 - **Un primer paso sencillo:** tras instalar o usar la habilidad por primera vez, el agente anfitrión puede presentar los cursos en el chat actual si aún no has elegido tema. La habilidad no abre chats por sí sola.
@@ -52,7 +52,7 @@ Prueba **«Quiero estudiar Psicología Positiva de Harvard»**. El agente identi
 
 Pide **«muéstrame los cursos disponibles»**. Elige curso, idioma y tiempo disponible; el agente propone un plan vinculado a las fuentes. Son rutas de aprendizaje independientes basadas en cursos públicos. No incluyen todo el contenido de las clases ni implican respaldo universitario o certificados.
 
-[Ver las 32 rutas y sus fuentes](../../docs/course-catalog-sources.md). La tabla muestra las 12 rutas originales.
+[Ver las 67 rutas y sus fuentes](../../docs/course-catalog-sources.md). La tabla muestra las 12 rutas originales.
 
 | Universidad | Curso y título original | Edición de referencia |
 | --- | --- | --- |

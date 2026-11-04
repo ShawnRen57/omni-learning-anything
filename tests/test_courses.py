@@ -126,8 +126,9 @@ class CourseTests(unittest.TestCase):
     def test_expanded_catalog_discovery_preserves_distinct_course_names(self):
         engine = self.engine()
         courses = engine.listing()['courses']
-        self.assertEqual(len(courses), 32)
-        self.assertEqual(sum(c['provider_type'] == 'ai_organization' for c in courses), 4)
+        self.assertEqual(len(courses), 67)
+        self.assertEqual(sum(c['pathway_type'] == 'course' for c in courses), 65)
+        self.assertEqual(sum(c['provider_type'] == 'ai_organization' for c in courses), 12)
         for query, provider in (
             ('我想学清华中国建筑史', 'tsinghua'),
             ('我想学上海交大唐诗宋词人文解读', 'sjtu'),
@@ -147,6 +148,28 @@ class CourseTests(unittest.TestCase):
                 self.assertEqual(engine.resolve(query)['status'], 'not_found')
         self.assertEqual({c['provider_type'] for c in engine.welcome()['courses']},
                          {'university', 'ai_organization'})
+
+    def test_open_references_are_discoverable_and_use_reading_scope(self):
+        engine = self.engine()
+        for query in ('清华人工智能通识教育红皮书', 'Smarthistory Reframing Art History'):
+            with self.subTest(query=query):
+                match = engine.resolve(query)
+                self.assertEqual(match['status'], 'matched')
+                selected = match['matches'][0]
+                self.assertEqual(selected['pathway_type'], 'reference')
+                binding = engine.bind(selected['id'], unit_ids=['u01'])
+                scope = engine.context_section(binding, ['u01'], 'en')
+                self.assertEqual(scope['title'], 'Source and reading scope')
+                self.assertIn(binding['course']['units'][0]['locator'], scope['body'])
+                with self.assertRaises(ValueError):
+                    engine.bind(selected['id'], practice='original_assignments')
+
+    def test_subject_year_in_course_title_is_distinct_from_edition(self):
+        engine = self.engine()
+        self.assertEqual(engine.resolve('MIT Art Since 1940')['status'], 'matched')
+        self.assertEqual(engine.resolve('MIT Art Since 1940 2024')['status'], 'needs_clarification')
+        self.assertEqual(engine.resolve('MIT Art Since 1940, Fall 1940 edition')['status'],
+                         'needs_clarification')
 
 
 if __name__=='__main__':unittest.main()

@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import unicodedata
+from collections import Counter
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -19,9 +20,16 @@ PROVIDER_ALIASES = {
     'fudan': ('fudan', '复旦'),
     'sjtu': ('sjtu', 'shanghai jiao tong university', '上海交大', '上海交通大学'),
     'helsinki': ('helsinki', '赫尔辛基', 'minnalearn'),
+    'berkeley': ('berkeley', 'uc berkeley', '伯克利'),
+    'zju': ('zju', 'zhejiang university', '浙大', '浙江大学'),
+    'bnu': ('bnu', 'beijing normal university', '北师大', '北京师范大学'),
     'openai': ('openai',),
     'anthropic': ('anthropic', 'claude academy'),
     'hugging-face': ('hugging face', 'hugging-face', 'huggingface', 'hf'),
+    'deeplearning-ai': ('deeplearning.ai', 'deeplearning-ai', 'deeplearning ai'),
+    'microsoft': ('microsoft', '微软'),
+    'google': ('google', '谷歌'),
+    'smarthistory': ('smarthistory',),
 }
 
 
@@ -44,9 +52,11 @@ def validate_course(course):
     for field in ('instructors','aliases','prerequisites'):
         require(isinstance(course.get(field),list) and all(text(x) for x in course[field]),'Course needs '+field+' as a text list.')
     provider_type = course.get('provider_type', 'university')
-    require(provider_type in ('university', 'ai_organization'), 'Unknown course provider type.')
-    require(course['aliases'] and (course['instructors'] or provider_type == 'ai_organization'),
-            'Course needs discoverable aliases and university pathways need instructors.')
+    pathway_type = course.get('pathway_type', 'course')
+    require(provider_type in ('university', 'ai_organization', 'cultural_organization'), 'Unknown provider type.')
+    require(pathway_type in ('course', 'reference'), 'Unknown pathway type.')
+    require(course['aliases'] and (course['instructors'] or provider_type != 'university' or pathway_type == 'reference'),
+            'Pathway needs discoverable aliases and university courses need instructors.')
     require(isinstance(course.get('pace'),dict) and text(course['pace'].get('description')),'Original course pacing is required.')
     require(course.get('evidence_level') in ('syllabus_only','syllabus_and_sessions'),'State the available original-course evidence.')
     for field in ('source_access', 'original_language'):
@@ -81,6 +91,7 @@ def summary(course):
               'prerequisites', 'audience', 'source_access', 'original_language')
     result = {key: copy.deepcopy(course[key]) for key in fields if key in course}
     result['provider_type'] = course.get('provider_type', 'university')
+    result['pathway_type'] = course.get('pathway_type', 'course')
     return result
 
 
@@ -126,8 +137,16 @@ def resolve(query):
     vague=any(token in q for token in ('幸福课','happiness','心理学','psychology','机器学习','machinelearning','计算机','computerscience'))
     # A broad subject alone cannot establish institution, course identity or edition.
     broad=vague and not named and not any(normalized(c['id']) in q for _,c in matches)
-    years=re.findall(r'(?<!\d)(?:19|20)\d{2}(?!\d)',query)
-    wrong_edition=bool(matches and years and any(y not in matches[0][1]['edition'] for y in years))
+    year_pattern=r'(?<!\d)(?:19|20)\d{2}(?!\d)'
+    years=Counter(re.findall(year_pattern,raw))
+    wrong_edition=False
+    if matches and years:
+        best=matches[0][1]
+        subject_years=Counter()
+        for term in (best['title'], best['id'], *best['aliases']):
+            if normalized(term) in q:
+                subject_years |= Counter(re.findall(year_pattern,term))
+        wrong_edition=any(year not in best['edition'] for year in years-subject_years)
     status='not_found' if not matches else 'needs_clarification' if broad or wrong_edition or len(matches)>1 else 'matched'
     return {'status':status,'matches':candidates,'note':'Candidate matching only. Confirm material ambiguity and verify selected original sources before authoring; an unknown request is not an included course.'}
 
@@ -145,6 +164,8 @@ def validate_binding(value):
     validate_course(value['course'])
     require(value['sha256']==fingerprint(value['course']),'Course snapshot changed; preserve the approved version and review a new course version.')
     require(value['pace'] in ('adapted','original_units') and value['practice'] in ('light','original_assignments'),'Choose course pacing and practice explicitly.')
+    require(value['course'].get('pathway_type') != 'reference' or value['practice'] == 'light',
+            'Open reference pathways support light practice.')
     selected=value['unit_ids'];all_units=[u['id'] for u in value['course']['units']]
     require(isinstance(selected,list) and selected and all(isinstance(u,str) and u in all_units for u in selected),'Select actual original course units.')
     require(selected==[u for u in all_units if u in selected],'Selected units must be unique and in original course order.')
@@ -216,10 +237,29 @@ _CONTEXT={
 }
 
 
+_REFERENCE_CONTEXT = {
+    'en': ('Source and reading scope', 'Independent reading guide based on an open reference. Study time and light exercises are adapted to your plan.'),
+    'zh': ('参考资料与阅读范围', '这是基于开放参考资料编排的阅读指南。阅读时间与轻量练习按你的计划安排。'),
+    'ja': ('資料と読書範囲', '公開資料に基づく読書ガイドです。読む時間と短い練習は学習計画に合わせます。'),
+    'ko': ('자료 및 읽기 범위', '공개 자료를 바탕으로 만든 읽기 안내입니다. 읽기 시간과 짧은 연습은 학습 계획에 맞춥니다.'),
+    'es': ('Fuente y alcance de la lectura', 'Guía independiente basada en una referencia abierta. El tiempo de lectura y los ejercicios breves se adaptan a tu plan.'),
+    'fr': ('Source et périmètre de lecture', 'Guide de lecture indépendant fondé sur une ressource ouverte. Le temps de lecture et les exercices courts suivent votre plan.'),
+    'de': ('Quelle und Leseumfang', 'Unabhängiger Leitfaden zu einer frei zugänglichen Quelle. Lesezeit und kurze Übungen richten sich nach deinem Plan.'),
+    'pt': ('Fonte e escopo da leitura', 'Guia independente baseado em uma referência aberta. O tempo de leitura e os exercícios curtos seguem seu plano.'),
+    'ru': ('Источник и объём чтения', 'Самостоятельный маршрут по открытому источнику. Время чтения и короткие задания определяются вашим планом.'),
+    'ar': ('المصدر ونطاق القراءة', 'دليل مستقل للقراءة يستند إلى مرجع مفتوح. يحدد جدولك وقت القراءة والتمارين القصيرة.'),
+}
+
+
 def context_section(binding,unit_ids,language='en'):
     validate_binding(binding);require(language in _CONTEXT,'Unsupported pathway language.')
     course=binding['course'];title,disclosure,adapted,original,light=_CONTEXT[language]
     locations='; '.join(u['locator'] for u in course['units'] if u['id'] in unit_ids)
+    if course.get('pathway_type') == 'reference':
+        title, disclosure = _REFERENCE_CONTEXT[language]
+        body = (f"{course['institution']} · {course['title']} · {course['edition']}\n\n"
+                f"{locations}\n\n{len(binding['unit_ids'])}/{len(course['units'])} · {disclosure}")
+        return {'title': title, 'body': body}
     body=f"{course['institution']} · {course['title']} · {course['code']} · {course['edition']}\n\n{locations}\n\n{len(binding['unit_ids'])}/{len(course['units'])} · {disclosure}\n\n{adapted if binding['pace']=='adapted' else original}"
     body+='\n\n'+light if binding['practice']=='light' else '\n\n'+original
     return {'title':title,'body':body}

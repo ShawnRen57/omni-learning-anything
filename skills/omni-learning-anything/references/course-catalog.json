@@ -4097,6 +4097,3538 @@
           "focus": "可选拓展，阅读如何搭建和运行宝可梦对战智能体。"
         }
       ]
+    },
+    {
+      "id": "tsinghua-chinese-architecture-history-part-2",
+      "title": "中国建筑史（下）（自主模式）",
+      "institution": "清华大学",
+      "code": "80000901X_2",
+      "edition": "学堂在线自主模式 · TsinghuaX/80000901X_2/sp",
+      "instructors": [
+        "王贵祥",
+        "吕舟",
+        "贾珺",
+        "贺从容",
+        "刘畅"
+      ],
+      "aliases": [
+        "清华中国建筑史下",
+        "中国建筑史（下）",
+        "清华大学中国建筑史下册",
+        "Tsinghua History of Chinese Architecture Part 2"
+      ],
+      "domain": "architectural-history",
+      "level": "introductory",
+      "prerequisites": [
+        "建议先学中国建筑史上半部分或具备宋元以前中国建筑史基础。"
+      ],
+      "audience": "已读上半部分，想继续了解元明清建筑、园林与民居的学习者。",
+      "pace": {
+        "description": "自主进度，原目录延续第 9–16 章，各章有作业，末尾为客观题期末考试。"
+      },
+      "provider_type": "university",
+      "source_access": "学堂在线旧版公开显示下册完整目录，并标注自主模式常年加入。旧平台当前登录、课件播放、作业和证书可用性须按实际渠道复核。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "中国建筑史（下）（自主模式） · 官方课程页",
+          "url": "https://v1-www.xuetangx.com/courses/course-v1%3ATsinghuaX%2B80000901X_2%2Bsp/about",
+          "locator": "课程章节，第9–16章与期末考试",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "元明城市与建筑",
+          "locator": "第9–10章，元明时期的城市与建筑（上、下）",
+          "source_id": "O1",
+          "focus": "延续上册的时序，认识元明城市与建筑的变化。"
+        },
+        {
+          "id": "u02",
+          "title": "清代建筑与紫禁城",
+          "locator": "第11章，清代建筑概述与紫禁城",
+          "source_id": "O1",
+          "focus": "以紫禁城为重点建立清代建筑的初步框架。"
+        },
+        {
+          "id": "u03",
+          "title": "城乡建筑与营造",
+          "locator": "第12–13章，城乡生活与建筑类型；清代建筑技术与艺术",
+          "source_id": "O1",
+          "focus": "由城乡建筑类型转向清代营造技术及其艺术特点。"
+        },
+        {
+          "id": "u04",
+          "title": "明清园林",
+          "locator": "第14章，明清时期古典园林",
+          "source_id": "O1",
+          "focus": "辨认明清古典园林的主要建筑与空间特征。"
+        },
+        {
+          "id": "u05",
+          "title": "传统民居与多民族建筑",
+          "locator": "第15–16章，中国传统民居建筑；中国多民族的建筑；其后为期末考试",
+          "source_id": "O1",
+          "focus": "比较传统民居和多民族建筑，并保留原课期末考试位置。"
+        }
+      ]
+    },
+    {
+      "id": "tsinghua-insights-from-art",
+      "title": "艺术的启示",
+      "institution": "清华大学",
+      "code": "THU08091000423",
+      "edition": "学堂在线 · 智慧教育平台 2026-07-23 至 2027-01-12 公示目录",
+      "instructors": [
+        "李睦"
+      ],
+      "aliases": [
+        "清华艺术的启示",
+        "清华大学艺术的启示",
+        "李睦艺术的启示",
+        "Tsinghua Insights from Art"
+      ],
+      "domain": "art-appreciation",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望通过作品赏读和生活观察建立艺术判断的学习者。",
+      "pace": {
+        "description": "国家平台公示 25 周，大纲包括序言、九章、学生作品分析与两部分总结。"
+      },
+      "provider_type": "university",
+      "source_access": "按公开课纲学习。原候选学堂在线渠道显示暂不开放。国家高等教育智慧教育平台另有同一课程的公开大纲及公示期次，观看课件、参加创作或考核的实际权限仍需确认。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "艺术的启示 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/6786ec4c225d72705e5dc29e",
+          "locator": "课程大纲，序言、第一至第九章、学生作品分析、总结（上、下）",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "学堂在线原候选渠道",
+          "url": "https://www.xuetangx.com/course/THU08091000423/16906223?channel=i.area.manual_search",
+          "locator": "原候选渠道，暂不开放",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "清华大学新雅书院课程介绍",
+          "url": "https://www.xyc.tsinghua.edu.cn/info/1061/2714.htm",
+          "locator": "课程背景、李睦及理论和实践教学",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "从艺术变化到独立观看",
+          "locator": "序言，序1–3",
+          "source_id": "O1",
+          "focus": "从艺术的变化开始，练习独立面对作品。"
+        },
+        {
+          "id": "u02",
+          "title": "空间与色彩",
+          "locator": "第一至第二章，有限的空间与空间的无限；色彩的解放与心灵的解放",
+          "source_id": "O1",
+          "focus": "联系绘画中的空间处理和色彩表达，观察塞尚、毕加索以及印象派和野兽派的例子。"
+        },
+        {
+          "id": "u03",
+          "title": "形式、内容与提问",
+          "locator": "第三至第四章，内容决定形式与形式决定内容；答案的获得与问题的揭示",
+          "source_id": "O1",
+          "focus": "比较形式与内容的关系，观察现代艺术怎样提出问题。"
+        },
+        {
+          "id": "u04",
+          "title": "意义、真实与现实",
+          "locator": "第五至第六章，艺术的意义与艺术的无意义；艺术的真实与艺术的现实",
+          "source_id": "O1",
+          "focus": "结合再现、表现与摄影实例，讨论作品的意义及其与现实的关系。"
+        },
+        {
+          "id": "u05",
+          "title": "偶然与东西方艺术",
+          "locator": "第七至第八章，偶然中的必然与必然中的偶然；西方中的东方与东方中的西方",
+          "source_id": "O1",
+          "focus": "讨论创作中的偶然和必然，比较东西方艺术观和作品。"
+        },
+        {
+          "id": "u06",
+          "title": "感受、作品分析与总结",
+          "locator": "第九章，感受艺术与艺术感受；学生作品分析；总结（上、下）",
+          "source_id": "O1",
+          "focus": "回顾艺术沟通、观看与判断，并按原课顺序保留学生作品分析与总结。"
+        }
+      ]
+    },
+    {
+      "id": "tsinghua-campus-landmarks-university-culture",
+      "title": "校园风物与大学文化——以清华大学为例",
+      "institution": "清华大学",
+      "code": "THU04011000360",
+      "edition": "学堂在线 · 2026-07-23 至 2027-01-12 公示期次",
+      "instructors": [
+        "覃川",
+        "戚天雷"
+      ],
+      "aliases": [
+        "清华风物",
+        "清华校园风物与大学文化",
+        "清华大学校园风物",
+        "Tsinghua Campus Landmarks and University Culture"
+      ],
+      "domain": "university-history",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "想从校园遗存、纪念物和校史理解大学文化的学习者。",
+      "pace": {
+        "description": "国家平台公示 25 周，原目录 20 讲，各讲有课后题，另有期末考试。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开课程目录，所查期次显示开课中。原视频、课后题和考核的权限以学堂在线实际入口为准。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "校园风物与大学文化——以清华大学为例 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/6a5e9b60b44e493c768f8cba",
+          "locator": "课程大纲，第1–20讲、课后习题及期末考试",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "学堂在线公示期次",
+          "url": "https://next.xuetangx.com/course/THU04011000360/31376195",
+          "locator": "国家平台当前课程学习入口",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "从清华园到校园早期建筑",
+          "locator": "第1–5讲，清华园、工字厅、二校门、大礼堂、图书馆老馆",
+          "source_id": "O1",
+          "focus": "由校园园址、校门和礼堂读到图书馆的历史。"
+        },
+        {
+          "id": "u02",
+          "title": "景观、校训与历史纪念",
+          "locator": "第6–10讲，水木清华、古月堂、校训、闻亭和闻一多像、西南联大碑",
+          "source_id": "O1",
+          "focus": "串联校园景观、办学精神和历史记忆。"
+        },
+        {
+          "id": "u03",
+          "title": "科学、体育与校园人物",
+          "locator": "第11–15讲，科学馆、西体育馆、蒋南翔像、马约翰像、话剧",
+          "source_id": "O1",
+          "focus": "沿科学教育、体育及话剧等线索认识校园生活与相关人物。"
+        },
+        {
+          "id": "u04",
+          "title": "纪念物与大学传承",
+          "locator": "第16–20讲，清华英烈碑、以身许国图、清华学堂、校友纪念物、叶企孙像；其后为期末考试",
+          "source_id": "O1",
+          "focus": "借纪念碑、学堂与人物纪念理解大学文化的传承。"
+        }
+      ]
+    },
+    {
+      "id": "pku-western-music-appreciation",
+      "title": "西方音乐欣赏",
+      "institution": "北京大学",
+      "code": "PKU-1207132813",
+      "edition": "中国大学MOOC · 2019-12-24 至 2020-02-29 · tid 1207476216",
+      "instructors": [
+        "毕明辉"
+      ],
+      "aliases": [
+        "北大西方音乐欣赏",
+        "北京大学西方音乐欣赏",
+        "毕明辉西方音乐欣赏",
+        "PKU Western Music Appreciation"
+      ],
+      "domain": "music-appreciation",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望建立人声与器乐聆听方法，并结合核心作品进行精听的学习者。",
+      "pace": {
+        "description": "所查期次大纲为 16 讲，列八次作业及考试，原平台学时显示待定。"
+      },
+      "provider_type": "university",
+      "source_access": "官方页公开 HTML 的期次数据保留大纲及教师；页面常规渲染可能只显示简介。该期已结束，原视频、音源及练习回看权限待复核。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "西方音乐欣赏 · 官方课程页",
+          "url": "https://www.icourse163.org/course/PKU-1207132813?tid=1207476216",
+          "locator": "期次 1207476216，课程大纲（页面内 window.termDto.outLineDto），第一至第十六讲、作业与考试",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "聆听方法与风格",
+          "locator": "第一至第二讲，绪论（一、二）",
+          "source_id": "O1",
+          "focus": "从听觉认知进入西方音乐的风格与历史线索，结合莫扎特和贝多芬作品精听。"
+        },
+        {
+          "id": "u02",
+          "title": "听歌五识法",
+          "locator": "第三至第六讲，如何听歌（一至四）",
+          "source_id": "O1",
+          "focus": "分辨歌曲的文体、旋律、语气、人声音色与表现手法，逐步建立听歌方法。"
+        },
+        {
+          "id": "u03",
+          "title": "从声乐到歌剧",
+          "locator": "第七至第八讲，如何听歌（五、六）",
+          "source_id": "O1",
+          "focus": "在声乐、歌剧、清唱剧与康塔塔中扩展听歌方法，比较角色和风格。"
+        },
+        {
+          "id": "u04",
+          "title": "器乐聆听框架",
+          "locator": "第九至第十一讲，如何听曲（一至三）",
+          "source_id": "O1",
+          "focus": "通过组曲、协奏曲、奏鸣曲等掌握器乐音响、调性、织体和乐器分类线索。"
+        },
+        {
+          "id": "u05",
+          "title": "器乐音色与现代发展",
+          "locator": "第十二至第十六讲，如何听曲（四至八）；作业8及考试",
+          "source_id": "O1",
+          "focus": "依次辨认打击、管弦与电子乐器音色，并观察现代乐团与音乐科技的发展。"
+        }
+      ]
+    },
+    {
+      "id": "pku-principles-artificial-intelligence",
+      "title": "人工智能原理",
+      "institution": "北京大学",
+      "code": "PKU-1002188003",
+      "edition": "中国大学MOOC · 2024-03-18 至 2024-06-07 · tid 1472399493",
+      "instructors": [
+        "王文敏"
+      ],
+      "aliases": [
+        "北大人工智能原理",
+        "北京大学人工智能原理",
+        "王文敏人工智能原理",
+        "PKU Principles of Artificial Intelligence"
+      ],
+      "domain": "artificial-intelligence",
+      "level": "intermediate",
+      "prerequisites": [
+        "数据结构和算法基础。",
+        "线性代数、概率论与机器学习基础。"
+      ],
+      "audience": "希望系统掌握经典人工智能中搜索、推理、规划与学习方法的学习者。",
+      "pace": {
+        "description": "原期次 12 讲，约每周 4 小时，各章列测验。中文讲授，PPT 和作业为中英文。"
+      },
+      "provider_type": "university",
+      "source_access": "官方页公开 HTML 的期次数据保留完整大纲。所查 2024 期次已结束，课内资料与测验能否回看须复核。",
+      "original_language": "中文讲授，课件与作业中英双语",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "人工智能原理 · 官方课程页",
+          "url": "https://www.icourse163.org/course/PKU-1002188003?tid=1472399493",
+          "locator": "期次 1472399493，课程大纲（页面内 window.termDto.outLineDto），Part I–V、Chapters 1–12",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "国家高等教育智慧教育平台期次索引",
+          "url": "https://higher.smartedu.cn/h5/course/622aca1bbee70ef79f428f6f",
+          "locator": "2024年春季期次历史公示",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "AI 概述与智能体",
+          "locator": "Part I，Chapters 1–2",
+          "source_id": "O1",
+          "focus": "理解人工智能的历史与基础，建立理性智能体和任务环境框架。"
+        },
+        {
+          "id": "u02",
+          "title": "问题搜索与局部优化",
+          "locator": "Part II，Chapters 3–4",
+          "source_id": "O1",
+          "focus": "比较无信息和启发式搜索，并认识局部搜索、演化算法与群体智能。"
+        },
+        {
+          "id": "u03",
+          "title": "对抗搜索与约束满足",
+          "locator": "Part II，Chapters 5–6",
+          "source_id": "O1",
+          "focus": "考察博弈决策、剪枝与随机方法，再研究约束传播及回溯搜索。"
+        },
+        {
+          "id": "u04",
+          "title": "知识表示与推理",
+          "locator": "Part III，Chapter 7",
+          "source_id": "O1",
+          "focus": "比较基于逻辑的知识表示、本体与贝叶斯网络。"
+        },
+        {
+          "id": "u05",
+          "title": "经典与实际规划",
+          "locator": "Part IV，Chapter 8",
+          "source_id": "O1",
+          "focus": "区分经典规划、调度和现实环境中的决策规划。"
+        },
+        {
+          "id": "u06",
+          "title": "机器学习的视角与任务",
+          "locator": "Part V，Chapters 9–10",
+          "source_id": "O1",
+          "focus": "理解机器学习的不同视角，区分分类、回归、聚类、排序与降维任务。"
+        },
+        {
+          "id": "u07",
+          "title": "机器学习范式与模型",
+          "locator": "Part V，Chapters 11–12",
+          "source_id": "O1",
+          "focus": "比较监督、无监督和强化学习，再认识概率、几何、逻辑及网络模型。"
+        }
+      ]
+    },
+    {
+      "id": "fudan-deep-learning-and-applications",
+      "title": "深度学习及其应用",
+      "institution": "复旦大学",
+      "code": "FUDAN-1205806833",
+      "edition": "中国大学MOOC · 2026-09-01 至 2027-01-10 · tid 1487926441",
+      "instructors": [
+        "赵卫东"
+      ],
+      "aliases": [
+        "复旦深度学习及其应用",
+        "复旦大学深度学习及其应用",
+        "赵卫东深度学习及其应用",
+        "Fudan Deep Learning and Applications"
+      ],
+      "domain": "deep-learning",
+      "level": "intermediate",
+      "prerequisites": [
+        "机器学习及前馈神经网络基本原理。",
+        "高等数学、线性代数、统计学和 Python 编程基础。"
+      ],
+      "audience": "已掌握机器学习基础，希望学习深度模型和典型应用的学习者。",
+      "pace": {
+        "description": "国家平台公示 19 周，原期次约每周 3–5 小时，含视频、测试、作业和实验。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开 8 个章节的目录，所查期次显示开课中。参与原课与获取其视频、数据或实验资料须确认原平台账户和授权。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "深度学习及其应用 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/622ac9f0bee70ef79f419877",
+          "locator": "课程大纲，神经网络基础至注意力机制 8 个章节",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "中国大学MOOC原期次",
+          "url": "https://www.icourse163.org/course/FUDAN-1205806833?tid=1487926441",
+          "locator": "期次 1487926441，课程预备知识、学时、课程大纲",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "神经网络基础与深度学习应用",
+          "locator": "第1–2章，神经网络基础、深度学习应用",
+          "source_id": "O1",
+          "focus": "回顾前馈网络、训练与调优，结合客户流失、新闻分类等实例认识应用。"
+        },
+        {
+          "id": "u02",
+          "title": "卷积神经网络与经典模型",
+          "locator": "第3–4章，卷积神经网络基础、典型卷积神经网络算法",
+          "source_id": "O1",
+          "focus": "认识卷积、池化和训练，再比较 LeNet、AlexNet、VGG、GoogLeNet 和 ResNet。"
+        },
+        {
+          "id": "u03",
+          "title": "循环神经网络",
+          "locator": "第5章，循环神经网络",
+          "source_id": "O1",
+          "focus": "理解循环模型与 LSTM，观察序列建模在原课实例中的应用。"
+        },
+        {
+          "id": "u04",
+          "title": "目标检测",
+          "locator": "第6章，目标检测",
+          "source_id": "O1",
+          "focus": "区分候选区域式方法与 YOLO 系列，联系物体与车道检测实例。"
+        },
+        {
+          "id": "u05",
+          "title": "生成对抗网络",
+          "locator": "第7章，生成对抗网络",
+          "source_id": "O1",
+          "focus": "理解生成与判别的对抗训练，并观察图像生成、风格转移和重建实例。"
+        },
+        {
+          "id": "u06",
+          "title": "注意力机制",
+          "locator": "第8章，注意力机制",
+          "source_id": "O1",
+          "focus": "从序列到序列进入自注意力、Transformer 与 BERT，并联系翻译与情感分类。"
+        }
+      ]
+    },
+    {
+      "id": "fudan-excellent-traditional-chinese-culture",
+      "title": "中华优秀传统文化",
+      "institution": "复旦大学",
+      "code": "FUDAN-1456605163",
+      "edition": "中国大学MOOC · 2026-09-18 至 2026-12-30 · tid 1488312463",
+      "instructors": [
+        "唐明燕"
+      ],
+      "aliases": [
+        "复旦中华优秀传统文化",
+        "复旦大学中华优秀传统文化",
+        "唐明燕中华优秀传统文化",
+        "Fudan Traditional Chinese Culture"
+      ],
+      "domain": "chinese-culture",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望从复旦大学思政专项课程的视角学习中华传统文化及其传承的大学生与爱好者。",
+      "pace": {
+        "description": "国家平台公示 15 周，公开大纲包括导论、历史和思想背景、核心要义与传承发展。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开大纲，所查期次显示开课中。原视频、互动与考核权限需按中国大学 MOOC 课程页核验。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "中华优秀传统文化 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/63ffd464af1f1b5d3ecfd579",
+          "locator": "课程大纲，导论至中华优秀传统文化的传承发展",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "中国大学MOOC原期次",
+          "url": "https://www.icourse163.org/course/FUDAN-1456605163?tid=1488312463",
+          "locator": "国家平台链接的原学习期次",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "导论与历史背景",
+          "locator": "课程导论；孕育中华优秀传统文化的历史背景",
+          "source_id": "O1",
+          "focus": "认识原课定位，并从自然环境、生产方式和政治结构了解文化背景。"
+        },
+        {
+          "id": "u02",
+          "title": "儒学与其他思想流派",
+          "locator": "儒学的脱颖而出（上、下）；儒释道互补",
+          "source_id": "O1",
+          "focus": "按原课顺序比较儒墨、儒法，再理解道家与佛教在思想格局中的位置。"
+        },
+        {
+          "id": "u03",
+          "title": "人格修养及其冲突",
+          "locator": "人格修养；在矛盾冲突中彰显人格修养的境界（上、下）",
+          "source_id": "O1",
+          "focus": "联系修养的意义、方法与现实冲突，讨论义利、评价与人生境遇。"
+        },
+        {
+          "id": "u04",
+          "title": "社会关爱与人际规范",
+          "locator": "社会关爱（上、下）",
+          "source_id": "O1",
+          "focus": "围绕仁爱、忠恕、人际规范和中庸之道阅读原课主题。"
+        },
+        {
+          "id": "u05",
+          "title": "家国情怀与传承发展",
+          "locator": "家国情怀（上、下）；中华优秀传统文化的传承发展",
+          "source_id": "O1",
+          "focus": "考察家国、民本与和而不同，再回顾传统文化的历史影响与当代传承。"
+        }
+      ]
+    },
+    {
+      "id": "fudan-principles-political-science",
+      "title": "政治学原理",
+      "institution": "复旦大学",
+      "code": "FUDAN-1461787179",
+      "edition": "中国大学MOOC · 2020-12-30 至 2021-02-28 · tid 1462604462",
+      "instructors": [
+        "陈周旺"
+      ],
+      "aliases": [
+        "复旦政治学原理",
+        "复旦大学政治学原理",
+        "陈周旺政治学原理",
+        "Fudan Principles of Political Science"
+      ],
+      "domain": "political-science",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "政治学本科入门或希望系统理解权力、国家、制度与治理的社会科学学习者。",
+      "pace": {
+        "description": "原期次标注每周 2–3 小时，含课堂检测、讨论与闭卷期末考试。"
+      },
+      "provider_type": "university",
+      "source_access": "官方页公开 HTML 的期次数据保留十章目录。所查历史期次已结束，课内材料和考核权限须复核。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "政治学原理 · 官方课程页",
+          "url": "https://www.icourse163.org/course/FUDAN-1461787179?tid=1462604462",
+          "locator": "期次 1462604462，课程大纲（页面内 window.termDto.outLineDto），从绪论至政治发展十章",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "政治、政治学与权力",
+          "locator": "第1–2章，绪论 政治与政治学；政治权力",
+          "source_id": "O1",
+          "focus": "区分政治与政治学，理解权力类型、三维权力观与合法性。"
+        },
+        {
+          "id": "u02",
+          "title": "国家及其社会关系",
+          "locator": "第3–4章，国家；国家与社会",
+          "source_id": "O1",
+          "focus": "了解现代国家的形成与概念，考察市民社会以及国家与社会关系的理论。"
+        },
+        {
+          "id": "u03",
+          "title": "政体与民主",
+          "locator": "第5–6章，政体；民主",
+          "source_id": "O1",
+          "focus": "比较议会制与总统制，讨论民主概念、困境及民主化。"
+        },
+        {
+          "id": "u04",
+          "title": "选举与政党",
+          "locator": "第7–8章，选举与选举制度；政党",
+          "source_id": "O1",
+          "focus": "辨析选举制度类型及政党的功能，比较不同政党制度。"
+        },
+        {
+          "id": "u05",
+          "title": "治理与政治发展",
+          "locator": "第9–10章，政府治理；政治发展",
+          "source_id": "O1",
+          "focus": "考察政府职能、国家结构形式与国家能力、国家建构。"
+        }
+      ]
+    },
+    {
+      "id": "sjtu-aerospace-technology",
+      "title": "机器的征途：空天科技",
+      "institution": "上海交通大学",
+      "code": "SJTU-1206025803",
+      "edition": "中国大学MOOC · 2025-01-20 至 2025-07-31 · tid 1474057454",
+      "instructors": [
+        "胡士强"
+      ],
+      "aliases": [
+        "上海交大机器的征途空天科技",
+        "上海交通大学空天科技",
+        "胡士强空天科技",
+        "SJTU Aerospace Technology"
+      ],
+      "domain": "aerospace",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "面向非航空航天专业，希望理解飞行器、航天器与空天技术基本原理的学习者。",
+      "pace": {
+        "description": "国家平台公示 28 周，公开大纲 12 章，部分章节列有单元测验。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开章节及分节目录，所查期次已结束，原视频和测验可回看范围须核验。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "机器的征途：空天科技 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/62354d7a9906eace0490b2aa",
+          "locator": "课程大纲，第一至第十二章及所列单元测试",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "中国大学MOOC原期次",
+          "url": "https://www.icourse163.org/course/SJTU-1206025803?tid=1474057454",
+          "locator": "国家平台链接的历史学习期次",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "空天起源、飞行器与运载",
+          "locator": "第1–2章，空天科技的起源与现状；运载技术与百年星际旅行",
+          "source_id": "O1",
+          "focus": "区分航空与航天，梳理飞行器历史、运载技术及空间探测。"
+        },
+        {
+          "id": "u02",
+          "title": "飞行原理、结构与操纵",
+          "locator": "第3–4章，航空飞行环境与飞行原理；飞机的结构与操纵",
+          "source_id": "O1",
+          "focus": "由大气流动、升力与布局转向飞机结构、平衡与操纵。"
+        },
+        {
+          "id": "u03",
+          "title": "航电、支持与动力",
+          "locator": "第5–6章，机载航电与地面支持系统；飞机动力与推进系统",
+          "source_id": "O1",
+          "focus": "观察航空电子、航线规划和地面系统，再辨认发动机类型与推进技术。"
+        },
+        {
+          "id": "u04",
+          "title": "轨道、航天器与导航控制",
+          "locator": "第7–8章，轨道飞行与航天器；飞行器与GNC技术",
+          "source_id": "O1",
+          "focus": "理解姿态与轨道控制，区分定位、导航、制导与控制。"
+        },
+        {
+          "id": "u05",
+          "title": "应用史与空天飞行器",
+          "locator": "第9–10章，GNC技术与现代战争；空天飞行器",
+          "source_id": "O1",
+          "focus": "沿原课大纲考察制导相关技术史及航天飞机、空天飞行器的实例。"
+        },
+        {
+          "id": "u06",
+          "title": "载人航天与无人系统",
+          "locator": "第11–12章，载人航天与空间站；快速发展的空天无人系统",
+          "source_id": "O1",
+          "focus": "连接环控生保、返回与交会对接，并认识无人系统和探测采样实例。"
+        }
+      ]
+    },
+    {
+      "id": "sjtu-economic-law",
+      "title": "经济法",
+      "institution": "上海交通大学",
+      "code": "SJTU-1205696808",
+      "edition": "中国大学MOOC · 2026-09-21 至 2027-01-17 · tid 1488395451",
+      "instructors": [
+        "侯利阳",
+        "王先林",
+        "李剑",
+        "李俊明",
+        "尚立娜",
+        "王桦宇"
+      ],
+      "aliases": [
+        "上海交大经济法",
+        "上海交通大学经济法",
+        "侯利阳经济法",
+        "SJTU Economic Law"
+      ],
+      "domain": "law",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望建立中国经济法学知识框架的学习者。",
+      "pace": {
+        "description": "国家平台公示 17 周，课程简介标注 10 章 40 讲，每讲平均约 15 分钟。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开大纲，所查期次显示开课中。原视频与考核权限须复核。涉及现行规定与案例时需查验法规的最新正式文本及生效日期。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "经济法 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/67c2473d225d72705e7bb8c8",
+          "locator": "课程大纲，第1–10章，各章所列分讲",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "中国大学MOOC原期次",
+          "url": "https://www.icourse163.org/course/SJTU-1205696808?tid=1488395451",
+          "locator": "国家平台链接的原学习期次",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "经济法基本理论",
+          "locator": "第1章，1.1–1.3",
+          "source_id": "O1",
+          "focus": "建立经济法基本理论和全课框架。"
+        },
+        {
+          "id": "u02",
+          "title": "国有资产与国有企业",
+          "locator": "第2–3章，2.1–2.2、3.1–3.3",
+          "source_id": "O1",
+          "focus": "区分国有资产法与国有企业法的学习对象。"
+        },
+        {
+          "id": "u03",
+          "title": "竞争规制",
+          "locator": "第4–5章，4.1–4.6、5.1–5.5",
+          "source_id": "O1",
+          "focus": "依次学习反垄断法与反不正当竞争法的制度框架。"
+        },
+        {
+          "id": "u04",
+          "title": "消费者权益与产品质量",
+          "locator": "第6–7章，6.1–6.4、7.1–7.2",
+          "source_id": "O1",
+          "focus": "联系消费者权益保护和产品质量的法律议题。"
+        },
+        {
+          "id": "u05",
+          "title": "财政与税收",
+          "locator": "第8–9章，8.1–8.3、9.1–9.6",
+          "source_id": "O1",
+          "focus": "区分财政法与税法在经济法课程中的位置。"
+        },
+        {
+          "id": "u06",
+          "title": "金融法",
+          "locator": "第10章，10.1–10.6",
+          "source_id": "O1",
+          "focus": "在全课框架下理解金融法的学习范围。"
+        }
+      ]
+    },
+    {
+      "id": "sjtu-first-aid-and-self-rescue",
+      "title": "关爱生命——急救与自救技能",
+      "institution": "上海交通大学",
+      "code": "CNMOOC-28569",
+      "edition": "好大学在线 · 2026-09-21 至 2026-12-22 · 28569",
+      "instructors": [
+        "段宝华"
+      ],
+      "aliases": [
+        "上海交大急救与自救技能",
+        "上海交通大学关爱生命",
+        "关爱生命急救与自救技能",
+        "SJTU First Aid and Self-rescue"
+      ],
+      "domain": "first-aid",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "非临床专业大学生及普通学习者，关注常见伤病的急救认知与求助。",
+      "pace": {
+        "description": "国家平台公示 14 周，公开大纲为六个单元。实践能力须通过正规的现场实操培训获得。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开目录，所查期次显示开课中。原视频、演示与实操安排需核验。教学须复核最新权威急救指南，涉及专业操作时说明角色边界，保留呼救和正规实操培训指引。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "关爱生命——急救与自救技能 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/69b0942695df98bb27ba19a1",
+          "locator": "课程大纲，第一至第六单元及分节",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "好大学在线原期次",
+          "url": "https://cnmooc.sjtu.cn/portal/course/8/28569.mooc",
+          "locator": "国家平台链接的原学习期次",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "急救角色与责任",
+          "locator": "第一单元，关爱生命绪论",
+          "source_id": "O1",
+          "focus": "认识公众在紧急现场的角色、责任和求助边界。"
+        },
+        {
+          "id": "u02",
+          "title": "外伤救助概念",
+          "locator": "第二单元，外伤救助",
+          "source_id": "O1",
+          "focus": "识别原课涉及的出血、包扎、固定与换药场景，并区分所需专业训练。"
+        },
+        {
+          "id": "u03",
+          "title": "家庭护理概念",
+          "locator": "第三单元，家庭护理",
+          "source_id": "O1",
+          "focus": "梳理原课所列消毒隔离、补液与氧疗，区分家庭护理和专业处理。"
+        },
+        {
+          "id": "u04",
+          "title": "复苏急救概念",
+          "locator": "第四单元，复苏急救",
+          "source_id": "O1",
+          "focus": "定位原课中的成人心肺复苏、除颤、无创呼吸机和气道梗阻，按最新规范说明公众和专业人员的角色。"
+        },
+        {
+          "id": "u05",
+          "title": "骨伤救助概念",
+          "locator": "第五单元，骨伤救助",
+          "source_id": "O1",
+          "focus": "识别原课所列脱臼、扭伤和事故现场转运场景，理解何时求助专业人员。"
+        },
+        {
+          "id": "u06",
+          "title": "重病风险识别",
+          "locator": "第六单元，重病防治",
+          "source_id": "O1",
+          "focus": "辨认原课所列中毒、胸痛和中风主题，关注异常征象与专业求助。"
+        }
+      ]
+    },
+    {
+      "id": "zju-tang-poetry-classics",
+      "title": "唐诗经典",
+      "institution": "浙江大学",
+      "code": "ZJU-18001",
+      "edition": "中国大学MOOC · 2026-09-16 至 2027-01-06 · tid 1488060451",
+      "instructors": [
+        "胡可先"
+      ],
+      "aliases": [
+        "浙大唐诗经典",
+        "浙江大学唐诗经典",
+        "胡可先唐诗经典",
+        "ZJU Tang Poetry Classics"
+      ],
+      "domain": "chinese-literature",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望以文本细读、版本比较与圆桌研讨深入学习唐诗的读者。",
+      "pace": {
+        "description": "国家平台公示当期 16 周，教学简介安排 10 个主题，包含视频、学术对话、延伸探索、在线练习和期末考试。"
+      },
+      "provider_type": "university",
+      "source_access": "国家平台公开 10 周主题及小节，所查期次显示开课中。在线练习须登录，原课视频、论坛和期末考试权限须核验。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "唐诗经典 · 官方课程页",
+          "url": "https://higher.smartedu.cn/course/6982720195df98bb27cadb06",
+          "locator": "课程大纲，第1–10周，含各周圆桌研讨；课程简介另列期末考试",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "中国大学MOOC原期次",
+          "url": "https://www.icourse163.org/course/ZJU-18001?tid=1488060451",
+          "locator": "国家平台链接的原学习期次",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "《唐诗三百首》的编选",
+          "locator": "第1周，1.1–1.6",
+          "source_id": "O1",
+          "focus": "从选本编者、标准与流传切入唐诗经典化。"
+        },
+        {
+          "id": "u02",
+          "title": "崔颢《黄鹤楼》",
+          "locator": "第2周，2.1–2.6",
+          "source_id": "O1",
+          "focus": "比较异文与关联作品，细读诗意并讨论名楼与文学。"
+        },
+        {
+          "id": "u03",
+          "title": "杜甫《丽人行》",
+          "locator": "第3周，3.1–3.6",
+          "source_id": "O1",
+          "focus": "从新题乐府、名物意象和相关绘画进入文本分析。"
+        },
+        {
+          "id": "u04",
+          "title": "白居易《长恨歌》",
+          "locator": "第4周，4.1–4.6",
+          "source_id": "O1",
+          "focus": "联系内容、艺术、流传及相关序传，辨析作品主题。"
+        },
+        {
+          "id": "u05",
+          "title": "温庭筠《新添声杨柳枝辞》",
+          "locator": "第5周，5.1–5.6",
+          "source_id": "O1",
+          "focus": "借声诗、歌词及名物研究诗词界限与表现手法。"
+        },
+        {
+          "id": "u06",
+          "title": "张若虚《春江花月夜》",
+          "locator": "第6周，6.1–6.6",
+          "source_id": "O1",
+          "focus": "从渊源、内容与艺术进入作品影响及哲理讨论。"
+        },
+        {
+          "id": "u07",
+          "title": "李白《将进酒》",
+          "locator": "第7周，7.1–7.7",
+          "source_id": "O1",
+          "focus": "分析典故、抒情与乐府传统，并讨论唐诗中的酒。"
+        },
+        {
+          "id": "u08",
+          "title": "元稹《遣悲怀》三首",
+          "locator": "第8周，8.1–8.6",
+          "source_id": "O1",
+          "focus": "细读元稹作品，并对照韦应物、李商隐的悼亡文学。"
+        },
+        {
+          "id": "u09",
+          "title": "李商隐无题诗",
+          "locator": "第9周，9.1–9.7",
+          "source_id": "O1",
+          "focus": "比较课程所列无题诗，考察作品解释及其背景。"
+        },
+        {
+          "id": "u10",
+          "title": "高棅《唐诗品汇》",
+          "locator": "第10周，10.1–10.6；其后为课程简介所述复习考试",
+          "source_id": "O1",
+          "focus": "学习选本的分期、分体和分品，回到诗歌编选与评价的问题。"
+        }
+      ]
+    },
+    {
+      "id": "bnu-chinese-calligraphy-appreciation",
+      "title": "书法欣赏",
+      "institution": "北京师范大学",
+      "code": "BNU-1003240002",
+      "edition": "中国大学MOOC · 第15次 · 2026-09-14 至 2027-01-09 · tid 1488313456",
+      "instructors": [
+        "倪文东"
+      ],
+      "aliases": [
+        "北师大书法欣赏",
+        "北京师范大学书法欣赏",
+        "倪文东书法欣赏",
+        "BNU Chinese Calligraphy Appreciation"
+      ],
+      "domain": "calligraphy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望按历史时序观察中国书法名作、辨识书体与风格的学习者。",
+      "pace": {
+        "description": "原期次公示 17 周、每周 3–5 小时，公开目录 19 讲，部分讲次列单元测试。"
+      },
+      "provider_type": "university",
+      "source_access": "所查期次显示进行中。官方课程大纲及教师公开，原视频、演示与单元测验的实际权限须按平台确认。",
+      "original_language": "中文",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "书法欣赏 · 官方课程页",
+          "url": "https://www.icourse163.org/course/BNU-1003240002?tid=1488313456",
+          "locator": "期次 1488313456，课程大纲（第一至第十九讲，含所列单元测试）",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "文化精神与早期书体",
+          "locator": "第一至第四讲，前言、甲骨文、金文、石鼓文",
+          "source_id": "O1",
+          "focus": "由书法与文化的关系进入甲骨、青铜铭文及石鼓文。"
+        },
+        {
+          "id": "u02",
+          "title": "简帛、秦篆与汉隶",
+          "locator": "第五至第七讲，简牍帛书、秦篆刻石、汉隶",
+          "source_id": "O1",
+          "focus": "比较不同材料与时代中的字体、用笔与形式变化。"
+        },
+        {
+          "id": "u03",
+          "title": "二王、北朝与初唐",
+          "locator": "第八至第十讲，王羲之和王献之、北朝书法、隋及初唐书法",
+          "source_id": "O1",
+          "focus": "从二王的新体，经北朝变化，观察隋及初唐楷法。"
+        },
+        {
+          "id": "u04",
+          "title": "唐代草书与楷书",
+          "locator": "第十一至第十二讲，张旭和怀素；颜真卿和柳公权",
+          "source_id": "O1",
+          "focus": "对照唐代草书的表现和颜柳楷法的风格。"
+        },
+        {
+          "id": "u05",
+          "title": "宋元与吴门书派",
+          "locator": "第十三至第十五讲，宋代四家、元代书法、吴门书派",
+          "source_id": "O1",
+          "focus": "观察苏黄米蔡、赵孟頫与鲜于枢、吴门诸家的不同面貌。"
+        },
+        {
+          "id": "u06",
+          "title": "晚明至近现代",
+          "locator": "第十六至第十九讲，晚明书法、王铎和傅山、清代篆隶、近现代书法",
+          "source_id": "O1",
+          "focus": "沿书法史比较晚明及明清之际的变化，进入清代篆隶与近现代作品。"
+        }
+      ]
+    },
+    {
+      "id": "yale-european-civilization-1648-1945",
+      "title": "European Civilization, 1648-1945",
+      "institution": "Yale University",
+      "provider_type": "university",
+      "code": "HIST 202",
+      "edition": "Fall 2008",
+      "instructors": [
+        "John Merriman"
+      ],
+      "aliases": [
+        "欧洲文明1648至1945",
+        "耶鲁近现代欧洲史",
+        "European Civilization 1648–1945"
+      ],
+      "domain": "history",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望从政治、社会和文化变迁建立近现代欧洲史时间线的学习者。",
+      "pace": {
+        "description": "原课每周两次，每次 50 分钟，另有讨论课、阅读与考试。"
+      },
+      "original_language": "英语",
+      "source_access": "Open Yale Courses 公开分讲、文字稿和视频入口。指定著作与影片的取得方式取决于各自来源。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "HIST 202 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/history/hist-202",
+          "locator": "Course Structure; Syllabus; Sessions",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "近代欧洲与国家建构",
+          "locator": "Lectures 1–4",
+          "source_id": "O1",
+          "focus": "从课程导言到专制国家，对照荷兰、英国与彼得大帝时期的俄国。"
+        },
+        {
+          "id": "u02",
+          "title": "启蒙、革命与拿破仑",
+          "locator": "Lectures 5–7",
+          "source_id": "O1",
+          "focus": "沿公共领域、法国大革命及拿破仑时代梳理政治变迁。"
+        },
+        {
+          "id": "u03",
+          "title": "工业化与社会抗争",
+          "locator": "Lectures 8–11",
+          "source_id": "O1",
+          "focus": "联系工业革命、中产阶级、大众抗争与英国的 1848 年经验。"
+        },
+        {
+          "id": "u04",
+          "title": "城市、民族主义与帝国",
+          "locator": "Lectures 12–15",
+          "source_id": "O1",
+          "focus": "从十九世纪城市进入民族主义、激进主义与帝国文化。"
+        },
+        {
+          "id": "u05",
+          "title": "第一次世界大战及其记忆",
+          "locator": "Lectures 16–18",
+          "source_id": "O1",
+          "focus": "依次观察战争的来临、战壕经历以及客座讲座讨论的战争记忆。"
+        },
+        {
+          "id": "u06",
+          "title": "俄国革命、东欧与斯大林主义",
+          "locator": "Lectures 19–21",
+          "source_id": "O1",
+          "focus": "联系罗曼诺夫王朝终结、东欧继承国家与斯大林主义。"
+        },
+        {
+          "id": "u07",
+          "title": "法西斯主义、战争与战后尾声",
+          "locator": "Lectures 22–24",
+          "source_id": "O1",
+          "focus": "比较法西斯主义及二战中的合作和抵抗，保留关于共产主义瓦解和全球挑战的结语。"
+        }
+      ]
+    },
+    {
+      "id": "yale-philosophy-science-human-nature",
+      "title": "Philosophy and the Science of Human Nature",
+      "institution": "Yale University",
+      "provider_type": "university",
+      "code": "PHIL 181",
+      "edition": "Spring 2011",
+      "instructors": [
+        "Tamar Gendler"
+      ],
+      "aliases": [
+        "哲学与人性的科学",
+        "耶鲁哲学与人性",
+        "人性哲学与科学"
+      ],
+      "domain": "philosophy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "想把哲学论证与认知科学研究放在一起读的学习者。",
+      "pace": {
+        "description": "原课每周两次，每次 50 分钟，并配有阅读与考核。"
+      },
+      "original_language": "英语",
+      "source_access": "Open Yale Courses 公开分讲、文字稿和视频入口。指定书目及外链读物按各自权限取得。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "PHIL 181 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/philosophy/phil-181",
+          "locator": "Course Structure; Syllabus; Sessions",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "道德、伪善与灵魂的组成",
+          "locator": "Lectures 1–4",
+          "source_id": "O1",
+          "focus": "从吉格斯之戒的问题进入灵魂结构。"
+        },
+        {
+          "id": "u02",
+          "title": "幸福、失序、依恋与超脱",
+          "locator": "Lectures 5–8",
+          "source_id": "O1",
+          "focus": "结合灵魂秩序、创伤与依恋的例子理解何为活得好。"
+        },
+        {
+          "id": "u03",
+          "title": "德性、习惯与意志薄弱",
+          "locator": "Lectures 9–11",
+          "source_id": "O1",
+          "focus": "比较习惯的养成和明知应做却拖延的情形。"
+        },
+        {
+          "id": "u04",
+          "title": "效用、义务和两难",
+          "locator": "Lectures 12–16",
+          "source_id": "O1",
+          "focus": "由功利主义和义务论进入电车难题、实证回应与哲学谜题。"
+        },
+        {
+          "id": "u05",
+          "title": "惩罚、契约与合作",
+          "locator": "Lectures 17–20",
+          "source_id": "O1",
+          "focus": "依次比较惩罚的理由、霍布斯的社会契约和囚徒困境。"
+        },
+        {
+          "id": "u06",
+          "title": "平等、社会结构与审查",
+          "locator": "Lectures 21–24",
+          "source_id": "O1",
+          "focus": "考察平等理论、社会结构以及审查制度。"
+        },
+        {
+          "id": "u07",
+          "title": "回顾与结课",
+          "locator": "Lectures 25–26",
+          "source_id": "O1",
+          "focus": "回到课程贯穿的哲学与人性问题。"
+        }
+      ]
+    },
+    {
+      "id": "mit-art-since-1940",
+      "title": "Art Since 1940",
+      "institution": "Massachusetts Institute of Technology",
+      "provider_type": "university",
+      "code": "4.651",
+      "edition": "Fall 2010",
+      "instructors": [
+        "Caroline A. Jones"
+      ],
+      "aliases": [
+        "1940年以来的艺术",
+        "MIT战后艺术",
+        "战后艺术史"
+      ],
+      "domain": "art_history",
+      "level": "intermediate",
+      "prerequisites": [],
+      "audience": "想结合展览和作品阅读理解战后艺术，并愿意进行批评性阅读与写作的学习者。",
+      "pace": {
+        "description": "原课每周两次，每次 90 分钟。包含阅读、放映、参访、辩论、论文与考试。"
+      },
+      "original_language": "英语",
+      "source_access": "MIT OCW 公开按讲次整理的笔记、阅读清单和作业。放映影片、展览和部分指定阅读需另查可用性。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "4.651 — Lecture Notes",
+          "url": "https://ocw.mit.edu/courses/4-651-art-since-1940-fall-2010/pages/lecture-notes/",
+          "locator": "Lectures 1–25",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "4.651 — Syllabus",
+          "url": "https://ocw.mit.edu/courses/4-651-art-since-1940-fall-2010/pages/syllabus/",
+          "locator": "Course Meeting Times; Requirements; Readings",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "战前语境与抽象表现主义",
+          "locator": "Lectures 1–5",
+          "source_id": "O1",
+          "focus": "从具象与抽象、超现实主义到行动绘画、色域和雕塑。"
+        },
+        {
+          "id": "u02",
+          "title": "太平洋两岸、欧洲与新先锋",
+          "locator": "Lectures 6–8",
+          "source_id": "O1",
+          "focus": "比较旧金山和日本具体派、欧洲身体与姿态，以及凯奇、劳申伯格与约翰斯。"
+        },
+        {
+          "id": "u03",
+          "title": "西海岸、偶发艺术与形式主义",
+          "locator": "Lectures 9–13",
+          "source_id": "O1",
+          "focus": "沿具象艺术、偶发艺术与后绘画抽象，保留影片放映和展览参访的位置。"
+        },
+        {
+          "id": "u04",
+          "title": "极简主义、波普与欧洲回应",
+          "locator": "Lectures 14–16",
+          "source_id": "O1",
+          "focus": "比较美国极简主义和波普，以及欧洲的独立小组、资本主义现实主义与贫穷艺术。"
+        },
+        {
+          "id": "u05",
+          "title": "观念、场域、行为和过程",
+          "locator": "Lectures 17–20",
+          "source_id": "O1",
+          "focus": "依次读观念艺术、大地和光、行为与介入、后极简与过程艺术。"
+        },
+        {
+          "id": "u06",
+          "title": "艺术经典、身份与公共介入",
+          "locator": "Lectures 21–22",
+          "source_id": "O1",
+          "focus": "讨论女性艺术家对经典的挑战，以及身份政治与公共介入。"
+        },
+        {
+          "id": "u07",
+          "title": "挪用、新媒介与课程辩论",
+          "locator": "Lectures 23–25",
+          "source_id": "O1",
+          "focus": "从后现代挪用转入装置、新媒介和全球化，并保留结课辩论。"
+        }
+      ]
+    },
+    {
+      "id": "mit-philosophy-of-film",
+      "title": "Philosophy of Film",
+      "institution": "Massachusetts Institute of Technology",
+      "provider_type": "university",
+      "code": "24.213",
+      "edition": "Fall 2004",
+      "instructors": [
+        "Irving Singer"
+      ],
+      "aliases": [
+        "电影哲学",
+        "MIT电影哲学",
+        "电影艺术的哲学"
+      ],
+      "domain": "film_studies",
+      "level": "intermediate",
+      "prerequisites": [],
+      "audience": "希望结合观看、阅读与写作分析电影形式及其哲学问题的学习者。",
+      "pace": {
+        "description": "原课每周一次，每次 3 小时。两篇论文分别在第 10 次与最后一次课提交。"
+      },
+      "original_language": "英语",
+      "source_access": "MIT OCW 公开课程日历、课程视频入口、阅读清单和作业样例。日历中的指定电影及访谈依片源权限取得。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "24.213 — Calendar",
+          "url": "https://ocw.mit.edu/courses/24-213-philosophy-of-film-fall-2004/pages/calendar/",
+          "locator": "Lectures 1–13; Key Dates",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "24.213 — Syllabus",
+          "url": "https://ocw.mit.edu/courses/24-213-philosophy-of-film-fall-2004/pages/syllabus/",
+          "locator": "Course Meeting Times; Description; Papers",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "24.213 — Video Lectures",
+          "url": "https://ocw.mit.edu/courses/24-213-philosophy-of-film-fall-2004/video_galleries/video-lectures/",
+          "locator": "Lecture video archive",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "导入与《公民凯恩》",
+          "locator": "Sessions 1–2",
+          "source_id": "O1",
+          "focus": "从《美女与野兽》与《公民凯恩》观察形式如何构造银幕经验。"
+        },
+        {
+          "id": "u02",
+          "title": "银幕幻象、欲望与群体",
+          "locator": "Sessions 3–5",
+          "source_id": "O1",
+          "focus": "按原顺序比较《开罗紫玫瑰》《魂断威尼斯》《游戏规则》。"
+        },
+        {
+          "id": "u03",
+          "title": "希区柯克的观看与悬念",
+          "locator": "Sessions 6–9",
+          "source_id": "O1",
+          "focus": "沿《三十九级台阶》《惊魂记》、访谈和《迷魂记》展开分析。"
+        },
+        {
+          "id": "u04",
+          "title": "威尔斯访谈与论文",
+          "locator": "Sessions 10–11",
+          "source_id": "O1",
+          "focus": "在威尔斯访谈处保留第一篇论文，再进入《安巴逊大族》。"
+        },
+        {
+          "id": "u05",
+          "title": "雷诺阿与结课讨论",
+          "locator": "Sessions 12–13",
+          "source_id": "O1",
+          "focus": "分析《朗治先生的罪行》，进入讨论和期末论文。"
+        }
+      ]
+    },
+    {
+      "id": "harvard-masterpieces-world-literature",
+      "title": "Masterpieces of World Literature",
+      "institution": "Harvard University (HarvardX)",
+      "provider_type": "university",
+      "code": "HarvardX · Masterpieces of World Literature",
+      "edition": "HarvardX edX outline · 2026-11-04 snapshot",
+      "instructors": [
+        "David Damrosch",
+        "Martin Puchner"
+      ],
+      "aliases": [
+        "世界文学杰作",
+        "哈佛世界文学名著",
+        "世界文学名篇"
+      ],
+      "domain": "literature",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望比较作品跨语言、跨地域传播与接受过程的学习者。",
+      "pace": {
+        "description": "HarvardX 标注自定进度 12 周，每周 5–7 小时。"
+      },
+      "original_language": "英语",
+      "source_access": "HarvardX 在 edX 公开 12 节大纲。原课内容需注册并选课，免费旁听有访问期限，评分与证书按平台规则办理。当前路径按公开大纲学习，原著另查合适版本。",
+      "evidence_level": "syllabus_only",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Masterpieces of World Literature — HarvardX on edX",
+          "url": "https://www.edx.org/learn/literature/harvard-university-masterpieces-of-world-literature",
+          "locator": "Texts/authors considered in the course; Sections 1–12; Prerequisites; Ways to take this course",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Masterpieces of World Literature — Harvard University",
+          "url": "https://pll.harvard.edu/course/masterpieces-of-world-literature",
+          "locator": "Duration; Time Commitment; Course description; Instructors",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "世界文学的观念与最早的史诗",
+          "locator": "Sections 1–2",
+          "source_id": "O1",
+          "focus": "从歌德的世界文学观念到《吉尔伽美什史诗》。"
+        },
+        {
+          "id": "u02",
+          "title": "归途故事与层层讲述",
+          "locator": "Sections 3–4",
+          "source_id": "O1",
+          "focus": "比较《奥德赛》与《一千零一夜》的叙事和流传。"
+        },
+        {
+          "id": "u03",
+          "title": "日本宫廷与葡萄牙航海史诗",
+          "locator": "Sections 5–6",
+          "source_id": "O1",
+          "focus": "依次读《源氏物语》和《卢济塔尼亚人之歌》。"
+        },
+        {
+          "id": "u04",
+          "title": "启蒙讽刺与现代中国文学",
+          "locator": "Sections 7–8",
+          "source_id": "O1",
+          "focus": "从伏尔泰《老实人》读到鲁迅与张爱玲。"
+        },
+        {
+          "id": "u05",
+          "title": "虚构迷宫与殖民语境",
+          "locator": "Sections 9–10",
+          "source_id": "O1",
+          "focus": "依次读博尔赫斯《虚构集》和索因卡《死亡与国王的侍从》。"
+        },
+        {
+          "id": "u06",
+          "title": "移民叙事与跨文化艺术",
+          "locator": "Sections 11–12",
+          "source_id": "O1",
+          "focus": "在鲁西迪与拉希莉之后，以帕慕克《我的名字叫红》收束。"
+        }
+      ]
+    },
+    {
+      "id": "harvard-pyramids-giza",
+      "title": "Pyramids of Giza: Ancient Egyptian Art and Archaeology",
+      "institution": "Harvard University (HarvardX)",
+      "provider_type": "university",
+      "code": "HarvardX · Pyramids of Giza",
+      "edition": "HarvardX / Digital Giza original clips · 2026-11-04 snapshot",
+      "instructors": [
+        "Peter Der Manuelian"
+      ],
+      "aliases": [
+        "吉萨金字塔",
+        "哈佛古埃及考古",
+        "吉萨金字塔古埃及艺术与考古"
+      ],
+      "domain": "archaeology",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "想从遗址、器物、铭文与考古记录理解古王国时期吉萨的学习者。",
+      "pace": {
+        "description": "Harvard 标注原课自定进度 8 周，每周 2–4 小时。下列顺序来自公开档案中有编号的原课模块。"
+      },
+      "original_language": "英语",
+      "source_access": "Harvard Digital Giza 公开原课模块 1–7 的视频片段与说明。主讲教师确认原课共 8 个模块，第 8 模块材料本次未从官方公开来源核实。Harvard 官网列出 edX 旁听及付费认证选项，实际开放和课内访问以平台为准。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Digital Giza — HarvardX course clips",
+          "url": "https://giza.fas.harvard.edu/videos/",
+          "locator": "HarvardX/EdX course videos; Modules 1–7",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Pyramids of Giza — Harvard University",
+          "url": "https://pll.harvard.edu/course/pyramids-giza-ancient-egyptian-art-and-archaeology",
+          "locator": "Duration; Time Commitment; Course description; Instructor; Audit",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "The Pyramids of Giza — Peter Der Manuelian, Harvard Scholars",
+          "url": "https://petermanuelian.scholars.harvard.edu/presentations/pyramids-giza-free-8-module-60-video-edx-harvardx-course",
+          "locator": "Original 2019 HarvardX course module count",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "走进吉萨与古王国",
+          "locator": "Module 1",
+          "source_id": "O1",
+          "focus": "从历史概览、金字塔建筑的演进和高原导览定位课程。"
+        },
+        {
+          "id": "u02",
+          "title": "探险、发掘与档案",
+          "locator": "Module 2",
+          "source_id": "O1",
+          "focus": "沿早期探险和科学发掘，阅读哈佛与波士顿美术馆的考古档案。"
+        },
+        {
+          "id": "u03",
+          "title": "数字吉萨",
+          "locator": "Module 3",
+          "source_id": "O1",
+          "focus": "理解考古记录如何支撑三维复原。"
+        },
+        {
+          "id": "u04",
+          "title": "金字塔的建造与用途",
+          "locator": "Module 4",
+          "source_id": "O1",
+          "focus": "从太阳崇拜、建造方法和葬俗理解金字塔。"
+        },
+        {
+          "id": "u05",
+          "title": "吉萨遗址的断代",
+          "locator": "Module 5",
+          "source_id": "O1",
+          "focus": "比较墓葬断代的证据，应用于吉萨墓地案例。"
+        },
+        {
+          "id": "u06",
+          "title": "铭文与埃及文字",
+          "locator": "Module 6",
+          "source_id": "O1",
+          "focus": "结合墓葬、铭文和法令观察古埃及书写系统。"
+        },
+        {
+          "id": "u07",
+          "title": "吉萨高原的艺术案例",
+          "locator": "Module 7",
+          "source_id": "O1",
+          "focus": "从雕像、浮雕、小器物等材料认识古王国艺术。"
+        }
+      ]
+    },
+    {
+      "id": "helsinki-building-ai",
+      "title": "Elements of AI: Building AI",
+      "institution": "University of Helsinki and MinnaLearn",
+      "provider_type": "university",
+      "code": "TKT210281 / TKT210282",
+      "edition": "2026–2027 University of Helsinki offering / English MOOC",
+      "instructors": [
+        "Teemu Roos"
+      ],
+      "aliases": [
+        "Building AI",
+        "Elements of AI第二部分",
+        "构建人工智能赫尔辛基",
+        "赫尔辛基构建AI"
+      ],
+      "domain": "artificial_intelligence",
+      "level": "introductory",
+      "prerequisites": [
+        "建议先学 Elements of AI: Introduction to AI。",
+        "编程难度练习需要基础 Python。"
+      ],
+      "audience": "希望从 AI 通识进到算法原理，并按能力挑选练习难度的学习者。",
+      "pace": {
+        "description": "原课自定进度、分三档练习。校方 2026–2027 学分开课规则以对应难度的注册页为准。"
+      },
+      "original_language": "英语及部分其他语言版本",
+      "source_access": "英文 MOOC 公开章节、正文与练习题目。提交练习和保存进度需账号，学分注册和付费证书按原站规则办理。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Building AI — Elements of AI",
+          "url": "https://buildingai.elementsofai.com/",
+          "locator": "English MOOC course overview; Chapters 1–5; learning materials and exercises",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Building AI — University of Helsinki Open University",
+          "url": "https://www.helsinki.fi/en/admissions-and-education/open-university/multidisciplinary-themed-modules/artificial-intelligence-collection",
+          "locator": "2026–2027 Intermediate and Advanced offerings; course codes",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Building AI — University of Helsinki course description",
+          "url": "https://buildingai.elementsofai.com/buildingai_objectives.pdf",
+          "locator": "Learning objectives; Assessment; Lead Instructor",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "走进 AI 与优化",
+          "locator": "Chapter 1 · Getting started with AI",
+          "source_id": "O1",
+          "focus": "了解练习难度，再比较穷举搜索、爬山法与模拟退火。"
+        },
+        {
+          "id": "u02",
+          "title": "处理不确定性",
+          "locator": "Chapter 2 · Dealing with uncertainty",
+          "source_id": "O1",
+          "focus": "从概率基础走到贝叶斯规则和朴素贝叶斯分类。"
+        },
+        {
+          "id": "u03",
+          "title": "机器学习",
+          "locator": "Chapter 3 · Machine learning",
+          "source_id": "O1",
+          "focus": "按原顺序学习线性回归、近邻、文本表示及过拟合和交叉验证。"
+        },
+        {
+          "id": "u04",
+          "title": "神经网络",
+          "locator": "Chapter 4 · Neural networks",
+          "source_id": "O1",
+          "focus": "由逻辑回归进入神经网络和深度学习。"
+        },
+        {
+          "id": "u05",
+          "title": "总结与可选项目",
+          "locator": "Chapter 5 · Conclusion",
+          "source_id": "O1",
+          "focus": "回顾所学，并按课程指引构思 AI 应用。"
+        }
+      ]
+    },
+    {
+      "id": "mit-introduction-deep-learning",
+      "title": "Introduction to Deep Learning",
+      "institution": "Massachusetts Institute of Technology",
+      "provider_type": "university",
+      "code": "6.S191",
+      "edition": "Spring 2026",
+      "instructors": [
+        "Alexander Amini",
+        "Ava Amini"
+      ],
+      "aliases": [
+        "MIT深度学习导论",
+        "麻省理工深度学习入门",
+        "6.S191"
+      ],
+      "domain": "deep_learning",
+      "level": "introductory",
+      "prerequisites": [
+        "初等微积分（导数和链式法则）与线性代数（矩阵乘法）。",
+        "熟悉 Python 有助于参与实验。"
+      ],
+      "audience": "具备基础数学知识，希望通过密集讲授和软件实验建立深度学习基础的学习者。",
+      "pace": {
+        "description": "2026 公开日程从 3 月 30 日至 5 月 25 日，每周一发布内容。MIT 学分轨依据项目提案评定。"
+      },
+      "original_language": "英语",
+      "source_access": "2026 课程档案提供公开讲次、幻灯片、视频和代码入口，发布状态逐项以日程为准。MIT 学分注册与项目评定按校内规则办理。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "MIT 6.S191 — 2026 course archive",
+          "url": "https://introtodeeplearning.com/2026/index.html",
+          "locator": "Schedule; Time and Location; FAQ; Team",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "深度学习基础",
+          "locator": "Lecture 1",
+          "source_id": "O1",
+          "focus": "认识深度学习的基本训练问题。"
+        },
+        {
+          "id": "u02",
+          "title": "序列建模与音乐生成",
+          "locator": "Lecture 2; Software Lab 1",
+          "source_id": "O1",
+          "focus": "结合序列模型和 Python 音乐生成实验。"
+        },
+        {
+          "id": "u03",
+          "title": "视觉、生成模型与人脸检测",
+          "locator": "Lectures 3–4; Software Lab 2",
+          "source_id": "O1",
+          "focus": "依次进入计算机视觉、生成模型和人脸检测实验。"
+        },
+        {
+          "id": "u04",
+          "title": "强化学习、前沿与语言模型微调",
+          "locator": "Lectures 5–6; Software Lab 3",
+          "source_id": "O1",
+          "focus": "从深度强化学习读到研究前沿，并保留语言模型微调实验。"
+        },
+        {
+          "id": "u05",
+          "title": "AI 议题与科学应用",
+          "locator": "Lectures 7–8; Final Project work",
+          "source_id": "O1",
+          "focus": "保留 AI 议题和科学应用客座讲授，衔接项目准备。"
+        },
+        {
+          "id": "u06",
+          "title": "大规模并行训练与项目展示",
+          "locator": "Lecture 9; Project Work; Project Presentations",
+          "source_id": "O1",
+          "focus": "了解大规模训练，再按原课顺序推进项目与展示。"
+        }
+      ]
+    },
+    {
+      "id": "stanford-deep-learning-computer-vision",
+      "title": "Deep Learning for Computer Vision",
+      "institution": "Stanford University",
+      "provider_type": "university",
+      "code": "CS231n",
+      "edition": "Spring 2026",
+      "instructors": [
+        "Fei-Fei Li",
+        "Ehsan Adeli",
+        "Justin Johnson",
+        "Zane Durante",
+        "Tiange Xiang"
+      ],
+      "aliases": [
+        "CS231n",
+        "斯坦福计算机视觉",
+        "面向计算机视觉的深度学习"
+      ],
+      "domain": "computer_vision",
+      "level": "advanced",
+      "prerequisites": [
+        "熟练使用 Python，作业使用 Python 和 NumPy。",
+        "大学微积分、线性代数及基础概率统计。"
+      ],
+      "audience": "准备动手训练神经网络并阅读视觉研究的学习者。",
+      "pace": {
+        "description": "原课为期 10 周，每周两次讲课，每次 80 分钟，含作业、期中及期末项目。"
+      },
+      "original_language": "英语",
+      "source_access": "2026 春季日程和部分课件、笔记及作业说明公开。该期课堂录像通过 Canvas 向注册学生提供，公开旧年录像对应其他期次。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "CS231n — Spring 2026 Schedule",
+          "url": "https://cs231n.stanford.edu/2026/schedule.html",
+          "locator": "Lectures 1–18; review sessions; deadlines; Final Project Poster Session",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "CS231n — Spring 2026",
+          "url": "https://cs231n.stanford.edu/2026/index.html",
+          "locator": "Instructors; Course Logistics; Coursework; Prerequisites",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "CS231n — Assignments",
+          "url": "https://cs231n.stanford.edu/2026/assignments.html",
+          "locator": "Assignments 1–3",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "视觉概览与图像分类",
+          "locator": "Lectures 1–2; Apr 3 review",
+          "source_id": "O1",
+          "focus": "理解数据驱动的图像分类及线性分类器，保留 Python 与 NumPy 复习。"
+        },
+        {
+          "id": "u02",
+          "title": "训练、优化与反向传播",
+          "locator": "Lectures 3–4; Apr 10 review",
+          "source_id": "O1",
+          "focus": "连接正则化、优化器、神经网络及反向传播。"
+        },
+        {
+          "id": "u03",
+          "title": "卷积网络与视觉架构",
+          "locator": "Lectures 5–6; Apr 17 project overview",
+          "source_id": "O1",
+          "focus": "理解卷积与池化，比较代表性架构及迁移学习。"
+        },
+        {
+          "id": "u04",
+          "title": "序列、注意力与 Transformer",
+          "locator": "Lectures 7–8; Apr 24 review",
+          "source_id": "O1",
+          "focus": "从循环网络进入自注意力，并保留 PyTorch 复习。"
+        },
+        {
+          "id": "u05",
+          "title": "目标检测、分割与视频",
+          "locator": "Lectures 9–10; May 1 review",
+          "source_id": "O1",
+          "focus": "依次研究检测、分割、模型可视化与视频理解。"
+        },
+        {
+          "id": "u06",
+          "title": "大规模训练与自监督",
+          "locator": "Lectures 11–12; Midterm review; Midterm",
+          "source_id": "O1",
+          "focus": "比较分布式训练和自监督学习，并保留期中节点。"
+        },
+        {
+          "id": "u07",
+          "title": "生成模型与三维视觉",
+          "locator": "Lectures 13–15",
+          "source_id": "O1",
+          "focus": "从变分自编码器、对抗与自回归模型进入扩散和三维视觉。"
+        },
+        {
+          "id": "u08",
+          "title": "视觉语言、世界模型与以人为本的 AI",
+          "locator": "Lectures 16–18; Final Report; Final Project Poster Session",
+          "source_id": "O1",
+          "focus": "按原顺序读视觉语言、世界模型和以人为本的 AI，保留期末项目。"
+        }
+      ]
+    },
+    {
+      "id": "berkeley-introduction-artificial-intelligence",
+      "title": "Introduction to Artificial Intelligence",
+      "institution": "University of California, Berkeley",
+      "provider_type": "university",
+      "code": "CS 188",
+      "edition": "Spring 2026",
+      "instructors": [
+        "Dan Klein",
+        "Stuart Russell"
+      ],
+      "aliases": [
+        "CS 188",
+        "伯克利人工智能导论",
+        "伯克利AI基础"
+      ],
+      "domain": "artificial_intelligence",
+      "level": "intermediate",
+      "prerequisites": [
+        "CS 61A 或 CS 61B 对应的编程基础。",
+        "CS 70 或 Math 55 对应的命题逻辑与概率基础。"
+      ],
+      "audience": "希望实现智能体并系统学习搜索、决策、概率推断和机器学习的学习者。",
+      "pace": {
+        "description": "原课按周安排讲授、讨论、作业和项目，另有期中及期末。"
+      },
+      "original_language": "英语",
+      "source_access": "固定到伯克利 Spring 2026 学期。公开日程、部分幻灯片、教材章节及项目说明，Ed、校内录播及提交服务的访问依平台权限。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "CS 188 — Spring 2026 Calendar",
+          "url": "https://inst.eecs.berkeley.edu/~cs188/sp26/",
+          "locator": "Weeks 1–17; Lectures 1–28; discussion, homework, project and exam schedule",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "CS 188 — Spring 2026 Policies",
+          "url": "https://inst.eecs.berkeley.edu/~cs188/sp26/policies/",
+          "locator": "Description; Prerequisites; Lectures; Projects; Auditing",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "CS 188 — Spring 2026 Staff",
+          "url": "https://inst.eecs.berkeley.edu/~cs188/sp26/staff/",
+          "locator": "Instructors",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "智能体与搜索",
+          "locator": "Lectures 1–4",
+          "source_id": "O1",
+          "focus": "从智能体与环境进入无信息搜索、A*、启发式和局部搜索。"
+        },
+        {
+          "id": "u02",
+          "title": "约束满足与博弈",
+          "locator": "Lectures 5–8",
+          "source_id": "O1",
+          "focus": "依次讨论约束满足问题和博弈树。"
+        },
+        {
+          "id": "u03",
+          "title": "序贯决策与强化学习",
+          "locator": "Lectures 9–12",
+          "source_id": "O1",
+          "focus": "连接马尔可夫决策过程和强化学习。"
+        },
+        {
+          "id": "u04",
+          "title": "概率与贝叶斯网络",
+          "locator": "Lectures 13–16; Midterm before Lecture 15",
+          "source_id": "O1",
+          "focus": "从概率和贝叶斯网络建模过渡到精确推断与采样，保留期中位置。"
+        },
+        {
+          "id": "u05",
+          "title": "时序推断与理性决策",
+          "locator": "Lectures 17–19; Week 10 Spring Break",
+          "source_id": "O1",
+          "focus": "从马尔可夫模型、隐状态与粒子滤波过渡到理性决策。"
+        },
+        {
+          "id": "u06",
+          "title": "机器学习与神经网络",
+          "locator": "Lectures 20–23",
+          "source_id": "O1",
+          "focus": "依次学习决策树、线性回归、朴素贝叶斯及感知机与神经网络。"
+        },
+        {
+          "id": "u07",
+          "title": "语言模型、应用与安全",
+          "locator": "Lectures 24–28; Weeks 16–17 review and final",
+          "source_id": "O1",
+          "focus": "按原顺序涵盖语言模型、微调和对齐、核监测应用、AI 安全与期末。"
+        }
+      ]
+    },
+    {
+      "id": "yale-evolution-ecology-behavior",
+      "title": "Principles of Evolution, Ecology and Behavior",
+      "institution": "Yale University",
+      "provider_type": "university",
+      "code": "EEB 122",
+      "edition": "Spring 2009",
+      "instructors": [
+        "Stephen C. Stearns"
+      ],
+      "aliases": [
+        "演化生态与行为原理",
+        "耶鲁演化生态行为",
+        "进化生态学与行为原理"
+      ],
+      "domain": "biology",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "开始学习生物学和环境科学，希望连接演化、生态和动物行为的学习者。",
+      "pace": {
+        "description": "原课每周三次，每次 50 分钟。另有写作讨论课、两次期中考核和一篇论文。"
+      },
+      "original_language": "英语",
+      "source_access": "Open Yale Courses 公开讲次、文字稿、视频入口和考核材料。指定教材与部分论文按各自来源权限取得。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "EEB 122 — Open Yale Courses",
+          "url": "https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122",
+          "locator": "Course Structure; Requirements; Sessions; Midterm Exams",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "遗传、选择与漂变",
+          "locator": "Lectures 1–5",
+          "source_id": "O1",
+          "focus": "理解遗传、自然选择、遗传漂变与种群遗传组成变化。"
+        },
+        {
+          "id": "u02",
+          "title": "变异、发育与性",
+          "locator": "Lectures 6–10",
+          "source_id": "O1",
+          "focus": "沿变异的起源、发育与反应规范，进入性的演化和基因组冲突。"
+        },
+        {
+          "id": "u03",
+          "title": "生活史与物种分化",
+          "locator": "Lectures 11–14",
+          "source_id": "O1",
+          "focus": "连接生活史、性分配、性选择与物种形成。"
+        },
+        {
+          "id": "u04",
+          "title": "系统发育与生命史",
+          "locator": "Lectures 15–19",
+          "source_id": "O1",
+          "focus": "使用系统发育与比较方法理解演化事件、地质背景和化石证据。"
+        },
+        {
+          "id": "u05",
+          "title": "共同演化与演化思想的应用",
+          "locator": "Lectures 20–23; Midterm Exam 1 after Lecture 21",
+          "source_id": "O1",
+          "focus": "从共同演化、演化医学进入社会科学和科学推理，保留考核位置。"
+        },
+        {
+          "id": "u06",
+          "title": "环境、种群与群落",
+          "locator": "Lectures 24–28",
+          "source_id": "O1",
+          "focus": "从气候和物理环境进入种群增长、种间竞争与群落。"
+        },
+        {
+          "id": "u07",
+          "title": "岛屿、生物多样性与生态系统",
+          "locator": "Lectures 29–31",
+          "source_id": "O1",
+          "focus": "讨论岛屿生物地理、入侵、物质能量与多样性。"
+        },
+        {
+          "id": "u08",
+          "title": "行为生态与合作",
+          "locator": "Lectures 32–36; Midterm Exam 2",
+          "source_id": "O1",
+          "focus": "连接觅食、演化博弈、交配、亲代照料、繁殖策略与利他行为。"
+        }
+      ]
+    },
+    {
+      "id": "mit-introduction-sustainable-energy",
+      "title": "Introduction to Sustainable Energy",
+      "institution": "Massachusetts Institute of Technology",
+      "provider_type": "university",
+      "code": "22.081J",
+      "edition": "Fall 2010",
+      "instructors": [
+        "Michael Golay",
+        "Randall Field",
+        "William Green, Jr.",
+        "John C. Wright"
+      ],
+      "aliases": [
+        "可持续能源导论",
+        "MIT可持续能源",
+        "可持续能源入门"
+      ],
+      "domain": "energy",
+      "level": "intermediate",
+      "prerequisites": [],
+      "audience": "有基础理工知识，希望定量比较能源供给、转换和终端利用方式的学习者。",
+      "pace": {
+        "description": "原课每周两次，每次 2 小时，部分替换为讨论。本科轨含习题、两次带回考试和期末，研究生轨另有学期论文。"
+      },
+      "original_language": "英语",
+      "source_access": "MIT OCW 公开课表、部分讲义、指定阅读目录及作业。原课案例涉及的政策、价格和技术数据以 2010 年语境为准。",
+      "evidence_level": "syllabus_and_sessions",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "22.081J — Calendar",
+          "url": "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/calendar/",
+          "locator": "Parts I–III; Sessions 1a–25b; Key Dates",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "22.081J — Syllabus",
+          "url": "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/syllabus/",
+          "locator": "Course Meeting Times; Undergraduate Requirements; Graduate Requirements",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "22.081J — Lectures and Readings",
+          "url": "https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/lectures-and-readings/",
+          "locator": "Part I–III lecture materials and reading entries",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "能源、气候与可持续性",
+          "locator": "Part I; Sessions 1a–4a",
+          "source_id": "O1",
+          "focus": "从用能与气候背景进入能量转换及可持续性讨论。"
+        },
+        {
+          "id": "u02",
+          "title": "资源、转运储存与系统规划",
+          "locator": "Part I; Sessions 4b–6b",
+          "source_id": "O1",
+          "focus": "依次研究资源耗竭、输运储能、风能基础及供需规划。"
+        },
+        {
+          "id": "u03",
+          "title": "电力系统、可行性与效率",
+          "locator": "Part I; Sessions 7a–9b",
+          "source_id": "O1",
+          "focus": "连接电网、经济可行性、热力学效率和气候政策。"
+        },
+        {
+          "id": "u04",
+          "title": "核能、化石能源与用能政策",
+          "locator": "Part II; Sessions 10–13b",
+          "source_id": "O1",
+          "focus": "从核能与化石能源进入海上风电、能源政策和交通案例。"
+        },
+        {
+          "id": "u05",
+          "title": "发电、核燃料循环议题与其他技术",
+          "locator": "Part II; Sessions 14a–19b",
+          "source_id": "O1",
+          "focus": "比较发电、核废物和扩散、聚变、碳管理、地热、太阳能与生物质。"
+        },
+        {
+          "id": "u06",
+          "title": "终端用能、储能与风险",
+          "locator": "Part III; Sessions 20a–22b",
+          "source_id": "O1",
+          "focus": "从交通和生物质生命周期进入风电、储能、建筑与概率风险。"
+        },
+        {
+          "id": "u07",
+          "title": "政策、水电与系统取舍",
+          "locator": "Part III; Sessions 23–25b",
+          "source_id": "O1",
+          "focus": "保留政策讨论，连接国际行动、水电与非洲电力，进入结课综合。"
+        }
+      ]
+    },
+    {
+      "id": "openai-agents-and-workflows",
+      "title": "Agents and Workflows",
+      "institution": "OpenAI Academy",
+      "code": "agents-and-workflows-y0qoc",
+      "edition": "OpenAI Academy Foundations pathway · 2026-11-04 snapshot",
+      "instructors": [],
+      "aliases": [
+        "OpenAI Agents and Workflows",
+        "OpenAI Academy Agents and Workflows",
+        "OpenAI智能体与工作流"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "intermediate",
+      "prerequisites": [
+        "熟悉用 AI 执行单项任务与工作流，官方建议先学 AI Foundations 和 Applied AI Foundations。",
+        "跟做需 ChatGPT 账号、可用的智能体功能及一项获准用于练习的真实工作任务。"
+      ],
+      "audience": "已有对话式 AI 使用经验，希望进一步练习工作中智能体协作的人。",
+      "pace": {
+        "description": "原课自定进度，学习活动约 90 分钟，独立考核约 30 分钟。平台徽章要求完成课程并通过考核。"
+      },
+      "evidence_level": "syllabus_only",
+      "source_access": "公开入口可读取原课介绍及课程、考核两项活动的顺序。课程免费，开始学习和查看课内内容须登录 ChatGPT 账号。当前路径按公开大纲学习。官网提供公开下载的课程示例项目包。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Agents and Workflows learning path",
+          "url": "https://academy.openai.com/public/courses/agents-and-workflows-y0qoc",
+          "locator": "Public course overview and sequential learning path: course → assessment",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Agents and Workflows",
+          "url": "https://academy.openai.com/public/courses/agents-and-workflows-bieml",
+          "locator": "Learning path activity 1: Agents and Workflows (public overview)",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Agents and Workflows Assessment",
+          "url": "https://academy.openai.com/public/courses/agents-and-workflows-assessment-emdv6",
+          "locator": "Learning path activity 2: Agents and Workflows Assessment (public overview)",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "OpenAI Academy courses · Help Center",
+          "url": "https://help.openai.com/en/articles/20001270-openai-academy-courses",
+          "locator": "Courses; access; assessments and completion",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "Sample customer onboarding project brief",
+          "url": "https://pemhub.s3.us-west-1.amazonaws.com/oaiacademy/oai-sample-customer-onboarding-project-brief.zip",
+          "locator": "Official downloadable ZIP linked in the public course description",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Agents and Workflows",
+          "locator": "Learning path activity 1: Agents and Workflows (public overview)",
+          "source_id": "O2",
+          "focus": "把任务委派给智能体，定义上下文、边界、输出与检查点，人工审查结果并改进工作流。"
+        },
+        {
+          "id": "u02",
+          "title": "Agents and Workflows Assessment",
+          "locator": "Learning path activity 2: Agents and Workflows Assessment (public overview)",
+          "source_id": "O3",
+          "focus": "保留官方考核的位置。徽章要求原课完成并在考核中达到 80%，实际试题须登录平台。"
+        }
+      ]
+    },
+    {
+      "id": "openai-ai-for-college-students",
+      "title": "AI for College Students",
+      "institution": "OpenAI Academy",
+      "code": "ai-for-college-students-gxgmr",
+      "edition": "OpenAI Academy Teach and learn with AI · 2026-11-04 snapshot",
+      "instructors": [],
+      "aliases": [
+        "OpenAI AI for College Students",
+        "OpenAI Academy AI for College Students",
+        "OpenAI大学生AI课"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "intermediate",
+      "prerequisites": [
+        "会用 ChatGPT 写基础提示。跟做需 ChatGPT 账号，以及允许使用 AI 的课程任务或官方示例。"
+      ],
+      "audience": "希望用 AI 辅助学习规划、小组项目或职业准备的高校学生。",
+      "pace": {
+        "description": "原课自定进度，学习活动约 45 分钟，独立考核约 20 分钟。平台徽章要求完成课程并通过考核。"
+      },
+      "evidence_level": "syllabus_only",
+      "source_access": "公开入口可读取原课介绍及课程、考核两项活动的顺序。课程免费，开始学习和查看课内内容须登录 ChatGPT 账号。当前路径按公开大纲学习。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "AI for College Students learning path",
+          "url": "https://academy.openai.com/public/courses/ai-for-college-students-gxgmr",
+          "locator": "Public course overview and sequential learning path: course → assessment",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "AI for College Students",
+          "url": "https://academy.openai.com/public/courses/ai-for-college-students-fv95a",
+          "locator": "Learning path activity 1: AI for College Students (public overview)",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "AI for College Students Assessment",
+          "url": "https://academy.openai.com/public/courses/ai-for-college-students-assessment-f6mc6",
+          "locator": "Learning path activity 2: AI for College Students Assessment (public overview)",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "OpenAI Academy courses · Help Center",
+          "url": "https://help.openai.com/en/articles/20001270-openai-academy-courses",
+          "locator": "Courses; access; assessments and completion",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "AI for College Students",
+          "locator": "Learning path activity 1: AI for College Students (public overview)",
+          "source_id": "O2",
+          "focus": "练习规划学习任务和小组项目，用自己的材料核对 AI 输出，并将实际经历整理为求职与面试素材。"
+        },
+        {
+          "id": "u02",
+          "title": "AI for College Students Assessment",
+          "locator": "Learning path activity 2: AI for College Students Assessment (public overview)",
+          "source_id": "O3",
+          "focus": "保留官方考核的位置。徽章要求原课完成并在考核中达到 80%，实际试题须登录平台。"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ai-fluency-for-students",
+      "title": "AI Fluency for students",
+      "institution": "Anthropic · Claude Academy",
+      "code": "ai-fluency-for-students",
+      "edition": "Claude Academy · 2026-11-04 snapshot",
+      "instructors": [
+        "Rick Dakan",
+        "Joseph Feller",
+        "Maggie Vo",
+        "Zoe Ludwig",
+        "Alex Albert"
+      ],
+      "aliases": [
+        "Anthropic AI Fluency for Students",
+        "Claude AI Fluency for Students",
+        "Anthropic学生AI素养"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "introductory",
+      "prerequisites": [
+        "官方建议先学 AI Fluency: Framework & Foundations。",
+        "建议准备一个 AI 聊天工具，课程示例用 Claude。"
+      ],
+      "audience": "希望将 AI 用于课业、学习和职业探索的学生。",
+      "pace": {
+        "description": "原站自定进度，约 3 小时、5 课，另列一次测验及完成徽章。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "source_access": "课文、视频摘要与练习说明可免登录阅读。登录可保存进度，测验和徽章领取以原站流程为准。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "AI Fluency for students",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students",
+          "locator": "Inside the course: ordered lessons, quiz and completion badge",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Meet your instructors",
+          "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/9ea9e1e39a9cddf7a79b164a0ae5341ae4006f01.pdf",
+          "locator": "p. 1, official course instructor profiles",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Anthropic launches higher education advisory board and AI Fluency courses",
+          "url": "https://www.anthropic.com/news/anthropic-higher-education-initiatives",
+          "locator": "2025 announcement; course identity and co-creators",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "Welcome to AI Fluency for students",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students/welcome-to-ai-fluency-for-students",
+          "locator": "Lesson 1: Welcome to AI Fluency for students",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "AI Fluency Framework",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students/ai-fluency-framework",
+          "locator": "Lesson 2: AI Fluency Framework",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O6",
+          "title": "AI as a learning partner",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students/ai-as-a-learning-partner",
+          "locator": "Lesson 3: AI as a learning partner",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O7",
+          "title": "AI in career planning",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students/ai-in-career-planning",
+          "locator": "Lesson 4: AI in career planning",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O8",
+          "title": "Being the human in the loop",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students/being-the-human-in-the-loop",
+          "locator": "Lesson 5: Being the human in the loop",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O9",
+          "title": "Course quiz",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-students/certificate-of-completion",
+          "locator": "Quiz 1 of 1, after Lesson 5: Course quiz",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Welcome to AI Fluency for students",
+          "locator": "Lesson 1: Welcome to AI Fluency for students",
+          "source_id": "O4",
+          "focus": "认识学生版课程安排，思考使用 AI 的学习目的。"
+        },
+        {
+          "id": "u02",
+          "title": "AI Fluency Framework",
+          "locator": "Lesson 2: AI Fluency Framework",
+          "source_id": "O5",
+          "focus": "回顾 4D 框架在学习任务中的应用。"
+        },
+        {
+          "id": "u03",
+          "title": "AI as a learning partner",
+          "locator": "Lesson 3: AI as a learning partner",
+          "source_id": "O6",
+          "focus": "把 AI 配置为学习搭档，并用持续更新的学习日志跟踪成长。"
+        },
+        {
+          "id": "u04",
+          "title": "AI in career planning",
+          "locator": "Lesson 4: AI in career planning",
+          "source_id": "O7",
+          "focus": "将 AI 用于职业探索、简历改进及面试练习，保留个人表达。"
+        },
+        {
+          "id": "u05",
+          "title": "Being the human in the loop",
+          "locator": "Lesson 5: Being the human in the loop",
+          "source_id": "O8",
+          "focus": "制定个人 AI 协作规则，保留对判断和提交内容的责任。"
+        },
+        {
+          "id": "u06",
+          "title": "Course quiz",
+          "locator": "Quiz 1 of 1, after Lesson 5: Course quiz",
+          "source_id": "O9",
+          "focus": "保留原课结课测验的位置，参与及徽章流程以原站为准。"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-ai-fluency-for-educators",
+      "title": "AI Fluency for educators",
+      "institution": "Anthropic · Claude Academy",
+      "code": "ai-fluency-for-educators",
+      "edition": "Claude Academy · 2026-11-04 snapshot",
+      "instructors": [
+        "Rick Dakan",
+        "Joseph Feller",
+        "Maggie Vo",
+        "Zoe Ludwig"
+      ],
+      "aliases": [
+        "Anthropic AI Fluency for Educators",
+        "Claude AI Fluency for Educators",
+        "Anthropic教师AI素养"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "introductory",
+      "prerequisites": [
+        "官方建议先学 AI Fluency: Framework & Foundations。",
+        "建议准备一个 AI 聊天工具，课程示例用 Claude。",
+        "官方建议使用一项正在开展的教学或课程开发任务练习。"
+      ],
+      "audience": "希望将 AI 用于课程设计、备课与评估的教师、教学设计者和教育管理者。",
+      "pace": {
+        "description": "原站自定进度，约 1.5 小时、4 课，另列一次测验及完成徽章。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "source_access": "课文、视频摘要与练习说明可免登录阅读。登录可保存进度，测验和徽章领取以原站流程为准。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "AI Fluency for educators",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators",
+          "locator": "Inside the course: ordered lessons, quiz and completion badge",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Meet your instructors",
+          "url": "https://www-cdn.anthropic.com/files/4zrzovbb/website/9b6a92af33b00bf2538bd02273dace9e06220dc2.pdf",
+          "locator": "p. 1, official course instructor profiles",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Anthropic launches higher education advisory board and AI Fluency courses",
+          "url": "https://www.anthropic.com/news/anthropic-higher-education-initiatives",
+          "locator": "2025 announcement; course identity and co-creators",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "Introduction to AI Fluency for Educators",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators/introduction-to-ai-fluency-for-educators",
+          "locator": "Lesson 1: Introduction to AI Fluency for Educators",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "AI Fluency Framework review",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators/ai-fluency-framework-review",
+          "locator": "Lesson 2: AI Fluency Framework review",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O6",
+          "title": "Applying AI Fluency to course design and learning outcomes",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators/applying-ai-fluency-to-course-design-and-learning-outcomes",
+          "locator": "Lesson 3: Applying AI Fluency to course design and learning outcomes",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O7",
+          "title": "Applying AI Fluency to learning materials and assignments",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators/applying-ai-fluency-to-learning-materials-and-assignments",
+          "locator": "Lesson 4: Applying AI Fluency to learning materials and assignments",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O8",
+          "title": "Course quiz",
+          "url": "https://academy.claude.com/courses/ai-fluency-for-educators/certificate-of-completion",
+          "locator": "Quiz 1 of 1, after Lesson 4: Course quiz",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Introduction to AI Fluency for Educators",
+          "locator": "Lesson 1: Introduction to AI Fluency for Educators",
+          "source_id": "O4",
+          "focus": "整理教学理念、学生特征与课程约束，形成可复用的背景资料。"
+        },
+        {
+          "id": "u02",
+          "title": "AI Fluency Framework review",
+          "locator": "Lesson 2: AI Fluency Framework review",
+          "source_id": "O5",
+          "focus": "回顾 4D 框架，并将各项能力联系到备课实践。"
+        },
+        {
+          "id": "u03",
+          "title": "Applying AI Fluency to course design and learning outcomes",
+          "locator": "Lesson 3: Applying AI Fluency to course design and learning outcomes",
+          "source_id": "O6",
+          "focus": "识别核心内容，绘制学习过程并明确可衡量的学习成果。"
+        },
+        {
+          "id": "u04",
+          "title": "Applying AI Fluency to learning materials and assignments",
+          "locator": "Lesson 4: Applying AI Fluency to learning materials and assignments",
+          "source_id": "O7",
+          "focus": "在明确教学背景后创建教学材料和评估，反复检查适合度与事实准确性。"
+        },
+        {
+          "id": "u05",
+          "title": "Course quiz",
+          "locator": "Quiz 1 of 1, after Lesson 4: Course quiz",
+          "source_id": "O8",
+          "focus": "保留原课结课测验的位置，参与及徽章流程以原站为准。"
+        }
+      ]
+    },
+    {
+      "id": "deeplearning-ai-ai-for-everyone",
+      "title": "AI For Everyone",
+      "institution": "DeepLearning.AI",
+      "code": "ai-for-everyone",
+      "edition": "Coursera English outline · 2026-11-04 snapshot",
+      "instructors": [
+        "Andrew Ng"
+      ],
+      "aliases": [
+        "DeepLearning.AI AI for Everyone",
+        "吴恩达 AI For Everyone",
+        "吴恩达人人都懂AI"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望理解 AI 技术与组织应用的非技术学习者，也适合希望了解业务应用的技术人员。",
+      "pace": {
+        "description": "Coursera 标注自定进度，共 4 个周模块，约 7 小时。"
+      },
+      "evidence_level": "syllabus_only",
+      "source_access": "Coursera 公开页列出分周模块及视频、阅读与测验条目。正式课程、评分作业和证书受登录、报名及平台提供的访问方案限制。当前路径按公开大纲学习。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "AI For Everyone · Coursera",
+          "url": "https://www.coursera.org/learn/ai-for-everyone/",
+          "locator": "Modules: ordered Weeks 1–4 with video, reading and assignment lists; FAQ on access",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "AI For Everyone · Launch announcement",
+          "url": "https://blog.coursera.org/ai-for-everyone-new-course-from-deeplearning-ai-now-available-on-coursera/",
+          "locator": "Official provider and platform course launch; audience and scope",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "What is AI?",
+          "locator": "Modules → Week 1: What is AI?",
+          "source_id": "O1",
+          "focus": "理解机器学习、数据、深度学习等基本术语和机器学习的能力范围。"
+        },
+        {
+          "id": "u02",
+          "title": "Building AI Projects",
+          "locator": "Modules → Week 2: Building AI Projects",
+          "source_id": "O1",
+          "focus": "比较机器学习与数据科学项目流程，练习选项目并了解如何与 AI 团队合作。"
+        },
+        {
+          "id": "u03",
+          "title": "Building AI In Your Company",
+          "locator": "Modules → Week 3: Building AI In Your Company",
+          "source_id": "O1",
+          "focus": "结合智能音箱和自动驾驶案例认识 AI 团队角色与组织转型步骤。"
+        },
+        {
+          "id": "u04",
+          "title": "AI and Society",
+          "locator": "Modules → Week 4: AI and Society",
+          "source_id": "O1",
+          "focus": "了解偏见、对抗攻击、滥用及 AI 对就业的影响。"
+        }
+      ]
+    },
+    {
+      "id": "deeplearning-ai-generative-ai-for-everyone",
+      "title": "Generative AI for Everyone",
+      "institution": "DeepLearning.AI",
+      "code": "generative-ai-for-everyone",
+      "edition": "Coursera English outline · 2026-11-04 snapshot",
+      "instructors": [
+        "Andrew Ng"
+      ],
+      "aliases": [
+        "DeepLearning.AI Generative AI for Everyone",
+        "吴恩达 Generative AI for Everyone",
+        "吴恩达人人都懂生成式AI"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望理解生成式 AI 的工作原理、日常应用与影响的人，课程无需 AI 或编程基础。",
+      "pace": {
+        "description": "Coursera 标注自定进度，共 3 个周模块，约 6 小时。"
+      },
+      "evidence_level": "syllabus_only",
+      "source_access": "Coursera 公开页列出分周模块及视频、阅读与测验条目。正式课程、评分作业和证书受登录、报名及平台提供的访问方案限制。当前路径按公开大纲学习。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Generative AI for Everyone · Coursera",
+          "url": "https://www.coursera.org/learn/generative-ai-for-everyone/",
+          "locator": "Modules: ordered Weeks 1–3 with video, reading and assignment lists; FAQ on access",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Generative AI for Everyone · Launch announcement",
+          "url": "https://blog.coursera.org/deeplearning-ai-and-coursera-launch-generative-ai-for-everyone-from-ai-pioneer-andrew-ng/",
+          "locator": "Official provider and platform course launch; audience and scope",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Introduction to Generative AI",
+          "locator": "Modules → Week 1: Introduction to Generative AI",
+          "source_id": "O1",
+          "focus": "认识生成式 AI 的基本原理及其在写作、阅读和对话中的用途，并理解模型能力边界。"
+        },
+        {
+          "id": "u02",
+          "title": "Generative AI Projects",
+          "locator": "Modules → Week 2: Generative AI Projects",
+          "source_id": "O1",
+          "focus": "从项目周期理解模型选型、成本、检索增强生成和微调。保留原课的选修代码实践。"
+        },
+        {
+          "id": "u03",
+          "title": "Generative AI in Business and Society",
+          "locator": "Modules → Week 3: Generative AI in Business and Society",
+          "source_id": "O1",
+          "focus": "分析工作任务和新工作流，认识自动化影响及负责任使用。"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-generative-ai-for-beginners",
+      "title": "Generative AI for Beginners",
+      "institution": "Microsoft",
+      "code": "generative-ai-for-beginners",
+      "edition": "English GitHub snapshot 79a4334 · 2026-11-04",
+      "instructors": [],
+      "aliases": [
+        "Microsoft Generative AI for Beginners",
+        "微软生成式AI入门",
+        "Microsoft生成式AI开发入门"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "artificial-intelligence",
+      "level": "intermediate",
+      "prerequisites": [
+        "有 Python 或 TypeScript 基础更便于跟做。复刻仓库需要 GitHub 账号。",
+        "实践时按原课配置可用的模型服务或本地运行环境。"
+      ],
+      "audience": "希望学习构建生成式 AI 应用的开发者。",
+      "pace": {
+        "description": "原站包含环境设置和 21 讲。保留官方编号与 Learn、Build 分类，原站支持按需选学。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "source_access": "固定提交中的课程文本、代码示例和练习说明可公开访问。部分课尚无视频。调用在线模型可能需要账号、API 权限或费用，本地运行依设备环境。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Generative AI for Beginners · pinned README",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/README.md#-lessons",
+          "locator": "Lessons: setup 00 and numbered lessons 01–21 in the pinned English README",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Course Setup",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/00-course-setup/README.md",
+          "locator": "Lesson 00 (Learn): Course Setup",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Introduction to Generative AI and LLMs",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/01-introduction-to-genai/README.md",
+          "locator": "Lesson 01 (Learn): Introduction to Generative AI and LLMs",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "Exploring and comparing different LLMs",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/02-exploring-and-comparing-different-llms/README.md",
+          "locator": "Lesson 02 (Learn): Exploring and comparing different LLMs",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "Using Generative AI Responsibly",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/03-using-generative-ai-responsibly/README.md",
+          "locator": "Lesson 03 (Learn): Using Generative AI Responsibly",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O6",
+          "title": "Understanding Prompt Engineering Fundamentals",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/04-prompt-engineering-fundamentals/README.md",
+          "locator": "Lesson 04 (Learn): Understanding Prompt Engineering Fundamentals",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O7",
+          "title": "Creating Advanced Prompts",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/05-advanced-prompts/README.md",
+          "locator": "Lesson 05 (Learn): Creating Advanced Prompts",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O8",
+          "title": "Building Text Generation Applications",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/06-text-generation-apps/README.md",
+          "locator": "Lesson 06 (Build): Building Text Generation Applications",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O9",
+          "title": "Building Chat Applications",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/07-building-chat-applications/README.md",
+          "locator": "Lesson 07 (Build): Building Chat Applications",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O10",
+          "title": "Building Search Apps Vector Databases",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/08-building-search-applications/README.md",
+          "locator": "Lesson 08 (Build): Building Search Apps Vector Databases",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O11",
+          "title": "Building Image Generation Applications",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/09-building-image-applications/README.md",
+          "locator": "Lesson 09 (Build): Building Image Generation Applications",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O12",
+          "title": "Building Low Code AI Applications",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/10-building-low-code-ai-applications/README.md",
+          "locator": "Lesson 10 (Build): Building Low Code AI Applications",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O13",
+          "title": "Integrating External Applications with Function Calling",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/11-integrating-with-function-calling/README.md",
+          "locator": "Lesson 11 (Build): Integrating External Applications with Function Calling",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O14",
+          "title": "Designing UX for AI Applications",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/12-designing-ux-for-ai-applications/README.md",
+          "locator": "Lesson 12 (Learn): Designing UX for AI Applications",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O15",
+          "title": "Securing Your Generative AI Applications",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/13-securing-ai-applications/README.md",
+          "locator": "Lesson 13 (Learn): Securing Your Generative AI Applications",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O16",
+          "title": "The Generative AI Application Lifecycle",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/14-the-generative-ai-application-lifecycle/README.md",
+          "locator": "Lesson 14 (Learn): The Generative AI Application Lifecycle",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O17",
+          "title": "Retrieval Augmented Generation (RAG) and Vector Databases",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/15-rag-and-vector-databases/README.md",
+          "locator": "Lesson 15 (Build): Retrieval Augmented Generation (RAG) and Vector Databases",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O18",
+          "title": "Open Source Models and Hugging Face",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/16-open-source-models/README.md",
+          "locator": "Lesson 16 (Build): Open Source Models and Hugging Face",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O19",
+          "title": "AI Agents",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/17-ai-agents/README.md",
+          "locator": "Lesson 17 (Build): AI Agents",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O20",
+          "title": "Fine-Tuning LLMs",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/18-fine-tuning/README.md",
+          "locator": "Lesson 18 (Learn): Fine-Tuning LLMs",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O21",
+          "title": "Building with SLMs",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/19-slm/README.md",
+          "locator": "Lesson 19 (Learn): Building with SLMs",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O22",
+          "title": "Building with Mistral Models",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/20-mistral/README.md",
+          "locator": "Lesson 20 (Learn): Building with Mistral Models",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O23",
+          "title": "Building with Meta Models",
+          "url": "https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/21-meta/README.md",
+          "locator": "Lesson 21 (Learn): Building with Meta Models",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Course Setup",
+          "locator": "Lesson 00 (Learn): Course Setup",
+          "source_id": "O2",
+          "focus": "准备开发环境及实践所需的模型连接。"
+        },
+        {
+          "id": "u02",
+          "title": "Introduction to Generative AI and LLMs",
+          "locator": "Lesson 01 (Learn): Introduction to Generative AI and LLMs",
+          "source_id": "O3",
+          "focus": "认识生成式 AI 与大语言模型的基本概念。"
+        },
+        {
+          "id": "u03",
+          "title": "Exploring and comparing different LLMs",
+          "locator": "Lesson 02 (Learn): Exploring and comparing different LLMs",
+          "source_id": "O4",
+          "focus": "对照场景需求选择适合的语言模型。"
+        },
+        {
+          "id": "u04",
+          "title": "Using Generative AI Responsibly",
+          "locator": "Lesson 03 (Learn): Using Generative AI Responsibly",
+          "source_id": "O5",
+          "focus": "理解开发生成式 AI 应用时的责任与风险。"
+        },
+        {
+          "id": "u05",
+          "title": "Understanding Prompt Engineering Fundamentals",
+          "locator": "Lesson 04 (Learn): Understanding Prompt Engineering Fundamentals",
+          "source_id": "O6",
+          "focus": "练习清晰表达任务、背景与期望输出。"
+        },
+        {
+          "id": "u06",
+          "title": "Creating Advanced Prompts",
+          "locator": "Lesson 05 (Learn): Creating Advanced Prompts",
+          "source_id": "O7",
+          "focus": "应用进阶提示技巧来改进模型输出。"
+        },
+        {
+          "id": "u07",
+          "title": "Building Text Generation Applications",
+          "locator": "Lesson 06 (Build): Building Text Generation Applications",
+          "source_id": "O8",
+          "focus": "用模型 API 构建文本生成应用。"
+        },
+        {
+          "id": "u08",
+          "title": "Building Chat Applications",
+          "locator": "Lesson 07 (Build): Building Chat Applications",
+          "source_id": "O9",
+          "focus": "学习构建和集成对话应用。"
+        },
+        {
+          "id": "u09",
+          "title": "Building Search Apps Vector Databases",
+          "locator": "Lesson 08 (Build): Building Search Apps Vector Databases",
+          "source_id": "O10",
+          "focus": "用嵌入向量实现搜索应用。"
+        },
+        {
+          "id": "u10",
+          "title": "Building Image Generation Applications",
+          "locator": "Lesson 09 (Build): Building Image Generation Applications",
+          "source_id": "O11",
+          "focus": "跟做一个图像生成应用。"
+        },
+        {
+          "id": "u11",
+          "title": "Building Low Code AI Applications",
+          "locator": "Lesson 10 (Build): Building Low Code AI Applications",
+          "source_id": "O12",
+          "focus": "用低代码工具构建生成式 AI 应用。"
+        },
+        {
+          "id": "u12",
+          "title": "Integrating External Applications with Function Calling",
+          "locator": "Lesson 11 (Build): Integrating External Applications with Function Calling",
+          "source_id": "O13",
+          "focus": "理解函数调用，并用它将外部应用接入模型流程。"
+        },
+        {
+          "id": "u13",
+          "title": "Designing UX for AI Applications",
+          "locator": "Lesson 12 (Learn): Designing UX for AI Applications",
+          "source_id": "O14",
+          "focus": "为生成式 AI 应用设计适合用户的交互。"
+        },
+        {
+          "id": "u14",
+          "title": "Securing Your Generative AI Applications",
+          "locator": "Lesson 13 (Learn): Securing Your Generative AI Applications",
+          "source_id": "O15",
+          "focus": "辨别生成式 AI 应用的威胁并了解保护方法。"
+        },
+        {
+          "id": "u15",
+          "title": "The Generative AI Application Lifecycle",
+          "locator": "Lesson 14 (Learn): The Generative AI Application Lifecycle",
+          "source_id": "O16",
+          "focus": "了解生成式 AI 应用生命周期、工具和运营指标。"
+        },
+        {
+          "id": "u16",
+          "title": "Retrieval Augmented Generation (RAG) and Vector Databases",
+          "locator": "Lesson 15 (Build): Retrieval Augmented Generation (RAG) and Vector Databases",
+          "source_id": "O17",
+          "focus": "用检索增强与向量数据库构建应用。"
+        },
+        {
+          "id": "u17",
+          "title": "Open Source Models and Hugging Face",
+          "locator": "Lesson 16 (Build): Open Source Models and Hugging Face",
+          "source_id": "O18",
+          "focus": "选择 Hugging Face 上可用的开放模型并构建应用。"
+        },
+        {
+          "id": "u18",
+          "title": "AI Agents",
+          "locator": "Lesson 17 (Build): AI Agents",
+          "source_id": "O19",
+          "focus": "利用智能体框架搭建应用。"
+        },
+        {
+          "id": "u19",
+          "title": "Fine-Tuning LLMs",
+          "locator": "Lesson 18 (Learn): Fine-Tuning LLMs",
+          "source_id": "O20",
+          "focus": "认识大语言模型微调的目的和过程。"
+        },
+        {
+          "id": "u20",
+          "title": "Building with SLMs",
+          "locator": "Lesson 19 (Learn): Building with SLMs",
+          "source_id": "O21",
+          "focus": "认识小语言模型及其使用场景。"
+        },
+        {
+          "id": "u21",
+          "title": "Building with Mistral Models",
+          "locator": "Lesson 20 (Learn): Building with Mistral Models",
+          "source_id": "O22",
+          "focus": "比较 Mistral 系列模型的特征。"
+        },
+        {
+          "id": "u22",
+          "title": "Building with Meta Models",
+          "locator": "Lesson 21 (Learn): Building with Meta Models",
+          "source_id": "O23",
+          "focus": "认识 Meta 系列模型及构建应用时的考虑。"
+        }
+      ]
+    },
+    {
+      "id": "google-ai-essentials",
+      "title": "Google AI Essentials",
+      "institution": "Google",
+      "code": "ai-essentials-google",
+      "edition": "Grow with Google · Coursera five-course outline · 2026-11-04 snapshot",
+      "instructors": [],
+      "aliases": [
+        "Grow with Google AI Essentials",
+        "谷歌AI基础",
+        "Google职场AI基础"
+      ],
+      "provider_type": "ai_organization",
+      "original_language": "en",
+      "domain": "ai-literacy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望在日常工作中使用 AI 工具的初学者，原课无经验要求。",
+      "pace": {
+        "description": "Grow with Google 标注自定进度、少于 5 小时。其 5 个模块在 Coursera 分列为 5 门组成课。"
+      },
+      "evidence_level": "syllabus_only",
+      "source_access": "Google 课程页和 Coursera 组成课大纲公开。完整学习活动需在 Coursera 登录并报名，试用、订阅费用和地区可用性以报名页为准。当前路径按公开大纲学习。",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Google AI Essentials · Grow with Google",
+          "url": "https://grow.google/ai-essentials/",
+          "locator": "Module breakdown: ordered Modules 1–5; enrollment and pricing FAQ",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O2",
+          "title": "Google AI Essentials · Coursera",
+          "url": "https://www.coursera.org/google-certificates/ai-essentials-google",
+          "locator": "Course series: ordered Courses 1–5; official provider Google",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O3",
+          "title": "Introduction to AI",
+          "url": "https://www.coursera.org/google-learn/google-introduction-to-ai?specialization=ai-essentials-google",
+          "locator": "Grow with Google Module 1 / Coursera Course 1: Introduction to AI",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O4",
+          "title": "Maximize Productivity With AI Tools",
+          "url": "https://www.coursera.org/google-learn/google-maximize-productivity-with-ai-tools?specialization=ai-essentials-google",
+          "locator": "Grow with Google Module 2 / Coursera Course 2: Maximize Productivity With AI Tools",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O5",
+          "title": "Discover the Art of Prompting",
+          "url": "https://www.coursera.org/google-learn/google-discover-the-art-of-prompting?specialization=ai-essentials-google",
+          "locator": "Grow with Google Module 3 / Coursera Course 3: Discover the Art of Prompting",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O6",
+          "title": "Use AI Responsibly",
+          "url": "https://www.coursera.org/google-learn/google-use-ai-responsibly?specialization=ai-essentials-google",
+          "locator": "Grow with Google Module 4 / Coursera Course 4: Use AI Responsibly",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        },
+        {
+          "id": "O7",
+          "title": "Stay Ahead of the AI Curve",
+          "url": "https://www.coursera.org/google-learn/google-stay-ahead-of-the-ai-curve?specialization=ai-essentials-google",
+          "locator": "Grow with Google Module 5 / Coursera Course 5: Stay Ahead of the AI Curve",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "Introduction to AI",
+          "locator": "Grow with Google Module 1 / Coursera Course 1: Introduction to AI",
+          "source_id": "O3",
+          "focus": "理解 AI 的基本工作方式、能力范围及人工监督。"
+        },
+        {
+          "id": "u02",
+          "title": "Maximize Productivity With AI Tools",
+          "locator": "Grow with Google Module 2 / Coursera Course 2: Maximize Productivity With AI Tools",
+          "source_id": "O4",
+          "focus": "辨认可用 AI 辅助的日常工作，并检查工具产出。"
+        },
+        {
+          "id": "u03",
+          "title": "Discover the Art of Prompting",
+          "locator": "Grow with Google Module 3 / Coursera Course 3: Discover the Art of Prompting",
+          "source_id": "O5",
+          "focus": "写出适合目标的提示，根据输出结果迭代提示。"
+        },
+        {
+          "id": "u04",
+          "title": "Use AI Responsibly",
+          "locator": "Grow with Google Module 4 / Coursera Course 4: Use AI Responsibly",
+          "source_id": "O6",
+          "focus": "识别偏见等风险并采取负责任的使用方式。"
+        },
+        {
+          "id": "u05",
+          "title": "Stay Ahead of the AI Curve",
+          "locator": "Grow with Google Module 5 / Coursera Course 5: Stay Ahead of the AI Curve",
+          "source_id": "O7",
+          "focus": "练习判断新的 AI 工具并建立持续学习习惯。"
+        }
+      ]
+    },
+    {
+      "id": "tsinghua-ai-general-education-redbook",
+      "title": "人工智能通识教育红皮书",
+      "institution": "清华大学计算机系人工智能通识教育研究中心",
+      "code": "Redbook",
+      "edition": "v2.3.3（征求意见稿，2026 年 8 月）",
+      "instructors": [],
+      "aliases": [
+        "清华人工智能通识教育红皮书",
+        "清华AI红皮书",
+        "清华红皮书",
+        "Tsinghua AI General Education Redbook"
+      ],
+      "domain": "ai-literacy",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望从认知自治、课程内容和分层实施理解人工智能通识教育的学习者或教育者。",
+      "pace": {
+        "description": "开放参考资料，目录按原书结构编排。阅读时间按个人计划安排。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "provider_type": "university",
+      "pathway_type": "reference",
+      "source_access": "官网公开网页版全文、PDF 和附录。当前目录锚定征求意见稿 v2.3.3 的正文。",
+      "original_language": "中文",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "清华大学人工智能通识教育红皮书网页版",
+          "url": "https://aige.cs.tsinghua.edu.cn/redbook/",
+          "locator": "目录及正文：全书核心概念、前言、总论、第一至第四篇（第 1–16 章）",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "核心概念、前言与总论",
+          "locator": "全书核心概念、前言及总论 0.1–0.7",
+          "source_id": "O1",
+          "focus": "梳理认知自治、智能社会和本书的通识教育框架。"
+        },
+        {
+          "id": "u02",
+          "title": "AI 通识教育的时代背景",
+          "locator": "第一篇：本篇导言、第 1–4 章",
+          "source_id": "O1",
+          "focus": "比较共同教育基础与智能社会中的认知环境。"
+        },
+        {
+          "id": "u03",
+          "title": "认知自治的训练机制",
+          "locator": "第二篇：本篇导言、第 5–8 章",
+          "source_id": "O1",
+          "focus": "沿研究对象、社会机制与能力模型理解人工智能通识教育的理论依据。"
+        },
+        {
+          "id": "u04",
+          "title": "概念与基础方法",
+          "locator": "第三篇：本篇导言、第 9–10 章",
+          "source_id": "O1",
+          "focus": "建立智能机器的概念坐标，理解基础方法与智能体系统的联系。"
+        },
+        {
+          "id": "u05",
+          "title": "应用、交叉融合与责任",
+          "locator": "第三篇：第 11–13 章",
+          "source_id": "O1",
+          "focus": "从应用场景、跨学科迁移及风险伦理三个方向组织阅读。"
+        },
+        {
+          "id": "u06",
+          "title": "不同学习阶段的实施",
+          "locator": "第四篇：本篇导言、第 14–16 章",
+          "source_id": "O1",
+          "focus": "比较中小学、高等教育及终身学习的教学目标与方法。"
+        }
+      ]
+    },
+    {
+      "id": "smarthistory-reframing-art-history",
+      "title": "Reframing Art History",
+      "institution": "Smarthistory",
+      "code": "Reframing Art History",
+      "edition": "Public online table of contents · 2026-11-04 snapshot",
+      "instructors": [],
+      "aliases": [
+        "Smarthistory Reframing Art History",
+        "重构艺术史",
+        "重读艺术史",
+        "Smarthistory艺术史"
+      ],
+      "domain": "art-history",
+      "level": "introductory",
+      "prerequisites": [],
+      "audience": "希望练习作品细读并从跨地区角度理解艺术、建筑与物质文化的学习者。",
+      "pace": {
+        "description": "开放参考资料，目录按原书结构编排。阅读时间按个人计划安排。"
+      },
+      "evidence_level": "syllabus_and_sessions",
+      "provider_type": "cultural_organization",
+      "pathway_type": "reference",
+      "source_access": "原站公开多媒体教材。章节、配图与媒体的复用条件依原站和具体素材。",
+      "original_language": "英语",
+      "sources": [
+        {
+          "id": "O1",
+          "title": "Smarthistory Reframing Art History table of contents",
+          "url": "https://smarthistory.org/reframing-art-history/",
+          "locator": "Book contents · Parts 1–6; General Editor",
+          "checked_at": "2026-11-04",
+          "kind": "official"
+        }
+      ],
+      "units": [
+        {
+          "id": "u01",
+          "title": "艺术史的方法与细读",
+          "locator": "Part 1 · Introduction",
+          "source_id": "O1",
+          "focus": "从观察、解释和身份议题进入作品细读。"
+        },
+        {
+          "id": "u02",
+          "title": "史前与早期艺术",
+          "locator": "Part 2 · Prehistory to c. 300 C.E.",
+          "source_id": "O1",
+          "focus": "比较早期物质文化、墓葬、图像及建筑。"
+        },
+        {
+          "id": "u03",
+          "title": "公元约 200–900 年的跨地区艺术",
+          "locator": "Part 3 · c. 200–900 C.E.",
+          "source_id": "O1",
+          "focus": "考察宗教传播、都市和贸易如何影响视觉文化。"
+        },
+        {
+          "id": "u04",
+          "title": "公元约 900–1400 年的艺术与建筑",
+          "locator": "Part 4 · c. 900–1400",
+          "source_id": "O1",
+          "focus": "从宗教物件、宫廷与跨文化流动理解媒材和图像。"
+        },
+        {
+          "id": "u05",
+          "title": "公元约 1400–1800 年的艺术交流",
+          "locator": "Part 5 · c. 1400–c. 1800",
+          "source_id": "O1",
+          "focus": "结合地方艺术传统与跨洋交流观察作品的生产和流通。"
+        },
+        {
+          "id": "u06",
+          "title": "约 1800 年至今的艺术与建筑",
+          "locator": "Part 6 · c. 1800–present",
+          "source_id": "O1",
+          "focus": "从现代性、艺术家的流动和对既有传统的回应理解近现代作品。"
+        }
+      ]
     }
   ]
 }

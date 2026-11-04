@@ -128,7 +128,7 @@ The agent runs these steps; learners do not need to manipulate JSON or tokens.
 
 ### Managed ZIP replacement
 
-For a host without an updater, the agent downloads the release Skill ZIP plus SHA256SUMS, verifies the matching entry and obtains the intended standalone Skill destination. Never run ZIP replacement against a native plugin cache or a manager-owned symlink.
+For a host without an updater, the agent downloads the release Skill ZIP plus SHA256SUMS, verifies the matching entry and obtains the intended standalone Skill destination. Use the updater from the newly downloaded bundle so it understands the new catalog and can validate the previous installed bundle. Never run ZIP replacement against a native plugin cache or a manager-owned symlink.
 
 ```sh
 python /downloaded/omni-learning-anything/scripts/omni_learning.py installation install --archive /downloaded/skill.zip --destination /host/skills/omni-learning-anything --sha256 VERIFIED_SHA256

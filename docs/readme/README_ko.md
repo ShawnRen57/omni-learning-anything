@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v3.1.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
+**[v3.2.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [설치 채널](../../docs/distribution-channels.md)
 
@@ -34,15 +34,15 @@
 
 **대학 명강의를 고르거나 내 책과 논문으로 시작하세요. 내 속도에 맞춰 배우고, 짧은 확인 문제와 피드백, 복습으로 이해를 다지며 로컬 파일이나 클라우드 문서에 저장하세요.**
 
-“배우고 싶다”를 꾸준히 따라갈 수 있는 계획으로 바꿉니다. 대학과 AI 기관 자료에 근거한 32개 학습 경로, 개인 목표, 보유 자료 중에서 시작하고 수업 전에 계획을 확인합니다.
+“배우고 싶다”를 꾸준히 따라갈 수 있는 계획으로 바꿉니다. 출처가 확인된 67개 학습 경로, 개인 목표, 보유 자료 중에서 시작하고 수업 전에 계획을 확인합니다.
 
 **“하버드 긍정심리학을 배우고 싶어요”** 한 문장으로 시작할 수 있습니다. Agent는 원 강좌를 찾고 이미 전달한 정보를 활용해 계획에 필요한 내용만 추가로 확인합니다.
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="6개 언어로 된 실제 학습 자료 15페이지" width="100%"></a>
 
-## v3.1.0의 새로운 기능
+## v3.2.0의 새로운 기능
 
-- **새 학습 경로 20개.** 중국 건축, 곤극, 시, 미술사, 경제학, 기후 과학부터 대학과 OpenAI Academy, Anthropic, Hugging Face의 AI 강좌까지 선택할 수 있습니다.
+- **강좌 33개와 공개 자료 2개를 추가했습니다.** 예술, 과학, AI를 배우거나 칭화대와 Smarthistory의 자료를 장별로 읽어 보세요.
 - **지속 가능한 속도:** 원래 단원 순서와 자료 대응 관계를 유지하면서 가능한 시간에 맞춰 학습을 나눕니다.
 - **실제 다국어 예시:** 6개 언어와 6개 분야의 계획 및 첫날 학습 안내를 PDF와 HTML로 확인하세요.
 - **편안한 첫 시작:** 설치 후 또는 처음 사용할 때 주제가 미정이면 호스트 에이전트가 현재 채팅에서 강좌 선택을 안내할 수 있습니다. 스킬이 스스로 새 채팅을 열 수는 없습니다.
@@ -52,7 +52,7 @@
 
 **“내장 강좌를 보여 줘”**라고 요청하세요. 강좌, 학습 언어, 가용 시간을 정하면 원자료와 연결된 계획을 제안합니다. 공개 강좌 자료를 바탕으로 만든 독립 학습 경로이며 전체 강의 내용은 포함하지 않습니다. 대학의 공식 인증이나 수료증을 뜻하지 않습니다.
 
-[전체 32개 학습 경로와 출처 보기](../../docs/course-catalog-sources.md). 아래 표에는 처음 수록한 12개 경로가 나옵니다.
+[전체 67개 학습 경로와 출처](../../docs/course-catalog-sources.md). 아래 표에는 처음 수록한 12개 경로가 나옵니다.
 
 | 대학 | 강좌와 원제 | 자료 버전 |
 | --- | --- | --- |

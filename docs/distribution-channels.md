@@ -1,6 +1,6 @@
 # Distribution channels
 
-The latest GitHub release is [v3.1.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v3.1.0). The registry records below concern **2.6.0**. Repository-based skills.sh installs follow the repository source. Verify the version offered by the selected channel.
+The latest GitHub release is [v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v3.2.0). The registry records below concern **2.6.0**. Repository-based skills.sh installs follow the repository source. Verify the version offered by the selected channel.
 
 Checked on 2026-11-01 for Skill **2.6.0**. The GitHub release remains the source of truth: [v2.6.0](https://github.com/ShawnRen57/omni-learning-anything/releases/tag/v2.6.0), source commit `319415748fa4b02f1f85f5d0f89ccda59c239df6`.
 

@@ -1,0 +1,6 @@
+# v3.2.0 validation
+
+- The catalog contains 65 courses and two open references. The 33 new courses and two references add 218 mapped source groups. All 32 v3.1.0 records compare equal. The [source ledger](course-catalog-sources.md) records the checked editions, access conditions and remaining limits.
+- All 258 unittest tests passed on Python 3.12. The suite includes reference discovery and binding, reading-scope labeling, and differentiation between a title's historical period and a requested edition. The Arabic PDF fixture used an isolated TeX dependency overlay.
+- The packaged CLI listed, found, bound and checked the unit mapping of all 67 pathways under Python `-S`. All 68 ZIP files matched runtime source. The managed upgrade from the v3.1.0 ZIP verified the checksum, kept a backup, preserved an external synthetic learner config byte-for-byte and retained the prior pathway snapshot. This test used the updater from the new bundle.
+- Synthetic plans for both open references and OpenAI Academy's Agents and Workflows exported successfully to PDF, HTML, DOCX and Markdown. HTML and Markdown preserved source links and labeled open reference plans as reading guides. This export test did not use a learner account or enroll in the original courses.

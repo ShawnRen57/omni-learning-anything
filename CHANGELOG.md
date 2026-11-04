@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.2.0 — 2026-11-04
+
+- Add 33 built-in courses and two open reference pathways, bringing the catalog to 65 courses and two references. The new courses include film, art, ecology, sustainable energy, aerospace, first-aid literacy and applied AI.
+- Follow Tsinghua’s AI General Education Redbook or Smarthistory’s Reframing Art History as an independent reading plan. Reading pathways keep source locators and use light practice.
+- Show source access when choosing a pathway and distinguish public outlines from accessible learning materials.
+
 ## v3.1.0 — 2026-11-04
 
 - Add 20 built-in pathways: eight from Tsinghua, Peking University, Fudan and Shanghai Jiao Tong University, eight from Yale, MIT, Harvard and the University of Helsinki with MinnaLearn, and four from OpenAI Academy, Anthropic and Hugging Face.
