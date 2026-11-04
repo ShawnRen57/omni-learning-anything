@@ -52,22 +52,29 @@
 
 告诉 Agent：**“展示内置课程”**。选课程、学习语言与可用时间，Agent 会先提交带原课程映射的计划。这些是依据公开课程来源编排的独立学习路径，不打包完整授课内容，不代表大学背书，也不提供大学证书。
 
-[查看全部 67 条学习路径和来源说明](../../docs/course-catalog-sources.md)。下表列出首版收录的 12 条路径。
+[查看课程版本、授课者与访问说明](../../docs/course-catalog-sources.md)
 
-| 大学 | 课程与原名 | 来源版本 |
-| --- | --- | --- |
-| Harvard | [积极心理学 / Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) | PSY 1504 · 2006年春季 · Tal Ben-Shahar |
-| Harvard | [计算机科学导论 / CS50x: Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) | CS50x · 2026 · David Malan |
-| Harvard | [公正 / Justice](https://sandel.scholars.harvard.edu/justice) | 24 讲公开系列 · Michael Sandel |
-| Yale | [心理学导论 / Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) | PSYC 110 · 2007年春季 · Paul Bloom |
-| Yale | [金融市场 / Financial Markets](https://oyc.yale.edu/economics/econ-252) | ECON 252 · 2011年春季 · Robert Shiller |
-| Yale | [博弈论 / Game Theory](https://oyc.yale.edu/economics/econ-159) | ECON 159 · 2007年秋季 · Ben Polak |
-| Yale | [死亡 / Death](https://oyc.yale.edu/death/phil-176) | PHIL 176 · 2007年春季 · Shelly Kagan |
-| Yale | [聆听音乐 / Listening to Music](https://oyc.yale.edu/music/musi-112) | MUSI 112 · 2008年秋季 · Craig Wright |
-| MIT | [计算机科学与 Python 编程导论 / Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) | 6.0001 · 2016年秋季 |
-| MIT | [线性代数 / Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | 18.06 · 2010年春季 · Gilbert Strang |
-| MIT | [经典力学 / Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | 8.01SC · 2016年秋季 |
-| Stanford | [机器学习 / Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) | CS229 · 2018年秋季 |
+| 学校或机构 | 课程与开放参考资料 |
+| --- | --- |
+| 清华大学 | [中国建筑史——史前至两宋辽金](https://higher.smartedu.cn/course/687eb7bf16c43a09c0e58c23) · [文物精品与文化中国](https://higher.smartedu.cn/course/6a5e9b52b44e493c768f8c9c) · [中国建筑史（下）（自主模式）](https://v1-www.xuetangx.com/courses/course-v1%3ATsinghuaX%2B80000901X_2%2Bsp/about) · [艺术的启示](https://higher.smartedu.cn/course/6786ec4c225d72705e5dc29e) · [校园风物与大学文化——以清华大学为例](https://higher.smartedu.cn/course/6a5e9b60b44e493c768f8cba) · [人工智能通识教育红皮书](https://aige.cs.tsinghua.edu.cn/redbook/) *(开放参考资料)* |
+| 北京大学 | [经典昆曲欣赏](https://www.icourse163.org/course/PKU-1470426173?tid=1474265476) · [人工智能与信息社会](https://www.icourse163.org/course/PKU-1003471009?tid=1476756462) · [西方音乐欣赏](https://www.icourse163.org/course/PKU-1207132813?tid=1207476216) · [人工智能原理](https://www.icourse163.org/course/PKU-1002188003?tid=1472399493) |
+| 复旦大学 | [人工智能，语言与伦理](https://www.icourse163.org/course/FUDAN-1205951803?tid=1475942449) · [比较文化研究](https://umoocs.unipus.cn/course/7944/tasks) · [深度学习及其应用](https://higher.smartedu.cn/course/622ac9f0bee70ef79f419877) · [中华优秀传统文化](https://higher.smartedu.cn/course/63ffd464af1f1b5d3ecfd579) · [政治学原理](https://www.icourse163.org/course/FUDAN-1461787179?tid=1462604462) |
+| 上海交通大学 | [唐诗宋词人文解读](https://higher.smartedu.cn/course/69b0942995df98bb27ba19b4) · [数学的天空](https://higher.smartedu.cn/course/690530295345b68214577952) · [机器的征途：空天科技](https://higher.smartedu.cn/course/62354d7a9906eace0490b2aa) · [经济法](https://higher.smartedu.cn/course/67c2473d225d72705e7bb8c8) · [关爱生命——急救与自救技能](https://higher.smartedu.cn/course/69b0942695df98bb27ba19a1) |
+| 浙江大学 | [唐诗经典](https://higher.smartedu.cn/course/6982720195df98bb27cadb06) |
+| 北京师范大学 | [书法欣赏](https://www.icourse163.org/course/BNU-1003240002?tid=1488313456) |
+| 哈佛大学 | [积极心理学](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) · [CS50x 计算机科学导论](https://cs50.harvard.edu/x/2026/syllabus/) · [公正](https://sandel.scholars.harvard.edu/justice) · [修辞学：说服性写作与公共演讲](https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking) · [CS50：用 Python 学人工智能](https://cs50.harvard.edu/ai/) · [世界文学名著](https://www.edx.org/learn/literature/harvard-university-masterpieces-of-world-literature) · [吉萨金字塔：古埃及艺术与考古](https://giza.fas.harvard.edu/videos/) |
+| 耶鲁大学 | [心理学导论](https://oyc.yale.edu/introduction-psychology/psyc-110) · [金融市场](https://oyc.yale.edu/economics/econ-252) · [博弈论](https://oyc.yale.edu/economics/econ-159) · [死亡](https://oyc.yale.edu/death/phil-176) · [聆听音乐](https://oyc.yale.edu/music/musi-112/lecture-1) · [罗马建筑](https://oyc.yale.edu/history-of-art/hsar-252) · [文学理论导论](https://oyc.yale.edu/english/engl-300) · [大气、海洋与环境变化](https://oyc.yale.edu/geology-and-geophysics/gg-140) · [欧洲文明（1648–1945）](https://oyc.yale.edu/history/hist-202) · [人性的哲学与科学](https://oyc.yale.edu/philosophy/phil-181) · [演化、生态与行为原理](https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122) |
+| 麻省理工学院（MIT） | [计算机科学与 Python 编程导论](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/) · [线性代数](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/calendar/) · [经典力学](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) · [艺术史导论](https://ocw.mit.edu/courses/4-601-introduction-to-art-history-fall-2018/pages/calendar/) · [微观经济学原理](https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/pages/calendar/) · [1940 年以来的艺术](https://ocw.mit.edu/courses/4-651-art-since-1940-fall-2010/pages/lecture-notes/) · [电影哲学](https://ocw.mit.edu/courses/24-213-philosophy-of-film-fall-2004/pages/calendar/) · [深度学习导论](https://introtodeeplearning.com/2026/index.html) · [可持续能源导论](https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/calendar/) |
+| 斯坦福大学 | [机器学习](https://cs229.stanford.edu/syllabus-autumn2018.html) · [面向计算机视觉的深度学习](https://cs231n.stanford.edu/2026/schedule.html) |
+| 加州大学伯克利分校 | [人工智能导论](https://inst.eecs.berkeley.edu/~cs188/sp26/) |
+| 赫尔辛基大学与 MinnaLearn | [Elements of AI：人工智能导论](https://opin.fi/en/study-options/HY/elements-of-ai-introduction-to-ai/89eb0e79-873e-4d2a-aec5-d694d7762118) · [Elements of AI：构建人工智能](https://buildingai.elementsofai.com/) |
+| OpenAI Academy | [AI Foundations](https://academy.openai.com/public/courses/ai-foundations-dnq5w) · [Applied AI Foundations](https://academy.openai.com/public/courses/applied-ai-foundations-szsmv) · [Agents and Workflows](https://academy.openai.com/public/courses/agents-and-workflows-y0qoc) · [AI for College Students](https://academy.openai.com/public/courses/ai-for-college-students-gxgmr) |
+| Anthropic · Claude Academy | [AI Fluency: Framework and foundations](https://academy.claude.com/courses/ai-fluency-framework-foundations) · [AI Fluency for students](https://academy.claude.com/courses/ai-fluency-for-students) · [AI Fluency for educators](https://academy.claude.com/courses/ai-fluency-for-educators) |
+| DeepLearning.AI | [AI For Everyone](https://www.coursera.org/learn/ai-for-everyone/) · [Generative AI for Everyone](https://www.coursera.org/learn/generative-ai-for-everyone/) |
+| Google | [Google AI Essentials](https://grow.google/ai-essentials/) |
+| 微软 | [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/README.md#-lessons) |
+| Hugging Face | [AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) |
+| Smarthistory | [Reframing Art History](https://smarthistory.org/reframing-art-history/) *(开放参考资料)* |
 
 每天 10 分钟意味着完成一个小学习步骤，并不等于学完原课程的一整讲或整门课。原始学习量会明确标示，长篇阅读、习题和项目需要另留时间；来源内容与可访问性也可能变化。
 
