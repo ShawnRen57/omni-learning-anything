@@ -26,7 +26,7 @@
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download v3.0.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
+**[Download v3.1.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installation channels](docs/distribution-channels.md)
 
@@ -34,23 +34,25 @@
 
 **Choose a university course—or bring your own books and papers. Learn at your pace, with light checks, useful feedback and review, in local files or cloud documents.**
 
-Turn “I want to learn…” into a plan you can follow. Start with one of 12 source-backed university learning pathways, a personal goal, or your own materials. Review the plan before lessons begin.
+Turn “I want to learn…” into a plan you can follow. Start with one of 32 source-backed learning pathways from universities and AI organizations, a personal goal, or your own materials. Review the plan before lessons begin.
 
-Try **“I want to study Harvard Positive Psychology.”** The agent identifies the source course, reuses what you already told it, and asks only for details that affect your plan.
+Try **“I want to study the History of Chinese Architecture at Tsinghua.”** or **“I want to study OpenAI Applied AI Foundations.”** The agent identifies the source course, reuses what you already told it, and asks only for details that affect your plan.
 
 <a href="examples/README.md"><img src="docs/assets/learning-sample-gallery.png" alt="15 actual lesson pages across six languages" width="100%"></a>
 
-## What is new in v3.0.0
+## What is new in v3.1.0
 
-- **12 university pathways:** find a starting point in Harvard, Yale, MIT and Stanford course sources without designing a syllabus yourself.
+- **20 new pathways.** Study Chinese architecture, Kunqu opera, art history, poetry, economics or climate science. Build AI literacy with university courses, OpenAI Academy and Anthropic, or build an agent with Hugging Face.
 - **A pace you can sustain:** preserve the original unit order and source mapping while splitting study into sessions that fit your time.
 - **Real multilingual examples:** preview PDF and HTML plans and first lessons across six languages and six subjects.
 - **A gentler first step:** after installation or first use, your host agent can offer course choices in the current chat if you have not chosen a topic. The skill cannot open a new chat by itself.
 
 <a id="university-courses"></a>
-## Choose a built-in university course
+## Choose a built-in course
 
 Ask **“show me built-in courses”**. Choose a course, your language and available time; the agent proposes a mapped plan for approval. These are independent learning pathways based on public course sources. Complete lecture content is not bundled; no university endorsement or certificate is implied.
+
+[See all 32 pathways and source notes](docs/course-catalog-sources.md). The table below shows the original 12 pathways.
 
 | University | Course and original title | Source edition |
 | --- | --- | --- |
@@ -166,7 +168,7 @@ Earlier PDF examples remain available:
 
 ## Guides and requirements
 
-[Installation and updates](skills/omni-learning-anything/references/install.md) · [Formats and fonts](skills/omni-learning-anything/references/setup.md) · [Document connections](skills/omni-learning-anything/references/onboarding.md) · [Channel status](docs/distribution-channels.md) · [v3.0.0 release validation](docs/release-validation-v3.0.0.md)
+[Installation and updates](skills/omni-learning-anything/references/install.md) · [Formats and fonts](skills/omni-learning-anything/references/setup.md) · [Document connections](skills/omni-learning-anything/references/onboarding.md) · [Channel status](docs/distribution-channels.md) · [v3.1.0 release validation](docs/release-validation-v3.1.0.md)
 
 This Agent Skill uses the research, document and scheduling tools available in your host. PDF requires XeLaTeX; other output formats do not. Cloud access, cross-device sync and unattended delivery depend on your host, account and authorization. Support is checked for the current client; availability on every platform is not assumed.
 

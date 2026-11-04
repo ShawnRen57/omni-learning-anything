@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Baixar ZIP da habilidade v3.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
+**[Baixar ZIP da habilidade v3.1.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canais de instalação](../../docs/distribution-channels.md)
 
@@ -34,23 +34,25 @@
 
 **Escolha um curso universitário ou traga seus livros e artigos. Aprenda no seu ritmo, com perguntas curtas, feedback útil e revisão, em arquivos locais ou documentos na nuvem.**
 
-Transforme “quero aprender…” em um plano que você consiga seguir. Comece por uma das 12 trilhas universitárias baseadas em fontes públicas, por um objetivo pessoal ou pelos seus materiais. Confira o plano antes das aulas.
+Transforme “quero aprender…” em um plano que você consiga seguir. Comece por uma das 32 trilhas baseadas em fontes de universidades e organizações de IA, por um objetivo pessoal ou pelos seus materiais. Confira o plano antes das aulas.
 
 Experimente **«Quero estudar Psicologia Positiva de Harvard»**. O agente identifica o curso, aproveita as informações já fornecidas e pergunta apenas o necessário para preparar o plano.
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 páginas de aulas reais em seis idiomas" width="100%"></a>
 
-## Novidades da v3.0.0
+## Novidades da v3.1.0
 
-- **12 trilhas universitárias:** use fontes de Harvard, Yale, MIT e Stanford sem criar um programa do zero.
+- **20 trilhas novas.** Explore arquitetura chinesa, ópera Kunqu, poesia, história da arte, economia e clima, ou estude IA com cursos de universidades, OpenAI Academy, Anthropic e Hugging Face.
 - **Um ritmo sustentável:** mantenha a ordem das unidades e a correspondência com as fontes, dividindo o estudo conforme seu tempo.
 - **Exemplos multilíngues reais:** veja planos e primeiras aulas em PDF e HTML, em seis idiomas e seis áreas.
 - **Um começo mais simples:** após instalar ou no primeiro uso, o agente anfitrião pode apresentar cursos no chat atual se você ainda não escolheu o tema. A habilidade não abre novos chats sozinha.
 
 <a id="university-courses"></a>
-## Escolha um curso universitário do catálogo
+## Escolha um curso do catálogo
 
 Peça **“mostre os cursos integrados”**. Escolha curso, idioma e tempo disponível; o agente propõe um plano relacionado às fontes. São trilhas independentes baseadas em cursos públicos. Não incluem todo o conteúdo das aulas nem representam endosso universitário ou certificados.
+
+[Veja as 32 trilhas e suas fontes](../../docs/course-catalog-sources.md). A tabela mostra as 12 trilhas originais.
 
 | Universidade | Curso e título original | Edição de referência |
 | --- | --- | --- |

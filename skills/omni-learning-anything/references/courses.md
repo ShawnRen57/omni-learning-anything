@@ -1,6 +1,6 @@
-# Built-in university course pathways
+# Built-in course pathways
 
-Read this when the learner names a course, asks what is included, or has no learning direction during installation/first use. The self-contained [catalog](course-catalog.json) contains source-backed learning pathways, not downloaded lectures, textbooks, official course notes or certificates. University names identify the original sources; there is no university endorsement.
+Read this when the learner names a course, asks what is included, or has no learning direction during installation or first use. The [catalog](course-catalog.json) contains 28 university pathways and 4 AI organization pathways, with original-source links and mapped units. The provider name identifies the original course. The learner chooses the language of the plan and lessons independently of the source language.
 
 ## Discover and choose
 
@@ -20,6 +20,8 @@ If installation just finished or this is the first invocation and no topic is kn
 ## Establish the original-course evidence
 
 Open the selected original source and the relevant lecture/reading material before writing teaching content. Catalog dates document the catalog audit, not fresh source access for a lesson. At actual generation, record fresh checked dates and source metadata as usual. If a link fails, try another actual official/university archive source or the learner's authorized copy; disclose the gap. Do not silently substitute a modern edition, a different professor, a similarly named paid course or an unofficial video reupload.
+
+Read `provider_type`, `source_access` and `original_language` when present. Show relevant access conditions in the learner's language during selection and in the plan. For a registration-gated course or one with only a public outline, offer a clearly labeled outline-based guide using separately verified supplementary sources, or ask for authorized materials if the learner wants to follow the original in detail. Treat public enrollment pages and restricted activities as evidence of course identity and structure. For example, OpenAI Academy's public sequence anchors the course and assessment, while the course itself requires sign-in. Original course completion, assessments and badges follow the provider's rules.
 
 In particular, `harvard-positive-psychology` is Tal Ben-Shahar's **Spring 2006 PSY 1504 syllabus**, hosted by Penn's Positive Psychology Center. That syllabus establishes topic order and original assessment rhythm; it does not establish lecture transcripts, a professor's exact examples, or every assigned reading. Its original outline is not the widely circulated later video sequence or Harvard Health/Arthur Brooks courses. State the scope and request original materials if precise lecture-specific treatment is required. Otherwise offer independent original explanations anchored to the verified syllabus and clearly identified supplementary primary sources.
 

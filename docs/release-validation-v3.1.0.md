@@ -1,0 +1,6 @@
+# v3.1.0 validation
+
+- The catalog contains 32 pathways. The 20 additions contain 173 mapped groups of original activities. The original 12 records compare equal to v3.0.0. See the [source ledger](course-catalog-sources.md) for the mapped editions and the evidence available for each course.
+- All 256 unittest tests passed under Python 3.12. The Arabic PDF test used an isolated TeX package overlay for the missing polyglossia, bidi and zref dependencies. Course discovery tests cover conflicting provider names and nested OpenAI course titles.
+- The packaged CLI listed, found, bound and checked all 32 courses under Python `-S`. A managed v3.0.0-to-v3.1.0 ZIP upgrade retained the backup, preserved the external synthetic learner config byte-for-byte and produced the same legacy pathway binding. All 68 runtime files matched source and the package checksum matched SHA256SUMS.
+- Short synthetic plans bound to Tsinghua's Chinese architecture course, the University of Helsinki and MinnaLearn's Elements of AI, and OpenAI AI Foundations rendered in PDF, HTML, DOCX and Markdown. These checks exercised source locators and the export path. Original enrollment, assessments, video access and certificates follow the source provider.

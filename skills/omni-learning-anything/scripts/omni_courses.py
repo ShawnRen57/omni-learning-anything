@@ -1,4 +1,4 @@
-"""Offline course discovery and immutable, source-located university pathways."""
+"""Offline course discovery and immutable, source-located learning pathways."""
 import copy
 import hashlib
 import json
@@ -8,6 +8,21 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 CATALOG=Path(__file__).resolve().parents[1]/'references/course-catalog.json'
+
+PROVIDER_ALIASES = {
+    'harvard': ('harvard', 'harvardx', '哈佛'),
+    'yale': ('yale', '耶鲁'),
+    'mit': ('mit', '麻省理工'),
+    'stanford': ('stanford', '斯坦福'),
+    'tsinghua': ('tsinghua', '清华'),
+    'pku': ('pku', 'peking university', '北大', '北京大学'),
+    'fudan': ('fudan', '复旦'),
+    'sjtu': ('sjtu', 'shanghai jiao tong university', '上海交大', '上海交通大学'),
+    'helsinki': ('helsinki', '赫尔辛基', 'minnalearn'),
+    'openai': ('openai',),
+    'anthropic': ('anthropic', 'claude academy'),
+    'hugging-face': ('hugging face', 'hugging-face', 'huggingface', 'hf'),
+}
 
 
 def require(ok,message):
@@ -28,9 +43,15 @@ def validate_course(course):
     require(re.fullmatch('[a-z0-9]+(?:-[a-z0-9]+)*',course['id']),'Invalid course ID.')
     for field in ('instructors','aliases','prerequisites'):
         require(isinstance(course.get(field),list) and all(text(x) for x in course[field]),'Course needs '+field+' as a text list.')
-    require(course['instructors'] and course['aliases'],'Course needs instructors and discoverable aliases.')
+    provider_type = course.get('provider_type', 'university')
+    require(provider_type in ('university', 'ai_organization'), 'Unknown course provider type.')
+    require(course['aliases'] and (course['instructors'] or provider_type == 'ai_organization'),
+            'Course needs discoverable aliases and university pathways need instructors.')
     require(isinstance(course.get('pace'),dict) and text(course['pace'].get('description')),'Original course pacing is required.')
     require(course.get('evidence_level') in ('syllabus_only','syllabus_and_sessions'),'State the available original-course evidence.')
+    for field in ('source_access', 'original_language'):
+        if field in course:
+            require(text(course[field]), 'Course needs ' + field + ' as non-empty text.')
     sources=course.get('sources');units=course.get('units')
     require(isinstance(sources,list) and sources and isinstance(units,list) and units,'Course needs sources and ordered units.')
     source_ids=[]
@@ -56,7 +77,11 @@ def catalog():
 
 
 def summary(course):
-    return {k:copy.deepcopy(course[k]) for k in ('id','title','institution','code','edition','domain','level','prerequisites','audience')}
+    fields = ('id', 'title', 'institution', 'code', 'edition', 'domain', 'level',
+              'prerequisites', 'audience', 'source_access', 'original_language')
+    result = {key: copy.deepcopy(course[key]) for key in fields if key in course}
+    result['provider_type'] = course.get('provider_type', 'university')
+    return result
 
 
 def listing():
@@ -76,18 +101,26 @@ def normalized(value):
 
 def resolve(query):
     require(text(query),'Provide a course name or learning interest.')
-    q=normalized(query);records=catalog()['courses'];matches=[]
-    schools={'harvard':('harvard','哈佛'),'yale':('yale','耶鲁'),'mit':('mit','麻省理工'),'stanford':('stanford','斯坦福')}
+    q=normalized(query);records=catalog()['courses']
     raw=unicodedata.normalize('NFKC',query).casefold()
-    named={school for school,aliases in schools.items() if any(
+    named={provider for provider,aliases in PROVIDER_ALIASES.items() if any(
         bool(re.search(r'(?<![a-z])'+re.escape(a)+r'(?![a-z])',raw)) if a.isascii() else normalized(a) in q
         for a in aliases)}
+    hits=[]
     for course in records:
-        school=course['id'].split('-')[0]
-        if named and school not in named:continue
-        terms=[course['id'],course['title'],*course['aliases']]
-        score=max((len(normalized(term)) for term in terms if normalized(term) and normalized(term) in q),default=0)
-        if score:matches.append((score,course))
+        if named and not any(course['id'].startswith(provider+'-') for provider in named):
+            continue
+        terms={normalized(term) for term in (course['id'],course['title'],*course['aliases'])}
+        for term in terms-{''}:
+            hits.extend((match.start(),match.end(),course) for match in re.finditer(re.escape(term),q))
+    scores={}
+    # "AI Foundations" inside "Applied AI Foundations" is a single mention.
+    for start,end,course in hits:
+        if any(left<=start and end<=right and right-left>end-start for left,right,_ in hits):
+            continue
+        course_id=course['id']
+        scores[course_id]=max(scores.get(course_id,0),end-start)
+    matches=[(scores[course['id']],course) for course in records if course['id'] in scores]
     matches.sort(key=lambda x:(-x[0],x[1]['id']))
     candidates=[summary(c) for _,c in matches[:5]]
     vague=any(token in q for token in ('幸福课','happiness','心理学','psychology','机器学习','machinelearning','计算机','computerscience'))
@@ -171,9 +204,9 @@ def validate_sources(data,config,plan):
 
 _CONTEXT={
  'en':('Original course and learning scope','Independent learning guide; not official course materials or completion credit.','Personal-time adaptation: units may be split; this is not the full original workload.','Follow original unit order; original viewing, reading and assignment time is additional.','Light checks only; original assignments require a separate explicit choice.'),
- 'zh':('原课程与学习范围','独立编写的学习辅导，不是学校官方教材，不代表修完原课或获得学分。','按个人时间改编：原单元可拆分，并不等于原课程全部工作量。','按原单元顺序跟学；原视频、阅读与作业另需时间。','默认只做轻量自检；原课作业需另行明确选择。'),
- 'ja':('元の授業と学習範囲','独自の学習ガイドです。大学公式教材や修了・単位の認定ではありません。','学習時間に合わせて単元を分割します。元の授業全体の学習量とは異なります。','元の単元順で学びます。動画・読書・課題には別途時間が必要です。','基本は短い理解チェックです。元の課題は明示的に選択してください。'),
- 'ko':('원 강좌와 학습 범위','독립적으로 작성한 학습 안내이며 대학 공식 교재나 이수·학점 인증이 아닙니다.','개인 시간에 맞춰 단원을 나눕니다. 원 강좌 전체 학습량과 같지 않습니다.','원 단원 순서로 학습하며 영상·읽기·과제에는 추가 시간이 필요합니다.','기본은 짧은 이해 확인이며 원 과제는 별도로 선택해야 합니다.'),
+ 'zh':('原课程与学习范围','独立编写的学习辅导，不是来源方的官方教材，不代表修完原课或获得学分。','按个人时间改编：原单元可拆分，并不等于原课程全部工作量。','按原单元顺序跟学；原视频、阅读与作业另需时间。','默认只做轻量自检；原课作业需另行明确选择。'),
+ 'ja':('元の授業と学習範囲','独自の学習ガイドです。提供元の公式教材や修了・単位の認定ではありません。','学習時間に合わせて単元を分割します。元の授業全体の学習量とは異なります。','元の単元順で学びます。動画・読書・課題には別途時間が必要です。','基本は短い理解チェックです。元の課題は明示的に選択してください。'),
+ 'ko':('원 강좌와 학습 범위','독립적으로 작성한 학습 안내이며 제공 기관의 공식 교재나 이수·학점 인증이 아닙니다.','개인 시간에 맞춰 단원을 나눕니다. 원 강좌 전체 학습량과 같지 않습니다.','원 단원 순서로 학습하며 영상·읽기·과제에는 추가 시간이 필요합니다.','기본은 짧은 이해 확인이며 원 과제는 별도로 선택해야 합니다.'),
  'es':('Curso original y alcance','Guía independiente; no es material oficial ni acredita haber completado el curso.','Adaptación al tiempo personal: las unidades pueden dividirse; no equivale a toda la carga original.','Se mantiene el orden original; vídeos, lecturas y tareas requieren tiempo adicional.','Comprobaciones breves por defecto; las tareas originales requieren una elección expresa.'),
  'fr':('Cours original et périmètre','Guide indépendant : ni support officiel ni attestation de réussite du cours.','Adaptation au temps personnel : les unités peuvent être divisées, sans équivaloir à toute la charge originale.','L’ordre original est conservé ; vidéos, lectures et devoirs demandent du temps supplémentaire.','Vérifications brèves par défaut ; les devoirs originaux nécessitent un choix explicite.'),
  'de':('Originalkurs und Lernumfang','Unabhängiger Lernleitfaden, kein offizielles Kursmaterial und kein Leistungsnachweis.','An die persönliche Zeit angepasst: Einheiten können aufgeteilt werden; dies ersetzt nicht den gesamten Originalaufwand.','Die ursprüngliche Reihenfolge bleibt erhalten; Videos, Lektüre und Aufgaben benötigen zusätzliche Zeit.','Standardmäßig kurze Verständnisfragen; Originalaufgaben müssen ausdrücklich gewählt werden.'),
@@ -202,6 +235,7 @@ def with_context(data,config,plan):
 
 def welcome():
     available={c['id']:c for c in catalog()['courses']}
-    ids=('harvard-positive-psychology','harvard-cs50x','yale-listening-music','yale-game-theory')
+    ids=('harvard-positive-psychology','yale-listening-music','tsinghua-chinese-architecture-history',
+         'sjtu-tang-poetry-song-lyrics','openai-ai-foundations')
     return {'courses':[summary(available[i]) for i in ids if i in available],
             'instruction':'In the current installation/first-use conversation only, if the learner has no explicit topic, introduce 3–5 varied pathways in their language. Offer the full catalog or any other topic; wait for a choice and reuse existing intake. Never open a new chat, repeat an already shown menu, interrupt an ongoing course, or create a course/schedule from silence.'}

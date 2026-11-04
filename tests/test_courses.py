@@ -123,5 +123,30 @@ class CourseTests(unittest.TestCase):
         self.assertEqual(result['status'],'matched')
         self.assertEqual(result['matches'][0]['id'],'harvard-cs50x')
 
+    def test_expanded_catalog_discovery_preserves_distinct_course_names(self):
+        engine = self.engine()
+        courses = engine.listing()['courses']
+        self.assertEqual(len(courses), 32)
+        self.assertEqual(sum(c['provider_type'] == 'ai_organization' for c in courses), 4)
+        for query, provider in (
+            ('我想学清华中国建筑史', 'tsinghua'),
+            ('我想学上海交大唐诗宋词人文解读', 'sjtu'),
+            ('Applied AI Foundations', 'openai'),
+            ('Anthropic AI Fluency: Framework & Foundations', 'anthropic'),
+            ('Hugging Face AI Agents Course', 'hugging-face'),
+        ):
+            with self.subTest(query=query):
+                result = engine.resolve(query)
+                self.assertEqual(result['status'], 'matched')
+                self.assertTrue(result['matches'][0]['id'].startswith(provider + '-'))
+        self.assertEqual(engine.resolve('AI Foundations and Applied AI Foundations')['status'],
+                         'needs_clarification')
+        for query in ('Anthropic Applied AI Foundations', 'Claude Academy Applied AI Foundations',
+                      'HF Applied AI Foundations', 'HarvardX Applied AI Foundations'):
+            with self.subTest(query=query):
+                self.assertEqual(engine.resolve(query)['status'], 'not_found')
+        self.assertEqual({c['provider_type'] for c in engine.welcome()['courses']},
+                         {'university', 'ai_organization'})
+
 
 if __name__=='__main__':unittest.main()

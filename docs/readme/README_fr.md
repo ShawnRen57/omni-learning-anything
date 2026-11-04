@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Télécharger le ZIP de la compétence v3.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
+**[Télécharger le ZIP de la compétence v3.1.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canaux d’installation](../../docs/distribution-channels.md)
 
@@ -34,23 +34,25 @@
 
 **Choisissez un cours universitaire ou apportez vos livres et articles. Apprenez à votre rythme, avec de courtes questions, des retours utiles et des révisions, dans des fichiers locaux ou des documents cloud.**
 
-Transformez « je veux apprendre… » en un parcours que vous pouvez suivre. Partez de l’un des 12 parcours universitaires fondés sur des sources publiques, d’un objectif personnel ou de vos documents. Validez le plan avant les leçons.
+Transformez « je veux apprendre… » en un parcours que vous pouvez suivre. Partez de l’un des 32 parcours fondés sur des sources universitaires et des organismes spécialisés en IA, d’un objectif personnel ou de vos documents. Validez le plan avant les leçons.
 
 Essayez **« Je veux étudier la psychologie positive de Harvard »**. L’agent identifie le cours, réutilise les informations déjà fournies et ne demande que ce qui compte pour le plan.
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 pages de leçons en six langues" width="100%"></a>
 
-## Les nouveautés de v3.0.0
+## Les nouveautés de v3.1.0
 
-- **12 parcours universitaires :** partez des sources de Harvard, Yale, MIT et Stanford sans construire un programme de zéro.
+- **20 nouveaux parcours.** Explorez l’architecture chinoise, l’opéra Kunqu, la poésie, l’histoire de l’art, l’économie et le climat, ou étudiez l’IA avec des cours d’universités, d’OpenAI Academy, d’Anthropic et de Hugging Face.
 - **Un rythme tenable :** conservez l’ordre des unités et leur correspondance avec les sources, en répartissant le travail selon votre disponibilité.
 - **Des exemples multilingues réels :** découvrez des plans et premières leçons en PDF et HTML, dans six langues et six domaines.
 - **Un démarrage accompagné :** après l’installation ou à la première utilisation, l’agent hôte peut présenter les cours dans le chat actuel si votre sujet reste indécis. La compétence ne peut pas ouvrir un nouveau chat seule.
 
 <a id="university-courses"></a>
-## Choisir un cours universitaire intégré
+## Choisir un cours du catalogue
 
 Demandez **« montre-moi les cours intégrés »**. Choisissez le cours, la langue et votre disponibilité ; l’agent propose un plan relié aux sources. Ces parcours indépendants s’appuient sur des cours publics. Ils ne contiennent pas l’intégralité des enseignements et ne constituent ni une approbation universitaire ni un certificat.
+
+[Voir les 32 parcours et leurs sources](../../docs/course-catalog-sources.md). Le tableau présente les 12 parcours d’origine.
 
 | Université | Cours et titre original | Édition de référence |
 | --- | --- | --- |

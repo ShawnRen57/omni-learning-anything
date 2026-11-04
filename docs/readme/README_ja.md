@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v3.0.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
+**[v3.1.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [導入経路](../../docs/distribution-channels.md)
 
@@ -34,23 +34,25 @@
 
 **大学の名講義から選ぶことも、自分の本や論文から始めることも。自分のペースで学び、短い確認問題・フィードバック・復習を通じて理解を深め、ローカルファイルやクラウド文書に保存できます。**
 
-「学びたい」を、続けられる学習計画へ。公開資料に基づく12の大学講義の学習パス、個人の目標、手元の教材から始められます。授業を始める前に計画を確認します。
+「学びたい」を、続けられる学習計画へ。大学やAI機関の資料に基づく32の学習パス、個人の目標、手元の教材から始められます。授業を始める前に計画を確認します。
 
 **「ハーバードのポジティブ心理学を学びたい」** の一言から始められます。Agent は元の授業を特定し、すでに伝えた情報を使い、計画に必要な点だけを確認します。
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="6言語の実際のレッスン15ページ" width="100%"></a>
 
-## v3.0.0 の新機能
+## v3.1.0 の新機能
 
-- **12の大学講義の学習パス：** ハーバード、イェール、MIT、スタンフォードの公開資料を起点に、学習内容を選べます。
+- **20の学習パスを追加。** 中国建築、崑曲、詩、美術史、経済学、気候科学に加え、大学やOpenAI Academy、Anthropic、Hugging FaceのAIコースを選べます。
 - **無理なく続くペース：** 元の単元順と資料との対応を保ち、使える時間に合わせて学習を分割します。
 - **実際の多言語サンプル：** 6言語・6分野の計画と初日の学習ガイドを、PDFとHTMLで確認できます。
 - **最初の一歩を案内：** インストール後や初回利用時、テーマが未定ならホストのエージェントが現在のチャットでコースを案内できます。スキル自体は新しいチャットを開けません。
 
 <a id="university-courses"></a>
-## 内蔵の大学講義を選ぶ
+## 内蔵コースを選ぶ
 
 **「内蔵コースを見せて」**と伝えてください。講義、学習言語、使える時間を選ぶと、資料と対応する計画が提案されます。公開講義の資料に基づく独立した学習パスであり、講義の全内容は同梱していません。大学の公認や修了証を意味するものではありません。
+
+[全32コースと出典を見る](../../docs/course-catalog-sources.md). 下の表は最初に収録した12コースです。
 
 | 大学 | 講義と原題 | 参照版 |
 | --- | --- | --- |

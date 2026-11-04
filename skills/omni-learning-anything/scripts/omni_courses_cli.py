@@ -1,4 +1,4 @@
-"""Read-only university catalog commands; writing remains the host's responsibility."""
+"""Read-only course catalog commands; writing remains the host's responsibility."""
 import json
 import omni_courses as courses
 

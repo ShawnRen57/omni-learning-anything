@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill-ZIP v3.0.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
+**[Skill-ZIP v3.1.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installationswege](../../docs/distribution-channels.md)
 
@@ -34,23 +34,25 @@
 
 **Wähle einen Universitätskurs oder bring eigene Bücher und Fachartikel mit. Lerne in deinem Tempo, mit kurzen Verständnisfragen, hilfreichen Rückmeldungen und Wiederholungen – in lokalen Dateien oder Cloud-Dokumenten.**
 
-Aus „Ich möchte lernen …“ wird ein Plan, dem du folgen kannst. Beginne mit einem von 12 Lernpfaden auf Basis öffentlicher Universitätsquellen, einem eigenen Ziel oder deinen Unterlagen. Bestätige den Plan, bevor die Lektionen beginnen.
+Aus „Ich möchte lernen …“ wird ein Plan, dem du folgen kannst. Beginne mit einem von 32 Lernpfaden auf Basis von Quellen von Hochschulen und KI-Organisationen, einem eigenen Ziel oder deinen Unterlagen. Bestätige den Plan, bevor die Lektionen beginnen.
 
 Beginne mit **„Ich möchte Harvards Positive Psychologie lernen.“** Der Agent findet den ursprünglichen Kurs, nutzt bereits genannte Angaben und fragt nur nach Details, die für den Lernplan wichtig sind.
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 echte Lektionsseiten in sechs Sprachen" width="100%"></a>
 
-## Neu in v3.0.0
+## Neu in v3.1.0
 
-- **12 universitäre Lernpfade:** Nutze Kursquellen von Harvard, Yale, MIT und Stanford, ohne selbst einen Lehrplan entwerfen zu müssen.
+- **20 neue Lernpfade.** Entdecke chinesische Architektur, Kunqu-Oper, Lyrik, Kunstgeschichte, Wirtschaft und Klimawissenschaft oder lerne KI mit Kursen von Hochschulen, OpenAI Academy, Anthropic und Hugging Face.
 - **Ein machbares Tempo:** Die ursprüngliche Reihenfolge und Quellenzuordnung bleiben erhalten; die Lerneinheiten passen sich deinem Zeitbudget an.
 - **Echte mehrsprachige Beispiele:** Sieh dir Pläne und erste Lektionen aus sechs Sprachen und Fachgebieten als PDF und HTML an.
 - **Ein leichter Einstieg:** Nach der Installation oder beim ersten Aufruf kann der Host-Agent im aktuellen Chat Kurse vorstellen, wenn dein Thema noch offen ist. Der Skill kann selbst keinen neuen Chat öffnen.
 
 <a id="university-courses"></a>
-## Einen integrierten Universitätskurs wählen
+## Einen integrierten Kurs wählen
 
 Bitte um **„Zeig mir die integrierten Kurse“**. Wähle Kurs, Sprache und Zeitbudget; der Agent schlägt einen Plan mit Quellenzuordnung vor. Es handelt sich um unabhängige Lernpfade auf Basis öffentlicher Kursquellen. Vollständige Vorlesungsinhalte sind nicht enthalten; eine Anerkennung durch Universitäten oder Zertifikate sind damit nicht verbunden.
+
+[Alle 32 Lernpfade und Quellen ansehen](../../docs/course-catalog-sources.md). Die Tabelle zeigt die ursprünglichen 12 Lernpfade.
 
 | Universität | Kurs und Originaltitel | Quellenausgabe |
 | --- | --- | --- |

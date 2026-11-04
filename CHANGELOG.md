@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.1.0 — 2026-11-04
+
+- Add 20 built-in pathways: eight from Tsinghua, Peking University, Fudan and Shanghai Jiao Tong University, eight from Yale, MIT, Harvard and the University of Helsinki with MinnaLearn, and four from OpenAI Academy, Anthropic and Hugging Face.
+- Grow the catalog to 32 pathways across the arts, humanities, economics, climate science, mathematics, AI literacy and applied AI. Identify provider type and source access when choosing a course.
+- Distinguish overlapping course names such as AI Foundations and Applied AI Foundations. Keep approved snapshots independent of catalog updates.
+
 ## v3.0.0 — 2026-11-02
 
 - Start from 12 source-backed university course pathways across Harvard, Yale, MIT and Stanford. Match aliases conservatively, keep the source edition and original-session locators, and offer varied starting points when first-use goals are undecided.

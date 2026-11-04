@@ -3,13 +3,13 @@ name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
 summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 3.0.0
+version: 3.1.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
-description: Build or continue a personal, source-grounded course from a learning goal, a named university course or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
+description: Build or continue a personal, source-grounded course from a learning goal, a named course from a university or AI organization, or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
 license: MIT
 metadata:
-  version: "3.0.0"
+  version: "3.1.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -25,7 +25,7 @@ For an existing course, read `config.json`, `plan.json`, `state.json`, pending `
 
 ## Intake and destination
 
-For a named university course, a request for the built-in catalog, or installation/first use without a topic, read [course pathways](references/courses.md). Match the original institution, instructor and edition, inspect its actual sources and bind its ordered pathway snapshot; preserve original session correspondence while clearly disclosing personal-time adaptation. The catalog contains learning routes and source links, not full original lecture content. If undecided, briefly offer varied choices in the current conversation; never launch a new chat or interrupt an explicit goal. Do not silently force ambiguous or unknown course names into a catalog entry.
+For a named course, a request for the built-in catalog, or installation/first use without a topic, read [course pathways](references/courses.md). Match the provider, edition and instructor when published. Inspect the actual sources, explain any access limits, and bind the ordered pathway snapshot. Preserve the correspondence to original sessions when adapting the pace. If undecided, briefly offer varied choices in the current conversation. Clarify ambiguous matches and offer to research unknown courses separately.
 
 Reuse information already supplied. Read [intent](references/intent.md) when the request is broad, ambiguous, unclear or unusually terse. Automatically analyze meanings, useful learning directions, necessary prerequisites, observable outcomes and a coherent ordered route. Ask only about ambiguity that materially changes the course; otherwise propose editable assumptions and a well-scoped path. A concise specific request needs no extra questionnaire. Richness comes from relevant examples, connections and depth within the time budget, not padding or silently widening the goal. Preserve explicit user choices and distinguish hypotheses from confirmed information.
 

@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 v3.0.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
+**[下载 v3.1.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.1.0/omni-learning-anything-skill-v3.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [安装渠道说明](../../docs/distribution-channels.md)
 
@@ -34,23 +34,25 @@
 
 **选一门大学名课，或带上自己的书与论文。按你的节奏学习，用轻量自测、反馈与复习巩固理解，保存到本地或云文档。**
 
-把“我想学……”变成走得下去的学习计划。你可以从 12 条有公开来源依据的大学课程学习路径开始，也可以提出自己的目标、上传个人材料。先确认计划，再开始每日学习。
+把“我想学……”变成走得下去的学习计划。你可以从 32 条有原课来源的高校及 AI 机构学习路径开始，也可以提出自己的目标、上传个人材料。先确认计划，再开始每日学习。
 
-只说一句 **“我想学习哈佛积极心理学”** 也能开始。Agent 会识别原课程，复用你已提供的信息，只补问影响学习计划的必要细节。
+发一句 **“我想学清华中国建筑史”** 或 **“我想学 OpenAI Applied AI Foundations”** 就能开始。Agent 会识别原课程，复用你已提供的信息，只补问影响学习计划的必要细节。
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="六种语言的 15 页真实学习样张" width="100%"></a>
 
-## v3.0.0 带来了什么
+## v3.1.0 带来了什么
 
-- **12 条大学课程路径：** 从哈佛、耶鲁、MIT 和斯坦福的公开课程来源出发，不必从零设计学习大纲。
+- **新增 20 条学习路径。** 看古建筑、赏昆曲、读唐诗宋词，也可以学艺术史、经济学和气候科学。从高校、OpenAI Academy 和 Anthropic 的课程建立 AI 素养，或用 Hugging Face 的课程动手写 Agent。
 - **适合自己的节奏：** 保留原课程单元顺序与来源映射，再按你的可用时间拆分学习任务。
 - **真实多语言样例：** 预览六种语言、六个领域的 PDF 与 HTML 学习计划和首日学习指南。
 - **更容易迈出第一步：** 安装完成或首次使用时，如果你还没选题，宿主 Agent 可在当前聊天中介绍课程选项；技能不能自行新建聊天。
 
 <a id="university-courses"></a>
-## 选择内置大学课程
+## 选择内置课程
 
 告诉 Agent：**“展示内置课程”**。选课程、学习语言与可用时间，Agent 会先提交带原课程映射的计划。这些是依据公开课程来源编排的独立学习路径，不打包完整授课内容，不代表大学背书，也不提供大学证书。
+
+[查看全部 32 条学习路径和来源说明](../../docs/course-catalog-sources.md)。下表列出首版收录的 12 条路径。
 
 | 大学 | 课程与原名 | 来源版本 |
 | --- | --- | --- |
@@ -166,7 +168,7 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 
 ## 使用指南与运行条件
 
-[安装与升级](../../skills/omni-learning-anything/references/install.md) · [格式与字体](../../skills/omni-learning-anything/references/setup.md) · [连接文档平台](../../skills/omni-learning-anything/references/onboarding.md) · [分发渠道状态](../../docs/distribution-channels.md) · [v3.0.0 版本验证](../../docs/release-validation-v3.0.0.md)
+[安装与升级](../../skills/omni-learning-anything/references/install.md) · [格式与字体](../../skills/omni-learning-anything/references/setup.md) · [连接文档平台](../../skills/omni-learning-anything/references/onboarding.md) · [分发渠道状态](../../docs/distribution-channels.md) · [v3.1.0 版本验证](../../docs/release-validation-v3.1.0.md)
 
 这是一个 Agent Skill，使用宿主提供的检索、文档与定时工具。仅 PDF 需要 XeLaTeX。云端访问、跨设备同步与无人值守交付取决于宿主、账号和授权条件；会检查当前客户端能力，不承诺所有平台通用。
 
