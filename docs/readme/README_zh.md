@@ -1,5 +1,3 @@
-<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="六种语言的真实大学课程学习样例" width="100%"></a>
-
 <div align="center">
 
 <img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,6 +13,17 @@
 [![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
 [![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
 
+[![PDF](https://img.shields.io/badge/PDF-B52632?style=flat)](#output-destinations)
+[![HTML](https://img.shields.io/badge/HTML-C04A21?style=flat&logo=html5&logoColor=white)](#output-destinations)
+[![DOCX](https://img.shields.io/badge/DOCX-245A9C?style=flat)](#output-destinations)
+[![Markdown](https://img.shields.io/badge/Markdown-425367?style=flat&logo=markdown&logoColor=white)](#output-destinations)
+
+[![Notion](https://img.shields.io/badge/Notion-191919?style=flat&logo=notion&logoColor=white)](#output-destinations)
+[![飞书](https://img.shields.io/badge/%E9%A3%9E%E4%B9%A6-245BDB?style=flat)](#output-destinations)
+[![钉钉](https://img.shields.io/badge/%E9%92%89%E9%92%89-0067C7?style=flat)](#output-destinations)
+[![腾讯文档](https://img.shields.io/badge/%E8%85%BE%E8%AE%AF%E6%96%87%E6%A1%A3-1767B7?style=flat)](#output-destinations)
+[![Obsidian（本地）](https://img.shields.io/badge/Obsidian%EF%BC%88%E6%9C%AC%E5%9C%B0%EF%BC%89-6D3BC2?style=flat&logo=obsidian&logoColor=white)](#output-destinations)
+
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
 **[下载 v3.0.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
@@ -28,6 +37,8 @@
 把“我想学……”变成走得下去的学习计划。你可以从 12 条有公开来源依据的大学课程学习路径开始，也可以提出自己的目标、上传个人材料。先确认计划，再开始每日学习。
 
 只说一句 **“我想学习哈佛积极心理学”** 也能开始。Agent 会识别原课程，复用你已提供的信息，只补问影响学习计划的必要细节。
+
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="六种语言的 15 页真实学习样张" width="100%"></a>
 
 ## v3.0.0 带来了什么
 
@@ -71,6 +82,7 @@
 
 学习计划与课程正文支持上述十种语言，可与原始材料或本页语言不同。阿拉伯语文档使用从右向左的排版。
 
+<a id="output-destinations"></a>
 ## 选择课程保存位置
 
 | 保存位置 | 使用方式 |
@@ -125,7 +137,7 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 <a id="examples"></a>
 ## 六种语言的真实样例
 
-顶部拼图链接到六组真实样例，每组都有 PDF 与 HTML：一份局部六天学习计划，以及可独立阅读的 Day 01 学习指南。它们展示学习方式与文档效果，不是完整大学课程或官方教材。
+上方拼图展示了 15 页真实学习样张。下面六组大学课程样例各含一份局部六天学习计划和一份可独立阅读的首日材料，提供 PDF 和离线 HTML。
 
 | 语言 | 样例主题 |
 | --- | --- |

@@ -1,5 +1,9 @@
 # Sample library / 样例库
 
+The README gallery shows 15 actual lesson pages. Explore the [six multilingual university sample sets](university/README.md), the [Chinese stargazing sample](../validation/release-v1.0.0/zh/astronomy-sample-v1/README.md), and the PDF lessons below.
+
+README 拼图收录 15 页实际学习材料。可查看[六组多语言大学课程样例](university/README.md)、[中文观星样例](../validation/release-v1.0.0/zh/astronomy-sample-v1/README.md)，以及下方的 PDF 课程。
+
 Six complete 30-day plans + Day01–Day03 = 24 PDFs. Chinese-language demos; simulated approval and delivery, no live schedules.
 
 每组含完整计划和前三天材料。仅供学习结构与排版参考；不要把演示状态复制为真实学习记录。

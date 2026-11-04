@@ -1,5 +1,3 @@
-<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="Exemples universitaires réels en six langues" width="100%"></a>
-
 <div align="center">
 
 <img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,6 +13,17 @@
 [![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
 [![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
 
+[![PDF](https://img.shields.io/badge/PDF-B52632?style=flat)](#output-destinations)
+[![HTML](https://img.shields.io/badge/HTML-C04A21?style=flat&logo=html5&logoColor=white)](#output-destinations)
+[![DOCX](https://img.shields.io/badge/DOCX-245A9C?style=flat)](#output-destinations)
+[![Markdown](https://img.shields.io/badge/Markdown-425367?style=flat&logo=markdown&logoColor=white)](#output-destinations)
+
+[![Notion](https://img.shields.io/badge/Notion-191919?style=flat&logo=notion&logoColor=white)](#output-destinations)
+[![Feishu](https://img.shields.io/badge/Feishu-245BDB?style=flat)](#output-destinations)
+[![DingTalk](https://img.shields.io/badge/DingTalk-0067C7?style=flat)](#output-destinations)
+[![Tencent Docs](https://img.shields.io/badge/Tencent%20Docs-1767B7?style=flat)](#output-destinations)
+[![Obsidian (local)](https://img.shields.io/badge/Obsidian%20%28local%29-6D3BC2?style=flat&logo=obsidian&logoColor=white)](#output-destinations)
+
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
 **[Télécharger le ZIP de la compétence v3.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
@@ -28,6 +37,8 @@
 Transformez « je veux apprendre… » en un parcours que vous pouvez suivre. Partez de l’un des 12 parcours universitaires fondés sur des sources publiques, d’un objectif personnel ou de vos documents. Validez le plan avant les leçons.
 
 Essayez **« Je veux étudier la psychologie positive de Harvard »**. L’agent identifie le cours, réutilise les informations déjà fournies et ne demande que ce qui compte pour le plan.
+
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 pages de leçons en six langues" width="100%"></a>
 
 ## Les nouveautés de v3.0.0
 
@@ -71,6 +82,7 @@ Utilisez PDF, TXT, Markdown, HTML, DOCX, EPUB, PPTX, SRT ou VTT. Choisissez chap
 
 Plans et leçons sont disponibles dans ces dix langues, indépendamment de celle des sources ou de cette page. Les documents arabes se lisent de droite à gauche.
 
+<a id="output-destinations"></a>
 ## Choisir où conserver le cours
 
 | Destination | Fonctionnement |
@@ -125,7 +137,7 @@ Validez les modifications des futures leçons avant une nouvelle version ; le pl
 <a id="examples"></a>
 ## Des exemples réels en six langues
 
-L’image en haut mène à six jeux d’exemples réels. Chacun comprend un plan partiel de six jours et un guide Day 01 lisible séparément, en PDF et HTML. Ils illustrent le format et la démarche, sans constituer un cours universitaire complet ou un texte officiel.
+La galerie ci-dessus présente 15 pages de leçons. Les six exemples universitaires ci-dessous comprennent chacun un plan partiel de six jours et une première leçon en PDF et en HTML hors ligne.
 
 | Langue | Sujet de l’exemple |
 | --- | --- |

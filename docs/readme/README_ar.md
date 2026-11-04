@@ -1,5 +1,3 @@
-<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="أمثلة جامعية فعلية بست لغات" width="100%"></a>
-
 <div dir="rtl">
 
 <div align="center">
@@ -17,6 +15,17 @@
 [![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
 [![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
 
+[![PDF](https://img.shields.io/badge/PDF-B52632?style=flat)](#output-destinations)
+[![HTML](https://img.shields.io/badge/HTML-C04A21?style=flat&logo=html5&logoColor=white)](#output-destinations)
+[![DOCX](https://img.shields.io/badge/DOCX-245A9C?style=flat)](#output-destinations)
+[![Markdown](https://img.shields.io/badge/Markdown-425367?style=flat&logo=markdown&logoColor=white)](#output-destinations)
+
+[![Notion](https://img.shields.io/badge/Notion-191919?style=flat&logo=notion&logoColor=white)](#output-destinations)
+[![Feishu](https://img.shields.io/badge/Feishu-245BDB?style=flat)](#output-destinations)
+[![DingTalk](https://img.shields.io/badge/DingTalk-0067C7?style=flat)](#output-destinations)
+[![Tencent Docs](https://img.shields.io/badge/Tencent%20Docs-1767B7?style=flat)](#output-destinations)
+[![Obsidian (local)](https://img.shields.io/badge/Obsidian%20%28local%29-6D3BC2?style=flat&logo=obsidian&logoColor=white)](#output-destinations)
+
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
 **[تنزيل ZIP للمهارة v3.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
@@ -30,6 +39,8 @@
 حوّل «أريد أن أتعلم…» إلى خطة يمكنك متابعتها. ابدأ بأحد 12 مساراً جامعياً يستند إلى مصادر عامة، أو بهدفك الخاص، أو بموادك. راجع الخطة قبل بدء الدروس.
 
 ابدأ بعبارة **«أريد دراسة علم النفس الإيجابي في هارفارد»**. يحدد الوكيل المقرر الأصلي، ويستخدم المعلومات التي قدمتها، ويسأل فقط عن التفاصيل اللازمة للخطة.
+
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="١٥ صفحة من دروس فعلية بست لغات" width="100%"></a>
 
 ## الجديد في v3.0.0
 
@@ -73,6 +84,7 @@
 
 تدعم الخطط والدروس اللغات العشر أعلاه، بصرف النظر عن لغة المصدر أو هذه الصفحة. تُنسّق المستندات العربية من اليمين إلى اليسار.
 
+<a id="output-destinations"></a>
 ## اختر مكان حفظ المقرر
 
 | الوجهة | طريقة الاستخدام |
@@ -127,7 +139,7 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 <a id="examples"></a>
 ## أمثلة فعلية بست لغات
 
-تفتح الصورة في الأعلى ست مجموعات أمثلة فعلية. تضم كل مجموعة خطة جزئية لستة أيام ودليل Day 01 مستقلاً يمكن قراءته منفرداً، بصيغتي PDF وHTML. تعرض طريقة الدراسة وشكل المستندات، وليست مقررات جامعية كاملة أو نصوصاً رسمية.
+يعرض المعرض أعلاه ١٥ صفحة من الدروس. يضم كل مثال من الأمثلة الجامعية الستة أدناه خطة جزئية لستة أيام ودرساً أول بصيغتي PDF وHTML للقراءة دون اتصال.
 
 | اللغة | موضوع المثال |
 | --- | --- |

@@ -1,5 +1,3 @@
-<a href="../../examples/university/README.md"><img src="../../docs/assets/course-gallery-v3.png" alt="6개 언어의 실제 대학 강좌 학습 예시" width="100%"></a>
-
 <div align="center">
 
 <img src="../../docs/assets/omni-wordmark-transparent.png" alt="Omni Learning Anything brush wordmark" width="520">
@@ -15,6 +13,17 @@
 [![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
 [![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
 
+[![PDF](https://img.shields.io/badge/PDF-B52632?style=flat)](#output-destinations)
+[![HTML](https://img.shields.io/badge/HTML-C04A21?style=flat&logo=html5&logoColor=white)](#output-destinations)
+[![DOCX](https://img.shields.io/badge/DOCX-245A9C?style=flat)](#output-destinations)
+[![Markdown](https://img.shields.io/badge/Markdown-425367?style=flat&logo=markdown&logoColor=white)](#output-destinations)
+
+[![Notion](https://img.shields.io/badge/Notion-191919?style=flat&logo=notion&logoColor=white)](#output-destinations)
+[![Feishu](https://img.shields.io/badge/Feishu-245BDB?style=flat)](#output-destinations)
+[![DingTalk](https://img.shields.io/badge/DingTalk-0067C7?style=flat)](#output-destinations)
+[![Tencent Docs](https://img.shields.io/badge/Tencent%20Docs-1767B7?style=flat)](#output-destinations)
+[![Obsidian (local)](https://img.shields.io/badge/Obsidian%20%28local%29-6D3BC2?style=flat&logo=obsidian&logoColor=white)](#output-destinations)
+
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
 **[v3.0.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/latest/download/omni-learning-anything-skill-v3.0.0.zip)**
@@ -28,6 +37,8 @@
 “배우고 싶다”를 꾸준히 따라갈 수 있는 계획으로 바꿉니다. 공개 자료에 근거한 12개 대학 강좌 학습 경로, 개인 목표, 보유 자료 중에서 시작하고 수업 전에 계획을 확인합니다.
 
 **“하버드 긍정심리학을 배우고 싶어요”** 한 문장으로 시작할 수 있습니다. Agent는 원 강좌를 찾고 이미 전달한 정보를 활용해 계획에 필요한 내용만 추가로 확인합니다.
+
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="6개 언어로 된 실제 학습 자료 15페이지" width="100%"></a>
 
 ## v3.0.0의 새로운 기능
 
@@ -71,6 +82,7 @@ PDF, TXT, Markdown, HTML, DOCX, EPUB, PPTX, SRT, VTT를 사용할 수 있습니�
 
 계획과 수업은 위 10개 언어를 지원합니다. 원자료나 이 페이지의 언어와 다르게 선택할 수 있습니다. 아랍어 문서는 오른쪽에서 왼쪽으로 표시됩니다.
 
+<a id="output-destinations"></a>
 ## 강좌 저장 위치 선택
 
 | 저장 위치 | 사용 방법 |
@@ -125,7 +137,7 @@ Node.js가 없어도 위 ZIP을 클라이언트에 업로드하거나 에이전�
 <a id="examples"></a>
 ## 6개 언어의 실제 예시
 
-맨 위 이미지에서 실제 예시 6개를 열 수 있습니다. 각 예시에는 일부 범위를 다룬 6일 계획과 독립적으로 읽을 수 있는 Day 01 학습 안내가 PDF와 HTML로 들어 있습니다. 대학 전체 과정이나 공식 교재는 아닙니다.
+위 갤러리에서 실제 학습 자료 15페이지를 볼 수 있습니다. 아래 대학 강좌 예시 6개는 일부 범위의 6일 계획과 첫날 학습 자료를 PDF와 오프라인 HTML로 제공합니다.
 
 | 언어 | 예시 주제 |
 | --- | --- |
