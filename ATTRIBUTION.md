@@ -9,3 +9,5 @@ Two additional course illustrations for release QA were generated with the host 
 PDFs embed subsets of locally available Times New Roman and FandolFang fonts. Font software is not included in the installable Skill. Fandol fallback is supplied by the user's TeX distribution; proprietary fonts must be supplied by the user's system. PDF generation does not require downloading proprietary fonts.
 
 代码、说明和原创样例正文采用 MIT 许可。链接原文仍归各自权利人，未收录第三方文章全文或原图。AI 插图为概念教学示意，提示词留档；不主张对 AI 生成图像拥有排他的权利。安装包不附带字体文件。Omni Learning Anything 为独立项目，与任何同名产品及文中机构无关联。
+
+README badge icons: PDF and DOCX use the [Font Awesome Free](https://fontawesome.com/license/free) file-pdf and file-word icons (CC BY 4.0, rendered in white). Feishu, DingTalk and Tencent Docs use the favicons from their [official developer site](https://open.feishu.cn/), [official site](https://www.dingtalk.com/) and [official site](https://docs.qq.com/), respectively. Product marks remain the property of their owners.

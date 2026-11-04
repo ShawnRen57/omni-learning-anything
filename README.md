@@ -13,15 +13,15 @@
 [![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
 [![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
 
-[![PDF](https://img.shields.io/badge/PDF-B52632?style=flat)](#output-destinations)
+[![PDF](docs/assets/badges/pdf.svg)](#output-destinations)
 [![HTML](https://img.shields.io/badge/HTML-C04A21?style=flat&logo=html5&logoColor=white)](#output-destinations)
-[![DOCX](https://img.shields.io/badge/DOCX-245A9C?style=flat)](#output-destinations)
+[![DOCX](docs/assets/badges/docx.svg)](#output-destinations)
 [![Markdown](https://img.shields.io/badge/Markdown-425367?style=flat&logo=markdown&logoColor=white)](#output-destinations)
 
 [![Notion](https://img.shields.io/badge/Notion-191919?style=flat&logo=notion&logoColor=white)](#output-destinations)
-[![Feishu](https://img.shields.io/badge/Feishu-245BDB?style=flat)](#output-destinations)
-[![DingTalk](https://img.shields.io/badge/DingTalk-0067C7?style=flat)](#output-destinations)
-[![Tencent Docs](https://img.shields.io/badge/Tencent%20Docs-1767B7?style=flat)](#output-destinations)
+[![Feishu](docs/assets/badges/feishu.svg)](#output-destinations)
+[![DingTalk](docs/assets/badges/dingtalk.svg)](#output-destinations)
+[![Tencent Docs](docs/assets/badges/tencent-docs.svg)](#output-destinations)
 [![Obsidian (local)](https://img.shields.io/badge/Obsidian%20%28local%29-6D3BC2?style=flat&logo=obsidian&logoColor=white)](#output-destinations)
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
