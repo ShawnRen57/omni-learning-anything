@@ -50,6 +50,9 @@ def validate_config(config):
     if 'materials' in config:
         from omni_materials import validate_config as validate_material_config
         validate_material_config(config['materials'])
+    if 'textbook' in config:
+        from omni_textbooks import validate_settings
+        validate_settings(config)
     if 'learning_brief' in config:
         from omni_intake import validate_brief
         validate_brief(config['learning_brief'])

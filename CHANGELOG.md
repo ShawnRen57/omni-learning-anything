@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.0.0 — 2026-11-04
+
+- Add a searchable mainland China primary, junior-secondary and senior-secondary textbook index with 1,945 student textbooks and four companion readers. Resolve the grade, subject, edition and volume before downloading the selected PDF to a private course archive.
+- Build whole-book or focused lessons around selected original pages. Use age-appropriate explanations, exact material citations, and illustrations cropped from the same textbook edition.
+- Support local OCR for selected scanned pages and publish two illustrated historical textbook examples.
+
 ## v3.2.0 — 2026-11-04
 
 - Add 33 built-in courses and two open reference pathways, bringing the catalog to 65 courses and two references. The new courses include film, art, ecology, sustainable energy, aerospace, first-aid literacy and applied AI.

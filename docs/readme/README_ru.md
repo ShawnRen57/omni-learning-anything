@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Скачать ZIP навыка v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[Скачать ZIP навыка v4.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Каналы установки](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 страниц реальных уроков на шести языках" width="100%"></a>
 
-## Что нового в v3.2.0
+## Что нового в v4.0.0
 
-- **Ещё 33 курса и два открытых источника.** Изучайте искусство, естественные науки и ИИ или читайте материалы Цинхуа и Smarthistory по главам.
-- **Посильный темп:** сохраняются исходный порядок разделов и связь с источниками, а занятия делятся под ваше время.
-- **Настоящие многоязычные примеры:** планы и первые занятия в PDF и HTML на шести языках и по шести направлениям.
-- **Простое начало:** после установки или при первом использовании агент может предложить курсы в текущем чате, если тема ещё не выбрана. Сам навык не может открыть новый чат.
+Учитесь по школьным учебникам материкового Китая с начальной до старшей школы. Выберите предмет, класс, издание и том, затем укажите книгу целиком, главу, понятие или формулу. Объяснения учитывают возраст, а иллюстрации берутся с указанных страниц учебника.
+
+[Руководство по работе с учебниками](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## Выберите встроенный курс
@@ -158,6 +157,12 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 | Арабский · العربية | Йель: смерть |
 
 [Открыть каталог и файлы примеров](../../examples/university/README.md)
+
+### Примеры уроков по учебникам
+
+Оба примера используют оригинальные иллюстрации исторических учебников из общественного достояния.
+
+[Примеры уроков по учебникам](../../examples/textbooks/README.md)
 
 Предыдущие PDF-примеры остаются доступны:
 

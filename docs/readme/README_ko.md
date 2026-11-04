@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v3.2.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[v4.0.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [설치 채널](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="6개 언어로 된 실제 학습 자료 15페이지" width="100%"></a>
 
-## v3.2.0의 새로운 기능
+## v4.0.0의 새로운 기능
 
-- **강좌 33개와 공개 자료 2개를 추가했습니다.** 예술, 과학, AI를 배우거나 칭화대와 Smarthistory의 자료를 장별로 읽어 보세요.
-- **지속 가능한 속도:** 원래 단원 순서와 자료 대응 관계를 유지하면서 가능한 시간에 맞춰 학습을 나눕니다.
-- **실제 다국어 예시:** 6개 언어와 6개 분야의 계획 및 첫날 학습 안내를 PDF와 HTML로 확인하세요.
-- **편안한 첫 시작:** 설치 후 또는 처음 사용할 때 주제가 미정이면 호스트 에이전트가 현재 채팅에서 강좌 선택을 안내할 수 있습니다. 스킬이 스스로 새 채팅을 열 수는 없습니다.
+중국 본토의 초등학교·중학교·고등학교 교과서로 공부할 수 있습니다. 과목, 학년, 판본과 권을 선택한 뒤 한 권 전체나 단원, 개념, 공식을 학습하세요. 설명은 학습자 연령에 맞추고, 그림은 출처를 표시한 교과서 페이지에서 추출합니다.
+
+[교과서 모드 안내](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## 내장 강좌 선택
@@ -158,6 +157,12 @@ Node.js가 없어도 위 ZIP을 클라이언트에 업로드하거나 에이전�
 | 아랍어 · العربية | 예일 죽음 |
 
 [대학 강좌 목록과 예시 열기](../../examples/university/README.md)
+
+### 교과서 학습 예시
+
+두 공개 예시는 퍼블릭 도메인에 속하는 옛 교과서의 원본 삽화를 사용합니다.
+
+[교과서 학습 예시](../../examples/textbooks/README.md)
 
 이전 PDF 예시도 계속 볼 수 있습니다.
 

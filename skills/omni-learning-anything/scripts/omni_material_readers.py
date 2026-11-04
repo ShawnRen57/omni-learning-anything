@@ -1,4 +1,4 @@
-"""Bounded passive readers. No network fetch, OCR, active content or DRM bypass."""
+"""Bounded passive readers with an optional caller-provided PDF text extractor."""
 import re,posixpath,shutil,subprocess
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -77,9 +77,9 @@ def html_blocks(value):
     parser=HTML();parser.feed(value);parser.flush();return parser.blocks
 
 
-def read(path):
+def read(path, *, max_file=MAX_FILE, pdf_ocr=None):
     path=Path(path);kind=path.suffix.lower().lstrip('.');units=[];warnings=[];missing=[];total_pages=None
-    if path.stat().st_size>MAX_FILE:raise ReaderError('File exceeds the 50 MiB import budget; split it first.')
+    if path.stat().st_size>max_file:raise ReaderError(f'File exceeds the {max_file//(1024*1024)} MiB import budget; split it first.')
     used=0
     def add(value,locator,heading='',page=None,ancestry=None):
         nonlocal used
@@ -114,15 +114,20 @@ def read(path):
         warnings.append('Transcript evidence only; audio/video was not inspected or transcribed.')
     elif kind=='pdf':
         from pypdf import PdfReader
-        reader=PdfReader(path)
-        if reader.is_encrypted:raise ReaderError('Encrypted PDF needs an accessible user-provided copy; no password/DRM bypass.')
-        total_pages=len(reader.pages)
-        if total_pages>1500:raise ReaderError('PDF exceeds 1500 pages; split the intended range first.')
-        for i,p in enumerate(reader.pages,1):
-            try:value=p.extract_text() or ''
-            except Exception:value=''
-            if value.strip():add(value,f'PDF page {i}',page=i)
-            else:missing.append(i)
+        with path.open('rb') as stream:
+            reader=PdfReader(stream)
+            if reader.is_encrypted:raise ReaderError('Encrypted PDF needs an accessible user-provided copy; no password/DRM bypass.')
+            total_pages=len(reader.pages)
+            if total_pages>1500:raise ReaderError('PDF exceeds 1500 pages; split the intended range first.')
+            for i,p in enumerate(reader.pages,1):
+                if pdf_ocr and i in pdf_ocr:
+                    value = pdf_ocr[i](path, i)
+                else:
+                    try:value=p.extract_text() or ''
+                    except Exception:value=''
+                if value.strip():add(value,f'PDF page {i}',page=i)
+                else:missing.append(i)
+        if pdf_ocr:warnings.append('Selected PDF pages use OCR. Verify the original page visually before citing, especially formulas and tables.')
         if missing:warnings.append('Unreadable/empty PDF pages require OCR or a text copy; they are excluded.')
         warnings.append('Text extraction does not establish formula, table or image accuracy; visually check relevant originals.')
     elif kind in ('docx','epub','pptx'):
@@ -177,4 +182,7 @@ def read(path):
         for i,para in enumerate(re.split(r'\n\s*\n',value),1):add(para,f'Converted {kind.upper()} paragraph {i}')
         warnings.append('Converted text only; original Word pagination/layout is not claimed.')
     else:return {'kind':kind,'status':'unsupported','units':[],'warnings':['Provide PDF, TXT, Markdown, HTML, DOCX, EPUB, PPTX or SRT/VTT; use an authorized conversion for other books/media. Audio/video requires an actual transcript.'],'missing_pages':[],'total_pages':None}
-    return {'kind':kind,'status':('partial' if missing else 'ready') if units else 'failed','units':units,'warnings':warnings or ([] if units else ['No readable text extracted.']),'missing_pages':missing,'total_pages':total_pages}
+    result = {'kind':kind,'status':('partial' if missing else 'ready') if units else 'failed','units':units,'warnings':warnings or ([] if units else ['No readable text extracted.']),'missing_pages':missing,'total_pages':total_pages}
+    if kind == 'pdf' and pdf_ocr:
+        result['ocr_pages'] = sorted(set(pdf_ocr).difference(missing))
+    return result

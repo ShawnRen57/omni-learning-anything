@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill-ZIP v3.2.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[Skill-ZIP v4.0.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installationswege](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@ Beginne mit **„Ich möchte Harvards Positive Psychologie lernen.“** Der Agen
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 echte Lektionsseiten in sechs Sprachen" width="100%"></a>
 
-## Neu in v3.2.0
+## Neu in v4.0.0
 
-- **33 weitere Kurse und zwei frei zugängliche Quellen.** Entdecke Kunst, Naturwissenschaften und KI oder lies die Quellen von Tsinghua und Smarthistory Kapitel für Kapitel.
-- **Ein machbares Tempo:** Die ursprüngliche Reihenfolge und Quellenzuordnung bleiben erhalten; die Lerneinheiten passen sich deinem Zeitbudget an.
-- **Echte mehrsprachige Beispiele:** Sieh dir Pläne und erste Lektionen aus sechs Sprachen und Fachgebieten als PDF und HTML an.
-- **Ein leichter Einstieg:** Nach der Installation oder beim ersten Aufruf kann der Host-Agent im aktuellen Chat Kurse vorstellen, wenn dein Thema noch offen ist. Der Skill kann selbst keinen neuen Chat öffnen.
+Lerne mit Schulbüchern für die Primar- und Sekundarstufe aus Festlandchina. Wähle Fach, Klasse, Ausgabe und Band sowie ein Buch, Kapitel, Konzept oder eine Formel. Die Erklärungen passen zur Altersstufe. Abbildungen stammen direkt aus den angegebenen Buchseiten.
+
+[Anleitung zum Schulbuchmodus](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## Einen integrierten Kurs wählen
@@ -158,6 +157,12 @@ Die Galerie oben zeigt 15 Lektionsseiten. Jedes der sechs Universitätsbeispiele
 | Arabisch · العربية | Yale: Der Tod |
 
 [Katalog und Beispieldateien öffnen](../../examples/university/README.md)
+
+### Beispiele für Schulbuchlektionen
+
+Die beiden Beispiele verwenden Originalabbildungen aus gemeinfreien historischen Schulbüchern.
+
+[Beispiele für Schulbuchlektionen](../../examples/textbooks/README.md)
 
 Die bisherigen PDF-Beispiele bleiben verfügbar:
 

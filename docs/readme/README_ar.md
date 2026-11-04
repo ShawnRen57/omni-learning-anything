@@ -28,7 +28,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[تنزيل ZIP للمهارة v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[تنزيل ZIP للمهارة v4.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [قنوات التثبيت](../../docs/distribution-channels.md)
 
@@ -42,12 +42,11 @@
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="١٥ صفحة من دروس فعلية بست لغات" width="100%"></a>
 
-## الجديد في v3.2.0
+## الجديد في v4.0.0
 
-- **33 مقرراً إضافياً ومرجعان مفتوحان.** استكشف الفن والعلوم والذكاء الاصطناعي، أو اقرأ مراجع تسينغهوا وSmarthistory فصلاً فصلاً.
-- **وتيرة قابلة للاستمرار:** يُحفظ ترتيب الوحدات الأصلي وارتباطها بالمصادر، ويُقسّم التعلّم بما يناسب وقتك.
-- **أمثلة فعلية متعددة اللغات:** شاهد الخطط والدروس الأولى بصيغتي PDF وHTML في ست لغات وستة مجالات.
-- **بداية أسهل:** بعد التثبيت أو عند الاستخدام الأول، يمكن للوكيل المضيف عرض المقررات في المحادثة الحالية إذا لم تختر موضوعاً. لا تستطيع المهارة فتح محادثة جديدة تلقائياً.
+ادرس من الكتب المدرسية للتعليم الابتدائي والإعدادي والثانوي في البر الرئيسي للصين. اختر المادة والصف والطبعة والمجلد، وادرس كتابًا أو فصلًا أو مفهومًا أو صيغة. يلائم الشرح عمر المتعلم، وتُقتطع الرسوم من صفحات الكتاب المشار إليها.
+
+[دليل استخدام الكتب المدرسية](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## اختر مقرراً من القائمة
@@ -160,6 +159,12 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 | العربية | ييل: الموت |
 
 [افتح قائمة المقررات وملفات الأمثلة](../../examples/university/README.md)
+
+### أمثلة لدروس من الكتب المدرسية
+
+يستخدم المثالان رسومًا أصلية من كتب مدرسية تاريخية في الملكية العامة.
+
+[أمثلة لدروس من الكتب المدرسية](../../examples/textbooks/README.md)
 
 تظل أمثلة PDF السابقة متاحة:
 

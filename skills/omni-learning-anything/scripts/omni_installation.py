@@ -27,7 +27,7 @@ def digest(raw):return hashlib.sha256(raw).hexdigest()
 def allowed(name):
     parts=PurePosixPath(name).parts
     if not parts or any(x.startswith('.') or '.local.' in x for x in parts):return False
-    return name in ('SKILL.md','LICENSE','agents/openai.yaml','references/course-catalog.json') or (parts[0]=='references' and name.endswith('.md')) or (len(parts)==2 and parts[0]=='scripts' and ((parts[1].startswith('omni_') and name.endswith('.py')) or (parts[1].startswith('requirements') and name.endswith('.txt'))))
+    return name in ('SKILL.md','LICENSE','agents/openai.yaml','references/course-catalog.json','references/textbook-index.json') or (parts[0]=='references' and name.endswith('.md')) or (len(parts)==2 and parts[0]=='scripts' and ((parts[1].startswith('omni_') and name.endswith('.py')) or (parts[1].startswith('requirements') and name.endswith('.txt'))))
 
 
 def validate(files):
@@ -66,6 +66,14 @@ def validate(files):
                 for course in data['courses']:validate_course(course)
                 ids=[course['id'] for course in data['courses']]
                 require(len(ids)==len(set(ids)),'Duplicate course ID.')
+            except (ValueError,TypeError,KeyError,AttributeError):issues.append('Invalid '+name)
+    if 'scripts/omni_textbook_index.py' in files:
+        name='references/textbook-index.json'
+        if name not in files:issues.append('Missing '+name)
+        else:
+            try:
+                index=json.loads(files[name])
+                require(isinstance(index['books'],list) and index['books'],'Empty textbook index.')
             except (ValueError,TypeError,KeyError,AttributeError):issues.append('Invalid '+name)
     return version,sorted(set(issues))
 

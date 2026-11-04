@@ -41,6 +41,9 @@ def validate_document(data,root):
     f=data.get('figure',{}); p=(root/f.get('path','')).resolve()
     if not p.is_relative_to(root.resolve()) or not p.is_file() or p.suffix.lower() not in ('.png','.jpg','.jpeg','.pdf'): raise ValueError('Figure must be a local supported file inside project.')
     if not f.get('caption') or not f.get('credit'): raise ValueError('Figure caption and credit required.')
+    if 'textbook' in config:
+        from omni_textbooks import validate_figure
+        validate_figure(root, config, f, sources)
     if not data.get('title'): raise ValueError('Document title required.')
 
 

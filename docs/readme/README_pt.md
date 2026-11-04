@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Baixar ZIP da habilidade v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[Baixar ZIP da habilidade v4.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canais de instalação](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@ Experimente **«Quero estudar Psicologia Positiva de Harvard»**. O agente ident
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 páginas de aulas reais em seis idiomas" width="100%"></a>
 
-## Novidades da v3.2.0
+## Novidades da v4.0.0
 
-- **Mais 33 cursos e duas referências abertas.** Explore arte, ciências e IA ou leia as referências da Tsinghua e do Smarthistory capítulo por capítulo.
-- **Um ritmo sustentável:** mantenha a ordem das unidades e a correspondência com as fontes, dividindo o estudo conforme seu tempo.
-- **Exemplos multilíngues reais:** veja planos e primeiras aulas em PDF e HTML, em seis idiomas e seis áreas.
-- **Um começo mais simples:** após instalar ou no primeiro uso, o agente anfitrião pode apresentar cursos no chat atual se você ainda não escolheu o tema. A habilidade não abre novos chats sozinha.
+Estude com livros do ensino fundamental e médio da China continental. Escolha a disciplina, o ano, a edição e o volume, e estude um livro, um capítulo, um conceito ou uma fórmula. As explicações se adaptam à idade, e as ilustrações são recortadas das páginas citadas.
+
+[Guia do modo de livros didáticos](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## Escolha um curso do catálogo
@@ -158,6 +157,12 @@ A galeria acima mostra 15 páginas de aulas. Cada um dos seis exemplos universit
 | Árabe · العربية | Yale: A morte |
 
 [Abrir catálogo e arquivos de exemplo](../../examples/university/README.md)
+
+### Exemplos de aulas com livros didáticos
+
+Os dois exemplos usam ilustrações originais de livros históricos em domínio público.
+
+[Exemplos de aulas com livros didáticos](../../examples/textbooks/README.md)
 
 Os exemplos PDF anteriores continuam disponíveis:
 

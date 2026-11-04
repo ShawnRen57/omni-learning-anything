@@ -26,7 +26,7 @@
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download v3.2.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[Download v4.0.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installation channels](docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@ Try **“I want to study the History of Chinese Architecture at Tsinghua.”** o
 
 <a href="examples/README.md"><img src="docs/assets/learning-sample-gallery.png" alt="15 actual lesson pages across six languages" width="100%"></a>
 
-## What is new in v3.2.0
+## What is new in v4.0.0
 
-- **33 more courses and 2 open references.** Explore film, ecology, calligraphy, aerospace, public health, or AI. Read Tsinghua’s AI education Redbook and Smarthistory’s Reframing Art History by chapter.
-- **A pace you can sustain:** preserve the original unit order and source mapping while splitting study into sessions that fit your time.
-- **Real multilingual examples:** preview PDF and HTML plans and first lessons across six languages and six subjects.
-- **A gentler first step:** after installation or first use, your host agent can offer course choices in the current chat if you have not chosen a topic. The skill cannot open a new chat by itself.
+Study from mainland China’s primary, junior-secondary and senior-secondary textbooks. Choose the subject, grade, edition and volume, then study the whole book or focus on a chapter, concept or formula. The skill adapts the explanations to the learner’s age and crops illustrations directly from the cited textbook pages.
+
+[See the textbook workflow](skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## Choose a built-in course
@@ -159,6 +158,16 @@ Explore 15 lesson pages in the gallery above. The six university sample sets bel
 
 [Open the university catalog and sample files](examples/university/README.md)
 
+### Textbook lesson samples
+
+The two public samples use original illustrations from public-domain historical textbooks.
+
+[Textbook lesson samples](examples/textbooks/README.md)
+
+| [Sun and Moon](examples/textbooks/sun-and-moon.md) | [The Lever and the Balance](examples/textbooks/lever-balance.md) |
+| --- | --- |
+| <img src="examples/textbooks/sun-moon-original.png" alt="Sun and Moon" height="140"> | <img src="examples/textbooks/balance-original.png" alt="The Lever and the Balance" height="140"> |
+
 Earlier PDF examples remain available:
 
 [Technology](examples/technology/) · [Economics](examples/economics/) · [Music](examples/music/) · [Agent products](examples/agent-product/) · [Architecture](examples/architecture/) · [Ming history](examples/ming-history/)
@@ -168,6 +177,7 @@ Earlier PDF examples remain available:
 
 | Version | What it brings to your learning |
 | --- | --- |
+| **v4.0.0** | Study mainland Chinese school textbooks with age-specific lessons, exact page references and original illustrations. |
 | **v3.0.0** | Choose a university pathway, see the source edition, and preview real multilingual learning documents. |
 | **v2.3–v2.6** | Ask for light checks, study your own sources, review what needs attention and install or update more easily. |
 | **v2** | Study in ten languages, choose four local formats, or keep your course in connected documents. |
@@ -175,7 +185,7 @@ Earlier PDF examples remain available:
 
 ## Guides and requirements
 
-[Installation and updates](skills/omni-learning-anything/references/install.md) · [Formats and fonts](skills/omni-learning-anything/references/setup.md) · [Document connections](skills/omni-learning-anything/references/onboarding.md) · [Channel status](docs/distribution-channels.md) · [v3.2.0 release validation](docs/release-validation-v3.2.0.md)
+[Installation and updates](skills/omni-learning-anything/references/install.md) · [Formats and fonts](skills/omni-learning-anything/references/setup.md) · [Document connections](skills/omni-learning-anything/references/onboarding.md) · [Channel status](docs/distribution-channels.md) · [v4.0.0 release validation](docs/release-validation-v4.0.0.md)
 
 This Agent Skill uses the research, document and scheduling tools available in your host. PDF requires XeLaTeX; other output formats do not. Cloud access, cross-device sync and unattended delivery depend on your host, account and authorization. Support is checked for the current client; availability on every platform is not assumed.
 

@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Télécharger le ZIP de la compétence v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[Télécharger le ZIP de la compétence v4.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canaux d’installation](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@ Essayez **« Je veux étudier la psychologie positive de Harvard »**. L’agent
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 pages de leçons en six langues" width="100%"></a>
 
-## Les nouveautés de v3.2.0
+## Les nouveautés de v4.0.0
 
-- **33 cours de plus et deux références ouvertes.** Explorez l’art, les sciences et l’IA, ou lisez les références de Tsinghua et de Smarthistory chapitre par chapitre.
-- **Un rythme tenable :** conservez l’ordre des unités et leur correspondance avec les sources, en répartissant le travail selon votre disponibilité.
-- **Des exemples multilingues réels :** découvrez des plans et premières leçons en PDF et HTML, dans six langues et six domaines.
-- **Un démarrage accompagné :** après l’installation ou à la première utilisation, l’agent hôte peut présenter les cours dans le chat actuel si votre sujet reste indécis. La compétence ne peut pas ouvrir un nouveau chat seule.
+Étudiez avec des manuels du primaire et du secondaire de Chine continentale. Choisissez la matière, le niveau, l’édition et le volume, puis un manuel entier, un chapitre, une notion ou une formule. Les explications s’adaptent à l’âge et les illustrations proviennent des pages citées.
+
+[Guide du mode manuel scolaire](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## Choisir un cours du catalogue
@@ -158,6 +157,12 @@ La galerie ci-dessus présente 15 pages de leçons. Les six exemples universitai
 | Arabe · العربية | Yale : La mort |
 
 [Ouvrir le catalogue et les fichiers d’exemple](../../examples/university/README.md)
+
+### Exemples de leçons tirées de manuels
+
+Les deux exemples utilisent des illustrations originales de manuels historiques du domaine public.
+
+[Exemples de leçons tirées de manuels](../../examples/textbooks/README.md)
 
 Les anciens exemples PDF restent accessibles :
 

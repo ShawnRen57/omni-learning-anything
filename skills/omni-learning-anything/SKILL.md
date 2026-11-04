@@ -3,13 +3,13 @@ name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
 summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 3.2.0
+version: 4.0.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
-description: Build or continue a personal, source-grounded course from a learning goal, a named course from a university or AI organization, an open reference, or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
+description: Build or continue a personal, source-grounded course from a learning goal, a named course from a university or AI organization, an open reference, a Chinese K–12 textbook, or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
 license: MIT
 metadata:
-  version: "3.2.0"
+  version: "4.0.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -46,6 +46,10 @@ Official CLIs own their login, renewal and secure credential storage. Tencent OA
 `connect` is a read-only account/destination check; `delivery-check` is local validation. Neither proves write permission or completed delivery. Complete `publish`, readback and visual inspection of the actual plan before claiming success. Fixed account/destination metadata is copied into the course; saved profile changes never retarget an approved course. Recheck access after expiry or an actual error, without silently changing accounts.
 
 If official access is unavailable, preserve the selected platform and pending course, explain the concrete blocker and offer precise setup help. Browser import/local alternatives require the learner's explicit acceptance; never silently downgrade or label them API success. UI availability and interactive keychains may limit unattended scheduling.
+
+## Chinese K–12 textbook learning
+
+For a request tied to 中国大陆中小学教材, read [textbooks](references/textbooks.md). Match the book and the requested chapter, concept, or formula before teaching. Acquire and inspect the exact source, bind the approved pages, and use the learning level appropriate to the student. Teaching figures must be relevant original crops from the same verified textbook. The indexed sources are for on-demand local acquisition, and textbook files are not bundled.
 
 ## Courses from personal materials
 

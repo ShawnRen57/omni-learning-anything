@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 v3.2.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[下载 v4.0.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [安装渠道说明](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="六种语言的 15 页真实学习样张" width="100%"></a>
 
-## v3.2.0 带来了什么
+## v4.0.0 带来了什么
 
-- **新增 33 门课程和 2 套开放参考资料。** 从书法、电影、生态学、空天科技、急救通识到 AI，也可以按章节阅读清华 AI 通识教育红皮书与 Smarthistory 的《Reframing Art History》。
-- **适合自己的节奏：** 保留原课程单元顺序与来源映射，再按你的可用时间拆分学习任务。
-- **真实多语言样例：** 预览六种语言、六个领域的 PDF 与 HTML 学习计划和首日学习指南。
-- **更容易迈出第一步：** 安装完成或首次使用时，如果你还没选题，宿主 Agent 可在当前聊天中介绍课程选项；技能不能自行新建聊天。
+新增中国大陆中小学教材模式。选定学科、年级、版本和册次后，可以按整册安排学习，也可以只学某一章、一个概念或一道公式。讲法随学段调整，插图直接裁自所选版本的教材原页，并标注出处。试试「帮我用人教版小学三年级上册数学学长方形的周长公式」。
+
+[查看教材模式用法](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## 选择内置课程
@@ -159,6 +158,16 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 
 [打开大学课程目录与样例文件](../../examples/university/README.md)
 
+### 教材学习样例
+
+这两份公开样例使用公有领域历史教材的原图。
+
+[教材学习样例](../../examples/textbooks/README.md)
+
+| [看图识字：日和月](../../examples/textbooks/sun-and-moon.md) | [杠杆平衡：从天平看力臂](../../examples/textbooks/lever-balance.md) |
+| --- | --- |
+| <img src="../../examples/textbooks/sun-moon-original.png" alt="看图识字：日和月" height="140"> | <img src="../../examples/textbooks/balance-original.png" alt="杠杆平衡：从天平看力臂" height="140"> |
+
 早期 PDF 样例继续保留：
 
 [科技](../../examples/technology/) · [经济学](../../examples/economics/) · [音乐](../../examples/music/) · [Agent 产品](../../examples/agent-product/) · [建筑史](../../examples/architecture/) · [明朝历史](../../examples/ming-history/)
@@ -168,6 +177,7 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 
 | 版本 | 对学习的帮助 |
 | --- | --- |
+| **v4.0.0** | 按中国大陆中小学教材生成分学段学习材料，支持章节、概念和公式，并标明原图页码。 |
 | **v3.0.0** | 直接选择大学课程路径，核对来源版本，预览真实多语言学习文档。 |
 | **v2.3–v2.6** | 按需轻量自测、使用个人材料、复习薄弱点，并更方便地安装与升级。 |
 | **v2** | 十种学习语言、四种本地格式，或把课程保存在连接的文档平台中。 |
@@ -175,7 +185,7 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 
 ## 使用指南与运行条件
 
-[安装与升级](../../skills/omni-learning-anything/references/install.md) · [格式与字体](../../skills/omni-learning-anything/references/setup.md) · [连接文档平台](../../skills/omni-learning-anything/references/onboarding.md) · [分发渠道状态](../../docs/distribution-channels.md) · [v3.2.0 版本验证](../../docs/release-validation-v3.2.0.md)
+[安装与升级](../../skills/omni-learning-anything/references/install.md) · [格式与字体](../../skills/omni-learning-anything/references/setup.md) · [连接文档平台](../../skills/omni-learning-anything/references/onboarding.md) · [分发渠道状态](../../docs/distribution-channels.md) · [v4.0.0 版本验证](../../docs/release-validation-v4.0.0.md)
 
 这是一个 Agent Skill，使用宿主提供的检索、文档与定时工具。仅 PDF 需要 XeLaTeX。云端访问、跨设备同步与无人值守交付取决于宿主、账号和授权条件；会检查当前客户端能力，不承诺所有平台通用。
 

@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Descargar ZIP de la habilidad v3.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[Descargar ZIP de la habilidad v4.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canales de instalación](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@ Prueba **«Quiero estudiar Psicología Positiva de Harvard»**. El agente identi
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 páginas de lecciones reales en seis idiomas" width="100%"></a>
 
-## Novedades de v3.2.0
+## Novedades de v4.0.0
 
-- **33 cursos más y dos referencias abiertas.** Explora arte, ciencias e IA, o lee por capítulos las referencias de Tsinghua y Smarthistory.
-- **Un ritmo sostenible:** conserva el orden de las unidades originales y su correspondencia con las fuentes, dividiendo el estudio según tu tiempo.
-- **Ejemplos multilingües reales:** consulta planes y primeras lecciones de seis idiomas y seis áreas, en PDF y HTML.
-- **Un primer paso sencillo:** tras instalar o usar la habilidad por primera vez, el agente anfitrión puede presentar los cursos en el chat actual si aún no has elegido tema. La habilidad no abre chats por sí sola.
+Estudia con libros de primaria y secundaria de China continental. Elige asignatura, curso, edición y volumen, y estudia un libro entero, un capítulo, un concepto o una fórmula. Las explicaciones se adaptan a la edad y las ilustraciones se recortan de las páginas citadas.
+
+[Guía del modo de libros de texto](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## Elige un curso del catálogo
@@ -158,6 +157,12 @@ La galería de arriba muestra 15 páginas de lecciones. Cada uno de los seis eje
 | Árabe · العربية | Yale: La muerte |
 
 [Abrir catálogo y archivos de ejemplo](../../examples/university/README.md)
+
+### Ejemplos de lecciones con libros de texto
+
+Los dos ejemplos usan ilustraciones originales de libros históricos de dominio público.
+
+[Ejemplos de lecciones con libros de texto](../../examples/textbooks/README.md)
 
 Los ejemplos PDF anteriores siguen disponibles:
 

@@ -47,9 +47,14 @@ def main():
     configure_installation(sub)
     from omni_courses_cli import configure as configure_courses
     configure_courses(sub)
+    from omni_textbooks_cli import configure as configure_textbooks
+    configure_textbooks(sub)
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
     try:
-        if args.command=='courses':
+        if args.command=='textbooks':
+            from omni_textbooks_cli import execute as execute_textbooks
+            result=execute_textbooks(root,args)
+        elif args.command=='courses':
             from omni_courses_cli import execute as execute_courses
             result=execute_courses(args)
         elif args.command=='installation':

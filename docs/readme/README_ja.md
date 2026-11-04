@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v3.2.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v3.2.0/omni-learning-anything-skill-v3.2.0.zip)**
+**[v4.0.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [導入経路](../../docs/distribution-channels.md)
 
@@ -40,12 +40,11 @@
 
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="6言語の実際のレッスン15ページ" width="100%"></a>
 
-## v3.2.0 の新機能
+## v4.0.0 の新機能
 
-- **33コースと2つの公開資料を追加。** 芸術・科学・AIを学び、清華大学とSmarthistoryの資料を章ごとに読めます。
-- **無理なく続くペース：** 元の単元順と資料との対応を保ち、使える時間に合わせて学習を分割します。
-- **実際の多言語サンプル：** 6言語・6分野の計画と初日の学習ガイドを、PDFとHTMLで確認できます。
-- **最初の一歩を案内：** インストール後や初回利用時、テーマが未定ならホストのエージェントが現在のチャットでコースを案内できます。スキル自体は新しいチャットを開けません。
+中国本土の小学校・中学校・高等学校の教科書で学べます。教科、学年、版、巻を選び、全巻から章、概念、公式まで範囲を指定できます。説明は年齢に合わせ、挿絵は出典を明記した教科書のページから切り出します。
+
+[教科書モードの使い方](../../skills/omni-learning-anything/references/textbooks.md)
 
 <a id="university-courses"></a>
 ## 内蔵コースを選ぶ
@@ -158,6 +157,12 @@ Node.jsがなくても、上のZIPをクライアントにアップロードす�
 | アラビア語 · العربية | イェール 死 |
 
 [大学講義カタログとサンプルを開く](../../examples/university/README.md)
+
+### 教科書を使ったレッスンの例
+
+2つの公開例では、パブリックドメインの歴史的な教科書の原図を使用しています。
+
+[教科書を使ったレッスンの例](../../examples/textbooks/README.md)
 
 以前のPDFサンプルも引き続き閲覧できます。
 

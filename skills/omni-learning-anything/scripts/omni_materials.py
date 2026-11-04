@@ -45,19 +45,20 @@ def public_url(value):
     return value
 
 
-def import_file(root,file,*,material_id=None,url=None,retry=False):
+def import_file(root,file,*,material_id=None,url=None,retry=False,max_file=None,pdf_ocr=None,title=None,publisher=None):
     from omni_material_readers import read,ReaderError
     root=Path(root).resolve();root.mkdir(parents=True,exist_ok=True);file=Path(file)
     require(file.is_file(),'Material file is unavailable; ask for a readable local copy.')
     from omni_material_readers import MAX_FILE
-    require(file.stat().st_size<=MAX_FILE,'File exceeds 50 MiB; split it before importing.')
+    limit=MAX_FILE if max_file is None else max_file
+    require(file.stat().st_size<=limit,f'File exceeds {limit//(1024*1024)} MiB; split it before importing.')
     # Parse exactly the private bytes used to compute this version, never reread a changing original.
     with tempfile.TemporaryDirectory(prefix='omni-material-') as temporary:
         captured=Path(temporary)/('source'+file.suffix)
         digest=hashlib.sha256();size=0
         with file.open('rb') as src,captured.open('wb') as dst:
             for part in iter(lambda:src.read(1024*1024),b''):
-                size+=len(part);require(size<=MAX_FILE,'Input grew beyond the import budget; retry a stable smaller file.')
+                size+=len(part);require(size<=limit,'Input grew beyond the import budget; retry a stable smaller file.')
                 digest.update(part);dst.write(part)
         version=digest.hexdigest();material_id=material_id or 'm_'+hashlib.sha256(file.name.casefold().encode()).hexdigest()[:16]
         identity(material_id,version)
@@ -69,12 +70,16 @@ def import_file(root,file,*,material_id=None,url=None,retry=False):
                 require(old.get('url')==url,'Same file version has different origin metadata; use an explicit different material identity.')
                 if not retry or old['status'] in ('ready','partial'):return brief(old)
                 save(root,('failed_attempts',material_id,version+'-'+str(datetime.now(timezone.utc).timestamp())+'.json'),old)
-            try:parsed=read(captured)
+            options = {}
+            if max_file is not None: options['max_file'] = max_file
+            if pdf_ocr is not None: options['pdf_ocr'] = pdf_ocr
+            try:parsed=read(captured, **options)
             except ReaderError as error:parsed={'kind':file.suffix.lstrip('.'),'status':'failed','units':[],'warnings':[str(error)],'missing_pages':[],'total_pages':None}
             except ModuleNotFoundError:parsed={'kind':file.suffix.lstrip('.'),'status':'needs_dependency','units':[],'warnings':['Install selected PDF reader requirements, or provide TXT/DOCX.'],'missing_pages':[],'total_pages':None}
             except Exception:parsed={'kind':file.suffix.lstrip('.'),'status':'failed','units':[],'warnings':['Extraction failed or input is unsafe/unreadable; provide a simpler authorized text copy.'],'missing_pages':[],'total_pages':None}
-            value=dict(parsed,id=material_id,version=version,title=file.name,imported_at=datetime.now(timezone.utc).isoformat())
+            value=dict(parsed,id=material_id,version=version,title=title or file.name,imported_at=datetime.now(timezone.utc).isoformat())
             if url:value['url']=url
+            if publisher:value['publisher']=publisher
             value['integrity']=fingerprint(value);save(root,('items',material_id,version+'.json'),value)
             return brief(value)
 
@@ -177,7 +182,7 @@ def citation(root,selection,unit,quote,source_id,*,checked_at=None):
     found=next((u for u in value['units'] if u['id']==unit and unit in selection['units']),None)
     require(found and isinstance(quote,str) and bool(quote.strip()) and quote in found['text'],'Evidence quote must occur in a selected material unit.')
     ref={'id':selection['id'],'version':selection['version'],'selection_hash':selection['hash'],'unit':unit,'quote':quote}
-    result={'id':source_id,'title':value['title'],'publisher':'User-provided material','published_at':'未标注','checked_at':checked_at or (c.today(Path(root)) if (Path(root)/'config.json').exists() else datetime.now(timezone.utc).date().isoformat()),'note':found['locator']+' — '+quote,'material_ref':ref}
+    result={'id':source_id,'title':value['title'],'publisher':value.get('publisher','User-provided material'),'published_at':'未标注','checked_at':checked_at or (c.today(Path(root)) if (Path(root)/'config.json').exists() else datetime.now(timezone.utc).date().isoformat()),'note':found['locator']+' — '+quote,'material_ref':ref}
     if value.get('url'):result['url']=value['url']
     return result
 
