@@ -12,6 +12,7 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-2563eb?style=flat-square)](LICENSE)
 [![Release downloads](https://img.shields.io/github/downloads/ShawnRen57/omni-learning-anything/total?style=flat-square&color=0891b2&label=downloads)](https://github.com/ShawnRen57/omni-learning-anything/releases)
 [![GitHub stars](https://img.shields.io/github/stars/ShawnRen57/omni-learning-anything?style=flat-square&color=b7791f)](https://github.com/ShawnRen57/omni-learning-anything/stargazers)
+[![README views](https://hits.sh/github.com/ShawnRen57/omni-learning-anything.svg?view=total&style=flat-square&label=views&color=4f46e5)](https://hits.sh/github.com/ShawnRen57/omni-learning-anything/)
 
 [![PDF](docs/assets/badges/pdf.svg)](#output-destinations)
 [![HTML](https://img.shields.io/badge/HTML-C04A21?style=flat&logo=html5&logoColor=white)](#output-destinations)
