@@ -3,13 +3,13 @@ name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
 summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 4.1.0
+version: 4.2.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
 description: Build or continue a personal, source-grounded course from a learning goal, a named course from a university or AI organization, an open reference, a Chinese K–12 textbook, or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
 license: MIT
 metadata:
-  version: "4.1.0"
+  version: "4.2.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -49,7 +49,7 @@ If official access is unavailable, preserve the selected platform and pending co
 
 ## Chinese K–12 textbook learning
 
-For a request tied to 中国大陆中小学教材, read [textbooks](references/textbooks.md). Match the book and the requested chapter, concept, or formula before teaching. Acquire and inspect the exact source, bind the approved pages, and use the learning level appropriate to the student. Teaching figures must be relevant original crops from the same verified textbook. The indexed sources are for on-demand local acquisition, and textbook files are not bundled.
+For a request tied to 中国大陆中小学教材, read [textbooks](references/textbooks.md). Resolve the exact series, volume and requested version, including 最新版 or an edition year. If the pinned index cannot confirm the requested book, check the live upstream repository and automatically search the web for a verified original. Inspect the exact source, bind the requested pages, and use the learning level appropriate to the student. Teaching figures must be relevant original crops from the same verified textbook. Keep acquired files in the private course archive.
 
 ## Courses from personal materials
 

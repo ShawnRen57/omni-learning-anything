@@ -4,6 +4,7 @@ import importlib.util
 import sys
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "skills" / "omni-learning-anything" / "scripts"
 sys.path.insert(0, str(SCRIPTS))
@@ -82,12 +83,48 @@ class TextbookIndexTests(unittest.TestCase):
 
     def test_unknown_edition_year_and_learning_topic_never_pick_a_book(self):
         index = self.engine()
-        for query in ("2026版人教版三年级数学上册", "三年级人教版数学上册最新版", "量子拓扑"):
+        for query in ("2026版人教版三年级数学上册", "三年级人教版数学上册最新版"):
             with self.subTest(query=query):
-                self.assertEqual(index.resolve(query, allow_default=True)["status"], "not_found")
-        self.assertEqual(index.resolve("火星版三年级数学上册", edition="火星版")["status"], "not_found")
+                result = index.resolve(query, allow_default=True)
+                self.assertEqual(result["status"], "search_required")
+                self.assertIsNone(result["book"])
+                self.assertIn("三年级", result["search"]["web_queries"][0])
+                self.assertIn("TapXWorld/ChinaTextbook", result["search"]["repository_query"])
+        self.assertEqual(index.resolve("量子拓扑")["status"], "not_found")
+        result = index.resolve("火星版三年级数学上册", edition="火星版")
+        self.assertEqual(result["status"], "search_required")
+        self.assertIn("火星版", result["search"]["web_queries"][0])
         with self.assertRaises(KeyError):
             index.get("made-up-id")
+
+    def test_year_filter_matches_known_editions_and_preserves_unknown_candidates_for_research(self):
+        index = self.engine()
+        query = "人教版小学三年级数学上册"
+        book = index.resolve(query)["book"]
+        catalog = dict(index.catalog(), books=[book, dict(book, year=2025, book_id="ct-new")])
+        with patch.object(index, "catalog", return_value=catalog):
+            for suffix in ("2025版", "2025年版", "2025年7月第1版", "2025年新编"):
+                with self.subTest(suffix=suffix):
+                    result = index.resolve(query + suffix)
+                    self.assertEqual(result["book"]["book_id"], "ct-new")
+            result = index.resolve(query + "最新修订版，重点学倍的认识")
+            self.assertEqual(result["status"], "search_required")
+            self.assertEqual(result["search"]["version"], {"kind": "latest"})
+            self.assertEqual(result["focus"], "倍的认识")
+            result = index.resolve(query + "2026年印刷")
+            self.assertEqual(result["search"]["version"], {"kind": "printing", "year": 2026})
+            self.assertEqual(result["candidate_count"], 2)
+            result = index.resolve("根据2022年版课程标准修订的" + query + "2025版")
+            self.assertEqual(result["book"]["book_id"], "ct-new")
+
+    def test_undated_catalog_candidates_do_not_satisfy_a_year_request(self):
+        index = self.engine()
+        result = index.resolve("人教版小学三年级上册数学，2025秋季版")
+        self.assertEqual(result["status"], "search_required")
+        self.assertEqual(result["search"]["version"], {"kind": "school_year", "year": 2025, "term": "autumn"})
+        self.assertIn("2025", result["search"]["web_queries"][0])
+        self.assertEqual(result["candidate_count"], 1)
+        self.assertEqual(index.resolve("最新版三年级数学")["status"], "needs_clarification")
 
     def test_opt_in_default_is_explicit_and_does_not_choose_a_volume(self):
         index = self.engine()

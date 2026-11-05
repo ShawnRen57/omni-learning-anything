@@ -17,6 +17,12 @@ def configure(subcommands):
     acquire.add_argument('--local-pdf', type=Path)
     acquire.add_argument('--confirm-local-edition', action='store_true')
     acquire.add_argument('--retry', action='store_true')
+    found = actions.add_parser('import-found')
+    found.add_argument('--query', required=True)
+    found.add_argument('--input', type=Path, required=True)
+    found.add_argument('--local-pdf', type=Path, required=True)
+    found.add_argument('--retry', action='store_true')
+    actions.choices['show'].add_argument('--sha256')
     for action in ('bind', 'figure', 'ocr'):
         actions.choices[action].add_argument('--sha256', required=True)
     ocr = actions.choices['ocr']
@@ -55,7 +61,17 @@ def execute(root, args):
     if action == 'locate':
         from omni_textbooks import locate
         return locate(root, args.material_id, args.sha256, args.query)
-    book = get(args.book)
+    if action == 'import-found':
+        import omni_core as core
+        from omni_textbook_fetch import acquire_found
+        return acquire_found(root, core.read(args.input), query=args.query, local_pdf=args.local_pdf, retry=args.retry)
+    if args.book.startswith('found-'):
+        from omni_textbook_fetch import found_book
+        if not getattr(args, 'sha256', None):
+            raise ValueError('Use the discovered textbook ID and SHA-256 returned by import-found.')
+        book = found_book(root, args.book, args.sha256)
+    else:
+        book = get(args.book)
     if action == 'show':
         return book
     if action == 'acquire':

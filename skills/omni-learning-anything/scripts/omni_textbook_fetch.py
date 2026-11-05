@@ -4,6 +4,7 @@ import os
 import re
 import stat
 import tempfile
+import omni_core as core
 from pathlib import Path
 from time import monotonic
 from urllib.error import HTTPError, URLError
@@ -231,11 +232,40 @@ def _cached(root, book_dir, book_id, sources):
     return None
 
 
+def _book_directory(root, book_id):
+    if root.is_relative_to(Path(__file__).resolve().parents[1]):
+        raise ValueError('Use a course archive outside the installed skill.')
+    book_dir = materials.path(root, 'textbooks', book_id)
+    book_dir.mkdir(mode=0o700, parents=True, exist_ok=True)
+    return book_dir
+
+
+def _archive(root, staged, book_id, digest):
+    path = _storage(root, book_id, digest)
+    path.parent.mkdir(mode=0o700, exist_ok=True)
+    try:
+        os.link(staged, path)
+    except FileExistsError:
+        source_pdf(root, book_id, digest)
+    return path
+
+
+def _import_archive(root, book, path, digest, origin, origin_url, retry):
+    book_id = book['book_id']
+    material_key = f'{book_id}\0{origin_url or origin}'
+    material_id = 'm_' + hashlib.sha256(material_key.encode()).hexdigest()[:16]
+    material = materials.import_file(root, path, material_id=material_id, url=origin_url,
+                                     retry=retry, max_file=MAX_TEXTBOOK_BYTES,
+                                     title=book['title'], publisher=book.get('publisher') or book.get('edition'))
+    if material['version'] != digest:
+        raise ValueError('Archived textbook PDF changed during material import.')
+    return {'book_id': book_id, 'pdf_path': str(path.relative_to(root)), 'sha256': digest,
+            'origin': origin, 'origin_url': origin_url, 'material': material}
+
+
 def acquire(root, book, *, local_pdf=None, confirm_local_edition=False, retry=False):
     """Capture the selected edition only and import it with physical PDF page numbers."""
     root = Path(root).resolve()
-    if root.is_relative_to(Path(__file__).resolve().parents[1]):
-        raise ValueError('Use a course archive outside the installed skill.')
     book_id = _book_id(book.get('book_id'))
     sources = _sources(book)
     if local_pdf is None and sum(s['size'] for s in sources) > MAX_TEXTBOOK_BYTES:
@@ -244,8 +274,7 @@ def acquire(root, book, *, local_pdf=None, confirm_local_edition=False, retry=Fa
     origin_url = urls[0]
     origin = 'pinned_repository'
 
-    book_dir = materials.path(root, 'textbooks', book_id)
-    book_dir.mkdir(mode=0o700, parents=True, exist_ok=True)
+    book_dir = _book_directory(root, book_id)
     cached = _cached(root, book_dir, book_id, sources) if local_pdf is None else None
     if cached:
         path, digest = cached
@@ -265,19 +294,74 @@ def acquire(root, book, *, local_pdf=None, confirm_local_edition=False, retry=Fa
                     origin_url = None
             if local_pdf is None:
                 _check_pdf(staged)
-            path = _storage(root, book_id, digest)
-            path.parent.mkdir(mode=0o700, exist_ok=True)
-            try:
-                os.link(staged, path)
-            except FileExistsError:
-                source_pdf(root, book_id, digest)
+            path = _archive(root, staged, book_id, digest)
 
-    material_key = f'{book_id}\0{origin_url or origin}'
-    material_id = 'm_' + hashlib.sha256(material_key.encode()).hexdigest()[:16]
-    material = materials.import_file(root, path, material_id=material_id, url=origin_url,
-                                     retry=retry, max_file=MAX_TEXTBOOK_BYTES,
-                                     title=book['title'], publisher=book.get('publisher') or book.get('edition'))
-    if material['version'] != digest:
-        raise ValueError('Archived textbook PDF changed during material import.')
-    return {'book_id': book_id, 'pdf_path': str(path.relative_to(root)), 'sha256': digest,
-            'origin': origin, 'origin_url': origin_url, 'material': material}
+    return _import_archive(root, book, path, digest, origin, origin_url, retry)
+
+
+def _found_id(record):
+    return 'found-' + materials.fingerprint(record)[:24]
+
+
+def found_book(root, book_id, sha256):
+    _storage(root, book_id, sha256)
+    provenance = materials.path(root, 'textbooks', book_id, sha256, 'provenance.json')
+    if not provenance.is_file():
+        raise ValueError('Discovered textbook provenance is unavailable in this course archive.')
+    record = core.read(provenance)
+    if _found_id(record) != book_id or record.get('sha256') != sha256:
+        raise ValueError('Discovered textbook provenance changed; preserve the inspected edition.')
+    return dict(record, book_id=book_id, title=f"{record['title']}（{record['edition_note']}）")
+
+
+def acquire_found(root, record, *, query, local_pdf, retry=False):
+    """Archive bytes the host inspected and identified through its research tools."""
+    from omni_textbook_index import STAGES, split_request, version_request
+
+    required = {'title', 'publisher', 'stage', 'edition_note', 'source_url', 'identity_url', 'sha256', 'year'}
+    optional = {'grade', 'isbn', 'printing_year', 'school_year', 'school_term', 'latest_evidence'}
+    if not isinstance(record, dict) or not required <= set(record) <= required | optional:
+        raise ValueError('Provide documented discovered textbook provenance.')
+    for key, value in record.items():
+        if key in ('year', 'printing_year', 'school_year'):
+            if type(value) is not int or not 1900 <= value <= 2099:
+                raise ValueError('Use a four-digit edition year, printing year or school year.')
+        elif not isinstance(value, str) or not value.strip() or len(value) > 1500:
+            raise ValueError(f'Provide a nonempty, bounded textbook provenance field: {key}.')
+    if 'school_term' in record and record['school_term'] not in ('spring', 'autumn'):
+        raise ValueError('Use spring or autumn for the textbook school term.')
+    if record['stage'] not in STAGES or not _hex(record['sha256'], 64):
+        raise ValueError('Provide a supported textbook stage and the inspected PDF SHA-256 checksum.')
+    if version_request(record['edition_note']) != {'kind': 'edition', 'year': record['year']}:
+        raise ValueError('The recorded edition year must agree with the actual edition note.')
+    for key in ('source_url', 'identity_url'):
+        if not record[key].startswith('https://'):
+            raise ValueError('Use a public HTTPS textbook provenance URL.')
+        materials.public_url(record[key])
+    identity, _ = split_request(query)
+    requested = version_request(identity)
+    if requested:
+        kind = requested['kind']
+        if kind == 'latest':
+            if not record.get('latest_evidence'):
+                raise ValueError('Record the evidence that supports the latest edition claim.')
+        else:
+            field = {'edition': 'year', 'printing': 'printing_year', 'school_year': 'school_year'}[kind]
+            if record.get(field) != requested['year']:
+                raise ValueError(f'The discovered textbook does not match the requested {kind} year.')
+            if kind == 'school_year' and record.get('school_term') != requested['term']:
+                raise ValueError('The discovered textbook does not match the requested school term.')
+
+    root = Path(root).resolve()
+    book_id = _found_id(record)
+    book_dir = _book_directory(root, book_id)
+    with tempfile.TemporaryDirectory(prefix='.stage-', dir=book_dir) as stage:
+        staged = Path(stage) / (book_id + '.pdf')
+        digest = _copy_local(Path(local_pdf).absolute(), staged)
+        if digest != record['sha256']:
+            raise ValueError('Discovered PDF checksum differs from the file the host inspected.')
+        _check_pdf(staged)
+        path = _archive(root, staged, book_id, digest)
+    materials.save(root, ('textbooks', book_id, digest, 'provenance.json'), record)
+    book = found_book(root, book_id, digest)
+    return _import_archive(root, book, path, digest, 'web_discovery', record['source_url'], retry)

@@ -1,5 +1,11 @@
 # Changelog
 
+## v4.2.0 — 2026-11-05
+
+- Recognize textbook edition years, latest-revision requests, printing years and school terms. Keep undated candidates separate from confirmed matches.
+- Check the live upstream repository and automatically search publisher, education authority and public textbook sources when the pinned index cannot verify the requested edition.
+- Archive inspected PDFs found outside the index with edition evidence and a SHA-256 checksum. Reuse page binding, original figure crops and source-bound checks for those books.
+
 ## v4.1.0 — 2026-11-05
 
 - Generate short checks that can test a concept in a new situation or ask the learner to diagnose a mistake. Use original questions and recall when they fit the learning goal.

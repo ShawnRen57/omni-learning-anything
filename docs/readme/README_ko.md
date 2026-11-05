@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v4.1.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.1.0/omni-learning-anything-skill-v4.1.0.zip)**
+**[v4.2.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [설치 채널](../../docs/distribution-channels.md)
 

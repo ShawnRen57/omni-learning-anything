@@ -66,6 +66,9 @@ def validate_settings(config):
 def bind(root, book, material_id, version, pages, focus):
     require(isinstance(focus, str) and 0 < len(focus.strip()) <= 200, 'Name the intended learning scope.')
     source_pdf(root, book['book_id'], version)
+    if book['book_id'].startswith('found-'):
+        material = materials.load(root, material_id, version)
+        require(material.get('url') == book['source_url'], 'Discovered textbook material must retain its verified source URL.')
     selection = materials.select(root, material_id, version, pages=pages)
     config = {
         'textbook': {'book_id': book['book_id'], 'version': version, 'title': book['title'],

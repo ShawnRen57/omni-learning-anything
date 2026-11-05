@@ -27,7 +27,7 @@
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download v4.1.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.1.0/omni-learning-anything-skill-v4.1.0.zip)**
+**[Download v4.2.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installation channels](docs/distribution-channels.md)
 
@@ -43,7 +43,7 @@ Try **“I want to study the History of Chinese Architecture at Tsinghua.”** o
 | --- | --- |
 | Personal learning path | Turn a broad interest or specific goal into a course matched to your background, purpose and time. |
 | Built-in courses and references | Choose from 65 courses and two open references. Keep the source edition, unit order and original workload visible. |
-| Chinese school textbooks | Search 1,949 entries from primary through senior secondary. Choose an edition and volume, or focus on a chapter, concept or formula. Explanations follow the learner's stage, with original textbook figures and page references. |
+| Chinese school textbooks | Search 1,949 entries from primary through senior secondary. Ask for the latest edition or a specific year. When the index cannot verify the book, the agent checks the upstream repository and searches online. Study a chapter, concept or formula with original figures and page references when the textbook is available. |
 | Your own materials | Study selected pages, chapters or timestamps in PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT or VTT. Choose whether to include outside sources. |
 | Sources and further reading | Trace key claims to an original page, chapter or timestamp, or to cited web research with dates and links. |
 | Plan before lessons | Review a day-by-day curriculum and estimated workload before approving lessons. |
@@ -69,6 +69,7 @@ Try **“I want to study the History of Chinese Architecture at Tsinghua.”** o
 
 | Version | What it brings to your learning |
 | --- | --- |
+| **[v4.2.0](skills/omni-learning-anything/references/textbooks.md)** | Find the requested textbook edition by year or ask for the latest. The agent searches beyond the index for a verifiable original. |
 | **[v4.1.0](skills/omni-learning-anything/references/assessment.md)** | Check whether you can apply what you learned to a new example, with each question reviewed against the original source. |
 | **[v4.0.0](skills/omni-learning-anything/references/textbooks.md)** | Study mainland Chinese school textbooks with age-specific lessons, exact page references and original illustrations. |
 | **v3.0.0** | Choose a university pathway, see the source edition, and preview real multilingual learning documents. |

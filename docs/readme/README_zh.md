@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 v4.1.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.1.0/omni-learning-anything-skill-v4.1.0.zip)**
+**[下载 v4.2.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [安装渠道说明](../../docs/distribution-channels.md)
 
@@ -42,7 +42,7 @@
 | --- | --- |
 | 个性化学习路径 | 从一句想学的主题或明确目标开始，按你的基础、用途和可投入时间规划。 |
 | 内置课程与开放参考 | 选择 65 门课程和 2 套开放参考，保留来源版本、原课顺序和原始学习量。 |
-| 中国大陆中小学教材 | 检索小学到普通高中的 1,949 条教材索引。按版本和册次学习，也可聚焦章节、概念或公式。按学段讲解，配教材原图与页码。 |
+| 中国大陆中小学教材 | 检索小学到普通高中的 1,949 条教材索引，支持「最新版」「2025 版」等说法。索引无法确认时，Agent 会查上游仓库并联网找原书。找到可核验的原书后，可按章节、概念或公式学习，引用教材原图与页码。 |
 | 用自己的材料学习 | 导入 PDF、DOCX、EPUB、PPTX、HTML、Markdown、TXT、SRT 或 VTT，选择页码、章节或时间段，以及是否补充外部资料。 |
 | 来源与扩展阅读 | 关键讲解可回溯到原书页码、章节、时间戳，或有核验日期和链接的网络来源。 |
 | 先看计划再开课 | 先审阅每天学什么、预计花多久，确认后再开始生成课程。 |
@@ -68,6 +68,7 @@
 
 | 版本 | 对学习的帮助 |
 | --- | --- |
+| **[v4.2.0](../../skills/omni-learning-anything/references/textbooks.md)** | 按版年或「最新版」查找教材。索引没有合适版本时，自动联网查找并核验原书。 |
 | **[v4.1.0](../../skills/omni-learning-anything/references/assessment.md)** | 用新情境或辨错题检验能否举一反三。每题先回查原文，再验算或核对答案。 |
 | **[v4.0.0](../../skills/omni-learning-anything/references/textbooks.md)** | 按中国大陆中小学教材生成分学段学习材料，支持章节、概念和公式，并标明原图页码。 |
 | **v3.0.0** | 直接选择大学课程路径，核对来源版本，预览真实多语言学习文档。 |

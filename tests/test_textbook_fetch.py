@@ -1,6 +1,8 @@
 """Pinned acquisition, verified local copies and original PDF locators."""
 import hashlib
 import io
+import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -48,6 +50,51 @@ class TextbookFetchTests(unittest.TestCase):
         self.book = {'book_id': 'ct-example', 'title': '教材一册',
                      'repository': 'TapXWorld/ChinaTextbook', 'commit': '1' * 40,
                      'sources': [source('目录/教材 一册.pdf', self.pdf)]}
+
+    def test_found_pdf_uses_existing_textbook_workflow_with_exact_provenance(self):
+        cli = Path(__file__).resolve().parents[1] / 'skills/omni-learning-anything/scripts/omni_learning.py'
+        pdf = self.root.parent / 'found.pdf'
+        pdf.write_bytes(self.pdf)
+        record = {'title': '数学三年级上册', 'publisher': '人民教育出版社', 'stage': '小学',
+                  'grade': '三年级', 'edition_note': '2025年7月第1版', 'year': 2025,
+                  'source_url': 'https://example.org/textbook', 'identity_url': 'https://example.org/catalog',
+                  'sha256': hashlib.sha256(self.pdf).hexdigest()}
+        record_path = self.root.parent / 'found.json'
+
+        def run(*args, error=None):
+            result = subprocess.run([sys.executable, str(cli), '--project', str(self.root), 'textbooks', *args],
+                                    capture_output=True, text=True)
+            if error:
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn(error, result.stderr)
+                return
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return json.loads(result.stdout)
+
+        record_path.write_text(json.dumps(record))
+        args = ('import-found', '--input', str(record_path), '--local-pdf', str(pdf))
+        run(*args, '--query', '人教版三年级上册数学2024版', error='edition year')
+        run(*args, '--query', '最新版人教版三年级上册数学', error='latest')
+        pdf.write_bytes(fixture_pdf(blank=True))
+        run(*args, '--query', '人教版三年级上册数学2025版', error='checksum')
+        self.assertEqual(list(self.root.rglob('*.pdf')), [])
+        pdf.write_bytes(self.pdf)
+        result = run(*args, '--query', '人教版三年级上册数学2025版')
+        self.assertEqual(result, run(*args, '--query', '人教版三年级上册数学2025版'))
+        book = ('--book', result['book_id'], '--sha256', result['sha256'])
+        self.assertEqual(run('show', *book)['edition_note'], record['edition_note'])
+        self.assertEqual(result['material']['status'], 'ready')
+        binding = run('bind', *book, '--material-id', result['material']['id'], '--pages', '1', '--focus', 'Evidence')
+        self.assertIn('2025', binding['textbook']['title'])
+        self.assertEqual(binding['materials']['policy'], 'strict')
+        self.assertEqual(result['origin_url'], record['source_url'])
+        figure = run('figure', *book, '--page', '1', '--box', '0.05', '0.05', '0.95', '0.95', '--caption', 'Original crop')
+        self.assertEqual(figure['textbook_ref']['version'], record['sha256'])
+        self.assertEqual(result, run(*args, '--query', '人教版三年级上册数学，只学2024版这个说法'))
+        record.update(school_year=2025, school_term='autumn')
+        record_path.write_text(json.dumps(record))
+        run(*args, '--query', '人教版三年级上册数学2025年春季版', error='school term')
+        run(*args, '--query', '人教版三年级上册数学2025年秋季版')
 
     def test_download_and_reuse_verified_original_with_material_pages(self):
         class Response(io.BytesIO):

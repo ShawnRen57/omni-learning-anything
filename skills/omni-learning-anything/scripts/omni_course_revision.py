@@ -93,13 +93,19 @@ def apply(root,proposal_id,destination,consent):
                     m.save(staged,('items',selection['id'],selection['version']+'.json'),snapshot)
             textbook=data['config'].get('textbook')
             if textbook:
-                from omni_textbook_fetch import source_pdf
+                from omni_textbook_fetch import found_book, source_pdf
                 original=source_pdf(root,textbook['book_id'],textbook['version'])
                 archived=staged/original.relative_to(root)
                 archived.parent.mkdir(parents=True,mode=0o700,exist_ok=True)
                 shutil.copyfile(original,archived)
                 archived.chmod(0o600)
                 source_pdf(staged,textbook['book_id'],textbook['version'])
+                if textbook['book_id'].startswith('found-'):
+                    found_book(root, textbook['book_id'], textbook['version'])
+                    provenance = archived.with_name('provenance.json')
+                    shutil.copyfile(original.with_name(provenance.name), provenance)
+                    provenance.chmod(0o600)
+                    found_book(staged, textbook['book_id'], textbook['version'])
             c.initialize(staged,data['config'],data['plan']);c.save(staged/'continuation.json',continuation)
             # Reserve the final directory exclusively; never replace a concurrently created archive.
             destination.mkdir(mode=0o700)

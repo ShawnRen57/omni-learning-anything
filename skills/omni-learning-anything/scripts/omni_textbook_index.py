@@ -48,8 +48,35 @@ def longest(values, query):
                   key=lambda value: (-len(normalize(value)), value))
 
 
-def resolve(query, *, grade=None, subject=None, edition=None, volume=None, year=None,
-            school_system=None, stage=None, book_id=None, allow_default=False):
+VERSION_YEAR = re.compile(
+    r'(?<!\d)((?:19|20)\d{2})\s*(?:年\s*)?'
+    r'(?:(?P<printing>(?:\d{1,2}\s*月\s*)?(?:第\s*\d+\s*次\s*)?印刷)'
+    r'|(?P<school_year>[春秋](?:季)?(?:学期|版)?)'
+    r'|(?P<edition>(?:\d{1,2}\s*月\s*)?(?:第\s*\d+\s*)?(?:修订版|新版|新编|版)))'
+)
+
+
+def version_request(identity, year=None):
+    if year is not None:
+        if not re.fullmatch(r'(?:19|20)\d{2}', str(year)):
+            raise ValueError('Use a four-digit textbook edition year.')
+        return {'kind': 'edition', 'year': int(year)}
+    identity = unicodedata.normalize('NFKC', identity)
+    for match in VERSION_YEAR.finditer(identity):
+        if not re.match(r'\s*(?:课程标准|课标)', identity[match.end():]):
+            result = {'kind': match.lastgroup, 'year': int(match[1])}
+            if match.lastgroup == 'school_year':
+                result['term'] = 'spring' if match['school_year'].startswith('春') else 'autumn'
+            return result
+    dated = re.search(r'(?<!\d)((?:19|20)\d{2})\s*年(?!\s*(?:版?课程标准|版?课标|级))', identity)
+    if dated:
+        return {'kind': 'edition', 'year': int(dated[1])}
+    if re.search(r'最新|新修订版|(?<!年)新版|新课标版|现行(?:版|教材|课本)', identity):
+        return {'kind': 'latest'}
+    return None
+
+
+def split_request(query):
     if not isinstance(query, str) or not query.strip():
         raise ValueError('Enter a textbook or learning request.')
     original = unicodedata.normalize('NFKC', query)
@@ -65,24 +92,47 @@ def resolve(query, *, grade=None, subject=None, edition=None, volume=None, year=
         if match:
             focus = match[1].strip()
             identity = identity[:match.start(1)]
+    return identity, focus
+
+
+def resolve(query, *, grade=None, subject=None, edition=None, volume=None, year=None,
+            school_system=None, stage=None, book_id=None, allow_default=False):
+    identity, focus = split_request(query)
     short_volume = re.search(r'([一二三四五六七八九1-9]年级)([上下])(?!册)', identity)
     if not volume and short_volume:
         volume = short_volume[2] + '册'
     q = normalize(identity)
-    books = catalog()['books']
+    index = catalog()
+    books = index['books']
     defaults = {}
+    requested = version_request(identity, year)
 
     def answer(status, candidates=(), clarify=()):
-        return {'status': status, 'book': candidates[0] if status == 'matched' else None,
-                'candidates': list(candidates)[:12], 'candidate_count': len(candidates),
-                'clarify': list(clarify), 'focus': focus, 'defaults': defaults}
+        result = {'status': status, 'book': candidates[0] if status == 'matched' else None,
+                  'candidates': list(candidates)[:12], 'candidate_count': len(candidates),
+                  'clarify': list(clarify), 'focus': focus, 'defaults': defaults}
+        if status == 'search_required':
+            scope = ' '.join(str(value) for value in (stage, grade, subject, edition, volume, school_system) if value)
+            if requested:
+                kind = requested['kind']
+                qualifier = ('最新版' if kind == 'latest' else
+                             f"{requested['year']}" + {'edition': '年版', 'printing': '年印刷', 'school_year': '学期'}[kind])
+                if kind == 'school_year':
+                    season = '春' if requested['term'] == 'spring' else '秋'
+                    qualifier = f"{requested['year']}年{season}季教材"
+                scope = f'{scope} {qualifier}'
+            result['search'] = {'version': requested, 'repository_query': f"site:github.com/{index['repository']} {scope} {identity}",
+                                'web_queries': [f'{scope} {identity} 教材 出版社 版权页 电子课本',
+                                                f'{scope} {identity} 国家中小学智慧教育平台 教材']}
+        return result
 
     if book_id:
-        return answer('matched', [get(book_id)])
-    if re.search(r'最新版|最新修订|最新版本', identity):
-        return answer('not_found')
-    year_match = re.search(r'(?<!\d)((?:19|20)\d{2})(?:年|版)', identity)
-    year = str(year) if year else (year_match[1] if year_match else None)
+        selected = get(book_id)
+        if not requested or (requested['kind'] == 'edition' and selected['year'] == requested['year']):
+            return answer('matched', [selected])
+        stage, grade, subject, edition, volume, school_system = (
+            selected[field] for field in ('stage', 'grade', 'subject', 'edition', 'volume', 'school_system'))
+        return answer('search_required', [selected])
     if not stage:
         stage = next((name for name in STAGES if name in q), None)
     if re.search(r'高[一二三123]', q):
@@ -120,8 +170,7 @@ def resolve(query, *, grade=None, subject=None, edition=None, volume=None, year=
         return answer('needs_clarification', clarify=['grade'])
     books = [b for b in books if b['subject'] == subject and (not stage or b['stage'] == stage)
              and (not grade or grade in b['grade_levels'])
-             and (not school_system or normalize(b['school_system']) == normalize(school_system))
-             and (not year or str(b['year']) == year)]
+             and (not school_system or normalize(b['school_system']) == normalize(school_system))]
     if not volume:
         found = longest((b['volume'] for b in books), q)
         module = re.search(r'(选择性必修|选修|必修)(?:第)?([一二三四五六七八九十\d]+)(?:册)?', q)
@@ -134,8 +183,9 @@ def resolve(query, *, grade=None, subject=None, edition=None, volume=None, year=
         edition = named[0] if named else None
         if '人教a版' in q or '人教b版' in q:
             edition = next((b['edition'] for b in books if normalize(b['edition']) in q), edition)
-        if not edition and re.search(r'[\u4e00-\u9fff]版(?!本|次)', q):
-            return answer('not_found')
+        edition_terms = re.sub(r'最新(?:修订版|版本|版)?|新修订版|新版|新课标版|现行版|[春秋](?:季)?版', '', q)
+        if not edition and re.search(r'[\u4e00-\u9fff]版(?!本|次)', edition_terms):
+            return answer('search_required')
     if edition:
         edition = EDITION_ALIASES.get(edition, edition)
         books = [b for b in books if normalize(edition) in {normalize(b['edition']), normalize(b['edition_family'])}]
@@ -151,8 +201,25 @@ def resolve(query, *, grade=None, subject=None, edition=None, volume=None, year=
                 defaults['edition'] = recommended
                 books = preferred
                 edition = recommended
+    if requested and requested['kind'] == 'edition':
+        dated = [book for book in books if book['year'] == requested['year']]
+        if dated:
+            books = dated
+        elif books:
+            # A dated mismatch can help research but cannot become a match.
+            choices = [field for field in ('stage', 'grade', 'edition', 'school_system', 'volume')
+                       if len({book[field] for book in books}) > 1]
+            if choices:
+                return answer('needs_clarification', books, choices)
+            return answer('search_required', books)
     if not books:
-        return answer('not_found')
+        return answer('search_required')
+    if requested and requested['kind'] != 'edition':
+        choices = [field for field in ('stage', 'grade', 'edition', 'school_system', 'volume')
+                   if len({book[field] for book in books}) > 1]
+        if choices:
+            return answer('needs_clarification', books, choices)
+        return answer('search_required', books)
     if len(books) == 1:
         return answer('matched', books)
     clarify = [field for field in ('stage', 'grade', 'edition', 'school_system', 'volume', 'year')
