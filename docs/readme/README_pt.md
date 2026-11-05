@@ -38,13 +38,40 @@ Transforme “quero aprender…” em um plano que você consiga seguir. Comece 
 
 Experimente **«Quero estudar Psicologia Positiva de Harvard»**. O agente identifica o curso, aproveita as informações já fornecidas e pergunta apenas o necessário para preparar o plano.
 
-<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 páginas de aulas reais em seis idiomas" width="100%"></a>
+| Função | O que faz |
+| --- | --- |
+| Percurso personalizado | Transforma um interesse ou objetivo em um curso adaptado ao seu nível e tempo. |
+| Catálogo | 65 cursos e duas referências abertas, com edição, ordem e carga originais. |
+| Livros escolares chineses | Consulte 1.949 entradas do ensino fundamental e médio. Escolha volume, capítulo, conceito ou fórmula, com explicações para a faixa etária e imagens originais. |
+| Materiais próprios | Selecione páginas, capítulos ou trechos de PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT ou VTT. |
+| Fontes e leituras | Localize a página, capítulo, marca de tempo ou fonte web verificada. |
+| Aprovação do plano | Revise o roteiro diário e o tempo estimado antes das aulas. |
+| Aulas ilustradas | Explicações, exemplos, prática breve e revisão. |
+| Dez idiomas | Escolha o idioma de estudo independentemente da fonte. O árabe é diagramado da direita para a esquerda. |
+| Formatos locais | PDF, HTML offline, DOCX e Markdown. |
+| Destinos | Obsidian local ou conexões autorizadas com Notion, Feishu, DingTalk e Tencent Docs. |
+| Perguntas breves | Responda de uma a três perguntas no chat ou em cartões compatíveis. Peça dicas, pule ou retome. |
+| Feedback | Receba comentários com fontes, revise a resposta ou corrija uma avaliação. |
+| Registro e revisão | Revise dentro do tempo disponível, peça um resumo e exporte ou remova respostas. |
+| Ajuste do plano | Confira as mudanças propostas com base em objetivos ou respostas antes de criar outra versão do curso. |
+| Anki | Exporte perguntas de revisão em CSV para o Anki. |
+| Continuação e horário | Retome a próxima aula. A entrega agendada usa os recursos do agente. |
+| Instalação e atualização | Instale e verifique a detecção em agentes compatíveis. Guarde os cursos em outra pasta. |
 
-## Novidades da v4.0.0
+<a id="examples"></a>
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="20 páginas de aulas, cinco de livros escolares chineses modernos" width="100%"></a>
 
-Estude com livros do ensino fundamental e médio da China continental. Escolha a disciplina, o ano, a edição e o volume, e estude um livro, um capítulo, um conceito ou uma fórmula. As explicações se adaptam à idade, e as ilustrações são recortadas das páginas citadas.
+[Cinco aulas em chinês de livros escolares modernos](../../examples/textbooks/README.md)
 
-[Guia do modo de livros didáticos](../../skills/omni-learning-anything/references/textbooks.md)
+<a id="versions"></a>
+## Guia de versões
+
+| Versão | Benefício para o estudo |
+| --- | --- |
+| **v3.0.0** | Escolha uma trilha universitária, confira a edição e veja documentos multilíngues reais. |
+| **v2.3–v2.6** | Perguntas curtas, fontes pessoais, revisão e instalação mais simples. |
+| **v2** | Dez idiomas, quatro formatos locais e documentos conectados. |
+| **v1** | Aprove um plano pessoal e receba PDFs ilustrados com exercícios e leituras. |
 
 <a id="university-courses"></a>
 ## Escolha um curso do catálogo
@@ -142,41 +169,7 @@ Pergunte “o que devo revisar hoje?” para uma revisão dentro do tempo previs
 
 Aprove mudanças nas aulas futuras antes de iniciar uma nova versão; o plano e o histórico anteriores continuam disponíveis. Cartões Anki podem ser exportados em CSV em sentido único, sem sincronização automática.
 
-<a id="examples"></a>
-## Exemplos reais em seis idiomas
-
-A galeria acima mostra 15 páginas de aulas. Cada um dos seis exemplos universitários abaixo inclui um plano parcial de seis dias e uma primeira aula em PDF e HTML offline.
-
-| Idioma | Tema do exemplo |
-| --- | --- |
-| Chinês · 简体中文 | Harvard: Psicologia positiva |
-| Inglês · English | Harvard CS50 |
-| Japonês · 日本語 | MIT: Álgebra linear |
-| Francês · Français | Yale: Escuta musical |
-| Espanhol · Español | Yale: Mercados financeiros |
-| Árabe · العربية | Yale: A morte |
-
-[Abrir catálogo e arquivos de exemplo](../../examples/university/README.md)
-
-### Exemplos de aulas com livros didáticos
-
-Os dois exemplos usam ilustrações originais de livros históricos em domínio público.
-
-[Exemplos de aulas com livros didáticos](../../examples/textbooks/README.md)
-
-Os exemplos PDF anteriores continuam disponíveis:
-
-[Tecnologia](../../examples/technology/) · [Economia](../../examples/economics/) · [Música](../../examples/music/) · [Produtos com agentes](../../examples/agent-product/) · [Arquitetura](../../examples/architecture/) · [História Ming](../../examples/ming-history/)
-
-<a id="versions"></a>
-## Guia de versões
-
-| Versão | Benefício para o estudo |
-| --- | --- |
-| **v3.0.0** | Escolha uma trilha universitária, confira a edição e veja documentos multilíngues reais. |
-| **v2.3–v2.6** | Perguntas curtas, fontes pessoais, revisão e instalação mais simples. |
-| **v2** | Dez idiomas, quatro formatos locais e documentos conectados. |
-| **v1** | Aprove um plano pessoal e receba PDFs ilustrados com exercícios e leituras. |
+[Demonstração de perguntas, feedback e ajuste do plano no WorkBuddy](../../README.md#workbuddy-demo)
 
 ## Guias e requisitos
 

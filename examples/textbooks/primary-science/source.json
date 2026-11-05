@@ -1,0 +1,24 @@
+{
+  "title": "看不见的空气，在哪里？",
+  "edition": "青岛版《科学》一年级下册，2022 年 1 月第 4 版",
+  "isbn": "978-7-5552-5702-8",
+  "source": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/e2b3f62213c77bb8c33c5be355f97625ea1b8b61/%E5%B0%8F%E5%AD%A6/%E7%A7%91%E5%AD%A6/%E9%9D%92%E5%B2%9B%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E7%A7%91%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf",
+  "physical_pdf_page": 11,
+  "printed_page": "4",
+  "original_figure": {
+    "book_id": "ct-7e5e21599050a104952f",
+    "version": "a0b1bdebd06f2b11e970adf8a50c19dd8ae16a3512a1ecd31c301e24915c39b5",
+    "page": 11,
+    "box": [
+      0.165,
+      0.206,
+      0.458,
+      0.373
+    ],
+    "sha256": "4c1ad60be924594ba893d72f5e74889751ee9de67630f5551d2d788a73f7d6d4"
+  },
+  "generated_on": "2026-11-05",
+  "sample_mode": true,
+  "ocr": true,
+  "lesson_pdf_sha256": "4d5af904dff670b50bd79721e088a0079c62dbbe10469a49d0fa9310d45a204a"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "从职业结构图走向因果解释",
+  "edition": "粤教粤科版《通用技术》选择性必修 8，2021 年 6 月第 1 版",
+  "isbn": "978-7-5548-4129-7",
+  "source": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/e2b3f62213c77bb8c33c5be355f97625ea1b8b61/%E9%AB%98%E4%B8%AD/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E7%B2%A4%E6%95%99%E7%B2%A4%E7%A7%91%E7%89%88-%E5%B9%BF%E4%B8%9C%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE%E3%80%81%E5%B9%BF%E4%B8%9C%E7%A7%91%E6%8A%80%E5%87%BA%E7%89%88%E7%A4%BE/%E6%99%AE%E9%80%9A%E9%AB%98%E4%B8%AD%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF%E9%80%89%E6%8B%A9%E6%80%A7%E5%BF%85%E4%BF%AE8%20%E6%8A%80%E6%9C%AF%E4%B8%8E%E8%81%8C%E4%B8%9A%E6%8E%A2%E7%B4%A2.pdf",
+  "physical_pdf_page": 14,
+  "printed_page": "05",
+  "original_figure": {
+    "book_id": "ct-a5e34f8e457353478f2f",
+    "version": "690a0bacd8ad9d05da5fa488edd7e3cc0e021682000fc8fcea223f457b8ace10",
+    "page": 14,
+    "box": [
+      0.145,
+      0.106,
+      0.9,
+      0.46
+    ],
+    "sha256": "273a8d4fc8fbbc0139d1eefa8656dede860abff525b419400b549500dc8e818f"
+  },
+  "generated_on": "2026-11-05",
+  "sample_mode": true,
+  "ocr": false,
+  "lesson_pdf_sha256": "af060df2323b9b7880bb05f6c62559b7291b11e8653b0515a64644dc769c7c18"
+}

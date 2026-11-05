@@ -38,13 +38,40 @@ Aus „Ich möchte lernen …“ wird ein Plan, dem du folgen kannst. Beginne mi
 
 Beginne mit **„Ich möchte Harvards Positive Psychologie lernen.“** Der Agent findet den ursprünglichen Kurs, nutzt bereits genannte Angaben und fragt nur nach Details, die für den Lernplan wichtig sind.
 
-<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 echte Lektionsseiten in sechs Sprachen" width="100%"></a>
+| Funktion | Beschreibung |
+| --- | --- |
+| Persönlicher Lernweg | Erstellt aus einem Interesse oder Ziel einen Kurs für deinen Kenntnisstand und Zeitrahmen. |
+| Kurskatalog | 65 Kurse und zwei offene Referenzen mit Originalausgabe, Reihenfolge und Zeitaufwand. |
+| Chinesische Schulbücher | Durchsuche 1.949 Einträge von der Grundschule bis zur Oberstufe. Wähle Band, Kapitel, Begriff oder Formel, mit altersgerechter Erklärung und Originalabbildung. |
+| Eigene Unterlagen | Wähle Seiten, Kapitel oder Zeitabschnitte in PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT oder VTT. |
+| Quellen und Vertiefung | Gehe zur Originalseite, zum Kapitel, zur Zeitmarke oder zur geprüften Webquelle. |
+| Planfreigabe | Prüfe Tagesplan und Zeitbedarf, bevor Lektionen beginnen. |
+| Illustrierte Lektionen | Erklärungen, Beispiele, kurze Übungen und Rückblick. |
+| Zehn Lernsprachen | Wähle die Lernsprache unabhängig von der Quelle. Arabisch wird von rechts nach links gesetzt. |
+| Lokale Formate | PDF, Offline-HTML, DOCX und Markdown. |
+| Speicherorte | Lokaler Obsidian-Tresor oder autorisierte Verbindung mit Notion, Feishu, DingTalk und Tencent Docs. |
+| Kurze Lernfragen | Beantworte ein bis drei Fragen im Chat oder mit unterstützten Karten. Fordere Tipps an, überspringe oder setze fort. |
+| Feedback | Erhalte begründete Rückmeldung, überarbeite eine Antwort oder korrigiere eine Bewertung. |
+| Lernverlauf und Wiederholung | Wiederhole innerhalb deines Zeitbudgets, frage nach einer Übersicht und exportiere oder lösche Antworten. |
+| Plananpassung | Prüfe Änderungen auf Grundlage deiner Ziele oder Antworten vor einer neuen Kursversion. |
+| Anki | Exportiere Wiederholungsfragen als CSV für Anki. |
+| Fortsetzen und planen | Setze bei der nächsten Lektion fort. Geplante Zustellung nutzt Funktionen des Agenten. |
+| Installation und Updates | Installiere den Skill in kompatiblen Agenten und überprüfe die Erkennung. Kurse liegen in einem eigenen Ordner. |
 
-## Neu in v4.0.0
+<a id="examples"></a>
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="20 Lektionsseiten, darunter fünf zu modernen chinesischen Schulbüchern" width="100%"></a>
 
-Lerne mit Schulbüchern für die Primar- und Sekundarstufe aus Festlandchina. Wähle Fach, Klasse, Ausgabe und Band sowie ein Buch, Kapitel, Konzept oder eine Formel. Die Erklärungen passen zur Altersstufe. Abbildungen stammen direkt aus den angegebenen Buchseiten.
+[Fünf chinesische Lektionen aus modernen Schulbüchern](../../examples/textbooks/README.md)
 
-[Anleitung zum Schulbuchmodus](../../skills/omni-learning-anything/references/textbooks.md)
+<a id="versions"></a>
+## Versionsübersicht
+
+| Version | Nutzen beim Lernen |
+| --- | --- |
+| **v3.0.0** | Universitären Lernpfad wählen, Quellenausgabe prüfen und echte mehrsprachige Dokumente ansehen. |
+| **v2.3–v2.6** | Kurze Verständnisfragen, eigene Quellen, gezielte Wiederholung und einfachere Installation. |
+| **v2** | Zehn Sprachen, vier lokale Formate und angebundene Dokumentdienste. |
+| **v1** | Persönlichen Plan bestätigen und illustrierte PDFs mit Übungen und Lesetipps erhalten. |
 
 <a id="university-courses"></a>
 ## Einen integrierten Kurs wählen
@@ -142,41 +169,7 @@ Fordere bei Bedarf 1–3 kurze Fragen als Karten oder Text an. Du erhältst quel
 
 Änderungen künftiger Lektionen bestätigst du vor einer neuen Kursversion; alter Plan und Verlauf bleiben zugänglich. Anki-Karten lassen sich optional als CSV in eine Richtung exportieren, ohne automatische Synchronisierung.
 
-<a id="examples"></a>
-## Echte Beispiele in sechs Sprachen
-
-Die Galerie oben zeigt 15 Lektionsseiten. Jedes der sechs Universitätsbeispiele unten enthält einen Teilplan für sechs Tage und eine erste Lektion als PDF und Offline-HTML.
-
-| Sprache | Beispielthema |
-| --- | --- |
-| Chinesisch · 简体中文 | Harvard: Positive Psychologie |
-| Englisch · English | Harvard CS50 |
-| Japanisch · 日本語 | MIT: Lineare Algebra |
-| Französisch · Français | Yale: Musik hören |
-| Spanisch · Español | Yale: Finanzmärkte |
-| Arabisch · العربية | Yale: Der Tod |
-
-[Katalog und Beispieldateien öffnen](../../examples/university/README.md)
-
-### Beispiele für Schulbuchlektionen
-
-Die beiden Beispiele verwenden Originalabbildungen aus gemeinfreien historischen Schulbüchern.
-
-[Beispiele für Schulbuchlektionen](../../examples/textbooks/README.md)
-
-Die bisherigen PDF-Beispiele bleiben verfügbar:
-
-[Technologie](../../examples/technology/) · [Wirtschaft](../../examples/economics/) · [Musik](../../examples/music/) · [Agentenprodukte](../../examples/agent-product/) · [Architektur](../../examples/architecture/) · [Ming-Geschichte](../../examples/ming-history/)
-
-<a id="versions"></a>
-## Versionsübersicht
-
-| Version | Nutzen beim Lernen |
-| --- | --- |
-| **v3.0.0** | Universitären Lernpfad wählen, Quellenausgabe prüfen und echte mehrsprachige Dokumente ansehen. |
-| **v2.3–v2.6** | Kurze Verständnisfragen, eigene Quellen, gezielte Wiederholung und einfachere Installation. |
-| **v2** | Zehn Sprachen, vier lokale Formate und angebundene Dokumentdienste. |
-| **v1** | Persönlichen Plan bestätigen und illustrierte PDFs mit Übungen und Lesetipps erhalten. |
+[Lernfragen, Feedback und Plananpassung in WorkBuddy](../../README.md#workbuddy-demo)
 
 ## Anleitungen und Voraussetzungen
 

@@ -1,0 +1,24 @@
+{
+  "title": "读懂 4/4：先稳住拍子",
+  "edition": "湘文艺版《音乐》七年级下册，2013 年第 1 版，2022 年 1 月第 10 次印刷",
+  "isbn": "978-7-5404-5826-3",
+  "source": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/e2b3f62213c77bb8c33c5be355f97625ea1b8b61/%E5%88%9D%E4%B8%AD/%E9%9F%B3%E4%B9%90/%E6%B9%98%E6%96%87%E8%89%BA%E7%89%88-%E6%B9%96%E5%8D%97%E6%96%87%E8%89%BA%E5%87%BA%E7%89%88%E7%A4%BE/%E4%B8%83%E5%B9%B4%E7%BA%A7/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E9%9F%B3%E4%B9%90%E4%B8%83%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf",
+  "physical_pdf_page": 8,
+  "printed_page": "06",
+  "original_figure": {
+    "book_id": "ct-e3c28555a1d27ad9cd8e",
+    "version": "60dcc65718a43428c6e318fcf400b741d9b4e18983ce253a548f7d57f93d1831",
+    "page": 8,
+    "box": [
+      0.116,
+      0.344,
+      0.897,
+      0.502
+    ],
+    "sha256": "9e759cc74c9d94bae83baa3607d7fc63af8e9d9484260a9e37422b2607e7bb05"
+  },
+  "generated_on": "2026-11-05",
+  "sample_mode": true,
+  "ocr": true,
+  "lesson_pdf_sha256": "767ca7f63da8532a258d973bd0c3a7bd0c3ba01a17e674b60320a3d9d9e85d0e"
+}

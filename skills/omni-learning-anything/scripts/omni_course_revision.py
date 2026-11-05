@@ -35,10 +35,16 @@ def validate(root,data):
     old=c.read(root/'config.json')
     require(data['config'].get('delivery')==old.get('delivery'), 'Destination changes use the separate connection/approval flow, not a pace revision.')
     validate_evidence(root,data)
-    asset=Path(data['plan'].get('figure',{}).get('path',''))
-    require(not asset.is_absolute() and asset.parts and asset.parts[0]=='assets' and '..' not in asset.parts, 'Future plan figure must be a local assets path.')
+    figure=data['plan'].get('figure',{})
+    asset=Path(figure.get('path',''))
+    require(not asset.is_absolute() and asset.parts and '..' not in asset.parts, 'Future plan figure must be a local path.')
     source=root/asset
     require(source.is_file() and source.resolve().is_relative_to(root) and not source.is_symlink(), 'Review the future plan image inside the original course first.')
+    if data['config'].get('textbook'):
+        from omni_textbooks import validate_figure
+        validate_figure(root,data['config'],figure,data['plan'].get('sources',[]))
+    else:
+        require(asset.parts[0]=='assets', 'Future plan figure must be a local assets path.')
     if data['config'].get('materials'):
         from omni_materials import verify_selection
         for selection in data['config']['materials']['selections']:verify_selection(root,selection)
@@ -85,6 +91,15 @@ def apply(root,proposal_id,destination,consent):
                 for selection in data['config']['materials']['selections']:
                     snapshot=m.load(root,selection['id'],selection['version'])
                     m.save(staged,('items',selection['id'],selection['version']+'.json'),snapshot)
+            textbook=data['config'].get('textbook')
+            if textbook:
+                from omni_textbook_fetch import source_pdf
+                original=source_pdf(root,textbook['book_id'],textbook['version'])
+                archived=staged/original.relative_to(root)
+                archived.parent.mkdir(parents=True,mode=0o700,exist_ok=True)
+                shutil.copyfile(original,archived)
+                archived.chmod(0o600)
+                source_pdf(staged,textbook['book_id'],textbook['version'])
             c.initialize(staged,data['config'],data['plan']);c.save(staged/'continuation.json',continuation)
             # Reserve the final directory exclusively; never replace a concurrently created archive.
             destination.mkdir(mode=0o700)

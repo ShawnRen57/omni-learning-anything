@@ -1,0 +1,24 @@
+{
+  "title": "长方形的周长为什么要乘 2？",
+  "edition": "人教版《数学》三年级上册，2022 年 8 月第 2 版",
+  "isbn": "978-7-107-36924-7",
+  "source": "https://raw.githubusercontent.com/TapXWorld/ChinaTextbook/e2b3f62213c77bb8c33c5be355f97625ea1b8b61/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf",
+  "physical_pdf_page": 90,
+  "printed_page": "85",
+  "original_figure": {
+    "book_id": "ct-a145e3c3703a3e60ed73",
+    "version": "117c0e0545218aadab20001250e937ce60b959681dda7006396f7db6eaf368b6",
+    "page": 90,
+    "box": [
+      0.195,
+      0.105,
+      0.53,
+      0.275
+    ],
+    "sha256": "705f5436aec802c19e5fa355ff14880d61550798995aa2c6c5ce79ca1e507b59"
+  },
+  "generated_on": "2026-11-05",
+  "sample_mode": true,
+  "ocr": false,
+  "lesson_pdf_sha256": "fa05b45e42eeb4b7d7a76066dc51e22d11a02f3b5f7e1e8dc1b08e4e1e7a6748"
+}

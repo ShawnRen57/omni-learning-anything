@@ -13,6 +13,46 @@ import omni_materials as materials
 
 
 class TextbookWorkflowTests(unittest.TestCase):
+    def test_course_revision_retains_original_textbook_evidence(self):
+        from test_textbook_fetch import fixture_pdf, source
+        from omni_course_revision import apply, propose
+        from omni_textbook_fetch import acquire, source_pdf
+        from omni_textbooks import bind, extract_figure
+
+        with tempfile.TemporaryDirectory() as directory:
+            work = Path(directory)
+            original = work / 'textbook.pdf'
+            original.write_bytes(fixture_pdf())
+            book = {'book_id': 'ct-example', 'title': 'Test textbook', 'stage': '小学',
+                    'repository': 'TapXWorld/ChinaTextbook', 'commit': '1' * 40,
+                    'sources': [source('textbook.pdf', original.read_bytes())]}
+            root = work / 'course'
+            imported = acquire(root, book, local_pdf=original)
+            version = imported['sha256']
+            binding = bind(root, book, imported['material']['id'], version, '1', 'Source evidence')
+            selection = binding['materials']['selections'][0]
+            evidence = materials.citation(root, selection, selection['units'][0], 'Textbook evidence.', 'S1')
+            figure = extract_figure(root, book, version, 1, (0.05, 0.1, 0.9, 0.9), 'Original page crop')
+            config = dict(binding, timezone='Asia/Shanghai', language='en', daily_minutes=10, sample_mode=True)
+            plan = {'title': 'Learn from the textbook', 'topic': 'Source evidence',
+                    'days': [{'day': 1, 'topic': 'Read the page'}],
+                    'sections': [{'title': 'Evidence', 'body': 'Read the selected page [S1].'}],
+                    'sources': [evidence], 'figure': figure}
+            core.initialize(root, config, plan)
+            document.render(root, root / 'plan.json', 'plan', ['html'])
+            document.review(root, 'plan', 'Checked the sample plan')
+            core.approve(root)
+
+            proposed = dict(id='slower', reason='Review in a shorter session', basis='user_request', evidence=[],
+                            config=dict(config, daily_minutes=8), plan=dict(plan, title='Review source evidence'))
+            propose(root, proposed)
+            next_course = work / 'next-course'
+            applied = apply(root, 'slower', next_course, 'I accept this example revision')
+            self.assertEqual(applied['status'], 'awaiting_approval')
+            self.assertEqual(source_pdf(next_course, book['book_id'], version).read_bytes(), original.read_bytes())
+            self.assertEqual(core.read(root / 'config.json')['daily_minutes'], 10)
+            document.render(next_course, next_course / 'plan.json', 'plan', ['html'])
+
     def test_lesson_requires_original_crop_from_selected_edition_and_page(self):
         from omni_textbooks import bind, extract_figure, locate
         from pypdf import PdfWriter

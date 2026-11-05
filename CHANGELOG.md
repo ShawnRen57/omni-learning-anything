@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Preserve the verified original PDF and figure when creating a revised textbook course.
+- Show five modern Chinese textbook lessons and the WorkBuddy short-check, feedback and revision demo in the README.
+
 ## v4.0.0 — 2026-11-04
 
 - Add a searchable mainland China primary, junior-secondary and senior-secondary textbook index with 1,945 student textbooks and four companion readers. Resolve the grade, subject, edition and volume before downloading the selected PDF to a private course archive.

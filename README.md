@@ -32,19 +32,47 @@
 
 </div>
 
-**Choose a university course—or bring your own books and papers. Learn at your pace, with light checks, useful feedback and review, in local files or cloud documents.**
+**Study a university course, a school textbook, or your own books and papers. Learn at your pace with illustrated lessons, short checks and feedback.**
 
-Turn “I want to learn…” into a plan you can follow. Pick from 65 courses and two open references, or start with a personal goal or your own materials. Review the plan before lessons begin.
+Turn “I want to learn…” into a plan you can follow. Start with a personal goal, a built-in course, a textbook or your own materials. Review the plan before lessons begin.
 
 Try **“I want to study the History of Chinese Architecture at Tsinghua.”** or **“I want to study OpenAI Applied AI Foundations.”** The agent identifies the source course, reuses what you already told it, and asks only for details that affect your plan.
 
-<a href="examples/README.md"><img src="docs/assets/learning-sample-gallery.png" alt="15 actual lesson pages across six languages" width="100%"></a>
+| Feature | What it does |
+| --- | --- |
+| Personal learning path | Turn a broad interest or specific goal into a course matched to your background, purpose and time. |
+| Built-in courses and references | Choose from 65 courses and two open references. Keep the source edition, unit order and original workload visible. |
+| Chinese school textbooks | Search 1,949 entries from primary through senior secondary. Choose an edition and volume, or focus on a chapter, concept or formula. Explanations follow the learner's stage, with original textbook figures and page references. |
+| Your own materials | Study selected pages, chapters or timestamps in PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT or VTT. Choose whether to include outside sources. |
+| Sources and further reading | Trace key claims to an original page, chapter or timestamp, or to cited web research with dates and links. |
+| Plan before lessons | Review a day-by-day curriculum and estimated workload before approving lessons. |
+| Illustrated lessons | Learn through focused explanations, diagrams or source images, worked examples, short practice and recap. |
+| Ten learning languages | Set the language of plans and lessons independently of your sources. Arabic uses right-to-left layout. |
+| Four local formats | Save PDF, offline HTML with embedded images, DOCX or Markdown. |
+| Connected destinations | Save to a local Obsidian Vault, or connect Notion, Feishu, DingTalk or Tencent Docs with authorized access. |
+| Light checks | Ask for 1–3 questions after a lesson. Answer in chat or with supported cards, and ask for a hint, skip or resume. |
+| Answer feedback | See what your answer got right, what it missed and one next step. Revise an answer or dispute a judgment. |
+| Learning record and review | Review topics that need attention within your daily time budget. Request a recap, export your assessment record or remove it. |
+| Plan iteration | Use your goals or answer evidence to propose future changes. Review them before creating a separate course version. |
+| Anki export | Export selected review questions as a CSV for one-way import into Anki. |
+| Continue or schedule | Pause, resume or pick up the earliest undelivered lesson. Optional scheduling uses your agent's native tools. |
+| Install and update | Install in compatible agents, check discovery and update the skill while keeping course archives outside the installation. |
 
-## What is new in v4.0.0
+<a id="examples"></a>
+<a href="examples/README.md"><img src="docs/assets/learning-sample-gallery.png" alt="20 lesson previews, including five Chinese lessons from modern school textbooks" width="100%"></a>
 
-Study from mainland China’s primary, junior-secondary and senior-secondary textbooks. Choose the subject, grade, edition and volume, then study the whole book or focus on a chapter, concept or formula. The skill adapts the explanations to the learner’s age and crops illustrations directly from the cited textbook pages.
+[Five modern textbook lessons in Chinese](examples/textbooks/README.md)
 
-[See the textbook workflow](skills/omni-learning-anything/references/textbooks.md)
+<a id="versions"></a>
+## Version guide
+
+| Version | What it brings to your learning |
+| --- | --- |
+| **[v4.0.0](skills/omni-learning-anything/references/textbooks.md)** | Study mainland Chinese school textbooks with age-specific lessons, exact page references and original illustrations. |
+| **v3.0.0** | Choose a university pathway, see the source edition, and preview real multilingual learning documents. |
+| **v2.3–v2.6** | Ask for light checks, study your own sources, review what needs attention and install or update more easily. |
+| **v2** | Study in ten languages, choose four local formats, or keep your course in connected documents. |
+| **v1** | Approve a personal plan and receive illustrated PDF lessons with practice and further reading. |
 
 <a id="university-courses"></a>
 ## Choose a built-in course
@@ -142,46 +170,22 @@ Ask “What should I review today?” for a small review within your existing ti
 
 Approve changes to future lessons before a revised course version starts; the old plan and history remain available. Anki cards are an optional one-way CSV export, without automatic synchronization.
 
-<a id="examples"></a>
-## Real examples in six languages
+<a id="workbuddy-demo"></a>
+### Short checks and plan revision in WorkBuddy
 
-Explore 15 lesson pages in the gallery above. The six university sample sets below each include a partial six-day plan and a standalone first lesson in PDF and offline HTML.
+In this WorkBuddy AI 5.8.4 demo, a simulated learner answers a rectangle-perimeter question. WorkBuddy records the answer, explains that adding one length and one width gives half the perimeter, and proposes two shorter follow-up sessions based on the error. The accepted proposal creates a separate plan for review with the same textbook figure. The textbook revision uses the fix in this repository.
 
-| Language | Sample subject |
-| --- | --- |
-| Chinese · 简体中文 | Harvard Positive Psychology |
-| English | Harvard CS50 |
-| Japanese · 日本語 | MIT Linear Algebra |
-| French · Français | Yale Listening to Music |
-| Spanish · Español | Yale Financial Markets |
-| Arabic · العربية | Yale Death |
+**1. Start a short check**
 
-[Open the university catalog and sample files](examples/university/README.md)
+<img src="docs/assets/workbuddy/quiz.png" alt="WorkBuddy shows the first rectangle-perimeter question without revealing the answer" width="850">
 
-### Textbook lesson samples
+**2. Get feedback on the answer**
 
-The two public samples use original illustrations from public-domain historical textbooks.
+<img src="docs/assets/workbuddy/feedback.png" alt="WorkBuddy records the answer and explains how to turn a half perimeter into a full perimeter" width="850">
 
-[Textbook lesson samples](examples/textbooks/README.md)
+**3. Review the adjusted plan**
 
-| [Sun and Moon](examples/textbooks/sun-and-moon.md) | [The Lever and the Balance](examples/textbooks/lever-balance.md) |
-| --- | --- |
-| <img src="examples/textbooks/sun-moon-original.png" alt="Sun and Moon" height="140"> | <img src="examples/textbooks/balance-original.png" alt="The Lever and the Balance" height="140"> |
-
-Earlier PDF examples remain available:
-
-[Technology](examples/technology/) · [Economics](examples/economics/) · [Music](examples/music/) · [Agent products](examples/agent-product/) · [Architecture](examples/architecture/) · [Ming history](examples/ming-history/)
-
-<a id="versions"></a>
-## Version guide
-
-| Version | What it brings to your learning |
-| --- | --- |
-| **v4.0.0** | Study mainland Chinese school textbooks with age-specific lessons, exact page references and original illustrations. |
-| **v3.0.0** | Choose a university pathway, see the source edition, and preview real multilingual learning documents. |
-| **v2.3–v2.6** | Ask for light checks, study your own sources, review what needs attention and install or update more easily. |
-| **v2** | Study in ten languages, choose four local formats, or keep your course in connected documents. |
-| **v1** | Approve a personal plan and receive illustrated PDF lessons with practice and further reading. |
+<img src="docs/assets/workbuddy/revision.png" alt="WorkBuddy proposes two eight-minute follow-up lessons and waits for confirmation" width="850">
 
 ## Guides and requirements
 

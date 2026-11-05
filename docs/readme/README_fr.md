@@ -38,13 +38,40 @@ Transformez « je veux apprendre… » en un parcours que vous pouvez suivre. Pa
 
 Essayez **« Je veux étudier la psychologie positive de Harvard »**. L’agent identifie le cours, réutilise les informations déjà fournies et ne demande que ce qui compte pour le plan.
 
-<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="15 pages de leçons en six langues" width="100%"></a>
+| Fonction | Description |
+| --- | --- |
+| Parcours personnalisé | Transforme un intérêt ou un objectif en parcours adapté au niveau et au temps disponible. |
+| Catalogue | 65 cours et deux références ouvertes, avec l’édition, l’ordre et la charge d’origine. |
+| Manuels scolaires chinois | Recherche parmi 1 949 entrées du primaire au lycée. Étudiez un volume, un chapitre, une notion ou une formule avec des explications adaptées et des illustrations d’origine. |
+| Documents personnels | Choisissez des pages, chapitres ou passages dans des PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT ou VTT. |
+| Sources et lectures | Retrouvez la page, le chapitre, le repère temporel ou la source web qui appuie une explication. |
+| Validation du plan | Vérifiez les étapes et le temps estimé avant le début des leçons. |
+| Leçons illustrées | Explications, exemples, exercices courts et récapitulatif. |
+| Dix langues | Choisissez la langue d’apprentissage indépendamment de la source. L’arabe est mis en page de droite à gauche. |
+| Formats locaux | PDF, HTML hors ligne, DOCX et Markdown. |
+| Destinations | Coffre Obsidian local ou connexions autorisées à Notion, Feishu, DingTalk et Tencent Docs. |
+| Questions courtes | Répondez à une à trois questions dans le chat ou sur une carte compatible. Demandez un indice, passez ou reprenez. |
+| Retour sur les réponses | Recevez des explications sourcées, révisez une réponse ou contestez un jugement. |
+| Suivi et révision | Révisez dans le temps disponible, demandez un bilan, exportez ou supprimez vos réponses. |
+| Ajustement du plan | Examinez les changements proposés selon vos objectifs ou réponses avant de créer une nouvelle version. |
+| Anki | Exportez les questions de révision en CSV pour Anki. |
+| Reprise et calendrier | Reprenez à la prochaine leçon. La programmation dépend des outils de l’agent. |
+| Installation et mise à jour | Installez et vérifiez la détection dans un agent compatible, avec les cours dans un dossier distinct. |
 
-## Les nouveautés de v4.0.0
+<a id="examples"></a>
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="20 aperçus de leçons, dont cinq sur des manuels scolaires chinois modernes" width="100%"></a>
 
-Étudiez avec des manuels du primaire et du secondaire de Chine continentale. Choisissez la matière, le niveau, l’édition et le volume, puis un manuel entier, un chapitre, une notion ou une formule. Les explications s’adaptent à l’âge et les illustrations proviennent des pages citées.
+[Cinq leçons en chinois à partir de manuels scolaires modernes](../../examples/textbooks/README.md)
 
-[Guide du mode manuel scolaire](../../skills/omni-learning-anything/references/textbooks.md)
+<a id="versions"></a>
+## Guide des versions
+
+| Version | Ce qu’elle apporte à l’apprentissage |
+| --- | --- |
+| **v3.0.0** | Choisir un parcours universitaire, vérifier son édition et voir de vrais documents multilingues. |
+| **v2.3–v2.6** | Questions courtes, documents personnels, révisions et installation simplifiée. |
+| **v2** | Dix langues, quatre formats locaux et documents connectés. |
+| **v1** | Valider un plan personnel et recevoir des PDF illustrés avec exercices et lectures. |
 
 <a id="university-courses"></a>
 ## Choisir un cours du catalogue
@@ -142,41 +169,7 @@ Demandez « Que réviser aujourd’hui ? » pour une courte révision dans le te
 
 Validez les modifications des futures leçons avant une nouvelle version ; le plan et l’historique précédents restent disponibles. Les cartes Anki s’exportent en CSV à sens unique, sans synchronisation automatique.
 
-<a id="examples"></a>
-## Des exemples réels en six langues
-
-La galerie ci-dessus présente 15 pages de leçons. Les six exemples universitaires ci-dessous comprennent chacun un plan partiel de six jours et une première leçon en PDF et en HTML hors ligne.
-
-| Langue | Sujet de l’exemple |
-| --- | --- |
-| Chinois · 简体中文 | Harvard : Psychologie positive |
-| Anglais · English | Harvard CS50 |
-| Japonais · 日本語 | MIT : Algèbre linéaire |
-| Français | Yale : Écouter la musique |
-| Espagnol · Español | Yale : Marchés financiers |
-| Arabe · العربية | Yale : La mort |
-
-[Ouvrir le catalogue et les fichiers d’exemple](../../examples/university/README.md)
-
-### Exemples de leçons tirées de manuels
-
-Les deux exemples utilisent des illustrations originales de manuels historiques du domaine public.
-
-[Exemples de leçons tirées de manuels](../../examples/textbooks/README.md)
-
-Les anciens exemples PDF restent accessibles :
-
-[Technologie](../../examples/technology/) · [Économie](../../examples/economics/) · [Musique](../../examples/music/) · [Produits avec agents](../../examples/agent-product/) · [Architecture](../../examples/architecture/) · [Histoire des Ming](../../examples/ming-history/)
-
-<a id="versions"></a>
-## Guide des versions
-
-| Version | Ce qu’elle apporte à l’apprentissage |
-| --- | --- |
-| **v3.0.0** | Choisir un parcours universitaire, vérifier son édition et voir de vrais documents multilingues. |
-| **v2.3–v2.6** | Questions courtes, documents personnels, révisions et installation simplifiée. |
-| **v2** | Dix langues, quatre formats locaux et documents connectés. |
-| **v1** | Valider un plan personnel et recevoir des PDF illustrés avec exercices et lectures. |
+[Démonstration des questions, retours et ajustements du plan dans WorkBuddy](../../README.md#workbuddy-demo)
 
 ## Guides et prérequis
 
