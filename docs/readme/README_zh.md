@@ -26,7 +26,7 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 v4.0.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
+**[下载 v4.1.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.1.0/omni-learning-anything-skill-v4.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [安装渠道说明](../../docs/distribution-channels.md)
 
@@ -68,6 +68,7 @@
 
 | 版本 | 对学习的帮助 |
 | --- | --- |
+| **[v4.1.0](../../skills/omni-learning-anything/references/assessment.md)** | 用新情境或辨错题检验能否举一反三。每题先回查原文，再验算或核对答案。 |
 | **[v4.0.0](../../skills/omni-learning-anything/references/textbooks.md)** | 按中国大陆中小学教材生成分学段学习材料，支持章节、概念和公式，并标明原图页码。 |
 | **v3.0.0** | 直接选择大学课程路径，核对来源版本，预览真实多语言学习文档。 |
 | **v2.3–v2.6** | 按需轻量自测、使用个人材料、复习薄弱点，并更方便地安装与升级。 |
@@ -164,7 +165,7 @@ npx skills@latest add ShawnRen57/omni-learning-anything --skill omni-learning-an
 
 ## 轻量自测、反馈与复习
 
-想检查理解时，可要 1–3 道卡片或纯文字小题，获得基于来源的反馈与提示；想做长测验也可以主动提出。作答会在后台形成学习记录，不让记录流程打断阅读。
+想检查理解时，可要 1–3 道卡片或纯文字小题。Agent 可以换一个情境、让你找出错误，或按学习目标选用原题和概念回忆。出题前会回查所选材料和页码，并重做一遍核对答案。可以说「用 Day01 教过的知识点给我一道新情境题，看看我能不能举一反三」。作答后可查看带出处的反馈和学习记录。
 
 问“今天该复习什么”，可在已有时间预算内安排少量复习；问“这周的回答说明了什么”，可看到有依据的回顾。你能纠正判断、跳过主题，或优先学新课。复习不会额外创建自动测验或计时任务。
 

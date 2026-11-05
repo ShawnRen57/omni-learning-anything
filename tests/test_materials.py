@@ -133,7 +133,10 @@ class MaterialIntegrationTests(unittest.TestCase):
   import omni_quiz as q
   from test_quiz import definition
   value=definition()
-  for question in value['questions']:question['source_refs']=[{'source_id':'S1','section_index':0,'quote':'Evidence anchors explanations.'}]
+  locator=source['note'].split(' — ',1)[0]
+  for question in value['questions']:
+   question['source_refs']=[{'source_id':'S1','section_index':0,'quote':'Evidence anchors explanations.',
+                             'original_quote':'Evidence anchors explanations.','locator':locator}]
   q.prepare(self.root,value);attempt=q.start(self.root,'Day01','start','开始短测')['attempt_id']
   self.assertEqual(q.next_question(self.root,attempt)['status'],'question')
  def test_cli_import_select_and_retrieve(self):

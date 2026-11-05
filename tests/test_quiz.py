@@ -28,15 +28,32 @@ def lesson_course(root, delivered=True, practice=3):
 
 def definition():
     common = {'objective': '辨别证据与推断', 'response_hint': '选择一个选项，或用一两句话解释',
-              'source_refs': [{'source_id': 'S1', 'section_index': 0, 'quote': '保留中文、证据和图片'}],
+              'source_refs': [{'source_id': 'S1', 'section_index': 0, 'quote': '保留中文、证据和图片',
+                               'original_quote': '先确认原文支持所引用的主张。', 'locator': '证据核对一节'}],
               'hints': ['想想哪一项能回到原文核对。'], 'explanation': '引用是回到证据的入口，仍须核对主张。[S1]'}
-    return {'key': 'Day01', 'revision': 1, 'estimated_minutes': 3, 'questions': [
-        dict(common, id='choice1', kind='choice', prompt='哪种做法有助于核对主张？', actions=['select'],
+    return {'schema_version': 2, 'key': 'Day01', 'revision': 1, 'estimated_minutes': 3, 'questions': [
+        dict(common, id='choice1', kind='choice', prompt='小林发现报告引用了一篇文章。怎样核对报告的主张？', actions=['select'],
+             review={'mode': 'application', 'scope': '报告是虚构情境，只考原文支持关系。',
+                     'solution': '对照被引用的原文和报告主张。',
+                     'answer_check': '核对原文直接检查支持关系，文章长度无法判断。'},
              options=[{'id': 'source', 'text': '核对所引原文', 'feedback': '先看主张是否被原文支持。'},
                       {'id': 'length', 'text': '只看文章长度', 'feedback': '长度不能说明证据支持程度。'}], answer_id='source'),
-        dict(common, id='short1', kind='short', prompt='为什么有引用仍需核对？', actions=['brief_text'],
+        dict(copy.deepcopy(common), id='short1', kind='short', prompt='为什么有引用仍需核对？', actions=['brief_text'],
+             review={'mode': 'recall', 'scope': '只检查原文和主张的关系。',
+                     'solution': '引用不等于支持，必须比较两者。',
+                     'answer_check': '只要求说明支持关系，接受等价表述。'},
              expected_answer='引用可能与主张不匹配，应核对原文。', rubric=[{'id': 'support', 'description': '说明需核对主张与原文是否匹配'}])
     ]}
+
+
+def legacy_definition():
+    data = copy.deepcopy(definition())
+    del data['schema_version']
+    for question in data['questions']:
+        del question['review']
+        for ref in question['source_refs']:
+            del ref['original_quote'], ref['locator']
+    return data
 
 
 def grading(result='met'):
@@ -75,8 +92,101 @@ class QuizTests(unittest.TestCase):
         self.assertEqual(view['question']['id'], 'choice1')
         self.assertEqual({x['id'] for x in view['question']['options']}, {'source', 'length'})
         encoded = json.dumps(view, ensure_ascii=False)
-        for secret in ('answer_id', 'expected_answer', 'rubric', 'hints', 'short1', '引用是回到证据的入口'):
+        for secret in ('answer_id', 'expected_answer', 'rubric', 'hints', 'short1', '引用是回到证据的入口',
+                       'original_quote', 'answer_check', '对照被引用的原文'):
             self.assertNotIn(secret, encoded)
+
+    def test_new_quiz_rejects_missing_review_but_frozen_legacy_quiz_still_works(self):
+        import omni_learning_store as store
+        q = self.engine()
+        old = legacy_definition()
+        with self.assertRaisesRegex(ValueError, 'schema_version'):
+            q.prepare(self.root, old)
+        self.assertFalse((self.root/'learning').exists())
+        _, binding, _ = q.snapshot(self.root.resolve(), 'Day01')
+        frozen = {'definition': old, 'binding': binding}
+        store.save(self.root, ('quizzes', 'Day01.v1.json'),
+                   dict(frozen, hash=store.fingerprint(frozen), prepared_at=q.stamp()))
+        q.prepare(self.root, old)
+        attempt = q.start(self.root, 'Day01', 'legacy-start', '继续旧课的短测')['attempt_id']
+        answer = q.submit(self.root, attempt, 'choice1', 'legacy-answer', {'choice_id': 'source'})
+        self.assertEqual(answer['feedback']['verdict'], 'correct')
+
+    def test_transfer_question_requires_review_and_changes_the_prompt(self):
+        q = self.engine()
+        for field, value, message in (
+            ('review', None, 'review'),
+            ('prompt', '保留中文、证据和图片？', 'new prompt'),
+        ):
+            data = copy.deepcopy(definition())
+            data['questions'][0][field] = value
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, message):
+                q.prepare(self.root, data)
+        self.assertEqual(q.prepare(self.root, definition())['question_count'], 2)
+
+    def test_original_item_must_match_the_original_excerpt(self):
+        q = self.engine()
+        data = copy.deepcopy(definition())
+        question = data['questions'][0]
+        question['review']['mode'] = 'original'
+        with self.assertRaisesRegex(ValueError, 'original prompt'):
+            q.prepare(self.root, data)
+        question['source_refs'][0]['original_quote'] = question['prompt']
+        self.assertEqual(q.prepare(self.root, data)['question_count'], 2)
+
+    def test_material_question_cannot_substitute_external_or_unverified_evidence(self):
+        import omni_materials as materials
+
+        root = self.root/'material-course'
+        root.mkdir()
+        plan = course(root, {'platform': 'markdown', 'mode': 'local'})
+        original = '先确认原文支持所引用的主张。'
+        path = root/'reading.md'
+        source_question = '读报告时怎样核对作者的主张'
+        path.write_text(f'# 证据核对\n\n{original}\n{source_question}？\n\n# 另一节\n\n来自另一个教材章节的原文。', encoding='utf-8')
+        item = materials.import_file(root, path)
+        selection = materials.select(root, item['id'], item['version'], heading='证据核对')
+        config = c.read(root/'config.json')
+        config['materials'] = {'policy': 'supplemented', 'selections': [selection]}
+        c.save(root/'config.json', config)
+        source = materials.citation(root, selection, selection['units'][0], '原文支持', 'S1')
+        plan['sources'][0] = source
+        plan['sections'][0]['body'] += ' [S2]'
+        c.save(root/'plan.json', plan)
+        document.render(root, root/'plan.json', 'plan', ['markdown'])
+        document.review(root, 'plan', 'Inspected material plan')
+        c.approve(root)
+        lesson = dict(plan, day=1, title='第一课', reading_minutes=8, practice_minutes=3)
+        c.save(root/'data/Day01.json', lesson)
+        document.render(root, root/'data/Day01.json', 'Day01', ['markdown'])
+        document.review(root, 'Day01', 'Inspected material lesson')
+
+        q = self.engine()
+        data = copy.deepcopy(definition())
+        locator = source['note'].split(' — ', 1)[0]
+        for question in data['questions']:
+            question['source_refs'][0]['locator'] = locator
+        ref = data['questions'][0]['source_refs'][0]
+        ref['original_quote'] = '来自另一个教材章节的原文。'
+        with self.assertRaisesRegex(ValueError, 'bound original quote'):
+            q.prepare(root, data)
+        ref.update(original_quote=original, locator='另一节')
+        with self.assertRaisesRegex(ValueError, 'locator'):
+            q.prepare(root, data)
+        ref.update(source_id='S2', locator=locator)
+        with self.assertRaisesRegex(ValueError, 'selected original material'):
+            q.prepare(root, data)
+        ref['source_id'] = 'S1'
+        draft = copy.deepcopy(data)
+        draft['questions'][0]['prompt'] = source_question + '?'
+        with self.assertRaisesRegex(ValueError, 'new prompt'):
+            q.prepare(root, draft)
+        q.prepare(root, data)
+        publish(root, 'Day01')
+        c.deliver(root, 1)
+        attempt = q.start(root, 'Day01', 'material-start', '请给我一道新情境题')['attempt_id']
+        result = q.submit(root, attempt, 'choice1', 'material-answer', {'choice_id': 'source'})
+        self.assertEqual(result['feedback']['verdict'], 'correct')
 
     def test_prepare_is_immutable_and_start_requires_explicit_request(self):
         q = self.engine(); result = q.prepare(self.root, definition())

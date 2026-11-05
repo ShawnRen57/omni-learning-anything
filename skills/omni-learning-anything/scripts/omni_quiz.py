@@ -6,13 +6,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 import omni_core as c
 import omni_learning_store as store
-from omni_quiz_schema import require, text, identifier, key_revision, validate_definition, validate_feedback
+from omni_quiz_schema import REVIEWED_SCHEMA, require, text, identifier, key_revision, validate_definition, validate_feedback
 
 
 def stamp(): return datetime.now(timezone.utc).isoformat()
 
 
-def snapshot(root, key):
+def snapshot(root, key, *, original_units=None):
     key_revision(key, 1)
     state = c.read(root/'state.json'); c.check_approval(root, state); c.check_deliveries(root, state)
     manifest = c.reviewed(root, key)
@@ -23,7 +23,10 @@ def snapshot(root, key):
     if config.get('materials'):
         from omni_materials import validate_source
         for source in lesson['sources']:
-            if source.get('material_ref'):validate_source(root,source,config)
+            if source.get('material_ref'):
+                unit = validate_source(root, source, config)
+                if original_units is not None:
+                    original_units[source['id']] = unit
     require(lesson.get('day') == int(key[3:]), 'Lesson day does not match this check.')
     binding = {k: c.digest(p) for k, p in {'config': root/'config.json', 'plan': root/'plan.json',
                'manifest': root/'manifests'/f'{key}.json', 'lesson': path}.items()}
@@ -33,24 +36,31 @@ def snapshot(root, key):
 def quiz(root, key, revision):
     key_revision(key, revision)
     value = c.read(store.path(root, 'quizzes', f'{key}.v{revision}.json'))
-    lesson, binding, _ = snapshot(root, key)
+    original_units = {}
+    lesson, binding, _ = snapshot(root, key, original_units=original_units)
     require(value['binding'] == binding, 'Quiz lesson/config binding changed; preserve old records and review a new course/version.')
     require(value['definition']['key'] == key and value['definition']['revision'] == revision, 'Quiz revision mismatch.')
     require(value['hash'] == store.fingerprint({'definition': value['definition'], 'binding': binding}), 'Frozen quiz changed.')
-    validate_definition(value['definition'], lesson)
+    validate_definition(value['definition'], lesson, original_units=original_units)
     return value
 
 
 def prepare(root, definition):
     root = Path(root).resolve()
+    require(isinstance(definition, dict), 'A quiz definition must be an object.')
     with c.lock(root):
-        lesson, binding, _ = snapshot(root, definition.get('key'))
-        validate_definition(definition, lesson)
+        original_units = {}
+        lesson, binding, _ = snapshot(root, definition.get('key'), original_units=original_units)
+        validate_definition(definition, lesson, original_units=original_units)
         key = definition['key']; revision = definition['revision']
         value = {'definition': definition, 'binding': binding}
         digest = store.fingerprint(value); target = store.path(root, 'quizzes', f'{key}.v{revision}.json')
-        if target.exists(): require(c.read(target)['hash'] == digest, 'Frozen revision already exists; prepare a new revision.')
-        else: store.save(root, ('quizzes', target.name), dict(value, hash=digest, prepared_at=stamp()))
+        if target.exists():
+            require(c.read(target)['hash'] == digest, 'Frozen revision already exists; prepare a new revision.')
+        else:
+            require(definition.get('schema_version') == REVIEWED_SCHEMA,
+                    'New quiz revisions require schema_version 2 and a source and answer review for each question.')
+            store.save(root, ('quizzes', target.name), dict(value, hash=digest, prepared_at=stamp()))
         return {'key': key, 'revision': revision, 'quiz_hash': digest, 'question_count': len(definition['questions']),
                 'estimated_minutes': definition['estimated_minutes'],
                 'needs_extra_time_consent': definition['estimated_minutes'] > lesson.get('practice_minutes', 0)}

@@ -3,13 +3,13 @@ name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
 summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 4.0.0
+version: 4.1.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
 description: Build or continue a personal, source-grounded course from a learning goal, a named course from a university or AI organization, an open reference, a Chinese K–12 textbook, or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
 license: MIT
 metadata:
-  version: "4.0.0"
+  version: "4.1.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -87,7 +87,7 @@ At completion stop/pause and verify the recorded host job. `pause`/`resume` also
 
 ## Learner-started short checks
 
-Read [assessment](references/assessment.md) when preparing or conducting a check. Prepare 1–3 source-grounded questions alongside the lesson, reserve practice time, and offer an entry after verified delivery. Start only when the learner asks. Use suitable host-native choice/text cards when available, otherwise ordinary chat; never treat preselection or silence as an answer. Do not create quiz timers, reminders or later quiz conversations.
+Read [assessment](references/assessment.md) when preparing or conducting a check. Prepare 1–3 questions alongside the lesson or on the learner's request after delivery. Prefer an application in a new situation or a short error diagnosis when the lesson supports it. Use an original item or focused recall where it best tests the outcome. Bind each new question to the actual original evidence, solve it again from the stem, and verify the answer and grading before freezing it. Start only when the learner asks. Use suitable host-native choice/text cards when available, otherwise ordinary chat; never treat preselection or silence as an answer. Do not create quiz timers, reminders or later quiz conversations.
 
 Default to selections, a few sentences or a short exchange. No long writing, real code authoring, device operation, experiments or projects unless the learner explicitly requested practice-dependent training. Reading a supplied code snippet is light; writing/running one is not. Record that request for an exception; never infer it from a programming topic alone.
 

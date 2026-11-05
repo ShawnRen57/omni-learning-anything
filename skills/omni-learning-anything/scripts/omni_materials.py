@@ -197,3 +197,4 @@ def validate_source(root,source,config):
     require(unit and isinstance(ref['quote'],str) and bool(ref['quote'].strip()) and ref['quote'] in unit['text'],'Citation quote is not supported by the selected original unit.')
     require(unit['locator'] in source.get('note',''),'Delivered source notes must include the actual original locator.')
     require(source.get('url')==value.get('url'),'Material source URL must match the captured public origin (or be absent).')
+    return unit

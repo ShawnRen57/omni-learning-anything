@@ -4,6 +4,7 @@ import unicodedata
 
 LIGHT = {'select', 'brief_text', 'conversation'}
 HEAVY = {'long_writing', 'operate_device', 'write_code', 'experiment', 'project'}
+REVIEWED_SCHEMA = 2
 
 
 def require(condition, message):
@@ -28,8 +29,37 @@ def cited_text(value, allowed):
     require(set(re.findall(r'\[(S\d+)\]', value)).issubset(allowed), 'Feedback references an unknown question source.')
 
 
-def validate_definition(data, lesson):
-    require(isinstance(data, dict) and set(data) <= {'key', 'revision', 'estimated_minutes', 'questions', 'practice_request'}, 'Unknown quiz fields; do not include tools, credentials or schedules.')
+def prompt_text(value):
+    return re.sub(r'\s+', '', unicodedata.normalize('NFC', value))
+
+
+def validate_review(question, sections, allowed, original_units):
+    review = question['review']
+    fields = {'mode', 'scope', 'solution', 'answer_check'}
+    require(isinstance(review, dict) and set(review) == fields and all(text(review[x]) for x in fields),
+            'Question review needs a mode, scope check, independent solution and answer check.')
+    mode = review['mode']
+    require(mode in ('application', 'error_analysis', 'original', 'recall'), 'Unknown question review mode.')
+    for field in fields - {'mode'}:
+        cited_text(review[field], allowed)
+    prompt = prompt_text(question['prompt'])
+    originals = [prompt_text(ref['original_quote']) for ref in question['source_refs']]
+    if mode == 'original':
+        require(any(prompt in excerpt for excerpt in originals),
+                'The original prompt must occur in a checked original excerpt.')
+    if mode in ('application', 'error_analysis'):
+        stem = prompt.rstrip('。.!！?？').casefold()
+        taught = [prompt_text(section['body']) for section in sections]
+        originals.extend(prompt_text(original_units[sid]['text']) for sid in allowed if sid in original_units)
+        require(stem and not any(stem in value.casefold() for value in originals + taught),
+                'Transfer and error-analysis items need a new prompt, not a copied lesson or source question.')
+
+
+def validate_definition(data, lesson, *, original_units=None):
+    require(isinstance(data, dict) and set(data) <= {'key', 'revision', 'estimated_minutes', 'questions', 'practice_request', 'schema_version'}, 'Unknown quiz fields; do not include tools, credentials or schedules.')
+    version = data.get('schema_version', 1)
+    require(type(version) is int and version in (1, REVIEWED_SCHEMA), 'Unsupported quiz schema_version.')
+    reviewed = version == REVIEWED_SCHEMA
     key_revision(data.get('key'), data.get('revision'))
     practical = data.get('practice_request')
     require(practical is None or text(practical), 'practice_request must quote an actual explicit learner training request.')
@@ -37,8 +67,16 @@ def validate_definition(data, lesson):
     require(type(minutes) is int and 1 <= minutes <= (120 if practical else 5), 'Default checks take 1–5 minutes; longer practical checks need an explicit practice_request.')
     questions = data.get('questions')
     require(isinstance(questions, list) and 1 <= len(questions) <= 3, 'Prepare 1–3 lightweight questions per round.')
-    ids = []; source_ids = {x['id'] for x in lesson['sources']}; sections = lesson['sections']
+    ids = []
+    sources = {source['id']: source for source in lesson['sources']}
+    sections = lesson['sections']
+    original_units = original_units or {}
+    material_only = reviewed and any('material_ref' in source for source in sources.values())
     common = {'id', 'kind', 'prompt', 'objective', 'response_hint', 'source_refs', 'hints', 'actions', 'explanation'}
+    anchor_fields = {'source_id', 'section_index', 'quote'}
+    if reviewed:
+        common.add('review')
+        anchor_fields.update({'original_quote', 'locator'})
     for q in questions:
         require(isinstance(q, dict), 'Each question must be an object.')
         ids.append(identifier(q.get('id')))
@@ -54,11 +92,22 @@ def validate_definition(data, lesson):
         refs = q['source_refs']; require(isinstance(refs, list) and bool(refs), 'Questions need actual lesson source anchors.')
         allowed = set()
         for ref in refs:
-            require(isinstance(ref, dict) and set(ref) == {'source_id', 'section_index', 'quote'}, 'Source anchors need source_id, section_index and an exact lesson quote.')
+            require(isinstance(ref, dict) and set(ref) == anchor_fields,
+                    'Source anchors need source_id, section_index and an exact lesson quote, plus the original quote and locator for reviewed checks.')
             sid = ref['source_id']; index = ref['section_index']; quote = ref['quote']
-            require(isinstance(sid, str) and sid in source_ids and type(index) is int and 0 <= index < len(sections), 'Source/section is outside the selected lesson.')
+            require(isinstance(sid, str) and sid in sources and type(index) is int and 0 <= index < len(sections), 'Source/section is outside the selected lesson.')
             require(text(quote) and quote in sections[index]['body'] and f'[{sid}]' in sections[index]['body'], 'Anchor quote and citation must occur in the actual selected lesson section.')
+            if reviewed:
+                require(text(ref['original_quote']) and text(ref['locator']), 'Review needs an original excerpt and its actual locator.')
+                if material_only:
+                    unit = original_units.get(sid)
+                    require(unit, 'Questions must use the selected original material, without supplemental sources.')
+                    require(ref['original_quote'] in unit['text'],
+                            'The bound original quote must occur in the lesson\'s cited material unit.')
+                    require(ref['locator'] == unit['locator'], 'Question locator must match the selected material locator.')
             allowed.add(sid)
+        if reviewed:
+            validate_review(q, sections, allowed, original_units)
         cited_text(q['explanation'], allowed)
         if kind == 'choice':
             options = q['options']; require(isinstance(options, list) and 2 <= len(options) <= 6, 'A single-choice question needs 2–6 options.')

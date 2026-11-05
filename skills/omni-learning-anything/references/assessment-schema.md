@@ -6,19 +6,31 @@
 
 ```json
 {
-  "key": "Day01", "revision": 1, "estimated_minutes": 3,
+  "schema_version": 2, "key": "Day01", "revision": 1, "estimated_minutes": 2,
   "questions": [{
-    "id": "q1", "kind": "choice", "prompt": "Which option is supported by the lesson?",
-    "objective": "Distinguish evidence from an unsupported assertion",
-    "response_hint": "Choose one option; a short explanation is optional.",
+    "id": "q1", "kind": "choice",
+    "prompt": "A rectangular garden is 9 m long and 4 m wide. A student says it needs 13 m of fencing all the way around. Which length is correct?",
+    "objective": "Apply the rectangle perimeter rule to a new situation",
+    "response_hint": "Choose one length.",
     "actions": ["select"],
-    "source_refs": [{"source_id":"S1","section_index":0,"quote":"EXACT TEXT FROM THE ACTUAL LESSON"}],
-    "hints": ["Compare each claim with the cited passage."],
-    "explanation": "AUTHOR A SOURCE-SUPPORTED EXPLANATION [S1]",
+    "source_refs": [{
+      "source_id": "S1", "section_index": 0,
+      "quote": "A full perimeter includes two lengths and two widths.",
+      "original_quote": "The perimeter of a rectangle is the sum of its four sides.",
+      "locator": "Perimeter section"
+    }],
+    "review": {
+      "mode": "error_analysis",
+      "scope": "The garden and dimensions are supplied examples. The only rule needed is summing the four sides [S1].",
+      "solution": "The sides are 9, 4, 9 and 4 m. Their sum is 26 m.",
+      "answer_check": "13 m covers only two sides. 26 m covers all four sides and is the only correct option."
+    },
+    "hints": ["Trace the four sides before adding."],
+    "explanation": "Add both lengths and both widths to get 26 m [S1].",
     "options": [
-      {"id":"evidence","text":"FIRST DISPLAYED OPTION","feedback":"PRIVATE OPTION EXPLANATION"},
-      {"id":"assertion","text":"SECOND DISPLAYED OPTION","feedback":"PRIVATE OPTION EXPLANATION"}
-    ], "answer_id":"evidence"
+      {"id":"half","text":"13 m","feedback":"That adds one length and one width."},
+      {"id":"full","text":"26 m","feedback":"That includes all four sides."}
+    ], "answer_id":"full"
   }]
 }
 ```
@@ -27,7 +39,11 @@ Replace illustrative text with actual authored content. Use 1–3 questions per 
 
 Light actions: `select`, `brief_text`, `conversation`. Heavy actions: `long_writing`, `operate_device`, `write_code`, `experiment`, `project`. Heavy/longer checks require the top-level nonempty `practice_request` quoting the learner's actual explicit practical-training request. This is a recorded host attestation, not automatic permission verification. Accurate semantic effort classification is required.
 
-Each source anchor must name an existing lesson source, a zero-based section index, and a quote actually in that section alongside its citation. This anchors to course teaching text, not a claim that a web passage has been freshly fetched. The host must check that the source supports the question/answer. The frozen definition binds config, plan, reviewed manifest and lesson input hashes. `prepare` may precede publication; `start` requires verified lesson delivery. Repeated identical preparation is idempotent; changed content needs a higher revision. Source/config changes block assessment actions, preserving old records for export/recovery.
+Each source anchor names a reviewed lesson source, a zero-based section index and a verbatim lesson quote from that section alongside its citation. Add a short `original_quote` from the inspected original and its `locator` (section, page, chapter, slide or timestamp). When the lesson cites selected materials, each question anchor must use one of those sources, with the excerpt inside its exact cited unit and the locator returned by the material reader. The excerpt may expand on the lesson's citation within that unit, provided it supports the same taught outcome. With a web/course source, the host checks the original excerpt and location.
+
+`review.mode` is `application`, `error_analysis`, `original` or `recall`. For `original`, quote enough original text to contain the exact prompt. For application and error analysis, use a genuinely new stem. `scope`, `solution` and `answer_check` summarize the checks performed before freezing. They are private. The tool validates bindings and the structure of the review. Correctness, fit, ambiguity, answer cues and the reasoning in the review require host judgment.
+
+The frozen definition binds config, plan, reviewed manifest and lesson input hashes. `prepare` may precede publication. `start` requires verified lesson delivery. Identical preparation is idempotent and changes require a higher revision. Previously frozen legacy definitions still open and resume. Newly prepared revisions require `schema_version: 2`. Source/config changes block assessment actions, preserving old records for export/recovery.
 
 ## Commands
 

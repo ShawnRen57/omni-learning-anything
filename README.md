@@ -27,7 +27,7 @@
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download v4.0.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.0.0/omni-learning-anything-skill-v4.0.0.zip)**
+**[Download v4.1.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.1.0/omni-learning-anything-skill-v4.1.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installation channels](docs/distribution-channels.md)
 
@@ -69,6 +69,7 @@ Try **“I want to study the History of Chinese Architecture at Tsinghua.”** o
 
 | Version | What it brings to your learning |
 | --- | --- |
+| **[v4.1.0](skills/omni-learning-anything/references/assessment.md)** | Check whether you can apply what you learned to a new example, with each question reviewed against the original source. |
 | **[v4.0.0](skills/omni-learning-anything/references/textbooks.md)** | Study mainland Chinese school textbooks with age-specific lessons, exact page references and original illustrations. |
 | **v3.0.0** | Choose a university pathway, see the source edition, and preview real multilingual learning documents. |
 | **v2.3–v2.6** | Ask for light checks, study your own sources, review what needs attention and install or update more easily. |
@@ -165,7 +166,7 @@ Review and approve the plan, then ask for the first lesson. To resume, say “Co
 
 ## Checks, feedback and review
 
-When you want a check, request 1–3 short questions as cards or plain text. Get source-grounded feedback and hints; a longer quiz is available if you ask. Your responses inform a learning record in the background so the lesson stays easy to follow.
+When you want a check, request 1–3 short questions as cards or plain text. Ask for a new scenario, a mistake to diagnose, or a quick recall question. The agent chooses a question that fits the lesson, checks its original source and works through the answer before showing the prompt. Try “Test me on Day01 with a new example that uses only what the lesson taught.” Your responses inform the learning record and feedback.
 
 Ask “What should I review today?” for a small review within your existing time budget, or “What have my answers shown this week?” for an evidence-based recap. Correct a judgment, skip a topic, or choose a new lesson. Review creates no extra automatic quiz or timer.
 

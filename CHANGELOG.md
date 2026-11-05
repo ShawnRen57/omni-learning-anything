@@ -1,7 +1,9 @@
 # Changelog
 
-## Unreleased
+## v4.1.0 — 2026-11-05
 
+- Generate short checks that can test a concept in a new situation or ask the learner to diagnose a mistake. Use original questions and recall when they fit the learning goal.
+- Verify each new question against the reviewed lesson and the actual original source, then re-solve and check its answer before freezing it. Selected-material checks stay within the lesson's cited pages or units. Existing frozen quizzes and answer histories remain readable.
 - Preserve the verified original PDF and figure when creating a revised textbook course.
 - Show five modern Chinese textbook lessons and the WorkBuddy short-check, feedback and revision demo in the README.
 
