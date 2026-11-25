@@ -1,0 +1,26 @@
+key,en,zh,ja,ko,es,fr,de,pt,ru,ar
+provider_header,"University, publisher or creator",学校、机构或作者,大学・機関・著者,대학·기관·저자,"Universidad, entidad o autoría","Université, organisme ou auteur","Hochschule, Organisation oder Autorenteam","Universidade, instituição ou autoria","Университет, организация или авторы",الجامعة أو المؤسسة أو المؤلفون
+links_header,Courses and resources,课程与资源,講座と教材,강좌와 학습 자료,Cursos y recursos,Cours et ressources,Kurse und Lernmaterialien,Cursos e materiais,Курсы и материалы,الدورات والمواد التعليمية
+course,Courses,课程,講座,강좌,Cursos,Cours,Kurse,Cursos,Курсы,دورات
+reference,Open references,开放参考资料,公開参考資料,공개 참고 자료,Referencias abiertas,Références ouvertes,Offene Nachschlagewerke,Referências abertas,Открытые справочные материалы,مراجع مفتوحة
+textbook,Textbooks,教材,教科書,교재,Libros de texto,Manuels,Lehrbücher,Livros didáticos,Учебники,كتب دراسية
+academic_book,Academic books,学术书籍,学術書,학술서,Libros académicos,Ouvrages universitaires,Fachbücher,Livros acadêmicos,Научные книги,كتب أكاديمية
+article,Articles,深度文章,解説記事,심층 해설,Artículos,Articles,Fachartikel,Artigos,Статьи,مقالات
+lecture_series,Lecture series,系列讲座,連続講演,연속 강연,Ciclos de conferencias,Cycles de conférences,Vortragsreihen,Ciclos de palestras,Циклы лекций,سلاسل محاضرات
+talk,Talks,演讲,講演,강연,Charlas,Conférences,Vorträge,Palestras,Выступления,محاضرات منفردة
+清华大学,Tsinghua University,清华大学,清華大学,칭화대학교,Universidad Tsinghua,Université Tsinghua,Tsinghua-Universität,Universidade Tsinghua,Университет Цинхуа,جامعة تسينغهوا
+北京大学,Peking University,北京大学,北京大学,베이징대학교,Universidad de Pekín,Université de Pékin,Universität Peking,Universidade de Pequim,Пекинский университет,جامعة بكين
+复旦大学,Fudan University,复旦大学,復旦大学,푸단대학교,Universidad Fudan,Université Fudan,Fudan-Universität,Universidade Fudan,Фуданьский университет,جامعة فودان
+上海交通大学,Shanghai Jiao Tong University,上海交通大学,上海交通大学,상하이교통대학교,Universidad Jiao Tong de Shanghái,Université Jiao Tong de Shanghai,Jiaotong-Universität Shanghai,Universidade Jiao Tong de Xangai,Шанхайский университет Цзяотун,جامعة شنغهاي جياو تونغ
+浙江大学,Zhejiang University,浙江大学,浙江大学,저장대학교,Universidad de Zhejiang,Université du Zhejiang,Zhejiang-Universität,Universidade de Zhejiang,Чжэцзянский университет,جامعة تشجيانغ
+北京师范大学,Beijing Normal University,北京师范大学,北京師範大学,베이징사범대학교,Universidad Normal de Pekín,Université normale de Pékin,Pädagogische Universität Peking,Universidade Normal de Pequim,Пекинский педагогический университет,جامعة بكين للمعلمين
+Harvard University,Harvard University,哈佛大学,ハーバード大学,하버드대학교,Universidad de Harvard,Université Harvard,Harvard University,Universidade Harvard,Гарвардский университет,جامعة هارفارد
+Yale University,Yale University,耶鲁大学,イェール大学,예일대학교,Universidad de Yale,Université Yale,Yale University,Universidade Yale,Йельский университет,جامعة ييل
+Massachusetts Institute of Technology,MIT,麻省理工学院,マサチューセッツ工科大学,매사추세츠 공과대학교,MIT,MIT,MIT,MIT,Массачусетский технологический институт,معهد ماساتشوستس للتكنولوجيا
+Stanford University,Stanford University,斯坦福大学,スタンフォード大学,스탠퍼드대학교,Universidad de Stanford,Université Stanford,Stanford University,Universidade Stanford,Стэнфордский университет,جامعة ستانفورد
+"University of California, Berkeley",UC Berkeley,加州大学伯克利分校,カリフォルニア大学バークレー校,캘리포니아 대학교 버클리,Universidad de California en Berkeley,Université de Californie à Berkeley,"University of California, Berkeley",Universidade da Califórnia em Berkeley,Калифорнийский университет в Беркли,جامعة كاليفورنيا في بركلي
+University of Helsinki and MinnaLearn,University of Helsinki & MinnaLearn,赫尔辛基大学与 MinnaLearn,ヘルシンキ大学・MinnaLearn,헬싱키대학교 · MinnaLearn,Universidad de Helsinki y MinnaLearn,Université d’Helsinki et MinnaLearn,Universität Helsinki und MinnaLearn,Universidade de Helsinque e MinnaLearn,Хельсинкский университет и MinnaLearn,جامعة هلسنكي وMinnaLearn
+OpenStax · Rice University,Rice University · OpenStax,莱斯大学 · OpenStax,ライス大学・OpenStax,라이스대학교 · OpenStax,Universidad Rice · OpenStax,Université Rice · OpenStax,Rice University · OpenStax,Universidade Rice · OpenStax,Университет Райса · OpenStax,جامعة رايس · OpenStax
+California Institute of Technology,Caltech,加州理工学院,カリフォルニア工科大学,캘리포니아 공과대학교,Caltech,Caltech,Caltech,Caltech,Калифорнийский технологический институт,معهد كاليفورنيا للتكنولوجيا
+The Royal Institution,The Royal Institution,英国皇家研究院,英国王立研究所,영국 왕립연구소,Royal Institution,Royal Institution,Royal Institution,Royal Institution,Королевский институт Великобритании,المؤسسة الملكية البريطانية
+《动手学深度学习》作者团队,Dive into Deep Learning authors,《动手学深度学习》作者团队,『Dive into Deep Learning』著者チーム,《Dive into Deep Learning》 저자진,Autores de Dive into Deep Learning,Auteurs de Dive into Deep Learning,Autorenteam von Dive into Deep Learning,Autores de Dive into Deep Learning,Авторы Dive into Deep Learning,مؤلفو Dive into Deep Learning

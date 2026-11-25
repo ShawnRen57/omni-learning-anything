@@ -36,19 +36,20 @@
 
 **대학 명강의를 고르거나 내 책과 논문으로 시작하세요. 내 속도에 맞춰 배우고, 짧은 확인 문제와 피드백, 복습으로 이해를 다지며 로컬 파일이나 클라우드 문서에 저장하세요.**
 
-“배우고 싶다”를 꾸준히 따라갈 수 있는 계획으로 바꿉니다. 출처가 확인된 67개 학습 경로, 개인 목표, 보유 자료 중에서 시작하고 수업 전에 계획을 확인합니다.
+공개 강의, 책, 글, 강연을 고르거나 가지고 있는 자료로 시작하세요. 목표와 쓸 수 있는 시간을 알려 주고 수업 전에 일정을 확인하세요.
 
 **“하버드 긍정심리학을 배우고 싶어요”** 한 문장으로 시작할 수 있습니다. Agent는 원 강좌를 찾고 이미 전달한 정보를 활용해 계획에 필요한 내용만 추가로 확인합니다.
 
 | 기능 | 설명 |
 | --- | --- |
 | 맞춤 학습 과정 | 관심사나 목표를 수준과 학습 시간에 맞춘 과정으로 바꿉니다. |
-| 내장 강좌 | 강좌 65개와 공개 참고 자료 2개에서 선택하고 원본 판본, 순서, 분량을 확인합니다. |
+| 학습 자료 목록 | 기존 학습 과정 67개와 추가 자료 68개를 담았습니다. 강좌, 책, 글, 강연의 원문과 이용 조건을 확인할 수 있습니다. |
+| 모국어로 배우는 외국어 | 상황에 맞는 표현을 배운 뒤 뜻을 보고 외국어를 떠올리거나 그 반대로 연습합니다. 누적 복습지와 정답지는 따로 받습니다. |
 | 중국 본토 교과서 | 초등학교부터 고등학교까지 1,949개 항목을 검색합니다. 권·단원·개념·공식을 고르고 학년에 맞는 설명과 원본 삽화를 봅니다. |
 | 내 자료로 학습 | PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT, VTT의 페이지, 장 또는 시간대를 선택합니다. |
 | 출처와 더 읽기 | 핵심 설명을 원문 위치나 확인한 웹 출처로 추적할 수 있습니다. |
 | 계획 승인 | 일별 주제와 예상 시간을 검토한 뒤 수업을 시작합니다. |
-| 그림이 있는 수업 | 설명, 예시, 짧은 연습과 자가 점검을 담습니다. |
+| 그림 읽기 | 눈금, 화살표, 같은 행에 놓인 예문을 단서로 질문에 답하고 출처를 확인합니다. |
 | 10개 학습 언어 | 원본 언어와 별도로 선택합니다. 아랍어는 오른쪽에서 왼쪽으로 배치합니다. |
 | 로컬 형식 | PDF, 오프라인 HTML, DOCX, Markdown. |
 | 저장 위치 | 로컬 Obsidian이나 연결을 승인한 Notion, Feishu, DingTalk, Tencent Docs에 저장합니다. |
@@ -61,50 +62,75 @@
 | 설치와 업데이트 | 호환 에이전트에서 설치와 인식을 확인합니다. 과정은 설치 폴더 밖에 보관합니다. |
 
 <a id="examples"></a>
-<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="현대 중국 교과서 예시 5개를 포함한 학습 자료 20페이지" width="100%"></a>
 
-[중국어 교과서 수업 예시 5개](../../examples/textbooks/README.md)
+## 학습 자료 미리보기
+
+| 크기가 같은 분수 | 수력 발전 | 영어 의문문 |
+| --- | --- | --- |
+| <a href="../assets/figures/equivalent-fractions-ko.png"><img src="../assets/figures/equivalent-fractions-ko.png" alt="같은 눈금에 맞춘 1/2, 2/4, 3/4 막대" width="270"></a> | <a href="../assets/figures/hydropower-ko.png"><img src="../assets/figures/hydropower-ko.png" width="270" alt="물의 흐름에서 수차를 거쳐 발전기로 이어지는 과정"></a> | <a href="../assets/figures/present-simple-ko.png"><img src="../assets/figures/present-simple-ko.png" width="270" alt="주어가 they 또는 she인 평서문과 의문문"></a> |
+| 어떤 두 막대의 색칠한 부분이 같은 지점에서 끝나나요? | 수차에서 발전기로 전달되는 것은 무엇인가요? | She sings를 의문문으로 바꾸면 -s는 어떻게 되나요? |
+| [OpenStax](https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions) | [미국 에너지부](https://www.energy.gov/cmei/water/how-hydropower-works) | [British Council](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/present-simple) |
+
+| 학습 주제 | 열어 볼 자료 |
+| --- | --- |
+| 외국어 | [중국어로 배우는 일본어 3일 계획](../../examples/languages/zh-ja/plan.md) · [3일 차 독립 대화 과제](../../examples/languages/zh-ja/day03-task.md) · [영어로 배우는 독일어 첫 수업](../../examples/languages/en-de/day01.md) · [연습지](../../examples/languages/en-de/worksheet.md) |
+| 학교·대학 | [중국어 교과서 수업 5편](../../examples/textbooks/README.md) · [여러 언어로 된 대학 수업](../../examples/university/README.md) · [하버드 CS50x 첫 수업(영어 PDF)](../../examples/university/cs50x-en/Day01.pdf) · [모든 예시](../../examples/README.md) |
+
+<a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="학습 자료 25개를 모은 그림. 마지막 줄에는 외국어 학습 예시 5개가 있습니다." width="100%"></a>
 
 <a id="versions"></a>
 ## 버전 안내
 
 | 버전 | 학습에 주는 도움 |
 | --- | --- |
+| **v5.0.0** | 모국어로 배우는 외국어 과정, 읽기 질문과 출처를 갖춘 그림, 135개의 학습 자료가 추가되었습니다. |
+| **v4.0–4.2** | 교과서의 특정 연도 판본이나 최신판을 찾아 원본 그림과 함께 공부하고, 새 상황에 개념을 적용하는 문제를 풉니다. |
 | **v3.0.0** | 대학 강좌 경로를 선택하고 자료 버전과 실제 다국어 문서를 확인합니다. |
 | **v2.3–v2.6** | 짧은 확인 문제, 개인 자료 학습, 필요한 복습, 편리한 설치와 업데이트. |
 | **v2** | 10개 언어, 로컬 형식 4종과 연결된 문서 서비스 저장. |
 | **v1** | 개인 계획을 승인하고 삽화, 연습, 추가 읽기가 담긴 PDF로 학습. |
 
 <a id="university-courses"></a>
-## 내장 강좌 선택
+## 내장 강좌와 학습 자료 찾기
 
-**“내장 강좌를 보여 줘”**라고 요청하세요. 강좌, 학습 언어, 가용 시간을 정하면 원자료와 연결된 계획을 제안합니다. 공개 강좌 자료를 바탕으로 만든 독립 학습 경로이며 전체 강의 내용은 포함하지 않습니다. 대학의 공식 인증이나 수료증을 뜻하지 않습니다.
+제목, 주제 또는 제공 기관으로 찾을 수 있습니다. **“언어에 관한 TED 강연을 찾아 줘”** 또는 **“예일대학교 Modern Poetry 강좌로 학습 계획을 짜 줘”**라고 요청해 보세요. 공부할 장이나 강연, 학습 언어와 시간을 정하고 시작 전에 계획을 확인하세요.
 
-[자료 버전 및 접근 조건](../../docs/course-catalog-sources.md)
+제목을 누르면 원문이 열립니다. 출판사가 서지 정보만 공개한 책은 열람 권한이 있는 장으로 공부할 수 있습니다. [강좌 판본과 강사진](../course-catalog-sources.md) · [자료 이용 안내](../curated-learning-resources.md)
 
-| 대학·기관 | 강좌 및 공개 자료 |
+<!-- catalog:start -->
+
+| 대학·기관·저자 | 강좌와 학습 자료 (135) |
 | --- | --- |
-| Tsinghua University | [中国建筑史——史前至两宋辽金](https://higher.smartedu.cn/course/687eb7bf16c43a09c0e58c23) · [文物精品与文化中国](https://higher.smartedu.cn/course/6a5e9b52b44e493c768f8c9c) · [中国建筑史（下）（自主模式）](https://v1-www.xuetangx.com/courses/course-v1%3ATsinghuaX%2B80000901X_2%2Bsp/about) · [艺术的启示](https://higher.smartedu.cn/course/6786ec4c225d72705e5dc29e) · [校园风物与大学文化——以清华大学为例](https://higher.smartedu.cn/course/6a5e9b60b44e493c768f8cba) · [人工智能通识教育红皮书](https://aige.cs.tsinghua.edu.cn/redbook/) *(공개 자료)* |
-| Peking University | [经典昆曲欣赏](https://www.icourse163.org/course/PKU-1470426173?tid=1474265476) · [人工智能与信息社会](https://www.icourse163.org/course/PKU-1003471009?tid=1476756462) · [西方音乐欣赏](https://www.icourse163.org/course/PKU-1207132813?tid=1207476216) · [人工智能原理](https://www.icourse163.org/course/PKU-1002188003?tid=1472399493) |
-| Fudan University | [人工智能，语言与伦理](https://www.icourse163.org/course/FUDAN-1205951803?tid=1475942449) · [比较文化研究](https://umoocs.unipus.cn/course/7944/tasks) · [深度学习及其应用](https://higher.smartedu.cn/course/622ac9f0bee70ef79f419877) · [中华优秀传统文化](https://higher.smartedu.cn/course/63ffd464af1f1b5d3ecfd579) · [政治学原理](https://www.icourse163.org/course/FUDAN-1461787179?tid=1462604462) |
-| Shanghai Jiao Tong University | [唐诗宋词人文解读](https://higher.smartedu.cn/course/69b0942995df98bb27ba19b4) · [数学的天空](https://higher.smartedu.cn/course/690530295345b68214577952) · [机器的征途：空天科技](https://higher.smartedu.cn/course/62354d7a9906eace0490b2aa) · [经济法](https://higher.smartedu.cn/course/67c2473d225d72705e7bb8c8) · [关爱生命——急救与自救技能](https://higher.smartedu.cn/course/69b0942695df98bb27ba19a1) |
-| Zhejiang University | [唐诗经典](https://higher.smartedu.cn/course/6982720195df98bb27cadb06) |
-| Beijing Normal University | [书法欣赏](https://www.icourse163.org/course/BNU-1003240002?tid=1488313456) |
-| Harvard University | [Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) · [CS50’s Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) · [Justice](https://sandel.scholars.harvard.edu/justice) · [Rhetoric: The Art of Persuasive Writing and Public Speaking](https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking) · [CS50’s Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/) · [Masterpieces of World Literature](https://www.edx.org/learn/literature/harvard-university-masterpieces-of-world-literature) · [Pyramids of Giza: Ancient Egyptian Art and Archaeology](https://giza.fas.harvard.edu/videos/) |
-| Yale University | [Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) · [Financial Markets](https://oyc.yale.edu/economics/econ-252) · [Game Theory](https://oyc.yale.edu/economics/econ-159) · [Death](https://oyc.yale.edu/death/phil-176) · [Listening to Music](https://oyc.yale.edu/music/musi-112/lecture-1) · [Roman Architecture](https://oyc.yale.edu/history-of-art/hsar-252) · [Introduction to Theory of Literature](https://oyc.yale.edu/english/engl-300) · [The Atmosphere, the Ocean, and Environmental Change](https://oyc.yale.edu/geology-and-geophysics/gg-140) · [European Civilization, 1648-1945](https://oyc.yale.edu/history/hist-202) · [Philosophy and the Science of Human Nature](https://oyc.yale.edu/philosophy/phil-181) · [Principles of Evolution, Ecology and Behavior](https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122) |
-| MIT | [Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/) · [Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/calendar/) · [Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) · [Introduction to Art History](https://ocw.mit.edu/courses/4-601-introduction-to-art-history-fall-2018/pages/calendar/) · [Principles of Microeconomics](https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/pages/calendar/) · [Art Since 1940](https://ocw.mit.edu/courses/4-651-art-since-1940-fall-2010/pages/lecture-notes/) · [Philosophy of Film](https://ocw.mit.edu/courses/24-213-philosophy-of-film-fall-2004/pages/calendar/) · [Introduction to Deep Learning](https://introtodeeplearning.com/2026/index.html) · [Introduction to Sustainable Energy](https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/calendar/) |
-| Stanford University | [Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) · [Deep Learning for Computer Vision](https://cs231n.stanford.edu/2026/schedule.html) |
-| UC Berkeley | [Introduction to Artificial Intelligence](https://inst.eecs.berkeley.edu/~cs188/sp26/) |
-| University of Helsinki & MinnaLearn | [Elements of AI: Introduction to AI](https://opin.fi/en/study-options/HY/elements-of-ai-introduction-to-ai/89eb0e79-873e-4d2a-aec5-d694d7762118) · [Elements of AI: Building AI](https://buildingai.elementsofai.com/) |
-| OpenAI Academy | [AI Foundations](https://academy.openai.com/public/courses/ai-foundations-dnq5w) · [Applied AI Foundations](https://academy.openai.com/public/courses/applied-ai-foundations-szsmv) · [Agents and Workflows](https://academy.openai.com/public/courses/agents-and-workflows-y0qoc) · [AI for College Students](https://academy.openai.com/public/courses/ai-for-college-students-gxgmr) |
-| Anthropic · Claude Academy | [AI Fluency: Framework and foundations](https://academy.claude.com/courses/ai-fluency-framework-foundations) · [AI Fluency for students](https://academy.claude.com/courses/ai-fluency-for-students) · [AI Fluency for educators](https://academy.claude.com/courses/ai-fluency-for-educators) |
-| DeepLearning.AI | [AI For Everyone](https://www.coursera.org/learn/ai-for-everyone/) · [Generative AI for Everyone](https://www.coursera.org/learn/generative-ai-for-everyone/) |
-| Google | [Google AI Essentials](https://grow.google/ai-essentials/) |
-| Microsoft | [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/README.md#-lessons) |
-| Hugging Face | [AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) |
-| Smarthistory | [Reframing Art History](https://smarthistory.org/reframing-art-history/) *(공개 자료)* |
+| 칭화대학교 | **강좌** [中国建筑史——史前至两宋辽金](https://higher.smartedu.cn/course/687eb7bf16c43a09c0e58c23) · [文物精品与文化中国](https://higher.smartedu.cn/course/6a5e9b52b44e493c768f8c9c) · [中国建筑史（下）（自主模式）](https://v1-www.xuetangx.com/courses/course-v1%3ATsinghuaX%2B80000901X_2%2Bsp/about) · [艺术的启示](https://higher.smartedu.cn/course/6786ec4c225d72705e5dc29e) · [校园风物与大学文化——以清华大学为例](https://higher.smartedu.cn/course/6a5e9b60b44e493c768f8cba) · [数据结构(上)](https://www.xuetangx.com/course/THU08091000384/) · [大学历史与文化](https://next.xuetangx.com/course/THU04011000284/29592783)<br>**공개 참고 자료** [人工智能通识教育红皮书](https://aige.cs.tsinghua.edu.cn/redbook/) |
+| 베이징대학교 | **강좌** [经典昆曲欣赏](https://www.icourse163.org/course/PKU-1470426173?tid=1474265476) · [人工智能与信息社会](https://www.icourse163.org/course/PKU-1003471009?tid=1476756462) · [西方音乐欣赏](https://www.icourse163.org/course/PKU-1207132813?tid=1207476216) · [人工智能原理](https://www.icourse163.org/course/PKU-1002188003?tid=1472399493) · [语言学概论](https://www.icourse163.org/course/PKU-1205727813) · [古代汉语](https://www.icourse163.org/course/PKU-1205726807) · [生理学（上）](https://www.icourse163.org/course/PKU-1205915814) |
+| 푸단대학교 | **강좌** [人工智能，语言与伦理](https://www.icourse163.org/course/FUDAN-1205951803?tid=1475942449) · [比较文化研究](https://umoocs.unipus.cn/course/7944/tasks) · [深度学习及其应用](https://higher.smartedu.cn/course/622ac9f0bee70ef79f419877) · [中华优秀传统文化](https://higher.smartedu.cn/course/63ffd464af1f1b5d3ecfd579) · [政治学原理](https://www.icourse163.org/course/FUDAN-1461787179?tid=1462604462) · [古典诗词鉴赏](https://www.icourse163.org/course/FUDAN-1205950804) |
+| 상하이교통대학교 | **강좌** [唐诗宋词人文解读](https://higher.smartedu.cn/course/69b0942995df98bb27ba19b4) · [数学的天空](https://higher.smartedu.cn/course/690530295345b68214577952) · [机器的征途：空天科技](https://higher.smartedu.cn/course/62354d7a9906eace0490b2aa) · [经济法](https://higher.smartedu.cn/course/67c2473d225d72705e7bb8c8) · [关爱生命——急救与自救技能](https://higher.smartedu.cn/course/69b0942695df98bb27ba19a1) · [建筑物理](https://www.icourse163.org/course/SJTU-1472028164) · [造型基础—设计素描](https://www.icourse163.org/course/SJTU-1206432804) · [设计创新的艺术](https://www.icourse163.org/course/SJTU-1207170808) |
+| 저장대학교 | **강좌** [唐诗经典](https://higher.smartedu.cn/course/6982720195df98bb27cadb06) |
+| 베이징사범대학교 | **강좌** [书法欣赏](https://www.icourse163.org/course/BNU-1003240002?tid=1488313456) |
+| 하버드대학교 | **강좌** [Positive Psychology](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf) · [CS50’s Introduction to Computer Science](https://cs50.harvard.edu/x/2026/syllabus/) · [Justice](https://sandel.scholars.harvard.edu/justice) · [Rhetoric: The Art of Persuasive Writing and Public Speaking](https://pll.harvard.edu/course/rhetoric-art-persuasive-writing-and-public-speaking) · [CS50’s Introduction to Artificial Intelligence with Python](https://cs50.harvard.edu/ai/) · [Masterpieces of World Literature](https://www.edx.org/learn/literature/harvard-university-masterpieces-of-world-literature) · [Pyramids of Giza: Ancient Egyptian Art and Archaeology](https://giza.fas.harvard.edu/videos/) |
+| 예일대학교 | **강좌** [Introduction to Psychology](https://oyc.yale.edu/introduction-psychology/psyc-110) · [Financial Markets](https://oyc.yale.edu/economics/econ-252) · [Game Theory](https://oyc.yale.edu/economics/econ-159) · [Death](https://oyc.yale.edu/death/phil-176) · [Listening to Music](https://oyc.yale.edu/music/musi-112/lecture-1) · [Roman Architecture](https://oyc.yale.edu/history-of-art/hsar-252) · [Introduction to Theory of Literature](https://oyc.yale.edu/english/engl-300) · [The Atmosphere, the Ocean, and Environmental Change](https://oyc.yale.edu/geology-and-geophysics/gg-140) · [European Civilization, 1648-1945](https://oyc.yale.edu/history/hist-202) · [Philosophy and the Science of Human Nature](https://oyc.yale.edu/philosophy/phil-181) · [Principles of Evolution, Ecology and Behavior](https://oyc.yale.edu/ecology-and-evolutionary-biology/eeb-122) · [Introduction to Ancient Greek History](https://oyc.yale.edu/classics/clcv-205) · [The American Revolution](https://oyc.yale.edu/history/hist-116) · [Modern Poetry](https://oyc.yale.edu/english/engl-310) · [Capitalism: Success, Crisis, and Reform](https://oyc.yale.edu/political-science/plsc-270) · [Frontiers and Controversies in Astrophysics](https://oyc.yale.edu/astronomy/astr-160) · [Fundamentals of Physics I](https://oyc.yale.edu/physics/phys-200) · [Frontiers of Biomedical Engineering](https://oyc.yale.edu/biomedical-engineering/beng-100) · [The Psychology, Biology and Politics of Food](https://oyc.yale.edu/psychology/psyc-123) · [Milton](https://oyc.yale.edu/english/engl-220) |
+| 매사추세츠 공과대학교 | **강좌** [Introduction to Computer Science and Programming in Python](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/) · [Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/pages/calendar/) · [Classical Mechanics](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) · [Introduction to Art History](https://ocw.mit.edu/courses/4-601-introduction-to-art-history-fall-2018/pages/calendar/) · [Principles of Microeconomics](https://ocw.mit.edu/courses/14-01-principles-of-microeconomics-fall-2023/pages/calendar/) · [Art Since 1940](https://ocw.mit.edu/courses/4-651-art-since-1940-fall-2010/pages/lecture-notes/) · [Philosophy of Film](https://ocw.mit.edu/courses/24-213-philosophy-of-film-fall-2004/pages/calendar/) · [Introduction to Deep Learning](https://introtodeeplearning.com/2026/index.html) · [Introduction to Sustainable Energy](https://ocw.mit.edu/courses/22-081j-introduction-to-sustainable-energy-fall-2010/pages/calendar/)<br>**학술서 · MIT Press** [Deep Learning](https://www.deeplearningbook.org/) · [Probabilistic Machine Learning: An Introduction](https://probml.github.io/pml-book/book1.html) · [Reinforcement Learning: An Introduction](https://mitpress.mit.edu/9780262039246/reinforcement-learning/) |
+| 스탠퍼드대학교 | **강좌** [Machine Learning](https://cs229.stanford.edu/syllabus-autumn2018.html) · [Deep Learning for Computer Vision](https://cs231n.stanford.edu/2026/schedule.html)<br>**학술서** [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) · [Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/) · [Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares](https://web.stanford.edu/~boyd/vmls/)<br>**심층 해설 · Stanford Encyclopedia of Philosophy** [Aesthetic Judgment](https://plato.stanford.edu/entries/aesthetic-judgment/) · [Scientific Method](https://plato.stanford.edu/entries/scientific-method/) · [Personal Identity](https://plato.stanford.edu/entries/identity-personal/) · [Justice](https://plato.stanford.edu/entries/justice/) · [Chinese Ethics](https://plato.stanford.edu/entries/ethics-chinese/) · [The Philosophy of Music](https://plato.stanford.edu/entries/music/) |
+| 헬싱키대학교 · MinnaLearn | **강좌** [Elements of AI: Introduction to AI](https://opin.fi/en/study-options/HY/elements-of-ai-introduction-to-ai/89eb0e79-873e-4d2a-aec5-d694d7762118) · [Elements of AI: Building AI](https://buildingai.elementsofai.com/) |
+| OpenAI Academy | **강좌** [AI Foundations](https://academy.openai.com/public/courses/ai-foundations-dnq5w) · [Applied AI Foundations](https://academy.openai.com/public/courses/applied-ai-foundations-szsmv) · [Agents and Workflows](https://academy.openai.com/public/courses/agents-and-workflows-y0qoc) · [AI for College Students](https://academy.openai.com/public/courses/ai-for-college-students-gxgmr) |
+| Anthropic · Claude Academy | **강좌** [AI Fluency: Framework and foundations](https://academy.claude.com/courses/ai-fluency-framework-foundations) · [AI Fluency for students](https://academy.claude.com/courses/ai-fluency-for-students) · [AI Fluency for educators](https://academy.claude.com/courses/ai-fluency-for-educators) |
+| Hugging Face | **강좌** [AI Agents Course](https://huggingface.co/learn/agents-course/unit0/introduction) |
+| 캘리포니아 대학교 버클리 | **강좌** [Introduction to Artificial Intelligence](https://inst.eecs.berkeley.edu/~cs188/sp26/) |
+| DeepLearning.AI | **강좌** [AI For Everyone](https://www.coursera.org/learn/ai-for-everyone/) · [Generative AI for Everyone](https://www.coursera.org/learn/generative-ai-for-everyone/) |
+| Microsoft | **강좌** [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners/blob/79a4334e158147d4f36c27d805e0cb163c1e445b/README.md#-lessons) |
+| Google | **강좌** [Google AI Essentials](https://grow.google/ai-essentials/) |
+| Smarthistory | **공개 참고 자료** [Reframing Art History](https://smarthistory.org/reframing-art-history/) |
+| 라이스대학교 · OpenStax | **교재** [Astronomy 2e](https://openstax.org/books/astronomy-2e/pages/preface) · [Biology 2e](https://openstax.org/books/biology-2e/pages/preface) · [Psychology 2e](https://openstax.org/books/psychology-2e/pages/preface) · [Introduction to Sociology 3e](https://openstax.org/books/introduction-sociology-3e/pages/preface) · [Principles of Economics 3e](https://openstax.org/books/principles-economics-3e/pages/preface) · [Chemistry 2e](https://openstax.org/books/chemistry-2e/pages/preface) · [University Physics Volume 1](https://openstax.org/books/university-physics-volume-1/pages/preface) · [Calculus Volume 1](https://openstax.org/books/calculus-volume-1/pages/preface) · [World History Volume 1, to 1500](https://openstax.org/books/world-history-volume-1/pages/preface) · [Introduction to Philosophy](https://openstax.org/books/introduction-philosophy/pages/preface) · [Introductory Statistics 2e](https://openstax.org/books/introductory-statistics-2e/pages/preface) · [Entrepreneurship](https://openstax.org/books/entrepreneurship/pages/preface) · [Business Ethics](https://openstax.org/books/business-ethics/pages/preface) |
+| 《Dive into Deep Learning》 저자진 | **학술서** [动手学深度学习](https://zh.d2l.ai/) |
+| O’Reilly | **학술서** [R for Data Science (2e)](https://r4ds.hadley.nz/) |
+| Distill | **심층 해설** [Attention and Augmented Recurrent Neural Networks](https://distill.pub/2016/augmented-rnns/) · [How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/) · [Feature Visualization](https://distill.pub/2017/feature-visualization/) · [Why Momentum Really Works](https://distill.pub/2017/momentum/) · [Deconvolution and Checkerboard Artifacts](https://distill.pub/2016/deconv-checkerboard/) · [A Gentle Introduction to Graph Neural Networks](https://distill.pub/2021/gnn-intro/) · [Computing Receptive Fields of Convolutional Neural Networks](https://distill.pub/2019/computing-receptive-fields/) · [A Visual Exploration of Gaussian Processes](https://distill.pub/2019/visual-exploration-gaussian-processes/) |
+| 캘리포니아 공과대학교 | **연속 강연** [The Feynman Lectures on Physics, Volume I](https://www.feynmanlectures.caltech.edu/I_toc.html) · [The Feynman Lectures on Physics, Volume II](https://www.feynmanlectures.caltech.edu/II_toc.html) · [The Feynman Lectures on Physics, Volume III](https://www.feynmanlectures.caltech.edu/III_toc.html) |
+| 영국 왕립연구소 | **연속 강연** [The truth about AI](https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures)<br>**강연** [Growing up in the universe – Waking up in the universe (1991)](https://www.rigb.org/explore-science/explore/video/growing-universe-waking-universe-1991) |
+| TED | **강연** [How language shapes the way we think](https://www.ted.com/talks/lera_boroditsky_how_language_shapes_the_way_we_think) · [The danger of a single story](https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story) · [The best stats you’ve ever seen](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen) · [Do schools kill creativity?](https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity) · [The power of introverts](https://www.ted.com/talks/susan_cain_the_power_of_introverts) · [Inside the mind of a master procrastinator](https://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator) · [10 ways to have a better conversation](https://www.ted.com/talks/celeste_headlee_10_ways_to_have_a_better_conversation) · [How to speak so that people want to listen](https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen) · [The power of vulnerability](https://www.ted.com/talks/brene_brown_the_power_of_vulnerability) · [We should all be feminists](https://www.ted.com/talks/chimamanda_ngozi_adichie_we_should_all_be_feminists) |
 
-하루 10분은 작은 학습 단계에 해당합니다. 원래 강의 한 회나 전체 과정을 10분에 마친다는 뜻이 아닙니다. 원래 학습량을 표시하고 긴 읽기, 문제 풀이, 프로젝트에는 별도 시간을 배정합니다. 자료와 공개 상태는 바뀔 수 있습니다.
+<!-- catalog:end -->
+
+하루 10분은 작은 학습 단계에 해당합니다. 원래 강의 한 회나 전체 과정을 10분에 마친다는 뜻이 아닙니다. 원래 학습량을 표시하고 긴 읽기, 문제 풀이, 프로젝트에는 별도 시간을 배정합니다. 자료와 공개 상태는 바뀔 수 있습니다. 공개 강좌 자료를 바탕으로 만든 독립 학습 경로이며 전체 강의 내용은 포함하지 않습니다. 대학의 공식 인증이나 수료증을 뜻하지 않습니다.
 
 ## 내 자료로 학습
 

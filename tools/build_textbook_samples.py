@@ -2,7 +2,9 @@
 import argparse
 import hashlib
 import shutil
+import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -116,9 +118,48 @@ def first_page(path, size):
             page.close()
 
 
+def language_previews(sources, size):
+    """Capture the actual lessons and render their Markdown exercises for the gallery.
+
+    The gallery build uses Chrome/Chromium and the Python Markdown package.
+    """
+    import markdown
+
+    browser = (shutil.which('google-chrome') or shutil.which('chromium') or
+               shutil.which('chromium-browser') or '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome')
+    if not Path(browser).is_file():
+        raise RuntimeError('Install Chrome or Chromium to build the language previews.')
+    previews = {}
+    with tempfile.TemporaryDirectory(prefix='omni-gallery-') as directory:
+        work = Path(directory)
+        for source in sources:
+            page = source
+            if source.suffix == '.md':
+                # Keep every prompt and link as authored. Add only page typography.
+                markup = markdown.markdown(source.read_text(encoding='utf-8'))
+                page = work / (source.stem + '.html')
+                page.write_text(
+                    '<!doctype html><html lang="zh"><meta charset="utf-8"><style>'
+                    '*{box-sizing:border-box}body{margin:0;padding:36px;color:#173747;background:white;'
+                    'font:21px/1.6 system-ui,sans-serif}h1{font-size:34px;line-height:1.25;'
+                    'margin:0 0 32px}p{margin:12px 0}strong{color:#237768}a{color:#245fa4}'
+                    'main:not(:has(strong)){font-size:31px;line-height:1.8}'
+                    '</style><main>' + markup + '</main></html>', encoding='utf-8')
+            screenshot = work / 'preview.png'
+            screenshot.unlink(missing_ok=True)
+            subprocess.run([browser, '--headless', '--disable-gpu', '--hide-scrollbars',
+                            '--disable-background-networking', '--no-first-run',
+                            '--user-data-dir=' + str(work / 'profile'), '--window-size=720,1020',
+                            '--screenshot=' + str(screenshot), page.resolve().as_uri()],
+                           capture_output=True, timeout=45, check=True)
+            with Image.open(screenshot) as image:
+                previews[source] = image.convert('RGB').resize(size, Image.Resampling.LANCZOS)
+    return previews
+
+
 def gallery():
     university = EXAMPLES / 'university'
-    # Retain the fifteen published lesson subjects and add the five textbook previews first.
+    # Keep the first four rows stable as new examples are added.
     previous = [
         ('Positive Psychology', 'HARVARD / CHINESE', university / 'positive-psychology-zh/Day01.pdf'),
         ('AI Agent Design', 'CHINESE / DAY 01', example_pdf('agent-product', 1)),
@@ -137,28 +178,38 @@ def gallery():
         ('Music Fundamentals', 'CHINESE / DAY 01', example_pdf('music', 1)),
     ]
     labels = ['认识空气', '长方形的周长', '读懂四四拍', '地球的大小与形状', '职业结构与因果']
+    languages = EXAMPLES / 'languages'
+    language_row = [
+        ('Japanese Study Plan', 'CHINESE → JAPANESE', languages / 'zh-ja/plan.html'),
+        ('Morning Greetings', 'JAPANESE / LESSON 01', languages / 'zh-ja/day01.html'),
+        ('Two-way Recall', 'JAPANESE / DAYS 01–03', languages / 'zh-ja/day03-worksheet.md'),
+        ('At a Reading Group', 'JAPANESE / INDEPENDENT TASK', languages / 'zh-ja/day03-task.md'),
+        ('Meeting a Colleague', 'ENGLISH → GERMAN', languages / 'en-de/day01.html'),
+    ]
     entries = [(title, sample['level'], DESTINATION / sample['slug'] / 'Day01.pdf')
-               for title, sample in zip(labels, SAMPLES)] + previous
+               for title, sample in zip(labels, SAMPLES)] + previous + language_row
     font_path = '/System/Library/Fonts/Supplemental/Arial Unicode.ttf'
     heading = ImageFont.truetype(font_path, 53)
     label = ImageFont.truetype(font_path, 37)
     detail = ImageFont.truetype(font_path, 24)
-    width, height = 2520, 3296
+    cell_width, cell_height = 484, 759
+    width, height = 2520, 260 + cell_height * ((len(entries) + 4) // 5)
     ink, teal = '#173747', '#237768'
     canvas = Image.new('RGB', (width, height), '#e9eee8')
     draw = ImageDraw.Draw(canvas)
     draw.text((65, 45), 'OMNI  /  LEARNING SAMPLE GALLERY', font=heading, fill=ink)
-    draw.text((66, 114), '20 real lesson pages  ·  5 Chinese school textbook samples  ·  6 languages', font=detail, fill=teal)
-    cell_width, cell_height = 484, 759
+    draw.text((66, 114), f'{len(entries)} real previews  ·  Textbooks, courses and foreign language practice', font=detail, fill=teal)
     page_size = (448, 634)
-    for index, (title, subtitle, pdf) in enumerate(entries):
+    screenshots = language_previews([entry[2] for entry in language_row], page_size)
+    for index, (title, subtitle, path) in enumerate(entries):
         row, col = divmod(index, 5)
         x, y = 65 + col * cell_width, 177 + row * cell_height
         draw.text((x, y), title, font=label, fill=ink)
         draw.text((x, y + 49), subtitle, font=detail, fill=teal)
         draw.rounded_rectangle((x - 5, y + 84, x + 453, y + 728), radius=10, fill='#cad7d0')
-        canvas.paste(first_page(pdf, page_size), (x, y + 89))
-    draw.text((65, 3247), 'Open the sample library to read the complete lessons and their sources.', font=detail, fill=teal)
+        preview = screenshots[path] if path in screenshots else first_page(path, page_size)
+        canvas.paste(preview, (x, y + 89))
+    draw.text((65, height - 49), 'Open the sample library to read the lessons, try the exercises and check the sources.', font=detail, fill=teal)
     canvas.save(ROOT / 'docs/assets/learning-sample-gallery.png', optimize=True)
 
 

@@ -2,9 +2,13 @@
 
 **v5.0** · [中文学日语 · Learn German through English](languages/README.md) · [教学配图与读图问题 / Teaching diagrams](teaching-figures/README.md)
 
-The README gallery shows 20 actual lesson pages, starting with [five lessons from modern Chinese school textbooks](textbooks/README.md). Explore the [six multilingual university sample sets](university/README.md), the [Chinese stargazing sample](../validation/release-v1.0.0/zh/astronomy-sample-v1/README.md), and the PDF lessons below.
+The README gallery shows 25 real sample pages. The first row covers [five modern Chinese school textbook lessons](textbooks/README.md). The fifth follows language learning from a plan to an independent task. You can also open the [six multilingual university samples](university/README.md) and the [Chinese stargazing sample](../validation/release-v1.0.0/zh/astronomy-sample-v1/README.md).
 
-README 拼图收录 20 页实际学习材料，第一行是[五份现代中小学教材中文讲义](textbooks/README.md)。可查看[六组多语言大学课程样例](university/README.md)、[中文观星样例](../validation/release-v1.0.0/zh/astronomy-sample-v1/README.md)，以及下方的 PDF 课程。
+README 画廊共五行五列。第一行是五份中小学教材讲义，第五行的五份材料可以按下表逐一打开。
+
+| Language learning / 外语学习 | Plan / 计划 | Lesson / 讲义 | Recall / 累计练习 | Independent task / 独立任务 | Another language pair / 另一语对 |
+| --- | --- | --- | --- | --- | --- |
+| 中文学日语 · German through English | [日语三天计划](languages/zh-ja/plan.md) | [进教室时说什么](languages/zh-ja/day01.md) | [复习三天的表达](languages/zh-ja/day03-worksheet.md) | [读书会里的三轮对话](languages/zh-ja/day03-task.md) | [Meeting a colleague in German](languages/en-de/day01.md) |
 
 Six complete 30-day plans + Day01–Day03 = 24 PDFs. Chinese-language demos; simulated approval and delivery, no live schedules.
 

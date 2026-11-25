@@ -1,0 +1,416 @@
+{
+  "en": {
+    "equivalent-fractions": {
+      "title": "Why are one half and two quarters the same length?",
+      "unit": "Each strip is one metre long. The shaded part starts at zero."
+    },
+    "hydropower": {
+      "title": "How does moving water generate electricity?",
+      "steps": [
+        {
+          "label": "Water flow",
+          "detail": "Water flows down a pipe to the blades."
+        },
+        {
+          "label": "Turbine",
+          "detail": "The water pushes the blades, turning the shaft."
+        },
+        {
+          "label": "Generator",
+          "detail": "The shaft turns the rotor. The generator converts mechanical energy into electricity."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "What changes when a statement becomes a question?",
+      "columns": [
+        "Statement",
+        "Question"
+      ],
+      "rows": [
+        {
+          "label": "Subject: they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "Subject: she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "ja": {
+    "equivalent-fractions": {
+      "title": "どうして 1/2 と 2/4 は同じ長さになる？",
+      "unit": "どのテープも長さは1メートルです。色の付いた部分はすべて0から始まります。"
+    },
+    "hydropower": {
+      "title": "水の流れはどうやって電気になる？",
+      "steps": [
+        {
+          "label": "水の流れ",
+          "detail": "水は高い所から水圧管を通り、羽根に届く。"
+        },
+        {
+          "label": "水車",
+          "detail": "水が羽根を押すと、水車の軸が回る。"
+        },
+        {
+          "label": "発電機",
+          "detail": "軸が回転子を回す。発電機は機械エネルギーを電気エネルギーに変える。"
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "疑問文にすると動詞はどう変わる？",
+      "columns": [
+        "平叙文",
+        "疑問文"
+      ],
+      "rows": [
+        {
+          "label": "主語は they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "主語は she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "ko": {
+    "equivalent-fractions": {
+      "title": "왜 1/2과 2/4의 길이는 같을까요?",
+      "unit": "각 띠의 길이는 1미터입니다. 색칠한 부분은 모두 0에서 시작합니다."
+    },
+    "hydropower": {
+      "title": "흐르는 물로 어떻게 전기를 만들까?",
+      "steps": [
+        {
+          "label": "물의 흐름",
+          "detail": "높은 곳의 물이 수압관을 따라 날개에 닿는다."
+        },
+        {
+          "label": "수차",
+          "detail": "물이 날개를 밀면 회전축이 돈다."
+        },
+        {
+          "label": "발전기",
+          "detail": "축이 회전자를 돌린다. 발전기는 기계적 에너지를 전기 에너지로 바꾼다."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "평서문을 의문문으로 바꾸면 동사는 어떻게 달라질까?",
+      "columns": [
+        "평서문",
+        "의문문"
+      ],
+      "rows": [
+        {
+          "label": "주어가 they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "주어가 she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "fr": {
+    "equivalent-fractions": {
+      "title": "Pourquoi une moitié et deux quarts ont-ils la même longueur ?",
+      "unit": "Chaque bande mesure un mètre. La partie colorée commence à zéro."
+    },
+    "hydropower": {
+      "title": "Comment produit-on de l’électricité avec de l’eau ?",
+      "steps": [
+        {
+          "label": "Eau",
+          "detail": "L’eau descend dans une conduite jusqu’aux pales."
+        },
+        {
+          "label": "Turbine",
+          "detail": "L’eau pousse les pales et fait tourner l’arbre."
+        },
+        {
+          "label": "Alternateur",
+          "detail": "L’arbre entraîne le rotor. L’alternateur convertit l’énergie mécanique en électricité."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "Que devient le verbe dans une question ?",
+      "columns": [
+        "Affirmation",
+        "Question"
+      ],
+      "rows": [
+        {
+          "label": "Sujet : they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "Sujet : she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "de": {
+    "equivalent-fractions": {
+      "title": "Warum sind ein Halb und zwei Viertel gleich lang?",
+      "unit": "Jeder Streifen ist einen Meter lang. Der farbige Abschnitt beginnt bei null."
+    },
+    "hydropower": {
+      "title": "Wie wird aus fließendem Wasser Strom?",
+      "steps": [
+        {
+          "label": "Wasser",
+          "detail": "Wasser strömt durch ein Rohr hinab zu den Schaufeln."
+        },
+        {
+          "label": "Turbine",
+          "detail": "Das Wasser drückt auf die Schaufeln. Die Welle dreht sich."
+        },
+        {
+          "label": "Generator",
+          "detail": "Die Welle treibt den Rotor an. Der Generator wandelt mechanische in elektrische Energie um."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "Wie verändert sich das Verb in einer Frage?",
+      "columns": [
+        "Aussage",
+        "Frage"
+      ],
+      "rows": [
+        {
+          "label": "Subjekt: they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "Subjekt: she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "es": {
+    "equivalent-fractions": {
+      "title": "¿Por qué miden lo mismo un medio y dos cuartos?",
+      "unit": "Cada tira mide un metro. La parte sombreada empieza en cero."
+    },
+    "hydropower": {
+      "title": "¿Cómo se genera electricidad con agua en movimiento?",
+      "steps": [
+        {
+          "label": "Agua",
+          "detail": "El agua baja por una tubería hasta las palas."
+        },
+        {
+          "label": "Turbina",
+          "detail": "El agua empuja las palas y hace girar el eje."
+        },
+        {
+          "label": "Generador",
+          "detail": "El eje mueve el rotor. El generador convierte la energía mecánica en electricidad."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "¿Qué cambia en el verbo al formular una pregunta?",
+      "columns": [
+        "Afirmación",
+        "Pregunta"
+      ],
+      "rows": [
+        {
+          "label": "Sujeto: they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "Sujeto: she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "pt": {
+    "equivalent-fractions": {
+      "title": "Por que metade e dois quartos têm o mesmo comprimento?",
+      "unit": "Cada tira mede um metro. A parte colorida começa no zero."
+    },
+    "hydropower": {
+      "title": "Como a água em movimento gera eletricidade?",
+      "steps": [
+        {
+          "label": "Água",
+          "detail": "A água desce por um tubo até as pás."
+        },
+        {
+          "label": "Turbina",
+          "detail": "A água empurra as pás e faz o eixo girar."
+        },
+        {
+          "label": "Gerador",
+          "detail": "O eixo gira o rotor. O gerador converte energia mecânica em energia elétrica."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "O que muda no verbo ao fazer uma pergunta?",
+      "columns": [
+        "Afirmação",
+        "Pergunta"
+      ],
+      "rows": [
+        {
+          "label": "Sujeito: they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "Sujeito: she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "ru": {
+    "equivalent-fractions": {
+      "title": "Почему половина и две четверти равны по длине?",
+      "unit": "Длина каждой полоски — один метр. Закрашенная часть начинается от нуля."
+    },
+    "hydropower": {
+      "title": "Как из энергии воды получают электричество?",
+      "steps": [
+        {
+          "label": "Поток воды",
+          "detail": "Вода спускается по трубе к лопастям."
+        },
+        {
+          "label": "Турбина",
+          "detail": "Поток давит на лопасти и вращает вал."
+        },
+        {
+          "label": "Генератор",
+          "detail": "Вал вращает ротор. Генератор преобразует механическую энергию в электрическую."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "Как меняется глагол в вопросе?",
+      "columns": [
+        "Утверждение",
+        "Вопрос"
+      ],
+      "rows": [
+        {
+          "label": "Подлежащее they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "Подлежащее she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  },
+  "ar": {
+    "equivalent-fractions": {
+      "title": "لماذا يتساوى النصف والربعان في الطول؟",
+      "unit": "طول كل شريط متر واحد، ويبدأ الجزء الملوّن من الصفر."
+    },
+    "hydropower": {
+      "title": "كيف يولّد الماء الجاري الكهرباء؟",
+      "steps": [
+        {
+          "label": "تدفّق الماء",
+          "detail": "ينزل الماء عبر أنبوب حتى يصل إلى الريش."
+        },
+        {
+          "label": "التوربين",
+          "detail": "يدفع الماء الريش فيدور العمود."
+        },
+        {
+          "label": "المولّد",
+          "detail": "يدير العمود الجزء الدوّار. يحوّل المولّد الطاقة الميكانيكية إلى طاقة كهربائية."
+        }
+      ]
+    },
+    "present-simple": {
+      "title": "كيف يتغيّر الفعل عند تحويل الجملة إلى سؤال؟",
+      "columns": [
+        "جملة خبرية",
+        "سؤال"
+      ],
+      "rows": [
+        {
+          "label": "الفاعل they",
+          "values": [
+            "They sing.",
+            "Do they sing?"
+          ]
+        },
+        {
+          "label": "الفاعل she",
+          "values": [
+            "She sings.",
+            "Does she sing?"
+          ]
+        }
+      ]
+    }
+  }
+}
