@@ -26,11 +26,13 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Скачать ZIP навыка v4.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[Скачать ZIP навыка v5.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Каналы установки](../../docs/distribution-channels.md)
 
 </div>
+
+**v5.0** · Выбирайте из 135 учебных источников. Изучайте иностранный язык с объяснениями на родном языке, упражнениями и отдельными ответами. Каждая новая иллюстрация сопровождается вопросом, который помогает заметить важные детали. [Каталог](../curated-learning-resources.md) · [Примеры языковых курсов](../../examples/languages/README.md)
 
 **Выберите университетский курс или принесите свои книги и статьи. Учитесь в своём темпе, с короткими вопросами, полезной обратной связью и повторением, сохраняя материалы локально или в облачных документах.**
 

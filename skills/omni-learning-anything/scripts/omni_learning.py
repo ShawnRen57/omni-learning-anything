@@ -23,6 +23,7 @@ def main():
     p=sub.add_parser('tencent-auth');p.add_argument('action',choices=['login','start','poll','status']);p.add_argument('--name',required=True)
     p=sub.add_parser('doctor'); p.add_argument('--config',type=Path); p.add_argument('--host'); p.add_argument('--host-report',type=Path); p.add_argument('--background',action='store_true')
     p=sub.add_parser('setup-check'); p.add_argument('--platform',required=True); p.add_argument('--mode'); p.add_argument('--material-format')
+    p=sub.add_parser('figure-build'); p.add_argument('--input',type=Path,required=True); p.add_argument('--font',type=Path)
     p=sub.add_parser('brief-check'); p.add_argument('--input',type=Path,required=True)
     p=sub.add_parser('onboarding-record'); p.add_argument('--event',required=True); p.add_argument('--id',dest='event_id',required=True); p.add_argument('--stage'); p.add_argument('--user-actions',type=int); p.add_argument('--usage',type=Path)
     sub.add_parser('onboarding-status')
@@ -47,6 +48,10 @@ def main():
     configure_installation(sub)
     from omni_courses_cli import configure as configure_courses
     configure_courses(sub)
+    from omni_language_learning import configure as configure_language
+    configure_language(sub)
+    from omni_language_audio import configure as configure_audio
+    configure_audio(sub)
     from omni_textbooks_cli import configure as configure_textbooks
     configure_textbooks(sub)
     args=parser.parse_args(); root=args.project.resolve(); result={'ok':True}
@@ -54,6 +59,12 @@ def main():
         if args.command=='textbooks':
             from omni_textbooks_cli import execute as execute_textbooks
             result=execute_textbooks(root,args)
+        elif args.command=='language':
+            from omni_language_learning import execute as execute_language
+            result=execute_language(root, args)
+        elif args.command=='language-audio':
+            from omni_language_audio import generate
+            result=generate(root, args.locale, args.text, args.output)
         elif args.command=='courses':
             from omni_courses_cli import execute as execute_courses
             result=execute_courses(args)
@@ -87,6 +98,9 @@ def main():
         elif args.command=='doctor':
             from omni_readiness import diagnose
             result=diagnose(root,c.read(args.host_report) if args.host_report else None,background=args.background,config_path=args.config,host=args.host)
+        elif args.command=='figure-build':
+            from omni_figures import build
+            result=build(root,c.read(args.input),font=args.font)
         elif args.command=='brief-check':
             from omni_intake import validate_brief
             result=validate_brief(c.read(args.input))

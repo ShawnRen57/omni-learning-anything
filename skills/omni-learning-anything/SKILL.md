@@ -2,14 +2,14 @@
 name: omni-learning-anything
 slug: omni-learning-anything
 displayName: Omni Learning Anything
-summary: Personalized, source-grounded learning plans and illustrated daily lessons in PDF, HTML, DOCX, Markdown, Notion, Obsidian, Feishu, Tencent Docs and DingTalk.
-version: 4.2.0
+summary: Study courses, books, talks and foreign languages with source-grounded lessons, teaching diagrams and practice sheets in local files or connected documents.
+version: 5.0.0
 tags: [education, learning, study-plan, latex, pdf]
 homepage: https://github.com/ShawnRen57/omni-learning-anything
-description: Build or continue a personal, source-grounded course from a learning goal, a named course from a university or AI organization, an open reference, a Chinese K–12 textbook, or the learner's materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
+description: Build or continue a personal, source-grounded course from a learning goal, a curated course, talk, book or article, a foreign language taught through the learner's own language, a Chinese K–12 textbook, or personal materials, with illustrated lessons and optional light checks, feedback and review. Use for systematic study and learning plans, not a one-off factual answer.
 license: MIT
 metadata:
-  version: "4.2.0"
+  version: "5.0.0"
   runtime: "Python 3.10+; host research, files and document viewing. PDF alone requires XeLaTeX. Cloud delivery defaults to official APIs/CLI with guided authorization; Obsidian uses a local Vault."
 ---
 
@@ -25,7 +25,7 @@ For an existing course, read `config.json`, `plan.json`, `state.json`, pending `
 
 ## Intake and destination
 
-For a named course or open reference, a request for the built-in catalog, or installation/first use without a topic, read [course pathways](references/courses.md). Match the provider, edition and instructor when published. Inspect the actual sources, explain any access limits, and bind the ordered pathway snapshot. Preserve the correspondence to original sessions when adapting the pace. If undecided, briefly offer varied choices in the current conversation. Clarify ambiguous matches and offer to research unknown courses separately.
+For a talk (including TED), article, book, textbook series or lecture, also search the curated library with `courses resources`. After selecting a resource inspect the actual source and choose a scope that fits a single work or series. For a named course or open reference, a request for the built-in catalog, or installation/first use without a topic, read [course pathways](references/courses.md). Match the provider, edition and instructor when published. Inspect the actual sources, explain any access limits, and bind the ordered pathway snapshot. Preserve the correspondence to original sessions when adapting the pace. If undecided, briefly offer varied choices in the current conversation. Clarify ambiguous matches and offer to research unknown courses separately.
 
 Reuse information already supplied. Read [intent](references/intent.md) when the request is broad, ambiguous, unclear or unusually terse. Automatically analyze meanings, useful learning directions, necessary prerequisites, observable outcomes and a coherent ordered route. Ask only about ambiguity that materially changes the course; otherwise propose editable assumptions and a well-scoped path. A concise specific request needs no extra questionnaire. Richness comes from relevant examples, connections and depth within the time budget, not padding or silently widening the goal. Preserve explicit user choices and distinguish hypotheses from confirmed information.
 
@@ -46,6 +46,10 @@ Official CLIs own their login, renewal and secure credential storage. Tencent OA
 `connect` is a read-only account/destination check; `delivery-check` is local validation. Neither proves write permission or completed delivery. Complete `publish`, readback and visual inspection of the actual plan before claiming success. Fixed account/destination metadata is copied into the course; saved profile changes never retarget an approved course. Recheck access after expiry or an actual error, without silently changing accounts.
 
 If official access is unavailable, preserve the selected platform and pending course, explain the concrete blocker and offer precise setup help. Browser import/local alternatives require the learner's explicit acceptance; never silently downgrade or label them API success. UI availability and interactive keychains may limit unattended scheduling.
+
+## Foreign-language courses
+
+For requests such as “我是中文母语，想从零学日语” or “Teach me French through English”, use [language learning](references/languages.md) and the [six starter pathways](references/language-starters.md). Confirm the teaching and target languages, current ability, available time and one situation the learner wants to handle. Produce a staged course, bilingual explanations and a learner worksheet with its answer key delivered separately. Carry practiced items into later lessons. When listening practice is included, offer an actual accessible recording or a clearly identified local synthetic WAV. Text-only answers establish written performance. Show what the learner can actually do at each checkpoint.
 
 ## Chinese K–12 textbook learning
 
@@ -73,6 +77,7 @@ Run `next` before research. Respect `paused`, `complete` and `already_delivered_
 
 For `generate`, read the approved topic and recent two lessons; check selected material evidence and research/open permitted external sources again; author one focused lesson within the reading/practice budget. Include explanatory image, in-text evidence, practice and self-check, recall and next-step bridge, plus sources under the agreed policy (>=5 expansion links with reasons for courses without material settings). Optional study is outside the core time budget. Do not promise mastery or employment.
 
+For every newly authored plan and lesson, use [teaching figures](references/figures.md) and set `visual_guides: true` in the new course config. Decide which relationship, contrast, location or change the learner should see. Include a reading question, an observable answer and supporting source IDs. Use `figure-build` for labeled structures. For photographs or textbook originals, orient the learner to visible evidence in the caption and preserve the source image.
 Use the host's image model for AI illustrations; retain prompt provenance and label teaching reconstructions. Exact artworks/buildings favor traceable reusable source images with permissions and credit. Code-drawn QA figures must not be called AI-generated evidence.
 
 Save JSON and `render`; inspect the chosen format's complete output and record `review`. Single-file HTML must embed reviewed PNG/JPEG data, use no external styling/scripts/fonts, and remain readable alone offline (outbound source links still need Internet). Markdown/Vault assets must resolve; DOCX embeds figures and hyperlinks; cloud adapters upload/embed figures rather than publishing local file paths. Inspect the actual cloud rendering when possible; automated readback is not a substitute for visual review.

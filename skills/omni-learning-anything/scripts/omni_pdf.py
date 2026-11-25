@@ -1,4 +1,5 @@
 """Portable XeLaTeX rendering and artifact verification; no generated TeX execution."""
+from omni_figures import caption
 from omni_locale import source_labels
 import os
 import re
@@ -16,12 +17,19 @@ def esc(text):
     return ''.join(table.get(ch,ch) for ch in str(text))
 
 
+ARABIC = r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff\ufb50-\ufdff\ufe70-\ufeff]'
+ARABIC_RUN = ARABIC + r'(?:(?:[ \t\u00a0\u200c\u200d]*)' + ARABIC + r')*'
+
+
 def visible_text(text,code):
-    if code!='ar':return esc(text)
-    # Keep Arabic shaping/direction while isolating Latin identifiers and citations.
-    # Paragraph breaks must stay outside the non-paragraph \textenglish command.
-    parts=re.split(r'((?:\r?\n[ \t]*){2,}|[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+(?:[ \t]+[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+)*)',str(text))
-    return ''.join(esc(part) if part.isspace() or re.search(r'[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]',part) else r'\textenglish{'+esc(part)+'}' for part in parts if part)
+    value = str(text)
+    if code != 'ar':
+        # XeTeX's default LTR font may contain Arabic glyphs but paint them backwards.
+        return ''.join(r'\textarabic{'+esc(part)+'}' if re.fullmatch(ARABIC_RUN, part) else esc(part)
+                       for part in re.split('('+ARABIC_RUN+')', value) if part)
+    # Paragraph breaks must remain outside the inline English command.
+    parts=re.split(r'((?:\r?\n[ \t]*){2,}|'+ARABIC_RUN+')',value)
+    return ''.join(esc(part) if part.isspace() or re.search(ARABIC,part) else r'\textenglish{'+esc(part)+'}' for part in parts if part)
 
 
 def executable(name):
@@ -33,7 +41,7 @@ def executable(name):
     return None
 
 
-from omni_document import validate_document, material_markdown
+from omni_document import validate_document, markdown_figure, material_markdown
 
 
 PREAMBLE=r'''\documentclass[11pt]{article}
@@ -62,18 +70,38 @@ def font_chain(command, candidates, options=''):
     return result
 
 
-def language_preamble(code):
+def language_preamble(code, content='', target=''):
     labels=language(code)
     result=PREAMBLE.replace('学习手册',esc(labels['guide'])).replace('Source-grounded learning',esc(labels['grounded']))
     extra=''
-    if code in ('ja','ko'):
-        extra+=font_chain('setCJKmainfont',CJK_FONTS[code], '[AutoFakeBold=2]')+'\n'
-        extra+=r'\xeCJKsetup{AutoFallBack=true}\setCJKfallbackfamilyfont{\CJKrmdefault}{FandolSong-Regular.otf}'+'\n'
+    scripts=[]
+    # The optional language name covers a kanji-only lesson without a kana cue.
+    if re.search(r'[\u3040-\u30ff\uff66-\uff9d]',content) or target.casefold() in ('ja','日本語','日语','日語','日文','japanese'):
+        scripts.append('ja')
+    if re.search(r'[\u1100-\u11ff\u3130-\u318f\uac00-\ud7a3]',content) or target.casefold() in ('ko','한국어','韩语','韓語','朝鲜语','korean'):
+        scripts.append('ko')
+    primary = code if code in CJK_FONTS else next(iter(scripts), None)
+    if primary in ('ja','ko'):
+        extra+=font_chain('setCJKmainfont',CJK_FONTS[primary],'[AutoFakeBold=2]')+'\n'
         if code=='ko':extra+=r'\xeCJKsetup{CJKspace=true}'+'\n'
-    if code=='ar':
-        result=result.replace('OMNI LEARNING / ',r'\textenglish{OMNI LEARNING / }').replace(r'\thepage',r'\textenglish{\thepage}')
-        # bidi must load after hyperref/fancyhdr/graphicx; polyglossia selects RTL.
-        extra+=r'\usepackage{polyglossia}\setdefaultlanguage{arabic}\setotherlanguage{english}'+'\n'
+    fallback=[script for script in scripts if script != primary]
+    if fallback or primary in ('ja','ko'):
+        # xeCJK accepts a comma-separated fallback list. Expand the font names selected
+        # on this machine, leaving xeCJK's family lookup to the actual command.
+        names=[]
+        for script in fallback:
+            macro=r'\omni'+('Japanese' if script=='ja' else 'Korean')+'Face'
+            extra+=font_chain('def'+macro,CJK_FONTS[script])+'\n'
+            names.append(macro)
+        names.append('FandolSong-Regular.otf')
+        extra+=r'\xeCJKsetup{AutoFallBack=true}'+'\n'
+        extra+=r'\edef\omniFallback{\noexpand\setCJKfallbackfamilyfont{\noexpand\CJKrmdefault}[AutoFakeBold=2]{'+','.join(names)+r'}}\omniFallback'+'\n'
+    if code=='ar' or re.search(ARABIC, content):
+        if code=='ar':
+            result=result.replace('OMNI LEARNING / ',r'\textenglish{OMNI LEARNING / }').replace(r'\thepage',r'\textenglish{\thepage}')
+            extra+=r'\usepackage{polyglossia}\setdefaultlanguage{arabic}\setotherlanguage{english}'+'\n'
+        else:
+            extra+=r'\usepackage{polyglossia}\setdefaultlanguage{english}\setotherlanguage{arabic}'+'\n'
         extra+=font_chain(r'newfontfamily\arabicfont',ARABIC_FONTS,'[Script=Arabic]')+'\n'
     return result.replace(r'\begin{document}',extra+r'\begin{document}')
 
@@ -117,13 +145,13 @@ def render(root,input_path,key,export_formats=()):
         config=c.read(root/'config.json'); labels=source_labels(config)
         e=lambda value:visible_text(value,labels['code'])
         subtitle=localized_subtitle(data,plan,config,c.today(root),key)
-        tex=[language_preamble(labels['code']),r'{\LARGE\bfseries\color{ink} '+e(data['title'])+r'}\par',e(subtitle)+r'\par\vspace{6pt}']
+        tex=[r'{\LARGE\bfseries\color{ink} '+e(data['title'])+r'}\par',e(subtitle)+r'\par\vspace{6pt}']
         md=['# '+data['title'],subtitle]
         for i,s in enumerate(data['sections']):
             tex.extend([r'\Needspace{5\baselineskip}\section*{'+e(s['title'])+'}',e(s['body'])]); md.extend(['## '+s['title'],s['body']])
             if i==min(1,len(data['sections'])-1):
-                tex.extend([r'\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/'+img+r'}\par',r'{\small '+e(data['figure']['caption'])+r'}\par',r'{\footnotesize '+e(data['figure']['credit'])+r'}\end{center}'])
-                md.extend(['!['+data['figure']['caption']+'](../assets/'+img+')',data['figure']['credit']])
+                tex.extend([r'\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/'+img+r'}\par',r'{\small '+e(caption(data['figure']))+r'}\par',r'{\footnotesize '+e(data['figure']['credit'])+r'}\end{center}'])
+                md.extend(markdown_figure(data['figure'], '../assets/' + img))
         tex.append(r'\Needspace{6\baselineskip}\section*{'+e(labels['further'])+r'}\small '+e(labels['optional'])+r'\begin{enumerate}[leftmargin=1.6em]')
         md.append('## '+labels['further'])
         for s in data['sources']:
@@ -136,6 +164,8 @@ def render(root,input_path,key,export_formats=()):
             md_label=f"[{md_title}]({s['url']})" if s.get('url') else md_title
             md.append(f"- [{s['id']}] {md_label}: {md_note}; {s['publisher']}{published}{s['published_at']}{checked}{s['checked_at']}")
         tex.extend([r'\end{enumerate}',r'\end{document}'])
+        target=config.get('language_course',{}).get('target','')
+        tex.insert(0,language_preamble(labels['code'],'\n'.join(tex),target))
         texfile=root/'sources'/(stem+'.tex'); texfile.write_text('\n\n'.join(tex),encoding='utf-8')
         mdfile=texfile.with_suffix('.md'); mdfile.write_text('\n\n'.join(md)+'\n',encoding='utf-8')
         env=os.environ.copy(); env['PATH']=str(Path(compiler).parent)+os.pathsep+env.get('PATH','')

@@ -92,6 +92,10 @@ class TextbookWorkflowTests(unittest.TestCase):
                     document.validate_document(plan, root)
                 plan['figure'] = extract_figure(root, book, version, 1, (0.05, 0.1, 0.9, 0.9), 'Square')
                 document.validate_document(plan, root)
+                from omni_textbooks import validate_figure
+                wrong_guide = dict(plan['figure'], reading={'source_ids': ['S2']})
+                with self.assertRaisesRegex(ValueError, 'page in its reading guide'):
+                    validate_figure(root, config, wrong_guide, plan['sources'])
                 wrong = extract_figure(root, book, version, 2, (0.05, 0.1, 0.9, 0.9), 'Wrong page')
                 with self.assertRaisesRegex(ValueError, 'selected'):
                     document.validate_document(dict(plan, figure=wrong), root)

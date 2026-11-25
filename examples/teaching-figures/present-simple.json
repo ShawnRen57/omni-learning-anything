@@ -1,0 +1,15 @@
+{
+  "layout": "comparison",
+  "title": "从陈述到提问，动词哪里变了？",
+  "columns": ["陈述一件事", "询问是否如此"],
+  "rows": [
+    {"label":"主语是 they", "values":["They sing.", "Do they sing?"]},
+    {"label":"主语是 she", "values":["She sings.", "Does she sing?"]}
+  ],
+  "credit":"原创示例，依据 British Council《Present simple》。",
+  "reading":{
+    "question":"沿着 she 这一行从左向右读。组成问句时，哪个词体现了主语是第三人称单数？",
+    "observation":"陈述句用 sings。问句改用 Does，后面的动词回到 sing。再与 they 一行的 Do 对照。",
+    "source_ids":["S1"]
+  }
+}

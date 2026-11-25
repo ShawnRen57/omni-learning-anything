@@ -26,11 +26,13 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Baixar ZIP da habilidade v4.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[Baixar ZIP da habilidade v5.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Canais de instalação](../../docs/distribution-channels.md)
 
 </div>
+
+**v5.0** · Escolha entre 135 recursos. Aprenda uma língua estrangeira na sua língua materna com exercícios e respostas em separado. Cada nova ilustração inclui uma pergunta que orienta a leitura. [Catálogo](../curated-learning-resources.md) · [Exemplos de idiomas](../../examples/languages/README.md)
 
 **Escolha um curso universitário ou traga seus livros e artigos. Aprenda no seu ritmo, com perguntas curtas, feedback útil e revisão, em arquivos locais ou documentos na nuvem.**
 

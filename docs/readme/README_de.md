@@ -26,11 +26,13 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[Skill-ZIP v4.2.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[Skill-ZIP v5.0.0 herunterladen](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installationswege](../../docs/distribution-channels.md)
 
 </div>
+
+**v5.0** · Wählen Sie aus 135 Lernquellen. Lernen Sie eine Fremdsprache in Ihrer Muttersprache mit Übungen und separatem Lösungsschlüssel. Zu jeder neuen Abbildung gibt es eine Frage, die den Blick auf wichtige Details lenkt. [Quellenverzeichnis](../curated-learning-resources.md) · [Sprachlernbeispiele](../../examples/languages/README.md)
 
 **Wähle einen Universitätskurs oder bring eigene Bücher und Fachartikel mit. Lerne in deinem Tempo, mit kurzen Verständnisfragen, hilfreichen Rückmeldungen und Wiederholungen – in lokalen Dateien oder Cloud-Dokumenten.**
 

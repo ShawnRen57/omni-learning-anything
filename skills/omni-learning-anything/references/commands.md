@@ -16,7 +16,11 @@ Optional `learning_brief`: original study request, interpretation, outcomes, inc
 
 Source: `{"id":"S1","title":"Specific page","url":"https://…","publisher":"Institution","published_at":"YYYY-MM-DD or 未标注","checked_at":"YYYY-MM-DD","note":"What to read and why"}`. At least five distinct URLs actually opened on the configured timezone's generation date. Use [S1] in body text. Section bodies are plain text with paragraph breaks, no executable LaTeX or prescribed Markdown structure.
 
-Figure: `{"path":"assets/teaching.png","caption":"What to notice","credit":"Source/reuse rights or disclosed AI teaching illustration"}`. Local project PNG/JPEG for all formats; PDF figures work only in PDF output. Retain source license or generated-image prompt provenance.
+For new courses set `visual_guides: true`. Every figure contains a local project `path`, `caption`, `credit`, and `reading` with a learner-facing `question`, specific `observation` and document `source_ids`. See [teaching figures](figures.md) for an example and the `figure-build` command. PNG/JPEG works in all formats; PDF images require PDF output. Retain the source license or generated-image prompt provenance.
+
+## Foreign language courses
+
+Set `config.language_course` to the teaching language, target language, baseline and real-life goal. Each planned day supplies a `can_do` outcome. Each lesson lists the target forms and contextual meanings present in its cited teaching sections. After delivering a lesson, run `OMNI language worksheet --key Day03 --review-from Day01`. Use the same arguments with `OMNI language answer-key` to generate the separate key. Add `--reverse` to both for the opposite recall direction. See the [language course contract](languages.md) and [starter routes](language-starters.md).
 
 ## Commands and lifecycle
 

@@ -28,11 +28,13 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[تنزيل ZIP للمهارة v4.2.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[تنزيل ZIP للمهارة v5.0.0](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [قنوات التثبيت](../../docs/distribution-channels.md)
 
 </div>
+
+**v5.0** · اختر من بين 135 مصدرًا تعليميًا. تعلّم لغة أجنبية بشروح بلغتك الأم، مع تمارين وإجابات في ملف منفصل. يرافق كل رسم توضيحي جديد سؤال يوجّه انتباهك إلى التفاصيل المهمة. [دليل المصادر](../curated-learning-resources.md) · [أمثلة لتعلّم اللغات](../../examples/languages/README.md)
 
 **اختر مقرراً جامعياً أو ابدأ بكتبك وأبحاثك. تعلّم بالوتيرة المناسبة لك، مع أسئلة قصيرة وملاحظات مفيدة ومراجعة، واحفظ دروسك في ملفات محلية أو مستندات سحابية.**
 

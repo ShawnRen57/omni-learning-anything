@@ -1,4 +1,5 @@
 """Shared content contract and standalone Markdown/DOCX export. PDF imports are lazy."""
+from omni_figures import caption, validate_reading
 from omni_locale import source_labels
 import html
 import re
@@ -41,9 +42,16 @@ def validate_document(data,root):
     f=data.get('figure',{}); p=(root/f.get('path','')).resolve()
     if not p.is_relative_to(root.resolve()) or not p.is_file() or p.suffix.lower() not in ('.png','.jpg','.jpeg','.pdf'): raise ValueError('Figure must be a local supported file inside project.')
     if not f.get('caption') or not f.get('credit'): raise ValueError('Figure caption and credit required.')
+    validate_reading(f, ids, required=config.get('visual_guides', False))
     if 'textbook' in config:
         from omni_textbooks import validate_figure
         validate_figure(root, config, f, sources)
+    if 'language_course' in config:
+        from omni_language_learning import validate_items, validate_plan as validate_language_plan
+        if 'day' in data:
+            validate_items(data)
+        else:
+            validate_language_plan(config, data)
     if not data.get('title'): raise ValueError('Document title required.')
 
 
@@ -89,13 +97,21 @@ def material_markdown(value):
     return re.sub(r'([\\`*_{}\[\]()#+.!|>])', r'\\\1', html.escape(value, quote=False))
 
 
+def markdown_figure(figure, image_ref):
+    lines = [f"![{material_markdown(figure['caption'])}]({image_ref})"]
+    if 'reading' in figure:
+        lines.append(material_markdown(caption(figure)))
+    lines.append(figure['credit'])
+    return lines
+
+
 def markdown_text(data, plan, config, date, key, image_ref):
     labels=source_labels(config)
     lines = ['# ' + data['title'], subtitle(data, plan, config, date, key)]
     for i, section in enumerate(data['sections']):
         lines.extend(['## ' + section['title'], section['body']])
         if i == min(1, len(data['sections']) - 1):
-            lines.extend([f"![{data['figure']['caption']}]({image_ref})", data['figure']['credit']])
+            lines.extend(markdown_figure(data['figure'], image_ref))
     lines.append('## '+labels['further'])
     for source in data['sources']:
         title=material_markdown(source['title']) if source.get('material_ref') else source['title']
@@ -166,8 +182,8 @@ def write_docx(path, data, plan, config, image, date, key):
                 ratio = img.height / img.width
             width = min(6.5, 3.0 / ratio)
             shape = document.add_picture(str(image), width=Inches(width))
-            shape._inline.docPr.set('descr', data['figure']['caption'])
-            document.add_paragraph(data['figure']['caption'])
+            shape._inline.docPr.set('descr', caption(data['figure']))
+            document.add_paragraph(caption(data['figure']))
             document.add_paragraph(data['figure']['credit'])
     document.add_heading(labels['further'], 1)
     for source in data['sources']:

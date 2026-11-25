@@ -1,5 +1,11 @@
 # Changelog
 
+## v5.0.0 — 2026-11-25
+
+- Expand the source library to 135 entries with 68 additional courses, textbooks, scholarly books, articles, lecture series and talks. Search by kind, language or provider and bind a selected source to a plan.
+- Give new course figures a reading question, observable details and a source. Build labeled process diagrams, aligned comparisons and common-scale fraction bars and keep original illustrations for school textbook lessons.
+- Teach a target language through the learner’s native language. Set staged communication goals, generate cumulative two-way worksheets with separate answer keys, and optionally create listening audio with a compatible local voice. Include six starter pathways and two worked examples.
+
 ## v4.2.0 — 2026-11-05
 
 - Recognize textbook edition years, latest-revision requests, printing years and school terms. Keep undated candidates separate from confirmed matches.

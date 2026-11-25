@@ -1,6 +1,6 @@
 # Built-in course pathways
 
-Read this when the learner names a course or reference, asks what is included, or has no learning direction during installation or first use. The [catalog](course-catalog.json) contains 53 university courses, 12 AI organization courses and two open references. The learner chooses the language of the plan and lessons independently of the source language.
+Read this when the learner names a course or reference, asks what is included, or has no learning direction during installation or first use. The [catalog](course-catalog.json) contains 53 university courses, 12 AI organization courses and two open references. A further 68 curated source entries cover courses, textbooks, academic books, articles, lecture series and individual talks. The learner chooses the language of the plan and lessons independently of the source language.
 
 ## Discover and choose
 
@@ -16,6 +16,23 @@ python scripts/omni_learning.py courses show --id harvard-positive-psychology
 If installation just finished or this is the first invocation and no topic is known, briefly explain the available routes and offer 3–5 varied choices in the learner's language. Offer the full list or any other subject. Use suitable native choice cards when available, otherwise chat. Show this once in the current interaction; do not repeat it, interrupt an existing course, infer a choice from silence, or launch a new conversation/job. A Skill cannot independently run a welcome screen when its host has no install callback. An explicit course/topic goes directly to matching/intake, without a promotional detour.
 
 `search` is conservative alias retrieval, not semantic proof. Interpret the request as an agent, inspect candidates and preserve institution/teacher/edition. A broad “幸福课”, an unknown course, conflicting institution or a different year needs clarification or explicit research; do not force it into the nearest built-in entry. Ask only what changes the course, reusing already supplied settings. An unmatched course may still be researched as a custom course; never advertise it as built in before verification.
+
+## Curated resources
+
+For a named resource, use the same `courses search`, `courses show` and `courses bind` commands as for a mapped course. Exact title matching covers both catalogs. For an exploratory request, use `courses resources` in the same conversation. Extract the learner's keywords from natural language, offer a few concrete results in their language and say when the built-in search returns fewer than requested. `courses list` lists the 67 mapped pathways and gives the additional resource count. When the learner wants all entries, include the results of both commands.
+
+```sh
+python scripts/omni_learning.py courses resources --kind article --query 图神经网络
+python scripts/omni_learning.py courses resources --kind talk --query TED
+python scripts/omni_learning.py courses resources --kind course --language zh
+python scripts/omni_learning.py courses search --query '带我学 TED 的单一故事的危险'
+python scripts/omni_learning.py courses show --id ted-adichie
+python scripts/omni_learning.py courses bind --id ted-adichie --unit u01
+```
+
+Use `--kind course|textbook|academic_book|article|lecture_series|talk` and optionally a source language or search terms. The source snapshot carries the work's title, publisher/provider, access condition, original language, official URL and suggested section or lecture locators. Read the selected chapter, article passage or recording/transcript before writing. Put its actual page, section or timestamps in the plan and source note. An entry may cover selected sections only. For an outline or recording with limited access, either use accessible evidence for a labeled companion guide with the learner's agreement, or ask for authorized materials. A publisher-only book entry requires an authorized readable material selection for a source-bound plan. Do not infer full-text access, a universal media license or access to a graded assignment from catalog inclusion.
+
+For a selected source, take the returned `course_pathway` through the same approval, `course_units`, document source mapping and light-check flow below. Use a single talk or article for a short learning goal; extend it to multiple days only when its content and the learner's goal warrant doing so.
 
 ## Establish the original-course evidence
 
@@ -55,5 +72,7 @@ Course mode requires at least one original-course source bound to the configured
 Use the actual binding SHA and source ID; `omni_courses.source_ref(binding, source_id, unit_ids)` constructs it. The source URL must equal that original source's stored URL. Source references cover all selected groups for a plan, or just the day's groups for a lesson. Add real lecture/reading sources for substantive claims and distinguish independent examples and supplements. A syllabus citation is evidence for the outline, not proof that it supports every teaching claim. Do not force five unrelated expansion links into course mode. Original sources and their locators remain visible in all exported formats; renderers prepend localized scope/pacing disclosure without changing canonical input files.
 
 If the learner also selected personal materials, their existing source policy and evidence checks still apply. Do not introduce unapproved external supplements under a strict material policy. The same source may carry both valid material and course references when its provenance actually supports both.
+
+For a publisher-only book, compare the authorized copy's title, authors and edition or ISBN with the bound publisher record before selecting chapters. Use `materials cite` on a selected chapter and add the matching `course_ref` to that same source. Its `material_ref` identifies the exact chapter excerpt and its actual origin. Keep the URL absent for a private local chapter. The book snapshot already stores the publisher's page as edition metadata. This also works under strict sourcing.
 
 The snapshot is validated independently of the current installed catalog. Existing approved courses retain their selected edition, source locators and plan; a catalog upgrade cannot retarget them. Choose another course/scope/edition through the existing new-course-version review flow. Never overwrite an active course, approval, quiz history or saved delivery destination.

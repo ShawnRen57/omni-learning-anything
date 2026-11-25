@@ -6,6 +6,10 @@ import omni_courses as courses
 def configure(sub):
     parser=sub.add_parser('courses');commands=parser.add_subparsers(dest='course_command',required=True)
     commands.add_parser('list');commands.add_parser('welcome')
+    resources = commands.add_parser('resources')
+    resources.add_argument('--kind', choices=courses.resources.KINDS)
+    resources.add_argument('--query')
+    resources.add_argument('--language', choices=['zh', 'en'])
     p=commands.add_parser('search');p.add_argument('--query',required=True)
     p=commands.add_parser('show');p.add_argument('--id',required=True)
     p=commands.add_parser('bind');p.add_argument('--id',required=True);p.add_argument('--unit',action='append',dest='units')
@@ -16,6 +20,8 @@ def configure(sub):
 
 def execute(args):
     command=args.course_command
+    if command == 'resources':
+        return courses.resources.discover(courses.catalog(), args.kind, args.query, args.language)
     if command=='list':return courses.listing()
     if command=='welcome':return courses.welcome()
     if command=='search':return courses.resolve(args.query)

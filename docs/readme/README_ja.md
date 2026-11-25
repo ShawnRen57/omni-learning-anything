@@ -26,11 +26,13 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v4.2.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[v5.0.0 スキルZIPをダウンロード](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [導入経路](../../docs/distribution-channels.md)
 
 </div>
+
+**v5.0** · 135 件の学習リソースから選べます。母語で外国語を学び、解答を分けた練習問題を使えます。図には、どこを見て何を読み取るかを示す問いが付きます。 [資料一覧](../curated-learning-resources.md) · [語学学習の例](../../examples/languages/README.md)
 
 **大学の名講義から選ぶことも、自分の本や論文から始めることも。自分のペースで学び、短い確認問題・フィードバック・復習を通じて理解を深め、ローカルファイルやクラウド文書に保存できます。**
 

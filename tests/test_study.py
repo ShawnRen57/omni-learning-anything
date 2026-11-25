@@ -184,6 +184,19 @@ class RevisionTests(StudyFixture):
         q.correct(self.root,a,'choice1','correction','one','有疑义',body)
         with self.assertRaises(ValueError):r.apply(self.root,data['id'],Path(self.tmp.name)/'next','同意')
 
+    def test_visual_guide_continuation_of_older_course_is_retryable(self):
+        r, data = self.proposal()
+        self.assertNotIn('visual_guides', data['config'])
+        data['plan']['figure']['reading'] = {
+            'question': 'Which path is shorter?', 'observation': 'The upper route has fewer steps.',
+            'source_ids': ['S1']}
+        r.propose(self.root, data)
+        destination = Path(self.tmp.name) / 'visual-course'
+        result = r.apply(self.root, data['id'], destination, '同意')
+        self.assertTrue(c.read(destination / 'config.json')['visual_guides'])
+        self.assertEqual(r.apply(self.root, data['id'], destination, '同意'), result)
+        self.assertNotIn('visual_guides', c.read(self.root / 'config.json'))
+
     def test_no_destination_changes_or_fabricated_assessment_basis(self):
         r,data=self.proposal();data['config']['delivery']={'platform':'html','mode':'local'}
         with self.assertRaises(ValueError):r.propose(self.root,data)

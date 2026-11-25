@@ -60,12 +60,12 @@ def validate(files):
         if name not in files:issues.append('Missing '+name)
         else:
             try:
-                from omni_courses import validate_course
-                data=json.loads(files[name])
-                require(data.get('schema')==1 and isinstance(data.get('courses'),list) and data['courses'],'Invalid course catalog.')
-                for course in data['courses']:validate_course(course)
-                ids=[course['id'] for course in data['courses']]
-                require(len(ids)==len(set(ids)),'Duplicate course ID.')
+                from omni_courses import validate_catalog
+                catalog = json.loads(files[name])
+                if 'scripts/omni_resources.py' in files:
+                    require(isinstance(catalog.get('resources'), list) and catalog['resources'],
+                            'Missing curated resources.')
+                validate_catalog(catalog)
             except (ValueError,TypeError,KeyError,AttributeError):issues.append('Invalid '+name)
     if 'scripts/omni_textbook_index.py' in files:
         name='references/textbook-index.json'

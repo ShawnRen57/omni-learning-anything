@@ -7630,5 +7630,1103 @@
         }
       ]
     }
+  ],
+  "resources_checked_at": "2026-11-25",
+  "resources": [
+    {
+      "id": "pku-linguistics",
+      "kind": "course",
+      "title": "语言学概论",
+      "zh_title": "语言学概论",
+      "provider": "北京大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/PKU-1205727813",
+      "focus": "语言的单位、结构与语言学分析",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "陈保亚"
+    },
+    {
+      "id": "pku-classical-chinese",
+      "kind": "course",
+      "title": "古代汉语",
+      "zh_title": "古代汉语",
+      "provider": "北京大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/PKU-1205726807",
+      "focus": "古汉语词义、语法与古典文本阅读",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "邵永海"
+    },
+    {
+      "id": "pku-physiology",
+      "kind": "course",
+      "title": "生理学（上）",
+      "zh_title": "生理学（上）",
+      "provider": "北京大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/PKU-1205915814",
+      "focus": "人体系统的正常功能与调节机制",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "王世强、柴真、罗冬根"
+    },
+    {
+      "id": "sjtu-architectural-physics",
+      "kind": "course",
+      "title": "建筑物理",
+      "zh_title": "建筑物理",
+      "provider": "上海交通大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/SJTU-1472028164",
+      "focus": "建筑环境中声、光、热的物理原理",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "兰丽"
+    },
+    {
+      "id": "sjtu-design-sketch",
+      "kind": "course",
+      "title": "造型基础—设计素描",
+      "zh_title": "造型基础—设计素描",
+      "provider": "上海交通大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/SJTU-1206432804",
+      "focus": "用素描观察与组织形体",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "孔繁强"
+    },
+    {
+      "id": "sjtu-design-innovation",
+      "kind": "course",
+      "title": "设计创新的艺术",
+      "zh_title": "设计创新的艺术",
+      "provider": "上海交通大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/SJTU-1207170808",
+      "focus": "用设计视角分析创新方案",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "韩挺、董占勋、宋东瑾"
+    },
+    {
+      "id": "fudan-classical-poetry",
+      "kind": "course",
+      "title": "古典诗词鉴赏",
+      "zh_title": "古典诗词鉴赏",
+      "provider": "复旦大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.icourse163.org/course/FUDAN-1205950804",
+      "focus": "从意象、用典与语境细读诗词",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "骆玉明"
+    },
+    {
+      "id": "tsinghua-data-structures-part-one",
+      "kind": "course",
+      "title": "数据结构(上)",
+      "zh_title": "数据结构（上）",
+      "provider": "清华大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://www.xuetangx.com/course/THU08091000384/",
+      "focus": "比较数据组织与算法代价",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ],
+      "author": "邓俊辉"
+    },
+    {
+      "id": "tsinghua-university-history",
+      "kind": "course",
+      "title": "大学历史与文化",
+      "zh_title": "大学历史与文化",
+      "provider": "清华大学",
+      "language": "zh",
+      "access": "outline",
+      "url": "https://next.xuetangx.com/course/THU04011000284/29592783",
+      "focus": "从大学史与校园传统理解大学文化",
+      "locators": [
+        "课程介绍与选定单元（课前核对当前课程大纲）"
+      ]
+    },
+    {
+      "id": "yale-ancient-greece",
+      "kind": "course",
+      "title": "Introduction to Ancient Greek History",
+      "zh_title": "古希腊史导论",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/classics/clcv-205",
+      "focus": "古希腊社会、城邦与历史证据",
+      "edition": "Fall 2007",
+      "locators": [
+        "Lectures 1–8 · Introduction",
+        "Lectures 9–16 · Sparta (cont.)",
+        "Lectures 17–24 · The Peloponnesian War, Part I"
+      ],
+      "author": "Donald Kagan"
+    },
+    {
+      "id": "yale-american-revolution",
+      "kind": "course",
+      "title": "The American Revolution",
+      "zh_title": "美国革命",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/history/hist-116",
+      "focus": "革命时期的政治诉求和历史叙述",
+      "edition": "Spring 2010",
+      "locators": [
+        "Lectures 1–9 · Introduction: Freeman's Top Five Tips for Studying the Revolution",
+        "Lectures 10–17 · Common Sense",
+        "Lectures 18–25 · Fighting the Revolution: The Big Picture"
+      ],
+      "author": "Joanne Freeman"
+    },
+    {
+      "id": "yale-modern-poetry",
+      "kind": "course",
+      "title": "Modern Poetry",
+      "zh_title": "现代诗歌",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/english/engl-310",
+      "focus": "细读现代英语诗歌的声音与形式",
+      "edition": "Spring 2007",
+      "locators": [
+        "Lectures 1–9 · Introduction",
+        "Lectures 10–17 · T.S. Eliot",
+        "Lectures 18–25 · Marianne Moore (cont.)"
+      ],
+      "author": "Langdon Hammer"
+    },
+    {
+      "id": "yale-capitalism",
+      "kind": "course",
+      "title": "Capitalism: Success, Crisis, and Reform",
+      "zh_title": "资本主义的成功、危机与改革",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/political-science/plsc-270",
+      "focus": "比较制度安排与改革案例",
+      "edition": "Fall 2009",
+      "locators": [
+        "Lectures 1–8 · Exploding Worlds and Course Introduction",
+        "Lectures 9–16 · Guest Lecture by Jim Alexander: Managing the Crooked E",
+        "Lectures 17–24 · The Case of Mister Balram Halwai"
+      ],
+      "author": "Douglas W. Rae"
+    },
+    {
+      "id": "yale-frontiers-astronomy",
+      "kind": "course",
+      "title": "Frontiers and Controversies in Astrophysics",
+      "zh_title": "天体物理前沿与争论",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/astronomy/astr-160",
+      "focus": "天体物理问题如何由观察证据约束",
+      "edition": "Spring 2007",
+      "locators": [
+        "Lectures 1–8 · Introduction",
+        "Lectures 9–16 · Special and General Relativity",
+        "Lectures 17–24 · Hubble's Law and the Big Bang (cont.)"
+      ],
+      "author": "Charles Bailyn"
+    },
+    {
+      "id": "yale-fundamentals-physics-i",
+      "kind": "course",
+      "title": "Fundamentals of Physics I",
+      "zh_title": "基础物理一",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/physics/phys-200",
+      "focus": "用模型描述经典运动",
+      "edition": "Fall 2006",
+      "locators": [
+        "Lectures 1–8 · Course Introduction and Newtonian Mechanics",
+        "Lectures 9–16 · Rotations, Part I: Dynamics of Rigid Bodies",
+        "Lectures 17–24 · Simple Harmonic Motion"
+      ],
+      "author": "Ramamurti Shankar"
+    },
+    {
+      "id": "yale-biomedical-engineering",
+      "kind": "course",
+      "title": "Frontiers of Biomedical Engineering",
+      "zh_title": "生物医学工程前沿",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/biomedical-engineering/beng-100",
+      "focus": "工程方法如何用于理解生物系统",
+      "edition": "Spring 2008",
+      "locators": [
+        "Lectures 1–9 · What Is Biomedical Engineering?",
+        "Lectures 10–17 · Biomolecular Engineering: Engineering of Immunity (cont.)",
+        "Lectures 18–25 · Biomechanics and Orthopedics"
+      ],
+      "author": "W. Mark Saltzman"
+    },
+    {
+      "id": "yale-food-psychology",
+      "kind": "course",
+      "title": "The Psychology, Biology and Politics of Food",
+      "zh_title": "饮食的心理、生物与政治",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/psychology/psyc-123",
+      "focus": "从多学科视角分析饮食选择",
+      "edition": "Fall 2008",
+      "locators": [
+        "Lectures 1–8 · Introduction: What We Eat, Why We Eat and the Key Role of Food in Modern Life",
+        "Lectures 9–16 · From Ancient to Modern Farming: The Green Revolution and the Prospect of Feeding the World",
+        "Lectures 17–23 · The Politics of Food I: How Politics Affects National Nutrition Policy (Guest Lecture by Rogan Kersh)"
+      ],
+      "author": "Kelly D. Brownell"
+    },
+    {
+      "id": "yale-milton",
+      "kind": "course",
+      "title": "Milton",
+      "zh_title": "弥尔顿",
+      "provider": "Yale University",
+      "language": "en",
+      "access": "course_material",
+      "url": "https://oyc.yale.edu/english/engl-220",
+      "focus": "从文本与历史背景细读弥尔顿诗歌",
+      "edition": "Fall 2007",
+      "locators": [
+        "Lectures 1–9 · Introduction: Milton, Power, and the Power of Milton",
+        "Lectures 10–17 · God and Mammon: The Wealth of Literary Memory",
+        "Lectures 19–24 · Paradise Lost, Books XI-XII"
+      ],
+      "author": "John Rogers"
+    },
+    {
+      "id": "openstax-astronomy",
+      "kind": "textbook",
+      "title": "Astronomy 2e",
+      "zh_title": "天文学（第二版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/astronomy-2e/pages/preface",
+      "focus": "从观测资料认识太阳系、恒星和星系",
+      "edition": "Astronomy 2e",
+      "locators": [
+        "Chapters 1–10 · 1 Science and the Universe: A Brief Tour",
+        "Chapters 11–20 · 11 The Giant Planets",
+        "Chapters 21–30 · 21 The Birth of Stars and the Discovery of Planets outside the Solar System"
+      ]
+    },
+    {
+      "id": "openstax-biology",
+      "kind": "textbook",
+      "title": "Biology 2e",
+      "zh_title": "生物学（第二版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/biology-2e/pages/preface",
+      "focus": "连接细胞、遗传和生态系统",
+      "edition": "Biology 2e",
+      "locators": [
+        "Chapters 1–16 · 1 The Study of Life",
+        "Chapters 17–32 · 17 Biotechnology and Genomics",
+        "Chapters 33–47 · 33 The Animal Body: Basic Form and Function"
+      ]
+    },
+    {
+      "id": "openstax-psychology",
+      "kind": "textbook",
+      "title": "Psychology 2e",
+      "zh_title": "心理学（第二版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/psychology-2e/pages/preface",
+      "focus": "心理学研究方法与行为解释",
+      "edition": "Psychology 2e",
+      "locators": [
+        "Chapters 1–6 · 1 Introduction to Psychology",
+        "Chapters 7–11 · 7 Thinking and Intelligence",
+        "Chapters 12–16 · 12 Social Psychology"
+      ]
+    },
+    {
+      "id": "openstax-sociology",
+      "kind": "textbook",
+      "title": "Introduction to Sociology 3e",
+      "zh_title": "社会学导论（第三版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/preface",
+      "focus": "以群体、制度和社会结构解释现象",
+      "edition": "Introduction to Sociology 3e",
+      "locators": [
+        "Chapters 1–7 · 1 An Introduction to Sociology",
+        "Chapters 8–14 · 8 Media and Technology",
+        "Chapters 15–21 · 15 Religion"
+      ]
+    },
+    {
+      "id": "openstax-economics",
+      "kind": "textbook",
+      "title": "Principles of Economics 3e",
+      "zh_title": "经济学原理（第三版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/preface",
+      "focus": "理解市场模型与宏观经济指标",
+      "edition": "Principles of Economics 3e",
+      "locators": [
+        "Chapters 1–12 · 1 Welcome to Economics!",
+        "Chapters 13–23 · 13 Positive Externalities and Public Goods",
+        "Chapters 24–34 · 24 The Aggregate Demand/Aggregate Supply Model"
+      ]
+    },
+    {
+      "id": "openstax-chemistry",
+      "kind": "textbook",
+      "title": "Chemistry 2e",
+      "zh_title": "化学（第二版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/chemistry-2e/pages/preface",
+      "focus": "从物质结构到反应过程",
+      "edition": "Chemistry 2e",
+      "locators": [
+        "Chapters 1–7 · 1 Essential Ideas",
+        "Chapters 8–14 · 8 Advanced Theories of Covalent Bonding",
+        "Chapters 15–21 · 15 Equilibria of Other Reaction Classes"
+      ]
+    },
+    {
+      "id": "openstax-physics",
+      "kind": "textbook",
+      "title": "University Physics Volume 1",
+      "zh_title": "大学物理第一卷",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/preface",
+      "focus": "建模力学、振动与波动问题",
+      "edition": "University Physics Volume 1",
+      "locators": [
+        "Chapters 1–6 · 1 Units and Measurement",
+        "Chapters 7–12 · 7 Work and Kinetic Energy",
+        "Chapters 13–17 · 13 Gravitation"
+      ]
+    },
+    {
+      "id": "openstax-calculus",
+      "kind": "textbook",
+      "title": "Calculus Volume 1",
+      "zh_title": "微积分第一卷",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/calculus-volume-1/pages/preface",
+      "focus": "导数、积分及其几何意义",
+      "edition": "Calculus Volume 1",
+      "locators": [
+        "Chapters 1–2 · 1 Functions and Graphs",
+        "Chapters 3–4 · 3 Derivatives",
+        "Chapters 5–6 · 5 Integration"
+      ]
+    },
+    {
+      "id": "openstax-world-history",
+      "kind": "textbook",
+      "title": "World History Volume 1, to 1500",
+      "zh_title": "世界史第一卷：至1500年",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/world-history-volume-1/pages/preface",
+      "focus": "比较区域历史与跨区域联系",
+      "edition": "World History Volume 1, to 1500",
+      "locators": [
+        "Chapters 1–6 · 1 Understanding the Past",
+        "Chapters 7–12 · 7 Experiencing the Roman Empire",
+        "Chapters 13–17 · 13 The Post-Roman West and the Crusading Movement"
+      ]
+    },
+    {
+      "id": "openstax-philosophy",
+      "kind": "textbook",
+      "title": "Introduction to Philosophy",
+      "zh_title": "哲学导论",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/introduction-philosophy/pages/preface",
+      "focus": "辨析哲学问题、论证与反例",
+      "edition": "Introduction to Philosophy",
+      "locators": [
+        "Chapters 1–4 · 1 Introduction to Philosophy",
+        "Chapters 5–8 · 5 Logic and Reasoning",
+        "Chapters 9–12 · 9 Normative Moral Theory"
+      ]
+    },
+    {
+      "id": "openstax-statistics",
+      "kind": "textbook",
+      "title": "Introductory Statistics 2e",
+      "zh_title": "统计学导论（第二版）",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/preface",
+      "focus": "从样本数据进行推断",
+      "edition": "Introductory Statistics 2e",
+      "locators": [
+        "Chapters 1–5 · 1 Sampling and Data",
+        "Chapters 6–9 · 6 The Normal Distribution",
+        "Chapters 10–13 · 10 Hypothesis Testing with Two Samples"
+      ]
+    },
+    {
+      "id": "openstax-entrepreneurship",
+      "kind": "textbook",
+      "title": "Entrepreneurship",
+      "zh_title": "创业学",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/entrepreneurship/pages/preface",
+      "focus": "比较商业机会与资源组织方式",
+      "edition": "Entrepreneurship",
+      "locators": [
+        "Chapters 1–5 · 1 The Entrepreneurial Perspective",
+        "Chapters 6–10 · 6 Problem Solving and Need Recognition Techniques",
+        "Chapters 11–15 · 11 Business Model and Plan"
+      ]
+    },
+    {
+      "id": "openstax-business-ethics",
+      "kind": "textbook",
+      "title": "Business Ethics",
+      "zh_title": "商业伦理",
+      "provider": "OpenStax · Rice University",
+      "language": "en",
+      "access": "read",
+      "url": "https://openstax.org/books/business-ethics/pages/preface",
+      "focus": "分析商业决策中的价值冲突",
+      "edition": "Business Ethics",
+      "locators": [
+        "Chapters 1–4 · 1 Why Ethics Matter",
+        "Chapters 5–8 · 5 The Impact of Culture and Time on Business Ethics",
+        "Chapters 9–11 · 9 Professions under the Microscope"
+      ]
+    },
+    {
+      "id": "goodfellow-deep-learning",
+      "kind": "academic_book",
+      "title": "Deep Learning",
+      "zh_title": "深度学习（花书）",
+      "provider": "MIT Press / authors",
+      "language": "en",
+      "access": "read",
+      "url": "https://www.deeplearningbook.org/",
+      "focus": "神经网络原理与深度学习基础",
+      "locators": [
+        "Part I · Applied Math and Machine Learning Basics",
+        "Part II · Modern Practical Deep Networks",
+        "Part III · Deep Learning Research"
+      ]
+    },
+    {
+      "id": "murphy-probml",
+      "kind": "academic_book",
+      "title": "Probabilistic Machine Learning: An Introduction",
+      "zh_title": "概率机器学习导论",
+      "provider": "MIT Press / authors",
+      "language": "en",
+      "access": "read",
+      "url": "https://probml.github.io/pml-book/book1.html",
+      "focus": "概率建模、不确定性与推断",
+      "locators": [
+        "Short table of contents · selected chapters in the linked draft PDF"
+      ]
+    },
+    {
+      "id": "sutton-reinforcement-learning",
+      "kind": "academic_book",
+      "title": "Reinforcement Learning: An Introduction",
+      "zh_title": "强化学习导论",
+      "provider": "MIT Press",
+      "language": "en",
+      "access": "publisher",
+      "url": "https://mitpress.mit.edu/9780262039246/reinforcement-learning/",
+      "focus": "比较策略、价值估计与学习",
+      "locators": [
+        "Second edition · publisher record, ISBN 9780262039246"
+      ],
+      "edition": "Second edition (2018)",
+      "author": "Richard S. Sutton, Andrew G. Barto"
+    },
+    {
+      "id": "jurafsky-slp",
+      "kind": "academic_book",
+      "title": "Speech and Language Processing",
+      "zh_title": "语音与语言处理",
+      "provider": "Stanford University / authors",
+      "language": "en",
+      "access": "read",
+      "url": "https://web.stanford.edu/~jurafsky/slp3/",
+      "focus": "自然语言处理与语音建模，按当前草稿版本查证",
+      "locators": [
+        "Words and Tokens",
+        "N-gram Language Models",
+        "Logistic Regression and Text Classification"
+      ],
+      "edition": "3rd edition draft, 2026-08-19"
+    },
+    {
+      "id": "boyd-convex",
+      "kind": "academic_book",
+      "title": "Convex Optimization",
+      "zh_title": "凸优化",
+      "provider": "Stanford University / authors",
+      "language": "en",
+      "access": "read",
+      "url": "https://web.stanford.edu/~boyd/cvxbook/",
+      "focus": "辨认凸问题并解释优化条件",
+      "locators": [
+        "Download · Book · select original chapter(s)"
+      ]
+    },
+    {
+      "id": "boyd-vmls",
+      "kind": "academic_book",
+      "title": "Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares",
+      "zh_title": "应用线性代数导论",
+      "provider": "Stanford University / authors",
+      "language": "en",
+      "access": "read",
+      "url": "https://web.stanford.edu/~boyd/vmls/",
+      "focus": "向量、矩阵与最小二乘的应用",
+      "locators": [
+        "Download · Book · select original chapter(s)"
+      ]
+    },
+    {
+      "id": "d2l-zh",
+      "kind": "academic_book",
+      "title": "动手学深度学习",
+      "zh_title": "动手学深度学习",
+      "provider": "《动手学深度学习》作者团队",
+      "language": "zh",
+      "access": "read",
+      "url": "https://zh.d2l.ai/",
+      "focus": "通过可运行示例建立深度学习直觉",
+      "locators": [
+        "第 2 章 预备知识",
+        "第 3 章 线性神经网络",
+        "第 4 章 多层感知机"
+      ],
+      "edition": "中文在线版 2.0.0"
+    },
+    {
+      "id": "wickham-r4ds",
+      "kind": "academic_book",
+      "title": "R for Data Science (2e)",
+      "zh_title": "R 数据科学（第二版）",
+      "provider": "O’Reilly / authors",
+      "language": "en",
+      "access": "read",
+      "url": "https://r4ds.hadley.nz/",
+      "focus": "数据整理、可视化与分析工作流",
+      "locators": [
+        "Whole game",
+        "Visualize",
+        "Transform"
+      ]
+    },
+    {
+      "id": "distill-attention",
+      "kind": "article",
+      "title": "Attention and Augmented Recurrent Neural Networks",
+      "zh_title": "注意力与增强循环神经网络",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2016/augmented-rnns/",
+      "focus": "用可视化理解可微读写与注意力",
+      "locators": [
+        "Neural Turing Machines",
+        "Attentional Interfaces",
+        "Adaptive Computation Time"
+      ]
+    },
+    {
+      "id": "distill-tsne",
+      "kind": "article",
+      "title": "How to Use t-SNE Effectively",
+      "zh_title": "正确使用 t-SNE",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2016/misread-tsne/",
+      "focus": "辨别降维图像中可解释与易误读的部分",
+      "locators": [
+        "1. Those hyperparameters really matter",
+        "2. Cluster sizes in a t-SNE plot mean nothing",
+        "3. Distances between clusters might not mean anything"
+      ]
+    },
+    {
+      "id": "distill-feature-visualization",
+      "kind": "article",
+      "title": "Feature Visualization",
+      "zh_title": "特征可视化",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2017/feature-visualization/",
+      "focus": "研究神经网络内部特征",
+      "locators": [
+        "Feature Visualization by Optimization",
+        "Diversity",
+        "Interaction between Neurons"
+      ]
+    },
+    {
+      "id": "distill-momentum",
+      "kind": "article",
+      "title": "Why Momentum Really Works",
+      "zh_title": "动量法为什么有效",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2017/momentum/",
+      "focus": "梯度下降与动量的动态差异",
+      "locators": [
+        "First Steps: Gradient Descent",
+        "Example: Polynomial Regression",
+        "The Dynamics of Momentum"
+      ]
+    },
+    {
+      "id": "distill-deconvolution",
+      "kind": "article",
+      "title": "Deconvolution and Checkerboard Artifacts",
+      "zh_title": "反卷积与棋盘伪影",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2016/deconv-checkerboard/",
+      "focus": "输出网格图案与卷积结构之间的关系",
+      "locators": [
+        "Deconvolution & Overlap",
+        "Overlap & Learning",
+        "Better Upsampling"
+      ]
+    },
+    {
+      "id": "distill-gnn",
+      "kind": "article",
+      "title": "A Gentle Introduction to Graph Neural Networks",
+      "zh_title": "图神经网络导论",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2021/gnn-intro/",
+      "focus": "图表示、消息传递与预测",
+      "locators": [
+        "Graphs and where to find them",
+        "What types of problems have graph structured data?",
+        "The challenges of using graphs in machine learning"
+      ]
+    },
+    {
+      "id": "distill-receptive-fields",
+      "kind": "article",
+      "title": "Computing Receptive Fields of Convolutional Neural Networks",
+      "zh_title": "卷积神经网络感受野",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2019/computing-receptive-fields/",
+      "focus": "从网络结构推导感受野",
+      "locators": [
+        "Overview of the article",
+        "Problem setup",
+        "Single-path networks"
+      ]
+    },
+    {
+      "id": "distill-gaussian-processes",
+      "kind": "article",
+      "title": "A Visual Exploration of Gaussian Processes",
+      "zh_title": "高斯过程的可视化探索",
+      "provider": "Distill",
+      "language": "en",
+      "access": "read",
+      "url": "https://distill.pub/2019/visual-exploration-gaussian-processes/",
+      "focus": "从直观图形理解高斯过程",
+      "locators": [
+        "Multivariate Gaussian distributions",
+        "Gaussian Processes",
+        "Conclusion"
+      ]
+    },
+    {
+      "id": "sep-aesthetic-judgment",
+      "kind": "article",
+      "title": "Aesthetic Judgment",
+      "zh_title": "审美判断",
+      "provider": "Stanford Encyclopedia of Philosophy",
+      "language": "en",
+      "access": "read",
+      "url": "https://plato.stanford.edu/entries/aesthetic-judgment/",
+      "focus": "审美判断的主体性与普遍性",
+      "locators": [
+        "1. The Judgment of Taste",
+        "2. Other Features of Aesthetic Judgments",
+        "3. Disinterestedness"
+      ]
+    },
+    {
+      "id": "sep-scientific-method",
+      "kind": "article",
+      "title": "Scientific Method",
+      "zh_title": "科学方法",
+      "provider": "Stanford Encyclopedia of Philosophy",
+      "language": "en",
+      "access": "read",
+      "url": "https://plato.stanford.edu/entries/scientific-method/",
+      "focus": "科学方法的历史与哲学解释",
+      "locators": [
+        "1. Overview and organizing themes",
+        "2. Historical Review: Aristotle to Mill",
+        "3. Logic of method and critical responses"
+      ]
+    },
+    {
+      "id": "sep-personal-identity",
+      "kind": "article",
+      "title": "Personal Identity",
+      "zh_title": "人格同一性",
+      "provider": "Stanford Encyclopedia of Philosophy",
+      "language": "en",
+      "access": "read",
+      "url": "https://plato.stanford.edu/entries/identity-personal/",
+      "focus": "区分人格持续性问题与判定标准",
+      "locators": [
+        "1. The Problems of Personal Identity",
+        "2. Understanding the Persistence Question",
+        "3. Accounts of Our Persistence"
+      ]
+    },
+    {
+      "id": "sep-justice",
+      "kind": "article",
+      "title": "Justice",
+      "zh_title": "正义",
+      "provider": "Stanford Encyclopedia of Philosophy",
+      "language": "en",
+      "access": "read",
+      "url": "https://plato.stanford.edu/entries/justice/",
+      "focus": "对照不同的正义观念及其应用",
+      "locators": [
+        "1. Justice: Mapping the Concept",
+        "2. Justice: Four Distinctions",
+        "3. The Scope of Justice"
+      ]
+    },
+    {
+      "id": "sep-chinese-ethics",
+      "kind": "article",
+      "title": "Chinese Ethics",
+      "zh_title": "中国伦理学",
+      "provider": "Stanford Encyclopedia of Philosophy",
+      "language": "en",
+      "access": "read",
+      "url": "https://plato.stanford.edu/entries/ethics-chinese/",
+      "focus": "比较中国哲学传统的伦理论证",
+      "locators": [
+        "2. Confucian Ethics",
+        "3. Mohist Ethics",
+        "4. Daoist Ethics"
+      ]
+    },
+    {
+      "id": "sep-music",
+      "kind": "article",
+      "title": "The Philosophy of Music",
+      "zh_title": "音乐哲学",
+      "provider": "Stanford Encyclopedia of Philosophy",
+      "language": "en",
+      "access": "read",
+      "url": "https://plato.stanford.edu/entries/music/",
+      "focus": "音乐经验、价值与作品身份",
+      "locators": [
+        "1. What Is Music?",
+        "2. Musical Ontology",
+        "3. Music and the Emotions"
+      ]
+    },
+    {
+      "id": "feynman-lectures-i",
+      "kind": "lecture_series",
+      "title": "The Feynman Lectures on Physics, Volume I",
+      "zh_title": "费曼物理学讲义第一卷",
+      "provider": "California Institute of Technology",
+      "language": "en",
+      "access": "read",
+      "url": "https://www.feynmanlectures.caltech.edu/I_toc.html",
+      "focus": "以原始分讲次序学习力学、辐射和热",
+      "locators": [
+        "Volume I · chapters 1–17",
+        "Volume I · chapters 18–35",
+        "Volume I · chapters 36–52"
+      ]
+    },
+    {
+      "id": "feynman-lectures-ii",
+      "kind": "lecture_series",
+      "title": "The Feynman Lectures on Physics, Volume II",
+      "zh_title": "费曼物理学讲义第二卷",
+      "provider": "California Institute of Technology",
+      "language": "en",
+      "access": "read",
+      "url": "https://www.feynmanlectures.caltech.edu/II_toc.html",
+      "focus": "以原始分讲次序学习电磁学与物质",
+      "locators": [
+        "Volume II · chapters 1–14",
+        "Volume II · chapters 15–28",
+        "Volume II · chapters 29–42"
+      ]
+    },
+    {
+      "id": "feynman-lectures-iii",
+      "kind": "lecture_series",
+      "title": "The Feynman Lectures on Physics, Volume III",
+      "zh_title": "费曼物理学讲义第三卷",
+      "provider": "California Institute of Technology",
+      "language": "en",
+      "access": "read",
+      "url": "https://www.feynmanlectures.caltech.edu/III_toc.html",
+      "focus": "以原始分讲次序学习量子力学",
+      "locators": [
+        "Volume III · chapters 1–7",
+        "Volume III · chapters 8–14",
+        "Volume III · chapters 15–21"
+      ]
+    },
+    {
+      "id": "ri-growing-universe",
+      "kind": "talk",
+      "title": "Growing up in the universe – Waking up in the universe (1991)",
+      "zh_title": "在宇宙中成长：在宇宙中醒来（第一讲）",
+      "provider": "The Royal Institution",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.rigb.org/explore-science/explore/video/growing-universe-waking-universe-1991",
+      "focus": "生命演化、适应与复杂性",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Richard Dawkins"
+    },
+    {
+      "id": "ri-truth-about-ai",
+      "kind": "lecture_series",
+      "title": "The truth about AI",
+      "zh_title": "人工智能的真相",
+      "provider": "The Royal Institution",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures",
+      "focus": "理解人工智能系统如何学习与使用数据",
+      "locators": [
+        "Lecture 1 - The truth about AI",
+        "Lecture 2 - My AI life",
+        "Lecture 3. The future of AI: dream or a nightmare?"
+      ],
+      "author": "Michael Wooldridge"
+    },
+    {
+      "id": "ted-boroditsky",
+      "kind": "talk",
+      "title": "How language shapes the way we think",
+      "zh_title": "语言如何塑造思维",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/lera_boroditsky_how_language_shapes_the_way_we_think",
+      "focus": "Lera Boroditsky 以认知实验解释语言和思维",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Lera Boroditsky"
+    },
+    {
+      "id": "ted-adichie",
+      "kind": "talk",
+      "title": "The danger of a single story",
+      "zh_title": "单一故事的危险",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/chimamanda_ngozi_adichie_the_danger_of_a_single_story",
+      "focus": "Chimamanda Ngozi Adichie 讨论叙事与刻板印象",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Chimamanda Ngozi Adichie"
+    },
+    {
+      "id": "ted-rosling",
+      "kind": "talk",
+      "title": "The best stats you’ve ever seen",
+      "zh_title": "你见过的最精彩的统计数据",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen",
+      "focus": "Hans Rosling 用统计图揭示发展差异",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Hans Rosling"
+    },
+    {
+      "id": "ted-robinson",
+      "kind": "talk",
+      "title": "Do schools kill creativity?",
+      "zh_title": "学校会扼杀创造力吗",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/sir_ken_robinson_do_schools_kill_creativity",
+      "focus": "Sir Ken Robinson 讨论教育与创造力",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Sir Ken Robinson"
+    },
+    {
+      "id": "ted-cain",
+      "kind": "talk",
+      "title": "The power of introverts",
+      "zh_title": "内向者的力量",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/susan_cain_the_power_of_introverts",
+      "focus": "Susan Cain 讨论内向与外向环境",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Susan Cain"
+    },
+    {
+      "id": "ted-urban",
+      "kind": "talk",
+      "title": "Inside the mind of a master procrastinator",
+      "zh_title": "拖延者的大脑",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/tim_urban_inside_the_mind_of_a_master_procrastinator",
+      "focus": "Tim Urban 用实例讨论拖延",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Tim Urban"
+    },
+    {
+      "id": "ted-headlee",
+      "kind": "talk",
+      "title": "10 ways to have a better conversation",
+      "zh_title": "更好交谈的十种方式",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/celeste_headlee_10_ways_to_have_a_better_conversation",
+      "focus": "Celeste Headlee 讨论倾听与追问",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Celeste Headlee"
+    },
+    {
+      "id": "ted-treasure",
+      "kind": "talk",
+      "title": "How to speak so that people want to listen",
+      "zh_title": "怎样说话让人愿意听",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/julian_treasure_how_to_speak_so_that_people_want_to_listen",
+      "focus": "Julian Treasure 讨论声音和表达习惯",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Julian Treasure"
+    },
+    {
+      "id": "ted-brown",
+      "kind": "talk",
+      "title": "The power of vulnerability",
+      "zh_title": "脆弱的力量",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/brene_brown_the_power_of_vulnerability",
+      "focus": "Brené Brown 讨论与他人建立连接",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Brené Brown"
+    },
+    {
+      "id": "ted-adichie-feminists",
+      "kind": "talk",
+      "title": "We should all be feminists",
+      "zh_title": "我们都应该是女性主义者",
+      "provider": "TED",
+      "language": "en",
+      "access": "watch",
+      "url": "https://www.ted.com/talks/chimamanda_ngozi_adichie_we_should_all_be_feminists",
+      "focus": "Chimamanda Ngozi Adichie 以个人经历讨论性别",
+      "locators": [
+        "Talk · original recording and available transcript"
+      ],
+      "author": "Chimamanda Ngozi Adichie"
+    }
   ]
 }

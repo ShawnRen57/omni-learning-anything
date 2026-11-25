@@ -1,0 +1,16 @@
+{
+  "layout": "fraction-bars",
+  "title": "为什么 1/2 和 2/4 一样长？",
+  "unit": "每条纸带全长 1 米，都从零点开始。深色部分表示取出的长度。",
+  "bars": [
+    {"numerator": 1, "denominator": 2},
+    {"numerator": 2, "denominator": 4},
+    {"numerator": 3, "denominator": 4}
+  ],
+  "credit": "原创教学图，等值分数的纸带模型参考 OpenStax《Prealgebra 2e》第 4.1 节。",
+  "reading": {
+    "question": "沿着 1/2 刻度向下看。哪两条纸带的深色部分刚好停在这里？第三条多了多少米？",
+    "observation": "第一条取了两格中的一格，第二条取了四格中的两格，深色部分都停在中点。第三条多出四小格中的一格，所以比它们长 1/4 米。",
+    "source_ids": ["S1"]
+  }
+}

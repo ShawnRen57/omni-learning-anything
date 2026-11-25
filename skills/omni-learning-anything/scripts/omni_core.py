@@ -44,6 +44,9 @@ def validate_plan(plan):
 
 def validate_config(config):
     ZoneInfo(config['timezone'])
+    if 'language_course' in config:
+        from omni_language_learning import validate_profile
+        validate_profile(config['language_course'])
     if 'course_pathway' in config:
         from omni_courses import validate_binding
         validate_binding(config['course_pathway'])
@@ -67,12 +70,16 @@ def validate_config(config):
     if 'language' in config:
         from omni_locale import language
         language(config['language'])
-    for key in ('sample_mode','immediate_day01'):
+    for key in ('sample_mode','immediate_day01','visual_guides'):
         if key in config and type(config[key]) is not bool:
             raise ValueError(key+' must be a boolean.')
     if 'delivery' in config:
         from omni_delivery import validate_delivery
         validate_delivery(config['delivery'])
+
+
+def config_for_plan(config, plan):
+    return dict(config, visual_guides=True) if 'reading' in plan.get('figure', {}) else config
 
 
 def initialize(root,config,plan):
@@ -82,7 +89,13 @@ def initialize(root,config,plan):
         if skill.is_file() and re.search(r'^name: omni-learning-anything\s*$',skill.read_text(encoding='utf-8'),re.M):
             raise ValueError('Keep course archives outside the installed Skill folder so updates preserve learner data.')
     root.mkdir(parents=True,exist_ok=True)
+    config = config_for_plan(config, plan)
     validate_plan(plan); validate_config(config)
+    if config.get('visual_guides'):
+        from omni_figures import validate_reading
+        validate_reading(plan.get('figure', {}), [src.get('id') for src in plan.get('sources', [])], required=True)
+    from omni_language_learning import validate_plan as validate_language_plan
+    validate_language_plan(config, plan)
     from omni_courses import validate_course_plan
     validate_course_plan(config,plan)
     if config.get('materials'):

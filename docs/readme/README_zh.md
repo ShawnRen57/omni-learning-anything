@@ -26,27 +26,28 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[下载 v4.2.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[下载 v5.0.0 技能 ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [安装渠道说明](../../docs/distribution-channels.md)
 
 </div>
 
-**选一门大学课程、一本中小学教材，或带上自己的书和论文。按自己的节奏读图文讲义、做短测，再根据反馈调整学习。**
+**用中文上第一节日语课，花一小时读懂一场 TED 演讲，或用一个月精读一本书。从你想学会的那件事开始。**
 
-把“我想学……”变成走得下去的学习计划。你可以从 65 门课程或 2 套开放参考资料开始，也可以提出自己的目标、上传个人材料。先确认计划，再开始每日学习。
+把“我想学……”变成走得下去的学习计划。你可以从 135 个内置来源中挑选，也可以拿自己的书、论文或学校教材来学。先确认计划，再开始每日学习。
 
-发一句 **“我想学清华中国建筑史”** 或 **“我想学 OpenAI Applied AI Foundations”** 就能开始。Agent 会识别原课程，复用你已提供的信息，只补问影响学习计划的必要细节。
+试试 **“我日语零基础，用中文教我，目标是第一次上课时能自我介绍”**，或 **“找一场关于讲故事的 TED 演讲，带我用一小时读懂它”**。
 
 | 功能名称 | 功能简介 |
 | --- | --- |
 | 个性化学习路径 | 从一句想学的主题或明确目标开始，按你的基础、用途和可投入时间规划。 |
-| 内置课程与开放参考 | 选择 65 门课程和 2 套开放参考，保留来源版本、原课顺序和原始学习量。 |
+| 内置学习资源库 | 67 条已有学习路径，加上 68 个新来源。可按机构、主题和资源类型查找公开课、教材、学术书、深度文章及演讲。[浏览新增资源](../../docs/curated-learning-resources.md) |
+| 用母语从零学外语 | 按真实场景学表达，练习看外语懂意思、看母语说或写外语。练习卷与参考答案分开，可混入前几课的内容复习。听辨支持原声或本机合成语音。[查看两套样例](../../examples/languages/README.md) |
 | 中国大陆中小学教材 | 检索小学到普通高中的 1,949 条教材索引，支持「最新版」「2025 版」等说法。索引无法确认时，Agent 会查上游仓库并联网找原书。找到可核验的原书后，可按章节、概念或公式学习，引用教材原图与页码。 |
 | 用自己的材料学习 | 导入 PDF、DOCX、EPUB、PPTX、HTML、Markdown、TXT、SRT 或 VTT，选择页码、章节或时间段，以及是否补充外部资料。 |
 | 来源与扩展阅读 | 关键讲解可回溯到原书页码、章节、时间戳，或有核验日期和链接的网络来源。 |
 | 先看计划再开课 | 先审阅每天学什么、预计花多久，确认后再开始生成课程。 |
-| 图文学习材料 | 每课围绕一个重点，配图、例题、短练习、自查和回顾。 |
+| 教学配图与读图练习 | 新图附读图问题、可定位的观察线索和来源。比较图看对应关系，流程图顺着箭头找变化，教材图可对照原页观察细节。 |
 | 十种学习语言 | 学习计划和材料的语言可独立于原资料选择，阿拉伯语支持从右向左排版。 |
 | 四种本地格式 | 输出 PDF、内嵌图片的离线 HTML、DOCX 或 Markdown。 |
 | 本地与云端保存 | 保存到 Obsidian 本地库，或授权连接 Notion、飞书、钉钉和腾讯文档。 |
@@ -61,13 +62,21 @@
 <a id="examples"></a>
 <a href="../../examples/README.md"><img src="../../docs/assets/learning-sample-gallery.png" alt="四行五列，共 20 张学习样张，首行是五份现代教材中文讲义" width="100%"></a>
 
-[查看五份现代教材中文讲义](../../examples/textbooks/README.md)
+[用中文学日语、用英语学德语](../../examples/languages/README.md) · [看教学配图、读图问题与出处](../../examples/teaching-figures/README.md) · [五份现代教材中文讲义](../../examples/textbooks/README.md)
+
+<details>
+<summary>预览一张实际生成的分数教学图</summary>
+
+<img src="../../examples/teaching-figures/equivalent-fractions.png" width="720" alt="三条纸带共用零点和一米刻度。二分之一和四分之二的色块在同一点结束。">
+
+</details>
 
 <a id="versions"></a>
 ## 版本指南
 
 | 版本 | 对学习的帮助 |
 | --- | --- |
+| **[v5.0.0](../product-scope-v5.md)** | 支持母语学外语、双向练习与独立答案；用标注图帮助理解，并增加 68 个可选学习来源。 |
 | **[v4.2.0](../../skills/omni-learning-anything/references/textbooks.md)** | 按版年或「最新版」查找教材。索引没有合适版本时，自动联网查找并核验原书。 |
 | **[v4.1.0](../../skills/omni-learning-anything/references/assessment.md)** | 用新情境或辨错题检验能否举一反三。每题先回查原文，再验算或核对答案。 |
 | **[v4.0.0](../../skills/omni-learning-anything/references/textbooks.md)** | 按中国大陆中小学教材生成分学段学习材料，支持章节、概念和公式，并标明原图页码。 |
@@ -81,7 +90,7 @@
 
 告诉 Agent：**“展示内置课程”**。选课程、学习语言与可用时间，Agent 会先提交带原课程映射的计划。这些是依据公开课程来源编排的独立学习路径，不打包完整授课内容，不代表大学背书，也不提供大学证书。
 
-[查看课程版本、授课者与访问说明](../../docs/course-catalog-sources.md)
+下表列出已有的 67 条学习路径。新增的 68 项可按资源类型浏览，每项附原始入口与获取条件。[课程版本及授课者](../course-catalog-sources.md) · [新增书籍、公开课、文章与讲座](../curated-learning-resources.md)
 
 | 学校或机构 | 课程与开放参考资料 |
 | --- | --- |

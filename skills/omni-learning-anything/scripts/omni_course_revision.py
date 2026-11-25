@@ -79,7 +79,8 @@ def apply(root,proposal_id,destination,consent):
         continuation={'schema':1,'proposal_hash':value['hash'],'source_course':str(root),'source_binding':value['binding'],'consent':consent}
         if destination.exists():
             p=destination/'continuation.json'
-            require(p.is_file() and c.read(p)['proposal_hash']==value['hash'] and c.read(destination/'config.json')==data['config'] and c.read(destination/'plan.json')==data['plan'], 'Destination exists; no existing course or files were changed.')
+            expected_config = c.config_for_plan(data['config'], data['plan'])
+            require(p.is_file() and c.read(p)['proposal_hash']==value['hash'] and c.read(destination/'config.json')==expected_config and c.read(destination/'plan.json')==data['plan'], 'Destination exists; no existing course or files were changed.')
             return {'project':str(destination),'status':c.read(destination/'state.json')['status'],'proposal_hash':value['hash']}
         destination.parent.mkdir(parents=True,exist_ok=True)
         # Build privately on the same filesystem. Failures leave no partial learner course.

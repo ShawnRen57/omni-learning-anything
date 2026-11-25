@@ -100,3 +100,39 @@ class LanguageTests(unittest.TestCase):
    doc=pdfium.PdfDocument(root/m['pdf'])
    text=''.join(doc[i].get_textpage().get_text_range() for i in range(len(doc)));doc.close()
    self.assertIn('LATIN_PARAGRAPH',text)
+
+ def test_pdf_mixed_target_scripts_keep_shapes_and_word_order(self):
+  import omni_pdf as pdf
+  import pypdfium2 as pdfium
+  from unicodedata import normalize
+  if not pdf.executable('xelatex'):
+   self.skipTest('XeLaTeX required')
+  for native, target, phrase in [('zh', '日本語', '図と안녕하세요'), ('en', 'Arabic', 'صباح الخير')]:
+   with self.subTest(native=native), tempfile.TemporaryDirectory() as tmp:
+    root = Path(tmp)
+    plan = course(root)
+    config = core.read(root/'config.json')
+    config.update(language=native, language_course=dict(native=native, target=target,
+                  starting_point='beginner', goal='Recognize a greeting'))
+    core.save(root/'config.json', config)
+    plan['days'][0]['can_do'] = 'Recognize a greeting'
+    frame = '请读原文「{}」。[S1]' if native=='zh' else 'The expression is {} [S1].'
+    plan['sections'][0]['body'] = frame.format(phrase)
+    core.save(root/'plan.json', plan)
+    manifest = pdf.render(root, root/'plan.json', 'plan')
+    doc = pdfium.PdfDocument(root/manifest['pdf'])
+    page = doc[0]
+    text = page.get_textpage()
+    if native=='zh':
+     self.assertIn('図', text.get_text_bounded())
+     self.assertIn('안녕하세요',text.get_text_bounded())
+    else:
+     # An LTR font can yield perfect extracted words while displaying them in
+     # the wrong order. Check the physical positions of one letter in each word.
+     left = {}
+     for index in range(text.count_chars()):
+      ch = normalize('NFKC', text.get_text_range(index, 1))
+      if ch in ('ص','ر'):
+       left[ch] = text.get_charbox(index)[0]
+     self.assertGreater(left['ص'], left['ر'])
+    doc.close()

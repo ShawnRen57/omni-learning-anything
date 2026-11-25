@@ -1,4 +1,4 @@
-"""Validate the generated v2 skill ZIP in an isolated extraction; no external writes."""
+"""Validate a generated skill ZIP in an isolated extraction; no external writes."""
 import argparse
 import hashlib
 import re
@@ -40,6 +40,19 @@ with tempfile.TemporaryDirectory(prefix='omni-v2-install-') as temp:
     import json
     assert json.loads(result.stdout)['stage'] == 'location'
     subprocess.run([sys.executable,str(cli),'--project',str(target),'doctor'],check=True,capture_output=True)
+    if int(version.split('.')[0]) >= 5:
+        def invoke(*args):
+            return json.loads(subprocess.run([sys.executable, str(cli), *args], check=True,
+                                             capture_output=True, text=True).stdout)
+        talks = invoke('courses', 'resources', '--kind', 'talk', '--query', 'TED')
+        assert talks['total'] >= 10
+        selected = talks['resources'][0]['id']
+        bound = invoke('courses', 'bind', '--id', selected)
+        assert bound['course']['id'] == selected
+        for name in ('figures', 'languages', 'language-starters'):
+            assert (skill / 'references' / (name + '.md')).is_file(), name
+        for command in ('figure-build', 'language', 'language-audio'):
+            subprocess.run([sys.executable, str(cli), command, '--help'], check=True, capture_output=True)
     checksum = hashlib.sha256(archive.read_bytes()).hexdigest()
     assert checksum in (archive.parent/'SHA256SUMS').read_text()
-    print('v2 ZIP extraction, runtime syntax, CLI version/doctor, provider resources and SHA256: passed')
+    print(f'v{version} ZIP extraction, runtime checks, CLI and SHA256 verification passed')

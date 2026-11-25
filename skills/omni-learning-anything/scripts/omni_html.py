@@ -1,4 +1,5 @@
 """One offline HTML document; only the learner's outbound source links use network."""
+from omni_figures import caption
 from omni_locale import source_labels
 import base64
 from html import escape
@@ -12,7 +13,7 @@ def serialize(data,plan,config,image,date,key):
     mime='image/png' if image.suffix.lower()=='.png' else 'image/jpeg'
     uri='data:'+mime+';base64,'+base64.b64encode(image.read_bytes()).decode('ascii')
     labels=source_labels(config); e=escape
-    figure='<figure><img src="'+uri+'" alt="'+e(data['figure']['caption'],quote=True)+'"><figcaption>'+e(data['figure']['caption'])+'<br><small>'+e(data['figure']['credit'])+'</small></figcaption></figure>'
+    figure='<figure><img src="'+uri+'" alt="'+e(caption(data['figure']),quote=True)+'"><figcaption>'+e(caption(data['figure']))+'<br><small>'+e(data['figure']['credit'])+'</small></figcaption></figure>'
     parts=[]
     for i,s in enumerate(data['sections']):
         parts.append('<section><h2>'+e(s['title'])+'</h2>'+''.join('<p>'+e(p).replace('\n','<br>')+'</p>' for p in s['body'].split('\n\n'))+'</section>')

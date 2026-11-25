@@ -143,9 +143,13 @@ def validate_figure(root, config, figure, sources):
     require(type(page) is int and page > 0, 'Invalid textbook figure page.')
     page_units = {unit['id'] for unit in item['units'] if unit['page'] == page}
     require(bool(page_units.intersection(selection['units'])), 'Figure page is outside the selected textbook scope.')
-    require(any(source.get('material_ref', {}).get('unit') in page_units
-                and source.get('material_ref', {}).get('version') == book['version'] for source in sources),
-            'Cite evidence from the same page as the original textbook figure.')
+    page_sources = {source['id'] for source in sources
+                    if source.get('material_ref', {}).get('unit') in page_units
+                    and source['material_ref'].get('version') == book['version']}
+    require(bool(page_sources), 'Cite evidence from the same page as the original textbook figure.')
+    if 'reading' in figure:
+        require(bool(page_sources.intersection(figure['reading']['source_ids'])),
+                'Cite the original textbook figure page in its reading guide.')
     sha = ref['sha256']
     require(isinstance(sha, str) and re.fullmatch('[0-9a-f]{64}', sha), 'Invalid textbook figure checksum.')
     path = materials.path(root, 'textbook-figures', sha + '.png')

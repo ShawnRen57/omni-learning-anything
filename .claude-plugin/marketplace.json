@@ -5,15 +5,15 @@
   },
   "metadata": {
     "description": "Omni Learning Anything — portable Agent Skill for personalized learning plans and illustrated daily lessons in files and cloud documents.",
-    "version": "4.2.0"
+    "version": "5.0.0"
   },
   "plugins": [
     {
       "name": "omni-learning-anything",
-      "description": "Start from a university or AI organization course pathway, an open reference, your own materials or a personal learning goal; follow illustrated lessons with optional light checks, feedback and review in files or connected documents.",
+      "description": "Learn from curated courses, books, articles and talks, or study a new language through your own. Create illustrated lessons, practice sheets and source-grounded checks.",
       "source": "./",
       "strict": true,
-      "version": "4.2.0"
+      "version": "5.0.0"
     }
   ]
 }

@@ -8,6 +8,8 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import omni_resources as resources
+
 CATALOG=Path(__file__).resolve().parents[1]/'references/course-catalog.json'
 
 PROVIDER_ALIASES = {
@@ -30,6 +32,10 @@ PROVIDER_ALIASES = {
     'microsoft': ('microsoft', '微软'),
     'google': ('google', '谷歌'),
     'smarthistory': ('smarthistory',),
+    'ted': ('ted',),
+    'openstax': ('openstax',),
+    'distill': ('distill',),
+    'feynman': ('feynman', '费曼'),
 }
 
 
@@ -53,8 +59,11 @@ def validate_course(course):
         require(isinstance(course.get(field),list) and all(text(x) for x in course[field]),'Course needs '+field+' as a text list.')
     provider_type = course.get('provider_type', 'university')
     pathway_type = course.get('pathway_type', 'course')
-    require(provider_type in ('university', 'ai_organization', 'cultural_organization'), 'Unknown provider type.')
-    require(pathway_type in ('course', 'reference'), 'Unknown pathway type.')
+    require(provider_type in ('university', 'ai_organization', 'cultural_organization', 'source_provider'), 'Unknown provider type.')
+    require(pathway_type in ('course', 'reference', 'resource'), 'Unknown pathway type.')
+    if pathway_type == 'resource':
+        require(course.get('resource_kind') in resources.KINDS and course.get('access_mode') in resources.ACCESS,
+                'Unknown resource kind or access condition.')
     require(course['aliases'] and (course['instructors'] or provider_type != 'university' or pathway_type == 'reference'),
             'Pathway needs discoverable aliases and university courses need instructors.')
     require(isinstance(course.get('pace'),dict) and text(course['pace'].get('description')),'Original course pacing is required.')
@@ -77,18 +86,33 @@ def validate_course(course):
         require(all(text(unit.get(k)) for k in ('title','locator','source_id','focus')) and unit['source_id'] in source_ids,'Every unit needs an original source locator and focus.')
 
 
-def catalog():
-    value=json.loads(CATALOG.read_text(encoding='utf-8'))
-    require(isinstance(value,dict) and value.get('schema')==1 and isinstance(value.get('courses'),list),'Unsupported course catalog.')
-    ids=[]
-    for course in value['courses']:validate_course(course);ids.append(course['id'])
+def validate_catalog(value):
+    require(isinstance(value, dict) and value.get('schema') == 1 and
+            isinstance(value.get('courses'), list) and value['courses'], 'Unsupported course catalog.')
+    ids = []
+    for course in value['courses']:
+        validate_course(course)
+        ids.append(course['id'])
+    additions = value.get('resources', [])
+    require(isinstance(additions, list), 'Curated resources must be a list.')
+    for resource in additions:
+        require(isinstance(resource, dict) and resource.get('kind') in resources.KINDS and
+                resource.get('access') in resources.ACCESS and
+                isinstance(resource.get('locators'), list) and resource['locators'] and
+                all(text(item) for item in resource['locators']), 'Invalid curated resource.')
+        validate_course(resources.snapshot(resource, value['resources_checked_at']))
+        ids.append(resource['id'])
     require(ids and len(ids)==len(set(ids)),'Catalog course IDs must be unique.')
     return value
 
 
+def catalog():
+    return validate_catalog(json.loads(CATALOG.read_text(encoding='utf-8')))
+
+
 def summary(course):
     fields = ('id', 'title', 'institution', 'code', 'edition', 'domain', 'level',
-              'prerequisites', 'audience', 'source_access', 'original_language')
+              'prerequisites', 'audience', 'source_access', 'original_language', 'resource_kind', 'access_mode')
     result = {key: copy.deepcopy(course[key]) for key in fields if key in course}
     result['provider_type'] = course.get('provider_type', 'university')
     result['pathway_type'] = course.get('pathway_type', 'course')
@@ -97,11 +121,18 @@ def summary(course):
 
 def listing():
     value=catalog()
-    return {'catalog_checked_at':value['checked_at'],'courses':[summary(c) for c in value['courses']]}
+    return {'catalog_checked_at':value['checked_at'],'courses':[summary(c) for c in value['courses']],
+            'curated_resource_count': len(value.get('resources', []))}
+
+
+def pathways(value):
+    yield from value['courses']
+    for resource in value.get('resources', []):
+        yield resources.snapshot(resource, value['resources_checked_at'])
 
 
 def show(course_id):
-    result=next((c for c in catalog()['courses'] if c['id']==course_id),None)
+    result=next((c for c in pathways(catalog()) if c['id']==course_id),None)
     require(result is not None,'Unknown built-in course; inspect courses list or research the requested course without claiming it is built in.')
     return copy.deepcopy(result)
 
@@ -112,14 +143,16 @@ def normalized(value):
 
 def resolve(query):
     require(text(query),'Provide a course name or learning interest.')
-    q=normalized(query);records=catalog()['courses']
+    q=normalized(query);records=list(pathways(catalog()))
     raw=unicodedata.normalize('NFKC',query).casefold()
     named={provider for provider,aliases in PROVIDER_ALIASES.items() if any(
         bool(re.search(r'(?<![a-z])'+re.escape(a)+r'(?![a-z])',raw)) if a.isascii() else normalized(a) in q
         for a in aliases)}
     hits=[]
     for course in records:
-        if named and not any(course['id'].startswith(provider+'-') for provider in named):
+        if named and not any(course['id'].startswith(provider+'-') or
+                             any(normalized(alias) in normalized(course['institution']) for alias in PROVIDER_ALIASES[provider])
+                             for provider in named):
             continue
         terms={normalized(term) for term in (course['id'],course['title'],*course['aliases'])}
         for term in terms-{''}:
@@ -166,6 +199,9 @@ def validate_binding(value):
     require(value['pace'] in ('adapted','original_units') and value['practice'] in ('light','original_assignments'),'Choose course pacing and practice explicitly.')
     require(value['course'].get('pathway_type') != 'reference' or value['practice'] == 'light',
             'Open reference pathways support light practice.')
+    if value['course'].get('pathway_type') == 'resource':
+        require(value['practice'] == 'light' and value['pace'] == 'adapted',
+                'Curated resources use adapted study within the inspected scope and light practice.')
     selected=value['unit_ids'];all_units=[u['id'] for u in value['course']['units']]
     require(isinstance(selected,list) and selected and all(isinstance(u,str) and u in all_units for u in selected),'Select actual original course units.')
     require(selected==[u for u in all_units if u in selected],'Selected units must be unique and in original course order.')
@@ -174,6 +210,9 @@ def validate_binding(value):
 def validate_course_plan(config,plan):
     if 'course_pathway' not in config:return
     binding=config['course_pathway'];validate_binding(binding);selected=binding['unit_ids'];seen=[];last=-1
+    if binding['course'].get('access_mode') == 'publisher':
+        require((config.get('materials') or {}).get('selections'),
+                'Publisher entry only: select readable authorized chapters before creating a book-based plan.')
     require(isinstance(plan.get('days'),list) and plan['days'],'Course plan needs mapped days.')
     for day in plan['days']:
         units=day.get('course_units')
@@ -215,7 +254,12 @@ def validate_sources(data,config,plan):
         require(isinstance(ref,dict) and set(ref)=={'course_id','sha256','source_id','unit_ids'},'Invalid original-course source reference.')
         require(ref['course_id']==binding['course']['id'] and ref['sha256']==binding['sha256'],'Source references a different course snapshot.')
         require(isinstance(ref['source_id'],str) and ref['source_id'] in originals,'Unknown original source ID.')
-        require(source.get('url')==originals[ref['source_id']]['url'],'Original-course source URL differs from its bound source.')
+        if binding['course'].get('access_mode') == 'publisher':
+            # The bound publisher record identifies the edition. A selected chapter
+            # supplies teaching evidence and keeps its own (possibly private) origin.
+            require(source.get('material_ref'), 'Cite the selected authorized chapter for this book.')
+        else:
+            require(source.get('url')==originals[ref['source_id']]['url'],'Original-course source URL differs from its bound source.')
         units=ref['unit_ids']
         require(isinstance(units,list) and units and all(isinstance(u,str) and u in expected for u in units) and len(set(units))==len(units),'Source references units outside this document.')
         require(all(next(u for u in binding['course']['units'] if u['id']==unit)['source_id']==ref['source_id'] for unit in units),'Source is not the catalog anchor for this original unit.')
@@ -255,6 +299,9 @@ def context_section(binding,unit_ids,language='en'):
     validate_binding(binding);require(language in _CONTEXT,'Unsupported pathway language.')
     course=binding['course'];title,disclosure,adapted,original,light=_CONTEXT[language]
     locations='; '.join(u['locator'] for u in course['units'] if u['id'] in unit_ids)
+    if course.get('pathway_type') == 'resource':
+        title = _REFERENCE_CONTEXT[language][0]
+        return {'title': title, 'body': f"{course['institution']} · {course['title']}\n\n{locations}"}
     if course.get('pathway_type') == 'reference':
         title, disclosure = _REFERENCE_CONTEXT[language]
         body = (f"{course['institution']} · {course['title']} · {course['edition']}\n\n"

@@ -1,7 +1,7 @@
 {
   "name": "omni-learning-anything",
-  "version": "4.2.0",
-  "description": "Start from a university or AI organization course pathway, an open reference, your own materials or a personal learning goal; follow illustrated lessons with optional light checks, feedback and review in files or connected documents.",
+  "version": "5.0.0",
+  "description": "Learn from curated courses, books, articles and talks, or study a new language through your own. Create illustrated lessons, practice sheets and source-grounded checks.",
   "homepage": "https://github.com/ShawnRen57/omni-learning-anything",
   "license": "MIT",
   "author": {

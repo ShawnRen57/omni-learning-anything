@@ -26,11 +26,13 @@
 
 [English](../../README.md) · [简体中文](README_zh.md) · [日本語](README_ja.md) · [한국어](README_ko.md) · [Español](README_es.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Português](README_pt.md) · [Русский](README_ru.md) · [العربية](README_ar.md)
 
-**[v4.2.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[v5.0.0 스킬 ZIP 다운로드](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [설치 채널](../../docs/distribution-channels.md)
 
 </div>
+
+**v5.0** · 135개 학습 자료 중에서 선택할 수 있습니다. 모국어로 외국어를 배우고 정답을 따로 제공하는 학습지로 연습하세요. 설명 그림에는 관찰할 부분과 질문이 함께 나옵니다. [자료 목록](../curated-learning-resources.md) · [외국어 학습 예시](../../examples/languages/README.md)
 
 **대학 명강의를 고르거나 내 책과 논문으로 시작하세요. 내 속도에 맞춰 배우고, 짧은 확인 문제와 피드백, 복습으로 이해를 다지며 로컬 파일이나 클라우드 문서에 저장하세요.**
 

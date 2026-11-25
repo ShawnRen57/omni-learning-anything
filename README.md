@@ -27,27 +27,28 @@
 
 [English](README.md) · [简体中文](docs/readme/README_zh.md) · [日本語](docs/readme/README_ja.md) · [한국어](docs/readme/README_ko.md) · [Español](docs/readme/README_es.md) · [Français](docs/readme/README_fr.md) · [Deutsch](docs/readme/README_de.md) · [Português](docs/readme/README_pt.md) · [Русский](docs/readme/README_ru.md) · [العربية](docs/readme/README_ar.md)
 
-**[Download v4.2.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v4.2.0/omni-learning-anything-skill-v4.2.0.zip)**
+**[Download v5.0.0 Skill ZIP](https://github.com/ShawnRen57/omni-learning-anything/releases/download/v5.0.0/omni-learning-anything-skill-v5.0.0.zip)**
 
 [skills.sh](https://skills.sh/shawnren57/omni-learning-anything/omni-learning-anything) · [Installation channels](docs/distribution-channels.md)
 
 </div>
 
-**Study a university course, a school textbook, or your own books and papers. Learn at your pace with illustrated lessons, short checks and feedback.**
+**Pick a lecture worth an hour, a book worth a month, or a language you want to speak. Turn it into a course you can study one lesson at a time.**
 
 Turn “I want to learn…” into a plan you can follow. Start with a personal goal, a built-in course, a textbook or your own materials. Review the plan before lessons begin.
 
-Try **“I want to study the History of Chinese Architecture at Tsinghua.”** or **“I want to study OpenAI Applied AI Foundations.”** The agent identifies the source course, reuses what you already told it, and asks only for details that affect your plan.
+Try **“Teach me Japanese from zero in Chinese. I want to introduce myself on my first day in class.”** Or ask **“Find me a TED talk on storytelling and build a one-hour lesson around it.”**
 
 | Feature | What it does |
 | --- | --- |
 | Personal learning path | Turn a broad interest or specific goal into a course matched to your background, purpose and time. |
-| Built-in courses and references | Choose from 65 courses and two open references. Keep the source edition, unit order and original workload visible. |
+| Built-in source library | Explore 135 entries. Choose one of 67 mapped pathways or search 68 additional sources, from university courses and academic books to in-depth articles and TED talks. [Browse the additions](docs/curated-learning-resources.md) |
+| A foreign language from zero | Learn through your own language. Practice recognition and production with printable worksheets, separate answer keys and cumulative review. Listening can use a source recording or a compatible local voice. [Explore two sample courses](examples/languages/README.md) |
 | Chinese school textbooks | Search 1,949 entries from primary through senior secondary. Ask for the latest edition or a specific year. When the index cannot verify the book, the agent checks the upstream repository and searches online. Study a chapter, concept or formula with original figures and page references when the textbook is available. |
 | Your own materials | Study selected pages, chapters or timestamps in PDF, DOCX, EPUB, PPTX, HTML, Markdown, TXT, SRT or VTT. Choose whether to include outside sources. |
 | Sources and further reading | Trace key claims to an original page, chapter or timestamp, or to cited web research with dates and links. |
 | Plan before lessons | Review a day-by-day curriculum and estimated workload before approving lessons. |
-| Illustrated lessons | Learn through focused explanations, diagrams or source images, worked examples, short practice and recap. |
+| Reading a diagram | Each new illustration comes with a question, details to locate and a source. Compare aligned examples, follow arrows in a process, or examine a detail on an original textbook page. |
 | Ten learning languages | Set the language of plans and lessons independently of your sources. Arabic uses right-to-left layout. |
 | Four local formats | Save PDF, offline HTML with embedded images, DOCX or Markdown. |
 | Connected destinations | Save to a local Obsidian Vault, or connect Notion, Feishu, DingTalk or Tencent Docs with authorized access. |
@@ -62,13 +63,21 @@ Try **“I want to study the History of Chinese Architecture at Tsinghua.”** o
 <a id="examples"></a>
 <a href="examples/README.md"><img src="docs/assets/learning-sample-gallery.png" alt="20 lesson previews, including five Chinese lessons from modern school textbooks" width="100%"></a>
 
-[Five modern textbook lessons in Chinese](examples/textbooks/README.md)
+[Learn Japanese through Chinese or German through English](examples/languages/README.md) · [Teaching diagrams with questions and sources](examples/teaching-figures/README.md) · [Five modern textbook lessons in Chinese](examples/textbooks/README.md)
+
+<details>
+<summary>Preview a fraction lesson</summary>
+
+<img src="examples/teaching-figures/equivalent-fractions.png" width="720" alt="Three one-metre bars. The shaded segments for one half and two quarters end at the same point.">
+
+</details>
 
 <a id="versions"></a>
 ## Version guide
 
 | Version | What it brings to your learning |
 | --- | --- |
+| **[v5.0.0](docs/product-scope-v5.md)** | Start a foreign language through your own language, learn to read explanatory diagrams, and choose from 68 new sources. |
 | **[v4.2.0](skills/omni-learning-anything/references/textbooks.md)** | Find the requested textbook edition by year or ask for the latest. The agent searches beyond the index for a verifiable original. |
 | **[v4.1.0](skills/omni-learning-anything/references/assessment.md)** | Check whether you can apply what you learned to a new example, with each question reviewed against the original source. |
 | **[v4.0.0](skills/omni-learning-anything/references/textbooks.md)** | Study mainland Chinese school textbooks with age-specific lessons, exact page references and original illustrations. |
@@ -82,7 +91,7 @@ Try **“I want to study the History of Chinese Architecture at Tsinghua.”** o
 
 Ask **“show me built-in courses”**. Choose a course, your language and available time; the agent proposes a mapped plan for approval. These are independent learning pathways based on public course sources. Complete lecture content is not bundled; no university endorsement or certificate is implied.
 
-[Source editions and access notes](docs/course-catalog-sources.md)
+The table lists the 67 mapped pathways. The companion directory lists all 68 additions with their original sources and access conditions. [Mapped pathways](docs/course-catalog-sources.md) · [Books, courses, articles and talks](docs/curated-learning-resources.md)
 
 | University or organization | Courses and open references |
 | --- | --- |

@@ -38,6 +38,12 @@ Notion: [official installation](https://developers.notion.com/cli/get-started/in
 
 Upstream CLIs own authentication and secure storage. Never export a token for the adapter, inspect private CLI stores, disable keychain storage silently, or install a community credential plugin as a replacement. A missing keychain is a concrete setup blocker or requires an explicitly configured private API credential alternative. The helper does not embed a hosted OAuth service. Tencent and DingTalk retain their selected provider's official API/CLI prerequisites.
 
+## Teaching diagrams and listening tracks
+
+The included comparison, sequence and fraction-bar renderer uses Pillow and a font that covers the labels. Complex scripts also need a Pillow build with libraqm. Review the actual diagram at its intended reading size. [Teaching diagrams](figures.md)
+
+To create a private listening WAV, `language-audio` uses the macOS system voices or eSpeak NG where available. Specify the target language or regional variety and use a voice installed for that locale. An accessible source recording also works without a local speech engine. [Foreign language practice](languages.md)
+
 ## XeLaTeX
 
 First check PATH, then existing TinyTeX installations. The renderer recognizes PATH, macOS `~/Library/TinyTeX/bin/*`, Linux `~/.TinyTeX/bin/*` and `/Library/TeX/texbin`. Other locations may be added to PATH. It never uses an HTML/reportlab fallback under the label "LaTeX PDF".
