@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "status": "active",
-  "approved_plan": "3cd0f64961491690b55bf3760bb4d61b48296e1cbca1f3dc28a04332bc2a2e92",
+  "approved_plan": "24f8d6ec46b44551c77e75eea00e4ea330d0163433dcd2efa81516735a66a838",
   "lessons": {
     "1": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/Agent产品设计_每日学习_Day01_从聊天回答到完成任务.pdf",
-      "manifest_hash": "27548b4ed5331d0e3e56fbe34fc2d1a91d2b399e4691f13f2abfbd8fcba370b9"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "16bccb77c8dadfd4c7c3e4a61474d8a05760acabb5605fdc071bd7de348af1a9",
+      "pdf": "pdf/Agent产品设计_每日学习_Day01_从聊天回答到完成任务.pdf"
     },
     "2": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf",
-      "manifest_hash": "7071a7ff670948668648f536c44ea959b3cc481ca62869115919147b6a4d9688"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "4c939294ff95305f090a66166559e314ad71b60653ed22e395758cd1150e46ba",
+      "pdf": "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf"
     },
     "3": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf",
-      "manifest_hash": "e475f5b9f8c7d20a9b1637968cf643ddeae0388a9dbaeb5e62ad558be5304f43"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "50cebd15c992778ea1882c68e329e5f7cdbceaea927ab91de8dd6b49af6b4dde",
+      "pdf": "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf"
     }
   },
   "schedule": null,
   "mastery": {},
-  "approved_config": "74d99fd04727087d32acf2742cc68bed450f91b7088494d7529d5cc349de4ea9"
+  "approved_config": "3b32a6ac165206408943e2ac6cea6a60f71fc737f62a22f87354be4bb3a7ab85"
 }

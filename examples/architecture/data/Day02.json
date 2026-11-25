@@ -10,7 +10,7 @@
     },
     {
       "title": "从支撑关系看神庙",
-      "body": "看图 B：竖直立柱支撑水平构件，形成梁柱关系。图示帮助识别基本构成，不是某座神庙的考古复原。石材在不同受力方式下表现不同，水平跨越的构件需要相应尺度和支撑；实际结构分析比这幅简图复杂，今天不做受力计算。"
+      "body": "水平的额枋跨在两根立柱之间，落在两端的柱头上。[S1] 图示帮助识别基本构成，不是某座神庙的考古复原。石材在不同受力方式下表现不同，水平跨越的构件需要相应尺度和支撑；实际结构分析比这幅简图复杂，今天不做受力计算。\n\n把视线放在两柱正中上方，沿横梁移到一端，再顺赭色箭头向下。"
     },
     {
       "title": "柱式是一套组合规则",
@@ -36,7 +36,7 @@
       "url": "https://www.metmuseum.org/essays/architecture-in-ancient-greece",
       "publisher": "The Metropolitan Museum of Art",
       "published_at": "2003-10-01",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "观察柱式如何连接立柱与建筑其他部分，而非只认柱头。"
     },
     {
@@ -45,7 +45,7 @@
       "url": "https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world",
       "publisher": "The Metropolitan Museum of Art",
       "published_at": "2006-10-01",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "了解拱券、看台、通道与社会秩序之间的关系。"
     },
     {
@@ -54,7 +54,7 @@
       "url": "https://whc.unesco.org/en/list/404/",
       "publisher": "UNESCO",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "结合雅典卫城原址资料，区分单栋建筑与建筑群。"
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://whc.unesco.org/en/list/91/",
       "publisher": "UNESCO",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "观察城市历史叠加；不要把罗马城市归为单一风格。"
     },
     {
@@ -72,13 +72,20 @@
       "url": "https://whc.unesco.org/en/list/81/",
       "publisher": "UNESCO",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "为后续哥特建筑预习，关注结构、空间与彩色玻璃。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "本课重点看 B 区。A 平面、立面与剖面提供不同信息；B 梁柱；C 拱券与桶形拱顶。图为类型示意，不是具体遗址测绘图。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-9e972810506b.png",
+    "caption": "从额枋、柱头到台基读取梁柱组合。",
+    "credit": "原创多立克式构件示意，按大都会古希腊建筑导读绘制。",
+    "reading": {
+      "question": "额枋跨在什么位置？从额枋往下，荷载依次经过哪些部分？",
+      "observation": "水平额枋跨过柱间，落到两端较宽的柱头。随后沿柱身向下传到台基。",
+      "source_ids": [
+        "S1"
+      ]
+    }
   }
 }

@@ -10,7 +10,7 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
 \newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
@@ -18,7 +18,7 @@
 
 {\LARGE\bfseries\color{ink} 能量转换与效率}\par
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{今日导航}
 
@@ -26,13 +26,15 @@
 
 \Needspace{5\baselineskip}\section*{沿着能量流观察}
 
-看图 C：阳光被太阳能电池板转换为电能，储能设备保存一部分能量，再供灯具使用。实际装置还需要控制器与电气保护，图中省略了这些部件；不要据图接线。每个环节的输入与输出都可以单独检查，链条上多个转换过程会影响最终可用能量。能源部基础资料把发电、输电与配电分开讨论，也是这种系统观察方式。[S3]
+以太阳能照明为例，太阳能电池板把光能转换为电能，储能设备保存一部分能量，再供灯具使用。实际装置还需要控制器和电气保护。每个环节的输入与输出都可以单独检查，链条上多个转换过程会影响最终可用能量。能源部基础资料把发电、输电与配电分开讨论，也是这种系统观察方式。[S3]
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-f1c69576c177.png}\par
+对照相同起点的三根横条，再把功率和实际运行时长一起带入比较。[S6]
 
-{\small 本课重点看 C 区。A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-107db0930f98.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 同一刻度下的三种照明用电量 哪一种 20 W 的用法比 10 W × 5 h 更省电？ 末行的 20 W × 1 h 是 0.02 kWh，短于首行的 0.05 kWh；前两行开灯时长相同，20 W 的用电量则是两倍。 [S6]}\par
+
+{\footnotesize 原创计算图；按 EIA 的瓦时定义，用正文中的设定计算。}\end{center}
 
 \Needspace{5\baselineskip}\section*{三个容易混淆的量}
 
@@ -58,17 +60,19 @@
 
 能量看总量，功率看速度，效率看指定任务下的有用输出比例。把这些量放回系统，才能理解技术改善究竟发生在哪里。明天转向材料：为什么同样的设计换一种材料，性能、制造成本和使用寿命都会变化？
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications}{Physics: Definitions and Applications} — 从物理学与技术的关系入手，区分解释自然和解决实际问题。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S1] \href{https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications}{Physics: Definitions and Applications} — 从物理学与技术的关系入手，区分解释自然和解决实际问题。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S2] \href{https://science.nasa.gov/ems/}{The Electromagnetic Spectrum} — 查看波谱教学材料，理解通信与成像共享的物理基础。\par NASA | 发布：未标注 | 核验：2026-10-08
+\item [S2] \href{https://science.nasa.gov/ems/}{The Electromagnetic Spectrum} — 查看波谱教学材料，理解通信与成像共享的物理基础。\par NASA | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S3] \href{https://www.energy.gov/oe/electricity-101}{Electricity 101} — 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。\par 美国能源部 | 发布：未标注 | 核验：2026-10-08
+\item [S3] \href{https://www.energy.gov/oe/electricity-101}{Electricity 101} — 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。\par 美国能源部 | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S4] \href{https://www.nist.gov/ai-measurement-and-evaluation}{AI measurement and evaluation} — 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。\par NIST | 发布：未标注 | 核验：2026-10-08
+\item [S4] \href{https://www.nist.gov/ai-measurement-and-evaluation}{AI measurement and evaluation} — 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。\par NIST | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S5] \href{https://www.computerhistory.org/siliconengine/}{The Silicon Engine} — 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。\par Computer History Museum | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://www.computerhistory.org/siliconengine/}{The Silicon Engine} — 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。\par Computer History Museum | 发布: 未标注 | 核验: 2026-11-25
+
+\item [S6] \href{https://www.eia.gov/energyexplained/electricity/measuring-electricity.php}{Measuring electricity} — 参见 Electricity use over time is measured in Watthours 的功率、时长与用电量换算。\par U.S. Energy Information Administration | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

@@ -10,7 +10,7 @@
     },
     {
       "title": "沿着能量流观察",
-      "body": "看图 C：阳光被太阳能电池板转换为电能，储能设备保存一部分能量，再供灯具使用。实际装置还需要控制器与电气保护，图中省略了这些部件；不要据图接线。每个环节的输入与输出都可以单独检查，链条上多个转换过程会影响最终可用能量。能源部基础资料把发电、输电与配电分开讨论，也是这种系统观察方式。[S3]"
+      "body": "以太阳能照明为例，太阳能电池板把光能转换为电能，储能设备保存一部分能量，再供灯具使用。实际装置还需要控制器和电气保护。每个环节的输入与输出都可以单独检查，链条上多个转换过程会影响最终可用能量。能源部基础资料把发电、输电与配电分开讨论，也是这种系统观察方式。[S3]\n\n对照相同起点的三根横条，再把功率和实际运行时长一起带入比较。[S6]"
     },
     {
       "title": "三个容易混淆的量",
@@ -36,7 +36,7 @@
       "url": "https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从物理学与技术的关系入手，区分解释自然和解决实际问题。"
     },
     {
@@ -45,7 +45,7 @@
       "url": "https://science.nasa.gov/ems/",
       "publisher": "NASA",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "查看波谱教学材料，理解通信与成像共享的物理基础。"
     },
     {
@@ -54,7 +54,7 @@
       "url": "https://www.energy.gov/oe/electricity-101",
       "publisher": "美国能源部",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。"
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://www.nist.gov/ai-measurement-and-evaluation",
       "publisher": "NIST",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。"
     },
     {
@@ -72,13 +72,29 @@
       "url": "https://www.computerhistory.org/siliconengine/",
       "publisher": "Computer History Museum",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。"
+    },
+    {
+      "id": "S6",
+      "title": "Measuring electricity",
+      "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+      "publisher": "U.S. Energy Information Administration",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "参见 Electricity use over time is measured in Watthours 的功率、时长与用电量换算。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "本课重点看 C 区。A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-107db0930f98.png",
+    "caption": "同一刻度下的三种照明用电量",
+    "credit": "原创计算图；按 EIA 的瓦时定义，用正文中的设定计算。",
+    "reading": {
+      "question": "哪一种 20 W 的用法比 10 W × 5 h 更省电？",
+      "observation": "末行的 20 W × 1 h 是 0.02 kWh，短于首行的 0.05 kWh；前两行开灯时长相同，20 W 的用电量则是两倍。",
+      "source_ids": [
+        "S6"
+      ]
+    }
   }
 }

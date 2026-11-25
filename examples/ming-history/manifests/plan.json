@@ -1,33 +1,40 @@
 {
+  "input": "plan.json",
+  "artifact": "pdf/明朝历史_学习计划.pdf",
+  "artifacts": {
+    "pdf": "pdf/明朝历史_学习计划.pdf",
+    "markdown": "sources/明朝历史_学习计划.md"
+  },
   "key": "plan",
   "pdf": "pdf/明朝历史_学习计划.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "plan.json": "f5f9205987e26af14732d9ac8d675806e650f61a6f7da52167b8c63dedbb2f1e",
-    "config.json": "8ccfee0bafc36f4f529b3141f66c5feca5c9786ad770ae9edfd480ec792bfc4e",
-    "pdf/明朝历史_学习计划.pdf": "40007a0994d8dec889ec7c4bf7adf2f758ab4f7f19dd76551c23cfb788ec0ff4",
-    "sources/明朝历史_学习计划.tex": "10eb2fb86e4fae3db4b4f2b8faf098a75477a8b9b7408536aa0288902435d2ce",
-    "sources/明朝历史_学习计划.md": "2d250d69a5ce939613a1c297ce3d22c693272d29754037a923ec0e0bb677439e",
-    "assets/figure-e75918c40f59.png": "e75918c40f59b6be7c8123938ad6ed129284a6e1df5799e2c1b01594d9cf9268",
-    "previews/plan-01.png": "85d3dedad0756dba35f3fbf049d2e9ab97308773221d53d72d2ba829280e495b",
-    "previews/plan-02.png": "7033a180bff82df3e8e89da5696b0454f02b6397845cf9ea818017ff338e94eb",
-    "previews/plan-03.png": "5a536560f9689f0345ce9f52ef31ee523298461c0813c01757e2233c3ea8092f"
+    "plan.json": "ac897c3792c0117329a3a44fc1ce59d29f0c64b360a236ff632785cf1ce6539f",
+    "config.json": "94d949fc15b21abb479548cbe9e8a410a8390e385a127f75eef235c901e1dbe7",
+    "pdf/明朝历史_学习计划.pdf": "b62febfe6ace39562a5377b7fad9f6e600613748c4fcf88af065faffd73d9953",
+    "sources/明朝历史_学习计划.tex": "3f16892659f278e99542db6831ff5202d1b0302b7fb0c382610a219f6c1c28c8",
+    "sources/明朝历史_学习计划.md": "4176f7ec6d75e3f57989e251f2578932f933b95f3523d99976e3c2c2e80a978b",
+    "assets/figure-371cb5d156ba.png": "371cb5d156ba73878f04439364f31ac4d78e5105059ba4481b16972ff3325e5b",
+    "previews/plan-01.png": "768f5924cbef54c54231822248cfc5a1ec1b229783af96e8f393dc4b4193753c",
+    "previews/plan-02.png": "ba39921f57cfd9958d395cafd934318a238741f495cf5c87ddd195dcd6c32378",
+    "previews/plan-03.png": "ffceed9872809954c1d6e2294f8adb5508457377b1d837137b16008e0dd0ee20"
   },
   "previews": [
     "previews/plan-01.png",
     "previews/plan-02.png",
     "previews/plan-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 3,
     "links": 5,
     "fonts": [
-      "/GGMMSX+TimesNewRomanPSMT",
-      "/QKQSXG+FandolFang-Regular-Identity-H",
-      "/UOKFQO+TimesNewRomanPS-BoldMT"
-    ]
+      "/GKYWFZ+FandolFang-Regular-Identity-H",
+      "/JJSOXP+TimesNewRomanPSMT",
+      "/LBMNQC+TimesNewRomanPS-BoldMT"
+    ],
+    "figure": "assets/figure-371cb5d156ba.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

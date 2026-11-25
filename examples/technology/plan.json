@@ -160,7 +160,7 @@
     },
     {
       "title": "学习方式与时间安排",
-      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。"
+      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。\n\n从三条支线任选一条，顺着连线在右侧结业卡上找到对应栏。"
     },
     {
       "title": "课程依据与学习成果",
@@ -202,7 +202,7 @@
       "url": "https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从物理学与技术的关系入手，区分解释自然和解决实际问题。"
     },
     {
@@ -211,7 +211,7 @@
       "url": "https://science.nasa.gov/ems/",
       "publisher": "NASA",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "查看波谱教学材料，理解通信与成像共享的物理基础。"
     },
     {
@@ -220,7 +220,7 @@
       "url": "https://www.energy.gov/oe/electricity-101",
       "publisher": "美国能源部",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。"
     },
     {
@@ -229,7 +229,7 @@
       "url": "https://www.nist.gov/ai-measurement-and-evaluation",
       "publisher": "NIST",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。"
     },
     {
@@ -238,13 +238,21 @@
       "url": "https://www.computerhistory.org/siliconengine/",
       "publisher": "Computer History Museum",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-d9fb6d991cfc.png",
+    "caption": "把前三课的观察方法带到科技判断卡",
+    "credit": "原创课程路线图；问题和结业产物为本课程设计。",
+    "reading": {
+      "question": "第三天开始练习的哪一项，会出现在最后的科技判断卡里？",
+      "observation": "第三条支线以照明耗电练习定量比较，结业卡需要同时写出数值、单位和假设。",
+      "source_ids": [
+        "S1",
+        "S3"
+      ]
+    }
   }
 }

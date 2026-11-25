@@ -1,32 +1,38 @@
 {
+  "input": "data/Day03.json",
+  "artifact": "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf",
+  "artifacts": {
+    "pdf": "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf",
+    "markdown": "sources/经济学_每日学习_Day03_边际思维与沉没成本.md"
+  },
   "key": "Day03",
   "pdf": "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day03.json": "7e9b978a3c659204df8baa58b7f0c783e4de4143f7b414b361eb33fd7a3fdcf1",
-    "plan.json": "a56e11a33b46fe3014d7ba8d69027cf2e21e07199565262a1308c276d54a1f46",
-    "config.json": "7234fdfad7216c08f83e19a7c895793256fb536dd34563bba88d567c894b9e26",
-    "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf": "44dbc87f95012296e95946f3fb37949b522713d60a973619479fc87b21b735f3",
-    "sources/经济学_每日学习_Day03_边际思维与沉没成本.tex": "2affc25d8e63e009f7d9b77689bfc5a61255235dc92cf73b6f43d0eee513c0c0",
-    "sources/经济学_每日学习_Day03_边际思维与沉没成本.md": "dd1c6249ba3955d6cf9463269a790f43ba31eff2ba3946f7dd0bcff05da8f898",
-    "assets/figure-a92b6089a95f.png": "a92b6089a95f2c556d487856b571dfed837a83c776ea0ee3b78b90fc1de2640e",
-    "previews/Day03-01.png": "2822a3362dae83405a8db887fbfae2a05a62f55f9eccca8084c826f326ddc6ce",
-    "previews/Day03-02.png": "0ab552388685c2ed4db7644e1ba43e360489f5b83b2998ec43ab90d7cffabbe0"
+    "data/Day03.json": "9a54d9d9bb428175f826e7353ebccbfec7bd033811407e343f5f0e34613922bf",
+    "plan.json": "90a2175b37a6f768396d6865cf7fa256f4a2cf4ab1bebde390a7a7de914a3885",
+    "config.json": "ba03bf612c7c5e07d54e10d5151be46705a616359e14494b699a8a783c57c833",
+    "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf": "0c0cf7bf0c31ccbc08aa2fc1f7e48342e82b675cee62c881bb0d9b00c0eaccec",
+    "sources/经济学_每日学习_Day03_边际思维与沉没成本.tex": "617431a153fef567de779237c1a0ac494443406ec9d51f71ead81c38e09972dc",
+    "sources/经济学_每日学习_Day03_边际思维与沉没成本.md": "2a587db91f4562af2846b5b60de77c59042a96b0d1cb7976c05efce056da1653",
+    "assets/figure-99f6fd824fda.png": "99f6fd824fda5ca732ff7e2fb6fdf29081e2676eb193a86f1799a779202df148",
+    "previews/Day03-01.png": "a69e9b2a4f3c071656e2ed1bd086a7d75f37f36d93c0553a1d9dba86a9ff0cdf",
+    "previews/Day03-02.png": "806269c993ecd12d95328bd68bd5095e24dd2010e0eed5336dd12d37e68ed648"
   },
   "previews": [
     "previews/Day03-01.png",
     "previews/Day03-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/LBBOBX+TimesNewRomanPS-BoldMT",
-      "/OOSCSE+FandolFang-Regular-Identity-H",
-      "/SUDBYA+TimesNewRomanPSMT"
-    ]
+      "/IHSFKB+TimesNewRomanPSMT",
+      "/MDINPP+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-99f6fd824fda.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

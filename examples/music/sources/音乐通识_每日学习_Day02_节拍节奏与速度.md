@@ -1,6 +1,6 @@
 # 节拍节奏与速度
 
-2026-10-08 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -12,9 +12,13 @@
 
 节奏指声音与停顿在时间中的具体组织；节拍提供组织和预期。公开乐理教材把音符时值与休止分开标记，提醒我们停顿也是时间结构的一部分。[S3]
 
-![本课重点看 B 区。A 比较振动疏密与振幅；B 稳定脉冲和节奏事件并不相同；C 两个音高之间可以比较方向与距离。波形仅作概念示意。](../assets/figure-f6141a0bb6d5.png)
+手跟着上排四个点打拍，嘴在每个色块的左边缘发声；第三拍手仍拍下，嘴保持安静。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![将拍点、发声起点和休止放在同一条四拍时间线上。](../assets/figure-bd4ea4fecd87.png)
+
+将拍点、发声起点和休止放在同一条四拍时间线上。 为什么上下两排都是四个起点，却无法一一对齐？ 第二拍内有两个发声起点，第三拍整拍休止。这一次拍数和发声次数恰好相等，起点位置却不同。 \[S3\] \[S4\]
+
+原创节奏设例；时值、休止及节拍概念依据 Open Music Theory。
 
 ## 拍子分组与速度
 
@@ -22,11 +26,11 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 不要从“听起来很快”直接推断拍号。音符很密而基本拍速不变，也会显得忙碌。反过来，拍子较快但长音很多，表层可能显得平稳。遇到自由节奏、复杂重音或不熟悉的传统时，允许先说“我暂时没有找到稳定参照”，而不是强行数成四拍。
 
-## 图 B：同一条时间线上两种事件
+## 对齐拍点与发声起点
 
-图 B 上排点等间隔，表示稳定参照；下排事件不等间隔，表示具体节奏。先沿上排点轻拍，再试着在下排点位置发声。重点是让脚下或手上的脉冲继续，而不是每出现一个声音就改变拍速。
+上排的点等间隔，表示稳定参照；下排用色块的左边缘表示发声起点，空框表示休止。先沿上排点轻拍，再试着在下排每个色块的起点发声。重点是让脚下或手上的脉冲继续，而不是每出现一个声音就改变拍速。
 
-教学设例：在四个均匀拍点中，第一拍发声，第二拍发两次短声，第三拍静默，第四拍发声。总共仍是四拍，声音事件数却不是四。若把“事件数量”等同于“拍数”，你会越数越乱。实际作品中的停顿并不意味着内在脉冲一定消失。
+教学设例：在四个均匀拍点中，第一拍发声，第二拍发两次短声，第三拍静默，第四拍发声。总共是四拍，这个例子也恰好发声四次，但两者的落点不一一对应。若把“事件数量”等同于“拍数”，你会越数越乱。实际作品中的停顿并不意味着内在脉冲一定消失。
 
 ## 三分钟练习与自查
 
@@ -40,12 +44,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Speed of Sound, Frequency, and Wavelength](https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength)：选读声音频率与音高的关系，公式推导可跳过。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [Speed of Sound, Frequency, and Wavelength](https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength): 选读声音频率与音高的关系，公式推导可跳过。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [Basic notation](https://openmusictheory.github.io/basicNotation.html)：认识音符、谱表和变音记号；本课不要求记住全部符号。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S2] [Basic notation](https://openmusictheory.github.io/basicNotation.html): 认识音符、谱表和变音记号；本课不要求记住全部符号。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Rhythmic values](https://openmusictheory.github.io/rhythmicValues.html)：观察长短时值和休止符如何表达时间。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S3] [Rhythmic values](https://openmusictheory.github.io/rhythmicValues.html): 观察长短时值和休止符如何表达时间。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Meter and time signatures](https://openmusictheory.github.io/meter.html)：选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S4] [Meter and time signatures](https://openmusictheory.github.io/meter.html): 选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Intervals and dyads](https://openmusictheory.github.io/intervals.html)：重点看半音数与音程度数不是同一种计数方法。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S5] [Intervals and dyads](https://openmusictheory.github.io/intervals.html): 重点看半音数与音程度数不是同一种计数方法。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25

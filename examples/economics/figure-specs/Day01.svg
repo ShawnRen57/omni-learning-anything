@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 490" width="1320" height="490">
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial Unicode MS, sans-serif">
+<rect x="0" y="0" width="1320" height="490" rx="0" fill="#fcfdfb" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="12" height="490" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="42" y="61" fill="#18384a" font-size="46" font-weight="700" text-anchor="start">同一个空闲小时，只能完整留给一项活动</text>
+<text x="250" y="125" fill="#18384a" font-size="28" font-weight="400" text-anchor="start">开始</text>
+<text x="720" y="125" fill="#18384a" font-size="28" font-weight="400" text-anchor="end">60 分钟后</text>
+<text x="910" y="125" fill="#466475" font-size="28" font-weight="400" text-anchor="start">个人偏好次序</text>
+<text x="54" y="189" fill="#18384a" font-size="40" font-weight="700" text-anchor="start">读书</text>
+<rect x="249" y="149" width="472" height="53" rx="4" fill="#dbefeb" stroke="#076c68" stroke-width="3"/>
+<line x1="258" y1="176" x2="708" y2="176" stroke="#076c68" stroke-width="4"/>
+<circle cx="258" cy="176" r="6" fill="#076c68" stroke="none" stroke-width="2"/>
+<circle cx="708" cy="176" r="6" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="785" y="188" fill="#076c68" font-size="34" font-weight="700" text-anchor="start">第 1 选择  ·  已选</text>
+<text x="54" y="279" fill="#18384a" font-size="40" font-weight="700" text-anchor="start">运动</text>
+<rect x="249" y="239" width="472" height="53" rx="4" fill="#f5e7d3" stroke="#99531e" stroke-width="3"/>
+<line x1="258" y1="266" x2="708" y2="266" stroke="#99531e" stroke-width="4"/>
+<circle cx="258" cy="266" r="6" fill="#99531e" stroke="none" stroke-width="2"/>
+<circle cx="708" cy="266" r="6" fill="#99531e" stroke="none" stroke-width="2"/>
+<text x="785" y="278" fill="#99531e" font-size="34" font-weight="700" text-anchor="start">第 2 选择  ·  最佳替代</text>
+<text x="54" y="369" fill="#18384a" font-size="40" font-weight="700" text-anchor="start">看电影</text>
+<rect x="249" y="329" width="472" height="53" rx="4" fill="#eaf0ef" stroke="#466475" stroke-width="3"/>
+<line x1="258" y1="356" x2="708" y2="356" stroke="#466475" stroke-width="4"/>
+<circle cx="258" cy="356" r="6" fill="#466475" stroke="none" stroke-width="2"/>
+<circle cx="708" cy="356" r="6" fill="#466475" stroke="none" stroke-width="2"/>
+<text x="785" y="368" fill="#466475" font-size="34" font-weight="700" text-anchor="start">第 3 选择</text>
+<line x1="249" y1="139" x2="249" y2="391" stroke="#466475" stroke-width="2" stroke-dasharray="5 5"/>
+<line x1="721" y1="139" x2="721" y2="391" stroke="#466475" stroke-width="2" stroke-dasharray="5 5"/>
+<rect x="48" y="409" width="1218" height="52" rx="0" fill="#ebf0ed" stroke="none" stroke-width="2"/>
+<text x="73" y="445" fill="#18384a" font-size="30" font-weight="400" text-anchor="start">若选读书，放弃的最佳可行替代是运动。电影的价值无需再加一次。</text>
+</g></svg>

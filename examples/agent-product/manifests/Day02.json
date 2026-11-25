@@ -1,32 +1,39 @@
 {
+  "input": "data/Day02.json",
+  "artifact": "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf",
+  "artifacts": {
+    "pdf": "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf",
+    "markdown": "sources/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.md"
+  },
   "key": "Day02",
   "pdf": "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day02.json": "6dd85b5641d71904c1d2dcd4c7838ee7e107eaff16efa59db91ac50cb7819f57",
-    "plan.json": "3cd0f64961491690b55bf3760bb4d61b48296e1cbca1f3dc28a04332bc2a2e92",
-    "config.json": "74d99fd04727087d32acf2742cc68bed450f91b7088494d7529d5cc349de4ea9",
-    "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf": "8da37b71495058bcd8822d102be8df900b487a3eedb0fcabbac779f5a72585a0",
-    "sources/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.tex": "d145759a405a10556b0dac979d81dbb67f93cd5f7777ecb2edb5cabbfe14d643",
-    "sources/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.md": "bdcfc299702a1a2d2af96fb3f30aaa1b1d19ae7659acb3433585b39ad8038807",
-    "assets/figure-8284fa500410.png": "8284fa5004108e7baab1023f2ed90f158323aa4e58e23c4f8d4323d2e8f24e0b",
-    "previews/Day02-01.png": "be700a9cec87b60efa45d3dcbb331c4d0e40bfb737e4099792fac8b8cfb665d3",
-    "previews/Day02-02.png": "d4a926e44db4d9b09e218059d7e1c46c8b4000687899e39605d94b76b9689e4e"
+    "data/Day02.json": "4fc6b62c693ad801907ea2fdd2ec2eecb248d820e0504225c50c75bb34112a21",
+    "plan.json": "24f8d6ec46b44551c77e75eea00e4ea330d0163433dcd2efa81516735a66a838",
+    "config.json": "3b32a6ac165206408943e2ac6cea6a60f71fc737f62a22f87354be4bb3a7ab85",
+    "pdf/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.pdf": "7589695372a2e756c007568d6b810cf64de9661103e31f6697d44fde4a5712cb",
+    "sources/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.tex": "ed9417177f51856422818cf3f64dc4aab7bdb72adf18bf4fa118e81159998bf9",
+    "sources/Agent产品设计_每日学习_Day02_工作流与Agent如何选择.md": "69b98e54e2842066f9e072b4d3f5130f6869c93c9c8aecb16faef96d41fc3973",
+    "assets/figure-db6bcab83918.png": "db6bcab83918fbe856be8b11c1d5ec332a65667d8061d53daf983cc5f7900dd8",
+    "previews/Day02-01.png": "b0d21c5d2ec6acfe4eb2e08ade998271f7ff7fa907984ba34d5eecd36b34016b",
+    "previews/Day02-02.png": "b9f912da351aa79777845bb3af4127deb6c9bc9c5b6892d467e8004defc38021"
   },
   "previews": [
     "previews/Day02-01.png",
     "previews/Day02-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/KOJFRW+TimesNewRomanPSMT",
-      "/NHXLYH+FandolFang-Regular-Identity-H",
-      "/TKFWDT+TimesNewRomanPS-BoldMT"
-    ]
+      "/RATGBZ+TimesNewRomanPSMT",
+      "/VDYUED+FandolFang-Regular-Identity-H",
+      "/VFJZPU+TimesNewRomanPS-BoldMT"
+    ],
+    "figure": "assets/figure-db6bcab83918.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

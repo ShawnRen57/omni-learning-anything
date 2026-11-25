@@ -160,7 +160,7 @@
     },
     {
       "title": "学习方式与时间安排",
-      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。"
+      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。\n\n沿总轴上的深色段读到放大轴，按先后找出废相和宫城营建。"
     },
     {
       "title": "课程依据与学习成果",
@@ -202,7 +202,7 @@
       "url": "https://www.metmuseum.org/essays/ming-dynasty-1368-1644",
       "publisher": "The Metropolitan Museum of Art",
       "published_at": "2002-10-01",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从文物与艺术观察明代，避免把宫廷与文人经验视为全部社会。"
     },
     {
@@ -211,7 +211,7 @@
       "url": "https://www.dpm.org.cn/court/system/236406.html",
       "publisher": "故宫博物院",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "核对洪武时期机构调整，并把制度事实与作者的因果解释区分开。"
     },
     {
@@ -220,7 +220,7 @@
       "url": "https://whc.unesco.org/en/list/439/",
       "publisher": "UNESCO",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "查看北京宫殿营建时间、轴线与礼仪空间；注意明清长期改建。"
     },
     {
@@ -229,7 +229,7 @@
       "url": "https://whc.unesco.org/en/list/1004/",
       "publisher": "UNESCO",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从陵寝空间理解皇权表达，与宫殿材料交叉观察。"
     },
     {
@@ -238,13 +238,22 @@
       "url": "https://www.metmuseum.org/exhibitions/listings/2009/arts-of-the-ming-dynasty",
       "publisher": "The Metropolitan Museum of Art",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "旧展览档案用于认识作品种类，不代表展览仍在开放。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "A 文字、器物与图像需要互证；B 思考决策和执行关系；C 区分宫城礼仪空间与日常政务。人物、服饰和机构排列均非史料复原。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-371cb5d156ba.png",
+    "caption": "从王朝时间线放大观察明初。",
+    "credit": "原创比例时间轴；年代据大都会、故宫与 UNESCO。",
+    "reading": {
+      "question": "废相发生在北京宫城营建之前还是之后？",
+      "observation": "1380 年标记在 1406—1420 年区间左侧；上方色段显示这些事件集中在明初。",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    }
   }
 }

@@ -1,33 +1,40 @@
 {
+  "input": "plan.json",
+  "artifact": "pdf/西方建筑史_学习计划.pdf",
+  "artifacts": {
+    "pdf": "pdf/西方建筑史_学习计划.pdf",
+    "markdown": "sources/西方建筑史_学习计划.md"
+  },
   "key": "plan",
   "pdf": "pdf/西方建筑史_学习计划.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "plan.json": "c2fdde4e20dc4e48577c8825802e8271fe3dcdb3a6b4d7ec69ee3ec67382674a",
-    "config.json": "1f0b5dae5cd8eca6a3355a0ab291a3181d247203ec177eba9c0b1c6054b1bc81",
-    "pdf/西方建筑史_学习计划.pdf": "06ff155811a86fb1e40a37aca8c8d90717882168e9f900acd7d1147ef15481f4",
-    "sources/西方建筑史_学习计划.tex": "73f2c5f2bf6afecd896bc626930db25852261a9628820e0eedd2926ea9602be2",
-    "sources/西方建筑史_学习计划.md": "a26c4e3cc109afc462d0ebe89b6d48698dffa2d45ae7919f6e727325c90bf9d5",
-    "assets/figure-9ba448966b26.png": "9ba448966b26786005b0a3acc7d58fb49f0058a5c1cd9205f109cb31cf5607ee",
-    "previews/plan-01.png": "d8141dd4497a1c17332065f91f161ec796066541c5e506d1dcc9f0c4df5c5cd3",
-    "previews/plan-02.png": "c8d2714e82ce7efb712a70e74c9b83ebfd51952a9d72af5754ebbf3efa386b6e",
-    "previews/plan-03.png": "e019c3050eaeb964be1d5250ad80b642434921c56aaedd227388a1a1cbdcb0f2"
+    "plan.json": "0700fe4c2bcf3df68d5c3e6d9cc09dc63ba11366fba76f58c3aa1ba295bf80ae",
+    "config.json": "5fdfea3f096a645824f4d90ffc0b6f38305d42f3f9220d4876d9781e058f4690",
+    "pdf/西方建筑史_学习计划.pdf": "d218d767fe38a6cfe10debac9e5aa380508e52a22fa89ce6251efcd66b4b6a1f",
+    "sources/西方建筑史_学习计划.tex": "ddc3edc2878559e6b6c57a49d6c095bce0571f438c9e57aa41588e52a18fe1c9",
+    "sources/西方建筑史_学习计划.md": "ec447503f94fe49a09381474666011f3ee975ebfe305fb6be0de0ece58791e53",
+    "assets/figure-17da434b6a25.png": "17da434b6a2527eb329e160d780ee145fa74c1f312ebc940bd10b369dff68754",
+    "previews/plan-01.png": "80538fcc8ba0e86ae69fb83df30c059dee78c4503124f8d658a6d4ce66491817",
+    "previews/plan-02.png": "1fe3a3481ec3e12ed2ce7d392bc3874818a7eb25a8f526c897f7a0001911d0a1",
+    "previews/plan-03.png": "c948a45355da8a0a82be02ff141deb9d937069c9a5d1b12ebdecb56a17973351"
   },
   "previews": [
     "previews/plan-01.png",
     "previews/plan-02.png",
     "previews/plan-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 3,
     "links": 5,
     "fonts": [
-      "/LHQVKM+TimesNewRomanPS-BoldMT",
-      "/LMBHFP+FandolFang-Regular-Identity-H",
-      "/WDYTWO+TimesNewRomanPSMT"
-    ]
+      "/AFZKCA+FandolFang-Regular-Identity-H",
+      "/IFFCGU+TimesNewRomanPS-BoldMT",
+      "/SBMDXP+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-17da434b6a25.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

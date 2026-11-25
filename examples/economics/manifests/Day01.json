@@ -1,32 +1,38 @@
 {
+  "input": "data/Day01.json",
+  "artifact": "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf",
+  "artifacts": {
+    "pdf": "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf",
+    "markdown": "sources/经济学_每日学习_Day01_稀缺与机会成本.md"
+  },
   "key": "Day01",
   "pdf": "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day01.json": "ea90f197e96933c34389fb3cba56c126a16a2e7c7fc0e8f0cf113824641c1bb3",
-    "plan.json": "a56e11a33b46fe3014d7ba8d69027cf2e21e07199565262a1308c276d54a1f46",
-    "config.json": "7234fdfad7216c08f83e19a7c895793256fb536dd34563bba88d567c894b9e26",
-    "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf": "bee2c7a609b86fb1bd6b19c4f3a9c8281a362cb4af0ca74eb569d9482595ce8f",
-    "sources/经济学_每日学习_Day01_稀缺与机会成本.tex": "696b5c64f9bdbcaf3686e11ba97c58520bd2e295fa3cd99ee12530b624918b5f",
-    "sources/经济学_每日学习_Day01_稀缺与机会成本.md": "933708b459239caf36b11bc1051435802af5d0d402ad17e094fac274dced76f6",
-    "assets/figure-a92b6089a95f.png": "a92b6089a95f2c556d487856b571dfed837a83c776ea0ee3b78b90fc1de2640e",
-    "previews/Day01-01.png": "dfcb6a07be5b10039225ff02e150ac4d41ec7c883afdce2576a2ec71e592d8da",
-    "previews/Day01-02.png": "2cd4faea847cb1cac4843558a60e9ea44ccb2566e55ecdbd29c324e2f48187b2"
+    "data/Day01.json": "dcc812517742616816061ce778d59f921dcccea797bd1f3d52d6a9a185758efc",
+    "plan.json": "90a2175b37a6f768396d6865cf7fa256f4a2cf4ab1bebde390a7a7de914a3885",
+    "config.json": "ba03bf612c7c5e07d54e10d5151be46705a616359e14494b699a8a783c57c833",
+    "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf": "ac403ffb8d5728ccd65dc26c327deae20816ab75fbe020ba28996627e3a461ca",
+    "sources/经济学_每日学习_Day01_稀缺与机会成本.tex": "380bd3d4903ee61f366ff577ebc2cd280fef593924432f47f9741c8be09e5b3f",
+    "sources/经济学_每日学习_Day01_稀缺与机会成本.md": "74a9d897422365411011aaa05339a3ce7f732585248ac1b2d9b54666f6fa6a57",
+    "assets/figure-0e525a31fd7c.png": "0e525a31fd7cd1c4372748a953e2ca1d2ff0e3f3737a0d92d9e70dcb9945c0bc",
+    "previews/Day01-01.png": "255cec4db32bcbd93b549bb4a24702567b97665b7914863c0f75a7262b9d40bd",
+    "previews/Day01-02.png": "958411e730eb85fe3d6a0dda1edc78bd63eb1fd940afd083d9db34265811758b"
   },
   "previews": [
     "previews/Day01-01.png",
     "previews/Day01-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/JJBSFK+TimesNewRomanPSMT",
-      "/VXWWOO+TimesNewRomanPS-BoldMT",
-      "/WRZXQS+FandolFang-Regular-Identity-H"
-    ]
+      "/CFYPJD+TimesNewRomanPSMT",
+      "/NHASRW+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-0e525a31fd7c.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

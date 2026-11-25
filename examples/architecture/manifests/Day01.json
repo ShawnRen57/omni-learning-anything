@@ -1,32 +1,38 @@
 {
+  "input": "data/Day01.json",
+  "artifact": "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf",
+  "artifacts": {
+    "pdf": "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf",
+    "markdown": "sources/西方建筑史_每日学习_Day01_建筑如何被阅读.md"
+  },
   "key": "Day01",
   "pdf": "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day01.json": "f4a6e5b04c47db79cfddb428f355d47a948a21222c6e35020b127125966bca7a",
-    "plan.json": "c2fdde4e20dc4e48577c8825802e8271fe3dcdb3a6b4d7ec69ee3ec67382674a",
-    "config.json": "1f0b5dae5cd8eca6a3355a0ab291a3181d247203ec177eba9c0b1c6054b1bc81",
-    "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf": "e6ab55cd508e8d4257a6df55d8aed9bb8e56088d036e8f95b5a083eae9f80fa8",
-    "sources/西方建筑史_每日学习_Day01_建筑如何被阅读.tex": "b6081a237ac9123fec89394f1433de575dc12b1dc5147692233638665ecdf6f1",
-    "sources/西方建筑史_每日学习_Day01_建筑如何被阅读.md": "73e950a79314874d9c54b1f1ffd3deaab64fa5296eb162adbcaec167a8ae9faa",
-    "assets/figure-9ba448966b26.png": "9ba448966b26786005b0a3acc7d58fb49f0058a5c1cd9205f109cb31cf5607ee",
-    "previews/Day01-01.png": "52d9a419eb49f0a12796234a991481949a04525f4ba55456a4afffe6236d1a58",
-    "previews/Day01-02.png": "b6f8d83c08bfc35d381cad0d4f979110d623178c6826edd8fd823c9e05e2228d"
+    "data/Day01.json": "deae5c6688013b43adf52202410fcae45354fdb42f5743e3d728c3f80a910d2b",
+    "plan.json": "0700fe4c2bcf3df68d5c3e6d9cc09dc63ba11366fba76f58c3aa1ba295bf80ae",
+    "config.json": "5fdfea3f096a645824f4d90ffc0b6f38305d42f3f9220d4876d9781e058f4690",
+    "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf": "46ff137fbcdb66d05c2324d8442b1c67c324b07d2f2d47b2ceb6125534d6a0d5",
+    "sources/西方建筑史_每日学习_Day01_建筑如何被阅读.tex": "b94e5d780f88e0422f07d51100b73e2fc5353cb5ea3d43c462078b801d3f3c91",
+    "sources/西方建筑史_每日学习_Day01_建筑如何被阅读.md": "ee0837c32670cbc4af5c683ce636988fc6a7a29ad254478d625547bc9e9faf98",
+    "assets/figure-62f1d244ca50.png": "62f1d244ca50209faff992959b80060b2e8861f14c199f1f1397a5048171b15a",
+    "previews/Day01-01.png": "a39e86b7e22a94f78cf0731ed750d060d482ebb42156b440d4d747977bfd753a",
+    "previews/Day01-02.png": "92fdd55dea218e561f63a7531a86df2d504504668585b2d2743c9fd524619dd7"
   },
   "previews": [
     "previews/Day01-01.png",
     "previews/Day01-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
-    "links": 5,
+    "links": 6,
     "fonts": [
-      "/CFXJXP+TimesNewRomanPSMT",
-      "/DCLJYB+FandolFang-Regular-Identity-H",
-      "/KMEPPP+TimesNewRomanPS-BoldMT"
-    ]
+      "/HXFYZO+FandolFang-Regular-Identity-H",
+      "/PJTTHT+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-62f1d244ca50.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

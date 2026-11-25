@@ -1,33 +1,40 @@
 {
+  "input": "plan.json",
+  "artifact": "pdf/Agent产品设计_学习计划.pdf",
+  "artifacts": {
+    "pdf": "pdf/Agent产品设计_学习计划.pdf",
+    "markdown": "sources/Agent产品设计_学习计划.md"
+  },
   "key": "plan",
   "pdf": "pdf/Agent产品设计_学习计划.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "plan.json": "3cd0f64961491690b55bf3760bb4d61b48296e1cbca1f3dc28a04332bc2a2e92",
-    "config.json": "74d99fd04727087d32acf2742cc68bed450f91b7088494d7529d5cc349de4ea9",
-    "pdf/Agent产品设计_学习计划.pdf": "943005f358e7af00ea25b9db291751bb2be94fd9d1a3861666eeb1dde2155501",
-    "sources/Agent产品设计_学习计划.tex": "0db8d2a4f6912cb5e66fa41380edde778f4628f6e030efbc846f90ce19a37ac4",
-    "sources/Agent产品设计_学习计划.md": "d5aef22aa394721bc9e087962f420a844758a4ab3e3cf9d9f4fd6436ffae4eff",
-    "assets/figure-8284fa500410.png": "8284fa5004108e7baab1023f2ed90f158323aa4e58e23c4f8d4323d2e8f24e0b",
-    "previews/plan-01.png": "c84fb166481d33cf2cfa137e7ffac7aa2424d911c175c83e08ce77efc800f626",
-    "previews/plan-02.png": "9fd2f4b1a98a5f44c226d47a49ab99dbeedec1805719923b84aa01e7526f8cd5",
-    "previews/plan-03.png": "68e6e15e82c5a6e23c0a1663344cea5ccf758650720f71f37c1ac802f68cfe27"
+    "plan.json": "24f8d6ec46b44551c77e75eea00e4ea330d0163433dcd2efa81516735a66a838",
+    "config.json": "3b32a6ac165206408943e2ac6cea6a60f71fc737f62a22f87354be4bb3a7ab85",
+    "pdf/Agent产品设计_学习计划.pdf": "69dc44eda9057dbc9b496ddf9d6a157e59702ab235ca38b7e131b1e3e0e6f00b",
+    "sources/Agent产品设计_学习计划.tex": "0f58d79383d5ba67026ffcb2a5d231318da54ef04aa657f909e792794b1c05d6",
+    "sources/Agent产品设计_学习计划.md": "609595956b7de9275e141ef8c9b8d1ef2c86eb46b02d210b05e3720fcf846de6",
+    "assets/figure-03a7edb09fb6.png": "03a7edb09fb6de287e8c7f58fb8fa5871011fdeaa0f5fcc762f7ea3421635a3f",
+    "previews/plan-01.png": "2f53909a1c156ba72ba50dae0b0e4903b140865189f8b3740bda9ef7c16dbcc3",
+    "previews/plan-02.png": "c9c1307a72ea66d1a6b930dab2c7561a6d692f659f0b3d5d6a5fb80de3c2d9b7",
+    "previews/plan-03.png": "d2893a0ac365d666f24313439492da0411fcb63bc582af9666217520715b422f"
   },
   "previews": [
     "previews/plan-01.png",
     "previews/plan-02.png",
     "previews/plan-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 3,
     "links": 5,
     "fonts": [
-      "/ENNINQ+TimesNewRomanPS-BoldMT",
-      "/LQDLJS+FandolFang-Regular-Identity-H",
-      "/WPJQTO+TimesNewRomanPSMT"
-    ]
+      "/GLWHLL+FandolFang-Regular-Identity-H",
+      "/JEUTIT+TimesNewRomanPSMT",
+      "/ZSIXJN+TimesNewRomanPS-BoldMT"
+    ],
+    "figure": "assets/figure-03a7edb09fb6.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

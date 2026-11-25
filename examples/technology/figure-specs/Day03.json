@@ -1,0 +1,24 @@
+{
+  "image": "figure-107db0930f98.png",
+  "caption": "同一刻度下的三种照明用电量",
+  "credit": "原创计算图；按 EIA 的瓦时定义，用正文中的设定计算。",
+  "reading": {
+    "question": "哪一种 20 W 的用法比 10 W × 5 h 更省电？",
+    "observation": "末行的 20 W × 1 h 是 0.02 kWh，短于首行的 0.05 kWh；前两行开灯时长相同，20 W 的用电量则是两倍。",
+    "source_ids": [
+      "S6"
+    ]
+  },
+  "body_reference": "对照相同起点的三根横条，再把功率和实际运行时长一起带入比较。[S6]",
+  "additional_sources": [
+    {
+      "id": "S6",
+      "title": "Measuring electricity",
+      "url": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+      "publisher": "U.S. Energy Information Administration",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "参见 Electricity use over time is measured in Watthours 的功率、时长与用电量换算。"
+    }
+  ]
+}

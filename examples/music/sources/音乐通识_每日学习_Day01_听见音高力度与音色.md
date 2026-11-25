@@ -1,6 +1,6 @@
 # 听见音高力度与音色
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,9 +10,13 @@
 
 “好听”“悲伤”“高级”表达体验，却不容易让别人知道你听到了哪里。试着换成“人声逐渐升高，伴奏更响，弦乐变得密集”。这些描述并不否认情绪，而是为感受增加可讨论的线索。第一天只做观察，不急着给作品定风格，也不假定人人会听出同一种情绪。
 
-![本课重点看 A 区。A 比较振动疏密与振幅；B 稳定脉冲和节奏事件并不相同；C 两个音高之间可以比较方向与距离。波形仅作概念示意。](../assets/figure-f6141a0bb6d5.png)
+固定观察窗口，逐行与 A 比较。先数周期，再量波峰离中线的高度，最后看周期内部的形状。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![从同长的波形片段中分辨周期数、振幅与形状。](../assets/figure-6d3e1511f500.png)
+
+从同长的波形片段中分辨周期数、振幅与形状。 比对 A 行，哪一行只增加了周期数？哪一行保留基频却改变了波形？ B 在相同时间内有四个周期，A 只有两个。D 的整体形状同样重复两次，但加入谐波后每个周期的形状改变。 \[S1\] \[S6\]
+
+原创合成信号，未使用乐器录音；频率与音色依据 OpenStax《Physics》。
 
 ## 三个不同维度
 
@@ -24,7 +28,7 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 读图与聆听方法
 
-图 A 上部用疏密对比提示音高，下部用振幅提示强弱；它不是真实乐器的声学测量。先哼一个舒适的音，再换到稍高的音，尽量保持强弱相近。接着固定音高，轻轻变强再变弱。若一开始做不到完全分离，很正常，目的在于意识到两种变化不同。
+波形图中，B 的周期数增加，C 的振幅缩小，D 在同一基频上加入谐波。音色会受到各频率成分的影响。[S6]先哼一个舒适的音，再换到稍高的音，尽量保持强弱相近。接着固定音高，轻轻变强再变弱。若一开始做不到完全分离，很正常，目的在于意识到两种变化不同。
 
 听熟悉歌曲前30秒，第一遍只跟人声高低，第二遍只听整体强弱，第三遍找一种伴奏声音。把结果写成三句话。即使不确定乐器名称，也可以写“短促、颗粒感的声音”，比猜一个专业名词更诚实。
 
@@ -40,12 +44,14 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Speed of Sound, Frequency, and Wavelength](https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength)：选读声音频率与音高的关系，公式推导可跳过。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [Speed of Sound, Frequency, and Wavelength](https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength): 选读声音频率与音高的关系，公式推导可跳过。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [Basic notation](https://openmusictheory.github.io/basicNotation.html)：认识音符、谱表和变音记号；本课不要求记住全部符号。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S2] [Basic notation](https://openmusictheory.github.io/basicNotation.html): 认识音符、谱表和变音记号；本课不要求记住全部符号。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Rhythmic values](https://openmusictheory.github.io/rhythmicValues.html)：观察长短时值和休止符如何表达时间。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S3] [Rhythmic values](https://openmusictheory.github.io/rhythmicValues.html): 观察长短时值和休止符如何表达时间。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Meter and time signatures](https://openmusictheory.github.io/meter.html)：选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S4] [Meter and time signatures](https://openmusictheory.github.io/meter.html): 选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Intervals and dyads](https://openmusictheory.github.io/intervals.html)：重点看半音数与音程度数不是同一种计数方法。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S5] [Intervals and dyads](https://openmusictheory.github.io/intervals.html): 重点看半音数与音程度数不是同一种计数方法。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
+
+- [S6] [Sound Intensity and Sound Level](https://openstax.org/books/physics/pages/14-2-sound-intensity-and-sound-level): 参见 pitch、loudness 与 timbre 的区分，以及声源的频率成分如何影响音色。; OpenStax | 发布: 未标注 | 核验: 2026-11-25

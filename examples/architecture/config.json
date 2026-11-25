@@ -16,5 +16,6 @@
   ],
   "language": "zh",
   "immediate_day01": true,
-  "sample_mode": true
+  "sample_mode": true,
+  "visual_guides": true
 }

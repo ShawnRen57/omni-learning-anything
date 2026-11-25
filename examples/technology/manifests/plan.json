@@ -1,33 +1,40 @@
 {
+  "input": "plan.json",
+  "artifact": "pdf/科技通识_学习计划.pdf",
+  "artifacts": {
+    "pdf": "pdf/科技通识_学习计划.pdf",
+    "markdown": "sources/科技通识_学习计划.md"
+  },
   "key": "plan",
   "pdf": "pdf/科技通识_学习计划.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "plan.json": "37836264622cf97ff29269a4634cce91686a28310630c58fa946d8cbe16382d2",
-    "pdf/科技通识_学习计划.pdf": "212f7910e52904398238e958584260daceb30fcce174cd9e3f08007764305713",
-    "sources/科技通识_学习计划.tex": "2f724ef456b6313fffea68f5218be204f9a4938a3470ab351a23f2455f0a2fd5",
-    "sources/科技通识_学习计划.md": "c6d7387d770533f1283626472dd060d2650a8c193c0bdd33a5849479f3642724",
-    "assets/figure-f1c69576c177.png": "f1c69576c177b1cdef58e256311032e0a7861690742fb16723ff5e437150bd24",
-    "previews/plan-01.png": "779e8182fb78a3b099b2f537737815e078ed6e3a5c74125d87102371dc639e21",
-    "previews/plan-02.png": "ead2b34acc286e15bd776451d8ef8a37a94664be0906ba792f199d28598fb776",
-    "previews/plan-03.png": "a875720e53c39c3193e18a84df83af4225ea1f086cb22a30f32cd89f52e6e17f",
-    "config.json": "4679155ce644c4b791aa20003f3bac1f56f211c650e26a7e0a97bb7735968d72"
+    "plan.json": "9b7f5612c15b6b2588eb91e8a18665ac54a7118ef5c6ca81e8b09c4443d93abc",
+    "config.json": "361fce33b644b4458fd50004eb8c30e46883585e37f8fa618a736c9af3151bff",
+    "pdf/科技通识_学习计划.pdf": "91a7485611887eb2d5e032d6003175cd14f7396ca3685841f8f54d2a924a4064",
+    "sources/科技通识_学习计划.tex": "7d2155fb3d079a7b01626564468a4f2f9e2641a1248d0f745fdcb509e8ac6d71",
+    "sources/科技通识_学习计划.md": "50db0466d2773b52e2f6530ceb42ec8c43ca1ba4fd4ac1a098bc1b2512b13e36",
+    "assets/figure-d9fb6d991cfc.png": "d9fb6d991cfcea1140316215cde2f077484dbea4f9171e54a025c812db86f0fe",
+    "previews/plan-01.png": "79e0df3d3f11a2de551dee6c5294730350986f82074792cb46f4655f9632bd9f",
+    "previews/plan-02.png": "4dd25909a22fdec23f2599264cf9c5b815bbac891629bfc42918500659457b15",
+    "previews/plan-03.png": "e75fcbee386f477c59bb7a7b2911e75c64b70e07d846a8951c823f944a9f4f49"
   },
   "previews": [
     "previews/plan-01.png",
     "previews/plan-02.png",
     "previews/plan-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 3,
     "links": 5,
     "fonts": [
-      "/DQASDR+FandolFang-Regular-Identity-H",
-      "/JTVSKM+TimesNewRomanPSMT",
-      "/ZYISBM+TimesNewRomanPS-BoldMT"
-    ]
+      "/BKJJOJ+FandolFang-Regular-Identity-H",
+      "/PAZZZO+TimesNewRomanPS-BoldMT",
+      "/UVOKKK+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-d9fb6d991cfc.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

@@ -25,11 +25,12 @@ Verification: Python compilation; six entries; six days each; exact u01/u01/u02/
 
 ### 原始来源与边界
 
-- **[S1] [PSYCHOLOGY 1504 — POSITIVE PSYCHOLOGY](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf)** — 宾夕法尼亚大学积极心理学中心（保存哈佛课程大纲）. 发布日期或版本: 2006 春季. 核查日期: 2026-11-01. 来源用途: 2006 年春季原课大纲；仅支持课程主题、日期与安排，不代表已核实官方讲课全文。
-- **[S2] [Positive Psychology: An Introduction](https://www.authentichappiness.sas.upenn.edu/resources/positive-psychology-introduction)** — 宾夕法尼亚大学 Authentic Happiness. 发布日期或版本: 2000（论文；入口页未标日期）. 核查日期: 2026-11-01. 来源用途: 作者机构的论文入口；提供作者及年份，链接的论文全文本次未能获取。
-- **[S3] [Positive psychology. An introduction](https://pubmed.ncbi.nlm.nih.gov/11392865/)** — 美国国家医学图书馆；原论文作者 Seligman 与 Csikszentmihalyi. 发布日期或版本: 2000-01. 核查日期: 2026-11-01. 来源用途: 原始论文摘要与书目记录，2000 年 1 月，55(1):5–14；只使用摘要中的研究框架。
+- **[S1] [PSYCHOLOGY 1504 — POSITIVE PSYCHOLOGY](https://ppc.sas.upenn.edu/sites/default/files/ppsyllabusschachar.pdf)** — 宾夕法尼亚大学积极心理学中心（保存哈佛课程大纲）. 发布日期或版本: 2006 春季. 首次核查 2026-11-01，复核 2026-11-25。 来源用途: 2006 年春季原课大纲；仅支持课程主题、日期与安排，不代表已核实官方讲课全文。
+- **[S2] [Positive Psychology: An Introduction](https://www.authentichappiness.sas.upenn.edu/resources/positive-psychology-introduction)** — 宾夕法尼亚大学 Authentic Happiness. 发布日期或版本: 2000（论文；入口页未标日期）. 首次核查 2026-11-01，复核 2026-11-25。 来源用途: 作者机构的论文入口；提供作者及年份，链接的论文全文本次未能获取。
+- **[S3] [Positive psychology. An introduction](https://pubmed.ncbi.nlm.nih.gov/11392865/)** — 美国国家医学图书馆；原论文作者 Seligman 与 Csikszentmihalyi. 发布日期或版本: 2000-01. 首次核查 2026-11-01，复核 2026-11-25。 来源用途: 原始论文摘要与书目记录，2000 年 1 月，55(1):5–14；只使用摘要中的研究框架。
+- **[S4] [STAT 200 · Describing Data, Part 1, §2.1.1](https://online.stat.psu.edu/stat200/Lesson02)** — 宾夕法尼亚州立大学统计学系。2026-11-25 核对组内比例的分子与分母。
 
-> 同一情境的三个观察层次：体验、行动、环境；相邻关系不等于因果关系。 本指南原创教学示意；不含研究数据，非哈佛原课图。
+计划图以自评卡、回访表和值班日志演示各类记录能回答的问题。Day01 用虚构学习小组的 8/10 和 9/20 演示人数与组内比例的比较。两幅图均由本指南编绘。
 
 ## CS50x: think clearly before you code
 

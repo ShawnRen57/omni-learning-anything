@@ -10,15 +10,15 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
-\newcommand{\Needspace}[1]{\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\relax\newpage\fi}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
 
 
 {\LARGE\bfseries\color{ink} Agent产品设计：30天学习计划}\par
 
-2026-10-08 | 学习计划 / 30 天\par\vspace{6pt}
+2026-11-25 | 学习计划 / 30 天\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{学习者与目标}
 
@@ -30,13 +30,15 @@
 
 每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。
 
-本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。
+本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-8284fa500410.png}\par
+在六段时间轴下方，圈出本阶段结束时应该拿得出来的那份产物。
 
-{\small A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-03a7edb09fb6.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 按五天分段的产品实作路线 哪一段开始把产品目标写成验收标准？ 第 11–15 天的「需求与验收」连接到验收标准，之后才进入风险评估与商业验证。 [S1] [S3]}\par
+
+{\footnotesize 原创课程进度图；编排结合任务设计与评估方法。}\end{center}
 
 \Needspace{5\baselineskip}\section*{课程依据与学习成果}
 
@@ -152,17 +154,17 @@ Day30  结业：产品决策答辩
 
 真实使用时，请确认目标、基础、周期、每天用时、执行时间、时区与输出目录。批准当前计划后才创建任务；修改已开始的课程时保留旧档案并建立新版本。到期漏跑则继续最早未交付课程，不按日期跳课。
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://www.anthropic.com/engineering/building-effective-agents}{Building effective agents} — 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。\par Anthropic | 发布：2024-12-19 | 核验：2026-10-08
+\item [S1] \href{https://www.anthropic.com/engineering/building-effective-agents}{Building effective agents} — 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。\par Anthropic | 发布: 2024-12-19 | 核验: 2026-11-25
 
-\item [S2] \href{https://www.anthropic.com/engineering/writing-tools-for-agents}{Writing effective tools for agents} — 关注工具边界、返回结果和评价方法如何影响可用性。\par Anthropic | 发布：2025-09-11 | 核验：2026-10-08
+\item [S2] \href{https://www.anthropic.com/engineering/writing-tools-for-agents}{Writing effective tools for agents} — 关注工具边界、返回结果和评价方法如何影响可用性。\par Anthropic | 发布: 2025-09-11 | 核验: 2026-11-25
 
-\item [S3] \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents} — 理解结果评价与执行轨迹；为后续验收指标课程准备。\par Anthropic | 发布：2026-01-09 | 核验：2026-10-08
+\item [S3] \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents} — 理解结果评价与执行轨迹；为后续验收指标课程准备。\par Anthropic | 发布: 2026-01-09 | 核验: 2026-11-25
 
-\item [S4] \href{https://modelcontextprotocol.io/specification/2025-06-18}{Model Context Protocol specification} — 阅读指定版本的用途和安全原则；不称其为最新版本。\par MCP project | 发布：2025-06-18（指定版本） | 核验：2026-10-08
+\item [S4] \href{https://modelcontextprotocol.io/specification/2025-06-18}{Model Context Protocol specification} — 阅读指定版本的用途和安全原则；不称其为最新版本。\par MCP project | 发布: 2025-06-18（指定版本） | 核验: 2026-11-25
 
-\item [S5] \href{https://adk.dev/agents/}{Agents in ADK} — 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。\par Google ADK | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://adk.dev/agents/}{Agents in ADK} — 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。\par Google ADK | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

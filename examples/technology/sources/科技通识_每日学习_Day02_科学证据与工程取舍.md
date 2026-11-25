@@ -1,6 +1,6 @@
 # 科学证据与工程取舍
 
-2026-10-08 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,9 +10,13 @@
 
 设想一个团队演示桥梁模型承重：放上一个砝码，桥没有倒。这个结果支持的是“在此次条件下承受了这一载荷”，并不自动支持“适合所有地形、能用五十年”。工程判断需要材料、结构、环境与使用条件。OpenStax 把物理学中的模型与实验联系起来；本课把这种证据意识迁移到日常技术阅读。[S1]
 
-![本课重点看 B 区。A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。](../assets/figure-f1c69576c177.png)
+先在矩阵里找到有观测记录的一格，再沿行、列各移动一格，读出条件的变化。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![用条件矩阵检查演示的证据范围](../assets/figure-0deac43e17da.png)
+
+用条件矩阵检查演示的证据范围 一次干燥、200 g 的演示能否预测受潮后的表现？ 唯一标记「本次承住」的是干燥条件的 200 g 格。整行受潮条件均未测，即使同为 200 g，也缺少对应证据。 \[S1\]
+
+原创假设实验；砝码质量和承重结果仅用于演示怎样界定证据。
 
 ## 科学问题与工程问题
 
@@ -24,7 +28,7 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 先问基线：它比什么好？再问条件：样本、任务和环境是什么？然后问指标：平均速度是否掩盖了少量特别慢的情况？最后问代价：性能增加是否带来能耗、成本或维护要求？NIST 的 AI 测量资料列出可靠性、可解释性等维度，可帮助你想到单项准确率以外的问题。[S4]
 
-看图 B：材料观察和桥梁设计之间有联系，但没有一条“观察到原理，所以工程必然成功”的捷径。假设某导航系统在晴天主干道表现良好，评估还应有雨天、复杂路口、定位中断等与用途相关的条件。这些是课程提出的测试建议，不是对某品牌的测试结果。
+条件矩阵把桥梁模型的一次成功放回特定载荷和材料状态下。假设某导航系统在晴天主干道表现良好，评估还应有雨天、复杂路口、定位中断等与用途相关的条件。这些是课程提出的测试建议，不是对某品牌的测试结果。
 
 ## 三分钟练习：改写宣传句
 
@@ -38,12 +42,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Physics: Definitions and Applications](https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications)：从物理学与技术的关系入手，区分解释自然和解决实际问题。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [Physics: Definitions and Applications](https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications): 从物理学与技术的关系入手，区分解释自然和解决实际问题。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [The Electromagnetic Spectrum](https://science.nasa.gov/ems/)：查看波谱教学材料，理解通信与成像共享的物理基础。；NASA；发布 未标注；核验 2026-10-08
+- [S2] [The Electromagnetic Spectrum](https://science.nasa.gov/ems/): 查看波谱教学材料，理解通信与成像共享的物理基础。; NASA | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Electricity 101](https://www.energy.gov/oe/electricity-101)：只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。；美国能源部；发布 未标注；核验 2026-10-08
+- [S3] [Electricity 101](https://www.energy.gov/oe/electricity-101): 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。; 美国能源部 | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [AI measurement and evaluation](https://www.nist.gov/ai-measurement-and-evaluation)：观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。；NIST；发布 未标注；核验 2026-10-08
+- [S4] [AI measurement and evaluation](https://www.nist.gov/ai-measurement-and-evaluation): 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。; NIST | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [The Silicon Engine](https://www.computerhistory.org/siliconengine/)：沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。；Computer History Museum；发布 未标注；核验 2026-10-08
+- [S5] [The Silicon Engine](https://www.computerhistory.org/siliconengine/): 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。; Computer History Museum | 发布: 未标注 | 核验: 2026-11-25

@@ -1,32 +1,38 @@
 {
+  "input": "data/Day02.json",
+  "artifact": "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf",
+  "artifacts": {
+    "pdf": "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf",
+    "markdown": "sources/音乐通识_每日学习_Day02_节拍节奏与速度.md"
+  },
   "key": "Day02",
   "pdf": "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day02.json": "f3234130f0a95e3bd480512aaa99177e2d857a2aac2497514a182b813312d3a1",
-    "plan.json": "00282ffdd604c8b36759839f2ad2dc98aa315615e111c9430923f2d2a7495a34",
-    "config.json": "8a70afa4ef991b08b6bbdff60607fd5bc910376056f74d427166a60d85ed8877",
-    "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf": "cfadbab837a3f110da215ce48e851a638b6ba2e799c8f19fa3a626b0a9804d4e",
-    "sources/音乐通识_每日学习_Day02_节拍节奏与速度.tex": "0283a531dcbb05fe3dd6a939201ece20e42cb12572af4eaa85d5c6deca763cc7",
-    "sources/音乐通识_每日学习_Day02_节拍节奏与速度.md": "4902648969f54854a09981b64f3b37bb2dabda24d74be3e84d9eefbef7fafa8b",
-    "assets/figure-f6141a0bb6d5.png": "f6141a0bb6d5be36efb00ca0e40c494d4d6e655e7d9724eea66dd2afb3d9d685",
-    "previews/Day02-01.png": "cdae235248223f093d7f8c5e0f3dc103f345878126d4f216d35e1004fddab354",
-    "previews/Day02-02.png": "e1db6f88a3be21333c5e5f73b1d5a939be122bb91662ed82e9f0f34480f669b5"
+    "data/Day02.json": "0ec3af651c9eb2d71714b6b135050006d8a4e0b4080731b2e37c1adfa8b45bfd",
+    "plan.json": "de126edcce3b5798879bf41846b9ddcb3a3ad61409db3094e28ff0dba73d794c",
+    "config.json": "a9c905889c7fb36ad7a3f4a6a351790aef147c3f000ad9370993f31d0e6a22ac",
+    "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf": "535df20408b77a8e535155b00c067d71f9405d4cca6dd751b0afe9086297ee11",
+    "sources/音乐通识_每日学习_Day02_节拍节奏与速度.tex": "446266c412a8bb7fadcbda83820287153e378dea82e9a3064babc294ac434740",
+    "sources/音乐通识_每日学习_Day02_节拍节奏与速度.md": "3d74a261a6ad059c929ef1e0ccc7b0457d20936709de96cd7ec29489dd306a41",
+    "assets/figure-bd4ea4fecd87.png": "bd4ea4fecd8714646b2e0ab9cdf7578d5aaf4a941ce85366db1500af3a88ab52",
+    "previews/Day02-01.png": "336f81eab8675c96265361ca5dda9bbe20c5784c3d9dff8a8a71ff7c6bacacbb",
+    "previews/Day02-02.png": "687462b52310618aeb027f83d6f75bf8e3d96ce7b4789a70ddf76a0e6953263e"
   },
   "previews": [
     "previews/Day02-01.png",
     "previews/Day02-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/DRDZSV+TimesNewRomanPS-BoldMT",
-      "/JDWPDH+TimesNewRomanPSMT",
-      "/TRAWIR+FandolFang-Regular-Identity-H"
-    ]
+      "/REPMQD+FandolFang-Regular-Identity-H",
+      "/YBACNZ+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-bd4ea4fecd87.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

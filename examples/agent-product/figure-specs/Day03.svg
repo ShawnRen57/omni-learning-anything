@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>购买确认与超时后的恢复路径</title><desc>左侧变价箭头返回确认环节；右侧超时箭头通往查询原订单状态，直接再次付款不在恢复路径内。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">价格变了或提交超时，订单走哪条路？</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">购买确认 · 教学示例</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="39" y="132" width="194" height="80" rx="8" fill="#f1f5f6" stroke="#8ca7ac" stroke-width="2"/>
+<text x="136.0" y="180.5" font-size="25" font-weight="600" text-anchor="middle" fill="#19374a">候选 1,280 元</text>
+<rect x="294" y="132" width="272" height="80" rx="8" fill="#e6f2ef" stroke="#076b68" stroke-width="2"/>
+<text x="430.0" y="179.82" font-size="23" font-weight="600" text-anchor="middle" fill="#19374a">核对对象、金额、条件</text>
+<rect x="682" y="132" width="195" height="80" rx="8" fill="#e6f2ef" stroke="#076b68" stroke-width="2"/>
+<text x="779.5" y="181.18" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">提交此订单</text>
+<rect x="999" y="132" width="237" height="80" rx="8" fill="#f1f5f6" stroke="#8ca7ac" stroke-width="2"/>
+<text x="1117.5" y="180.5" font-size="25" font-weight="600" text-anchor="middle" fill="#19374a">凭回执核对结果</text>
+<path d="M234 173 L286 173" stroke="#076b68" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M286 173 L273.00 166.00 L273.00 180.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<path d="M567 173 L672 173" stroke="#076b68" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M672 173 L659.00 166.00 L659.00 180.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<text x="621" y="149" font-size="23" font-weight="650" text-anchor="middle" fill="#076b68">确认</text>
+<path d="M878 173 L990 173" stroke="#076b68" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M990 173 L977.00 166.00 L977.00 180.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<text x="936" y="148" font-size="23" font-weight="650" text-anchor="middle" fill="#076b68">成功</text>
+<rect x="290" y="294" width="278" height="69" rx="8" fill="#fff7e6" stroke="#976022" stroke-width="2"/>
+<text x="429.0" y="337.68" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">改为 1,480 元</text>
+<path d="M433 293 L433 220" stroke="#976022" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M433 220 L426.00 233.00 L440.00 233.00 Z" stroke="#976022" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#976022"/>
+<text x="266" y="266" font-size="24" font-weight="600" text-anchor="start" fill="#976022">重新确认</text>
+<rect x="897" y="294" width="338" height="69" rx="8" fill="#fff7e6" stroke="#976022" stroke-width="2"/>
+<text x="1066.0" y="337.68" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">查询原订单状态</text>
+<path d="M781 213 L781 329 L890 329" stroke="#976022" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M890 329 L877.00 322.00 L877.00 336.00 Z" stroke="#976022" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#976022"/>
+<text x="758" y="267" font-size="23" font-weight="600" text-anchor="end" fill="#976022">超时</text>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">能读取候选和生成草稿，不等于已获本次付款授权。超时后的第一步是查单。</text></g></svg>

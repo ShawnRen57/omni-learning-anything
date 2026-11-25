@@ -1,6 +1,6 @@
 # 工作流与Agent如何选择
 
-2026-10-08 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,13 +10,17 @@
 
 假设目标是整理发票：文件类型固定、字段固定、规则明确。预设“读取—提取—校验—汇总”通常更容易控制。假设目标是调查一次旅行计划为何无法满足限制，系统可能需要根据查询结果调整方向。二者都能用到模型，差异在于谁决定下一步。[S1]
 
-![本课重点看 B 区。A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。](../assets/figure-8284fa500410.png)
+沿下排的返回箭头走一圈，再找出允许退出循环的那条分支。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![固定流程与可回看的查询循环](../assets/figure-db6bcab83918.png)
+
+固定流程与可回看的查询循环 哪条路线会根据新的余票结果重新决定下一步？ 下路从改查班次返回观察节点；到达查询上限时转交用户。上路的汇总或复核已在校验规则中指定。 \[S1\]
+
+原创结构对照；发票与余票案例取自本课教学设计。
 
 ## 工作流与反馈循环
 
-工作流把主要路径预先规定好，模型可以参与其中某些步骤；Agent 的下一步更依赖当前观察与模型决策。图 B 上排是固定顺序，下排是观察、选择、行动、再观察的概念循环。循环本身不保证更聪明，它也会放大错误和耗时。
+工作流把主要路径预先规定好，模型可以参与其中某些步骤；Agent 的下一步更依赖当前观察与模型决策。上排的发票校验分支在设计时已经规定，下排则允许根据查询结果重新选路。循环本身不保证更聪明，它也会放大错误和耗时。
 
 产品取舍可从三个问题开始：输入变化多不多？失败能否明确识别？额外探索是否带来足够收益？若任务本来一次调用就能完成，增加多个代理和循环可能只增加等待。Anthropic 建议从能满足需要的简单方案出发，并指出自主性常伴随时延与成本取舍。[S1]
 
@@ -40,12 +44,12 @@ Google ADK 的分类进一步说明，顺序或循环编排也可以被框架称
 
 ## 扩展学习（选读）
 
-- [S1] [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)：读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。；Anthropic；发布 2024-12-19；核验 2026-10-08
+- [S1] [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。; Anthropic | 发布: 2024-12-19 | 核验: 2026-11-25
 
-- [S2] [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents)：关注工具边界、返回结果和评价方法如何影响可用性。；Anthropic；发布 2025-09-11；核验 2026-10-08
+- [S2] [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents): 关注工具边界、返回结果和评价方法如何影响可用性。; Anthropic | 发布: 2025-09-11 | 核验: 2026-11-25
 
-- [S3] [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)：理解结果评价与执行轨迹；为后续验收指标课程准备。；Anthropic；发布 2026-01-09；核验 2026-10-08
+- [S3] [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents): 理解结果评价与执行轨迹；为后续验收指标课程准备。; Anthropic | 发布: 2026-01-09 | 核验: 2026-11-25
 
-- [S4] [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18)：阅读指定版本的用途和安全原则；不称其为最新版本。；MCP project；发布 2025-06-18（指定版本）；核验 2026-10-08
+- [S4] [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18): 阅读指定版本的用途和安全原则；不称其为最新版本。; MCP project | 发布: 2025-06-18（指定版本） | 核验: 2026-11-25
 
-- [S5] [Agents in ADK](https://adk.dev/agents/)：比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。；Google ADK；发布 未标注；核验 2026-10-08
+- [S5] [Agents in ADK](https://adk.dev/agents/): 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。; Google ADK | 发布: 未标注 | 核验: 2026-11-25

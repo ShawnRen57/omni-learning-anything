@@ -1,0 +1,24 @@
+{
+  "image": "figure-62f1d244ca50.png",
+  "caption": "同一座小屋的平面、正立面和横剖面。",
+  "credit": "原创图例；视图定义参照约翰·索恩爵士博物馆图纸导读。",
+  "reading": {
+    "question": "要看从门口怎么走，或地面到屋顶内侧有多高，分别读哪幅图？",
+    "observation": "左侧平面的箭头穿过门洞；右侧剖面的竖向箭头从地面指向屋顶内侧。正立面只给出门和山墙的外观。",
+    "source_ids": [
+      "S6"
+    ]
+  },
+  "body_reference": "在平面上找到穿过小屋的 A—A 虚线，对照右侧剖面中这次竖切露出的高度。",
+  "additional_sources": [
+    {
+      "id": "S6",
+      "title": "Understanding Architectural Drawings",
+      "url": "https://www.soane.org/understanding-architectural-drawings",
+      "publisher": "Sir John Soane’s Museum",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "按馆方图纸导读区分平面、立面和剖面；本课用同一座虚构小屋示意。"
+    }
+  ]
+}

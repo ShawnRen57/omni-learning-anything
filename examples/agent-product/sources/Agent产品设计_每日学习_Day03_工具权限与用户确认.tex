@@ -10,7 +10,7 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
 \newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
@@ -18,7 +18,7 @@
 
 {\LARGE\bfseries\color{ink} 工具权限与用户确认}\par
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{今日导航}
 
@@ -30,17 +30,19 @@
 
 MCP 的指定版本规范讨论工具与资源的连接及安全原则；协议能帮助标准化连接，却不会自动保证业务动作正确。[S4] 这里引用的是明确版本的原则，不把它称为当前所有平台的统一实现。
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-8284fa500410.png}\par
+分别追踪两条赭色箭头，找出需要用户再授权和需要系统查单的位置。
 
-{\small 本课重点看 C 区。A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-f93d16d2db39.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 购买确认与超时后的恢复路径 价格变化与提交超时各自回到哪一步？ 左侧变价箭头返回确认环节；右侧超时箭头通往查询原订单状态，直接再次付款不在恢复路径内。 [S2] [S3] [S4]}\par
+
+{\footnotesize 原创教学流程；价格、订单及状态均为示例。}\end{center}
 
 \Needspace{5\baselineskip}\section*{把读、准备与提交分开}
 
 查询候选通常读取信息；生成订单草稿准备改变状态；支付或发送会对外产生结果。这些动作的后果不同，适合不同的确认强度。工具设计资料强调明确的用途和返回信息，本课把它落实为用户可理解的动作边界。[S2]
 
-图 C 的门位于候选与最终购买之间。确认应让用户看见具体对象、金额、时间、重要条件和即将发生的动作，而不是只问“是否继续”。如果确认后价格变化或对象更换，原确认不再完整覆盖新动作，应重新取得针对变化内容的同意。
+图中「核对对象、金额、条件」位于候选与提交订单之间。确认应让用户看见具体对象、金额、时间、重要条件和即将发生的动作，而不是只问“是否继续”。如果确认后价格变化或对象更换，原确认不再完整覆盖新动作，应重新取得针对变化内容的同意。
 
 可撤销不等于没有成本。取消订单可能产生费用，邮件撤回可能失败。设计权限时，应依据真实后果与用户意图，而不是仅依据界面是否有一个撤销按钮。
 
@@ -60,17 +62,17 @@ MCP 的指定版本规范讨论工具与资源的连接及安全原则；协议�
 
 可靠的 Agent 产品把能做、允许做和这次要做区分开。确认不是打断用户的固定仪式，而是让有后果的具体动作可审阅。明天把今天的状态区分展开，学习长任务如何保存进度并在失败后恢复。
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://www.anthropic.com/engineering/building-effective-agents}{Building effective agents} — 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。\par Anthropic | 发布：2024-12-19 | 核验：2026-10-08
+\item [S1] \href{https://www.anthropic.com/engineering/building-effective-agents}{Building effective agents} — 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。\par Anthropic | 发布: 2024-12-19 | 核验: 2026-11-25
 
-\item [S2] \href{https://www.anthropic.com/engineering/writing-tools-for-agents}{Writing effective tools for agents} — 关注工具边界、返回结果和评价方法如何影响可用性。\par Anthropic | 发布：2025-09-11 | 核验：2026-10-08
+\item [S2] \href{https://www.anthropic.com/engineering/writing-tools-for-agents}{Writing effective tools for agents} — 关注工具边界、返回结果和评价方法如何影响可用性。\par Anthropic | 发布: 2025-09-11 | 核验: 2026-11-25
 
-\item [S3] \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents} — 理解结果评价与执行轨迹；为后续验收指标课程准备。\par Anthropic | 发布：2026-01-09 | 核验：2026-10-08
+\item [S3] \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents} — 理解结果评价与执行轨迹；为后续验收指标课程准备。\par Anthropic | 发布: 2026-01-09 | 核验: 2026-11-25
 
-\item [S4] \href{https://modelcontextprotocol.io/specification/2025-06-18}{Model Context Protocol specification} — 阅读指定版本的用途和安全原则；不称其为最新版本。\par MCP project | 发布：2025-06-18（指定版本） | 核验：2026-10-08
+\item [S4] \href{https://modelcontextprotocol.io/specification/2025-06-18}{Model Context Protocol specification} — 阅读指定版本的用途和安全原则；不称其为最新版本。\par MCP project | 发布: 2025-06-18（指定版本） | 核验: 2026-11-25
 
-\item [S5] \href{https://adk.dev/agents/}{Agents in ADK} — 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。\par Google ADK | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://adk.dev/agents/}{Agents in ADK} — 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。\par Google ADK | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

@@ -160,7 +160,7 @@
     },
     {
       "title": "学习方式与时间安排",
-      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。"
+      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。\n\n从左到右轻拍四下，对照条块的长度和高度，任选一种线索描述这段旋律。"
     },
     {
       "title": "课程依据与学习成果",
@@ -202,7 +202,7 @@
       "url": "https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "选读声音频率与音高的关系，公式推导可跳过。"
     },
     {
@@ -211,7 +211,7 @@
       "url": "https://openmusictheory.github.io/basicNotation.html",
       "publisher": "Open Music Theory",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "认识音符、谱表和变音记号；本课不要求记住全部符号。"
     },
     {
@@ -220,7 +220,7 @@
       "url": "https://openmusictheory.github.io/rhythmicValues.html",
       "publisher": "Open Music Theory",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "观察长短时值和休止符如何表达时间。"
     },
     {
@@ -229,7 +229,7 @@
       "url": "https://openmusictheory.github.io/meter.html",
       "publisher": "Open Music Theory",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。"
     },
     {
@@ -238,13 +238,21 @@
       "url": "https://openmusictheory.github.io/intervals.html",
       "publisher": "Open Music Theory",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "重点看半音数与音程度数不是同一种计数方法。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "A 比较振动疏密与振幅；B 稳定脉冲和节奏事件并不相同；C 两个音高之间可以比较方向与距离。波形仅作概念示意。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-02be7764254a.png",
+    "caption": "把时间读成横向长度，把音高读成纵向位置。",
+    "credit": "原创四拍教学旋律，时值与音程依据 Open Music Theory。",
+    "reading": {
+      "question": "上图中，哪一拍有两个音？最后一次换音朝什么方向？",
+      "observation": "第 2 拍分成 D、E 两条短音；最后一拍从较高的 E 回到 C。用同一条旋律可以分别听时间和音高。",
+      "source_ids": [
+        "S3",
+        "S5"
+      ]
+    }
   }
 }

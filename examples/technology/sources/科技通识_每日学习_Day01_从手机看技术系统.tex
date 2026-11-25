@@ -10,7 +10,7 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
 \newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
@@ -18,7 +18,7 @@
 
 {\LARGE\bfseries\color{ink} 从手机看技术系统}\par
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{今日导航}
 
@@ -28,11 +28,13 @@
 
 假设你在车站扫描二维码，页面迟迟打不开。第一反应可能是“手机太慢”。但相机已经识别图案，失败也可能发生在网络传输、服务器响应或身份验证。这里的场景是教学设例。分析技术的第一步，是明确任务在哪里开始、在哪里算完成，而不是立刻给某个部件下结论。
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-f1c69576c177.png}\par
+先找左框里已经可见的状态，再沿两支方向相反的箭头查找下一条证据。[S6]
 
-{\small 本课重点看 A 区。A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-4df10b299a46.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 一次扫码的设备边界与往返消息 手机已经显示网址，为什么还要检查网络与服务器？ 左框内识别完成之后，浏览器仍需向右发请求，并收到向左返回的响应。显示网址无法证明这两步都已完成。 [S6]}\par
+
+{\footnotesize 原创诊断案例；请求与响应的方向依据 MDN。}\end{center}
 
 \Needspace{5\baselineskip}\section*{核心概念：系统、接口和瓶颈}
 
@@ -44,7 +46,7 @@
 
 \Needspace{5\baselineskip}\section*{读图与案例：扫码迟缓的排查}
 
-看图 A，把箭头理解为部件间的联系，而非真实手机接线。请补上图中没有画出的服务器与软件。
+图中左右两框分别是手机和网站服务器，跨框箭头表示请求与响应。[S6]
 
 做一个小型诊断表：相机无法对焦，对应输入环节；二维码能识别而网页打不开，对应传输或服务环节；网页已打开但无法登录，对应身份或业务环节。同一个“打不开”的感受，可能对应不同证据。每次只改变一个条件，例如换网络后重试；如果同时换设备、网络和账号，即使恢复正常，也难判断哪个因素起作用。
 
@@ -58,17 +60,19 @@
 
 今天把技术对象从名词拆成了完成任务的系统。下次遇到“性能翻倍”的新闻，先问测的是什么任务、哪个环节、在什么条件下。NIST 对 AI 的测量工作也把可靠性等维度与准确性并列，这说明单一指标不能描述全部能力。[S4] 明天继续学习：什么样的证据能支持一个技术判断？
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications}{Physics: Definitions and Applications} — 从物理学与技术的关系入手，区分解释自然和解决实际问题。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S1] \href{https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications}{Physics: Definitions and Applications} — 从物理学与技术的关系入手，区分解释自然和解决实际问题。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S2] \href{https://science.nasa.gov/ems/}{The Electromagnetic Spectrum} — 查看波谱教学材料，理解通信与成像共享的物理基础。\par NASA | 发布：未标注 | 核验：2026-10-08
+\item [S2] \href{https://science.nasa.gov/ems/}{The Electromagnetic Spectrum} — 查看波谱教学材料，理解通信与成像共享的物理基础。\par NASA | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S3] \href{https://www.energy.gov/oe/electricity-101}{Electricity 101} — 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。\par 美国能源部 | 发布：未标注 | 核验：2026-10-08
+\item [S3] \href{https://www.energy.gov/oe/electricity-101}{Electricity 101} — 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。\par 美国能源部 | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S4] \href{https://www.nist.gov/ai-measurement-and-evaluation}{AI measurement and evaluation} — 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。\par NIST | 发布：未标注 | 核验：2026-10-08
+\item [S4] \href{https://www.nist.gov/ai-measurement-and-evaluation}{AI measurement and evaluation} — 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。\par NIST | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S5] \href{https://www.computerhistory.org/siliconengine/}{The Silicon Engine} — 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。\par Computer History Museum | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://www.computerhistory.org/siliconengine/}{The Silicon Engine} — 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。\par Computer History Museum | 发布: 未标注 | 核验: 2026-11-25
+
+\item [S6] \href{https://developer.mozilla.org/en-US/docs/Learn\_web\_development/Howto/Web\_mechanics/What\_is\_a\_web\_server}{What is a web server?} — 参见 Summary 下浏览器发出 HTTP 请求及服务器返回响应的说明。\par MDN Web Docs | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

@@ -1,6 +1,6 @@
 # 边际思维与沉没成本
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -8,11 +8,15 @@
 
 ## 把决策写成“再多一点”
 
-边际分析比较行动改变一单位或一小步带来的新增收益与新增成本，而不是只比较过去的总量。[S2] 图 C 的整只面包与额外一片，帮助区分这两种问题。实际的“一步”可以是一盘面包、一小时营业或一周项目试验，应与可执行选择一致。
+边际分析比较行动改变一单位或一小步带来的新增收益与新增成本，而不是只比较过去的总量。[S2] 横条列出晚关门一小时会增加的收支，帮助把眼前的增量与整天的总量分开。实际的“一步”可以是一盘面包、一小时营业或一周项目试验，应与可执行选择一致。
 
-![本课重点看 C 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。](../assets/figure-a92b6089a95f.png)
+沿横条的同一零点比较两端，括线标出了多开一小时产生的差额。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![延时营业的一小时，只比较会随决定改变的收支。](../assets/figure-99f6fd824fda.png)
+
+延时营业的一小时，只比较会随决定改变的收支。 两根横条为什么相差 50 元？原本就要付的租金该画进哪一根？ 两条从同一零点出发，200 元收入减去 150 元新增成本得到 50 元；相同租金在两个方案间的差额为零。 \[S2\]
+
+原创条形图，金额采用本课教学设例；边际分析依据 OpenStax 第 2.1 节。
 
 ## 三个判断层次
 
@@ -38,12 +42,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [What Is Economics, and Why Is It Important?](https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important)：从稀缺与分工建立课程起点；文中旧统计不作为现状。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [What Is Economics, and Why Is It Important?](https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important): 从稀缺与分工建立课程起点；文中旧统计不作为现状。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [Budget Constraint and Individual Choices](https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint)：重点读机会成本、预算约束与边际分析。；OpenStax；发布 未标注；核验 2026-10-08
+- [S2] [Budget Constraint and Individual Choices](https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint): 重点读机会成本、预算约束与边际分析。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Production Possibilities Frontier](https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices)：把个人选择扩展为社会资源配置，观察模型假设。；OpenStax；发布 未标注；核验 2026-10-08
+- [S3] [Production Possibilities Frontier](https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices): 把个人选择扩展为社会资源配置，观察模型假设。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Demand, Supply, and Equilibrium](https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services)：对照需求、供给和均衡的图形定义。；OpenStax；发布 未标注；核验 2026-10-08
+- [S4] [Demand, Supply, and Equilibrium](https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services): 对照需求、供给和均衡的图形定义。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Shifts in Demand and Supply](https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services)：区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。；OpenStax；发布 未标注；核验 2026-10-08
+- [S5] [Shifts in Demand and Supply](https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services): 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。; OpenStax | 发布: 未标注 | 核验: 2026-11-25

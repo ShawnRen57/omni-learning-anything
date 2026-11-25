@@ -1,6 +1,6 @@
 # 永乐宫城与皇权表达
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,15 +10,19 @@
 
 UNESCO 的遗产说明指出，北京紫禁城由明成祖朱棣在1406年至1420年间营建，并经历后续明清时期的长期使用。[S3] 这给我们一个时间锚点，但今天看到的每个构件未必都原封不动来自最初营建。遗产是持续使用、修缮和解释的结果，观察时要区分建筑群的建立与某个部位的年代。
 
-![本课重点看 C 区。A 文字、器物与图像需要互证；B 思考决策和执行关系；C 区分宫城礼仪空间与日常政务。人物、服饰和机构排列均非史料复原。](../assets/figure-e75918c40f59.png)
+把手指放在南侧入口，沿虚线越过两组院落，再检查中轴两侧的对应位置。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![沿南北轴线读取宫城分区。](../assets/figure-efce6a7899e8.png)
+
+沿南北轴线读取宫城分区。 从南侧入口沿中轴向北，首先遇到哪一部分？ 南侧先到橙色外朝，继续向北才到青色内廷。左右建筑块的成对排列提示对称关系，实际政务怎样运行还要查文书。 \[S3\]
+
+布局据 UNESCO《明清故宫》；原创关系示意，非遗址测绘。
 
 ## 空间怎样表达秩序
 
 中央轴线、对称布局、前朝后寝等安排，可以引导行进并组织礼仪与生活空间；这些是 UNESCO 说明中提到的特征。[S3] 它们让某种等级和秩序可被感知，但不能仅凭布局就推断每一次真实政治互动。
 
-图 C 用抽象宫城和处理文书的场景作对照。前者提醒我们观察公开礼仪，后者提醒日常治理还涉及信息、协商与执行。图中的人物、具体建筑和办公方式均为教学想象，不是永乐时期复原，不可作为独立历史证据。
+布局图突出前后分区与左右对称，具体殿宇、建筑尺度及其历次改建，应回到遗产记录和测绘资料中核实。[S3]
 
 明清陵寝材料也能帮助观察皇权如何在另一种空间中表达。[S4] 宫殿与陵寝用途不同，比较时应找共同问题，如路线、等级和纪念，而不是假定它们只有同一种功能。
 
@@ -40,12 +44,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Ming Dynasty (1368–1644)](https://www.metmuseum.org/essays/ming-dynasty-1368-1644)：从文物与艺术观察明代，避免把宫廷与文人经验视为全部社会。；The Metropolitan Museum of Art；发布 2002-10-01；核验 2026-10-08
+- [S1] [Ming Dynasty (1368–1644)](https://www.metmuseum.org/essays/ming-dynasty-1368-1644): 从文物与艺术观察明代，避免把宫廷与文人经验视为全部社会。; The Metropolitan Museum of Art | 发布: 2002-10-01 | 核验: 2026-11-25
 
-- [S2] [中书省](https://www.dpm.org.cn/court/system/236406.html)：核对洪武时期机构调整，并把制度事实与作者的因果解释区分开。；故宫博物院；发布 未标注；核验 2026-10-08
+- [S2] [中书省](https://www.dpm.org.cn/court/system/236406.html): 核对洪武时期机构调整，并把制度事实与作者的因果解释区分开。; 故宫博物院 | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Imperial Palaces of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/439/)：查看北京宫殿营建时间、轴线与礼仪空间；注意明清长期改建。；UNESCO；发布 未标注；核验 2026-10-08
+- [S3] [Imperial Palaces of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/439/): 查看北京宫殿营建时间、轴线与礼仪空间；注意明清长期改建。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Imperial Tombs of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/1004/)：从陵寝空间理解皇权表达，与宫殿材料交叉观察。；UNESCO；发布 未标注；核验 2026-10-08
+- [S4] [Imperial Tombs of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/1004/): 从陵寝空间理解皇权表达，与宫殿材料交叉观察。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Arts of the Ming Dynasty](https://www.metmuseum.org/exhibitions/listings/2009/arts-of-the-ming-dynasty)：旧展览档案用于认识作品种类，不代表展览仍在开放。；The Metropolitan Museum of Art；发布 未标注；核验 2026-10-08
+- [S5] [Arts of the Ming Dynasty](https://www.metmuseum.org/exhibitions/listings/2009/arts-of-the-ming-dynasty): 旧展览档案用于认识作品种类，不代表展览仍在开放。; The Metropolitan Museum of Art | 发布: 未标注 | 核验: 2026-11-25

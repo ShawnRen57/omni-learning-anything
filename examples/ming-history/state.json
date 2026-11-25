@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "status": "active",
-  "approved_plan": "f5f9205987e26af14732d9ac8d675806e650f61a6f7da52167b8c63dedbb2f1e",
+  "approved_plan": "ac897c3792c0117329a3a44fc1ce59d29f0c64b360a236ff632785cf1ce6539f",
   "lessons": {
     "1": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf",
-      "manifest_hash": "46dcf9b37269eb21fa94bef15763a6296140a3d220529b87b21344bf47d08eee"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "d7bc0dda521df52f55038e57a6e1e523a59a0373641aa3e8ca5b6fe13954bb7f",
+      "pdf": "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf"
     },
     "2": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf",
-      "manifest_hash": "3cb6e53124d4cab055edaa748a650ada85a280f9afee8f9aab21cf3a399c2191"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "75a117347b83afd9aabac1a3d985e1ce6bc7f754f49207cf25beafff6f0f74e3",
+      "pdf": "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf"
     },
     "3": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/明朝历史_每日学习_Day03_永乐宫城与皇权表达.pdf",
-      "manifest_hash": "dc9b96fc7b77f74692d38dcd6975fab815ca27b67be26ed21b4ad765043a119d"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "d20eef4e252b06df44931d69f2facceb544c1850f31b595a13316af2c01e6509",
+      "pdf": "pdf/明朝历史_每日学习_Day03_永乐宫城与皇权表达.pdf"
     }
   },
   "schedule": null,
   "mastery": {},
-  "approved_config": "8ccfee0bafc36f4f529b3141f66c5feca5c9786ad770ae9edfd480ec792bfc4e"
+  "approved_config": "94d949fc15b21abb479548cbe9e8a410a8390e385a127f75eef235c901e1dbe7"
 }

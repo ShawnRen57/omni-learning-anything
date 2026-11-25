@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>同一刻度下的三种照明用电量</title><desc>末行的 20 W × 1 h 是 0.02 kWh，短于首行的 0.05 kWh；前两行开灯时长相同，20 W 的用电量则是两倍。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">功率较大的灯，一天一定耗电更多吗？</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">功率 × 时间 = 用电量</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="40" y="132" font-size="25" font-weight="650" text-anchor="start" fill="#516672">运行条件</text>
+<text x="393" y="132" font-size="25" font-weight="650" text-anchor="start" fill="#516672">每天用电量（kWh）</text>
+<path d="M393 151V403" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="4 7"/>
+<text x="393" y="432" font-size="24" font-weight="550" text-anchor="middle" fill="#19374a">0</text>
+<path d="M765.5 151V403" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="4 7"/>
+<text x="765.5" y="432" font-size="24" font-weight="550" text-anchor="middle" fill="#19374a">0.05</text>
+<path d="M1138 151V403" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="4 7"/>
+<text x="1138" y="432" font-size="24" font-weight="550" text-anchor="middle" fill="#19374a">0.10</text>
+<text x="44" y="199" font-size="29" font-weight="650" text-anchor="start" fill="#19374a">10 W × 5 h</text>
+<rect x="393" y="174" width="372.5" height="33" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="779.5" y="200" font-size="25" font-weight="650" text-anchor="start" fill="#19374a">0.05</text>
+<text x="44" y="269" font-size="29" font-weight="650" text-anchor="start" fill="#19374a">20 W × 5 h</text>
+<rect x="393" y="244" width="745.0" height="33" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="1152.0" y="270" font-size="25" font-weight="650" text-anchor="start" fill="#19374a">0.10</text>
+<text x="44" y="360" font-size="29" font-weight="650" text-anchor="start" fill="#19374a">20 W × 1 h</text>
+<rect x="393" y="335" width="149.0" height="33" rx="0" fill="#b58a4f" stroke="none" stroke-width="0"/>
+<text x="556.0" y="361" font-size="25" font-weight="650" text-anchor="start" fill="#19374a">0.02</text>
+<path d="M40 307h1197" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="5 8"/>
+<path d="M393 403H1138" stroke="#19374a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">前两行假设照明效果相同。第三行只改变运行时长。所有数值均为教学设定。</text></g></svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>查询结果与预算线</title><desc>甲、乙的条形止于 1,500 元预算线以内；左侧调用记录只含查询，购票仍未获授权。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">机票工具返回三条报价，哪两条可交付？</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">旅行助手 · 教学数据</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="40" y="105" width="310" height="288" rx="0" fill="#e6f2ef" stroke="none" stroke-width="0"/>
+<text x="61" y="148" font-size="25" font-weight="650" text-anchor="start" fill="#076b68">调用：查询往返票价</text>
+<text x="61" y="202" font-size="23" font-weight="500" text-anchor="start" fill="#19374a">输入　相同日期与航线</text>
+<text x="61" y="246" font-size="23" font-weight="500" text-anchor="start" fill="#19374a">返回　三条含税总价</text>
+<text x="61" y="290" font-size="23" font-weight="500" text-anchor="start" fill="#19374a">时间　09:00 查价</text>
+<text x="61" y="350" font-size="23" font-weight="650" text-anchor="start" fill="#976022">购票授权　未授予</text>
+<text x="432" y="195" font-size="28" font-weight="600" text-anchor="middle" fill="#19374a">甲</text>
+<rect x="474" y="171" width="460" height="30" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="922" y="195" font-size="24" font-weight="650" text-anchor="end" fill="#ffffff">1,280 元</text>
+<text x="432" y="272" font-size="28" font-weight="600" text-anchor="middle" fill="#19374a">乙</text>
+<rect x="474" y="248" width="529" height="30" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="991" y="272" font-size="24" font-weight="650" text-anchor="end" fill="#ffffff">1,470 元</text>
+<text x="432" y="349" font-size="28" font-weight="600" text-anchor="middle" fill="#19374a">丙</text>
+<rect x="474" y="325" width="604" height="30" rx="0" fill="#ba8b47" stroke="none" stroke-width="0"/>
+<text x="1095" y="349" font-size="24" font-weight="650" text-anchor="start" fill="#19374a">1,680 元</text>
+<path d="M1014.0 150V380" stroke="#976022" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="8 8"/>
+<text x="1014.0" y="131" font-size="25" font-weight="650" text-anchor="middle" fill="#976022">预算上限 1,500 元</text>
+<path d="M474 157V371" stroke="#19374a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="474" y="398" font-size="22" font-weight="500" text-anchor="middle" fill="#516672">0 元</text>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">示例仅筛选同一时点、其他条件均满足的报价；交付的是候选清单。</text></g></svg>

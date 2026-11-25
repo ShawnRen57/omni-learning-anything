@@ -1,6 +1,6 @@
 # 稀缺与机会成本
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -8,11 +8,15 @@
 
 ## 一小时为什么也需要预算
 
-假设你有一个空闲小时，可以读书、运动或看电影。即使三项都不用花钱，也不能把同一小时完整地同时给它们。经济学从稀缺条件下的选择出发；稀缺不等于贫困，而是可用资源相对于目标有限。[S1] 图 A 用有限食材和两种餐食提示这种取舍。换成时间、注意力或公共预算，问题结构仍然存在。
+假设你有一个空闲小时，可以读书、运动或看电影。即使三项都不用花钱，也不能把同一小时完整地同时给它们。经济学从稀缺条件下的选择出发；稀缺不等于贫困，而是可用资源相对于目标有限。[S1] 图中三个互斥方案都用掉同一个小时。换成时间、注意力或公共预算，问题结构仍然存在。
 
-![本课重点看 A 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。](../assets/figure-a92b6089a95f.png)
+对齐三条时间带的起止点，再从右侧偏好次序找出被放弃的最佳选项。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![三种安排争用同一小时，按个人偏好排序。](../assets/figure-0e525a31fd7c.png)
+
+三种安排争用同一小时，按个人偏好排序。 三条时间带一样长，为什么读书的机会成本只看运动？ 三个方案占用同一时段；在未选方案中，运动排第二，优先于电影。机会成本取运动带来的价值。 \[S1\] \[S2\]
+
+原创时间预算示例；选择与机会成本依据 OpenStax 第 1.1、2.1 节。
 
 ## 机会成本不是所有放弃项之和
 
@@ -38,12 +42,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [What Is Economics, and Why Is It Important?](https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important)：从稀缺与分工建立课程起点；文中旧统计不作为现状。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [What Is Economics, and Why Is It Important?](https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important): 从稀缺与分工建立课程起点；文中旧统计不作为现状。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [Budget Constraint and Individual Choices](https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint)：重点读机会成本、预算约束与边际分析。；OpenStax；发布 未标注；核验 2026-10-08
+- [S2] [Budget Constraint and Individual Choices](https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint): 重点读机会成本、预算约束与边际分析。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Production Possibilities Frontier](https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices)：把个人选择扩展为社会资源配置，观察模型假设。；OpenStax；发布 未标注；核验 2026-10-08
+- [S3] [Production Possibilities Frontier](https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices): 把个人选择扩展为社会资源配置，观察模型假设。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Demand, Supply, and Equilibrium](https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services)：对照需求、供给和均衡的图形定义。；OpenStax；发布 未标注；核验 2026-10-08
+- [S4] [Demand, Supply, and Equilibrium](https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services): 对照需求、供给和均衡的图形定义。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Shifts in Demand and Supply](https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services)：区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。；OpenStax；发布 未标注；核验 2026-10-08
+- [S5] [Shifts in Demand and Supply](https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services): 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。; OpenStax | 发布: 未标注 | 核验: 2026-11-25

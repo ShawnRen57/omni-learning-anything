@@ -10,7 +10,7 @@
     },
     {
       "title": "一小时为什么也需要预算",
-      "body": "假设你有一个空闲小时，可以读书、运动或看电影。即使三项都不用花钱，也不能把同一小时完整地同时给它们。经济学从稀缺条件下的选择出发；稀缺不等于贫困，而是可用资源相对于目标有限。[S1] 图 A 用有限食材和两种餐食提示这种取舍。换成时间、注意力或公共预算，问题结构仍然存在。"
+      "body": "假设你有一个空闲小时，可以读书、运动或看电影。即使三项都不用花钱，也不能把同一小时完整地同时给它们。经济学从稀缺条件下的选择出发；稀缺不等于贫困，而是可用资源相对于目标有限。[S1] 图中三个互斥方案都用掉同一个小时。换成时间、注意力或公共预算，问题结构仍然存在。\n\n对齐三条时间带的起止点，再从右侧偏好次序找出被放弃的最佳选项。"
     },
     {
       "title": "机会成本不是所有放弃项之和",
@@ -36,7 +36,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从稀缺与分工建立课程起点；文中旧统计不作为现状。"
     },
     {
@@ -45,7 +45,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "重点读机会成本、预算约束与边际分析。"
     },
     {
@@ -54,7 +54,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "把个人选择扩展为社会资源配置，观察模型假设。"
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "对照需求、供给和均衡的图形定义。"
     },
     {
@@ -72,13 +72,21 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "本课重点看 A 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-0e525a31fd7c.png",
+    "caption": "三种安排争用同一小时，按个人偏好排序。",
+    "credit": "原创时间预算示例；选择与机会成本依据 OpenStax 第 1.1、2.1 节。",
+    "reading": {
+      "question": "三条时间带一样长，为什么读书的机会成本只看运动？",
+      "observation": "三个方案占用同一时段；在未选方案中，运动排第二，优先于电影。机会成本取运动带来的价值。",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    }
   }
 }

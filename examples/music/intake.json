@@ -18,10 +18,11 @@
     ],
     "language": "zh",
     "immediate_day01": true,
-    "sample_mode": true
+    "sample_mode": true,
+    "visual_guides": true
   },
   "approval_mode": "simulated for explicitly requested public examples",
-  "source_check_date": "2026-10-08",
+  "source_check_date": "2026-11-25",
   "search_performed": true,
-  "verification_note": "Key pages read with web tool; Palace Museum page read directly from official HTML after web-tool fetch failure. No real learner data."
+  "verification_note": "The November 2026 figure refresh used the cited original sources. No real learner data."
 }

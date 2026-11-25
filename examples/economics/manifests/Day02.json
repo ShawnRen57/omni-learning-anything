@@ -1,32 +1,38 @@
 {
+  "input": "data/Day02.json",
+  "artifact": "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf",
+  "artifacts": {
+    "pdf": "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf",
+    "markdown": "sources/经济学_每日学习_Day02_价格如何协调供需.md"
+  },
   "key": "Day02",
   "pdf": "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day02.json": "df3c58e4cf563ee77d5c60e0ba0145c16bdb6b856529c68934148fd00bb11f58",
-    "plan.json": "a56e11a33b46fe3014d7ba8d69027cf2e21e07199565262a1308c276d54a1f46",
-    "config.json": "7234fdfad7216c08f83e19a7c895793256fb536dd34563bba88d567c894b9e26",
-    "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf": "a9c1bf7d658c08e4cffaed51b33dbd2281226a77bc87157fd4088952836a109b",
-    "sources/经济学_每日学习_Day02_价格如何协调供需.tex": "31c5c9918cb752bf2d25e68e2e7ffa62ee2c1b542b90ed2c165b22857ef78d38",
-    "sources/经济学_每日学习_Day02_价格如何协调供需.md": "605775545e72fdce7bc008f6c18e6e7f37bac761b8bf64c0894cba2c2fe05805",
-    "assets/figure-a92b6089a95f.png": "a92b6089a95f2c556d487856b571dfed837a83c776ea0ee3b78b90fc1de2640e",
-    "previews/Day02-01.png": "8b2edcf7d5edd0a40c8a79ee9debe41cd5c9062c0ab39151ad2027170e47fd28",
-    "previews/Day02-02.png": "2d49a0b2d59c34856e24db2efa8f0bd745bea04270c84dc6fc2514f3f245d716"
+    "data/Day02.json": "0c9c68fd042da21d2229a0dacf3f619ff04e1f687b771b3ea0e638062024bfbb",
+    "plan.json": "90a2175b37a6f768396d6865cf7fa256f4a2cf4ab1bebde390a7a7de914a3885",
+    "config.json": "ba03bf612c7c5e07d54e10d5151be46705a616359e14494b699a8a783c57c833",
+    "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf": "6bf82447b64d1f3162a18c97b05a65776ea0c6522a865f83fac68889a07caaf0",
+    "sources/经济学_每日学习_Day02_价格如何协调供需.tex": "688c9e099c8de3f2892de74a48ce7b40f25b343812617ca5c21108f0a25e0432",
+    "sources/经济学_每日学习_Day02_价格如何协调供需.md": "3ce3d59f493f1e4b81e0d7e7182a7da3e3647a7d29bbbac2de1787245865521e",
+    "assets/figure-87a5eb1c284d.png": "87a5eb1c284d41e1cc1e473ba053b430c587009bbcc1ca7b47ba7d920b4e7101",
+    "previews/Day02-01.png": "3b033287af9e24ca4ddd5f4dfae2ed435034a1a00b76317d1b1b42bd771eb6a7",
+    "previews/Day02-02.png": "5b92de8489a643a50bc8733118982acd8b8f3e62732cee2f168c7885c2d37b28"
   },
   "previews": [
     "previews/Day02-01.png",
     "previews/Day02-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/DWGBTM+FandolFang-Regular-Identity-H",
-      "/HTHUXH+TimesNewRomanPS-BoldMT",
-      "/LCSNNS+TimesNewRomanPSMT"
-    ]
+      "/AUUIFR+FandolFang-Regular-Identity-H",
+      "/LFOHSJ+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-87a5eb1c284d.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

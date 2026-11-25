@@ -1,0 +1,25 @@
+{
+  "image": "figure-6d3e1511f500.png",
+  "caption": "从同长的波形片段中分辨周期数、振幅与形状。",
+  "credit": "原创合成信号，未使用乐器录音；频率与音色依据 OpenStax《Physics》。",
+  "reading": {
+    "question": "比对 A 行，哪一行只增加了周期数？哪一行保留基频却改变了波形？",
+    "observation": "B 在相同时间内有四个周期，A 只有两个。D 的整体形状同样重复两次，但加入谐波后每个周期的形状改变。",
+    "source_ids": [
+      "S1",
+      "S6"
+    ]
+  },
+  "body_reference": "固定观察窗口，逐行与 A 比较。先数周期，再量波峰离中线的高度，最后看周期内部的形状。",
+  "additional_sources": [
+    {
+      "id": "S6",
+      "title": "Sound Intensity and Sound Level",
+      "url": "https://openstax.org/books/physics/pages/14-2-sound-intensity-and-sound-level",
+      "publisher": "OpenStax",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "参见 pitch、loudness 与 timbre 的区分，以及声源的频率成分如何影响音色。"
+    }
+  ]
+}

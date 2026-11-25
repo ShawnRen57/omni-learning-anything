@@ -1,32 +1,40 @@
 {
+  "input": "data/Day02.json",
+  "artifact": "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf",
+  "artifacts": {
+    "pdf": "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf",
+    "markdown": "sources/明朝历史_每日学习_Day02_洪武废相与治理难题.md"
+  },
   "key": "Day02",
   "pdf": "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day02.json": "4830b1e9d8cc0194d26c86a8a7149fd4b5f67dc883fd6b7e92a9ae04cce23fc4",
-    "plan.json": "f5f9205987e26af14732d9ac8d675806e650f61a6f7da52167b8c63dedbb2f1e",
-    "config.json": "8ccfee0bafc36f4f529b3141f66c5feca5c9786ad770ae9edfd480ec792bfc4e",
-    "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf": "896b6aa28840601c809571c7f71ada2243933ef0835781369ee6c43dda5ce4c1",
-    "sources/明朝历史_每日学习_Day02_洪武废相与治理难题.tex": "dfb6cfb64c2c65457978285e1ca61e76d4a2b3aeb936d24364f85f49e6b5dea3",
-    "sources/明朝历史_每日学习_Day02_洪武废相与治理难题.md": "b8cd28e835060a6cc05941d7f441276d84e36129158ac9cf8bd85c6794d67911",
-    "assets/figure-e75918c40f59.png": "e75918c40f59b6be7c8123938ad6ed129284a6e1df5799e2c1b01594d9cf9268",
-    "previews/Day02-01.png": "9ea78db804abb585e805f0bb3755efb74612f6cacf227d15ce3d0b3df57bc0f6",
-    "previews/Day02-02.png": "7f7cefc62faf348cb991951d087af13b347cf93e96bae94d8cd80cc68ac3373a"
+    "data/Day02.json": "772cb898323696671f2ca0ddf51f218f823cfbf47f801f70aa5249cbae84d628",
+    "plan.json": "ac897c3792c0117329a3a44fc1ce59d29f0c64b360a236ff632785cf1ce6539f",
+    "config.json": "94d949fc15b21abb479548cbe9e8a410a8390e385a127f75eef235c901e1dbe7",
+    "pdf/明朝历史_每日学习_Day02_洪武废相与治理难题.pdf": "a47762d14a4248e8f57dd51b5b2137a378bec3d6c095fe58f73711b6f8f69187",
+    "sources/明朝历史_每日学习_Day02_洪武废相与治理难题.tex": "ab9fb24d14d3c24791b71ef7360a4ba211ebb637edcb77f5232b090b6d684858",
+    "sources/明朝历史_每日学习_Day02_洪武废相与治理难题.md": "d7c2dbd8a818eab2adabbe396008fe29951e8bf9e92e2d1f95b75cfd17bed27e",
+    "assets/figure-750a34304f80.png": "750a34304f8062498e4c2995e38c9d42109c030bc97c4bb465463e7eafc1f7cc",
+    "previews/Day02-01.png": "8c94cf8b876f4bd670447ffa3122226c9a583f2863bf4889e3753d1931386424",
+    "previews/Day02-02.png": "6a16fe11c96cdee39d81a22f350f6afb233e5c083157675b11c95253670d9b6e",
+    "previews/Day02-03.png": "3d4916bd389e7f132032b0801e82c2d4471d91c02b703af151af25e9a86816ae"
   },
   "previews": [
     "previews/Day02-01.png",
-    "previews/Day02-02.png"
+    "previews/Day02-02.png",
+    "previews/Day02-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
-    "pages": 2,
+    "pages": 3,
     "links": 5,
     "fonts": [
-      "/BCPXKT+TimesNewRomanPSMT",
-      "/KMHZWG+FandolFang-Regular-Identity-H",
-      "/YHEKRG+TimesNewRomanPS-BoldMT"
-    ]
+      "/POJSUF+TimesNewRomanPSMT",
+      "/WRQIFF+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-750a34304f80.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

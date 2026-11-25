@@ -10,7 +10,7 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
 \newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
@@ -18,7 +18,7 @@
 
 {\LARGE\bfseries\color{ink} 从聊天回答到完成任务}\par
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{今日导航}
 
@@ -28,13 +28,15 @@
 
 用户说：“帮我安排下周去上海出差。”一个回答可能只给攻略；一个任务系统还可能澄清时间、查询候选行程、整理费用，并等待确认。需求原句没有自动授权购买，也没有提供预算、证件或差旅政策。产品设计先补齐任务边界，再决定哪些部分交给模型。
 
-图 A 的卡片代表目标，候选方案代表中间产物。把候选生成与最终购买区分开，就能避免用“输出了漂亮文字”代替“用户事情办成了”。
+图中三条报价使用相同日期、航线和查询时刻。把候选生成与最终购买区分开，就能避免用“输出了漂亮文字”代替“用户事情办成了”。
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-8284fa500410.png}\par
+把三条报价的右端与虚线对齐，再回看左侧的工具调用和授权范围。
 
-{\small 本课重点看 A 区。A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-04ba5665d5c6.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 查询结果与预算线 哪两条报价符合预算，查询工具是否已经买票？ 甲、乙的条形止于 1,500 元预算线以内；左侧调用记录只含查询，购票仍未获授权。 [S2] [S3]}\par
+
+{\footnotesize 原创教学设例；三个价格是虚构的往返含税总价。}\end{center}
 
 \Needspace{5\baselineskip}\section*{任务的三个要素}
 
@@ -60,17 +62,17 @@ Google ADK 文档也列出不同类型的 Agent，提示我们框架中的名称
 
 先定义可验证任务，再决定是否需要 Agent。今天的关键不是名词，而是目标、证据与权限能否闭合。明天比较两种实现路线：固定工作流与动态行动，什么时候值得付出更多复杂度？
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://www.anthropic.com/engineering/building-effective-agents}{Building effective agents} — 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。\par Anthropic | 发布：2024-12-19 | 核验：2026-10-08
+\item [S1] \href{https://www.anthropic.com/engineering/building-effective-agents}{Building effective agents} — 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。\par Anthropic | 发布: 2024-12-19 | 核验: 2026-11-25
 
-\item [S2] \href{https://www.anthropic.com/engineering/writing-tools-for-agents}{Writing effective tools for agents} — 关注工具边界、返回结果和评价方法如何影响可用性。\par Anthropic | 发布：2025-09-11 | 核验：2026-10-08
+\item [S2] \href{https://www.anthropic.com/engineering/writing-tools-for-agents}{Writing effective tools for agents} — 关注工具边界、返回结果和评价方法如何影响可用性。\par Anthropic | 发布: 2025-09-11 | 核验: 2026-11-25
 
-\item [S3] \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents} — 理解结果评价与执行轨迹；为后续验收指标课程准备。\par Anthropic | 发布：2026-01-09 | 核验：2026-10-08
+\item [S3] \href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents} — 理解结果评价与执行轨迹；为后续验收指标课程准备。\par Anthropic | 发布: 2026-01-09 | 核验: 2026-11-25
 
-\item [S4] \href{https://modelcontextprotocol.io/specification/2025-06-18}{Model Context Protocol specification} — 阅读指定版本的用途和安全原则；不称其为最新版本。\par MCP project | 发布：2025-06-18（指定版本） | 核验：2026-10-08
+\item [S4] \href{https://modelcontextprotocol.io/specification/2025-06-18}{Model Context Protocol specification} — 阅读指定版本的用途和安全原则；不称其为最新版本。\par MCP project | 发布: 2025-06-18（指定版本） | 核验: 2026-11-25
 
-\item [S5] \href{https://adk.dev/agents/}{Agents in ADK} — 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。\par Google ADK | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://adk.dev/agents/}{Agents in ADK} — 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。\par Google ADK | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

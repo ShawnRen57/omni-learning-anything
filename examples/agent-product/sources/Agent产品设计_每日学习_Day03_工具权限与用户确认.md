@@ -1,6 +1,6 @@
 # 工具权限与用户确认
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -12,15 +12,19 @@
 
 MCP 的指定版本规范讨论工具与资源的连接及安全原则；协议能帮助标准化连接，却不会自动保证业务动作正确。[S4] 这里引用的是明确版本的原则，不把它称为当前所有平台的统一实现。
 
-![本课重点看 C 区。A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。](../assets/figure-8284fa500410.png)
+分别追踪两条赭色箭头，找出需要用户再授权和需要系统查单的位置。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![购买确认与超时后的恢复路径](../assets/figure-f93d16d2db39.png)
+
+购买确认与超时后的恢复路径 价格变化与提交超时各自回到哪一步？ 左侧变价箭头返回确认环节；右侧超时箭头通往查询原订单状态，直接再次付款不在恢复路径内。 \[S2\] \[S3\] \[S4\]
+
+原创教学流程；价格、订单及状态均为示例。
 
 ## 把读、准备与提交分开
 
 查询候选通常读取信息；生成订单草稿准备改变状态；支付或发送会对外产生结果。这些动作的后果不同，适合不同的确认强度。工具设计资料强调明确的用途和返回信息，本课把它落实为用户可理解的动作边界。[S2]
 
-图 C 的门位于候选与最终购买之间。确认应让用户看见具体对象、金额、时间、重要条件和即将发生的动作，而不是只问“是否继续”。如果确认后价格变化或对象更换，原确认不再完整覆盖新动作，应重新取得针对变化内容的同意。
+图中「核对对象、金额、条件」位于候选与提交订单之间。确认应让用户看见具体对象、金额、时间、重要条件和即将发生的动作，而不是只问“是否继续”。如果确认后价格变化或对象更换，原确认不再完整覆盖新动作，应重新取得针对变化内容的同意。
 
 可撤销不等于没有成本。取消订单可能产生费用，邮件撤回可能失败。设计权限时，应依据真实后果与用户意图，而不是仅依据界面是否有一个撤销按钮。
 
@@ -42,12 +46,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)：读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。；Anthropic；发布 2024-12-19；核验 2026-10-08
+- [S1] [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。; Anthropic | 发布: 2024-12-19 | 核验: 2026-11-25
 
-- [S2] [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents)：关注工具边界、返回结果和评价方法如何影响可用性。；Anthropic；发布 2025-09-11；核验 2026-10-08
+- [S2] [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents): 关注工具边界、返回结果和评价方法如何影响可用性。; Anthropic | 发布: 2025-09-11 | 核验: 2026-11-25
 
-- [S3] [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)：理解结果评价与执行轨迹；为后续验收指标课程准备。；Anthropic；发布 2026-01-09；核验 2026-10-08
+- [S3] [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents): 理解结果评价与执行轨迹；为后续验收指标课程准备。; Anthropic | 发布: 2026-01-09 | 核验: 2026-11-25
 
-- [S4] [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18)：阅读指定版本的用途和安全原则；不称其为最新版本。；MCP project；发布 2025-06-18（指定版本）；核验 2026-10-08
+- [S4] [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18): 阅读指定版本的用途和安全原则；不称其为最新版本。; MCP project | 发布: 2025-06-18（指定版本） | 核验: 2026-11-25
 
-- [S5] [Agents in ADK](https://adk.dev/agents/)：比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。；Google ADK；发布 未标注；核验 2026-10-08
+- [S5] [Agents in ADK](https://adk.dev/agents/): 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。; Google ADK | 发布: 未标注 | 核验: 2026-11-25

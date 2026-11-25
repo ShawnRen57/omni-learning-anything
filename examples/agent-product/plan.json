@@ -160,7 +160,7 @@
     },
     {
       "title": "学习方式与时间安排",
-      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。"
+      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。\n\n在六段时间轴下方，圈出本阶段结束时应该拿得出来的那份产物。"
     },
     {
       "title": "课程依据与学习成果",
@@ -202,7 +202,7 @@
       "url": "https://www.anthropic.com/engineering/building-effective-agents",
       "publisher": "Anthropic",
       "published_at": "2024-12-19",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。"
     },
     {
@@ -211,7 +211,7 @@
       "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
       "publisher": "Anthropic",
       "published_at": "2025-09-11",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "关注工具边界、返回结果和评价方法如何影响可用性。"
     },
     {
@@ -220,7 +220,7 @@
       "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
       "publisher": "Anthropic",
       "published_at": "2026-01-09",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "理解结果评价与执行轨迹；为后续验收指标课程准备。"
     },
     {
@@ -229,7 +229,7 @@
       "url": "https://modelcontextprotocol.io/specification/2025-06-18",
       "publisher": "MCP project",
       "published_at": "2025-06-18（指定版本）",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "阅读指定版本的用途和安全原则；不称其为最新版本。"
     },
     {
@@ -238,13 +238,21 @@
       "url": "https://adk.dev/agents/",
       "publisher": "Google ADK",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-03a7edb09fb6.png",
+    "caption": "按五天分段的产品实作路线",
+    "credit": "原创课程进度图；编排结合任务设计与评估方法。",
+    "reading": {
+      "question": "哪一段开始把产品目标写成验收标准？",
+      "observation": "第 11–15 天的「需求与验收」连接到验收标准，之后才进入风险评估与商业验证。",
+      "source_ids": [
+        "S1",
+        "S3"
+      ]
+    }
   }
 }

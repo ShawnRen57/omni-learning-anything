@@ -1,34 +1,38 @@
 {
+  "input": "data/Day01.json",
+  "artifact": "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf",
+  "artifacts": {
+    "pdf": "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf",
+    "markdown": "sources/科技通识_每日学习_Day01_从手机看技术系统.md"
+  },
   "key": "Day01",
   "pdf": "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day01.json": "a45fe9c6f371918de7d26aeb2566d05414bcb65c9c6d293bcedefe8b001f458b",
-    "plan.json": "37836264622cf97ff29269a4634cce91686a28310630c58fa946d8cbe16382d2",
-    "config.json": "4679155ce644c4b791aa20003f3bac1f56f211c650e26a7e0a97bb7735968d72",
-    "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf": "6ef08bd1bb34a0d7491c818477cc1d2d65e060869894da35f40b65472fa8232d",
-    "sources/科技通识_每日学习_Day01_从手机看技术系统.tex": "4b372c0af4b2a428c1a2d29b090d524c2cd7a79b640906490d1b648b241b3ac6",
-    "sources/科技通识_每日学习_Day01_从手机看技术系统.md": "9c5b93f451a77ddf133837208d22fea64476ca2d21b650987b054310cbccee6e",
-    "assets/figure-f1c69576c177.png": "f1c69576c177b1cdef58e256311032e0a7861690742fb16723ff5e437150bd24",
-    "previews/Day01-01.png": "64026b229a53c9183e6be1277b06016a65ae453129f413cc4c5a77246b0b9a12",
-    "previews/Day01-02.png": "b4fb85c6fe5d88ce433677ec8acc1ebc48459b924ebdcbffb3837102fc0ab344",
-    "previews/Day01-03.png": "081d53cb2188e6e58851d518eb27be3da4dccf2e226d38d5e32410c871bac6f1"
+    "data/Day01.json": "20c23e4a97f78228c300fcf48f32f0b11224738a58bbb9ad9e37924743aa0776",
+    "plan.json": "9b7f5612c15b6b2588eb91e8a18665ac54a7118ef5c6ca81e8b09c4443d93abc",
+    "config.json": "361fce33b644b4458fd50004eb8c30e46883585e37f8fa618a736c9af3151bff",
+    "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf": "80585c9c69fef1e640690f28d2142fd8dc2df450e5410221d600f3147774afbe",
+    "sources/科技通识_每日学习_Day01_从手机看技术系统.tex": "9a962f41dab5f7f202b197c8f52fb2460b3c1045af638ac5e273eb72b5dd92b9",
+    "sources/科技通识_每日学习_Day01_从手机看技术系统.md": "a5772f3ca1d246e39fb5e6bd57d5cf86ce66e06a5f4bab895a8f38a44269c835",
+    "assets/figure-4df10b299a46.png": "4df10b299a46e975c4ab65298926e11665d06cdd88be1c4c766ddf20ec916fa4",
+    "previews/Day01-01.png": "f7669be5f4d7359a04b6648e6217af77b533bbd24df38bffb696fd30c29dff36",
+    "previews/Day01-02.png": "830e969bf838059646bf75345e8e449eddb0def43a018316b3ad0ec341b29207"
   },
   "previews": [
     "previews/Day01-01.png",
-    "previews/Day01-02.png",
-    "previews/Day01-03.png"
+    "previews/Day01-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
-    "pages": 3,
-    "links": 5,
+    "pages": 2,
+    "links": 6,
     "fonts": [
-      "/CBJSDB+TimesNewRomanPSMT",
-      "/FCLBSA+FandolFang-Regular-Identity-H",
-      "/KXOINC+TimesNewRomanPS-BoldMT"
-    ]
+      "/BZQVEC+TimesNewRomanPSMT",
+      "/UFCFFT+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-4df10b299a46.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

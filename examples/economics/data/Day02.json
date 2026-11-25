@@ -10,7 +10,7 @@
     },
     {
       "title": "先把市场的两边分开",
-      "body": "买方在不同价格下愿意且能够购买多少，构成需求关系；卖方在不同价格下愿意且能够出售多少，构成供给关系。基础模型通常先保持其他条件不变，再观察价格与数量。[S4] 图 B 同时画买方和卖方，是提醒我们：价格由双方互动形成，不能只从一边的情绪解释。排队的图像本身也不足以证明短缺。"
+      "body": "买方在不同价格下愿意且能够购买多少，构成需求关系；卖方在不同价格下愿意且能够出售多少，构成供给关系。基础模型通常先保持其他条件不变，再观察价格与数量。[S4] 图中向下倾斜的是需求曲线，向上倾斜的是供给曲线。两线的交点给出这一简化市场的均衡。排队的图像本身也不足以证明短缺。\n\n先找空心点，再把两幅图的实心点分别投到横轴，比较成交量的变化。"
     },
     {
       "title": "沿曲线移动与曲线移动",
@@ -36,7 +36,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从稀缺与分工建立课程起点；文中旧统计不作为现状。"
     },
     {
@@ -45,7 +45,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "重点读机会成本、预算约束与边际分析。"
     },
     {
@@ -54,7 +54,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "把个人选择扩展为社会资源配置，观察模型假设。"
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "对照需求、供给和均衡的图形定义。"
     },
     {
@@ -72,13 +72,21 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "本课重点看 B 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-87a5eb1c284d.png",
+    "caption": "面包市场的两个单因素情境，共用同一套价格和数量刻度。",
+    "credit": "原创教学模型；数量与价格为设例，供需变化依据 OpenStax 第 3.1、3.2 节。",
+    "reading": {
+      "question": "两幅图的实心点都在 5 元刻度上，哪一边交易量减少？",
+      "observation": "左图新均衡位于 50 个/日，右图位于 30 个/日，原均衡同为 40 个/日。单看涨价无法区分两种变化。",
+      "source_ids": [
+        "S4",
+        "S5"
+      ]
+    }
   }
 }

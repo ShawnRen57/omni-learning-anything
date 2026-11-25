@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 490" width="1320" height="490">
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial Unicode MS, sans-serif">
+<rect x="0" y="0" width="1320" height="490" rx="0" fill="#fcfdfb" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="12" height="490" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="42" y="61" fill="#18384a" font-size="46" font-weight="700" text-anchor="start">多开一小时，面包店还能多留下多少？</text>
+<line x1="325.0" y1="127" x2="325.0" y2="378" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="325.0" y="113" fill="#466475" font-size="28" font-weight="400" text-anchor="middle">0</text>
+<line x1="520.0" y1="127" x2="520.0" y2="378" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="520.0" y="113" fill="#466475" font-size="28" font-weight="400" text-anchor="middle">50</text>
+<line x1="715.0" y1="127" x2="715.0" y2="378" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="715.0" y="113" fill="#466475" font-size="28" font-weight="400" text-anchor="middle">100</text>
+<line x1="910.0" y1="127" x2="910.0" y2="378" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="910.0" y="113" fill="#466475" font-size="28" font-weight="400" text-anchor="middle">150</text>
+<line x1="1105.0" y1="127" x2="1105.0" y2="378" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 7"/>
+<text x="1105.0" y="113" fill="#466475" font-size="28" font-weight="400" text-anchor="middle">200</text>
+<text x="1187" y="111" fill="#466475" font-size="27" font-weight="400" text-anchor="start">元</text>
+<text x="55" y="192" fill="#18384a" font-size="33" font-weight="700" text-anchor="start">新增销售收入</text>
+<rect x="325" y="153" width="780.0" height="52" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="1090.0" y="190" fill="#ffffff" font-size="31" font-weight="700" text-anchor="end">200 元</text>
+<text x="55" y="298" fill="#18384a" font-size="33" font-weight="700" text-anchor="start">新增原料与人工</text>
+<rect x="325" y="259" width="585.0" height="52" rx="0" fill="#99531e" stroke="none" stroke-width="2"/>
+<text x="895.0" y="296" fill="#ffffff" font-size="31" font-weight="700" text-anchor="end">150 元</text>
+<line x1="910.0" y1="344" x2="1105.0" y2="344" stroke="#18384a" stroke-width="3"/>
+<line x1="910.0" y1="337" x2="910.0" y2="355" stroke="#18384a" stroke-width="3"/>
+<line x1="1105.0" y1="337" x2="1105.0" y2="355" stroke="#18384a" stroke-width="3"/>
+<text x="1007.5" y="388" fill="#076c68" font-size="33" font-weight="700" text-anchor="middle">多出 50 元</text>
+<rect x="48" y="416" width="1210" height="48" rx="0" fill="#ebf0ed" stroke="none" stroke-width="2"/>
+<text x="68" y="450" fill="#18384a" font-size="28" font-weight="400" text-anchor="start">设例假定没有其他影响；照常支付的租金，在两种选择下的差额是 0 元。</text>
+</g></svg>

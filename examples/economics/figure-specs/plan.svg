@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 490" width="1320" height="490">
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial Unicode MS, sans-serif">
+<rect x="0" y="0" width="1320" height="490" rx="0" fill="#fcfdfb" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="12" height="490" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="42" y="61" fill="#18384a" font-size="46" font-weight="700" text-anchor="start">30 天里，经济问题的观察范围怎样扩大？</text>
+<rect x="44" y="95" width="388" height="154" rx="8" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<text x="64" y="131" fill="#076c68" font-size="27" font-weight="700" text-anchor="start">01–05 天</text>
+<text x="64" y="176" fill="#18384a" font-size="36" font-weight="700" text-anchor="start">个人选择与市场</text>
+<text x="64" y="221" fill="#466475" font-size="30" font-weight="400" text-anchor="start">写下最佳替代方案</text>
+<line x1="435" y1="173" x2="463" y2="173" stroke="#466475" stroke-width="3"/>
+<polyline points="453.1,179.8 463.0,173.0 453.1,166.2" fill="none" stroke="#466475" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="469" y="95" width="388" height="154" rx="8" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<text x="489" y="131" fill="#076c68" font-size="27" font-weight="700" text-anchor="start">06–10 天</text>
+<text x="489" y="176" fill="#18384a" font-size="36" font-weight="700" text-anchor="start">企业与市场失灵</text>
+<text x="489" y="221" fill="#466475" font-size="30" font-weight="400" text-anchor="start">找出一项外部成本</text>
+<line x1="860" y1="173" x2="888" y2="173" stroke="#466475" stroke-width="3"/>
+<polyline points="878.1,179.8 888.0,173.0 878.1,166.2" fill="none" stroke="#466475" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="894" y="95" width="388" height="154" rx="8" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<text x="914" y="131" fill="#076c68" font-size="27" font-weight="700" text-anchor="start">11–15 天</text>
+<text x="914" y="176" fill="#18384a" font-size="36" font-weight="700" text-anchor="start">宏观指标</text>
+<text x="914" y="221" fill="#466475" font-size="30" font-weight="400" text-anchor="start">核对指标统计口径</text>
+<rect x="44" y="274" width="388" height="154" rx="8" fill="#e5edf9" stroke="none" stroke-width="2"/>
+<text x="64" y="310" fill="#305d9b" font-size="27" font-weight="700" text-anchor="start">16–20 天</text>
+<text x="64" y="355" fill="#18384a" font-size="36" font-weight="700" text-anchor="start">货币与政策</text>
+<text x="64" y="400" fill="#466475" font-size="30" font-weight="400" text-anchor="start">标出政策传导环节</text>
+<line x1="435" y1="352" x2="463" y2="352" stroke="#466475" stroke-width="3"/>
+<polyline points="453.1,358.8 463.0,352.0 453.1,345.2" fill="none" stroke="#466475" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="469" y="274" width="388" height="154" rx="8" fill="#e5edf9" stroke="none" stroke-width="2"/>
+<text x="489" y="310" fill="#305d9b" font-size="27" font-weight="700" text-anchor="start">21–25 天</text>
+<text x="489" y="355" fill="#18384a" font-size="36" font-weight="700" text-anchor="start">国际与分配</text>
+<text x="489" y="400" fill="#466475" font-size="30" font-weight="400" text-anchor="start">比较群体的得与失</text>
+<line x1="860" y1="352" x2="888" y2="352" stroke="#466475" stroke-width="3"/>
+<polyline points="878.1,358.8 888.0,352.0 878.1,345.2" fill="none" stroke="#466475" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="894" y="274" width="388" height="154" rx="8" fill="#e5edf9" stroke="none" stroke-width="2"/>
+<text x="914" y="310" fill="#305d9b" font-size="27" font-weight="700" text-anchor="start">26–30 天</text>
+<text x="914" y="355" fill="#18384a" font-size="36" font-weight="700" text-anchor="start">证据与综合解释</text>
+<text x="914" y="400" fill="#466475" font-size="30" font-weight="400" text-anchor="start">交一页现象解释卡</text>
+<text x="48" y="467" fill="#18384a" font-size="28" font-weight="400" text-anchor="start">上排从个人选择走到总体指标，下排接着解释政策、分配与证据。</text>
+</g></svg>

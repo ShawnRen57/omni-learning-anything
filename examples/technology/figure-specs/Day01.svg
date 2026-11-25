@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>一次扫码的设备边界与往返消息</title><desc>左框内识别完成之后，浏览器仍需向右发请求，并收到向左返回的响应。显示网址无法证明这两步都已完成。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">已经扫出网址，网页为什么还没打开？</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">手机扫码 · 诊断路径</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="39" y="105" width="461" height="231" rx="12" fill="#e6f2ef" stroke="#076b68" stroke-width="2"/>
+<rect x="779" y="105" width="457" height="231" rx="12" fill="#f1f5f6" stroke="#849aab" stroke-width="2"/>
+<text x="66" y="152" font-size="32" font-weight="700" text-anchor="start" fill="#076b68">手机</text>
+<text x="807" y="152" font-size="32" font-weight="700" text-anchor="start" fill="#19374a">网站服务器</text>
+<text x="66" y="198" font-size="27" font-weight="500" text-anchor="start" fill="#19374a">相机识别 → 显示网址</text>
+<text x="66" y="255" font-size="27" font-weight="500" text-anchor="start" fill="#19374a">点开网址 → 浏览器请求页面</text>
+<text x="66" y="310" font-size="27" font-weight="500" text-anchor="start" fill="#19374a">收到响应 → 显示结果</text>
+<text x="808" y="255" font-size="28" font-weight="500" text-anchor="start" fill="#19374a">接收请求，查找页面</text>
+<text x="808" y="310" font-size="28" font-weight="500" text-anchor="start" fill="#19374a">返回页面或错误状态</text>
+<path d="M500 246 L770 246" stroke="#076b68" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M770 246 L757.00 239.00 L757.00 253.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<text x="636" y="228" font-size="25" font-weight="650" text-anchor="middle" fill="#076b68">网络请求</text>
+<path d="M780 300 L507 300" stroke="#486d8b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M507 300 L520.00 307.00 L520.00 293.00 Z" stroke="#486d8b" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#486d8b"/>
+<text x="637" y="289" font-size="25" font-weight="650" text-anchor="middle" fill="#486d8b">网络响应</text>
+<text x="43" y="394" font-size="27" font-weight="650" text-anchor="start" fill="#076b68">① 未见网址：先查识别</text>
+<text x="558" y="394" font-size="27" font-weight="650" text-anchor="start" fill="#19374a">② 已见网址，未见页面：从请求与响应继续查</text>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">见到网址只证明已经读出链接。一次只改变一个条件，例如改用另一网络再试。</text></g></svg>

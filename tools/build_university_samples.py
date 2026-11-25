@@ -42,14 +42,49 @@ def box(draw,coords,text,color=TEAL):
     label(draw,((coords[0]+coords[2])/2,(coords[1]+coords[3])/2),text,30,color)
 
 
+def psychology_figure(path, *, lesson):
+    """Draw observable evidence from the guide's fictional library example."""
+    image = Image.new('RGB', (1200, 450), '#fffdf7')
+    draw = ImageDraw.Draw(image)
+    left, edge = 40, 1160
+    def text(x, y, content, size, color=INK):
+        label(draw, (x, y), content, size, color, 'lm')
+
+    if lesson:
+        text(left, 53, '第 4 周，哪一组更愿意再来？', 46)
+        text(left, 113, '每点一名学生', 29)
+        for x, selected, legend in [(330, True, '勾选“愿再来”'), (690, False, '未勾选')]:
+            draw.ellipse((x, 100, x+26, 126), fill=TEAL if selected else 'white', outline=TEAL, width=3)
+            text(x+43, 113, legend, 29)
+        draw.line((left, 157, edge, 157), fill='#adbdb8', width=3)
+        for y, group, willing, total in [(222, '甲组', 8, 10), (323, '乙组', 9, 20)]:
+            text(left, y, group, 35)
+            for i in range(total):
+                x = 166 + 33*i
+                draw.ellipse((x-12, y-12, x+12, y+12), fill=TEAL if i<willing else 'white', outline=TEAL, width=3)
+            text(856, y, f'{willing}/{total} = {willing/total:.0%}', 36, INK)
+        draw.line((left, 370, edge, 370), fill='#adbdb8', width=2)
+        text(left, 410, '按勾选人数看乙组多 1 人；按各组比例看甲组高 35 个百分点。', 28)
+    else:
+        text(left, 53, '图书馆自习后，三条记录各能回答什么？', 44)
+        draw.rectangle((left, 97, edge, 160), fill=TEAL)
+        for x, heading in [(65, '记录来自哪里'), (355, '记录了什么'), (831, '可观察的内容')]:
+            text(x, 129, heading, 30, 'white')
+        rows = [('当日自评卡', '学生写“今天能专心”', '当时的主观体验'),
+                ('离馆回访表', '学生勾选“下周愿再来”', '下周参与的意愿'),
+                ('值班日志', '安静区当天开放', '场地提供的条件')]
+        for i, (record, evidence, scope) in enumerate(rows):
+            y = 162 + 68*i
+            draw.rectangle((left, y, edge, y+66), fill='#eef3ed' if i%2==0 else '#f7f6ef')
+            for x, content in [(65, record), (355, evidence), (831, scope)]:
+                text(x, y+32, content, 30, TEAL if x==831 else INK)
+        text(left, 410, '要知道她下周是否真的来，还需要下一次的到场记录。', 28)
+    image.save(path, optimize=True)
+
+
 def figure(sample,path):
     slug=sample['slug'];image=Image.new('RGB',(1600,850),BG);draw=ImageDraw.Draw(image)
-    if slug=='positive-psychology-zh':
-        layer=Image.new('RGBA',image.size);d=ImageDraw.Draw(layer)
-        for rect,color in [((310,100,880,670),(35,119,104,65)),((730,100,1300,670),(59,102,142,65)),((520,320,1090,850),(178,117,67,65))]:d.ellipse(rect,fill=color,outline=(*color[:3],220),width=4)
-        image=Image.alpha_composite(image.convert('RGBA'),layer).convert('RGB');draw=ImageDraw.Draw(image)
-        for xy,text in [((565,310),'体验'),((1050,310),'行动'),((800,660),'环境')]:label(draw,xy,text,58)
-    elif slug=='cs50x-en':
+    if slug=='cs50x-en':
         box(draw,(500,80,1050,190),'Any parcels left?')
         box(draw,(80,80,340,190),'Stop',RUST);arrow(draw,(500,135),(340,135),RUST);label(draw,(415,100),'no',28,RUST)
         arrow(draw,(775,190),(775,290));label(draw,(820,240),'yes',28)
@@ -142,22 +177,35 @@ def build_plans(output):
     for sample in SAMPLES:
         root=output/sample['slug'];root.mkdir(parents=True,exist_ok=True)
         if (root/'state.json').exists():raise ValueError('Existing sample preserved; choose a fresh output directory.')
-        (root/'assets').mkdir();figure(sample,root/'assets/teaching.png')
+        (root/'assets').mkdir()
+        if sample['slug'] == 'positive-psychology-zh':
+            psychology_figure(root/'assets/library-records.png',lesson=False)
+            psychology_figure(root/'assets/return-intent.png',lesson=True)
+            plan_visual = {**sample['figure'], 'path':'assets/library-records.png'}
+            lesson_visual = {**sample['lesson_figure'], 'path':'assets/return-intent.png'}
+        else:
+            figure(sample,root/'assets/teaching.png')
+            plan_visual = lesson_visual = {**sample['figure'], 'path':'assets/teaching.png'}
         binding=courses.bind(sample['course_id'],['u01','u02','u03'])
         config={'timezone':'Asia/Shanghai','language':sample['language'],'daily_minutes':10,'sample_mode':True,
                 'course_pathway':binding,'delivery':{'platform':'html','mode':'local'}}
-        visual={k:sample['figure'][k] for k in ('caption','credit')};visual['path']='assets/teaching.png'
+        plan_visual = {k:v for k,v in plan_visual.items() if k != 'concept'}
+        lesson_visual = {k:v for k,v in lesson_visual.items() if k != 'concept'}
         plan={'topic':sample['title'],'title':sample['title'],'days':copy.deepcopy(sample['days']),
-              'sections':sample['plan_sections'],'sources':evidence(sample,binding,binding['unit_ids']),'figure':visual}
+              'sections':sample['plan_sections'],'sources':evidence(sample,binding,binding['unit_ids']),'figure':plan_visual}
         c.initialize(root,config,plan)
         lesson={'day':1,'title':sample['days'][0]['topic'],'course_units':['u01'],'reading_minutes':7,'practice_minutes':3,
-                'sections':sample['lesson_sections'],'sources':evidence(sample,binding,['u01']),'figure':visual}
+                'sections':sample['lesson_sections'],'sources':evidence(sample,binding,['u01']),'figure':lesson_visual}
         c.save(root/'data/Day01.json',lesson)
+        concepts = [sample['figure']['concept']]
+        if 'lesson_figure' in sample:
+            concepts.append(sample['lesson_figure']['concept'])
         c.save(root/'provenance.json',{'release':'3.0.0','course_id':sample['course_id'],'language':sample['language'],
               'checked_at':'2026-11-01','sample':'Independent six-day partial learning guide; only Day01 exported.',
               'approval':'Simulated only for explicitly requested public examples; no real learner approval or job.',
               'figure':'Original code-drawn conceptual teaching diagram; no measured data or original university slide.',
-              'figure_concept':sample['figure']['concept'],'builder':'tools/build_university_samples.py',
+              'figure_concept':' '.join(concepts), **sample.get('figure_revision', {}),
+              'builder':'tools/build_university_samples.py',
               'source_ledger':'docs/v300-sample-sources.md','live_schedule':False})
         manifest=documents.render(root,root/'plan.json','plan',['pdf','html'])
         print(sample['slug'],'plan',manifest['report'],flush=True)
@@ -177,7 +225,11 @@ def export(output):
         for key in ('plan','Day01'):
             manifest=c.reviewed(root,key)
             for fmt in ('pdf','html'):shutil.copyfile(root/manifest['artifacts'][fmt],target/f'{key}.{fmt}')
-        for source,name in [('config.json','config.json'),('plan.json','plan.json'),('data/Day01.json','Day01.json'),('assets/teaching.png','assets/teaching.png'),('provenance.json','provenance.json')]:
+        image_paths = {c.read(root/path)['figure']['path'] for path in ('plan.json', 'data/Day01.json')}
+        copies = {'config.json':'config.json', 'plan.json':'plan.json',
+                  'data/Day01.json':'Day01.json', 'provenance.json':'provenance.json'}
+        copies.update({path:path for path in image_paths})
+        for source,name in copies.items():
             (target/name).parent.mkdir(parents=True,exist_ok=True)
             shutil.copyfile(root/source,target/name)
     make_gallery(output)

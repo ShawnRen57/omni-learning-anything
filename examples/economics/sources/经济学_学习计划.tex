@@ -10,15 +10,15 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
-\newcommand{\Needspace}[1]{\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\relax\newpage\fi}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
 
 
 {\LARGE\bfseries\color{ink} 经济学：30天学习计划}\par
 
-2026-10-08 | 学习计划 / 30 天\par\vspace{6pt}
+2026-11-25 | 学习计划 / 30 天\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{学习者与目标}
 
@@ -30,13 +30,15 @@
 
 每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。
 
-本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。
+本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-a92b6089a95f.png}\par
+沿日期从左到右读完上排，再读下排。比较两排最后一格要交出的成果。
 
-{\small A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-3e96e9ccf65b.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 从个人取舍，到一页经济现象解释卡。 第 15 天和第 30 天分别要交出什么观察结果？ 上排末格要求核对宏观指标的统计口径；下排末格用一页卡片整合机制和证据。 [S1] [S2]}\par
+
+{\footnotesize 依据本计划六阶段安排自绘；起点概念参见 OpenStax。}\end{center}
 
 \Needspace{5\baselineskip}\section*{课程依据与学习成果}
 
@@ -152,17 +154,17 @@ Day30  结业：经济现象解释卡
 
 真实使用时，请确认目标、基础、周期、每天用时、执行时间、时区与输出目录。批准当前计划后才创建任务；修改已开始的课程时保留旧档案并建立新版本。到期漏跑则继续最早未交付课程，不按日期跳课。
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important}{What Is Economics, and Why Is It Important?} — 从稀缺与分工建立课程起点；文中旧统计不作为现状。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S1] \href{https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important}{What Is Economics, and Why Is It Important?} — 从稀缺与分工建立课程起点；文中旧统计不作为现状。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S2] \href{https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint}{Budget Constraint and Individual Choices} — 重点读机会成本、预算约束与边际分析。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S2] \href{https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint}{Budget Constraint and Individual Choices} — 重点读机会成本、预算约束与边际分析。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S3] \href{https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices}{Production Possibilities Frontier} — 把个人选择扩展为社会资源配置，观察模型假设。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S3] \href{https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices}{Production Possibilities Frontier} — 把个人选择扩展为社会资源配置，观察模型假设。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S4] \href{https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services}{Demand, Supply, and Equilibrium} — 对照需求、供给和均衡的图形定义。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S4] \href{https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services}{Demand, Supply, and Equilibrium} — 对照需求、供给和均衡的图形定义。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S5] \href{https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services}{Shifts in Demand and Supply} — 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services}{Shifts in Demand and Supply} — 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

@@ -138,5 +138,6 @@
   "delivery": {
     "platform": "html",
     "mode": "local"
-  }
+  },
+  "visual_guides": true
 }

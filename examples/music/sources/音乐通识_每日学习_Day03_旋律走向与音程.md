@@ -1,6 +1,6 @@
 # 旋律走向与音程
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -12,15 +12,19 @@
 
 音程描述两个音高之间的距离。公开乐理教材区分半音数与按音名计数的度数；它们回答不同问题。[S5] 今天先理解关系，不要求一次掌握所有音程名称。
 
-![本课重点看 C 区。A 比较振动疏密与振幅；B 稳定脉冲和节奏事件并不相同；C 两个音高之间可以比较方向与距离。波形仅作概念示意。](../assets/figure-f6141a0bb6d5.png)
+用手指依次跳过上排的四支箭头，再点下排的三个圆；两次计数的对象不同。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![同一对起止音，分别数半音的步数与音名的个数。](../assets/figure-31cacd803ae1.png)
+
+同一对起止音，分别数半音的步数与音名的个数。 从 C 到 E，上排数几段距离？下排数几个带字母的位置？ 上排 C、C♯、D、D♯、E 之间有四段半音；下排 C、D、E 连同起止共三个音名，得到三度。 \[S5\]
+
+原创音程图，依据 Open Music Theory 的 C4–E4 示例。
 
 ## 为什么“第三个”不等于“三个半音”
 
 以西方常用音名为例，从 C 到 E，按 C、D、E 连起止音一起计数，是三度；在十二平均律的键盘半音计数中则跨四个半音。[S5] 度数表达音名位置关系，半音数表达另一种距离。把两个计数法混用，会出现“为什么三度不是三个半音”的疑惑。
 
-本课用西方常见乐理作为入门工具，不把它当作所有音乐文化的唯一标准。其他调律、装饰音和连续滑音不能全部用钢琴键之间的距离概括。图 C 的两个音叉只提示“比较两个音高”，不指定真实频率、音程或精确尺寸比例。
+本课用西方常见乐理作为入门工具，不把它当作所有音乐文化的唯一标准。其他调律、装饰音和连续滑音不能全部用钢琴键之间的距离概括。图中取同一八度里的 C 和 E，用两排标记对应这两种计数方法。
 
 ## 一个不需要识谱的实验
 
@@ -40,12 +44,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Speed of Sound, Frequency, and Wavelength](https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength)：选读声音频率与音高的关系，公式推导可跳过。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [Speed of Sound, Frequency, and Wavelength](https://openstax.org/books/physics/pages/14-1-speed-of-sound-frequency-and-wavelength): 选读声音频率与音高的关系，公式推导可跳过。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [Basic notation](https://openmusictheory.github.io/basicNotation.html)：认识音符、谱表和变音记号；本课不要求记住全部符号。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S2] [Basic notation](https://openmusictheory.github.io/basicNotation.html): 认识音符、谱表和变音记号；本课不要求记住全部符号。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Rhythmic values](https://openmusictheory.github.io/rhythmicValues.html)：观察长短时值和休止符如何表达时间。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S3] [Rhythmic values](https://openmusictheory.github.io/rhythmicValues.html): 观察长短时值和休止符如何表达时间。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Meter and time signatures](https://openmusictheory.github.io/meter.html)：选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S4] [Meter and time signatures](https://openmusictheory.github.io/meter.html): 选看拍子分组与聆听示例；部分嵌入播放器可能需要额外登录。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Intervals and dyads](https://openmusictheory.github.io/intervals.html)：重点看半音数与音程度数不是同一种计数方法。；Open Music Theory；发布 未标注；核验 2026-10-08
+- [S5] [Intervals and dyads](https://openmusictheory.github.io/intervals.html): 重点看半音数与音程度数不是同一种计数方法。; Open Music Theory | 发布: 未标注 | 核验: 2026-11-25

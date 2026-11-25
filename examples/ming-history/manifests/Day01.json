@@ -1,32 +1,40 @@
 {
+  "input": "data/Day01.json",
+  "artifact": "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf",
+  "artifacts": {
+    "pdf": "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf",
+    "markdown": "sources/明朝历史_每日学习_Day01_时间线与史料如何使用.md"
+  },
   "key": "Day01",
   "pdf": "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day01.json": "0a92fc3d735c1b722eb4d39f0fa78fa921943fd5058fd081705c1da5b3cfc924",
-    "plan.json": "f5f9205987e26af14732d9ac8d675806e650f61a6f7da52167b8c63dedbb2f1e",
-    "config.json": "8ccfee0bafc36f4f529b3141f66c5feca5c9786ad770ae9edfd480ec792bfc4e",
-    "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf": "29191f8ac41c47419a716ef67dd4145f5a328a4d5a97e4653c379ea17c1d280b",
-    "sources/明朝历史_每日学习_Day01_时间线与史料如何使用.tex": "6618c47bfca3bb6f40428fd5bf0117b0e4eecbefa8cdaa1f6769cb2af488aa9d",
-    "sources/明朝历史_每日学习_Day01_时间线与史料如何使用.md": "5a19762b29117c47e295b91843d64795d76ba9868a1043325203ce7e032bc60f",
-    "assets/figure-e75918c40f59.png": "e75918c40f59b6be7c8123938ad6ed129284a6e1df5799e2c1b01594d9cf9268",
-    "previews/Day01-01.png": "e9a706e40656157c477e6c7e75edff24b61ae6532076c11eb77b3ccfb867615c",
-    "previews/Day01-02.png": "526cfa4490ada9728a765d947bb6f6e59764695740f4bf3e49374f40d0b6aa5b"
+    "data/Day01.json": "14079b31185179a9163c41267399c619e3bdd520fd37462e0f7ba78ef6f24cf5",
+    "plan.json": "ac897c3792c0117329a3a44fc1ce59d29f0c64b360a236ff632785cf1ce6539f",
+    "config.json": "94d949fc15b21abb479548cbe9e8a410a8390e385a127f75eef235c901e1dbe7",
+    "pdf/明朝历史_每日学习_Day01_时间线与史料如何使用.pdf": "2410ead35dfec3e8a89b5d84dac09692533cda0ace73eaf2457a5fb125c0c106",
+    "sources/明朝历史_每日学习_Day01_时间线与史料如何使用.tex": "7e638b5be51929f2c4fbae38c793f8e69910065609ce7c1dcb03d96d2102e1d7",
+    "sources/明朝历史_每日学习_Day01_时间线与史料如何使用.md": "7b27aa1b42fdc91b3543fbe46e80a744743d8d1e43bf52342b95b4bc89b42390",
+    "assets/figure-797f75c15522.png": "797f75c15522d7509e1c3d46c07bf4370ae3c30227ac4bd469f6983ea6e4b00a",
+    "previews/Day01-01.png": "4b744b92aae124a4ef65172358afcf7e78a61384beeef81468ad6e6930ca5c61",
+    "previews/Day01-02.png": "48a7c0c1709cf537905f263ac71087d37cafba065ebadfb3975aeca91d78699d",
+    "previews/Day01-03.png": "569fc5411fefd8998abea8ca763489243dcff47dd91b53dac803e343afe9c22e"
   },
   "previews": [
     "previews/Day01-01.png",
-    "previews/Day01-02.png"
+    "previews/Day01-02.png",
+    "previews/Day01-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
-    "pages": 2,
-    "links": 5,
+    "pages": 3,
+    "links": 6,
     "fonts": [
-      "/APOXDD+TimesNewRomanPS-BoldMT",
-      "/CXTUJG+TimesNewRomanPSMT",
-      "/IJWJFO+FandolFang-Regular-Identity-H"
-    ]
+      "/CKDGHG+TimesNewRomanPSMT",
+      "/DCRDTB+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-797f75c15522.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

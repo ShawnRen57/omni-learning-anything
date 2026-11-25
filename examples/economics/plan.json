@@ -160,7 +160,7 @@
     },
     {
       "title": "学习方式与时间安排",
-      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。图中A、B、C分别对应前三天的观察重点。"
+      "body": "每天预计10–15分钟：正文与读图约8分钟，回忆和练习约3分钟，可用余下时间复述。学习速度存在差异，时间为估计值；扩展阅读不计入必做量。每天10:00（Asia/Shanghai，含周末）开始生成，检查完成后交付。计划确认后可立即生成Day01。\n\n本文件是公开演示样例：30天完整课纲，配套展示Day01–Day03；试跑不创建真实定时任务。\n\n沿日期从左到右读完上排，再读下排。比较两排最后一格要交出的成果。"
     },
     {
       "title": "课程依据与学习成果",
@@ -202,7 +202,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从稀缺与分工建立课程起点；文中旧统计不作为现状。"
     },
     {
@@ -211,7 +211,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "重点读机会成本、预算约束与边际分析。"
     },
     {
@@ -220,7 +220,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "把个人选择扩展为社会资源配置，观察模型假设。"
     },
     {
@@ -229,7 +229,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "对照需求、供给和均衡的图形定义。"
     },
     {
@@ -238,13 +238,21 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-3e96e9ccf65b.png",
+    "caption": "从个人取舍，到一页经济现象解释卡。",
+    "credit": "依据本计划六阶段安排自绘；起点概念参见 OpenStax。",
+    "reading": {
+      "question": "第 15 天和第 30 天分别要交出什么观察结果？",
+      "observation": "上排末格要求核对宏观指标的统计口径；下排末格用一页卡片整合机制和证据。",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    }
   }
 }

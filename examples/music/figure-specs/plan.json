@@ -1,0 +1,14 @@
+{
+  "image": "figure-02be7764254a.png",
+  "caption": "把时间读成横向长度，把音高读成纵向位置。",
+  "credit": "原创四拍教学旋律，时值与音程依据 Open Music Theory。",
+  "reading": {
+    "question": "上图中，哪一拍有两个音？最后一次换音朝什么方向？",
+    "observation": "第 2 拍分成 D、E 两条短音；最后一拍从较高的 E 回到 C。用同一条旋律可以分别听时间和音高。",
+    "source_ids": [
+      "S3",
+      "S5"
+    ]
+  },
+  "body_reference": "从左到右轻拍四下，对照条块的长度和高度，任选一种线索描述这段旋律。"
+}

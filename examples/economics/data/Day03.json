@@ -10,7 +10,7 @@
     },
     {
       "title": "把决策写成“再多一点”",
-      "body": "边际分析比较行动改变一单位或一小步带来的新增收益与新增成本，而不是只比较过去的总量。[S2] 图 C 的整只面包与额外一片，帮助区分这两种问题。实际的“一步”可以是一盘面包、一小时营业或一周项目试验，应与可执行选择一致。"
+      "body": "边际分析比较行动改变一单位或一小步带来的新增收益与新增成本，而不是只比较过去的总量。[S2] 横条列出晚关门一小时会增加的收支，帮助把眼前的增量与整天的总量分开。实际的“一步”可以是一盘面包、一小时营业或一周项目试验，应与可执行选择一致。\n\n沿横条的同一零点比较两端，括线标出了多开一小时产生的差额。"
     },
     {
       "title": "三个判断层次",
@@ -36,7 +36,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "从稀缺与分工建立课程起点；文中旧统计不作为现状。"
     },
     {
@@ -45,7 +45,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "重点读机会成本、预算约束与边际分析。"
     },
     {
@@ -54,7 +54,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "把个人选择扩展为社会资源配置，观察模型假设。"
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "对照需求、供给和均衡的图形定义。"
     },
     {
@@ -72,13 +72,20 @@
       "url": "https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services",
       "publisher": "OpenStax",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "本课重点看 C 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-99f6fd824fda.png",
+    "caption": "延时营业的一小时，只比较会随决定改变的收支。",
+    "credit": "原创条形图，金额采用本课教学设例；边际分析依据 OpenStax 第 2.1 节。",
+    "reading": {
+      "question": "两根横条为什么相差 50 元？原本就要付的租金该画进哪一根？",
+      "observation": "两条从同一零点出发，200 元收入减去 150 元新增成本得到 50 元；相同租金在两个方案间的差额为零。",
+      "source_ids": [
+        "S2"
+      ]
+    }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "image": "figure-31cacd803ae1.png",
+  "caption": "同一对起止音，分别数半音的步数与音名的个数。",
+  "credit": "原创音程图，依据 Open Music Theory 的 C4–E4 示例。",
+  "reading": {
+    "question": "从 C 到 E，上排数几段距离？下排数几个带字母的位置？",
+    "observation": "上排 C、C♯、D、D♯、E 之间有四段半音；下排 C、D、E 连同起止共三个音名，得到三度。",
+    "source_ids": [
+      "S5"
+    ]
+  },
+  "body_reference": "用手指依次跳过上排的四支箭头，再点下排的三个圆；两次计数的对象不同。"
+}

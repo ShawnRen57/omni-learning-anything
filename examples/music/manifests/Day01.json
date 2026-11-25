@@ -1,32 +1,38 @@
 {
+  "input": "data/Day01.json",
+  "artifact": "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf",
+  "artifacts": {
+    "pdf": "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf",
+    "markdown": "sources/音乐通识_每日学习_Day01_听见音高力度与音色.md"
+  },
   "key": "Day01",
   "pdf": "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day01.json": "01c552faabe00f75a21f580746c10d1d3f8d4f7b4b87298279655ed0ecdc8ff9",
-    "plan.json": "00282ffdd604c8b36759839f2ad2dc98aa315615e111c9430923f2d2a7495a34",
-    "config.json": "8a70afa4ef991b08b6bbdff60607fd5bc910376056f74d427166a60d85ed8877",
-    "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf": "a93724f0b71a708c9a359cc7252158c6fbe282332a6e5cc525a98b6c949564e3",
-    "sources/音乐通识_每日学习_Day01_听见音高力度与音色.tex": "dff0bafc279a5c4ac92711592585ac0a912ecf59b7492851d46df4a4ba8e63a8",
-    "sources/音乐通识_每日学习_Day01_听见音高力度与音色.md": "cdeea5580026fd8603c4ed93ed5c3e4fb081af003b8672afd57715a68a2407fb",
-    "assets/figure-f6141a0bb6d5.png": "f6141a0bb6d5be36efb00ca0e40c494d4d6e655e7d9724eea66dd2afb3d9d685",
-    "previews/Day01-01.png": "b8d9b5b597cb76f6e5a2f60bcb29c91e8da922883739acfb4ee4825f26656ad5",
-    "previews/Day01-02.png": "1590ab09605b463acbb4dfee29e7bc04e7433969f5d0a52c1af2492ab1e0714f"
+    "data/Day01.json": "3a4b6350037bf8d0ec4a46ed8c7b6b796d22de7c9c026590b5710c23032093e6",
+    "plan.json": "de126edcce3b5798879bf41846b9ddcb3a3ad61409db3094e28ff0dba73d794c",
+    "config.json": "a9c905889c7fb36ad7a3f4a6a351790aef147c3f000ad9370993f31d0e6a22ac",
+    "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf": "b44f325e7807e6830c9c30080072f80644ddb309cba4b3aa4b41e160788dbd32",
+    "sources/音乐通识_每日学习_Day01_听见音高力度与音色.tex": "f527b493bb1f56037b20523cfc0f709be68f91017253c45e173a4762ef9ef7ae",
+    "sources/音乐通识_每日学习_Day01_听见音高力度与音色.md": "3728467f7b86017ad6af1867cd6c2e201dbca5c35691da166718f85f4d55aa42",
+    "assets/figure-6d3e1511f500.png": "6d3e1511f5003aa1c553e56ba0712406631ec7fcccf25bb8b079766e6f7a69d1",
+    "previews/Day01-01.png": "f7e6db93840d93f6518f01ced3b6fac58ec5e58b7daf30572867e749cba88478",
+    "previews/Day01-02.png": "d86b59deb6c6974821e2ede05c55c76eaf310381a56cadd75db706a86e17753d"
   },
   "previews": [
     "previews/Day01-01.png",
     "previews/Day01-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
-    "links": 5,
+    "links": 6,
     "fonts": [
-      "/RBZSMJ+TimesNewRomanPS-BoldMT",
-      "/RDMNYQ+TimesNewRomanPSMT",
-      "/UTVZNE+FandolFang-Regular-Identity-H"
-    ]
+      "/MWXFPH+FandolFang-Regular-Identity-H",
+      "/YJYXDG+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-6d3e1511f500.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "status": "active",
-  "approved_plan": "a56e11a33b46fe3014d7ba8d69027cf2e21e07199565262a1308c276d54a1f46",
+  "approved_plan": "90a2175b37a6f768396d6865cf7fa256f4a2cf4ab1bebde390a7a7de914a3885",
   "lessons": {
     "1": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf",
-      "manifest_hash": "cd0e5359a72a01e3303ece183853f59e7c9f24c686e00b5db3ec87274c2b08cb"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "a2a7c809edbd3090e027e125aefdb7b4f4e9fe1f70cb95eb52daad60b4979375",
+      "pdf": "pdf/经济学_每日学习_Day01_稀缺与机会成本.pdf"
     },
     "2": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf",
-      "manifest_hash": "857dd501b4390f25f71f8a7eef4cc7ca1de0dae7c52b510067064249def6f739"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "88e7fbb32ea80cecba7b0562207943a1a6b72dabb705f3642a02bdc650079956",
+      "pdf": "pdf/经济学_每日学习_Day02_价格如何协调供需.pdf"
     },
     "3": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf",
-      "manifest_hash": "c9a1520590f7603dc3082098cb073a84db04274edf1b69ca89a43119566898ee"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "42c14a434608ce0d934d574477615ef245afb89ee27394e84b0ca5c4b444015d",
+      "pdf": "pdf/经济学_每日学习_Day03_边际思维与沉没成本.pdf"
     }
   },
   "schedule": null,
   "mastery": {},
-  "approved_config": "7234fdfad7216c08f83e19a7c895793256fb536dd34563bba88d567c894b9e26"
+  "approved_config": "ba03bf612c7c5e07d54e10d5151be46705a616359e14494b699a8a783c57c833"
 }

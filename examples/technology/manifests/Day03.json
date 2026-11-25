@@ -1,32 +1,38 @@
 {
+  "input": "data/Day03.json",
+  "artifact": "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf",
+  "artifacts": {
+    "pdf": "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf",
+    "markdown": "sources/科技通识_每日学习_Day03_能量转换与效率.md"
+  },
   "key": "Day03",
   "pdf": "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day03.json": "c85dfebcb8ffb53f51f0fee0d5ff4cb994865d07129e6b6719715a4e6832104b",
-    "plan.json": "37836264622cf97ff29269a4634cce91686a28310630c58fa946d8cbe16382d2",
-    "config.json": "4679155ce644c4b791aa20003f3bac1f56f211c650e26a7e0a97bb7735968d72",
-    "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf": "a698a963856a6d46e49eabcddd786d26da1df9a295a4a062cb7b098a212ee69c",
-    "sources/科技通识_每日学习_Day03_能量转换与效率.tex": "9b7ed4b284094eea6d66d4db987d354c880258c3597df9cacc2172de6a750094",
-    "sources/科技通识_每日学习_Day03_能量转换与效率.md": "5971cf3e365a229f303966c27d5032f64eb4979449635f2fd338cc1a7d0c3cc4",
-    "assets/figure-f1c69576c177.png": "f1c69576c177b1cdef58e256311032e0a7861690742fb16723ff5e437150bd24",
-    "previews/Day03-01.png": "85e8406da83c6acd2cd9333c07e38f5b2f0a606c1b9de3d0a60c3c332f360bad",
-    "previews/Day03-02.png": "a1cc00f6c2d579fa676ae6e079fa262f49dda2c82282d99596fb0900598d6150"
+    "data/Day03.json": "7b8bc92b34b79970268b8f2e486776f7cf12b7eaf3208b1aec0467fb4fe40800",
+    "plan.json": "9b7f5612c15b6b2588eb91e8a18665ac54a7118ef5c6ca81e8b09c4443d93abc",
+    "config.json": "361fce33b644b4458fd50004eb8c30e46883585e37f8fa618a736c9af3151bff",
+    "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf": "4aa501799be6cb1fe4a8df6bfbc58d9274ca70db413fc6d0adea132ea7736ab2",
+    "sources/科技通识_每日学习_Day03_能量转换与效率.tex": "88617d6c977010297fbe2b491264f88c174025b2bad1568187f471becf7db75f",
+    "sources/科技通识_每日学习_Day03_能量转换与效率.md": "65a8f883302861fb76fc55a75f52b3de27a8a14d5ea4a267cc686714f8661c57",
+    "assets/figure-107db0930f98.png": "107db0930f9829c7552420467abd791d4a1faf67c0b76619c604f83d393452bd",
+    "previews/Day03-01.png": "2d9bca86e824c9b7a12c445c9c4acfc1e5aea83d00866c2d62ddd08e8181ee87",
+    "previews/Day03-02.png": "a661d8d2c9b21f21a42f9f751a1ac92740829079e50ddc802420e4da5c9f02a5"
   },
   "previews": [
     "previews/Day03-01.png",
     "previews/Day03-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
-    "links": 5,
+    "links": 6,
     "fonts": [
-      "/HVRFJL+TimesNewRomanPS-BoldMT",
-      "/MNPPNS+TimesNewRomanPSMT",
-      "/SJPIIG+FandolFang-Regular-Identity-H"
-    ]
+      "/LOQKJN+TimesNewRomanPSMT",
+      "/YUYTDY+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-107db0930f98.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

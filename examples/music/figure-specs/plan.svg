@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 490" width="1320" height="490">
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial Unicode MS, sans-serif">
+<rect x="0" y="0" width="1320" height="490" rx="0" fill="#fcfdfb" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="12" height="490" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="42" y="61" fill="#18384a" font-size="46" font-weight="700" text-anchor="start">同一段四拍旋律，前三天分别听什么？</text>
+<line x1="235" y1="106" x2="235" y2="336" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="248" y="121" fill="#466475" font-size="27" font-weight="400" text-anchor="start">第 1 拍</text>
+<line x1="495" y1="106" x2="495" y2="336" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="508" y="121" fill="#466475" font-size="27" font-weight="400" text-anchor="start">第 2 拍</text>
+<line x1="755" y1="106" x2="755" y2="336" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="768" y="121" fill="#466475" font-size="27" font-weight="400" text-anchor="start">第 3 拍</text>
+<line x1="1015" y1="106" x2="1015" y2="336" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1028" y="121" fill="#466475" font-size="27" font-weight="400" text-anchor="start">第 4 拍</text>
+<line x1="1273" y1="106" x2="1273" y2="336" stroke="#b5c7cc" stroke-width="2" stroke-dasharray="5 5"/>
+<rect x="238" y="275" width="252" height="38" rx="5" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="365" y="304" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle">C</text>
+<rect x="498" y="217" width="122.0" height="38" rx="5" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="560.0" y="246" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle">D</text>
+<rect x="628.0" y="159" width="122.0" height="38" rx="5" fill="#305d9b" stroke="none" stroke-width="2"/>
+<text x="690.0" y="188" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle">E</text>
+<rect x="758" y="159" width="252" height="38" rx="5" fill="#305d9b" stroke="none" stroke-width="2"/>
+<text x="885" y="188" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle">E</text>
+<rect x="1018" y="275" width="252" height="38" rx="5" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="1145" y="304" fill="#ffffff" font-size="28" font-weight="700" text-anchor="middle">C</text>
+<text x="195" y="305" fill="#18384a" font-size="33" font-weight="700" text-anchor="end">C</text>
+<text x="195" y="247" fill="#18384a" font-size="33" font-weight="700" text-anchor="end">D</text>
+<text x="195" y="189" fill="#18384a" font-size="33" font-weight="700" text-anchor="end">E</text>
+<text x="48" y="188" fill="#18384a" font-size="32" font-weight="700" text-anchor="start">音高</text>
+<text x="48" y="238" fill="#466475" font-size="27" font-weight="400" text-anchor="start">高</text>
+<line x1="110" y1="290" x2="110" y2="207" stroke="#466475" stroke-width="3"/>
+<polyline points="116.8,216.9 110.0,207.0 103.2,216.9" fill="none" stroke="#466475" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="55" y="380" fill="#076c68" font-size="32" font-weight="700" text-anchor="start">Day01  听高低</text>
+<text x="55" y="424" fill="#18384a" font-size="29" font-weight="400" text-anchor="start">哪些音一样高？</text>
+<text x="477" y="380" fill="#076c68" font-size="32" font-weight="700" text-anchor="start">Day02  找拍点</text>
+<text x="477" y="424" fill="#18384a" font-size="29" font-weight="400" text-anchor="start">哪一拍放进两个音？</text>
+<text x="900" y="380" fill="#076c68" font-size="32" font-weight="700" text-anchor="start">Day03  比走向</text>
+<text x="900" y="424" fill="#18384a" font-size="29" font-weight="400" text-anchor="start">哪两音之间向下跳？</text>
+</g></svg>

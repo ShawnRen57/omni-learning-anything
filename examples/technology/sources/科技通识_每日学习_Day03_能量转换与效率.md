@@ -1,6 +1,6 @@
 # 能量转换与效率
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -8,11 +8,15 @@
 
 ## 沿着能量流观察
 
-看图 C：阳光被太阳能电池板转换为电能，储能设备保存一部分能量，再供灯具使用。实际装置还需要控制器与电气保护，图中省略了这些部件；不要据图接线。每个环节的输入与输出都可以单独检查，链条上多个转换过程会影响最终可用能量。能源部基础资料把发电、输电与配电分开讨论，也是这种系统观察方式。[S3]
+以太阳能照明为例，太阳能电池板把光能转换为电能，储能设备保存一部分能量，再供灯具使用。实际装置还需要控制器和电气保护。每个环节的输入与输出都可以单独检查，链条上多个转换过程会影响最终可用能量。能源部基础资料把发电、输电与配电分开讨论，也是这种系统观察方式。[S3]
 
-![本课重点看 C 区。A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。](../assets/figure-f1c69576c177.png)
+对照相同起点的三根横条，再把功率和实际运行时长一起带入比较。[S6]
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![同一刻度下的三种照明用电量](../assets/figure-107db0930f98.png)
+
+同一刻度下的三种照明用电量 哪一种 20 W 的用法比 10 W × 5 h 更省电？ 末行的 20 W × 1 h 是 0\.02 kWh，短于首行的 0\.05 kWh；前两行开灯时长相同，20 W 的用电量则是两倍。 \[S6\]
+
+原创计算图；按 EIA 的瓦时定义，用正文中的设定计算。
 
 ## 三个容易混淆的量
 
@@ -40,12 +44,14 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Physics: Definitions and Applications](https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications)：从物理学与技术的关系入手，区分解释自然和解决实际问题。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [Physics: Definitions and Applications](https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications): 从物理学与技术的关系入手，区分解释自然和解决实际问题。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [The Electromagnetic Spectrum](https://science.nasa.gov/ems/)：查看波谱教学材料，理解通信与成像共享的物理基础。；NASA；发布 未标注；核验 2026-10-08
+- [S2] [The Electromagnetic Spectrum](https://science.nasa.gov/ems/): 查看波谱教学材料，理解通信与成像共享的物理基础。; NASA | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Electricity 101](https://www.energy.gov/oe/electricity-101)：只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。；美国能源部；发布 未标注；核验 2026-10-08
+- [S3] [Electricity 101](https://www.energy.gov/oe/electricity-101): 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。; 美国能源部 | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [AI measurement and evaluation](https://www.nist.gov/ai-measurement-and-evaluation)：观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。；NIST；发布 未标注；核验 2026-10-08
+- [S4] [AI measurement and evaluation](https://www.nist.gov/ai-measurement-and-evaluation): 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。; NIST | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [The Silicon Engine](https://www.computerhistory.org/siliconengine/)：沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。；Computer History Museum；发布 未标注；核验 2026-10-08
+- [S5] [The Silicon Engine](https://www.computerhistory.org/siliconengine/): 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。; Computer History Museum | 发布: 未标注 | 核验: 2026-11-25
+
+- [S6] [Measuring electricity](https://www.eia.gov/energyexplained/electricity/measuring-electricity.php): 参见 Electricity use over time is measured in Watthours 的功率、时长与用电量换算。; U.S. Energy Information Administration | 发布: 未标注 | 核验: 2026-11-25

@@ -2,7 +2,9 @@
 
 ![Six actual lesson pages](../../docs/assets/course-gallery-v3.png)
 
-These are independent learning guides generated with Omni Learning Anything v3.0.0. Each set contains a **partial six-day plan and Day01**, in PDF and offline single-file HTML. The six days introduce selected ideas from the first three catalog groups; they do not complete those groups or the original university course. Original lecture, reading and assignment time is separate.
+These independent learning guides began with Omni Learning Anything v3.0.0. Each set contains a **partial six-day plan and Day01**, in PDF and offline single-file HTML. The six days introduce selected ideas from the first three catalog groups. Allow additional time for the university’s lectures, readings and assignments.
+
+In the updated Chinese psychology lesson, 8 of 10 students in one group and 9 of 20 in the other say they want to return. Count the filled dots, then compare each group's fraction. Which comparison changes your answer? [Open the lesson](positive-psychology-zh/Day01.pdf)
 
 | Language | Original course | Learning plan | Day01 |
 | --- | --- | --- | --- |

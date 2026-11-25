@@ -1,6 +1,6 @@
 # 从聊天回答到完成任务
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,11 +10,15 @@
 
 用户说：“帮我安排下周去上海出差。”一个回答可能只给攻略；一个任务系统还可能澄清时间、查询候选行程、整理费用，并等待确认。需求原句没有自动授权购买，也没有提供预算、证件或差旅政策。产品设计先补齐任务边界，再决定哪些部分交给模型。
 
-图 A 的卡片代表目标，候选方案代表中间产物。把候选生成与最终购买区分开，就能避免用“输出了漂亮文字”代替“用户事情办成了”。
+图中三条报价使用相同日期、航线和查询时刻。把候选生成与最终购买区分开，就能避免用“输出了漂亮文字”代替“用户事情办成了”。
 
-![本课重点看 A 区。A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。](../assets/figure-8284fa500410.png)
+把三条报价的右端与虚线对齐，再回看左侧的工具调用和授权范围。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![查询结果与预算线](../assets/figure-04ba5665d5c6.png)
+
+查询结果与预算线 哪两条报价符合预算，查询工具是否已经买票？ 甲、乙的条形止于 1,500 元预算线以内；左侧调用记录只含查询，购票仍未获授权。 \[S2\] \[S3\]
+
+原创教学设例；三个价格是虚构的往返含税总价。
 
 ## 任务的三个要素
 
@@ -42,12 +46,12 @@ Google ADK 文档也列出不同类型的 Agent，提示我们框架中的名称
 
 ## 扩展学习（选读）
 
-- [S1] [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)：读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。；Anthropic；发布 2024-12-19；核验 2026-10-08
+- [S1] [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents): 读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。; Anthropic | 发布: 2024-12-19 | 核验: 2026-11-25
 
-- [S2] [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents)：关注工具边界、返回结果和评价方法如何影响可用性。；Anthropic；发布 2025-09-11；核验 2026-10-08
+- [S2] [Writing effective tools for agents](https://www.anthropic.com/engineering/writing-tools-for-agents): 关注工具边界、返回结果和评价方法如何影响可用性。; Anthropic | 发布: 2025-09-11 | 核验: 2026-11-25
 
-- [S3] [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)：理解结果评价与执行轨迹；为后续验收指标课程准备。；Anthropic；发布 2026-01-09；核验 2026-10-08
+- [S3] [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents): 理解结果评价与执行轨迹；为后续验收指标课程准备。; Anthropic | 发布: 2026-01-09 | 核验: 2026-11-25
 
-- [S4] [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18)：阅读指定版本的用途和安全原则；不称其为最新版本。；MCP project；发布 2025-06-18（指定版本）；核验 2026-10-08
+- [S4] [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2025-06-18): 阅读指定版本的用途和安全原则；不称其为最新版本。; MCP project | 发布: 2025-06-18（指定版本） | 核验: 2026-11-25
 
-- [S5] [Agents in ADK](https://adk.dev/agents/)：比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。；Google ADK；发布 未标注；核验 2026-10-08
+- [S5] [Agents in ADK](https://adk.dev/agents/): 比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。; Google ADK | 发布: 未标注 | 核验: 2026-11-25

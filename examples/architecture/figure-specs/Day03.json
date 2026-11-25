@@ -1,0 +1,25 @@
+{
+  "image": "figure-9b3181eba722.png",
+  "caption": "拱的两侧支撑与桶形拱顶的纵深。",
+  "credit": "原创结构与空间简图；拱的传力参照英国开放大学，剧场通道参照大都会。",
+  "reading": {
+    "question": "左图拱脚为何要有两侧支撑？右图的纵深改变了人能走的方向吗？",
+    "observation": "赭色箭头向两侧下方传递，拱脚承受竖向和水平作用；青色箭头沿桶形拱顶纵深进入通道。",
+    "source_ids": [
+      "S2",
+      "S6"
+    ]
+  },
+  "body_reference": "先追左图的赭色箭头到两个拱脚，再用右图的青色箭头找到行走方向。",
+  "additional_sources": [
+    {
+      "id": "S6",
+      "title": "The Arch Never Sleeps",
+      "url": "https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/the-arch-never-sleeps",
+      "publisher": "The Open University",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "参看第 4–5 节拱及其压力线模型；本图箭头只表达方向，不是计算得到的压力线。"
+    }
+  ]
+}

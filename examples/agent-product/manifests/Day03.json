@@ -1,32 +1,38 @@
 {
+  "input": "data/Day03.json",
+  "artifact": "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf",
+  "artifacts": {
+    "pdf": "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf",
+    "markdown": "sources/Agent产品设计_每日学习_Day03_工具权限与用户确认.md"
+  },
   "key": "Day03",
   "pdf": "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day03.json": "54aec72c153bb6f9c65faf7c5a25cf820a7a43f9f2f2b88c636f178d3513a4da",
-    "plan.json": "3cd0f64961491690b55bf3760bb4d61b48296e1cbca1f3dc28a04332bc2a2e92",
-    "config.json": "74d99fd04727087d32acf2742cc68bed450f91b7088494d7529d5cc349de4ea9",
-    "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf": "46b064f281bb326953429ceb95afc31ce5cc3359441341f59b9b256e1a9f731c",
-    "sources/Agent产品设计_每日学习_Day03_工具权限与用户确认.tex": "8a8d8dd181e45e23fee4f2f35203ac4c8ddd12d64ad55e100fbde12eb37bb9ef",
-    "sources/Agent产品设计_每日学习_Day03_工具权限与用户确认.md": "8bc950ebb3e2d98b829bcb630b7b882c8cbae9ac0dc95deb8970a20f7a933cb7",
-    "assets/figure-8284fa500410.png": "8284fa5004108e7baab1023f2ed90f158323aa4e58e23c4f8d4323d2e8f24e0b",
-    "previews/Day03-01.png": "6bee431e1a4bc611de664518201674f01df1ccd915ffe9743a42826f09ae3a43",
-    "previews/Day03-02.png": "c015c6cc5691209c2e3f4765ba18dba24f863cb976c049c29b3155dd54a5da42"
+    "data/Day03.json": "d0c40aa021d3e4101a47f6f6fcd36bd5ad268ea2912ea5e2e90bbd457f582e5c",
+    "plan.json": "24f8d6ec46b44551c77e75eea00e4ea330d0163433dcd2efa81516735a66a838",
+    "config.json": "3b32a6ac165206408943e2ac6cea6a60f71fc737f62a22f87354be4bb3a7ab85",
+    "pdf/Agent产品设计_每日学习_Day03_工具权限与用户确认.pdf": "14fa920bf76eea8508a59d7228fc26d50b2de8f8e8f16aecb33c230f4fdf419d",
+    "sources/Agent产品设计_每日学习_Day03_工具权限与用户确认.tex": "6c558879b1f3beedb8bb02ce03ecc4f186f3ea1c0d181b8ab2313448cd698708",
+    "sources/Agent产品设计_每日学习_Day03_工具权限与用户确认.md": "87f6b8c417bcfb0c1160ffa6e0cd9ebc72984c588fcbb0240b7f72d0a177878e",
+    "assets/figure-f93d16d2db39.png": "f93d16d2db39dd17b82636d9a59f2f46f851ee8069d71da7314fe0d92c44aa97",
+    "previews/Day03-01.png": "788d59591d43fde54360d38a17599b692f1d612f427ad826f0d18f695678473b",
+    "previews/Day03-02.png": "3f9545bb13a57b44a50bfdbf887985d5421369c778a44157767b63e03c17f9fe"
   },
   "previews": [
     "previews/Day03-01.png",
     "previews/Day03-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/BLDANQ+FandolFang-Regular-Identity-H",
-      "/GISOBK+TimesNewRomanPS-BoldMT",
-      "/RPRFQC+TimesNewRomanPSMT"
-    ]
+      "/QKREDT+TimesNewRomanPSMT",
+      "/UPWFWE+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-f93d16d2db39.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

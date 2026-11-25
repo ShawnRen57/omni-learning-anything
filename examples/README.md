@@ -10,9 +10,9 @@ README 画廊共五行五列。第一行是五份中小学教材讲义，第五�
 | --- | --- | --- | --- | --- | --- |
 | 中文学日语 · German through English | [日语三天计划](languages/zh-ja/plan.md) | [进教室时说什么](languages/zh-ja/day01.md) | [复习三天的表达](languages/zh-ja/day03-worksheet.md) | [读书会里的三轮对话](languages/zh-ja/day03-task.md) | [Meeting a colleague in German](languages/en-de/day01.md) |
 
-Six complete 30-day plans + Day01–Day03 = 24 PDFs. Chinese-language demos; simulated approval and delivery, no live schedules.
+The six Chinese courses below each include a 30-day plan and three lessons. Each of the 24 PDFs contains its own diagram, a question to answer from the figure, and the evidence behind the answer.
 
-每组含完整计划和前三天材料。仅供学习结构与排版参考；不要把演示状态复制为真实学习记录。
+每份讲义都可以先看图作答，再用正文核对。例如在 Agent 第二课找到根据余票结果重新选路的箭头，在明史第一课判断画上哪条信息需要馆藏著录佐证。计划批准与交付均为演示。
 
 | 主题 / Topic | 学习计划 / Plan | Day01 | Day02 | Day03 |
 |---|---|---|---|---|

@@ -1,6 +1,6 @@
 # 时间线与史料如何使用
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -12,15 +12,19 @@
 
 今天先画一个长条，左端写建立，右端写明清转折，中间留空。接下来逐步加入制度、经济、社会和对外关系。这样做可以避免读到一个故事就把它当作整个时代的代表。
 
-![本课重点看 A 区。A 文字、器物与图像需要互证；B 思考决策和执行关系；C 区分宫城礼仪空间与日常政务。人物、服饰和机构排列均非史料复原。](../assets/figure-e75918c40f59.png)
+先只看黄色框中的服饰和姿态，再核对右侧著录，区分你看见的和馆方考证的。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![《杏园雅集图》局部与馆藏记录对读。](../assets/figure-797f75c15522.png)
+
+《杏园雅集图》局部与馆藏记录对读。 遮住右侧说明，只看圈出的两位人物。哪些判断能靠画面完成？ 红蓝衣色及两人并坐可直接观察；时间、身份与聚会背景需核对馆藏记录。要判断全国生活状况，还缺少其他群体的材料。 \[S1\] \[S6\]
+
+图像为大都会艺术博物馆藏 1989.141.3，The Dillon Fund Gift，1989 年购入，开放获取 CC0；局部标注为本课所加。
 
 ## 三类材料回答不同问题
 
 文字材料可能记录命令、事件或作者见闻，但记录者有位置、目的和信息限制。器物能提供材料、工艺和使用痕迹，却不一定直接告诉你制造者的全部意图。图像能展示视觉表达和观看方式，也可能经过理想化安排。
 
-图 A 把书、器物与画作放在一起，是提醒互证，不是出土现场或真实人物肖像。大都会的明代资料主要从宫廷与文人艺术切入，它能支持这部分文化观察，却不能自动代表所有地区和普通人的生活。[S1] 每种材料都有能说明与不能说明的部分。
+此处选取《杏园雅集图》馆藏图像，观察衣色，再读馆方著录的聚会背景。[S6] 大都会的明代资料主要从宫廷与文人艺术切入，它能支持这部分文化观察，却不能自动代表所有地区和普通人的生活。[S1] 每种材料都有能说明与不能说明的部分。
 
 ## 从一句判断拆出证据链
 
@@ -40,12 +44,14 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Ming Dynasty (1368–1644)](https://www.metmuseum.org/essays/ming-dynasty-1368-1644)：从文物与艺术观察明代，避免把宫廷与文人经验视为全部社会。；The Metropolitan Museum of Art；发布 2002-10-01；核验 2026-10-08
+- [S1] [Ming Dynasty (1368–1644)](https://www.metmuseum.org/essays/ming-dynasty-1368-1644): 从文物与艺术观察明代，避免把宫廷与文人经验视为全部社会。; The Metropolitan Museum of Art | 发布: 2002-10-01 | 核验: 2026-11-25
 
-- [S2] [中书省](https://www.dpm.org.cn/court/system/236406.html)：核对洪武时期机构调整，并把制度事实与作者的因果解释区分开。；故宫博物院；发布 未标注；核验 2026-10-08
+- [S2] [中书省](https://www.dpm.org.cn/court/system/236406.html): 核对洪武时期机构调整，并把制度事实与作者的因果解释区分开。; 故宫博物院 | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Imperial Palaces of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/439/)：查看北京宫殿营建时间、轴线与礼仪空间；注意明清长期改建。；UNESCO；发布 未标注；核验 2026-10-08
+- [S3] [Imperial Palaces of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/439/): 查看北京宫殿营建时间、轴线与礼仪空间；注意明清长期改建。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Imperial Tombs of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/1004/)：从陵寝空间理解皇权表达，与宫殿材料交叉观察。；UNESCO；发布 未标注；核验 2026-10-08
+- [S4] [Imperial Tombs of the Ming and Qing Dynasties](https://whc.unesco.org/en/list/1004/): 从陵寝空间理解皇权表达，与宫殿材料交叉观察。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Arts of the Ming Dynasty](https://www.metmuseum.org/exhibitions/listings/2009/arts-of-the-ming-dynasty)：旧展览档案用于认识作品种类，不代表展览仍在开放。；The Metropolitan Museum of Art；发布 未标注；核验 2026-10-08
+- [S5] [Arts of the Ming Dynasty](https://www.metmuseum.org/exhibitions/listings/2009/arts-of-the-ming-dynasty): 旧展览档案用于认识作品种类，不代表展览仍在开放。; The Metropolitan Museum of Art | 发布: 未标注 | 核验: 2026-11-25
+
+- [S6] [Elegant Gathering in the Apricot Garden](https://www.metmuseum.org/art/collection/search/41478): 藏品 1989.141.3，核对红袍杨荣、蓝袍杨士奇及雅集语境；所用局部为馆方公共领域图像。; The Metropolitan Museum of Art | 发布: 未标注 | 核验: 2026-11-25

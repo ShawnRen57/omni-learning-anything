@@ -1,6 +1,6 @@
 # 从手机看技术系统
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,9 +10,13 @@
 
 假设你在车站扫描二维码，页面迟迟打不开。第一反应可能是“手机太慢”。但相机已经识别图案，失败也可能发生在网络传输、服务器响应或身份验证。这里的场景是教学设例。分析技术的第一步，是明确任务在哪里开始、在哪里算完成，而不是立刻给某个部件下结论。
 
-![本课重点看 A 区。A 用手机观察部件与网络；B 区分解释与设计；C 追踪太阳能、储能和照明之间的能量流。箭头为概念关系，不是接线图。](../assets/figure-f1c69576c177.png)
+先找左框里已经可见的状态，再沿两支方向相反的箭头查找下一条证据。[S6]
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![一次扫码的设备边界与往返消息](../assets/figure-4df10b299a46.png)
+
+一次扫码的设备边界与往返消息 手机已经显示网址，为什么还要检查网络与服务器？ 左框内识别完成之后，浏览器仍需向右发请求，并收到向左返回的响应。显示网址无法证明这两步都已完成。 \[S6\]
+
+原创诊断案例；请求与响应的方向依据 MDN。
 
 ## 核心概念：系统、接口和瓶颈
 
@@ -24,7 +28,7 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 读图与案例：扫码迟缓的排查
 
-看图 A，把箭头理解为部件间的联系，而非真实手机接线。请补上图中没有画出的服务器与软件。
+图中左右两框分别是手机和网站服务器，跨框箭头表示请求与响应。[S6]
 
 做一个小型诊断表：相机无法对焦，对应输入环节；二维码能识别而网页打不开，对应传输或服务环节；网页已打开但无法登录，对应身份或业务环节。同一个“打不开”的感受，可能对应不同证据。每次只改变一个条件，例如换网络后重试；如果同时换设备、网络和账号，即使恢复正常，也难判断哪个因素起作用。
 
@@ -40,12 +44,14 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Physics: Definitions and Applications](https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications)：从物理学与技术的关系入手，区分解释自然和解决实际问题。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [Physics: Definitions and Applications](https://openstax.org/books/physics/pages/1-1-physics-definitions-and-applications): 从物理学与技术的关系入手，区分解释自然和解决实际问题。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [The Electromagnetic Spectrum](https://science.nasa.gov/ems/)：查看波谱教学材料，理解通信与成像共享的物理基础。；NASA；发布 未标注；核验 2026-10-08
+- [S2] [The Electromagnetic Spectrum](https://science.nasa.gov/ems/): 查看波谱教学材料，理解通信与成像共享的物理基础。; NASA | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Electricity 101](https://www.energy.gov/oe/electricity-101)：只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。；美国能源部；发布 未标注；核验 2026-10-08
+- [S3] [Electricity 101](https://www.energy.gov/oe/electricity-101): 只读发电、输电、配电与 kWh 的基础解释；历史统计不作当前数据。; 美国能源部 | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [AI measurement and evaluation](https://www.nist.gov/ai-measurement-and-evaluation)：观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。；NIST；发布 未标注；核验 2026-10-08
+- [S4] [AI measurement and evaluation](https://www.nist.gov/ai-measurement-and-evaluation): 观察准确性之外的可靠性与可解释性维度，为后续技术评估做准备。; NIST | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [The Silicon Engine](https://www.computerhistory.org/siliconengine/)：沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。；Computer History Museum；发布 未标注；核验 2026-10-08
+- [S5] [The Silicon Engine](https://www.computerhistory.org/siliconengine/): 沿晶体管与集成电路历史观察技术如何通过多项改进进入系统。; Computer History Museum | 发布: 未标注 | 核验: 2026-11-25
+
+- [S6] [What is a web server?](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server): 参见 Summary 下浏览器发出 HTTP 请求及服务器返回响应的说明。; MDN Web Docs | 发布: 未标注 | 核验: 2026-11-25

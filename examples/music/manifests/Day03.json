@@ -1,32 +1,38 @@
 {
+  "input": "data/Day03.json",
+  "artifact": "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf",
+  "artifacts": {
+    "pdf": "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf",
+    "markdown": "sources/音乐通识_每日学习_Day03_旋律走向与音程.md"
+  },
   "key": "Day03",
   "pdf": "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day03.json": "690965fcaf33faae28018560fd2f693b899b7d993bbbf8ce3e42e3d491d2097e",
-    "plan.json": "00282ffdd604c8b36759839f2ad2dc98aa315615e111c9430923f2d2a7495a34",
-    "config.json": "8a70afa4ef991b08b6bbdff60607fd5bc910376056f74d427166a60d85ed8877",
-    "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf": "36284635ed30a31884004be469dd405fa2d28ff70f3000c06cc2ea74de69c902",
-    "sources/音乐通识_每日学习_Day03_旋律走向与音程.tex": "b8ff4fb6b9c1abd15997abaa6797b76d3b2da084cbf6fc4185d1e9104d7377cf",
-    "sources/音乐通识_每日学习_Day03_旋律走向与音程.md": "08e60bfed8a122ba0bba9b86b0f8f0bd566eab3791be9ab3834096391ba9f3ff",
-    "assets/figure-f6141a0bb6d5.png": "f6141a0bb6d5be36efb00ca0e40c494d4d6e655e7d9724eea66dd2afb3d9d685",
-    "previews/Day03-01.png": "a3cabe5cb4042869124a70b834a4f379856b1668e89b48d04321e6e3b5b30c3c",
-    "previews/Day03-02.png": "8e8086bea079136fd652d7276abc9d2bec150b0dcdfd0178d8c864a294a1a37f"
+    "data/Day03.json": "1867780001ff37e4980178aefebc6d856e702c5d1f04deb54e2a940867a499fe",
+    "plan.json": "de126edcce3b5798879bf41846b9ddcb3a3ad61409db3094e28ff0dba73d794c",
+    "config.json": "a9c905889c7fb36ad7a3f4a6a351790aef147c3f000ad9370993f31d0e6a22ac",
+    "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf": "c2eff1246e643e67c249d133b357cad3cc2b325a90c75d574b3418393762f7dc",
+    "sources/音乐通识_每日学习_Day03_旋律走向与音程.tex": "94b224cdff487ca0095fd55700a4a641b54f1b9b93e2374a598c32f5ce00d73a",
+    "sources/音乐通识_每日学习_Day03_旋律走向与音程.md": "11e8109f775ecb3fafb1f2581e481e5723b55f1b35959c28d6c2be8b04f45a38",
+    "assets/figure-31cacd803ae1.png": "31cacd803ae1510d7122d92643c5cd629682afe1e9827e1ea3b262033159122e",
+    "previews/Day03-01.png": "e40e4d6a331be5b329a317dcd967481ca1c4db8df293401c38e81979a2346c64",
+    "previews/Day03-02.png": "ab03078824198a542b5a770d498384cb19a04417f2d37918618d9768d6fd6d96"
   },
   "previews": [
     "previews/Day03-01.png",
     "previews/Day03-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/EBTDBF+TimesNewRomanPSMT",
-      "/SIYFSX+TimesNewRomanPS-BoldMT",
-      "/ZBSWTR+FandolFang-Regular-Identity-H"
-    ]
+      "/FHYQQW+FandolFang-Regular-Identity-H",
+      "/UESVAY+TimesNewRomanPSMT"
+    ],
+    "figure": "assets/figure-31cacd803ae1.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

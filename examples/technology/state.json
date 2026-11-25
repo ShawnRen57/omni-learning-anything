@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "status": "active",
-  "approved_plan": "37836264622cf97ff29269a4634cce91686a28310630c58fa946d8cbe16382d2",
+  "approved_plan": "9b7f5612c15b6b2588eb91e8a18665ac54a7118ef5c6ca81e8b09c4443d93abc",
   "lessons": {
     "1": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf",
-      "manifest_hash": "72f7250367414c9589efb34d38fb3dd09e179c27eed68fdef8ae394428c96ec0"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "a79f7e41e36f05a0b292c8e9d6893eb557fb9d2d27ab415f6f070cab9736b751",
+      "pdf": "pdf/科技通识_每日学习_Day01_从手机看技术系统.pdf"
     },
     "2": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/科技通识_每日学习_Day02_科学证据与工程取舍.pdf",
-      "manifest_hash": "5f1648c3e0ac59ec6aded06aab2245b6bad49f708936a9e4cb69ebe06888bcbf"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "8f8c487e823d791b037390066b0c63d2d264f4822f6b00189590cb3eea1ee49b",
+      "pdf": "pdf/科技通识_每日学习_Day02_科学证据与工程取舍.pdf"
     },
     "3": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf",
-      "manifest_hash": "67872586e3e0fee93d7fd031824f6621430a040941abedb6d69d9b1261220aba"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "855f409579ff0faf20d1406106893a3d041f903fac00ef9bc27ef54ae660db1e",
+      "pdf": "pdf/科技通识_每日学习_Day03_能量转换与效率.pdf"
     }
   },
   "schedule": null,
   "mastery": {},
-  "approved_config": "4679155ce644c4b791aa20003f3bac1f56f211c650e26a7e0a97bb7735968d72"
+  "approved_config": "361fce33b644b4458fd50004eb8c30e46883585e37f8fa618a736c9af3151bff"
 }

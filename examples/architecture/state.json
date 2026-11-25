@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "status": "active",
-  "approved_plan": "c2fdde4e20dc4e48577c8825802e8271fe3dcdb3a6b4d7ec69ee3ec67382674a",
+  "approved_plan": "0700fe4c2bcf3df68d5c3e6d9cc09dc63ba11366fba76f58c3aa1ba295bf80ae",
   "lessons": {
     "1": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf",
-      "manifest_hash": "eafe505ad6de004b02e4325689a35e6af26e3f40ce644398a5b5ec8bec4e645a"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "95d6797537db7f110d5769c743711bacb62eabb1f13c2b8dede6bd9e6828d873",
+      "pdf": "pdf/西方建筑史_每日学习_Day01_建筑如何被阅读.pdf"
     },
     "2": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf",
-      "manifest_hash": "b4dedfe36b700d03285a99fbe23c5d5d56779e92a92673c83914659036d9b794"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "e118b73bb27a65031316237e64c24216da6354e3117a52a1c4f15e685c6ec476",
+      "pdf": "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf"
     },
     "3": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/西方建筑史_每日学习_Day03_罗马拱券与公共空间.pdf",
-      "manifest_hash": "fd8a0fad23fb72c0cd26deab656dc32424852d98a5c90ed159254458268ac112"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "d8589c5bdf770e15a6ceb7b4f1a2714143e2e0905d4c0ed0717dd91f08c250da",
+      "pdf": "pdf/西方建筑史_每日学习_Day03_罗马拱券与公共空间.pdf"
     }
   },
   "schedule": null,
   "mastery": {},
-  "approved_config": "1f0b5dae5cd8eca6a3355a0ab291a3181d247203ec177eba9c0b1c6054b1bc81"
+  "approved_config": "5fdfea3f096a645824f4d90ffc0b6f38305d42f3f9220d4876d9781e058f4690"
 }

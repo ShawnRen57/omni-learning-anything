@@ -1,6 +1,6 @@
 # 价格如何协调供需
 
-2026-10-08 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -8,11 +8,15 @@
 
 ## 先把市场的两边分开
 
-买方在不同价格下愿意且能够购买多少，构成需求关系；卖方在不同价格下愿意且能够出售多少，构成供给关系。基础模型通常先保持其他条件不变，再观察价格与数量。[S4] 图 B 同时画买方和卖方，是提醒我们：价格由双方互动形成，不能只从一边的情绪解释。排队的图像本身也不足以证明短缺。
+买方在不同价格下愿意且能够购买多少，构成需求关系；卖方在不同价格下愿意且能够出售多少，构成供给关系。基础模型通常先保持其他条件不变，再观察价格与数量。[S4] 图中向下倾斜的是需求曲线，向上倾斜的是供给曲线。两线的交点给出这一简化市场的均衡。排队的图像本身也不足以证明短缺。
 
-![本课重点看 B 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。](../assets/figure-a92b6089a95f.png)
+先找空心点，再把两幅图的实心点分别投到横轴，比较成交量的变化。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![面包市场的两个单因素情境，共用同一套价格和数量刻度。](../assets/figure-87a5eb1c284d.png)
+
+面包市场的两个单因素情境，共用同一套价格和数量刻度。 两幅图的实心点都在 5 元刻度上，哪一边交易量减少？ 左图新均衡位于 50 个/日，右图位于 30 个/日，原均衡同为 40 个/日。单看涨价无法区分两种变化。 \[S4\] \[S5\]
+
+原创教学模型；数量与价格为设例，供需变化依据 OpenStax 第 3.1、3.2 节。
 
 ## 沿曲线移动与曲线移动
 
@@ -38,12 +42,12 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [What Is Economics, and Why Is It Important?](https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important)：从稀缺与分工建立课程起点；文中旧统计不作为现状。；OpenStax；发布 未标注；核验 2026-10-08
+- [S1] [What Is Economics, and Why Is It Important?](https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important): 从稀缺与分工建立课程起点；文中旧统计不作为现状。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S2] [Budget Constraint and Individual Choices](https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint)：重点读机会成本、预算约束与边际分析。；OpenStax；发布 未标注；核验 2026-10-08
+- [S2] [Budget Constraint and Individual Choices](https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint): 重点读机会成本、预算约束与边际分析。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S3] [Production Possibilities Frontier](https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices)：把个人选择扩展为社会资源配置，观察模型假设。；OpenStax；发布 未标注；核验 2026-10-08
+- [S3] [Production Possibilities Frontier](https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices): 把个人选择扩展为社会资源配置，观察模型假设。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Demand, Supply, and Equilibrium](https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services)：对照需求、供给和均衡的图形定义。；OpenStax；发布 未标注；核验 2026-10-08
+- [S4] [Demand, Supply, and Equilibrium](https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services): 对照需求、供给和均衡的图形定义。; OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Shifts in Demand and Supply](https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services)：区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。；OpenStax；发布 未标注；核验 2026-10-08
+- [S5] [Shifts in Demand and Supply](https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services): 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。; OpenStax | 发布: 未标注 | 核验: 2026-11-25

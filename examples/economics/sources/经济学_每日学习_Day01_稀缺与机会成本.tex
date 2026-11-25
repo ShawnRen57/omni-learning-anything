@@ -10,15 +10,15 @@
 \setlist[itemize]{leftmargin=1.4em,itemsep=3pt}
 \titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{14pt}{7pt}
-\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small Source-grounded learning}\cfoot{\small\thepage}
+\pagestyle{fancy}\fancyhf{}\lhead{\small OMNI LEARNING / 学习手册}\rhead{\small 有来源的学习}\cfoot{\small\thepage}
 \emergencystretch=2em\widowpenalty=10000\clubpenalty=10000
-\newcommand{\Needspace}[1]{\par\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\relax\newpage\fi}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
 \begin{document}
 
 
 {\LARGE\bfseries\color{ink} 稀缺与机会成本}\par
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟\par\vspace{6pt}
 
 \Needspace{5\baselineskip}\section*{今日导航}
 
@@ -26,13 +26,15 @@
 
 \Needspace{5\baselineskip}\section*{一小时为什么也需要预算}
 
-假设你有一个空闲小时，可以读书、运动或看电影。即使三项都不用花钱，也不能把同一小时完整地同时给它们。经济学从稀缺条件下的选择出发；稀缺不等于贫困，而是可用资源相对于目标有限。[S1] 图 A 用有限食材和两种餐食提示这种取舍。换成时间、注意力或公共预算，问题结构仍然存在。
+假设你有一个空闲小时，可以读书、运动或看电影。即使三项都不用花钱，也不能把同一小时完整地同时给它们。经济学从稀缺条件下的选择出发；稀缺不等于贫困，而是可用资源相对于目标有限。[S1] 图中三个互斥方案都用掉同一个小时。换成时间、注意力或公共预算，问题结构仍然存在。
 
-\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-a92b6089a95f.png}\par
+对齐三条时间带的起止点，再从右侧偏好次序找出被放弃的最佳选项。
 
-{\small 本课重点看 A 区。A 同一组资源对应不同选择；B 买方与卖方共同形成市场；C 整体收益与额外一单位收益要分开计算。}\par
+\begin{center}\includegraphics[width=\linewidth,height=0.26\textheight,keepaspectratio]{../assets/figure-0e525a31fd7c.png}\par
 
-{\footnotesize AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。}\end{center}
+{\small 三种安排争用同一小时，按个人偏好排序。 三条时间带一样长，为什么读书的机会成本只看运动？ 三个方案占用同一时段；在未选方案中，运动排第二，优先于电影。机会成本取运动带来的价值。 [S1] [S2]}\par
+
+{\footnotesize 原创时间预算示例；选择与机会成本依据 OpenStax 第 1.1、2.1 节。}\end{center}
 
 \Needspace{5\baselineskip}\section*{机会成本不是所有放弃项之和}
 
@@ -56,17 +58,17 @@
 
 稀缺使选择不可避免，机会成本让取舍可见。把自己的选择说清楚以后，还需要理解许多人如何一起协调：明天从面包市场出发，学习价格、需求和供给。社会也面临资源配置问题，生产可能性边界提供了一种简化观察工具，可留到选读再看。[S3]
 
-\Needspace{6\baselineskip}\section*{扩展学习 / Further reading}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
+\Needspace{6\baselineskip}\section*{扩展学习（选读）}\small 以下为选读，不计入每日必做时间。\begin{enumerate}[leftmargin=1.6em]
 
-\item [S1] \href{https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important}{What Is Economics, and Why Is It Important?} — 从稀缺与分工建立课程起点；文中旧统计不作为现状。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S1] \href{https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important}{What Is Economics, and Why Is It Important?} — 从稀缺与分工建立课程起点；文中旧统计不作为现状。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S2] \href{https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint}{Budget Constraint and Individual Choices} — 重点读机会成本、预算约束与边际分析。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S2] \href{https://openstax.org/books/principles-economics-3e/pages/2-1-how-individuals-make-choices-based-on-their-budget-constraint}{Budget Constraint and Individual Choices} — 重点读机会成本、预算约束与边际分析。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S3] \href{https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices}{Production Possibilities Frontier} — 把个人选择扩展为社会资源配置，观察模型假设。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S3] \href{https://openstax.org/books/principles-economics-3e/pages/2-2-the-production-possibilities-frontier-and-social-choices}{Production Possibilities Frontier} — 把个人选择扩展为社会资源配置，观察模型假设。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S4] \href{https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services}{Demand, Supply, and Equilibrium} — 对照需求、供给和均衡的图形定义。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S4] \href{https://openstax.org/books/principles-economics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services}{Demand, Supply, and Equilibrium} — 对照需求、供给和均衡的图形定义。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
-\item [S5] \href{https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services}{Shifts in Demand and Supply} — 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。\par OpenStax | 发布：未标注 | 核验：2026-10-08
+\item [S5] \href{https://openstax.org/books/principles-economics-3e/pages/3-2-shifts-in-demand-and-supply-for-goods-and-services}{Shifts in Demand and Supply} — 区分价格变化引起的沿曲线移动与其他条件变化引起的曲线移动。\par OpenStax | 发布: 未标注 | 核验: 2026-11-25
 
 \end{enumerate}
 

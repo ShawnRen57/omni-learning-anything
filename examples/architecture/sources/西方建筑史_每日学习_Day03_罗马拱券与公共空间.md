@@ -1,6 +1,6 @@
 # 罗马拱券与公共空间
 
-2026-10-08 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day03/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -8,11 +8,15 @@
 
 ## 从一个拱到有深度的空间
 
-图 C 上部展示连续拱洞，下部展示沿纵深延伸的桶形拱顶。拱与拱顶不仅改变轮廓，也改变覆盖空间的方式。理解它们时同时看两侧支撑，不能只盯拱顶最高点。图为类型示意，不能用来判断真实工程是否安全，也不表示罗马建筑都采用同一种材料。
+左图画出一个砖石拱及其两侧支撑，右图把拱形沿纵深延伸成桶形拱顶。[S6] 拱与拱顶不仅改变轮廓，也改变覆盖空间的方式。理解它们时同时看两侧支撑，不能只盯拱顶最高点。图为类型示意，不能用来判断真实工程是否安全，也不表示罗马建筑都采用同一种材料。
 
-![本课重点看 C 区。A 平面、立面与剖面提供不同信息；B 梁柱；C 拱券与桶形拱顶。图为类型示意，不是具体遗址测绘图。](../assets/figure-9ba448966b26.png)
+先追左图的赭色箭头到两个拱脚，再用右图的青色箭头找到行走方向。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![拱的两侧支撑与桶形拱顶的纵深。](../assets/figure-9b3181eba722.png)
+
+拱的两侧支撑与桶形拱顶的纵深。 左图拱脚为何要有两侧支撑？右图的纵深改变了人能走的方向吗？ 赭色箭头向两侧下方传递，拱脚承受竖向和水平作用；青色箭头沿桶形拱顶纵深进入通道。 \[S2\] \[S6\]
+
+原创结构与空间简图；拱的传力参照英国开放大学，剧场通道参照大都会。
 
 ## 结构与路线一起工作
 
@@ -38,12 +42,14 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Architecture in Ancient Greece](https://www.metmuseum.org/essays/architecture-in-ancient-greece)：观察柱式如何连接立柱与建筑其他部分，而非只认柱头。；The Metropolitan Museum of Art；发布 2003-10-01；核验 2026-10-08
+- [S1] [Architecture in Ancient Greece](https://www.metmuseum.org/essays/architecture-in-ancient-greece): 观察柱式如何连接立柱与建筑其他部分，而非只认柱头。; The Metropolitan Museum of Art | 发布: 2003-10-01 | 核验: 2026-11-25
 
-- [S2] [Theater and Amphitheater in the Roman World](https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world)：了解拱券、看台、通道与社会秩序之间的关系。；The Metropolitan Museum of Art；发布 2006-10-01；核验 2026-10-08
+- [S2] [Theater and Amphitheater in the Roman World](https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world): 了解拱券、看台、通道与社会秩序之间的关系。; The Metropolitan Museum of Art | 发布: 2006-10-01 | 核验: 2026-11-25
 
-- [S3] [Acropolis, Athens](https://whc.unesco.org/en/list/404/)：结合雅典卫城原址资料，区分单栋建筑与建筑群。；UNESCO；发布 未标注；核验 2026-10-08
+- [S3] [Acropolis, Athens](https://whc.unesco.org/en/list/404/): 结合雅典卫城原址资料，区分单栋建筑与建筑群。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Historic Centre of Rome](https://whc.unesco.org/en/list/91/)：观察城市历史叠加；不要把罗马城市归为单一风格。；UNESCO；发布 未标注；核验 2026-10-08
+- [S4] [Historic Centre of Rome](https://whc.unesco.org/en/list/91/): 观察城市历史叠加；不要把罗马城市归为单一风格。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Chartres Cathedral](https://whc.unesco.org/en/list/81/)：为后续哥特建筑预习，关注结构、空间与彩色玻璃。；UNESCO；发布 未标注；核验 2026-10-08
+- [S5] [Chartres Cathedral](https://whc.unesco.org/en/list/81/): 为后续哥特建筑预习，关注结构、空间与彩色玻璃。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
+
+- [S6] [The Arch Never Sleeps](https://www.open.edu/openlearn/science-maths-technology/mathematics-statistics/the-arch-never-sleeps): 参看第 4–5 节拱及其压力线模型；本图箭头只表达方向，不是计算得到的压力线。; The Open University | 发布: 未标注 | 核验: 2026-11-25

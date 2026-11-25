@@ -1,25 +1,25 @@
 {
   "schema": 1,
   "status": "active",
-  "approved_plan": "00282ffdd604c8b36759839f2ad2dc98aa315615e111c9430923f2d2a7495a34",
+  "approved_plan": "de126edcce3b5798879bf41846b9ddcb3a3ad61409db3094e28ff0dba73d794c",
   "lessons": {
     "1": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf",
-      "manifest_hash": "04173b8034fe101ff6558732f994bffc8b97ab66aba3b1dc38c6a03bc743d8da"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "fca71647eb3db815cf73a3a225cac0d3e59f5cbc4f720924ce616c6c194ce6aa",
+      "pdf": "pdf/音乐通识_每日学习_Day01_听见音高力度与音色.pdf"
     },
     "2": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf",
-      "manifest_hash": "7d58059dae64bca4041f8ab486d2b2ea2dbb3b455429febb50a5879ab0c2db62"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "810bcf6357bd5c1f992bdef9b2940946a412c7beb88d03e8eb3d0584c9502790",
+      "pdf": "pdf/音乐通识_每日学习_Day02_节拍节奏与速度.pdf"
     },
     "3": {
-      "delivered_at": "2026-10-08",
-      "pdf": "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf",
-      "manifest_hash": "f86f476d64b8c8790c326fc6ffee3799dccb453078aaa52d447513eb3342bd11"
+      "delivered_at": "2026-11-25",
+      "manifest_hash": "a427f09a51cb62c860e98fc555be30c658c50d27d21c6a511c4324e69a5278ab",
+      "pdf": "pdf/音乐通识_每日学习_Day03_旋律走向与音程.pdf"
     }
   },
   "schedule": null,
   "mastery": {},
-  "approved_config": "8a70afa4ef991b08b6bbdff60607fd5bc910376056f74d427166a60d85ed8877"
+  "approved_config": "a9c905889c7fb36ad7a3f4a6a351790aef147c3f000ad9370993f31d0e6a22ac"
 }

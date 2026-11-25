@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>用条件矩阵检查演示的证据范围</title><desc>唯一标记「本次承住」的是干燥条件的 200 g 格。整行受潮条件均未测，即使同为 200 g，也缺少对应证据。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">一次承重演示，只覆盖哪一格？</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">桥梁模型 · 假设实验</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="50" y="165" font-size="27" font-weight="650" text-anchor="start" fill="#516672">模型状态</text>
+<text x="409" y="155" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">100 g</text>
+<text x="711" y="155" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">200 g</text>
+<text x="1013" y="155" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">300 g</text>
+<text x="49" y="230" font-size="31" font-weight="650" text-anchor="start" fill="#19374a">干燥</text>
+<text x="49" y="327" font-size="31" font-weight="650" text-anchor="start" fill="#19374a">受潮</text>
+<rect x="257" y="179" width="279" height="76" rx="7" fill="#f1f5f6" stroke="#a7bbb9" stroke-width="2"/>
+<text x="396" y="227" font-size="29" font-weight="450" text-anchor="middle" fill="#516672">未测</text>
+<rect x="559" y="179" width="279" height="76" rx="7" fill="#076b68" stroke="#076b68" stroke-width="2"/>
+<text x="698" y="227" font-size="29" font-weight="650" text-anchor="middle" fill="#ffffff">本次承住</text>
+<rect x="861" y="179" width="279" height="76" rx="7" fill="#f1f5f6" stroke="#a7bbb9" stroke-width="2"/>
+<text x="1000" y="227" font-size="29" font-weight="450" text-anchor="middle" fill="#516672">未测</text>
+<rect x="257" y="274" width="279" height="76" rx="7" fill="#f1f5f6" stroke="#a7bbb9" stroke-width="2"/>
+<text x="396" y="322" font-size="29" font-weight="450" text-anchor="middle" fill="#516672">未测</text>
+<rect x="559" y="274" width="279" height="76" rx="7" fill="#f1f5f6" stroke="#a7bbb9" stroke-width="2"/>
+<text x="698" y="322" font-size="29" font-weight="450" text-anchor="middle" fill="#516672">未测</text>
+<rect x="861" y="274" width="279" height="76" rx="7" fill="#f1f5f6" stroke="#a7bbb9" stroke-width="2"/>
+<text x="1000" y="322" font-size="29" font-weight="450" text-anchor="middle" fill="#516672">未测</text>
+<text x="50" y="410" font-size="26" font-weight="550" text-anchor="start" fill="#076b68">横向改变载荷；纵向改变材料状态。</text>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">设例固定桥型与跨距。空白数据无法用来估算使用寿命，后者还需要相应的长期证据。</text></g></svg>

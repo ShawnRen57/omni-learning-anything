@@ -1,6 +1,6 @@
 # 建筑如何被阅读
 
-2026-10-08 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day01/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -10,13 +10,17 @@
 
 你在一座教堂门前拍照，看到的是正面形象；走进去后，尺度、光线和路线可能完全改变体验。照片能提供信息，也会受镜头、光线和站位影响。建筑是可进入的空间，不只是立面上的图案。第一步可以问：人从哪里进入，往哪里走，什么地方允许停留？
 
-![本课重点看 A 区。A 平面、立面与剖面提供不同信息；B 梁柱；C 拱券与桶形拱顶。图为类型示意，不是具体遗址测绘图。](../assets/figure-9ba448966b26.png)
+在平面上找到穿过小屋的 A—A 虚线，对照右侧剖面中这次竖切露出的高度。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![同一座小屋的平面、正立面和横剖面。](../assets/figure-62f1d244ca50.png)
+
+同一座小屋的平面、正立面和横剖面。 要看从门口怎么走，或地面到屋顶内侧有多高，分别读哪幅图？ 左侧平面的箭头穿过门洞；右侧剖面的竖向箭头从地面指向屋顶内侧。正立面只给出门和山墙的外观。 \[S6\]
+
+原创图例；视图定义参照约翰·索恩爵士博物馆图纸导读。
 
 ## 三种图纸回答不同问题
 
-平面像在某个高度水平切开建筑后向下看，帮助辨认房间、柱墙与路线。立面表达从某一方向正看外部的形态。剖面则沿竖向切开，揭示层高、屋顶和空间之间的关系。图 A 用同一类建筑的概念示意帮助对照，但不是测绘资料，不能用它量尺寸。
+平面像在某个高度水平切开建筑后向下看，帮助辨认房间、柱墙与路线。立面表达从某一方向正看外部的形态。剖面则沿竖向切开，揭示层高、屋顶和空间之间的关系。图中三幅视图都来自同一座虚构小屋；比较门洞与切线可以判断图纸各自能回答什么。[S6]
 
 再加四个观察问题：谁使用？怎样站得住？材料和施工怎样组织？在什么社会环境中形成？柱子可能承重，也可能参与装饰；大厅可能用于仪式，也可能用于公共活动。仅凭外形就断定用途或结构，需要额外证据。
 
@@ -38,12 +42,14 @@ AI生成教学示意，非实物照片、原始史料或官方架构。生成方
 
 ## 扩展学习（选读）
 
-- [S1] [Architecture in Ancient Greece](https://www.metmuseum.org/essays/architecture-in-ancient-greece)：观察柱式如何连接立柱与建筑其他部分，而非只认柱头。；The Metropolitan Museum of Art；发布 2003-10-01；核验 2026-10-08
+- [S1] [Architecture in Ancient Greece](https://www.metmuseum.org/essays/architecture-in-ancient-greece): 观察柱式如何连接立柱与建筑其他部分，而非只认柱头。; The Metropolitan Museum of Art | 发布: 2003-10-01 | 核验: 2026-11-25
 
-- [S2] [Theater and Amphitheater in the Roman World](https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world)：了解拱券、看台、通道与社会秩序之间的关系。；The Metropolitan Museum of Art；发布 2006-10-01；核验 2026-10-08
+- [S2] [Theater and Amphitheater in the Roman World](https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world): 了解拱券、看台、通道与社会秩序之间的关系。; The Metropolitan Museum of Art | 发布: 2006-10-01 | 核验: 2026-11-25
 
-- [S3] [Acropolis, Athens](https://whc.unesco.org/en/list/404/)：结合雅典卫城原址资料，区分单栋建筑与建筑群。；UNESCO；发布 未标注；核验 2026-10-08
+- [S3] [Acropolis, Athens](https://whc.unesco.org/en/list/404/): 结合雅典卫城原址资料，区分单栋建筑与建筑群。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Historic Centre of Rome](https://whc.unesco.org/en/list/91/)：观察城市历史叠加；不要把罗马城市归为单一风格。；UNESCO；发布 未标注；核验 2026-10-08
+- [S4] [Historic Centre of Rome](https://whc.unesco.org/en/list/91/): 观察城市历史叠加；不要把罗马城市归为单一风格。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Chartres Cathedral](https://whc.unesco.org/en/list/81/)：为后续哥特建筑预习，关注结构、空间与彩色玻璃。；UNESCO；发布 未标注；核验 2026-10-08
+- [S5] [Chartres Cathedral](https://whc.unesco.org/en/list/81/): 为后续哥特建筑预习，关注结构、空间与彩色玻璃。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
+
+- [S6] [Understanding Architectural Drawings](https://www.soane.org/understanding-architectural-drawings): 按馆方图纸导读区分平面、立面和剖面；本课用同一座虚构小屋示意。; Sir John Soane’s Museum | 发布: 未标注 | 核验: 2026-11-25

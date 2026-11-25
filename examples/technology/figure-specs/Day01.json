@@ -1,0 +1,24 @@
+{
+  "image": "figure-4df10b299a46.png",
+  "caption": "一次扫码的设备边界与往返消息",
+  "credit": "原创诊断案例；请求与响应的方向依据 MDN。",
+  "reading": {
+    "question": "手机已经显示网址，为什么还要检查网络与服务器？",
+    "observation": "左框内识别完成之后，浏览器仍需向右发请求，并收到向左返回的响应。显示网址无法证明这两步都已完成。",
+    "source_ids": [
+      "S6"
+    ]
+  },
+  "body_reference": "先找左框里已经可见的状态，再沿两支方向相反的箭头查找下一条证据。[S6]",
+  "additional_sources": [
+    {
+      "id": "S6",
+      "title": "What is a web server?",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server",
+      "publisher": "MDN Web Docs",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "参见 Summary 下浏览器发出 HTTP 请求及服务器返回响应的说明。"
+    }
+  ]
+}

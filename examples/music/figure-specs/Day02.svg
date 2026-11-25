@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 490" width="1320" height="490">
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial Unicode MS, sans-serif">
+<rect x="0" y="0" width="1320" height="490" rx="0" fill="#fcfdfb" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="12" height="490" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="42" y="61" fill="#18384a" font-size="46" font-weight="700" text-anchor="start">四拍里，声音一定落在每个拍点上吗？</text>
+<line x1="260" y1="139" x2="260" y2="345" stroke="#b5c7cc" stroke-width="2.5" stroke-dasharray="5 5"/>
+<text x="270" y="118" fill="#18384a" font-size="30" font-weight="700" text-anchor="start">第 1 拍</text>
+<line x1="504" y1="139" x2="504" y2="345" stroke="#b5c7cc" stroke-width="2.5" stroke-dasharray="5 5"/>
+<text x="514" y="118" fill="#18384a" font-size="30" font-weight="700" text-anchor="start">第 2 拍</text>
+<line x1="748" y1="139" x2="748" y2="345" stroke="#b5c7cc" stroke-width="2.5" stroke-dasharray="5 5"/>
+<text x="758" y="118" fill="#18384a" font-size="30" font-weight="700" text-anchor="start">第 3 拍</text>
+<line x1="992" y1="139" x2="992" y2="345" stroke="#b5c7cc" stroke-width="2.5" stroke-dasharray="5 5"/>
+<text x="1002" y="118" fill="#18384a" font-size="30" font-weight="700" text-anchor="start">第 4 拍</text>
+<line x1="1236" y1="139" x2="1236" y2="345" stroke="#b5c7cc" stroke-width="2.5" stroke-dasharray="5 5"/>
+<text x="50" y="203" fill="#18384a" font-size="34" font-weight="700" text-anchor="start">均匀拍点</text>
+<line x1="260" y1="193" x2="1236" y2="193" stroke="#466475" stroke-width="3"/>
+<circle cx="260" cy="193" r="10" fill="#18384a" stroke="none" stroke-width="2"/>
+<circle cx="504" cy="193" r="10" fill="#18384a" stroke="none" stroke-width="2"/>
+<circle cx="748" cy="193" r="10" fill="#18384a" stroke="none" stroke-width="2"/>
+<circle cx="992" cy="193" r="10" fill="#18384a" stroke="none" stroke-width="2"/>
+<text x="50" y="303" fill="#18384a" font-size="34" font-weight="700" text-anchor="start">声音节奏</text>
+<rect x="260" y="267" width="238" height="46" rx="0" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<line x1="260" y1="267" x2="260" y2="313" stroke="#076c68" stroke-width="6"/>
+<text x="382.0" y="300" fill="#076c68" font-size="24" font-weight="700" text-anchor="middle">一拍</text>
+<rect x="504" y="267" width="116.0" height="46" rx="0" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<line x1="504" y1="267" x2="504" y2="313" stroke="#076c68" stroke-width="6"/>
+<text x="565.0" y="300" fill="#076c68" font-size="24" font-weight="700" text-anchor="middle">半拍</text>
+<rect x="626.0" y="267" width="116.0" height="46" rx="0" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<line x1="626.0" y1="267" x2="626.0" y2="313" stroke="#076c68" stroke-width="6"/>
+<text x="687.0" y="300" fill="#076c68" font-size="24" font-weight="700" text-anchor="middle">半拍</text>
+<rect x="992" y="267" width="238" height="46" rx="0" fill="#dbefeb" stroke="none" stroke-width="2"/>
+<line x1="992" y1="267" x2="992" y2="313" stroke="#076c68" stroke-width="6"/>
+<text x="1114.0" y="300" fill="#076c68" font-size="24" font-weight="700" text-anchor="middle">一拍</text>
+<rect x="748" y="267" width="238" height="46" rx="0" fill="none" stroke="#b5c7cc" stroke-width="2"/>
+<text x="870.0" y="300" fill="#466475" font-size="26" font-weight="700" text-anchor="middle">休止一拍</text>
+<line x1="260" y1="359" x2="1236" y2="359" stroke="#466475" stroke-width="2"/>
+<text x="49" y="411" fill="#18384a" font-size="30" font-weight="400" text-anchor="start">● 是手上的拍点；每个色块左边的粗线表示一次新发声。</text>
+<text x="49" y="459" fill="#076c68" font-size="29" font-weight="700" text-anchor="start">第二拍发声两次，第三拍休止，手上的拍子仍在继续。</text>
+</g></svg>

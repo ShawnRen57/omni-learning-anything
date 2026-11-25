@@ -10,7 +10,7 @@
     },
     {
       "title": "从一句话需求拆起",
-      "body": "用户说：“帮我安排下周去上海出差。”一个回答可能只给攻略；一个任务系统还可能澄清时间、查询候选行程、整理费用，并等待确认。需求原句没有自动授权购买，也没有提供预算、证件或差旅政策。产品设计先补齐任务边界，再决定哪些部分交给模型。\n\n图 A 的卡片代表目标，候选方案代表中间产物。把候选生成与最终购买区分开，就能避免用“输出了漂亮文字”代替“用户事情办成了”。"
+      "body": "用户说：“帮我安排下周去上海出差。”一个回答可能只给攻略；一个任务系统还可能澄清时间、查询候选行程、整理费用，并等待确认。需求原句没有自动授权购买，也没有提供预算、证件或差旅政策。产品设计先补齐任务边界，再决定哪些部分交给模型。\n\n图中三条报价使用相同日期、航线和查询时刻。把候选生成与最终购买区分开，就能避免用“输出了漂亮文字”代替“用户事情办成了”。\n\n把三条报价的右端与虚线对齐，再回看左侧的工具调用和授权范围。"
     },
     {
       "title": "任务的三个要素",
@@ -36,7 +36,7 @@
       "url": "https://www.anthropic.com/engineering/building-effective-agents",
       "publisher": "Anthropic",
       "published_at": "2024-12-19",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "读工作流与 Agent 的区分；用作架构框架，不把旧工具清单当最新。"
     },
     {
@@ -45,7 +45,7 @@
       "url": "https://www.anthropic.com/engineering/writing-tools-for-agents",
       "publisher": "Anthropic",
       "published_at": "2025-09-11",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "关注工具边界、返回结果和评价方法如何影响可用性。"
     },
     {
@@ -54,7 +54,7 @@
       "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
       "publisher": "Anthropic",
       "published_at": "2026-01-09",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "理解结果评价与执行轨迹；为后续验收指标课程准备。"
     },
     {
@@ -63,7 +63,7 @@
       "url": "https://modelcontextprotocol.io/specification/2025-06-18",
       "publisher": "MCP project",
       "published_at": "2025-06-18（指定版本）",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "阅读指定版本的用途和安全原则；不称其为最新版本。"
     },
     {
@@ -72,13 +72,21 @@
       "url": "https://adk.dev/agents/",
       "publisher": "Google ADK",
       "published_at": "未标注",
-      "checked_at": "2026-10-08",
+      "checked_at": "2026-11-25",
       "note": "比较 LLM Agent、工作流 Agent 与自定义 Agent 的分类。"
     }
   ],
   "figure": {
-    "path": "assets/teaching.png",
-    "caption": "本课重点看 A 区。A 明确委托目标；B 比较固定步骤与观察反馈循环；C 在提交购买前设置人的确认。示意图不代表真实产品界面。",
-    "credit": "AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。"
+    "path": "assets/figure-04ba5665d5c6.png",
+    "caption": "查询结果与预算线",
+    "credit": "原创教学设例；三个价格是虚构的往返含税总价。",
+    "reading": {
+      "question": "哪两条报价符合预算，查询工具是否已经买票？",
+      "observation": "甲、乙的条形止于 1,500 元预算线以内；左侧调用记录只含查询，购票仍未获授权。",
+      "source_ids": [
+        "S2",
+        "S3"
+      ]
+    }
   }
 }

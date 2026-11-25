@@ -1,33 +1,40 @@
 {
+  "input": "plan.json",
+  "artifact": "pdf/经济学_学习计划.pdf",
+  "artifacts": {
+    "pdf": "pdf/经济学_学习计划.pdf",
+    "markdown": "sources/经济学_学习计划.md"
+  },
   "key": "plan",
   "pdf": "pdf/经济学_学习计划.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "plan.json": "a56e11a33b46fe3014d7ba8d69027cf2e21e07199565262a1308c276d54a1f46",
-    "config.json": "7234fdfad7216c08f83e19a7c895793256fb536dd34563bba88d567c894b9e26",
-    "pdf/经济学_学习计划.pdf": "9153c0c53b6709755786c9ce71bbe21ee991c8a5ebd88a87921611620d35da75",
-    "sources/经济学_学习计划.tex": "ef915c3556c4e213b1b79be8e31f4294c6311a510cd6b656196e34ba88e5cbab",
-    "sources/经济学_学习计划.md": "548d26424ae6d6c8f34f5894bad1c76780beeb69b57e6e1db2374522a9b5d4cd",
-    "assets/figure-a92b6089a95f.png": "a92b6089a95f2c556d487856b571dfed837a83c776ea0ee3b78b90fc1de2640e",
-    "previews/plan-01.png": "02205120cf8e54e8716ba258a433dd446ca6aaa48ab6f576ac0e26642a02cfab",
-    "previews/plan-02.png": "296702a4a8df5e10117b05c5133aab7cf55a7b65061fee898050665fc046d652",
-    "previews/plan-03.png": "7b268071b466de19a07c81c35debed32056387670f10c778931bd56dba954136"
+    "plan.json": "90a2175b37a6f768396d6865cf7fa256f4a2cf4ab1bebde390a7a7de914a3885",
+    "config.json": "ba03bf612c7c5e07d54e10d5151be46705a616359e14494b699a8a783c57c833",
+    "pdf/经济学_学习计划.pdf": "d1581671425cb1f572ac2d9e593b96c18447f7d4b9a159c43e67f9a6d6a4842f",
+    "sources/经济学_学习计划.tex": "c018a54ff82e678ed031598625cae709144266df0bcb197be5f744825af9fdf9",
+    "sources/经济学_学习计划.md": "9b82b23b47bd7fe41d480d9858423c787995f9423a495f2c0545463c76107410",
+    "assets/figure-3e96e9ccf65b.png": "3e96e9ccf65b241e0076985afb42e0e94b6f5b4fdf1556e9b682b23420f7497a",
+    "previews/plan-01.png": "a60001e6d5e5cba47a26ed98642d46612a9b4a773bbc31a9958f880e1fcd0062",
+    "previews/plan-02.png": "2b386994172d53ecbeefc3a636088ba592234253c51c9786b85a891a805d5591",
+    "previews/plan-03.png": "644e7767468e51d044f50e41cb0c90277fa237966d2913c02a3c411779603998"
   },
   "previews": [
     "previews/plan-01.png",
     "previews/plan-02.png",
     "previews/plan-03.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 3,
     "links": 5,
     "fonts": [
-      "/BKVSHH+TimesNewRomanPSMT",
-      "/GTMXQD+TimesNewRomanPS-BoldMT",
-      "/HYREND+FandolFang-Regular-Identity-H"
-    ]
+      "/DIZMAO+TimesNewRomanPSMT",
+      "/OXXKDS+FandolFang-Regular-Identity-H",
+      "/YZDOTQ+TimesNewRomanPS-BoldMT"
+    ],
+    "figure": "assets/figure-3e96e9ccf65b.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

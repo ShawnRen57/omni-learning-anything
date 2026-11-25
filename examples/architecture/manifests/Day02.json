@@ -1,32 +1,38 @@
 {
+  "input": "data/Day02.json",
+  "artifact": "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf",
+  "artifacts": {
+    "pdf": "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf",
+    "markdown": "sources/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.md"
+  },
   "key": "Day02",
   "pdf": "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf",
-  "created_at": "2026-10-08",
+  "created_at": "2026-11-25",
   "files": {
-    "data/Day02.json": "99908642e77d7d8f646e52934e7b71be56786946f44a35b13cd9349e34297359",
-    "plan.json": "c2fdde4e20dc4e48577c8825802e8271fe3dcdb3a6b4d7ec69ee3ec67382674a",
-    "config.json": "1f0b5dae5cd8eca6a3355a0ab291a3181d247203ec177eba9c0b1c6054b1bc81",
-    "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf": "9fa31544810b67acf154432adeb9165ea0c07312ea698468cf85dfdc3de18f0a",
-    "sources/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.tex": "54e66fda181da0d2855b6394d4f1a73c531a1f46698b9a0971fa34a2509fa51a",
-    "sources/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.md": "c225c86e0acfc1daf051a533bdde38d9044eb6c722ffe0d170784b6fd5465d83",
-    "assets/figure-9ba448966b26.png": "9ba448966b26786005b0a3acc7d58fb49f0058a5c1cd9205f109cb31cf5607ee",
-    "previews/Day02-01.png": "f4ea3231ee7a01daabd839b8cdcc03b6c3618da855fda9b9c73587d54eac7e94",
-    "previews/Day02-02.png": "1af8613c4d23bffdd6ec4543948826fcb0e9bccb21e92886351ac605a615ec91"
+    "data/Day02.json": "f977ddb6fcd23884760717f4af173c1fbb8e0044aea7ef85c6030e7c3eae6c7b",
+    "plan.json": "0700fe4c2bcf3df68d5c3e6d9cc09dc63ba11366fba76f58c3aa1ba295bf80ae",
+    "config.json": "5fdfea3f096a645824f4d90ffc0b6f38305d42f3f9220d4876d9781e058f4690",
+    "pdf/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.pdf": "56fb8114ee9ac5b3e5bf02e9da9cf4bfdfb7df77962e342deecac267ec9feffb",
+    "sources/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.tex": "a2fc7fdf228420312ff1c0b36b6617397cca8898178112e96f295b734dab97dc",
+    "sources/西方建筑史_每日学习_Day02_希腊柱式与梁柱体系.md": "409da8006e5a2fed62ca1a050f8eeacc48f0fea7ee7202963da25f80eb5bfe0d",
+    "assets/figure-9e972810506b.png": "9e972810506bdb4cd124f03a26c1088902232fd729356714aa7f1ad35944d6d9",
+    "previews/Day02-01.png": "10367b14303d920dac4b4033bab1119c5ce76c3e834c3646ebdb84df6c6f6782",
+    "previews/Day02-02.png": "aefac3e9f66815c58410299ef673192ac6171a8089f7d10ca010023474caf897"
   },
   "previews": [
     "previews/Day02-01.png",
     "previews/Day02-02.png"
   ],
-  "reviewed_at": "2026-10-09",
+  "reviewed_at": "2026-11-25",
   "report": {
     "pages": 2,
     "links": 5,
     "fonts": [
-      "/IGKHAK+TimesNewRomanPS-BoldMT",
-      "/NOOSZX+TimesNewRomanPSMT",
-      "/UVLQMZ+FandolFang-Regular-Identity-H"
-    ]
+      "/ROTYYW+TimesNewRomanPSMT",
+      "/ULZSKV+FandolFang-Regular-Identity-H"
+    ],
+    "figure": "assets/figure-9e972810506b.png"
   },
   "layout_warnings": 0,
-  "review_note": "Brand-only refresh inspected across all 55 sample pages on 2026-10-09. Header, page layout, images and links remain legible; body and source dates unchanged."
+  "review_note": "公开演示样例：已检查逐页预览、标注图与正文指引、页码、链接和嵌入字体。"
 }

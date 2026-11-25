@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>固定流程与可回看的查询循环</title><desc>下路从改查班次返回观察节点；到达查询上限时转交用户。上路的汇总或复核已在校验规则中指定。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">谁决定下一步？对照两条执行轨迹</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">固定工作流与自主 Agent</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="36" y="108" width="144" height="107" rx="0" fill="#dcebed" stroke="none" stroke-width="0"/>
+<text x="108" y="155" font-size="32" font-weight="700" text-anchor="middle" fill="#19374a">固定</text>
+<text x="108" y="191" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">工作流</text>
+<rect x="224" y="133" width="185" height="63" rx="8" fill="#f1f5f6" stroke="#8ca7ac" stroke-width="2"/>
+<text x="316.5" y="173.68" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">读取发票</text>
+<rect x="470" y="133" width="185" height="63" rx="8" fill="#f1f5f6" stroke="#8ca7ac" stroke-width="2"/>
+<text x="562.5" y="173.68" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">提取字段</text>
+<rect x="716" y="133" width="185" height="63" rx="8" fill="#f1f5f6" stroke="#8ca7ac" stroke-width="2"/>
+<text x="808.5" y="173.68" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">校验字段</text>
+<rect x="962" y="133" width="236" height="63" rx="8" fill="#f1f5f6" stroke="#8ca7ac" stroke-width="2"/>
+<text x="1080.0" y="173.68" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">汇总或转复核</text>
+<path d="M409 165 L463 165" stroke="#547784" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M463 165 L450.00 158.00 L450.00 172.00 Z" stroke="#547784" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#547784"/>
+<path d="M655 165 L709 165" stroke="#547784" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M709 165 L696.00 158.00 L696.00 172.00 Z" stroke="#547784" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#547784"/>
+<path d="M901 165 L955 165" stroke="#547784" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M955 165 L942.00 158.00 L942.00 172.00 Z" stroke="#547784" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#547784"/>
+<path d="M39 241h1199" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="5 8"/>
+<rect x="36" y="260" width="144" height="115" rx="0" fill="#e6f2ef" stroke="none" stroke-width="0"/>
+<text x="108" y="309" font-size="32" font-weight="700" text-anchor="middle" fill="#076b68">自主</text>
+<text x="108" y="348" font-size="29" font-weight="650" text-anchor="middle" fill="#076b68">Agent</text>
+<rect x="225" y="285" width="191" height="68" rx="8" fill="#e6f2ef" stroke="#076b68" stroke-width="2"/>
+<text x="320.5" y="328.18" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">观察余票</text>
+<rect x="490" y="285" width="229" height="68" rx="8" fill="#e6f2ef" stroke="#076b68" stroke-width="2"/>
+<text x="604.5" y="328.18" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">选择下一步</text>
+<rect x="815" y="267" width="261" height="58" rx="8" fill="#e6f2ef" stroke="#076b68" stroke-width="2"/>
+<text x="945.5" y="305.18" font-size="27" font-weight="600" text-anchor="middle" fill="#19374a">改查同日其他班次</text>
+<rect x="815" y="349" width="320" height="58" rx="8" fill="#fff7e6" stroke="#976022" stroke-width="2"/>
+<text x="975.0" y="386.16" font-size="24" font-weight="600" text-anchor="middle" fill="#19374a">已达上限：交给用户</text>
+<path d="M416 319 L483 319" stroke="#076b68" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M483 319 L470.00 312.00 L470.00 326.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<path d="M719 319 L764 319 L764 296 L807 296" stroke="#076b68" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M807 296 L794.00 289.00 L794.00 303.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<path d="M764 319 L764 378 L807 378" stroke="#976022" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M807 378 L794.00 371.00 L794.00 385.00 Z" stroke="#976022" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#976022"/>
+<path d="M1077 295 L1194 295 L1194 242 L325 242 L325 278" stroke="#076b68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M325 278 L332.00 265.00 L318.00 265.00 Z" stroke="#076b68" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#076b68"/>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">上路的分支由预先规则决定；下路可依据工具结果调整查询，达到查询次数上限后停止。</text></g></svg>

@@ -1,0 +1,25 @@
+{
+  "image": "figure-797f75c15522.png",
+  "caption": "《杏园雅集图》局部与馆藏记录对读。",
+  "credit": "图像为大都会艺术博物馆藏 1989.141.3，The Dillon Fund Gift，1989 年购入，开放获取 CC0；局部标注为本课所加。",
+  "reading": {
+    "question": "遮住右侧说明，只看圈出的两位人物。哪些判断能靠画面完成？",
+    "observation": "红蓝衣色及两人并坐可直接观察；时间、身份与聚会背景需核对馆藏记录。要判断全国生活状况，还缺少其他群体的材料。",
+    "source_ids": [
+      "S1",
+      "S6"
+    ]
+  },
+  "body_reference": "先只看黄色框中的服饰和姿态，再核对右侧著录，区分你看见的和馆方考证的。",
+  "additional_sources": [
+    {
+      "id": "S6",
+      "title": "Elegant Gathering in the Apricot Garden",
+      "url": "https://www.metmuseum.org/art/collection/search/41478",
+      "publisher": "The Metropolitan Museum of Art",
+      "published_at": "未标注",
+      "checked_at": "2026-11-25",
+      "note": "藏品 1989.141.3，核对红袍杨荣、蓝袍杨士奇及雅集语境；所用局部为馆方公共领域图像。"
+    }
+  ]
+}

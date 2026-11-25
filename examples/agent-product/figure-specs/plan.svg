@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="474" viewBox="0 0 1280 474" role="img"><title>按五天分段的产品实作路线</title><desc>第 11–15 天的「需求与验收」连接到验收标准，之后才进入风险评估与商业验证。</desc><g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+<rect x="0" y="0" width="1280" height="474" rx="0" fill="#fcfcf8" stroke="none" stroke-width="0"/>
+<text x="39" y="55" font-size="38" font-weight="700" text-anchor="start" fill="#19374a">六个五天，如何积累一份产品答辩？</text>
+<text x="1240" y="52" font-size="22" font-weight="500" text-anchor="end" fill="#516672">30 天学习计划</text>
+<path d="M39 77H1240" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="40" y="137" width="197" height="57" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="138" y="177" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">01–05</text>
+<text x="139" y="245" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">任务与控制</text>
+<path d="M139 260v31" stroke="#a7bbb9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="139" cy="292" r="5" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="139" y="343" font-size="26" font-weight="500" text-anchor="middle" fill="#19374a">一页旅行方案</text>
+<rect x="240" y="137" width="197" height="57" rx="0" fill="#286178" stroke="none" stroke-width="0"/>
+<text x="338" y="177" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">06–10</text>
+<text x="339" y="245" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">模型与信息</text>
+<path d="M339 260v31" stroke="#a7bbb9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="339" cy="292" r="5" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="339" y="343" font-size="26" font-weight="500" text-anchor="middle" fill="#19374a">办公助手复盘</text>
+<rect x="440" y="137" width="197" height="57" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="538" y="177" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">11–15</text>
+<text x="539" y="245" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">需求与验收</text>
+<path d="M539 260v31" stroke="#a7bbb9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="539" cy="292" r="5" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="539" y="343" font-size="26" font-weight="500" text-anchor="middle" fill="#19374a">验收标准</text>
+<rect x="640" y="137" width="197" height="57" rx="0" fill="#286178" stroke="none" stroke-width="0"/>
+<text x="738" y="177" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">16–20</text>
+<text x="739" y="245" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">体验与风险</text>
+<path d="M739 260v31" stroke="#a7bbb9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="739" cy="292" r="5" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="739" y="343" font-size="26" font-weight="500" text-anchor="middle" fill="#19374a">上线风险表</text>
+<rect x="840" y="137" width="197" height="57" rx="0" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="938" y="177" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">21–25</text>
+<text x="939" y="245" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">架构与商业</text>
+<path d="M939 260v31" stroke="#a7bbb9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="939" cy="292" r="5" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="939" y="343" font-size="26" font-weight="500" text-anchor="middle" fill="#19374a">商业验证方法</text>
+<rect x="1040" y="137" width="197" height="57" rx="0" fill="#286178" stroke="none" stroke-width="0"/>
+<text x="1138" y="177" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">26–30</text>
+<text x="1139" y="245" font-size="30" font-weight="650" text-anchor="middle" fill="#19374a">案例与面试</text>
+<path d="M1139 260v31" stroke="#a7bbb9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<circle cx="1139" cy="292" r="5" fill="#076b68" stroke="none" stroke-width="0"/>
+<text x="1139" y="343" font-size="26" font-weight="500" text-anchor="middle" fill="#19374a">产品决策答辩</text>
+<text x="41" y="116" font-size="23" font-weight="500" text-anchor="start" fill="#516672">学习日</text>
+<path d="M44 383H1234" stroke="#a7bbb9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<text x="40" y="455" font-size="22" font-weight="500" text-anchor="start" fill="#516672">六段等宽时间轴，每段五天。下方标出当段要交付或复盘的成果。</text></g></svg>

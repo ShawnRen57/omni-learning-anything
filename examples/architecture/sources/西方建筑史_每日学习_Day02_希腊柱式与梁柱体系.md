@@ -1,6 +1,6 @@
 # 希腊柱式与梁柱体系
 
-2026-10-08 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
+2026-11-25 | Day02/30 | 阅读 8 分钟 + 练习 3 分钟
 
 ## 今日导航
 
@@ -8,11 +8,15 @@
 
 ## 从支撑关系看神庙
 
-看图 B：竖直立柱支撑水平构件，形成梁柱关系。图示帮助识别基本构成，不是某座神庙的考古复原。石材在不同受力方式下表现不同，水平跨越的构件需要相应尺度和支撑；实际结构分析比这幅简图复杂，今天不做受力计算。
+水平的额枋跨在两根立柱之间，落在两端的柱头上。[S1] 图示帮助识别基本构成，不是某座神庙的考古复原。石材在不同受力方式下表现不同，水平跨越的构件需要相应尺度和支撑；实际结构分析比这幅简图复杂，今天不做受力计算。
 
-![本课重点看 B 区。A 平面、立面与剖面提供不同信息；B 梁柱；C 拱券与桶形拱顶。图为类型示意，不是具体遗址测绘图。](../assets/figure-9ba448966b26.png)
+把视线放在两柱正中上方，沿横梁移到一端，再顺赭色箭头向下。
 
-AI生成教学示意，非实物照片、原始史料或官方架构。生成方式：内置文生图；提示词见仓库 docs/image-prompts.json。
+![从额枋、柱头到台基读取梁柱组合。](../assets/figure-9e972810506b.png)
+
+从额枋、柱头到台基读取梁柱组合。 额枋跨在什么位置？从额枋往下，荷载依次经过哪些部分？ 水平额枋跨过柱间，落到两端较宽的柱头。随后沿柱身向下传到台基。 \[S1\]
+
+原创多立克式构件示意，按大都会古希腊建筑导读绘制。
 
 ## 柱式是一套组合规则
 
@@ -40,12 +44,12 @@ UNESCO 的雅典卫城材料提供建筑群与历史环境的入口。[S3] 当�
 
 ## 扩展学习（选读）
 
-- [S1] [Architecture in Ancient Greece](https://www.metmuseum.org/essays/architecture-in-ancient-greece)：观察柱式如何连接立柱与建筑其他部分，而非只认柱头。；The Metropolitan Museum of Art；发布 2003-10-01；核验 2026-10-08
+- [S1] [Architecture in Ancient Greece](https://www.metmuseum.org/essays/architecture-in-ancient-greece): 观察柱式如何连接立柱与建筑其他部分，而非只认柱头。; The Metropolitan Museum of Art | 发布: 2003-10-01 | 核验: 2026-11-25
 
-- [S2] [Theater and Amphitheater in the Roman World](https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world)：了解拱券、看台、通道与社会秩序之间的关系。；The Metropolitan Museum of Art；发布 2006-10-01；核验 2026-10-08
+- [S2] [Theater and Amphitheater in the Roman World](https://www.metmuseum.org/essays/theater-and-amphitheater-in-the-roman-world): 了解拱券、看台、通道与社会秩序之间的关系。; The Metropolitan Museum of Art | 发布: 2006-10-01 | 核验: 2026-11-25
 
-- [S3] [Acropolis, Athens](https://whc.unesco.org/en/list/404/)：结合雅典卫城原址资料，区分单栋建筑与建筑群。；UNESCO；发布 未标注；核验 2026-10-08
+- [S3] [Acropolis, Athens](https://whc.unesco.org/en/list/404/): 结合雅典卫城原址资料，区分单栋建筑与建筑群。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S4] [Historic Centre of Rome](https://whc.unesco.org/en/list/91/)：观察城市历史叠加；不要把罗马城市归为单一风格。；UNESCO；发布 未标注；核验 2026-10-08
+- [S4] [Historic Centre of Rome](https://whc.unesco.org/en/list/91/): 观察城市历史叠加；不要把罗马城市归为单一风格。; UNESCO | 发布: 未标注 | 核验: 2026-11-25
 
-- [S5] [Chartres Cathedral](https://whc.unesco.org/en/list/81/)：为后续哥特建筑预习，关注结构、空间与彩色玻璃。；UNESCO；发布 未标注；核验 2026-10-08
+- [S5] [Chartres Cathedral](https://whc.unesco.org/en/list/81/): 为后续哥特建筑预习，关注结构、空间与彩色玻璃。; UNESCO | 发布: 未标注 | 核验: 2026-11-25

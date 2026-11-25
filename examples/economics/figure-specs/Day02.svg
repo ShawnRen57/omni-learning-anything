@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 490" width="1320" height="490">
+<g font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial Unicode MS, sans-serif">
+<rect x="0" y="0" width="1320" height="490" rx="0" fill="#fcfdfb" stroke="none" stroke-width="2"/>
+<rect x="0" y="0" width="12" height="490" rx="0" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="42" y="61" fill="#18384a" font-size="46" font-weight="700" text-anchor="start">同样涨到 5 元，面包的成交量往哪边走？</text>
+<text x="78" y="112" fill="#18384a" font-size="37" font-weight="700" text-anchor="start">甲  新增午餐客流</text>
+<text x="64" y="155" fill="#466475" font-size="25" font-weight="400" text-anchor="start">元/个</text>
+<line x1="152.0" y1="342" x2="500.0" y2="342" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="141.0" y="351" fill="#466475" font-size="24" font-weight="400" text-anchor="end">2</text>
+<line x1="152.0" y1="258" x2="500.0" y2="258" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="141.0" y="267" fill="#466475" font-size="24" font-weight="400" text-anchor="end">4</text>
+<line x1="152.0" y1="216" x2="500.0" y2="216" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="141.0" y="225" fill="#466475" font-size="24" font-weight="400" text-anchor="end">5</text>
+<line x1="152.0" y1="174" x2="500.0" y2="174" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="141.0" y="183" fill="#466475" font-size="24" font-weight="400" text-anchor="end">6</text>
+<line x1="152.0" y1="342" x2="152.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="152.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">20</text>
+<line x1="239.0" y1="342" x2="239.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="239.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">30</text>
+<line x1="326.0" y1="342" x2="326.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="326.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">40</text>
+<line x1="413.0" y1="342" x2="413.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="413.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">50</text>
+<line x1="500.0" y1="342" x2="500.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="500.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">60</text>
+<line x1="152.0" y1="342" x2="506.0" y2="342" stroke="#18384a" stroke-width="3"/>
+<line x1="152.0" y1="342" x2="152.0" y2="167" stroke="#18384a" stroke-width="3"/>
+<text x="512.0" y="372" fill="#466475" font-size="24" font-weight="400" text-anchor="start">个/日</text>
+<line x1="152.0" y1="174" x2="500.0" y2="342" stroke="#466475" stroke-width="3" stroke-dasharray="7 5"/>
+<line x1="152.0" y1="342" x2="500.0" y2="174" stroke="#466475" stroke-width="3"/>
+<line x1="326.0" y1="174" x2="500.0" y2="258" stroke="#076c68" stroke-width="7"/>
+<text x="530" y="200" fill="#076c68" font-size="26" font-weight="700" text-anchor="start">新需求</text>
+<line x1="413.0" y1="216" x2="413.0" y2="342" stroke="#076c68" stroke-width="2" stroke-dasharray="4 7"/>
+<circle cx="326.0" cy="258" r="7" fill="#ffffff" stroke="#18384a" stroke-width="2"/>
+<circle cx="413.0" cy="216" r="8" fill="#076c68" stroke="none" stroke-width="2"/>
+<text x="125" y="420" fill="#076c68" font-size="34" font-weight="700" text-anchor="start">40 → 50 个/日</text>
+<text x="722" y="112" fill="#18384a" font-size="37" font-weight="700" text-anchor="start">乙  面粉成本上升</text>
+<text x="708" y="155" fill="#466475" font-size="25" font-weight="400" text-anchor="start">元/个</text>
+<line x1="796.0" y1="342" x2="1144.0" y2="342" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="785.0" y="351" fill="#466475" font-size="24" font-weight="400" text-anchor="end">2</text>
+<line x1="796.0" y1="258" x2="1144.0" y2="258" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="785.0" y="267" fill="#466475" font-size="24" font-weight="400" text-anchor="end">4</text>
+<line x1="796.0" y1="216" x2="1144.0" y2="216" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="785.0" y="225" fill="#466475" font-size="24" font-weight="400" text-anchor="end">5</text>
+<line x1="796.0" y1="174" x2="1144.0" y2="174" stroke="#b5c7cc" stroke-width="1.6" stroke-dasharray="4 5"/>
+<text x="785.0" y="183" fill="#466475" font-size="24" font-weight="400" text-anchor="end">6</text>
+<line x1="796.0" y1="342" x2="796.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="796.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">20</text>
+<line x1="883.0" y1="342" x2="883.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="883.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">30</text>
+<line x1="970.0" y1="342" x2="970.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="970.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">40</text>
+<line x1="1057.0" y1="342" x2="1057.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="1057.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">50</text>
+<line x1="1144.0" y1="342" x2="1144.0" y2="347" stroke="#466475" stroke-width="3"/>
+<text x="1144.0" y="373" fill="#466475" font-size="23" font-weight="400" text-anchor="middle">60</text>
+<line x1="796.0" y1="342" x2="1150.0" y2="342" stroke="#18384a" stroke-width="3"/>
+<line x1="796.0" y1="342" x2="796.0" y2="167" stroke="#18384a" stroke-width="3"/>
+<text x="1156.0" y="372" fill="#466475" font-size="24" font-weight="400" text-anchor="start">个/日</text>
+<line x1="796.0" y1="174" x2="1144.0" y2="342" stroke="#466475" stroke-width="3"/>
+<line x1="796.0" y1="342" x2="1144.0" y2="174" stroke="#466475" stroke-width="3" stroke-dasharray="7 5"/>
+<line x1="796.0" y1="258" x2="970.0" y2="174" stroke="#99531e" stroke-width="7"/>
+<text x="1014" y="163" fill="#99531e" font-size="26" font-weight="700" text-anchor="start">新供给</text>
+<line x1="883.0" y1="216" x2="883.0" y2="342" stroke="#99531e" stroke-width="2" stroke-dasharray="4 7"/>
+<circle cx="970.0" cy="258" r="7" fill="#ffffff" stroke="#18384a" stroke-width="2"/>
+<circle cx="883.0" cy="216" r="8" fill="#99531e" stroke="none" stroke-width="2"/>
+<text x="769" y="420" fill="#99531e" font-size="34" font-weight="700" text-anchor="start">40 → 30 个/日</text>
+<text x="68" y="468" fill="#18384a" font-size="28" font-weight="400" text-anchor="start">空心点是原均衡（4 元、40 个/日），实心点是新均衡。每幅图只改变一个条件。</text>
+</g></svg>
